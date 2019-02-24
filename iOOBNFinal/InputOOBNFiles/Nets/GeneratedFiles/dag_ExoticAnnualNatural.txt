@@ -1,0 +1,27 @@
+CompSum : CSumIndex 
+Cover_Dec : 
+Output_Seeds : 
+Output_Dead : 
+SI : 
+CCondS : 
+Input_Dead : Output_Dead Dead_Dec 
+Season : ASR SI GR SP 
+SP : 
+ASR : Output_Adults 
+Cover_Inc : 
+Input_Seeds : New_Adults Output_Seeds 
+BCGD_DDRH : Dead_Dec 
+New_Adults : 
+GSR : 
+CCondBAC : 
+GR : 
+Output_NUI : 
+Input_Cover : 
+Output_Adults : 
+SSR : Output_Seeds 
+Output_Cover : 
+CSumIndex : 
+NH : Output_NUI 
+Input_Adults : Output_Adults Cover_Dec Output_Seeds 
+NL : CCondS CCondBAC 
+Dead_Dec : Output_Dead 

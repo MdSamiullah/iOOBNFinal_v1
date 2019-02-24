@@ -1,0 +1,2 @@
+1: node1,node4,node2 : 2 
+2: node1,node4,node0,node3 : 1 

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iOOBN type=".absclass">
+	<node  id="2" name="Food" label="Food" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<tuple value="^$^$" />
+		<tuple value="True$0.5$" />
+		<tuple value="False$0.5$" />
+	</node>
+	<node  id="3" name="Locale" label="Locale" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<tuple value="^$^$" />
+		<tuple value="True$0.5$" />
+		<tuple value="False$0.5$" />
+	</node>
+	<node  id="4" name="Meat" label="Meat" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="5" />
+		<tuple value="Metabolism$True$False$" />
+		<tuple value="^$^$^$" />
+		<tuple value="True$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$" />
+	</node>
+	<node  id="5" name="Metabolism" label="Metabolism" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="2" />
+		<parent id="3" />
+		<tuple value="Food$True$^$False$^$" />
+		<tuple value="Locale$True$False$True$False$" />
+		<tuple value="^$^$^$^$^$" />
+		<tuple value="True$0.5$0.5$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$0.5$0.5$" />
+	</node>
+	<node  id="9" name="Sex" label="Sex" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<tuple value="^$^$" />
+		<tuple value="True$0.5$" />
+		<tuple value="False$0.5$" />
+	</node>
+	<node  id="10" name="Milk" label="Milk" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="5" />
+		<parent id="9" />
+		<tuple value="Metabolism$True$^$False$^$" />
+		<tuple value="Sex$True$False$True$False$" />
+		<tuple value="^$^$^$^$^$" />
+		<tuple value="True$0.5$0.5$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$0.5$0.5$" />
+	</node>
+</iOOBN>

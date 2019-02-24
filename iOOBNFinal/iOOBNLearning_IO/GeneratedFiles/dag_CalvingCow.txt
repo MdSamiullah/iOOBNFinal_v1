@@ -1,0 +1,10 @@
+Locale : Metabolism 
+Reproduction : Calves Meat Milk 
+Breed : Reproduction 
+Health : Reproduction 
+Sex : Reproduction Milk 
+Calves : 
+Metabolism : Meat Milk 
+Food : Metabolism 
+Meat : 
+Milk : 

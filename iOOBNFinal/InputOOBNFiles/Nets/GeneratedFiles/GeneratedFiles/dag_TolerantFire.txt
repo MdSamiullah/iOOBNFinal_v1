@@ -1,0 +1,15 @@
+Output_NUI : 
+CR : Output_Dead Output_Cover 
+BR : Output_Basal 
+Burn : BR CR SR 
+Input_Seedlings : Output_Seedlings 
+RBio : Output_NUI 
+Input_Cover : RBio Output_Cover 
+Output_Dead : 
+Input_Basal : Output_Basal 
+Output_Cover : 
+Output_Basal : 
+NH : Output_NUI 
+Input_Dead : RBio Output_Dead 
+Output_Seedlings : 
+SR : Output_Seedlings 

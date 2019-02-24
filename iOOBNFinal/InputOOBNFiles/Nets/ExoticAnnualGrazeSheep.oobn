@@ -1,0 +1,495 @@
+class ExoticAnnualGrazeSheep
+{
+    inputs = (Input_Adults Input_Dead Input_Cover Season Duration PalSumSheep);
+    outputs = (Output_Adults Output_Cover Output_Dead);
+    node_size = (100 55);
+    HR_ToolBar_CDVT = "0";
+    HR_Html_Desc = "0";
+    HR_HTML_Desc = "";
+    HR_Groups_IDs = "";
+    HR_Node_Label_Style = "0";
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "0";
+    HR_Zoom_ZoomFactor = "100";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_DiscreteFunction = "5";
+    HR_Color_Function = "4";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Mean_Variance = "1";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "5";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "javax.swing.plaf.FontUIResource[family=Tahoma,name=Tahoma,style=plain,size=11]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+
+    node LPal
+    {
+	label = "Relative\nPalatability\nLiving";
+	position = (378 172);
+	states = ("Tasty" "Neutral" "Yuck");
+	subtype = label;
+	HR_LinkControlPoints = "";
+	HR_State_2 = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[CR:0][SR:0][BR:0][LPal:0]";
+	HR_Group = "0";
+    }
+
+    node PalSumSheep
+    {
+	label = "Sheep Pal Summary";
+	position = (286 28);
+	states = ("High" "Medium" "Low" "Very Low" "Bare Ground");
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_State_2 = "";
+	HR_LinkControlPoints = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_HTML_Desc = "";
+	HR_LinkMode = "[CR:0][C1:0][C1_3:0][CSumIndex:0]";
+	HR_Group = "0";
+    }
+
+    node DPal
+    {
+	label = "Relative\nPalatability\nDead";
+	position = (206 178);
+	states = ("Tasty" "Neutral" "Yuck");
+	subtype = label;
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_State_2 = "";
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[CR:0][SR:0][CR_1:0][DR:0][DPal:0]";
+	HR_Group = "0";
+    }
+
+    node Duration
+    {
+	label = "Duration";
+	position = (595 29);
+	states = ("" "" "");
+	subtype = interval;
+	state_values = (0 10 60 90);
+	HR_Desc = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[CR:0][BR:0][SR:0][CR_1:0][DR:0][Duration:0]";
+	HR_Group = "0";
+    }
+
+    node Season
+    {
+	label = "Season";
+	position = (401 28);
+	states = ("Spring" "Summer" "Autumn" "Winter");
+	HR_LinkControlPoints = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_HTML_Desc = "";
+	HR_LinkMode = "[C13:0][C14:0][C16:0][C17:0][C18:0][Temp:0][Rain:0][C22:0][C24:0][C23:0][C26:0][C28:0][SP:0][SI:0][C15:0][CGR:0][BADR:0][CDR:0][BGR:0][Season:0][GP:0][SPR:0][C1:0][LPal:0]";
+	HR_Group = "0";
+    }
+
+    node CSumIndex
+    {
+	label = "Comp\nSummary\nIndex";
+	position = (288 103);
+	states = ("" "" "" "" "");
+	subtype = number;
+	state_values = (1 2 3 4 5);
+	HR_NodeSize = "(100, 55)";
+	HR_HTML_Desc = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_State_2 = "";
+	HR_LinkMode = "[CCond:0][CCondBAC_1:0][CCondBAC:0][CCondS:0][DPal:0][LPal:0]";
+	HR_Group = "0";
+    }
+
+    instance BACG : BasalAdultCoverGraze (DPal = DPal, LPal = LPal, Duration = Duration; BACG_CR = CR, BACG_DR = DR, BACG_SBR = SBR, BACG_HBR = HBR, BACG_SAR = SAR, BACG_HAR = HAR)
+    {
+	label = "BACG";
+	position = (288 252);
+	HR_LinkModeInstance = "";
+	HR_LinkControlPointsInstance = "";
+	HR_isCollapsed = "true";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_InterfaceNode_size = "100,55";
+	HR_InterfaceNode_placement = "horizontal";
+	HR_Group = "0";
+    }
+
+    node Output_Dead
+    {
+	label = "Output Dead \nCover";
+	position = (576 536);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_5 = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[NCG_1_1:0][Com:0][TC:0][OC:0]";
+	HR_LinkControlPoints = "";
+	HR_NodeSize = "(100, 55)";
+	HR_State_6 = "";
+	HR_Group = "0";
+    }
+
+    node Output_Cover
+    {
+	label = "Output \nCover";
+	position = (570 414);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_NodeSize = "(100, 55)";
+	HR_State_6 = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_State_5 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_LinkMode = "[C2:0][CT:0]";
+	HR_Group = "0";
+    }
+
+    node Output_Adults
+    {
+	label = "Output Adult\nDensity";
+	position = (569 322);
+	states = ("0 - 1" "1 - 2" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 100 250 500 1000 2000);
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_HTML_Desc = "";
+	HR_LinkControlPoints = "";
+	HR_State_5 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_LinkMode = "[Output_Seed:0][Output_Seedling:0][Seed_Dec:0][C10:0][Basal_Inc:0][Output_Basal:0][Output_Cover:0]";
+	HR_Group = "0";
+    }
+
+    node Input_Cover
+    {
+	label = "Input \nCover";
+	position = (60 413);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkMode = "[C2:0][CT:0][C19:0][C20:0]";
+	HR_NodeSize = "(100, 55)";
+	HR_State_6 = "";
+	HR_LinkControlPoints = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_State_5 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_Group = "0";
+    }
+
+    node Input_Dead
+    {
+	label = "Input Dead \nCover";
+	position = (58 535);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_State_6 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_LinkControlPoints = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_State_5 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_LinkMode = "[NCG_1_1:0][Com:0][TC:0][OC:0][Output_Dead:0][C27:0][Dead_Dec:0]";
+	HR_Group = "0";
+    }
+
+    node Input_Adults
+    {
+	label = "Input Adult\nDensity";
+	position = (60 318);
+	states = ("0 - 1" "1 - 2" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 100 250 500 1000 2000);
+	HR_NodeSize = "(100, 55)";
+	HR_State_5 = "";
+	HR_LinkControlPoints = "";
+	HR_HTML_Desc = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_LinkMode = "[Output_Seed:0][Output_Seedling:0][Seed_Dec:0][C10:0][Basal_Inc:0][Output_Basal:0][Output_Adult:0][Cover_Dec:0][Cover_Inc:0][Output_Seeds:0][Output_Adults:0]";
+	HR_Group = "0";
+    }
+
+    potential (LPal | Season CSumIndex)
+    {
+	model_nodes = (Season);
+	model_data  = ( if (CSumIndex > 4, "Yuck", if (CSumIndex < 4, "Tasty", "Neutral")),
+			if (CSumIndex > 2, "Yuck", if (CSumIndex < 2, "Tasty", "Neutral")),
+			if (CSumIndex > 2, "Yuck", if (CSumIndex < 2, "Tasty", "Neutral")),
+			if (CSumIndex > 5, "Yuck", if (CSumIndex < 5, "Tasty", "Neutral")) );
+	data = ((( 1 0 0 )	%  Season=Spring  CSumIndex=1
+		 ( 1 0 0 )	%  Season=Spring  CSumIndex=2
+		 ( 1 0 0 )	%  Season=Spring  CSumIndex=3
+		 ( 0 1 0 )	%  Season=Spring  CSumIndex=4
+		 ( 0 0 1 ))	%  Season=Spring  CSumIndex=5
+		(( 1 0 0 )	%  Season=Summer  CSumIndex=1
+		 ( 0 1 0 )	%  Season=Summer  CSumIndex=2
+		 ( 0 0 1 )	%  Season=Summer  CSumIndex=3
+		 ( 0 0 1 )	%  Season=Summer  CSumIndex=4
+		 ( 0 0 1 ))	%  Season=Summer  CSumIndex=5
+		(( 1 0 0 )	%  Season=Autumn  CSumIndex=1
+		 ( 0 1 0 )	%  Season=Autumn  CSumIndex=2
+		 ( 0 0 1 )	%  Season=Autumn  CSumIndex=3
+		 ( 0 0 1 )	%  Season=Autumn  CSumIndex=4
+		 ( 0 0 1 ))	%  Season=Autumn  CSumIndex=5
+		(( 1 0 0 )	%  Season=Winter  CSumIndex=1
+		 ( 1 0 0 )	%  Season=Winter  CSumIndex=2
+		 ( 1 0 0 )	%  Season=Winter  CSumIndex=3
+		 ( 1 0 0 )	%  Season=Winter  CSumIndex=4
+		 ( 0 1 0 )));	%  Season=Winter  CSumIndex=5
+    }
+
+    potential (PalSumSheep)
+    {
+	data = ( 1 1 1 1 1 );
+    }
+
+    potential (DPal | CSumIndex)
+    {
+	model_nodes = ();
+	model_data = ( if (CSumIndex > 2, "Yuck", if (CSumIndex < 2, "Tasty", "Neutral")) );
+    }
+
+    potential (Duration)
+    {
+	data = ( 1 1 1 );
+    }
+
+    potential (Season)
+    {
+	data = ( 1 1 1 1 );
+    }
+
+    potential (CSumIndex | PalSumSheep)
+    {
+	model_nodes = (PalSumSheep);
+	model_data  = ( 5,
+			4,
+			3,
+			2,
+			1 );
+    }
+
+    potential (Output_Dead | BACG_DR Input_Dead)
+    {
+	model_nodes = ();
+	model_data = ( Input_Dead * (1 - BACG_DR) );
+	data = ((( 1 0 0 0 0 0 0 )	%  BACG_DR=0.01  Input_Dead=interval(0,0.01)
+		 ( 0 1 0 0 0 0 0 )	%  BACG_DR=0.01  Input_Dead=interval(0.01,1)
+		 ( 0 0 1 0 0 0 0 )	%  BACG_DR=0.01  Input_Dead=interval(1,5)
+		 ( 0 0 0 1 0 0 0 )	%  BACG_DR=0.01  Input_Dead=interval(5,25)
+		 ( 0 0 0 0 1 0 0 )	%  BACG_DR=0.01  Input_Dead=interval(25,50)
+		 ( 0 0 0 0 0.04 0.96 0 )	%  BACG_DR=0.01  Input_Dead=interval(50,75)
+		 ( 0 0 0 0 0 0.04 0.96 ))	%  BACG_DR=0.01  Input_Dead=interval(75,100)
+		(( 1 0 0 0 0 0 0 )	%  BACG_DR=0.1  Input_Dead=interval(0,0.01)
+		 ( 0 1 0 0 0 0 0 )	%  BACG_DR=0.1  Input_Dead=interval(0.01,1)
+		 ( 0 0.04 0.96 0 0 0 0 )	%  BACG_DR=0.1  Input_Dead=interval(1,5)
+		 ( 0 0 0.04 0.96 0 0 0 )	%  BACG_DR=0.1  Input_Dead=interval(5,25)
+		 ( 0 0 0 0.12 0.88 0 0 )	%  BACG_DR=0.1  Input_Dead=interval(25,50)
+		 ( 0 0 0 0 0.24 0.76 0 )	%  BACG_DR=0.1  Input_Dead=interval(50,75)
+		 ( 0 0 0 0 0 0.32 0.68 ))	%  BACG_DR=0.1  Input_Dead=interval(75,100)
+		(( 1 0 0 0 0 0 0 )	%  BACG_DR=0.2  Input_Dead=interval(0,0.01)
+		 ( 0 1 0 0 0 0 0 )	%  BACG_DR=0.2  Input_Dead=interval(0.01,1)
+		 ( 0 0.08 0.92 0 0 0 0 )	%  BACG_DR=0.2  Input_Dead=interval(1,5)
+		 ( 0 0 0.08 0.92 0 0 0 )	%  BACG_DR=0.2  Input_Dead=interval(5,25)
+		 ( 0 0 0 0.24 0.76 0 0 )	%  BACG_DR=0.2  Input_Dead=interval(25,50)
+		 ( 0 0 0 0 0.48 0.52 0 )	%  BACG_DR=0.2  Input_Dead=interval(50,75)
+		 ( 0 0 0 0 0 0.76 0.24 ))	%  BACG_DR=0.2  Input_Dead=interval(75,100)
+		(( 1 0 0 0 0 0 0 )	%  BACG_DR=0.25  Input_Dead=interval(0,0.01)
+		 ( 0 1 0 0 0 0 0 )	%  BACG_DR=0.25  Input_Dead=interval(0.01,1)
+		 ( 0 0.08 0.92 0 0 0 0 )	%  BACG_DR=0.25  Input_Dead=interval(1,5)
+		 ( 0 0 0.08 0.92 0 0 0 )	%  BACG_DR=0.25  Input_Dead=interval(5,25)
+		 ( 0 0 0 0.32 0.68 0 0 )	%  BACG_DR=0.25  Input_Dead=interval(25,50)
+		 ( 0 0 0 0 0.68 0.32 0 )	%  BACG_DR=0.25  Input_Dead=interval(50,75)
+		 ( 0 0 0 0 0 1 0 ))	%  BACG_DR=0.25  Input_Dead=interval(75,100)
+		(( 1 0 0 0 0 0 0 )	%  BACG_DR=0.45  Input_Dead=interval(0,0.01)
+		 ( 0 1 0 0 0 0 0 )	%  BACG_DR=0.45  Input_Dead=interval(0.01,1)
+		 ( 0 0.2 0.8 0 0 0 0 )	%  BACG_DR=0.45  Input_Dead=interval(1,5)
+		 ( 0 0 0.2 0.8 0 0 0 )	%  BACG_DR=0.45  Input_Dead=interval(5,25)
+		 ( 0 0 0 0.8 0.2 0 0 )	%  BACG_DR=0.45  Input_Dead=interval(25,50)
+		 ( 0 0 0 0 1 0 0 )	%  BACG_DR=0.45  Input_Dead=interval(50,75)
+		 ( 0 0 0 0 0.64 0.36 0 ))	%  BACG_DR=0.45  Input_Dead=interval(75,100)
+		(( 1 0 0 0 0 0 0 )	%  BACG_DR=0.5  Input_Dead=interval(0,0.01)
+		 ( 0 1 0 0 0 0 0 )	%  BACG_DR=0.5  Input_Dead=interval(0.01,1)
+		 ( 0 0.24 0.76 0 0 0 0 )	%  BACG_DR=0.5  Input_Dead=interval(1,5)
+		 ( 0 0 0.24 0.76 0 0 0 )	%  BACG_DR=0.5  Input_Dead=interval(5,25)
+		 ( 0 0 0 1 0 0 0 )	%  BACG_DR=0.5  Input_Dead=interval(25,50)
+		 ( 0 0 0 0 1 0 0 )	%  BACG_DR=0.5  Input_Dead=interval(50,75)
+		 ( 0 0 0 0 1 0 0 ))	%  BACG_DR=0.5  Input_Dead=interval(75,100)
+		(( 1 0 0 0 0 0 0 )	%  BACG_DR=0.6  Input_Dead=interval(0,0.01)
+		 ( 0 1 0 0 0 0 0 )	%  BACG_DR=0.6  Input_Dead=interval(0.01,1)
+		 ( 0 0.36 0.64 0 0 0 0 )	%  BACG_DR=0.6  Input_Dead=interval(1,5)
+		 ( 0 0 0.36 0.64 0 0 0 )	%  BACG_DR=0.6  Input_Dead=interval(5,25)
+		 ( 0 0 0 1 0 0 0 )	%  BACG_DR=0.6  Input_Dead=interval(25,50)
+		 ( 0 0 0 0.48 0.52 0 0 )	%  BACG_DR=0.6  Input_Dead=interval(50,75)
+		 ( 0 0 0 0 1 0 0 ))	%  BACG_DR=0.6  Input_Dead=interval(75,100)
+		(( 1 0 0 0 0 0 0 )	%  BACG_DR=0.75  Input_Dead=interval(0,0.01)
+		 ( 0.04 0.96 0 0 0 0 0 )	%  BACG_DR=0.75  Input_Dead=interval(0.01,1)
+		 ( 0 0.76 0.24 0 0 0 0 )	%  BACG_DR=0.75  Input_Dead=interval(1,5)
+		 ( 0 0 0.76 0.24 0 0 0 )	%  BACG_DR=0.75  Input_Dead=interval(5,25)
+		 ( 0 0 0 1 0 0 0 )	%  BACG_DR=0.75  Input_Dead=interval(25,50)
+		 ( 0 0 0 1 0 0 0 )	%  BACG_DR=0.75  Input_Dead=interval(50,75)
+		 ( 0 0 0 1 0 0 0 ))	%  BACG_DR=0.75  Input_Dead=interval(75,100)
+		(( 1 0 0 0 0 0 0 )	%  BACG_DR=0.95  Input_Dead=interval(0,0.01)
+		 ( 0.2 0.8 0 0 0 0 0 )	%  BACG_DR=0.95  Input_Dead=interval(0.01,1)
+		 ( 0 1 0 0 0 0 0 )	%  BACG_DR=0.95  Input_Dead=interval(1,5)
+		 ( 0 0.76 0.24 0 0 0 0 )	%  BACG_DR=0.95  Input_Dead=interval(5,25)
+		 ( 0 0 1 0 0 0 0 )	%  BACG_DR=0.95  Input_Dead=interval(25,50)
+		 ( 0 0 1 0 0 0 0 )	%  BACG_DR=0.95  Input_Dead=interval(50,75)
+		 ( 0 0 1 0 0 0 0 )));	%  BACG_DR=0.95  Input_Dead=interval(75,100)
+    }
+
+    potential (Output_Cover | Output_Adults)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, if (Output_Adults < 0.01, 0, Output_Adults) * 100 * 0.0001)) );
+    }
+
+    potential (Output_Adults | BACG_SAR Input_Adults)
+    {
+	model_nodes = ();
+	model_data = ( Input_Adults * (1 - BACG_SAR) );
+	data = ((( 1 0 0 0 0 0 )	%  BACG_SAR=0 - 1  Input_Adults=0 - 1
+		 ( 0 1 0 0 0 0 )	%  BACG_SAR=0 - 1  Input_Adults=1 - 2
+		 ( 0 0 1 0 0 0 )	%  BACG_SAR=0 - 1  Input_Adults=interval(100,250)
+		 ( 0 0 0 1 0 0 )	%  BACG_SAR=0 - 1  Input_Adults=interval(250,500)
+		 ( 0 0 0 0 1 0 )	%  BACG_SAR=0 - 1  Input_Adults=interval(500,1000)
+		 ( 0 0 0 0 0 1 ))	%  BACG_SAR=0 - 1  Input_Adults=interval(1000,2000)
+		(( 1 0 0 0 0 0 )	%  BACG_SAR=1 - 2  Input_Adults=0 - 1
+		 ( 0 1 0 0 0 0 )	%  BACG_SAR=1 - 2  Input_Adults=1 - 2
+		 ( 0 0.08 0.92 0 0 0 )	%  BACG_SAR=1 - 2  Input_Adults=interval(100,250)
+		 ( 0 0 0.12 0.88 0 0 )	%  BACG_SAR=1 - 2  Input_Adults=interval(250,500)
+		 ( 0 0 0 0.12 0.88 0 )	%  BACG_SAR=1 - 2  Input_Adults=interval(500,1000)
+		 ( 0 0 0 0 0.12 0.88 ))	%  BACG_SAR=1 - 2  Input_Adults=interval(1000,2000)
+		(( 1 0 0 0 0 0 )	%  BACG_SAR=2 - 3  Input_Adults=0 - 1
+		 ( 0 1 0 0 0 0 )	%  BACG_SAR=2 - 3  Input_Adults=1 - 2
+		 ( 0 0.12 0.88 0 0 0 )	%  BACG_SAR=2 - 3  Input_Adults=interval(100,250)
+		 ( 0 0 0.16 0.84 0 0 )	%  BACG_SAR=2 - 3  Input_Adults=interval(250,500)
+		 ( 0 0 0 0.16 0.84 0 )	%  BACG_SAR=2 - 3  Input_Adults=interval(500,1000)
+		 ( 0 0 0 0 0.16 0.84 ))	%  BACG_SAR=2 - 3  Input_Adults=interval(1000,2000)
+		(( 1 0 0 0 0 0 )	%  BACG_SAR=3 - 4  Input_Adults=0 - 1
+		 ( 0 1 0 0 0 0 )	%  BACG_SAR=3 - 4  Input_Adults=1 - 2
+		 ( 0 0.24 0.76 0 0 0 )	%  BACG_SAR=3 - 4  Input_Adults=interval(100,250)
+		 ( 0 0 0.32 0.68 0 0 )	%  BACG_SAR=3 - 4  Input_Adults=interval(250,500)
+		 ( 0 0 0 0.32 0.68 0 )	%  BACG_SAR=3 - 4  Input_Adults=interval(500,1000)
+		 ( 0 0 0 0 0.32 0.68 ))	%  BACG_SAR=3 - 4  Input_Adults=interval(1000,2000)
+		(( 1 0 0 0 0 0 )	%  BACG_SAR=4 - 5  Input_Adults=0 - 1
+		 ( 0 1 0 0 0 0 )	%  BACG_SAR=4 - 5  Input_Adults=1 - 2
+		 ( 0 0.28 0.72 0 0 0 )	%  BACG_SAR=4 - 5  Input_Adults=interval(100,250)
+		 ( 0 0 0.44 0.56 0 0 )	%  BACG_SAR=4 - 5  Input_Adults=interval(250,500)
+		 ( 0 0 0 0.44 0.56 0 )	%  BACG_SAR=4 - 5  Input_Adults=interval(500,1000)
+		 ( 0 0 0 0 0.44 0.56 ))	%  BACG_SAR=4 - 5  Input_Adults=interval(1000,2000)
+		(( 1 0 0 0 0 0 )	%  BACG_SAR=5 - 6  Input_Adults=0 - 1
+		 ( 0 1 0 0 0 0 )	%  BACG_SAR=5 - 6  Input_Adults=1 - 2
+		 ( 0 0.68 0.32 0 0 0 )	%  BACG_SAR=5 - 6  Input_Adults=interval(100,250)
+		 ( 0 0 1 0 0 0 )	%  BACG_SAR=5 - 6  Input_Adults=interval(250,500)
+		 ( 0 0 0 1 0 0 )	%  BACG_SAR=5 - 6  Input_Adults=interval(500,1000)
+		 ( 0 0 0 0 1 0 ))	%  BACG_SAR=5 - 6  Input_Adults=interval(1000,2000)
+		(( 1 0 0 0 0 0 )	%  BACG_SAR=6 - 7  Input_Adults=0 - 1
+		 ( 0 1 0 0 0 0 )	%  BACG_SAR=6 - 7  Input_Adults=1 - 2
+		 ( 0 1 0 0 0 0 )	%  BACG_SAR=6 - 7  Input_Adults=interval(100,250)
+		 ( 0 0 1 0 0 0 )	%  BACG_SAR=6 - 7  Input_Adults=interval(250,500)
+		 ( 0 0 0.24 0.76 0 0 )	%  BACG_SAR=6 - 7  Input_Adults=interval(500,1000)
+		 ( 0 0 0 0.24 0.76 0 ))	%  BACG_SAR=6 - 7  Input_Adults=interval(1000,2000)
+		(( 1 0 0 0 0 0 )	%  BACG_SAR=7 - 8  Input_Adults=0 - 1
+		 ( 0 1 0 0 0 0 )	%  BACG_SAR=7 - 8  Input_Adults=1 - 2
+		 ( 0 1 0 0 0 0 )	%  BACG_SAR=7 - 8  Input_Adults=interval(100,250)
+		 ( 0 1 0 0 0 0 )	%  BACG_SAR=7 - 8  Input_Adults=interval(250,500)
+		 ( 0 1 0 0 0 0 )	%  BACG_SAR=7 - 8  Input_Adults=interval(500,1000)
+		 ( 0 1 0 0 0 0 )));	%  BACG_SAR=7 - 8  Input_Adults=interval(1000,2000)
+    }
+
+    potential (Input_Cover)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Input_Dead)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Input_Adults)
+    {
+	data = ( 1 1 1 1 1 1 );
+    }
+} % class ExoticAnnualGrazeSheep

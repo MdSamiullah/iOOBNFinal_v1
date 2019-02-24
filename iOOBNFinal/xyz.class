@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iOOBN type=".class">
+	<node  id="2" name="C_0" label="C_0" type="Discrete" subType="Boolean" kind="0">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="3" name="C_1" label="C_1" type="Discrete" subType="Boolean" kind="0">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="4" name="C_2" label="C_2" type="Discrete" subType="Boolean" kind="0">
+		<state name="True" />
+		<state name="False" />
+		<parent id="2" />
+		<parent id="3" />
+	</node>
+	<node  id="5" name="C_3" label="C_3" type="Discrete" subType="Boolean" kind="0">
+		<state name="True" />
+		<state name="False" />
+		<parent id="4" />
+	</node>
+	<node  id="6" name="C_4" label="C_4" type="Discrete" subType="Boolean" kind="0">
+		<state name="True" />
+		<state name="False" />
+		<parent id="4" />
+	</node>
+</iOOBN>

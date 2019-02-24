@@ -1,0 +1,44 @@
+class big3
+{
+	inputs = ( );
+	outputs = ( );
+	node C_0
+	{
+		label= "C_0";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node C_1
+	{
+		label= "C_1";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node C_2
+	{
+		label= "C_2";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	instance t : test4 ( C_0=t_C_0, C_1=t_C_1 ; t_C_3=C_2, t_C_4=C_2)
+	{
+		label="";
+		position=( 100 100);
+	}
+	potential ( C_0 )
+	{
+		data=(0.5 0.5 );
+	}
+	potential ( C_1 )
+	{
+		data=(0.5 0.5 );
+	}
+	potential ( C_2 )
+	{
+		data=(0.5 0.5 );
+	}
+
+}

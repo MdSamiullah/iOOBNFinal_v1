@@ -1,0 +1,9 @@
+Locale : Reproduction Metabolism 
+Reproduction : Calves Meat Milk 
+Sex : Reproduction 
+Calves : 
+Metabolism : Calves Grazing Meat Milk 
+Grazing : 
+Meat : 
+Food : Reproduction Metabolism 
+Milk : 

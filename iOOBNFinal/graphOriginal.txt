@@ -1,0 +1,14 @@
+B:S,D,E,L
+C:R,V,M
+D:B,E
+E:B,T,D,X,L
+G:R,X,Y,N
+L:B,S,T,E
+M:R,C,S
+N:G,X,Y
+R:C,G,Y,M
+S:B,L,M
+T:E,V,L
+V:C,T
+X:E,G,Y,N
+Y:R,G,X,N

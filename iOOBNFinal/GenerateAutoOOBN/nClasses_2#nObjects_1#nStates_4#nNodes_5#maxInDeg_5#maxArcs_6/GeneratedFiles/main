@@ -1,0 +1,61 @@
+class main
+{
+	inputs = (  node1 node2);
+	outputs = (  node0 node4);
+
+	instance  : (  )
+	{	}
+	instance Obj0C1 : main1( node3 = node3, node4 = node2; Obj0C1_node0 = node0 )
+	{		position = ( 44 270 );
+	}
+	instance Obj0C2 : main2( node2 = node1; Obj0C2_node1 = node1, Obj0C2_node4 = node4 )
+	{		position = ( 15 150 );
+	}
+
+	discrete node node0
+	{
+		type = "Discrete" ;
+		position = ( 44 510 );
+		states = ( "State0" "State1" "State2" "State3" );
+	}
+
+	discrete node node1
+	{
+		type = "Discrete" ;
+		position = ( 45 30 );
+		states = ( "State0" "State1" "State2" "State3" );
+	}
+
+	discrete node node2
+	{
+		type = "Discrete" ;
+		position = ( 165 44 );
+		states = ( "State0" "State1" "State2" "State3" );
+	}
+
+	discrete node node3
+	{
+		type = "Discrete" ;
+		position = ( 15 390 );
+		states = ( "State0" "State1" "State2" "State3" );
+	}
+
+	discrete node node4
+	{
+		type = "Discrete" ;
+		position = ( 164 524 );
+		states = ( "State0" "State1" "State2" "State3" );
+	}
+
+
+	potential ( node0 |  node3 node2 node1 Obj0C1_node0  )
+	{			}
+	potential ( node1 )
+	{			}
+	potential ( node2 )
+	{			}
+	potential ( node3 |  node2 node1 Obj0C2_node1  )
+	{			}
+	potential ( node4 |  node3 node2 node1 Obj0C2_node4  )
+	{			}
+}

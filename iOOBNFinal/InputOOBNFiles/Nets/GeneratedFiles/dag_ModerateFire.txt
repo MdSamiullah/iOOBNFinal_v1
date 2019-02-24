@@ -1,0 +1,12 @@
+Burn : BR CR 
+BR : Output_Basal 
+RBio : Output_NUI 
+Input_Cover : RBio Output_Cover 
+Output_Dead : 
+Input_Basal : Output_Basal 
+Output_Cover : 
+Output_Basal : 
+NH : Output_NUI 
+Input_Dead : RBio Output_Dead 
+Output_NUI : 
+CR : Output_Dead Output_Cover 

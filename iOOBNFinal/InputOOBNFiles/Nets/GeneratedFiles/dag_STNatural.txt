@@ -1,0 +1,28 @@
+CompSum : CSumIndex 
+Output_Seeds : 
+BCGD_C3PLBCR : Output_Basal 
+Output_Dead : 
+BCGD_C3PLCCR : Output_Cover 
+Input_Basal : Output_Basal Output_Seeds 
+CCondS : 
+SI : 
+BCGD_C3PLCGR : Output_NUI 
+Input_Dead : Output_Dead Output_NUI 
+Season : SI GR SP 
+SP : Output_Seeds 
+SR : New_Adults 
+CC : Output_Cover 
+Input_Seeds : New_Adults Output_Seeds 
+New_Adults : Output_Basal 
+CCondBAC : 
+BCGD_DDRL : Output_Dead Output_NUI 
+GR : New_Adults Output_Seeds 
+Output_NUI : 
+Input_Cover : Output_Dead Output_Cover Output_NUI 
+BCGD_C3PLCDR : Output_Dead 
+SSR : Output_Seeds 
+Output_Cover : 
+CSumIndex : CCondBAC 
+Output_Basal : Output_Cover 
+NH : Output_NUI 
+NL : CCondS CCondBAC 

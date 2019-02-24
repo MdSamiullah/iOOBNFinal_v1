@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iOOBN type=".class">
+	<node  id="test.class::t_2" name="I" label="I" type="Discrete" subType="Boolean" kind="0">
+		<state name="True" />
+		<state name="False" />
+		<tuple value="^$^$" />
+		<tuple value="True$1$" />
+		<tuple value="False$0$" />
+	</node>
+	<node  id="test.class::t_3" name="J" label="J" type="Discrete" subType="Boolean" kind="0">
+		<state name="True" />
+		<state name="False" />
+		<tuple value="^$^$" />
+		<tuple value="True$0.5$" />
+		<tuple value="False$0$" />
+	</node>
+	<node  id="test.class::t_4" name="K" label="K" type="Discrete" subType="Boolean" kind="0">
+		<state name="True" />
+		<state name="False" />
+		<parent id="2" />
+		<parent id="3" />
+	</node>
+	<node  id="test.class::t_5" name="O" label="O" type="Discrete" subType="Boolean" kind="0">
+		<state name="True" />
+		<state name="False" />
+		<parent id="4" />
+	</node>
+	<node  id="test.class::t_6" name="P" label="P" type="Discrete" subType="Boolean" kind="0">
+		<state name="True" />
+		<state name="False" />
+		<parent id="4" />
+	</node>
+</iOOBN>

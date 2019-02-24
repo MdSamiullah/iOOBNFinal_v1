@@ -1,0 +1,73 @@
+class nClasses_3#nObjects_1#nStates_2#nNodes_5#maxDeg_3#maxInDeg_3#maxOutDeg_3#maxArcs_6
+{
+	inputs = ( node4 );
+	outputs = ( node0 node1 node2 );
+	node node0 
+	{
+		type = "Discrete";
+		position = ( 44 270 );
+		states = ( "State0" "State1"  );
+	}
+	node node1 
+	{
+		type = "Discrete";
+		position = ( 15 150 );
+		states = ( "State0" "State1"  );
+	}
+	node node2 
+	{
+		type = "Discrete";
+		position = ( 135 164 );
+		states = ( "State0" "State1"  );
+	}
+	node node3 
+	{
+		type = "Discrete";
+		position = ( 255 150 );
+		states = ( "State0" "State1"  );
+	}
+	node node4 
+	{
+		type = "Discrete";
+		position = ( 45 30 );
+		states = ( "State0" "State1"  );
+	}
+	instance Obj1#0 : nClasses_3#nObjects_1#nStates_2#nNodes_5#maxDeg_3#maxInDeg_3#maxOutDeg_3#maxArcs_6#1 (1 = 0;3 = 3)
+	{
+
+	}
+	instance Obj2#0 : nClasses_3#nObjects_1#nStates_2#nNodes_5#maxDeg_3#maxInDeg_3#maxOutDeg_3#maxArcs_6#2 (1 = 1;4 = 4)
+	{
+
+	}
+	instance Obj3#0 : nClasses_3#nObjects_1#nStates_2#nNodes_5#maxDeg_3#maxInDeg_3#maxOutDeg_3#maxArcs_6#3 (1 = 0;4 = 4)
+	{
+
+	}
+	potential (node0 | node3 node4 Obj2#0_node4 )
+	{
+
+
+	}
+	potential (node1 | node4 )
+	{
+
+
+	}
+	potential (node2 | node3 Obj1#0_node3 Obj3#0_node4 )
+	{
+
+
+	}
+	potential (node3 | node4 )
+	{
+
+
+	}
+	potential (node4)
+	{
+
+
+	}
+}
+

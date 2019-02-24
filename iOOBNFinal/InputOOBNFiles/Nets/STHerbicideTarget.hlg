@@ -1,0 +1,149 @@
+Mon Jun 20 14:29:32 2016
+
+
+Moral links:
+
+    Marrying Target and Application
+    Marrying Input_Dead and Cover_Dec
+    Marrying Output_Basal and Cover_Dec
+    Marrying Output_Basal and Input_Cover
+    Marrying CBAR and Input_Basal
+    Marrying CBAR and Input_Seedlings
+    Marrying CBAR and Input_Cover
+    Marrying SR and Input_Seeds
+
+
+Triangulating prime component with 3 members:
+    Cover_Dec, Input_Dead, Output_Dead
+This component is a clique of cost 392
+
+Triangulating prime component with 4 members:
+    Cover_Dec, Input_Cover, Output_Basal, Output_Cover
+This component is a clique of cost 2744
+
+Triangulating prime component with 3 members:
+    Input_Seedlings, Output_Seedlings, CBAR
+This component is a clique of cost 75
+
+Triangulating prime component with 3 members:
+    Input_Basal, Output_Basal, CBAR
+This component is a clique of cost 147
+
+Triangulating prime component with 4 members:
+    Cover_Dec, Input_Cover, Output_Basal, CBAR
+This component is a clique of cost 1176
+
+Triangulating prime component with 3 members:
+    Application, Target, CBAR
+This component is a clique of cost 48
+
+Triangulating prime component with 3 members:
+    Input_Seeds, Output_Seeds, SR
+This component is a clique of cost 100
+
+Triangulating prime component with 3 members:
+    Application, Target, SR
+This component is a clique of cost 64
+
+
+Total cost of triangulation for all prime components is 4746
+
+
+Elimination sequence:
+
+    Output_Seeds
+    Input_Seeds
+    Output_Seedlings
+    Input_Seedlings
+    SR
+    Target
+    Application
+    Input_Basal
+    Output_Cover
+    Input_Cover
+    Output_Basal
+    CBAR
+    Output_Dead
+    Input_Dead
+    Cover_Dec
+
+
+Cliques:
+
+Clique 8, 3 members, table size = 392:
+    Cover_Dec, Input_Dead, Output_Dead
+
+Clique 7, 4 members, table size = 1176:
+    Cover_Dec, CBAR, Output_Basal, Input_Cover
+
+Clique 6, 4 members, table size = 2744:
+    Cover_Dec, Output_Basal, Input_Cover, Output_Cover
+
+Clique 5, 3 members, table size = 147:
+    CBAR, Output_Basal, Input_Basal
+
+Clique 4, 3 members, table size = 48:
+    CBAR, Application, Target
+
+Clique 3, 3 members, table size = 64:
+    Application, Target, SR
+
+Clique 2, 3 members, table size = 100:
+    SR, Input_Seeds, Output_Seeds
+
+Clique 1, 3 members, table size = 75:
+    CBAR, Input_Seedlings, Output_Seedlings
+
+Total clique table size: 4746
+
+
+The junction forest:
+
+Creating junction tree with clique 8 as root ...
+
+Cliques 7 and 8 linked, separator has 1 member and table size = 8:
+    Cover_Dec
+
+Cliques 6 and 7 linked, separator has 3 members and table size = 392:
+    Cover_Dec, Output_Basal, Input_Cover
+
+Cliques 5 and 7 linked, separator has 2 members and table size = 21:
+    CBAR, Output_Basal
+
+Cliques 4 and 5 linked, separator has 1 member and table size = 3:
+    CBAR
+
+Cliques 3 and 4 linked, separator has 2 members and table size = 16:
+    Application, Target
+
+Cliques 2 and 3 linked, separator has 1 member and table size = 4:
+    SR
+
+Cliques 1 and 4 linked, separator has 1 member and table size = 3:
+    CBAR
+
+
+Assignment of potentials to cliques:
+
+    Node Application assigned to clique 4
+    Node Target assigned to clique 4
+    Node Cover_Dec assigned to clique 7
+    Node Input_Dead assigned to clique 8
+    Node Input_Cover assigned to clique 7
+    Node Input_Basal assigned to clique 5
+    Node Input_Seedlings assigned to clique 1
+    Node Input_Seeds assigned to clique 2
+    Node Output_Dead assigned to clique 8
+    Node Output_Seeds assigned to clique 2
+    Node Output_Seedlings assigned to clique 1
+    Node Output_Basal assigned to clique 5
+    Node Output_Cover assigned to clique 6
+    Node CBAR assigned to clique 4
+    Node SR assigned to clique 3
+
+
+Checking conditional probability potentials:
+
+    No error found
+Model for Application is unspecified
+Model for Application is unspecified

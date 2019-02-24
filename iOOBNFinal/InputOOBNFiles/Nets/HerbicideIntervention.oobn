@@ -1,0 +1,497 @@
+class HerbicideIntervention
+{
+    inputs = (Product HerbicideStrategy DeRocked ST_Cover Needle_Cover Blanket_Cover BroadWeeds_Cover Scale);
+    outputs = (HerbicideCost Application);
+    node_size = (100 55);
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "1";
+    HR_Zoom_ZoomFactor = "100";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_DiscreteFunction = "5";
+    HR_Color_Function = "4";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Mean_Variance = "1";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "5";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "javax.swing.plaf.FontUIResource[family=Tahoma,name=Tahoma,style=plain,size=11]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+
+    node Scale
+    {
+	label = "Scale\n";
+	position = (535 146);
+	states = ("0 - 1" "1 - 2" "2 - 3");
+	subtype = interval;
+	state_values = (0 5 50 500);
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_State_2 = "";
+	HR_Desc = "";
+	HR_LinkMode = "[U1:0][BurnCost:0][HerbicideCost:0]";
+	HR_Group = "0";
+    }
+
+    node Target
+    {
+	label = "Target Cover";
+	position = (273 285);
+	states = ("0 - 1" "1 - 2" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkMode = "[Shade:0][C22:0][C7_1_1:0][CSum:0][VSComp_1:0][VSCompCulm:0][HerbicideCost:0]";
+	HR_State_6 = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkControlPoints = "";
+	HR_HTML_Desc = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_State_5 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_Group = "0";
+    }
+
+    node BLTarget
+    {
+	label = "BroadLeaf\nTarget Cover";
+	position = (393 166);
+	states = ("0 - 1" "1 - 2" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_NodeSize = "(100, 55)";
+	HR_State_5 = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_HTML_Desc = "";
+	HR_LinkControlPoints = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_State_6 = "";
+	HR_LinkMode = "[Shade:0][C22:0][C7_1_1:0][CSum:0][VSComp_1:0][VSCompCulm:0][Target:0][HerbicideCost:0]";
+	HR_Group = "0";
+    }
+
+    node BroadWeeds_Cover
+    {
+	label = "BroadWeeds \nCover";
+	position = (456 81);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkMode = "[C2:0][CT:0][Output_Cover:0][C19:0][C20:0][Cover_Inc:0][Cover_Dec:0][C3Target_1:0][BLTarget:0]";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_5 = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkControlPoints = "";
+	HR_State_6 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_Group = "0";
+    }
+
+    node Blanket_Cover
+    {
+	label = "Blanket \nCover";
+	position = (344 80);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkMode = "[C2:0][CT:0][Output_Cover:0][C19:0][C20:0][Cover_Inc:0][Cover_Dec:0][C3Target_1:0][BLTarget:0]";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_5 = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkControlPoints = "";
+	HR_State_6 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_Group = "0";
+    }
+
+    node C3Target
+    {
+	label = "C3 Target\nGrass Cover";
+	position = (169 168);
+	states = ("0 - 1" "1 - 2" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkMode = "[Shade:0][C22:0][C7_1_1:0][CSum:0][VSComp_1:0][VSCompCulm:0][Target:0][HerbicideCost:0]";
+	HR_State_6 = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkControlPoints = "";
+	HR_HTML_Desc = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_State_5 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_Group = "0";
+    }
+
+    node Needle_Cover
+    {
+	label = "Needle \nCover";
+	position = (222 78);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkMode = "[C2:0][CT:0][Output_Cover:0][C19:0][C20:0][Cover_Inc:0][Cover_Dec:0][C3Target:0]";
+	HR_NodeSize = "(100, 55)";
+	HR_State_6 = "";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_5 = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkControlPoints = "";
+	HR_Group = "0";
+    }
+
+    node ST_Cover
+    {
+	label = "ST\nCover";
+	position = (106 78);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkMode = "[C2:0][CT:0][Output_Cover:0][C19:0][C20:0][Cover_Inc:0][Cover_Dec:0][Output_Dead:0][Output_NUI:0][C3Target:0]";
+	HR_LinkControlPoints = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_State_5 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_State_6 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_Group = "0";
+    }
+
+    node DeRocked
+    {
+	label = "De Rocked?";
+	position = (871 81);
+	states = ("Yes" "No");
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkMode = "[Scarify:0][ApplicationHappens:0][Application:0]";
+	HR_Group = "0";
+    }
+
+    node Application
+    {
+	label = "Application";
+	position = (767 291);
+	states = ("Spot" "Boom/Spread" "Air" "None");
+	HR_LinkMode = "[HerbicideCost:0]";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_Group = "0";
+    }
+
+    node HerbicideStrategy
+    {
+	label = "Strategy";
+	position = (742 78);
+	states = ("Spot" "Boom" "Spread" "Air");
+	HR_LinkMode = "[ApplicationHappens:0][Application:0]";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    utility HerbicideCost
+    {
+	label = "Herbicide\nCost";
+	position = (610 290);
+	HR_Desc = "";
+	HR_Group = "0";
+    }
+
+    node Product
+    {
+	label = "Product";
+	position = (610 77);
+	states = ("Flupopranate" "Fusilade" "Glyphosate" "MCPA" "Metsulphuron" "Tordon" "Grazon");
+	HR_NodeSize = "(100, 55)";
+	HR_LinkControlPoints = "";
+	HR_State_11 = "";
+	HR_State_10 = "";
+	HR_State_9 = "";
+	HR_State_8 = "";
+	HR_State_7 = "";
+	HR_State_6 = "";
+	HR_State_5 = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_State_12 = "";
+	HR_LinkMode = "[BurnStrategy:0][CrashGrazeStrategy:0][HS:0][ScarifyStrategy:0][RemoveTopSoilStrategy:0][C1:0][C2:0][C3:0][SS:0][Intervention_1:0][Inter:0][PlanBurn:0][TargetBurn:0][HerbicideCost:0]";
+	HR_Group = "0";
+    }
+
+    potential (Scale)
+    {
+	data = ( 1 1 1 );
+    }
+
+    potential (Target | BLTarget C3Target)
+    {
+	model_nodes = ();
+	model_data = ( C3Target + BLTarget - C3Target * BLTarget / 100 );
+	data = ((( 0.52 0.48 0 0 0 0 0 )	%  BLTarget=0 - 1  C3Target=0 - 1
+		 ( 0 1 0 0 0 0 0 )	%  BLTarget=0 - 1  C3Target=1 - 2
+		 ( 0 0 1 0 0 0 0 )	%  BLTarget=0 - 1  C3Target=interval(20,40)
+		 ( 0 0 0 1 0 0 0 )	%  BLTarget=0 - 1  C3Target=interval(40,60)
+		 ( 0 0 0 0 1 0 0 )	%  BLTarget=0 - 1  C3Target=interval(60,80)
+		 ( 0 0 0 0 0 1 0 )	%  BLTarget=0 - 1  C3Target=interval(80,99.99)
+		 ( 0 0 0 0 0 0 1 ))	%  BLTarget=0 - 1  C3Target=interval(99.99,100)
+		(( 0 1 0 0 0 0 0 )	%  BLTarget=1 - 2  C3Target=0 - 1
+		 ( 0 0.5424 0.4576 0 0 0 0 )	%  BLTarget=1 - 2  C3Target=1 - 2
+		 ( 0 0 0.6544 0.3456 0 0 0 )	%  BLTarget=1 - 2  C3Target=interval(20,40)
+		 ( 0 0 0 0.7664 0.2336 0 0 )	%  BLTarget=1 - 2  C3Target=interval(40,60)
+		 ( 0 0 0 0 0.8832 0.1168 0 )	%  BLTarget=1 - 2  C3Target=interval(60,80)
+		 ( 0 0 0 0 0 1 0 )	%  BLTarget=1 - 2  C3Target=interval(80,99.99)
+		 ( 0 0 0 0 0 0 1 ))	%  BLTarget=1 - 2  C3Target=interval(99.99,100)
+		(( 0 0 1 0 0 0 0 )	%  BLTarget=interval(20,40)  C3Target=0 - 1
+		 ( 0 0 0.6544 0.3456 0 0 0 )	%  BLTarget=interval(20,40)  C3Target=1 - 2
+		 ( 0 0 0.0336 0.9088 0.0576 0 0 )	%  BLTarget=interval(20,40)  C3Target=interval(20,40)
+		 ( 0 0 0 0.1776 0.8224 0 0 )	%  BLTarget=interval(20,40)  C3Target=interval(40,60)
+		 ( 0 0 0 0 0.5632 0.4368 0 )	%  BLTarget=interval(20,40)  C3Target=interval(60,80)
+		 ( 0 0 0 0 0 1 0 )	%  BLTarget=interval(20,40)  C3Target=interval(80,99.99)
+		 ( 0 0 0 0 0 0 1 ))	%  BLTarget=interval(20,40)  C3Target=interval(99.99,100)
+		(( 0 0 0 1 0 0 0 )	%  BLTarget=interval(40,60)  C3Target=0 - 1
+		 ( 0 0 0 0.7664 0.2336 0 0 )	%  BLTarget=interval(40,60)  C3Target=1 - 2
+		 ( 0 0 0 0.1776 0.8224 0 0 )	%  BLTarget=interval(40,60)  C3Target=interval(20,40)
+		 ( 0 0 0 0 0.8848 0.1152 0 )	%  BLTarget=interval(40,60)  C3Target=interval(40,60)
+		 ( 0 0 0 0 0.088 0.912 0 )	%  BLTarget=interval(40,60)  C3Target=interval(60,80)
+		 ( 0 0 0 0 0 1 0 )	%  BLTarget=interval(40,60)  C3Target=interval(80,99.99)
+		 ( 0 0 0 0 0 0 1 ))	%  BLTarget=interval(40,60)  C3Target=interval(99.99,100)
+		(( 0 0 0 0 1 0 0 )	%  BLTarget=interval(60,80)  C3Target=0 - 1
+		 ( 0 0 0 0 0.8832 0.1168 0 )	%  BLTarget=interval(60,80)  C3Target=1 - 2
+		 ( 0 0 0 0 0.5632 0.4368 0 )	%  BLTarget=interval(60,80)  C3Target=interval(20,40)
+		 ( 0 0 0 0 0.088 0.912 0 )	%  BLTarget=interval(60,80)  C3Target=interval(40,60)
+		 ( 0 0 0 0 0 1 0 )	%  BLTarget=interval(60,80)  C3Target=interval(60,80)
+		 ( 0 0 0 0 0 1 0 )	%  BLTarget=interval(60,80)  C3Target=interval(80,99.99)
+		 ( 0 0 0 0 0 0 1 ))	%  BLTarget=interval(60,80)  C3Target=interval(99.99,100)
+		(( 0 0 0 0 0 1 0 )	%  BLTarget=interval(80,99.99)  C3Target=0 - 1
+		 ( 0 0 0 0 0 1 0 )	%  BLTarget=interval(80,99.99)  C3Target=1 - 2
+		 ( 0 0 0 0 0 1 0 )	%  BLTarget=interval(80,99.99)  C3Target=interval(20,40)
+		 ( 0 0 0 0 0 1 0 )	%  BLTarget=interval(80,99.99)  C3Target=interval(40,60)
+		 ( 0 0 0 0 0 1 0 )	%  BLTarget=interval(80,99.99)  C3Target=interval(60,80)
+		 ( 0 0 0 0 0 0.992 0.008 )	%  BLTarget=interval(80,99.99)  C3Target=interval(80,99.99)
+		 ( 0 0 0 0 0 0 1 ))	%  BLTarget=interval(80,99.99)  C3Target=interval(99.99,100)
+		(( 0 0 0 0 0 0 1 )	%  BLTarget=interval(99.99,100)  C3Target=0 - 1
+		 ( 0 0 0 0 0 0 1 )	%  BLTarget=interval(99.99,100)  C3Target=1 - 2
+		 ( 0 0 0 0 0 0 1 )	%  BLTarget=interval(99.99,100)  C3Target=interval(20,40)
+		 ( 0 0 0 0 0 0 1 )	%  BLTarget=interval(99.99,100)  C3Target=interval(40,60)
+		 ( 0 0 0 0 0 0 1 )	%  BLTarget=interval(99.99,100)  C3Target=interval(60,80)
+		 ( 0 0 0 0 0 0 1 )	%  BLTarget=interval(99.99,100)  C3Target=interval(80,99.99)
+		 ( 0 0 0 0 0 0 1 )));	%  BLTarget=interval(99.99,100)  C3Target=interval(99.99,100)
+    }
+
+    potential (BLTarget | BroadWeeds_Cover Blanket_Cover)
+    {
+	model_nodes = ();
+	model_data = ( Blanket_Cover + BroadWeeds_Cover - Blanket_Cover * BroadWeeds_Cover / 100 );
+    }
+
+    potential (BroadWeeds_Cover)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Blanket_Cover)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (C3Target | Needle_Cover ST_Cover)
+    {
+	model_nodes = ();
+	model_data = ( ST_Cover + Needle_Cover - ST_Cover * Needle_Cover / 100 );
+    }
+
+    potential (Needle_Cover)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (ST_Cover)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (DeRocked)
+    {
+	data = ( 1 1 );
+    }
+
+    potential (Application | DeRocked HerbicideStrategy)
+    {
+	data = ((( 1 0 0 0 )	%  DeRocked=Yes  HerbicideStrategy=Spot
+		 ( 0 1 0 0 )	%  DeRocked=Yes  HerbicideStrategy=Boom
+		 ( 0 1 0 0 )	%  DeRocked=Yes  HerbicideStrategy=Spread
+		 ( 0 0 1 0 ))	%  DeRocked=Yes  HerbicideStrategy=Air
+		(( 1 0 0 0 )	%  DeRocked=No  HerbicideStrategy=Spot
+		 ( 0 0 0 1 )	%  DeRocked=No  HerbicideStrategy=Boom
+		 ( 0 1 0 0 )	%  DeRocked=No  HerbicideStrategy=Spread
+		 ( 0 0 1 0 )));	%  DeRocked=No  HerbicideStrategy=Air
+    }
+
+    potential (HerbicideStrategy)
+    {
+	data = ( 1 1 1 1 );
+    }
+
+    potential (HerbicideCost | Target BLTarget C3Target Product Application Scale)
+    {
+	model_nodes = (Application Scale Product);
+	model_data  = ( 500 + 95 / C3Target + 3 * C3Target,
+			500 + 95 / C3Target + 2 * C3Target,
+			500 + 95 / Target + 3 * Target,
+			500 + 95 / BLTarget + 2 * BLTarget,
+			500 + 95 / BLTarget + 1 * BLTarget,
+			500 + 95 / BLTarget + 10 * BLTarget,
+			500 + 95 / BLTarget + 25 * BLTarget,
+			400 + 95 / C3Target + 3 * C3Target,
+			400 + 95 / C3Target + 2 * C3Target,
+			400 + 95 / Target + 3 * Target,
+			400 + 95 / BLTarget + 2 * BLTarget,
+			400 + 95 / BLTarget + 1 * BLTarget,
+			400 + 95 / BLTarget + 10 * BLTarget,
+			400 + 95 / BLTarget + 25 * BLTarget,
+			300 + 95 / C3Target + 3 * C3Target,
+			300 + 95 / C3Target + 2 * C3Target,
+			300 + 95 / Target + 3 * Target,
+			300 + 95 / BLTarget + 2 * BLTarget,
+			300 + 95 / BLTarget + 1 * BLTarget,
+			300 + 95 / BLTarget + 10 * BLTarget,
+			300 + 95 / BLTarget + 25 * BLTarget,
+			1000 + 68.365,
+			1000 + 15.4,
+			1000 + 19.96,
+			1000 + 16.302,
+			1000 + 4.125,
+			1000 + 376.2,
+			1000 + 251.9,
+			800 + 68.365,
+			800 + 15.4,
+			800 + 19.96,
+			800 + 16.302,
+			800 + 4.125,
+			800 + 376.2,
+			800 + 251.9,
+			600 + 68.365,
+			600 + 15.4,
+			600 + 19.96,
+			600 + 16.302,
+			600 + 4.125,
+			600 + 376.2,
+			600 + 251.9,
+			2500 + 68.365,
+			2500 + 15.4,
+			2500 + 19.965,
+			2500 + 16.302,
+			2500 + 4.125,
+			2500 + 376.2,
+			2500 + 251.9,
+			2000 + 68.365,
+			2000 + 15.4,
+			2000 + 19.965,
+			2000 + 16.302,
+			2000 + 4.125,
+			2000 + 376.2,
+			2000 + 251.9,
+			1500 + 68.365,
+			1500 + 15.4,
+			1500 + 19.965,
+			1500 + 16.302,
+			1500 + 4.125,
+			1500 + 376.2,
+			1500 + 251.9,
+			0,
+			0,
+			0,
+			0,
+			0,
+			0,
+			0,
+			0,
+			0,
+			0,
+			0,
+			0,
+			0,
+			0,
+			0,
+			0,
+			0,
+			0,
+			0,
+			0,
+			0 );
+    }
+
+    potential (Product)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+} % class HerbicideIntervention

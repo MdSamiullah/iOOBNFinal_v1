@@ -1,0 +1,1035 @@
+class TolerantHarvest
+{
+    inputs = (Input_Basal Input_Dead Input_Cover Harvest);
+    outputs = (Output_Cover Output_Basal Output_Dead);
+    node_size = (80 40);
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "1";
+    HR_Zoom_ZoomFactor = "100";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_DiscreteFunction = "5";
+    HR_Color_Function = "4";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Mean_Variance = "1";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "5";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "javax.swing.plaf.FontUIResource[family=Tahoma,name=Tahoma,style=plain,size=11]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+
+    node Harvest
+    {
+	label = "Harvest\nHappens?";
+	position = (313 28);
+	states = ("false" "true");
+	subtype = boolean;
+	HR_LinkMode = "[BurnHappens:0][Intervention_1:0][SCost:0][ScarifyCost:0][HarvestCost:0][Method:0][BioRes:0][CR:0][BR:0][SR:0]";
+	HR_LinkControlPoints = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_State_2 = "";
+	HR_Group = "0";
+    }
+
+    node BioRes
+    {
+	label = "Biomass\nResidue";
+	position = (151 103);
+	states = ("0 - 1" "1 - 2" "2 - 3");
+	subtype = interval;
+	state_values = (0 0.3 0.9 1);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[Output_Cover:0][RBio:0]";
+	HR_State_2 = "";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_Group = "0";
+    }
+
+    node Input_Cover
+    {
+	label = "Input \nCover";
+	position = (46 241);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_State_5 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_State_6 = "";
+	HR_LinkMode = "[C2:0][CT:0][Output_Cover:0][C19:0][C20:0][Cover_Inc:0][Cover_Dec:0][Cover_Burnt:0][C1:0][New_Cover:0][RBio:0]";
+	HR_Group = "0";
+    }
+
+    node Input_Dead
+    {
+	label = "Input Dead \nCover";
+	position = (50 323);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_NodeSize = "(100, 55)";
+	HR_LinkControlPoints = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_State_5 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_State_6 = "";
+	HR_LinkMode = "[NCG_1_1:0][Com:0][TC:0][OC:0][Output_Dead:0][C27:0][Dead_Dec:0][Dead_Burnt:0][C1:0][RBio:0]";
+	HR_Group = "0";
+    }
+
+    node Output_Dead
+    {
+	label = "Output Dead \nCover";
+	position = (636 347);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_5 = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[NCG_1_1:0][Com:0][TC:0][OC:0][C1:0]";
+	HR_LinkControlPoints = "";
+	HR_NodeSize = "(100, 55)";
+	HR_State_6 = "";
+	HR_Group = "0";
+    }
+
+    node Input_Basal
+    {
+	label = "Input Basal \nArea";
+	position = (44 175);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_5 = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_State_6 = "";
+	HR_LinkMode = "[C1:0][C3:0][C10:0][C11:0][Output_Basal:0][Prod_Seeds:0][Basal_Dec:0][Basal_Inc:0]";
+	HR_Group = "0";
+    }
+
+    node Output_Basal
+    {
+	label = "Output Basal\nArea";
+	position = (636 170);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_State_5 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_LinkControlPoints = "";
+	HR_State_6 = "";
+	HR_LinkMode = "[Output_Cover:0]";
+	HR_Group = "0";
+    }
+
+    node Output_Cover
+    {
+	label = "Output \nCover";
+	position = (639 258);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_NodeSize = "(98, 46)";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_State_5 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_LinkMode = "[C2:0][CT:0][C1:0]";
+	HR_State_6 = "";
+	HR_Group = "0";
+    }
+
+    node CR
+    {
+	label = "Cover\nReduction";
+	position = (295 105);
+	states = ("0 - 1" "1 - 2" "2 - 3");
+	subtype = interval;
+	state_values = (0 0.3 0.9 1);
+	HR_LinkControlPoints = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_State_2 = "";
+	HR_LinkMode = "[Output_Cover:0][RBio:0][Output_Dead:0]";
+	HR_Group = "0";
+    }
+
+    node LOBio
+    {
+	label = "Left over\nBiomass";
+	position = (277 293);
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.001 5 25 50 100);
+	HR_NodeSize = "(86, 47)";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_LinkMode = "[Output_NUI:0][Output_Dead:0]";
+	HR_Group = "0";
+    }
+
+    node BR
+    {
+	label = "Basal Area\nReduction";
+	position = (456 103);
+	states = ("0 - 1" "1 - 2");
+	subtype = interval;
+	state_values = (0 0.005 1);
+	HR_State_2 = "";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[Output_Cover:0][Output_Dead:0][RBio:0][Output_Basal:0]";
+	HR_Group = "0";
+    }
+
+    potential (Harvest)
+    {
+	data = ( 1 1 );
+    }
+
+    potential (BioRes | Harvest)
+    {
+	model_nodes = (Harvest);
+	model_data  = ( 0,
+			Beta (17, 90, 0, 1) );
+	data = (( 1 0 0 )	%  Harvest=false
+		( 0.999701 0.000299155 6.96902E-073 ));	%  Harvest=true
+    }
+
+    potential (Input_Cover)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Input_Dead)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Output_Dead | LOBio CR Input_Dead)
+    {
+	model_nodes = ();
+	model_data = ( min (100, Input_Dead * CR + LOBio) );
+	data = (((( 1 0 0 0 0 0 0 )	%  LOBio=interval(0,0.001)  CR=0 - 1  Input_Dead=interval(0,0.01)
+		  ( 0.13472 0.86528 0 0 0 0 0 )	%  LOBio=interval(0,0.001)  CR=0 - 1  Input_Dead=interval(0.01,1)
+		  ( 0.005824 0.914816 0.07936 0 0 0 0 )	%  LOBio=interval(0,0.001)  CR=0 - 1  Input_Dead=interval(1,5)
+		  ( 0 0.26944 0.65216 0.0784 0 0 0 )	%  LOBio=interval(0,0.001)  CR=0 - 1  Input_Dead=interval(5,25)
+		  ( 0 0.0928 0.3696 0.5376 0 0 0 )	%  LOBio=interval(0,0.001)  CR=0 - 1  Input_Dead=interval(25,50)
+		  ( 0 0.0496 0.2224 0.728 0 0 0 )	%  LOBio=interval(0,0.001)  CR=0 - 1  Input_Dead=interval(50,75)
+		  ( 0 0.04 0.1504 0.752 0.0576 0 0 ))	%  LOBio=interval(0,0.001)  CR=0 - 1  Input_Dead=interval(75,100)
+		 (( 1 0 0 0 0 0 0 )	%  LOBio=interval(0,0.001)  CR=1 - 2  Input_Dead=interval(0,0.01)
+		  ( 0.001152 0.998848 0 0 0 0 0 )	%  LOBio=interval(0,0.001)  CR=1 - 2  Input_Dead=interval(0.01,1)
+		  ( 0 0.2064 0.7936 0 0 0 0 )	%  LOBio=interval(0,0.001)  CR=1 - 2  Input_Dead=interval(1,5)
+		  ( 0 0 0.2064 0.7936 0 0 0 )	%  LOBio=interval(0,0.001)  CR=1 - 2  Input_Dead=interval(5,25)
+		  ( 0 0 0 0.6496 0.3504 0 0 )	%  LOBio=interval(0,0.001)  CR=1 - 2  Input_Dead=interval(25,50)
+		  ( 0 0 0 0.1744 0.6576 0.168 0 )	%  LOBio=interval(0,0.001)  CR=1 - 2  Input_Dead=interval(50,75)
+		  ( 0 0 0 0.008 0.4512 0.4528 0.088 ))	%  LOBio=interval(0,0.001)  CR=1 - 2  Input_Dead=interval(75,100)
+		 (( 0.98304 0.01696 0 0 0 0 0 )	%  LOBio=interval(0,0.001)  CR=2 - 3  Input_Dead=interval(0,0.01)
+		  ( 0 1 0 0 0 0 0 )	%  LOBio=interval(0,0.001)  CR=2 - 3  Input_Dead=interval(0.01,1)
+		  ( 0 0.0096 0.9904 0 0 0 0 )	%  LOBio=interval(0,0.001)  CR=2 - 3  Input_Dead=interval(1,5)
+		  ( 0 0 0.0096 0.9904 0 0 0 )	%  LOBio=interval(0,0.001)  CR=2 - 3  Input_Dead=interval(5,25)
+		  ( 0 0 0 0.0528 0.9472 0 0 )	%  LOBio=interval(0,0.001)  CR=2 - 3  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0.1072 0.8928 0 )	%  LOBio=interval(0,0.001)  CR=2 - 3  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0.16 0.84 )))	%  LOBio=interval(0,0.001)  CR=2 - 3  Input_Dead=interval(75,100)
+		((( 0 0.2 0.8 0 0 0 0 )	%  LOBio=interval(0.001,5)  CR=0 - 1  Input_Dead=interval(0,0.01)
+		  ( 0 0.187648 0.800192 0.01216 0 0 0 )	%  LOBio=interval(0.001,5)  CR=0 - 1  Input_Dead=interval(0.01,1)
+		  ( 0 0.113024 0.797696 0.08928 0 0 0 )	%  LOBio=interval(0.001,5)  CR=0 - 1  Input_Dead=interval(1,5)
+		  ( 0 0.026816 0.53664 0.436544 0 0 0 )	%  LOBio=interval(0.001,5)  CR=0 - 1  Input_Dead=interval(5,25)
+		  ( 0 0.009408 0.221632 0.76896 0 0 0 )	%  LOBio=interval(0.001,5)  CR=0 - 1  Input_Dead=interval(25,50)
+		  ( 0 0.0048 0.129664 0.862336 0.0032 0 0 )	%  LOBio=interval(0.001,5)  CR=0 - 1  Input_Dead=interval(50,75)
+		  ( 0 0.003712 0.091648 0.76512 0.13952 0 0 ))	%  LOBio=interval(0.001,5)  CR=0 - 1  Input_Dead=interval(75,100)
+		 (( 0 0.2 0.8 0 0 0 0 )	%  LOBio=interval(0.001,5)  CR=1 - 2  Input_Dead=interval(0,0.01)
+		  ( 0 0.13984 0.80032 0.05984 0 0 0 )	%  LOBio=interval(0.001,5)  CR=1 - 2  Input_Dead=interval(0.01,1)
+		  ( 0 0.010432 0.629632 0.359936 0 0 0 )	%  LOBio=interval(0.001,5)  CR=1 - 2  Input_Dead=interval(1,5)
+		  ( 0 0 0.053568 0.944576 0.001856 0 0 )	%  LOBio=interval(0.001,5)  CR=1 - 2  Input_Dead=interval(5,25)
+		  ( 0 0 0 0.537536 0.462464 0 0 )	%  LOBio=interval(0.001,5)  CR=1 - 2  Input_Dead=interval(25,50)
+		  ( 0 0 0 0.109696 0.668224 0.22208 0 )	%  LOBio=interval(0.001,5)  CR=1 - 2  Input_Dead=interval(50,75)
+		  ( 0 0 0 0.001344 0.409216 0.4672 0.12224 ))	%  LOBio=interval(0.001,5)  CR=1 - 2  Input_Dead=interval(75,100)
+		 (( 0 0.2 0.8 0 0 0 0 )	%  LOBio=interval(0.001,5)  CR=2 - 3  Input_Dead=interval(0,0.01)
+		  ( 0 0.103872 0.800256 0.095872 0 0 0 )	%  LOBio=interval(0.001,5)  CR=2 - 3  Input_Dead=interval(0.01,1)
+		  ( 0 0 0.429952 0.570048 0 0 0 )	%  LOBio=interval(0.001,5)  CR=2 - 3  Input_Dead=interval(1,5)
+		  ( 0 0 0.000128 0.924288 0.075584 0 0 )	%  LOBio=interval(0.001,5)  CR=2 - 3  Input_Dead=interval(5,25)
+		  ( 0 0 0 0.008384 0.958336 0.03328 0 )	%  LOBio=interval(0.001,5)  CR=2 - 3  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0.03552 0.942208 0.022272 )	%  LOBio=interval(0.001,5)  CR=2 - 3  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0.077888 0.922112 )))	%  LOBio=interval(0.001,5)  CR=2 - 3  Input_Dead=interval(75,100)
+		((( 0 0 0 1 0 0 0 )	%  LOBio=interval(5,25)  CR=0 - 1  Input_Dead=interval(0,0.01)
+		  ( 0 0 0 1 0 0 0 )	%  LOBio=interval(5,25)  CR=0 - 1  Input_Dead=interval(0.01,1)
+		  ( 0 0 0 0.97984 0.02016 0 0 )	%  LOBio=interval(5,25)  CR=0 - 1  Input_Dead=interval(1,5)
+		  ( 0 0 0 0.887872 0.112128 0 0 )	%  LOBio=interval(5,25)  CR=0 - 1  Input_Dead=interval(5,25)
+		  ( 0 0 0 0.718912 0.281088 0 0 )	%  LOBio=interval(5,25)  CR=0 - 1  Input_Dead=interval(25,50)
+		  ( 0 0 0 0.532928 0.467072 0 0 )	%  LOBio=interval(5,25)  CR=0 - 1  Input_Dead=interval(50,75)
+		  ( 0 0 0 0.38272 0.612544 0.004736 0 ))	%  LOBio=interval(5,25)  CR=0 - 1  Input_Dead=interval(75,100)
+		 (( 0 0 0 1 0 0 0 )	%  LOBio=interval(5,25)  CR=1 - 2  Input_Dead=interval(0,0.01)
+		  ( 0 0 0 0.988224 0.011776 0 0 )	%  LOBio=interval(5,25)  CR=1 - 2  Input_Dead=interval(0.01,1)
+		  ( 0 0 0 0.909888 0.090112 0 0 )	%  LOBio=interval(5,25)  CR=1 - 2  Input_Dead=interval(1,5)
+		  ( 0 0 0 0.550592 0.449408 0 0 )	%  LOBio=interval(5,25)  CR=1 - 2  Input_Dead=interval(5,25)
+		  ( 0 0 0 0.1024 0.78528 0.11232 0 )	%  LOBio=interval(5,25)  CR=1 - 2  Input_Dead=interval(25,50)
+		  ( 0 0 0 0.00416 0.441728 0.507584 0.046528 )	%  LOBio=interval(5,25)  CR=1 - 2  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0.173568 0.476864 0.349568 ))	%  LOBio=interval(5,25)  CR=1 - 2  Input_Dead=interval(75,100)
+		 (( 0 0 0 1 0 0 0 )	%  LOBio=interval(5,25)  CR=2 - 3  Input_Dead=interval(0,0.01)
+		  ( 0 0 0 0.97664 0.02336 0 0 )	%  LOBio=interval(5,25)  CR=2 - 3  Input_Dead=interval(0.01,1)
+		  ( 0 0 0 0.857408 0.142592 0 0 )	%  LOBio=interval(5,25)  CR=2 - 3  Input_Dead=interval(1,5)
+		  ( 0 0 0 0.306048 0.693952 0 0 )	%  LOBio=interval(5,25)  CR=2 - 3  Input_Dead=interval(5,25)
+		  ( 0 0 0 0 0.475072 0.524928 0 )	%  LOBio=interval(5,25)  CR=2 - 3  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0 0.528448 0.471552 )	%  LOBio=interval(5,25)  CR=2 - 3  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0.00064 0.99936 )))	%  LOBio=interval(5,25)  CR=2 - 3  Input_Dead=interval(75,100)
+		((( 0 0 0 0 1 0 0 )	%  LOBio=interval(25,50)  CR=0 - 1  Input_Dead=interval(0,0.01)
+		  ( 0 0 0 0 1 0 0 )	%  LOBio=interval(25,50)  CR=0 - 1  Input_Dead=interval(0.01,1)
+		  ( 0 0 0 0 0.985024 0.014976 0 )	%  LOBio=interval(25,50)  CR=0 - 1  Input_Dead=interval(1,5)
+		  ( 0 0 0 0 0.91072 0.08928 0 )	%  LOBio=interval(25,50)  CR=0 - 1  Input_Dead=interval(5,25)
+		  ( 0 0 0 0 0.775424 0.224576 0 )	%  LOBio=interval(25,50)  CR=0 - 1  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0.625792 0.374208 0 )	%  LOBio=interval(25,50)  CR=0 - 1  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0.477952 0.518272 0.003776 ))	%  LOBio=interval(25,50)  CR=0 - 1  Input_Dead=interval(75,100)
+		 (( 0 0 0 0 1 0 0 )	%  LOBio=interval(25,50)  CR=1 - 2  Input_Dead=interval(0,0.01)
+		  ( 0 0 0 0 0.99296 0.00704 0 )	%  LOBio=interval(25,50)  CR=1 - 2  Input_Dead=interval(0.01,1)
+		  ( 0 0 0 0 0.927424 0.072576 0 )	%  LOBio=interval(25,50)  CR=1 - 2  Input_Dead=interval(1,5)
+		  ( 0 0 0 0 0.640064 0.359936 0 )	%  LOBio=interval(25,50)  CR=1 - 2  Input_Dead=interval(5,25)
+		  ( 0 0 0 0 0.18976 0.720448 0.089792 )	%  LOBio=interval(25,50)  CR=1 - 2  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0.025216 0.48672 0.488064 )	%  LOBio=interval(25,50)  CR=1 - 2  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0.000256 0.22048 0.779264 ))	%  LOBio=interval(25,50)  CR=1 - 2  Input_Dead=interval(75,100)
+		 (( 0 0 0 0 1 0 0 )	%  LOBio=interval(25,50)  CR=2 - 3  Input_Dead=interval(0,0.01)
+		  ( 0 0 0 0 0.980992 0.019008 0 )	%  LOBio=interval(25,50)  CR=2 - 3  Input_Dead=interval(0.01,1)
+		  ( 0 0 0 0 0.886464 0.113536 0 )	%  LOBio=interval(25,50)  CR=2 - 3  Input_Dead=interval(1,5)
+		  ( 0 0 0 0 0.429952 0.570048 0 )	%  LOBio=interval(25,50)  CR=2 - 3  Input_Dead=interval(5,25)
+		  ( 0 0 0 0 0.001664 0.572736 0.4256 )	%  LOBio=interval(25,50)  CR=2 - 3  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0 0.00704 0.99296 )	%  LOBio=interval(25,50)  CR=2 - 3  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0 1 )))	%  LOBio=interval(25,50)  CR=2 - 3  Input_Dead=interval(75,100)
+		((( 0 0 0 0 0 0.48 0.52 )	%  LOBio=interval(50,100)  CR=0 - 1  Input_Dead=interval(0,0.01)
+		  ( 0 0 0 0 0 0.48 0.52 )	%  LOBio=interval(50,100)  CR=0 - 1  Input_Dead=interval(0.01,1)
+		  ( 0 0 0 0 0 0.48 0.52 )	%  LOBio=interval(50,100)  CR=0 - 1  Input_Dead=interval(1,5)
+		  ( 0 0 0 0 0 0.453248 0.546752 )	%  LOBio=interval(50,100)  CR=0 - 1  Input_Dead=interval(5,25)
+		  ( 0 0 0 0 0 0.387008 0.612992 )	%  LOBio=interval(50,100)  CR=0 - 1  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0 0.312256 0.687744 )	%  LOBio=interval(50,100)  CR=0 - 1  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0.238976 0.761024 ))	%  LOBio=interval(50,100)  CR=0 - 1  Input_Dead=interval(75,100)
+		 (( 0 0 0 0 0 0.48 0.52 )	%  LOBio=interval(50,100)  CR=1 - 2  Input_Dead=interval(0,0.01)
+		  ( 0 0 0 0 0 0.48 0.52 )	%  LOBio=interval(50,100)  CR=1 - 2  Input_Dead=interval(0.01,1)
+		  ( 0 0 0 0 0 0.46496 0.53504 )	%  LOBio=interval(50,100)  CR=1 - 2  Input_Dead=interval(1,5)
+		  ( 0 0 0 0 0 0.320448 0.679552 )	%  LOBio=interval(50,100)  CR=1 - 2  Input_Dead=interval(5,25)
+		  ( 0 0 0 0 0 0.094848 0.905152 )	%  LOBio=interval(50,100)  CR=1 - 2  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0 0.012608 0.987392 )	%  LOBio=interval(50,100)  CR=1 - 2  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0.000128 0.999872 ))	%  LOBio=interval(50,100)  CR=1 - 2  Input_Dead=interval(75,100)
+		 (( 0 0 0 0 0 0.48 0.52 )	%  LOBio=interval(50,100)  CR=2 - 3  Input_Dead=interval(0,0.01)
+		  ( 0 0 0 0 0 0.48 0.52 )	%  LOBio=interval(50,100)  CR=2 - 3  Input_Dead=interval(0.01,1)
+		  ( 0 0 0 0 0 0.443136 0.556864 )	%  LOBio=interval(50,100)  CR=2 - 3  Input_Dead=interval(1,5)
+		  ( 0 0 0 0 0 0.21504 0.78496 )	%  LOBio=interval(50,100)  CR=2 - 3  Input_Dead=interval(5,25)
+		  ( 0 0 0 0 0 0.000704 0.999296 )	%  LOBio=interval(50,100)  CR=2 - 3  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0 0 1 )	%  LOBio=interval(50,100)  CR=2 - 3  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))));	%  LOBio=interval(50,100)  CR=2 - 3  Input_Dead=interval(75,100)
+    }
+
+    potential (Input_Basal)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Output_Basal | Input_Basal BR)
+    {
+	model_nodes = ();
+	model_data = ( Input_Basal * (1 - BR) );
+	data = ((( 1 0 0 0 0 0 0 )	%  Input_Basal=interval(0,0.01)  BR=0 - 1
+		 ( 1 0 0 0 0 0 0 ))	%  Input_Basal=interval(0,0.01)  BR=1 - 2
+		(( 0 1 0 0 0 0 0 )	%  Input_Basal=interval(0.01,1)  BR=0 - 1
+		 ( 0.0384 0.9616 0 0 0 0 0 ))	%  Input_Basal=interval(0.01,1)  BR=1 - 2
+		(( 0 0 1 0 0 0 0 )	%  Input_Basal=interval(1,5)  BR=0 - 1
+		 ( 0 0.4016 0.5984 0 0 0 0 ))	%  Input_Basal=interval(1,5)  BR=1 - 2
+		(( 0 0 0 1 0 0 0 )	%  Input_Basal=interval(5,25)  BR=0 - 1
+		 ( 0 0.08 0.3216 0.5984 0 0 0 ))	%  Input_Basal=interval(5,25)  BR=1 - 2
+		(( 0 0 0 0 1 0 0 )	%  Input_Basal=interval(25,50)  BR=0 - 1
+		 ( 0 0.04 0.1024 0.5568 0.3008 0 0 ))	%  Input_Basal=interval(25,50)  BR=1 - 2
+		(( 0 0 0 0 0 1 0 )	%  Input_Basal=interval(50,75)  BR=0 - 1
+		 ( 0 0 0.08 0.328 0.4048 0.1872 0 ))	%  Input_Basal=interval(50,75)  BR=1 - 2
+		(( 0 0 0 0 0 0 1 )	%  Input_Basal=interval(75,100)  BR=0 - 1
+		 ( 0 0 0.0544 0.2352 0.2896 0.2896 0.1312 )));	%  Input_Basal=interval(75,100)  BR=1 - 2
+    }
+
+    potential (Output_Cover | Input_Cover Output_Basal CR)
+    {
+	model_nodes = ();
+	model_data = ( max (Output_Basal, Input_Cover * (1 - CR)) );
+	data = (((( 1 0 0 0 0 0 0 )	%  Input_Cover=interval(0,0.01)  Output_Basal=interval(0,0.01)  CR=0 - 1
+		  ( 1 0 0 0 0 0 0 )	%  Input_Cover=interval(0,0.01)  Output_Basal=interval(0,0.01)  CR=1 - 2
+		  ( 1 0 0 0 0 0 0 ))	%  Input_Cover=interval(0,0.01)  Output_Basal=interval(0,0.01)  CR=2 - 3
+		 (( 0 1 0 0 0 0 0 )	%  Input_Cover=interval(0,0.01)  Output_Basal=interval(0.01,1)  CR=0 - 1
+		  ( 0 1 0 0 0 0 0 )	%  Input_Cover=interval(0,0.01)  Output_Basal=interval(0.01,1)  CR=1 - 2
+		  ( 0 1 0 0 0 0 0 ))	%  Input_Cover=interval(0,0.01)  Output_Basal=interval(0.01,1)  CR=2 - 3
+		 (( 0 0 1 0 0 0 0 )	%  Input_Cover=interval(0,0.01)  Output_Basal=interval(1,5)  CR=0 - 1
+		  ( 0 0 1 0 0 0 0 )	%  Input_Cover=interval(0,0.01)  Output_Basal=interval(1,5)  CR=1 - 2
+		  ( 0 0 1 0 0 0 0 ))	%  Input_Cover=interval(0,0.01)  Output_Basal=interval(1,5)  CR=2 - 3
+		 (( 0 0 0 1 0 0 0 )	%  Input_Cover=interval(0,0.01)  Output_Basal=interval(5,25)  CR=0 - 1
+		  ( 0 0 0 1 0 0 0 )	%  Input_Cover=interval(0,0.01)  Output_Basal=interval(5,25)  CR=1 - 2
+		  ( 0 0 0 1 0 0 0 ))	%  Input_Cover=interval(0,0.01)  Output_Basal=interval(5,25)  CR=2 - 3
+		 (( 0 0 0 0 1 0 0 )	%  Input_Cover=interval(0,0.01)  Output_Basal=interval(25,50)  CR=0 - 1
+		  ( 0 0 0 0 1 0 0 )	%  Input_Cover=interval(0,0.01)  Output_Basal=interval(25,50)  CR=1 - 2
+		  ( 0 0 0 0 1 0 0 ))	%  Input_Cover=interval(0,0.01)  Output_Basal=interval(25,50)  CR=2 - 3
+		 (( 0 0 0 0 0 1 0 )	%  Input_Cover=interval(0,0.01)  Output_Basal=interval(50,75)  CR=0 - 1
+		  ( 0 0 0 0 0 1 0 )	%  Input_Cover=interval(0,0.01)  Output_Basal=interval(50,75)  CR=1 - 2
+		  ( 0 0 0 0 0 1 0 ))	%  Input_Cover=interval(0,0.01)  Output_Basal=interval(50,75)  CR=2 - 3
+		 (( 0 0 0 0 0 0 1 )	%  Input_Cover=interval(0,0.01)  Output_Basal=interval(75,100)  CR=0 - 1
+		  ( 0 0 0 0 0 0 1 )	%  Input_Cover=interval(0,0.01)  Output_Basal=interval(75,100)  CR=1 - 2
+		  ( 0 0 0 0 0 0 1 )))	%  Input_Cover=interval(0,0.01)  Output_Basal=interval(75,100)  CR=2 - 3
+		((( 0 1 0 0 0 0 0 )	%  Input_Cover=interval(0.01,1)  Output_Basal=interval(0,0.01)  CR=0 - 1
+		  ( 0.0192 0.9808 0 0 0 0 0 )	%  Input_Cover=interval(0.01,1)  Output_Basal=interval(0,0.01)  CR=1 - 2
+		  ( 0.3232 0.6768 0 0 0 0 0 ))	%  Input_Cover=interval(0.01,1)  Output_Basal=interval(0,0.01)  CR=2 - 3
+		 (( 0 1 0 0 0 0 0 )	%  Input_Cover=interval(0.01,1)  Output_Basal=interval(0.01,1)  CR=0 - 1
+		  ( 0 1 0 0 0 0 0 )	%  Input_Cover=interval(0.01,1)  Output_Basal=interval(0.01,1)  CR=1 - 2
+		  ( 0 1 0 0 0 0 0 ))	%  Input_Cover=interval(0.01,1)  Output_Basal=interval(0.01,1)  CR=2 - 3
+		 (( 0 0 1 0 0 0 0 )	%  Input_Cover=interval(0.01,1)  Output_Basal=interval(1,5)  CR=0 - 1
+		  ( 0 0 1 0 0 0 0 )	%  Input_Cover=interval(0.01,1)  Output_Basal=interval(1,5)  CR=1 - 2
+		  ( 0 0 1 0 0 0 0 ))	%  Input_Cover=interval(0.01,1)  Output_Basal=interval(1,5)  CR=2 - 3
+		 (( 0 0 0 1 0 0 0 )	%  Input_Cover=interval(0.01,1)  Output_Basal=interval(5,25)  CR=0 - 1
+		  ( 0 0 0 1 0 0 0 )	%  Input_Cover=interval(0.01,1)  Output_Basal=interval(5,25)  CR=1 - 2
+		  ( 0 0 0 1 0 0 0 ))	%  Input_Cover=interval(0.01,1)  Output_Basal=interval(5,25)  CR=2 - 3
+		 (( 0 0 0 0 1 0 0 )	%  Input_Cover=interval(0.01,1)  Output_Basal=interval(25,50)  CR=0 - 1
+		  ( 0 0 0 0 1 0 0 )	%  Input_Cover=interval(0.01,1)  Output_Basal=interval(25,50)  CR=1 - 2
+		  ( 0 0 0 0 1 0 0 ))	%  Input_Cover=interval(0.01,1)  Output_Basal=interval(25,50)  CR=2 - 3
+		 (( 0 0 0 0 0 1 0 )	%  Input_Cover=interval(0.01,1)  Output_Basal=interval(50,75)  CR=0 - 1
+		  ( 0 0 0 0 0 1 0 )	%  Input_Cover=interval(0.01,1)  Output_Basal=interval(50,75)  CR=1 - 2
+		  ( 0 0 0 0 0 1 0 ))	%  Input_Cover=interval(0.01,1)  Output_Basal=interval(50,75)  CR=2 - 3
+		 (( 0 0 0 0 0 0 1 )	%  Input_Cover=interval(0.01,1)  Output_Basal=interval(75,100)  CR=0 - 1
+		  ( 0 0 0 0 0 0 1 )	%  Input_Cover=interval(0.01,1)  Output_Basal=interval(75,100)  CR=1 - 2
+		  ( 0 0 0 0 0 0 1 )))	%  Input_Cover=interval(0.01,1)  Output_Basal=interval(75,100)  CR=2 - 3
+		((( 0 0.0464 0.9536 0 0 0 0 )	%  Input_Cover=interval(1,5)  Output_Basal=interval(0,0.01)  CR=0 - 1
+		  ( 0 0.48 0.52 0 0 0 0 )	%  Input_Cover=interval(1,5)  Output_Basal=interval(0,0.01)  CR=1 - 2
+		  ( 0.0464 0.9536 0 0 0 0 0 ))	%  Input_Cover=interval(1,5)  Output_Basal=interval(0,0.01)  CR=2 - 3
+		 (( 0 0.0464 0.9536 0 0 0 0 )	%  Input_Cover=interval(1,5)  Output_Basal=interval(0.01,1)  CR=0 - 1
+		  ( 0 0.48 0.52 0 0 0 0 )	%  Input_Cover=interval(1,5)  Output_Basal=interval(0.01,1)  CR=1 - 2
+		  ( 0 1 0 0 0 0 0 ))	%  Input_Cover=interval(1,5)  Output_Basal=interval(0.01,1)  CR=2 - 3
+		 (( 0 0 1 0 0 0 0 )	%  Input_Cover=interval(1,5)  Output_Basal=interval(1,5)  CR=0 - 1
+		  ( 0 0 1 0 0 0 0 )	%  Input_Cover=interval(1,5)  Output_Basal=interval(1,5)  CR=1 - 2
+		  ( 0 0 1 0 0 0 0 ))	%  Input_Cover=interval(1,5)  Output_Basal=interval(1,5)  CR=2 - 3
+		 (( 0 0 0 1 0 0 0 )	%  Input_Cover=interval(1,5)  Output_Basal=interval(5,25)  CR=0 - 1
+		  ( 0 0 0 1 0 0 0 )	%  Input_Cover=interval(1,5)  Output_Basal=interval(5,25)  CR=1 - 2
+		  ( 0 0 0 1 0 0 0 ))	%  Input_Cover=interval(1,5)  Output_Basal=interval(5,25)  CR=2 - 3
+		 (( 0 0 0 0 1 0 0 )	%  Input_Cover=interval(1,5)  Output_Basal=interval(25,50)  CR=0 - 1
+		  ( 0 0 0 0 1 0 0 )	%  Input_Cover=interval(1,5)  Output_Basal=interval(25,50)  CR=1 - 2
+		  ( 0 0 0 0 1 0 0 ))	%  Input_Cover=interval(1,5)  Output_Basal=interval(25,50)  CR=2 - 3
+		 (( 0 0 0 0 0 1 0 )	%  Input_Cover=interval(1,5)  Output_Basal=interval(50,75)  CR=0 - 1
+		  ( 0 0 0 0 0 1 0 )	%  Input_Cover=interval(1,5)  Output_Basal=interval(50,75)  CR=1 - 2
+		  ( 0 0 0 0 0 1 0 ))	%  Input_Cover=interval(1,5)  Output_Basal=interval(50,75)  CR=2 - 3
+		 (( 0 0 0 0 0 0 1 )	%  Input_Cover=interval(1,5)  Output_Basal=interval(75,100)  CR=0 - 1
+		  ( 0 0 0 0 0 0 1 )	%  Input_Cover=interval(1,5)  Output_Basal=interval(75,100)  CR=1 - 2
+		  ( 0 0 0 0 0 0 1 )))	%  Input_Cover=interval(1,5)  Output_Basal=interval(75,100)  CR=2 - 3
+		((( 0 0 0.0464 0.9536 0 0 0 )	%  Input_Cover=interval(5,25)  Output_Basal=interval(0,0.01)  CR=0 - 1
+		  ( 0 0.0176 0.4624 0.52 0 0 0 )	%  Input_Cover=interval(5,25)  Output_Basal=interval(0,0.01)  CR=1 - 2
+		  ( 0 0.712 0.288 0 0 0 0 ))	%  Input_Cover=interval(5,25)  Output_Basal=interval(0,0.01)  CR=2 - 3
+		 (( 0 0 0.0464 0.9536 0 0 0 )	%  Input_Cover=interval(5,25)  Output_Basal=interval(0.01,1)  CR=0 - 1
+		  ( 0 0.0176 0.4624 0.52 0 0 0 )	%  Input_Cover=interval(5,25)  Output_Basal=interval(0.01,1)  CR=1 - 2
+		  ( 0 0.712 0.288 0 0 0 0 ))	%  Input_Cover=interval(5,25)  Output_Basal=interval(0.01,1)  CR=2 - 3
+		 (( 0 0 0.0464 0.9536 0 0 0 )	%  Input_Cover=interval(5,25)  Output_Basal=interval(1,5)  CR=0 - 1
+		  ( 0 0 0.48 0.52 0 0 0 )	%  Input_Cover=interval(5,25)  Output_Basal=interval(1,5)  CR=1 - 2
+		  ( 0 0 1 0 0 0 0 ))	%  Input_Cover=interval(5,25)  Output_Basal=interval(1,5)  CR=2 - 3
+		 (( 0 0 0 1 0 0 0 )	%  Input_Cover=interval(5,25)  Output_Basal=interval(5,25)  CR=0 - 1
+		  ( 0 0 0 1 0 0 0 )	%  Input_Cover=interval(5,25)  Output_Basal=interval(5,25)  CR=1 - 2
+		  ( 0 0 0 1 0 0 0 ))	%  Input_Cover=interval(5,25)  Output_Basal=interval(5,25)  CR=2 - 3
+		 (( 0 0 0 0 1 0 0 )	%  Input_Cover=interval(5,25)  Output_Basal=interval(25,50)  CR=0 - 1
+		  ( 0 0 0 0 1 0 0 )	%  Input_Cover=interval(5,25)  Output_Basal=interval(25,50)  CR=1 - 2
+		  ( 0 0 0 0 1 0 0 ))	%  Input_Cover=interval(5,25)  Output_Basal=interval(25,50)  CR=2 - 3
+		 (( 0 0 0 0 0 1 0 )	%  Input_Cover=interval(5,25)  Output_Basal=interval(50,75)  CR=0 - 1
+		  ( 0 0 0 0 0 1 0 )	%  Input_Cover=interval(5,25)  Output_Basal=interval(50,75)  CR=1 - 2
+		  ( 0 0 0 0 0 1 0 ))	%  Input_Cover=interval(5,25)  Output_Basal=interval(50,75)  CR=2 - 3
+		 (( 0 0 0 0 0 0 1 )	%  Input_Cover=interval(5,25)  Output_Basal=interval(75,100)  CR=0 - 1
+		  ( 0 0 0 0 0 0 1 )	%  Input_Cover=interval(5,25)  Output_Basal=interval(75,100)  CR=1 - 2
+		  ( 0 0 0 0 0 0 1 )))	%  Input_Cover=interval(5,25)  Output_Basal=interval(75,100)  CR=2 - 3
+		((( 0 0 0 0.1872 0.8128 0 0 )	%  Input_Cover=interval(25,50)  Output_Basal=interval(0,0.01)  CR=0 - 1
+		  ( 0 0 0.064 0.8304 0.1056 0 0 )	%  Input_Cover=interval(25,50)  Output_Basal=interval(0,0.01)  CR=1 - 2
+		  ( 0 0.2736 0.7264 0 0 0 0 ))	%  Input_Cover=interval(25,50)  Output_Basal=interval(0,0.01)  CR=2 - 3
+		 (( 0 0 0 0.1872 0.8128 0 0 )	%  Input_Cover=interval(25,50)  Output_Basal=interval(0.01,1)  CR=0 - 1
+		  ( 0 0 0.064 0.8304 0.1056 0 0 )	%  Input_Cover=interval(25,50)  Output_Basal=interval(0.01,1)  CR=1 - 2
+		  ( 0 0.2736 0.7264 0 0 0 0 ))	%  Input_Cover=interval(25,50)  Output_Basal=interval(0.01,1)  CR=2 - 3
+		 (( 0 0 0 0.1872 0.8128 0 0 )	%  Input_Cover=interval(25,50)  Output_Basal=interval(1,5)  CR=0 - 1
+		  ( 0 0 0.064 0.8304 0.1056 0 0 )	%  Input_Cover=interval(25,50)  Output_Basal=interval(1,5)  CR=1 - 2
+		  ( 0 0 1 0 0 0 0 ))	%  Input_Cover=interval(25,50)  Output_Basal=interval(1,5)  CR=2 - 3
+		 (( 0 0 0 0.1872 0.8128 0 0 )	%  Input_Cover=interval(25,50)  Output_Basal=interval(5,25)  CR=0 - 1
+		  ( 0 0 0 0.8944 0.1056 0 0 )	%  Input_Cover=interval(25,50)  Output_Basal=interval(5,25)  CR=1 - 2
+		  ( 0 0 0 1 0 0 0 ))	%  Input_Cover=interval(25,50)  Output_Basal=interval(5,25)  CR=2 - 3
+		 (( 0 0 0 0 1 0 0 )	%  Input_Cover=interval(25,50)  Output_Basal=interval(25,50)  CR=0 - 1
+		  ( 0 0 0 0 1 0 0 )	%  Input_Cover=interval(25,50)  Output_Basal=interval(25,50)  CR=1 - 2
+		  ( 0 0 0 0 1 0 0 ))	%  Input_Cover=interval(25,50)  Output_Basal=interval(25,50)  CR=2 - 3
+		 (( 0 0 0 0 0 1 0 )	%  Input_Cover=interval(25,50)  Output_Basal=interval(50,75)  CR=0 - 1
+		  ( 0 0 0 0 0 1 0 )	%  Input_Cover=interval(25,50)  Output_Basal=interval(50,75)  CR=1 - 2
+		  ( 0 0 0 0 0 1 0 ))	%  Input_Cover=interval(25,50)  Output_Basal=interval(50,75)  CR=2 - 3
+		 (( 0 0 0 0 0 0 1 )	%  Input_Cover=interval(25,50)  Output_Basal=interval(75,100)  CR=0 - 1
+		  ( 0 0 0 0 0 0 1 )	%  Input_Cover=interval(25,50)  Output_Basal=interval(75,100)  CR=1 - 2
+		  ( 0 0 0 0 0 0 1 )))	%  Input_Cover=interval(25,50)  Output_Basal=interval(75,100)  CR=2 - 3
+		((( 0 0 0 0 0.376 0.624 0 )	%  Input_Cover=interval(50,75)  Output_Basal=interval(0,0.01)  CR=0 - 1
+		  ( 0 0 0 0.5088 0.488 0.0032 0 )	%  Input_Cover=interval(50,75)  Output_Basal=interval(0,0.01)  CR=1 - 2
+		  ( 0 0.1632 0.648 0.1888 0 0 0 ))	%  Input_Cover=interval(50,75)  Output_Basal=interval(0,0.01)  CR=2 - 3
+		 (( 0 0 0 0 0.376 0.624 0 )	%  Input_Cover=interval(50,75)  Output_Basal=interval(0.01,1)  CR=0 - 1
+		  ( 0 0 0 0.5088 0.488 0.0032 0 )	%  Input_Cover=interval(50,75)  Output_Basal=interval(0.01,1)  CR=1 - 2
+		  ( 0 0.1632 0.648 0.1888 0 0 0 ))	%  Input_Cover=interval(50,75)  Output_Basal=interval(0.01,1)  CR=2 - 3
+		 (( 0 0 0 0 0.376 0.624 0 )	%  Input_Cover=interval(50,75)  Output_Basal=interval(1,5)  CR=0 - 1
+		  ( 0 0 0 0.5088 0.488 0.0032 0 )	%  Input_Cover=interval(50,75)  Output_Basal=interval(1,5)  CR=1 - 2
+		  ( 0 0 0.8112 0.1888 0 0 0 ))	%  Input_Cover=interval(50,75)  Output_Basal=interval(1,5)  CR=2 - 3
+		 (( 0 0 0 0 0.376 0.624 0 )	%  Input_Cover=interval(50,75)  Output_Basal=interval(5,25)  CR=0 - 1
+		  ( 0 0 0 0.5088 0.488 0.0032 0 )	%  Input_Cover=interval(50,75)  Output_Basal=interval(5,25)  CR=1 - 2
+		  ( 0 0 0 1 0 0 0 ))	%  Input_Cover=interval(50,75)  Output_Basal=interval(5,25)  CR=2 - 3
+		 (( 0 0 0 0 0.376 0.624 0 )	%  Input_Cover=interval(50,75)  Output_Basal=interval(25,50)  CR=0 - 1
+		  ( 0 0 0 0 0.9968 0.0032 0 )	%  Input_Cover=interval(50,75)  Output_Basal=interval(25,50)  CR=1 - 2
+		  ( 0 0 0 0 1 0 0 ))	%  Input_Cover=interval(50,75)  Output_Basal=interval(25,50)  CR=2 - 3
+		 (( 0 0 0 0 0 1 0 )	%  Input_Cover=interval(50,75)  Output_Basal=interval(50,75)  CR=0 - 1
+		  ( 0 0 0 0 0 1 0 )	%  Input_Cover=interval(50,75)  Output_Basal=interval(50,75)  CR=1 - 2
+		  ( 0 0 0 0 0 1 0 ))	%  Input_Cover=interval(50,75)  Output_Basal=interval(50,75)  CR=2 - 3
+		 (( 0 0 0 0 0 0 1 )	%  Input_Cover=interval(50,75)  Output_Basal=interval(75,100)  CR=0 - 1
+		  ( 0 0 0 0 0 0 1 )	%  Input_Cover=interval(50,75)  Output_Basal=interval(75,100)  CR=1 - 2
+		  ( 0 0 0 0 0 0 1 )))	%  Input_Cover=interval(50,75)  Output_Basal=interval(75,100)  CR=2 - 3
+		((( 0 0 0 0 0 0.5392 0.4608 )	%  Input_Cover=interval(75,100)  Output_Basal=interval(0,0.01)  CR=0 - 1
+		  ( 0 0 0 0.312 0.4784 0.2096 0 )	%  Input_Cover=interval(75,100)  Output_Basal=interval(0,0.01)  CR=1 - 2
+		  ( 0 0.12 0.4576 0.4224 0 0 0 ))	%  Input_Cover=interval(75,100)  Output_Basal=interval(0,0.01)  CR=2 - 3
+		 (( 0 0 0 0 0 0.5392 0.4608 )	%  Input_Cover=interval(75,100)  Output_Basal=interval(0.01,1)  CR=0 - 1
+		  ( 0 0 0 0.312 0.4784 0.2096 0 )	%  Input_Cover=interval(75,100)  Output_Basal=interval(0.01,1)  CR=1 - 2
+		  ( 0 0.12 0.4576 0.4224 0 0 0 ))	%  Input_Cover=interval(75,100)  Output_Basal=interval(0.01,1)  CR=2 - 3
+		 (( 0 0 0 0 0 0.5392 0.4608 )	%  Input_Cover=interval(75,100)  Output_Basal=interval(1,5)  CR=0 - 1
+		  ( 0 0 0 0.312 0.4784 0.2096 0 )	%  Input_Cover=interval(75,100)  Output_Basal=interval(1,5)  CR=1 - 2
+		  ( 0 0 0.5776 0.4224 0 0 0 ))	%  Input_Cover=interval(75,100)  Output_Basal=interval(1,5)  CR=2 - 3
+		 (( 0 0 0 0 0 0.5392 0.4608 )	%  Input_Cover=interval(75,100)  Output_Basal=interval(5,25)  CR=0 - 1
+		  ( 0 0 0 0.312 0.4784 0.2096 0 )	%  Input_Cover=interval(75,100)  Output_Basal=interval(5,25)  CR=1 - 2
+		  ( 0 0 0 1 0 0 0 ))	%  Input_Cover=interval(75,100)  Output_Basal=interval(5,25)  CR=2 - 3
+		 (( 0 0 0 0 0 0.5392 0.4608 )	%  Input_Cover=interval(75,100)  Output_Basal=interval(25,50)  CR=0 - 1
+		  ( 0 0 0 0 0.7904 0.2096 0 )	%  Input_Cover=interval(75,100)  Output_Basal=interval(25,50)  CR=1 - 2
+		  ( 0 0 0 0 1 0 0 ))	%  Input_Cover=interval(75,100)  Output_Basal=interval(25,50)  CR=2 - 3
+		 (( 0 0 0 0 0 0.5392 0.4608 )	%  Input_Cover=interval(75,100)  Output_Basal=interval(50,75)  CR=0 - 1
+		  ( 0 0 0 0 0 1 0 )	%  Input_Cover=interval(75,100)  Output_Basal=interval(50,75)  CR=1 - 2
+		  ( 0 0 0 0 0 1 0 ))	%  Input_Cover=interval(75,100)  Output_Basal=interval(50,75)  CR=2 - 3
+		 (( 0 0 0 0 0 0 1 )	%  Input_Cover=interval(75,100)  Output_Basal=interval(75,100)  CR=0 - 1
+		  ( 0 0 0 0 0 0 1 )	%  Input_Cover=interval(75,100)  Output_Basal=interval(75,100)  CR=1 - 2
+		  ( 0 0 0 0 0 0 1 ))));	%  Input_Cover=interval(75,100)  Output_Basal=interval(75,100)  CR=2 - 3
+    }
+
+    potential (CR | Harvest)
+    {
+	model_nodes = (Harvest);
+	model_data  = ( 0,
+			Beta (17, 90, 0, 1) );
+	data = (( 1 0 0 )	%  Harvest=false
+		( 0.999701 0.000299155 6.96902E-073 ));	%  Harvest=true
+    }
+
+    potential (LOBio | CR BioRes Input_Cover Input_Dead)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, (Input_Cover + Input_Dead) * CR) * BioRes) );
+	data = ((((( 0.988797 0.0112026 0 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(0,0.01)  Input_Dead=interval(0,0.01)
+		   ( 0.160136 0.839864 0 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(0,0.01)  Input_Dead=interval(0.01,1)
+		   ( 0.0180301 0.98197 0 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(0,0.01)  Input_Dead=interval(1,5)
+		   ( 0.002368 0.997632 0 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(0,0.01)  Input_Dead=interval(5,25)
+		   ( 0.000192 0.999808 0 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(0,0.01)  Input_Dead=interval(25,50)
+		   ( 0 0.98944 0.01056 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(0,0.01)  Input_Dead=interval(50,75)
+		   ( 0 0.9232 0.0768 0 0 ))	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(0,0.01)  Input_Dead=interval(75,100)
+		  (( 0.160136 0.839864 0 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(0.01,1)  Input_Dead=interval(0,0.01)
+		   ( 0.0677274 0.932273 0 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(0.01,1)  Input_Dead=interval(0.01,1)
+		   ( 0.0140058 0.985994 0 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(0.01,1)  Input_Dead=interval(1,5)
+		   ( 0.0022144 0.997786 0 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(0.01,1)  Input_Dead=interval(5,25)
+		   ( 0.00014592 0.999854 0 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(0.01,1)  Input_Dead=interval(25,50)
+		   ( 0 0.988559 0.0114406 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(0.01,1)  Input_Dead=interval(50,75)
+		   ( 0 0.921446 0.0785536 0 0 ))	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(0.01,1)  Input_Dead=interval(75,100)
+		  (( 0.0180301 0.98197 0 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(1,5)  Input_Dead=interval(0,0.01)
+		   ( 0.0140058 0.985994 0 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(1,5)  Input_Dead=interval(0.01,1)
+		   ( 0.00663552 0.993364 0 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(1,5)  Input_Dead=interval(1,5)
+		   ( 0.00176896 0.998231 0 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(1,5)  Input_Dead=interval(5,25)
+		   ( 2.56E-005 0.999974 0 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(1,5)  Input_Dead=interval(25,50)
+		   ( 0 0.984233 0.015767 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(1,5)  Input_Dead=interval(50,75)
+		   ( 0 0.913441 0.0865587 0 0 ))	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(1,5)  Input_Dead=interval(75,100)
+		  (( 0.002368 0.997632 0 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(5,25)  Input_Dead=interval(0,0.01)
+		   ( 0.0022144 0.997786 0 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(5,25)  Input_Dead=interval(0.01,1)
+		   ( 0.00176896 0.998231 0 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(5,25)  Input_Dead=interval(1,5)
+		   ( 0.00064768 0.999352 0 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(5,25)  Input_Dead=interval(5,25)
+		   ( 0 0.997233 0.00276736 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(5,25)  Input_Dead=interval(25,50)
+		   ( 0 0.953587 0.0464128 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(5,25)  Input_Dead=interval(50,75)
+		   ( 0 0.874481 0.125519 0 0 ))	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(5,25)  Input_Dead=interval(75,100)
+		  (( 0.000192 0.999808 0 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(25,50)  Input_Dead=interval(0,0.01)
+		   ( 0.00014592 0.999854 0 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(25,50)  Input_Dead=interval(0.01,1)
+		   ( 2.56E-005 0.999974 0 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(25,50)  Input_Dead=interval(1,5)
+		   ( 0 0.997233 0.00276736 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(25,50)  Input_Dead=interval(5,25)
+		   ( 0 0.959718 0.0402816 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(25,50)  Input_Dead=interval(25,50)
+		   ( 0 0.882435 0.117565 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(25,50)  Input_Dead=interval(50,75)
+		   ( 0 0.805891 0.194109 0 0 ))	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(25,50)  Input_Dead=interval(75,100)
+		  (( 0 0.98944 0.01056 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(50,75)  Input_Dead=interval(0,0.01)
+		   ( 0 0.988559 0.0114406 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(50,75)  Input_Dead=interval(0.01,1)
+		   ( 0 0.984233 0.015767 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(50,75)  Input_Dead=interval(1,5)
+		   ( 0 0.953587 0.0464128 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(50,75)  Input_Dead=interval(5,25)
+		   ( 0 0.882435 0.117565 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(50,75)  Input_Dead=interval(25,50)
+		   ( 0 0.805891 0.194109 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(50,75)  Input_Dead=interval(50,75)
+		   ( 0 0.739023 0.260977 0 0 ))	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(50,75)  Input_Dead=interval(75,100)
+		  (( 0 0.9232 0.0768 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(75,100)  Input_Dead=interval(0,0.01)
+		   ( 0 0.921446 0.0785536 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(75,100)  Input_Dead=interval(0.01,1)
+		   ( 0 0.913441 0.0865587 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(75,100)  Input_Dead=interval(1,5)
+		   ( 0 0.874481 0.125519 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(75,100)  Input_Dead=interval(5,25)
+		   ( 0 0.805891 0.194109 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(75,100)  Input_Dead=interval(25,50)
+		   ( 0 0.739023 0.260977 0 0 )	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(75,100)  Input_Dead=interval(50,75)
+		   ( 0 0.682263 0.317737 0 0 )))	%  CR=0 - 1  BioRes=0 - 1  Input_Cover=interval(75,100)  Input_Dead=interval(75,100)
+		 ((( 0.640691 0.359309 0 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(0,0.01)  Input_Dead=interval(0,0.01)
+		   ( 0.0194688 0.980531 0 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(0,0.01)  Input_Dead=interval(0.01,1)
+		   ( 0 1 0 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(0,0.01)  Input_Dead=interval(1,5)
+		   ( 0 0.993344 0.006656 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(0,0.01)  Input_Dead=interval(5,25)
+		   ( 0 0.768064 0.231936 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(0,0.01)  Input_Dead=interval(25,50)
+		   ( 0 0.494328 0.505672 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(0,0.01)  Input_Dead=interval(50,75)
+		   ( 0 0.350976 0.64864 0.000384 0 ))	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(0,0.01)  Input_Dead=interval(75,100)
+		  (( 0.0194688 0.980531 0 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(0.01,1)  Input_Dead=interval(0,0.01)
+		   ( 0.00204544 0.997955 0 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(0.01,1)  Input_Dead=interval(0.01,1)
+		   ( 0 1 0 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(0.01,1)  Input_Dead=interval(1,5)
+		   ( 0 0.9918 0.00819968 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(0.01,1)  Input_Dead=interval(5,25)
+		   ( 0 0.76149 0.23851 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(0.01,1)  Input_Dead=interval(25,50)
+		   ( 0 0.490721 0.509279 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(0.01,1)  Input_Dead=interval(50,75)
+		   ( 0 0.34891 0.650609 0.00048128 0 ))	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(0.01,1)  Input_Dead=interval(75,100)
+		  (( 0 1 0 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(1,5)  Input_Dead=interval(0,0.01)
+		   ( 0 1 0 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(1,5)  Input_Dead=interval(0.01,1)
+		   ( 0 1 0 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(1,5)  Input_Dead=interval(1,5)
+		   ( 0 0.981407 0.0185933 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(1,5)  Input_Dead=interval(5,25)
+		   ( 0 0.728456 0.271544 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(1,5)  Input_Dead=interval(25,50)
+		   ( 0 0.471706 0.528294 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(1,5)  Input_Dead=interval(50,75)
+		   ( 0 0.339384 0.659489 0.0011264 0 ))	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(1,5)  Input_Dead=interval(75,100)
+		  (( 0 0.993344 0.006656 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(5,25)  Input_Dead=interval(0,0.01)
+		   ( 0 0.9918 0.00819968 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(5,25)  Input_Dead=interval(0.01,1)
+		   ( 0 0.981407 0.0185933 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(5,25)  Input_Dead=interval(1,5)
+		   ( 0 0.864407 0.135593 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(5,25)  Input_Dead=interval(5,25)
+		   ( 0 0.590566 0.409434 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(5,25)  Input_Dead=interval(25,50)
+		   ( 0 0.399416 0.600553 3.072E-005 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(5,25)  Input_Dead=interval(50,75)
+		   ( 0 0.300114 0.688584 0.0113024 0 ))	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(5,25)  Input_Dead=interval(75,100)
+		  (( 0 0.768064 0.231936 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(25,50)  Input_Dead=interval(0,0.01)
+		   ( 0 0.76149 0.23851 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(25,50)  Input_Dead=interval(0.01,1)
+		   ( 0 0.728456 0.271544 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(25,50)  Input_Dead=interval(1,5)
+		   ( 0 0.590566 0.409434 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(25,50)  Input_Dead=interval(5,25)
+		   ( 0 0.414938 0.585034 2.816E-005 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(25,50)  Input_Dead=interval(25,50)
+		   ( 0 0.30839 0.682409 0.00920064 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(25,50)  Input_Dead=interval(50,75)
+		   ( 0 0.245929 0.697318 0.0567526 0 ))	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(25,50)  Input_Dead=interval(75,100)
+		  (( 0 0.494328 0.505672 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(50,75)  Input_Dead=interval(0,0.01)
+		   ( 0 0.490721 0.509279 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(50,75)  Input_Dead=interval(0.01,1)
+		   ( 0 0.471706 0.528294 0 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(50,75)  Input_Dead=interval(1,5)
+		   ( 0 0.399416 0.600553 3.072E-005 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(50,75)  Input_Dead=interval(5,25)
+		   ( 0 0.30839 0.682409 0.00920064 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(50,75)  Input_Dead=interval(25,50)
+		   ( 0 0.245929 0.697318 0.0567526 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(50,75)  Input_Dead=interval(50,75)
+		   ( 0 0.20404 0.668695 0.127265 0 ))	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(50,75)  Input_Dead=interval(75,100)
+		  (( 0 0.350976 0.64864 0.000384 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(75,100)  Input_Dead=interval(0,0.01)
+		   ( 0 0.34891 0.650609 0.00048128 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(75,100)  Input_Dead=interval(0.01,1)
+		   ( 0 0.339384 0.659489 0.0011264 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(75,100)  Input_Dead=interval(1,5)
+		   ( 0 0.300114 0.688584 0.0113024 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(75,100)  Input_Dead=interval(5,25)
+		   ( 0 0.245929 0.697318 0.0567526 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(75,100)  Input_Dead=interval(25,50)
+		   ( 0 0.20404 0.668695 0.127265 0 )	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(75,100)  Input_Dead=interval(50,75)
+		   ( 0 0.175562 0.623795 0.200535 0.00010752 )))	%  CR=0 - 1  BioRes=1 - 2  Input_Cover=interval(75,100)  Input_Dead=interval(75,100)
+		 ((( 0.424748 0.575252 0 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(0,0.01)  Input_Dead=interval(0,0.01)
+		   ( 0.00884736 0.991153 0 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(0,0.01)  Input_Dead=interval(0.01,1)
+		   ( 0 1 0 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(0,0.01)  Input_Dead=interval(1,5)
+		   ( 0 0.937728 0.062272 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(0,0.01)  Input_Dead=interval(5,25)
+		   ( 0 0.486764 0.513236 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(0,0.01)  Input_Dead=interval(25,50)
+		   ( 0 0.28448 0.71552 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(0,0.01)  Input_Dead=interval(50,75)
+		   ( 0 0.2032 0.764349 0.0324506 0 ))	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(0,0.01)  Input_Dead=interval(75,100)
+		  (( 0.00884736 0.991153 0 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(0.01,1)  Input_Dead=interval(0,0.01)
+		   ( 0.00049664 0.999503 0 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(0.01,1)  Input_Dead=interval(0.01,1)
+		   ( 0 1 0 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(0.01,1)  Input_Dead=interval(1,5)
+		   ( 0 0.930079 0.0699213 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(0.01,1)  Input_Dead=interval(5,25)
+		   ( 0 0.479913 0.520087 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(0.01,1)  Input_Dead=interval(25,50)
+		   ( 0 0.282276 0.717724 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(0.01,1)  Input_Dead=interval(50,75)
+		   ( 0 0.201782 0.763231 0.0349875 0 ))	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(0.01,1)  Input_Dead=interval(75,100)
+		  (( 0 1 0 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(1,5)  Input_Dead=interval(0,0.01)
+		   ( 0 1 0 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(1,5)  Input_Dead=interval(0.01,1)
+		   ( 0 1 0 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(1,5)  Input_Dead=interval(1,5)
+		   ( 0 0.886533 0.113467 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(1,5)  Input_Dead=interval(5,25)
+		   ( 0 0.448594 0.551406 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(1,5)  Input_Dead=interval(25,50)
+		   ( 0 0.271939 0.728061 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(1,5)  Input_Dead=interval(50,75)
+		   ( 0 0.194808 0.756362 0.0488294 0 ))	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(1,5)  Input_Dead=interval(75,100)
+		  (( 0 0.937728 0.062272 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(5,25)  Input_Dead=interval(0,0.01)
+		   ( 0 0.930079 0.0699213 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(5,25)  Input_Dead=interval(0.01,1)
+		   ( 0 0.886533 0.113467 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(5,25)  Input_Dead=interval(1,5)
+		   ( 0 0.625482 0.374518 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(5,25)  Input_Dead=interval(5,25)
+		   ( 0 0.34569 0.65431 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(5,25)  Input_Dead=interval(25,50)
+		   ( 0 0.230129 0.762586 0.00728576 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(5,25)  Input_Dead=interval(50,75)
+		   ( 0 0.172508 0.688691 0.138801 0 ))	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(5,25)  Input_Dead=interval(75,100)
+		  (( 0 0.486764 0.513236 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(25,50)  Input_Dead=interval(0,0.01)
+		   ( 0 0.479913 0.520087 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(25,50)  Input_Dead=interval(0.01,1)
+		   ( 0 0.448594 0.551406 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(25,50)  Input_Dead=interval(1,5)
+		   ( 0 0.34569 0.65431 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(25,50)  Input_Dead=interval(5,25)
+		   ( 0 0.238932 0.755259 0.00580864 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(25,50)  Input_Dead=interval(25,50)
+		   ( 0 0.177231 0.702536 0.120233 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(25,50)  Input_Dead=interval(50,75)
+		   ( 0 0.140593 0.566625 0.292782 0 ))	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(25,50)  Input_Dead=interval(75,100)
+		  (( 0 0.28448 0.71552 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(50,75)  Input_Dead=interval(0,0.01)
+		   ( 0 0.282276 0.717724 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(50,75)  Input_Dead=interval(0.01,1)
+		   ( 0 0.271939 0.728061 0 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(50,75)  Input_Dead=interval(1,5)
+		   ( 0 0.230129 0.762586 0.00728576 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(50,75)  Input_Dead=interval(5,25)
+		   ( 0 0.177231 0.702536 0.120233 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(50,75)  Input_Dead=interval(25,50)
+		   ( 0 0.140593 0.566625 0.292782 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(50,75)  Input_Dead=interval(50,75)
+		   ( 0 0.119936 0.468114 0.411881 6.912E-005 ))	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(50,75)  Input_Dead=interval(75,100)
+		  (( 0 0.2032 0.764349 0.0324506 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(75,100)  Input_Dead=interval(0,0.01)
+		   ( 0 0.201782 0.763231 0.0349875 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(75,100)  Input_Dead=interval(0.01,1)
+		   ( 0 0.194808 0.756362 0.0488294 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(75,100)  Input_Dead=interval(1,5)
+		   ( 0 0.172508 0.688691 0.138801 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(75,100)  Input_Dead=interval(5,25)
+		   ( 0 0.140593 0.566625 0.292782 0 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(75,100)  Input_Dead=interval(25,50)
+		   ( 0 0.119936 0.468114 0.411881 6.912E-005 )	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(75,100)  Input_Dead=interval(50,75)
+		   ( 0 0.100728 0.402655 0.473523 0.0230938 ))))	%  CR=0 - 1  BioRes=2 - 3  Input_Cover=interval(75,100)  Input_Dead=interval(75,100)
+		(((( 0.640691 0.359309 0 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(0,0.01)  Input_Dead=interval(0,0.01)
+		   ( 0.0194688 0.980531 0 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(0,0.01)  Input_Dead=interval(0.01,1)
+		   ( 0 1 0 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(0,0.01)  Input_Dead=interval(1,5)
+		   ( 0 0.993344 0.006656 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(0,0.01)  Input_Dead=interval(5,25)
+		   ( 0 0.768064 0.231936 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(0,0.01)  Input_Dead=interval(25,50)
+		   ( 0 0.494328 0.505672 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(0,0.01)  Input_Dead=interval(50,75)
+		   ( 0 0.350976 0.64864 0.000384 0 ))	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(0,0.01)  Input_Dead=interval(75,100)
+		  (( 0.0194688 0.980531 0 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(0.01,1)  Input_Dead=interval(0,0.01)
+		   ( 0.00204544 0.997955 0 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(0.01,1)  Input_Dead=interval(0.01,1)
+		   ( 0 1 0 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(0.01,1)  Input_Dead=interval(1,5)
+		   ( 0 0.9918 0.00819968 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(0.01,1)  Input_Dead=interval(5,25)
+		   ( 0 0.76149 0.23851 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(0.01,1)  Input_Dead=interval(25,50)
+		   ( 0 0.490721 0.509279 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(0.01,1)  Input_Dead=interval(50,75)
+		   ( 0 0.34891 0.650609 0.00048128 0 ))	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(0.01,1)  Input_Dead=interval(75,100)
+		  (( 0 1 0 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(1,5)  Input_Dead=interval(0,0.01)
+		   ( 0 1 0 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(1,5)  Input_Dead=interval(0.01,1)
+		   ( 0 1 0 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(1,5)  Input_Dead=interval(1,5)
+		   ( 0 0.981407 0.0185933 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(1,5)  Input_Dead=interval(5,25)
+		   ( 0 0.728456 0.271544 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(1,5)  Input_Dead=interval(25,50)
+		   ( 0 0.471706 0.528294 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(1,5)  Input_Dead=interval(50,75)
+		   ( 0 0.339384 0.659489 0.0011264 0 ))	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(1,5)  Input_Dead=interval(75,100)
+		  (( 0 0.993344 0.006656 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(5,25)  Input_Dead=interval(0,0.01)
+		   ( 0 0.9918 0.00819968 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(5,25)  Input_Dead=interval(0.01,1)
+		   ( 0 0.981407 0.0185933 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(5,25)  Input_Dead=interval(1,5)
+		   ( 0 0.864407 0.135593 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(5,25)  Input_Dead=interval(5,25)
+		   ( 0 0.590566 0.409434 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(5,25)  Input_Dead=interval(25,50)
+		   ( 0 0.399416 0.600553 3.072E-005 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(5,25)  Input_Dead=interval(50,75)
+		   ( 0 0.300114 0.688584 0.0113024 0 ))	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(5,25)  Input_Dead=interval(75,100)
+		  (( 0 0.768064 0.231936 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(25,50)  Input_Dead=interval(0,0.01)
+		   ( 0 0.76149 0.23851 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(25,50)  Input_Dead=interval(0.01,1)
+		   ( 0 0.728456 0.271544 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(25,50)  Input_Dead=interval(1,5)
+		   ( 0 0.590566 0.409434 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(25,50)  Input_Dead=interval(5,25)
+		   ( 0 0.414938 0.585034 2.816E-005 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(25,50)  Input_Dead=interval(25,50)
+		   ( 0 0.30839 0.682409 0.00920064 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(25,50)  Input_Dead=interval(50,75)
+		   ( 0 0.245929 0.697318 0.0567526 0 ))	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(25,50)  Input_Dead=interval(75,100)
+		  (( 0 0.494328 0.505672 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(50,75)  Input_Dead=interval(0,0.01)
+		   ( 0 0.490721 0.509279 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(50,75)  Input_Dead=interval(0.01,1)
+		   ( 0 0.471706 0.528294 0 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(50,75)  Input_Dead=interval(1,5)
+		   ( 0 0.399416 0.600553 3.072E-005 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(50,75)  Input_Dead=interval(5,25)
+		   ( 0 0.30839 0.682409 0.00920064 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(50,75)  Input_Dead=interval(25,50)
+		   ( 0 0.245929 0.697318 0.0567526 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(50,75)  Input_Dead=interval(50,75)
+		   ( 0 0.20404 0.668695 0.127265 0 ))	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(50,75)  Input_Dead=interval(75,100)
+		  (( 0 0.350976 0.64864 0.000384 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(75,100)  Input_Dead=interval(0,0.01)
+		   ( 0 0.34891 0.650609 0.00048128 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(75,100)  Input_Dead=interval(0.01,1)
+		   ( 0 0.339384 0.659489 0.0011264 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(75,100)  Input_Dead=interval(1,5)
+		   ( 0 0.300114 0.688584 0.0113024 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(75,100)  Input_Dead=interval(5,25)
+		   ( 0 0.245929 0.697318 0.0567526 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(75,100)  Input_Dead=interval(25,50)
+		   ( 0 0.20404 0.668695 0.127265 0 )	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(75,100)  Input_Dead=interval(50,75)
+		   ( 0 0.175562 0.623795 0.200535 0.00010752 )))	%  CR=1 - 2  BioRes=0 - 1  Input_Cover=interval(75,100)  Input_Dead=interval(75,100)
+		 ((( 0.06848 0.93152 0 0 0 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(0,0.01)  Input_Dead=interval(0,0.01)
+		   ( 0 1 0 0 0 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(0,0.01)  Input_Dead=interval(0.01,1)
+		   ( 0 1 0 0 0 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(0,0.01)  Input_Dead=interval(1,5)
+		   ( 0 0.539151 0.460849 0 0 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(0,0.01)  Input_Dead=interval(5,25)
+		   ( 0 0.038784 0.902548 0.0586675 0 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(0,0.01)  Input_Dead=interval(25,50)
+		   ( 0 6.4E-005 0.648159 0.344609 0.007168 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(0,0.01)  Input_Dead=interval(50,75)
+		   ( 0 0 0.373507 0.515971 0.110523 ))	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(0,0.01)  Input_Dead=interval(75,100)
+		  (( 0 1 0 0 0 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(0.01,1)  Input_Dead=interval(0,0.01)
+		   ( 0 1 0 0 0 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(0.01,1)  Input_Dead=interval(0.01,1)
+		   ( 0 1 0 0 0 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(0.01,1)  Input_Dead=interval(1,5)
+		   ( 0 0.517322 0.482678 0 0 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(0.01,1)  Input_Dead=interval(5,25)
+		   ( 0 0.0360474 0.901204 0.0627482 0 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(0.01,1)  Input_Dead=interval(25,50)
+		   ( 0 5.632E-005 0.641769 0.350308 0.00786688 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(0.01,1)  Input_Dead=interval(50,75)
+		   ( 0 0 0.369211 0.517151 0.113638 ))	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(0.01,1)  Input_Dead=interval(75,100)
+		  (( 0 1 0 0 0 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(1,5)  Input_Dead=interval(0,0.01)
+		   ( 0 1 0 0 0 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(1,5)  Input_Dead=interval(0.01,1)
+		   ( 0 0.980275 0.0197248 0 0 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(1,5)  Input_Dead=interval(1,5)
+		   ( 0 0.409956 0.590044 0 0 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(1,5)  Input_Dead=interval(5,25)
+		   ( 0 0.0254182 0.890066 0.0845158 0 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(1,5)  Input_Dead=interval(25,50)
+		   ( 0 0 0.611292 0.376067 0.0126413 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(1,5)  Input_Dead=interval(50,75)
+		   ( 0 0 0.346765 0.523937 0.129298 ))	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(1,5)  Input_Dead=interval(75,100)
+		  (( 0 0.539151 0.460849 0 0 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(5,25)  Input_Dead=interval(0,0.01)
+		   ( 0 0.517322 0.482678 0 0 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(5,25)  Input_Dead=interval(0.01,1)
+		   ( 0 0.409956 0.590044 0 0 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(5,25)  Input_Dead=interval(1,5)
+		   ( 0 0.121098 0.859177 0.0197248 0 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(5,25)  Input_Dead=interval(5,25)
+		   ( 0 0.0049536 0.769713 0.224097 0.00123648 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(5,25)  Input_Dead=interval(25,50)
+		   ( 0 0 0.476465 0.465981 0.0575539 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(5,25)  Input_Dead=interval(50,75)
+		   ( 0 0 0.255711 0.536527 0.207762 ))	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(5,25)  Input_Dead=interval(75,100)
+		  (( 0 0.038784 0.902548 0.0586675 0 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(25,50)  Input_Dead=interval(0,0.01)
+		   ( 0 0.0360474 0.901204 0.0627482 0 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(25,50)  Input_Dead=interval(0.01,1)
+		   ( 0 0.0254182 0.890066 0.0845158 0 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(25,50)  Input_Dead=interval(1,5)
+		   ( 0 0.0049536 0.769713 0.224097 0.00123648 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(25,50)  Input_Dead=interval(5,25)
+		   ( 0 2.56E-006 0.504571 0.447148 0.048279 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(25,50)  Input_Dead=interval(25,50)
+		   ( 0 0 0.275044 0.53365 0.191306 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(25,50)  Input_Dead=interval(50,75)
+		   ( 0 0 0.142705 0.503972 0.353324 ))	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(25,50)  Input_Dead=interval(75,100)
+		  (( 0 6.4E-005 0.648159 0.344609 0.007168 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(50,75)  Input_Dead=interval(0,0.01)
+		   ( 0 5.632E-005 0.641769 0.350308 0.00786688 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(50,75)  Input_Dead=interval(0.01,1)
+		   ( 0 0 0.611292 0.376067 0.0126413 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(50,75)  Input_Dead=interval(1,5)
+		   ( 0 0 0.476465 0.465981 0.0575539 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(50,75)  Input_Dead=interval(5,25)
+		   ( 0 0 0.275044 0.53365 0.191306 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(50,75)  Input_Dead=interval(25,50)
+		   ( 0 0 0.142705 0.503972 0.353324 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(50,75)  Input_Dead=interval(50,75)
+		   ( 0 0 0.0743936 0.425257 0.500349 ))	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(50,75)  Input_Dead=interval(75,100)
+		  (( 0 0 0.373507 0.515971 0.110523 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(75,100)  Input_Dead=interval(0,0.01)
+		   ( 0 0 0.369211 0.517151 0.113638 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(75,100)  Input_Dead=interval(0.01,1)
+		   ( 0 0 0.346765 0.523937 0.129298 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(75,100)  Input_Dead=interval(1,5)
+		   ( 0 0 0.255711 0.536527 0.207762 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(75,100)  Input_Dead=interval(5,25)
+		   ( 0 0 0.142705 0.503972 0.353324 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(75,100)  Input_Dead=interval(25,50)
+		   ( 0 0 0.0743936 0.425257 0.500349 )	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(75,100)  Input_Dead=interval(50,75)
+		   ( 0 0 0.0375731 0.334746 0.627681 )))	%  CR=1 - 2  BioRes=1 - 2  Input_Cover=interval(75,100)  Input_Dead=interval(75,100)
+		 ((( 0.0205901 0.97941 0 0 0 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(0,0.01)  Input_Dead=interval(0,0.01)
+		   ( 0 1 0 0 0 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(0,0.01)  Input_Dead=interval(0.01,1)
+		   ( 0 1 0 0 0 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(0,0.01)  Input_Dead=interval(1,5)
+		   ( 0 0.231665 0.768335 0 0 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(0,0.01)  Input_Dead=interval(5,25)
+		   ( 0 0 0.695567 0.304433 0 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(0,0.01)  Input_Dead=interval(25,50)
+		   ( 0 0 0.211832 0.66923 0.118938 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(0,0.01)  Input_Dead=interval(50,75)
+		   ( 0 0 0.020928 0.489539 0.489533 ))	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(0,0.01)  Input_Dead=interval(75,100)
+		  (( 0 1 0 0 0 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(0.01,1)  Input_Dead=interval(0,0.01)
+		   ( 0 1 0 0 0 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(0.01,1)  Input_Dead=interval(0.01,1)
+		   ( 0 0.999839 0.00016128 0 0 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(0.01,1)  Input_Dead=interval(1,5)
+		   ( 0 0.206897 0.793103 0 0 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(0.01,1)  Input_Dead=interval(5,25)
+		   ( 0 0 0.683064 0.316936 0 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(0.01,1)  Input_Dead=interval(25,50)
+		   ( 0 0 0.206208 0.66814 0.125652 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(0.01,1)  Input_Dead=interval(50,75)
+		   ( 0 0 0.0192845 0.485225 0.495491 ))	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(0.01,1)  Input_Dead=interval(75,100)
+		  (( 0 1 0 0 0 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(1,5)  Input_Dead=interval(0,0.01)
+		   ( 0 0.999839 0.00016128 0 0 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(1,5)  Input_Dead=interval(0.01,1)
+		   ( 0 0.856748 0.143252 0 0 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(1,5)  Input_Dead=interval(1,5)
+		   ( 0 0.110694 0.889098 0.00020736 0 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(1,5)  Input_Dead=interval(5,25)
+		   ( 0 0 0.61781 0.38219 0 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(1,5)  Input_Dead=interval(25,50)
+		   ( 0 0 0.178732 0.659712 0.161556 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(1,5)  Input_Dead=interval(50,75)
+		   ( 0 0 0.0123802 0.4642 0.52342 ))	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(1,5)  Input_Dead=interval(75,100)
+		  (( 0 0.231665 0.768335 0 0 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(5,25)  Input_Dead=interval(0,0.01)
+		   ( 0 0.206897 0.793103 0 0 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(5,25)  Input_Dead=interval(0.01,1)
+		   ( 0 0.110694 0.889098 0.00020736 0 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(5,25)  Input_Dead=interval(1,5)
+		   ( 0 0.00663808 0.850109 0.143252 0 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(5,25)  Input_Dead=interval(5,25)
+		   ( 0 0 0.364088 0.601149 0.0347622 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(5,25)  Input_Dead=interval(25,50)
+		   ( 0 0 0.0781978 0.570688 0.351114 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(5,25)  Input_Dead=interval(50,75)
+		   ( 0 0 0.00106496 0.362619 0.636316 ))	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(5,25)  Input_Dead=interval(75,100)
+		  (( 0 0 0.695567 0.304433 0 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(25,50)  Input_Dead=interval(0,0.01)
+		   ( 0 0 0.683064 0.316936 0 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(25,50)  Input_Dead=interval(0.01,1)
+		   ( 0 0 0.61781 0.38219 0 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(25,50)  Input_Dead=interval(1,5)
+		   ( 0 0 0.364088 0.601149 0.0347622 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(25,50)  Input_Dead=interval(5,25)
+		   ( 0 0 0.0993101 0.588667 0.312023 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(25,50)  Input_Dead=interval(25,50)
+		   ( 0 0 0.00358912 0.383547 0.612864 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(25,50)  Input_Dead=interval(50,75)
+		   ( 0 0 0 0.206899 0.793101 ))	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(25,50)  Input_Dead=interval(75,100)
+		  (( 0 0 0.211832 0.66923 0.118938 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(50,75)  Input_Dead=interval(0,0.01)
+		   ( 0 0 0.206208 0.66814 0.125652 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(50,75)  Input_Dead=interval(0.01,1)
+		   ( 0 0 0.178732 0.659712 0.161556 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(50,75)  Input_Dead=interval(1,5)
+		   ( 0 0 0.0781978 0.570688 0.351114 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(50,75)  Input_Dead=interval(5,25)
+		   ( 0 0 0.00358912 0.383547 0.612864 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(50,75)  Input_Dead=interval(25,50)
+		   ( 0 0 0 0.206899 0.793101 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(50,75)  Input_Dead=interval(50,75)
+		   ( 0 0 0 0.0880307 0.911969 ))	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(50,75)  Input_Dead=interval(75,100)
+		  (( 0 0 0.020928 0.489539 0.489533 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(75,100)  Input_Dead=interval(0,0.01)
+		   ( 0 0 0.0192845 0.485225 0.495491 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(75,100)  Input_Dead=interval(0.01,1)
+		   ( 0 0 0.0123802 0.4642 0.52342 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(75,100)  Input_Dead=interval(1,5)
+		   ( 0 0 0.00106496 0.362619 0.636316 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(75,100)  Input_Dead=interval(5,25)
+		   ( 0 0 0 0.206899 0.793101 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(75,100)  Input_Dead=interval(25,50)
+		   ( 0 0 0 0.0880307 0.911969 )	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(75,100)  Input_Dead=interval(50,75)
+		   ( 0 0 0 0.0143795 0.98562 ))))	%  CR=1 - 2  BioRes=2 - 3  Input_Cover=interval(75,100)  Input_Dead=interval(75,100)
+		(((( 0.424748 0.575252 0 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(0,0.01)  Input_Dead=interval(0,0.01)
+		   ( 0.00884736 0.991153 0 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(0,0.01)  Input_Dead=interval(0.01,1)
+		   ( 0 1 0 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(0,0.01)  Input_Dead=interval(1,5)
+		   ( 0 0.937728 0.062272 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(0,0.01)  Input_Dead=interval(5,25)
+		   ( 0 0.486764 0.513236 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(0,0.01)  Input_Dead=interval(25,50)
+		   ( 0 0.28448 0.71552 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(0,0.01)  Input_Dead=interval(50,75)
+		   ( 0 0.2032 0.764349 0.0324506 0 ))	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(0,0.01)  Input_Dead=interval(75,100)
+		  (( 0.00884736 0.991153 0 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(0.01,1)  Input_Dead=interval(0,0.01)
+		   ( 0.00049664 0.999503 0 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(0.01,1)  Input_Dead=interval(0.01,1)
+		   ( 0 1 0 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(0.01,1)  Input_Dead=interval(1,5)
+		   ( 0 0.930079 0.0699213 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(0.01,1)  Input_Dead=interval(5,25)
+		   ( 0 0.479913 0.520087 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(0.01,1)  Input_Dead=interval(25,50)
+		   ( 0 0.282276 0.717724 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(0.01,1)  Input_Dead=interval(50,75)
+		   ( 0 0.201782 0.763231 0.0349875 0 ))	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(0.01,1)  Input_Dead=interval(75,100)
+		  (( 0 1 0 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(1,5)  Input_Dead=interval(0,0.01)
+		   ( 0 1 0 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(1,5)  Input_Dead=interval(0.01,1)
+		   ( 0 1 0 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(1,5)  Input_Dead=interval(1,5)
+		   ( 0 0.886533 0.113467 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(1,5)  Input_Dead=interval(5,25)
+		   ( 0 0.448594 0.551406 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(1,5)  Input_Dead=interval(25,50)
+		   ( 0 0.271939 0.728061 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(1,5)  Input_Dead=interval(50,75)
+		   ( 0 0.194808 0.756362 0.0488294 0 ))	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(1,5)  Input_Dead=interval(75,100)
+		  (( 0 0.937728 0.062272 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(5,25)  Input_Dead=interval(0,0.01)
+		   ( 0 0.930079 0.0699213 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(5,25)  Input_Dead=interval(0.01,1)
+		   ( 0 0.886533 0.113467 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(5,25)  Input_Dead=interval(1,5)
+		   ( 0 0.625482 0.374518 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(5,25)  Input_Dead=interval(5,25)
+		   ( 0 0.34569 0.65431 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(5,25)  Input_Dead=interval(25,50)
+		   ( 0 0.230129 0.762586 0.00728576 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(5,25)  Input_Dead=interval(50,75)
+		   ( 0 0.172508 0.688691 0.138801 0 ))	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(5,25)  Input_Dead=interval(75,100)
+		  (( 0 0.486764 0.513236 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(25,50)  Input_Dead=interval(0,0.01)
+		   ( 0 0.479913 0.520087 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(25,50)  Input_Dead=interval(0.01,1)
+		   ( 0 0.448594 0.551406 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(25,50)  Input_Dead=interval(1,5)
+		   ( 0 0.34569 0.65431 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(25,50)  Input_Dead=interval(5,25)
+		   ( 0 0.238932 0.755259 0.00580864 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(25,50)  Input_Dead=interval(25,50)
+		   ( 0 0.177231 0.702536 0.120233 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(25,50)  Input_Dead=interval(50,75)
+		   ( 0 0.140593 0.566625 0.292782 0 ))	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(25,50)  Input_Dead=interval(75,100)
+		  (( 0 0.28448 0.71552 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(50,75)  Input_Dead=interval(0,0.01)
+		   ( 0 0.282276 0.717724 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(50,75)  Input_Dead=interval(0.01,1)
+		   ( 0 0.271939 0.728061 0 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(50,75)  Input_Dead=interval(1,5)
+		   ( 0 0.230129 0.762586 0.00728576 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(50,75)  Input_Dead=interval(5,25)
+		   ( 0 0.177231 0.702536 0.120233 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(50,75)  Input_Dead=interval(25,50)
+		   ( 0 0.140593 0.566625 0.292782 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(50,75)  Input_Dead=interval(50,75)
+		   ( 0 0.119936 0.468114 0.411881 6.912E-005 ))	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(50,75)  Input_Dead=interval(75,100)
+		  (( 0 0.2032 0.764349 0.0324506 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(75,100)  Input_Dead=interval(0,0.01)
+		   ( 0 0.201782 0.763231 0.0349875 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(75,100)  Input_Dead=interval(0.01,1)
+		   ( 0 0.194808 0.756362 0.0488294 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(75,100)  Input_Dead=interval(1,5)
+		   ( 0 0.172508 0.688691 0.138801 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(75,100)  Input_Dead=interval(5,25)
+		   ( 0 0.140593 0.566625 0.292782 0 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(75,100)  Input_Dead=interval(25,50)
+		   ( 0 0.119936 0.468114 0.411881 6.912E-005 )	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(75,100)  Input_Dead=interval(50,75)
+		   ( 0 0.100728 0.402655 0.473523 0.0230938 )))	%  CR=2 - 3  BioRes=0 - 1  Input_Cover=interval(75,100)  Input_Dead=interval(75,100)
+		 ((( 0.0205901 0.97941 0 0 0 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(0,0.01)  Input_Dead=interval(0,0.01)
+		   ( 0 1 0 0 0 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(0,0.01)  Input_Dead=interval(0.01,1)
+		   ( 0 1 0 0 0 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(0,0.01)  Input_Dead=interval(1,5)
+		   ( 0 0.231665 0.768335 0 0 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(0,0.01)  Input_Dead=interval(5,25)
+		   ( 0 0 0.695567 0.304433 0 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(0,0.01)  Input_Dead=interval(25,50)
+		   ( 0 0 0.211832 0.66923 0.118938 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(0,0.01)  Input_Dead=interval(50,75)
+		   ( 0 0 0.020928 0.489539 0.489533 ))	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(0,0.01)  Input_Dead=interval(75,100)
+		  (( 0 1 0 0 0 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(0.01,1)  Input_Dead=interval(0,0.01)
+		   ( 0 1 0 0 0 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(0.01,1)  Input_Dead=interval(0.01,1)
+		   ( 0 0.999839 0.00016128 0 0 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(0.01,1)  Input_Dead=interval(1,5)
+		   ( 0 0.206897 0.793103 0 0 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(0.01,1)  Input_Dead=interval(5,25)
+		   ( 0 0 0.683064 0.316936 0 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(0.01,1)  Input_Dead=interval(25,50)
+		   ( 0 0 0.206208 0.66814 0.125652 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(0.01,1)  Input_Dead=interval(50,75)
+		   ( 0 0 0.0192845 0.485225 0.495491 ))	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(0.01,1)  Input_Dead=interval(75,100)
+		  (( 0 1 0 0 0 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(1,5)  Input_Dead=interval(0,0.01)
+		   ( 0 0.999839 0.00016128 0 0 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(1,5)  Input_Dead=interval(0.01,1)
+		   ( 0 0.856748 0.143252 0 0 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(1,5)  Input_Dead=interval(1,5)
+		   ( 0 0.110694 0.889098 0.00020736 0 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(1,5)  Input_Dead=interval(5,25)
+		   ( 0 0 0.61781 0.38219 0 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(1,5)  Input_Dead=interval(25,50)
+		   ( 0 0 0.178732 0.659712 0.161556 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(1,5)  Input_Dead=interval(50,75)
+		   ( 0 0 0.0123802 0.4642 0.52342 ))	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(1,5)  Input_Dead=interval(75,100)
+		  (( 0 0.231665 0.768335 0 0 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(5,25)  Input_Dead=interval(0,0.01)
+		   ( 0 0.206897 0.793103 0 0 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(5,25)  Input_Dead=interval(0.01,1)
+		   ( 0 0.110694 0.889098 0.00020736 0 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(5,25)  Input_Dead=interval(1,5)
+		   ( 0 0.00663808 0.850109 0.143252 0 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(5,25)  Input_Dead=interval(5,25)
+		   ( 0 0 0.364088 0.601149 0.0347622 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(5,25)  Input_Dead=interval(25,50)
+		   ( 0 0 0.0781978 0.570688 0.351114 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(5,25)  Input_Dead=interval(50,75)
+		   ( 0 0 0.00106496 0.362619 0.636316 ))	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(5,25)  Input_Dead=interval(75,100)
+		  (( 0 0 0.695567 0.304433 0 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(25,50)  Input_Dead=interval(0,0.01)
+		   ( 0 0 0.683064 0.316936 0 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(25,50)  Input_Dead=interval(0.01,1)
+		   ( 0 0 0.61781 0.38219 0 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(25,50)  Input_Dead=interval(1,5)
+		   ( 0 0 0.364088 0.601149 0.0347622 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(25,50)  Input_Dead=interval(5,25)
+		   ( 0 0 0.0993101 0.588667 0.312023 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(25,50)  Input_Dead=interval(25,50)
+		   ( 0 0 0.00358912 0.383547 0.612864 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(25,50)  Input_Dead=interval(50,75)
+		   ( 0 0 0 0.206899 0.793101 ))	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(25,50)  Input_Dead=interval(75,100)
+		  (( 0 0 0.211832 0.66923 0.118938 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(50,75)  Input_Dead=interval(0,0.01)
+		   ( 0 0 0.206208 0.66814 0.125652 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(50,75)  Input_Dead=interval(0.01,1)
+		   ( 0 0 0.178732 0.659712 0.161556 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(50,75)  Input_Dead=interval(1,5)
+		   ( 0 0 0.0781978 0.570688 0.351114 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(50,75)  Input_Dead=interval(5,25)
+		   ( 0 0 0.00358912 0.383547 0.612864 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(50,75)  Input_Dead=interval(25,50)
+		   ( 0 0 0 0.206899 0.793101 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(50,75)  Input_Dead=interval(50,75)
+		   ( 0 0 0 0.0880307 0.911969 ))	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(50,75)  Input_Dead=interval(75,100)
+		  (( 0 0 0.020928 0.489539 0.489533 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(75,100)  Input_Dead=interval(0,0.01)
+		   ( 0 0 0.0192845 0.485225 0.495491 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(75,100)  Input_Dead=interval(0.01,1)
+		   ( 0 0 0.0123802 0.4642 0.52342 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(75,100)  Input_Dead=interval(1,5)
+		   ( 0 0 0.00106496 0.362619 0.636316 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(75,100)  Input_Dead=interval(5,25)
+		   ( 0 0 0 0.206899 0.793101 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(75,100)  Input_Dead=interval(25,50)
+		   ( 0 0 0 0.0880307 0.911969 )	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(75,100)  Input_Dead=interval(50,75)
+		   ( 0 0 0 0.0143795 0.98562 )))	%  CR=2 - 3  BioRes=1 - 2  Input_Cover=interval(75,100)  Input_Dead=interval(75,100)
+		 ((( 0.00496128 0.995039 0 0 0 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(0,0.01)  Input_Dead=interval(0,0.01)
+		   ( 0 1 0 0 0 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(0,0.01)  Input_Dead=interval(0.01,1)
+		   ( 0 1 0 0 0 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(0,0.01)  Input_Dead=interval(1,5)
+		   ( 0 0.0285133 0.971487 0 0 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(0,0.01)  Input_Dead=interval(5,25)
+		   ( 0 0 0.109939 0.890061 0 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(0,0.01)  Input_Dead=interval(25,50)
+		   ( 0 0 0 0.219983 0.780017 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(0,0.01)  Input_Dead=interval(50,75)
+		   ( 0 0 0 0 1 ))	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(0,0.01)  Input_Dead=interval(75,100)
+		  (( 0 1 0 0 0 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(0.01,1)  Input_Dead=interval(0,0.01)
+		   ( 0 1 0 0 0 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(0.01,1)  Input_Dead=interval(0.01,1)
+		   ( 0 0.967593 0.032407 0 0 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(0.01,1)  Input_Dead=interval(1,5)
+		   ( 0 0.00737536 0.992407 0.0002176 0 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(0.01,1)  Input_Dead=interval(5,25)
+		   ( 0 0 0.0900454 0.909924 3.072E-005 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(0.01,1)  Input_Dead=interval(25,50)
+		   ( 0 0 0 0.199946 0.800054 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(0.01,1)  Input_Dead=interval(50,75)
+		   ( 0 0 0 0 1 ))	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(0.01,1)  Input_Dead=interval(75,100)
+		  (( 0 1 0 0 0 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(1,5)  Input_Dead=interval(0,0.01)
+		   ( 0 0.967593 0.032407 0 0 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(1,5)  Input_Dead=interval(0.01,1)
+		   ( 0 0.395756 0.604244 0 0 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(1,5)  Input_Dead=interval(1,5)
+		   ( 0 0 0.959882 0.0401178 0 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(1,5)  Input_Dead=interval(5,25)
+		   ( 0 0 0.022016 0.968727 0.00925696 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(1,5)  Input_Dead=interval(25,50)
+		   ( 0 0 0 0.109432 0.890568 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(1,5)  Input_Dead=interval(50,75)
+		   ( 0 0 0 0 1 ))	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(1,5)  Input_Dead=interval(75,100)
+		  (( 0 0.0285133 0.971487 0 0 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(5,25)  Input_Dead=interval(0,0.01)
+		   ( 0 0.00737536 0.992407 0.0002176 0 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(5,25)  Input_Dead=interval(0.01,1)
+		   ( 0 0 0.959882 0.0401178 0 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(5,25)  Input_Dead=interval(1,5)
+		   ( 0 0 0.395756 0.604244 0 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(5,25)  Input_Dead=interval(5,25)
+		   ( 0 0 0 0.616182 0.383818 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(5,25)  Input_Dead=interval(25,50)
+		   ( 0 0 0 0.00396544 0.996035 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(5,25)  Input_Dead=interval(50,75)
+		   ( 0 0 0 0 1 ))	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(5,25)  Input_Dead=interval(75,100)
+		  (( 0 0 0.109939 0.890061 0 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(25,50)  Input_Dead=interval(0,0.01)
+		   ( 0 0 0.0900454 0.909924 3.072E-005 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(25,50)  Input_Dead=interval(0.01,1)
+		   ( 0 0 0.022016 0.968727 0.00925696 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(25,50)  Input_Dead=interval(1,5)
+		   ( 0 0 0 0.616182 0.383818 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(25,50)  Input_Dead=interval(5,25)
+		   ( 0 0 0 0.0287206 0.971279 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(25,50)  Input_Dead=interval(25,50)
+		   ( 0 0 0 0 1 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(25,50)  Input_Dead=interval(50,75)
+		   ( 0 0 0 0 1 ))	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(25,50)  Input_Dead=interval(75,100)
+		  (( 0 0 0 0.219983 0.780017 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(50,75)  Input_Dead=interval(0,0.01)
+		   ( 0 0 0 0.199946 0.800054 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(50,75)  Input_Dead=interval(0.01,1)
+		   ( 0 0 0 0.109432 0.890568 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(50,75)  Input_Dead=interval(1,5)
+		   ( 0 0 0 0.00396544 0.996035 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(50,75)  Input_Dead=interval(5,25)
+		   ( 0 0 0 0 1 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(50,75)  Input_Dead=interval(25,50)
+		   ( 0 0 0 0 1 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(50,75)  Input_Dead=interval(50,75)
+		   ( 0 0 0 0 1 ))	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(50,75)  Input_Dead=interval(75,100)
+		  (( 0 0 0 0 1 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(75,100)  Input_Dead=interval(0,0.01)
+		   ( 0 0 0 0 1 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(75,100)  Input_Dead=interval(0.01,1)
+		   ( 0 0 0 0 1 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(75,100)  Input_Dead=interval(1,5)
+		   ( 0 0 0 0 1 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(75,100)  Input_Dead=interval(5,25)
+		   ( 0 0 0 0 1 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(75,100)  Input_Dead=interval(25,50)
+		   ( 0 0 0 0 1 )	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(75,100)  Input_Dead=interval(50,75)
+		   ( 0 0 0 0 1 )))));	%  CR=2 - 3  BioRes=2 - 3  Input_Cover=interval(75,100)  Input_Dead=interval(75,100)
+    }
+
+    potential (BR | Harvest)
+    {
+	model_nodes = (Harvest);
+	model_data  = ( 0,
+			truncate (0, Beta (2, 340, -0.01, 1), 1) );
+    }
+} % class TolerantHarvest

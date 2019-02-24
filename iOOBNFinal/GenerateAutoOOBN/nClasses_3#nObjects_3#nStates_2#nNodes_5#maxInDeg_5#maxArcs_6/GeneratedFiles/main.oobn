@@ -1,0 +1,80 @@
+class main
+{
+	inputs = (  node0 node1 node2);
+	outputs = (  node4);
+
+	instance Obj0C1 : main1( node1 = node0; Obj0C1_node4 = node4 )
+	{		position = ( 15 150 );
+	}
+	instance Obj1C1 : main1( node1 = node2; Obj1C1_node4 = node4 )
+	{		position = ( 135 164 );
+	}
+	instance Obj2C1 : main1( node1 = node0; Obj2C1_node4 = node4 )
+	{		position = ( 255 150 );
+	}
+	instance Obj0C2 : main2( node1 = node1, node2 = node2; Obj0C2_node0 = node0 )
+	{		position = ( 44 270 );
+	}
+	instance Obj1C2 : main2( node1 = node0, node2 = node1; Obj1C2_node0 = node0 )
+	{		position = ( 164 284 );
+	}
+	instance Obj2C2 : main2( node1 = node2, node2 = node1; Obj2C2_node0 = node0 )
+	{		position = ( 284 270 );
+	}
+	instance Obj0C3 : main3( node4 = node0; Obj0C3_node2 = node2 )
+	{		position = ( 375 135 );
+	}
+	instance Obj1C3 : main3( node4 = node2; Obj1C3_node2 = node2 )
+	{		position = ( 495 149 );
+	}
+	instance Obj2C3 : main3( node4 = node0; Obj2C3_node2 = node2 )
+	{		position = ( 615 164 );
+	}
+
+	discrete node node0
+	{
+		type = "Discrete" ;
+		position = ( 45 30 );
+		states = ( "State0" "State1" );
+	}
+
+	discrete node node1
+	{
+		type = "Discrete" ;
+		position = ( 165 44 );
+		states = ( "State0" "State1" );
+	}
+
+	discrete node node2
+	{
+		type = "Discrete" ;
+		position = ( 285 30 );
+		states = ( "State0" "State1" );
+	}
+
+	discrete node node3
+	{
+		type = "Discrete" ;
+		position = ( 15 870 );
+		states = ( "State0" "State1" );
+	}
+
+	discrete node node4
+	{
+		type = "Discrete" ;
+		position = ( 135 884 );
+		states = ( "State0" "State1" );
+	}
+
+
+	potential ( node0 )
+	{			}
+	potential ( node1 )
+	{			}
+	potential ( node2 )
+	{			}
+	potential ( node3 |  node1 node2 Obj0C1_node4 Obj1C1_node4 Obj0C2_node0 Obj2C2_node0 Obj1C3_node2  )
+	{			}
+	potential ( node4 |  node1 node0 node3 Obj2C1_node4 Obj1C2_node0 Obj0C3_node2 Obj2C3_node2  )
+	{			}
+}

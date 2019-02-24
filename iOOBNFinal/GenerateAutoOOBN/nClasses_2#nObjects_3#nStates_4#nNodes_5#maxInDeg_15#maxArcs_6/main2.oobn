@@ -1,0 +1,51 @@
+class main2
+{
+	inputs = ( node3 );
+	outputs = ( node2 node4 );
+	node node0 
+	{
+		type = "Discrete";
+		position = ( 44 270 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node1 
+	{
+		type = "Discrete";
+		position = ( 15 150 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node2 
+	{
+		type = "Discrete";
+		position = ( 135 164 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node3 
+	{
+		type = "Discrete";
+		position = ( 45 30 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node4 
+	{
+		type = "Discrete";
+		position = ( 164 284 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	potential (node0 | node3 node1 )
+	{
+	}
+	potential (node1 | node3 )
+	{
+	}
+	potential (node2 | node3 )
+	{
+	}
+	potential (node3)
+	{
+	}
+	potential (node4 | node1 node0 )
+	{
+	}
+}
+

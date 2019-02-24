@@ -1,0 +1,49 @@
+class xxx
+{
+	node A
+	{
+		label= "A";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node S
+	{
+		label= "S";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node E
+	{
+		label= "E";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	potential ( A )
+	{
+		data=(0.5 0.5 )
+;
+	}
+	potential ( S )
+	{
+		data=(0.5 0.5 )
+;
+	}
+	potential ( E | A S  )
+	{
+		data=(
+	(
+		(0.5 0.5 )
+		(0.5 0.5 )
+	)
+	(
+		(0.5 0.5 )
+		(0.5 0.5 )
+	)
+)
+;
+	}
+
+}

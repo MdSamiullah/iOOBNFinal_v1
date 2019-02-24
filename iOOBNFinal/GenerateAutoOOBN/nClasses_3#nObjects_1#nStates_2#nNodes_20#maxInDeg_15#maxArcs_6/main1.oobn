@@ -1,0 +1,186 @@
+class main1
+{
+	inputs = ( node4 node5 node14 );
+	outputs = ( node12 );
+	node node11 
+	{
+		type = "Discrete";
+		position = ( 44 1230 );
+		states = ( "State0" "State1"  );
+	}
+	node node12 
+	{
+		type = "Discrete";
+		position = ( 44 1470 );
+		states = ( "State0" "State1"  );
+	}
+	node node13 
+	{
+		type = "Discrete";
+		position = ( 15 150 );
+		states = ( "State0" "State1"  );
+	}
+	node node14 
+	{
+		type = "Discrete";
+		position = ( 285 30 );
+		states = ( "State0" "State1"  );
+	}
+	node node15 
+	{
+		type = "Discrete";
+		position = ( 135 164 );
+		states = ( "State0" "State1"  );
+	}
+	node node16 
+	{
+		type = "Discrete";
+		position = ( 164 1244 );
+		states = ( "State0" "State1"  );
+	}
+	node node17 
+	{
+		type = "Discrete";
+		position = ( 135 644 );
+		states = ( "State0" "State1"  );
+	}
+	node node18 
+	{
+		type = "Discrete";
+		position = ( 255 390 );
+		states = ( "State0" "State1"  );
+	}
+	node node19 
+	{
+		type = "Discrete";
+		position = ( 284 990 );
+		states = ( "State0" "State1"  );
+	}
+	node node0 
+	{
+		type = "Discrete";
+		position = ( 15 390 );
+		states = ( "State0" "State1"  );
+	}
+	node node1 
+	{
+		type = "Discrete";
+		position = ( 135 404 );
+		states = ( "State0" "State1"  );
+	}
+	node node2 
+	{
+		type = "Discrete";
+		position = ( 44 510 );
+		states = ( "State0" "State1"  );
+	}
+	node node3 
+	{
+		type = "Discrete";
+		position = ( 15 1110 );
+		states = ( "State0" "State1"  );
+	}
+	node node4 
+	{
+		type = "Discrete";
+		position = ( 45 30 );
+		states = ( "State0" "State1"  );
+	}
+	node node5 
+	{
+		type = "Discrete";
+		position = ( 165 44 );
+		states = ( "State0" "State1"  );
+	}
+	node node6 
+	{
+		type = "Discrete";
+		position = ( 164 524 );
+		states = ( "State0" "State1"  );
+	}
+	node node7 
+	{
+		type = "Discrete";
+		position = ( 44 750 );
+		states = ( "State0" "State1"  );
+	}
+	node node8 
+	{
+		type = "Discrete";
+		position = ( 15 630 );
+		states = ( "State0" "State1"  );
+	}
+	node node9 
+	{
+		type = "Discrete";
+		position = ( 44 990 );
+		states = ( "State0" "State1"  );
+	}
+	node node10 
+	{
+		type = "Discrete";
+		position = ( 164 1004 );
+		states = ( "State0" "State1"  );
+	}
+	potential (node11 | node3 node9 node8 node17 node1 node15 node18 node6 node4 node0 )
+	{
+	}
+	potential (node12 | node8 node15 node6 node17 node7 node19 node5 node1 node13 node4 node3 node11 )
+	{
+	}
+	potential (node13 | node14 )
+	{
+	}
+	potential (node14)
+	{
+	}
+	potential (node15 | node14 )
+	{
+	}
+	potential (node16 | node4 node2 node3 node10 node1 node7 node17 node9 node15 node5 )
+	{
+	}
+	potential (node17 | node7 node14 node4 node13 node6 )
+	{
+	}
+	potential (node18 | node14 node0 node13 )
+	{
+	}
+	potential (node19 | node13 node10 node17 node16 node1 node9 node11 node5 )
+	{
+	}
+	potential (node0 | node14 node1 node5 )
+	{
+	}
+	potential (node1 | node15 node14 node4 )
+	{
+	}
+	potential (node2 | node18 node14 node15 node1 )
+	{
+	}
+	potential (node3 | node0 node8 node7 node5 node14 node9 node13 node4 node1 )
+	{
+	}
+	potential (node4)
+	{
+	}
+	potential (node5)
+	{
+	}
+	potential (node6 | node18 node0 node15 node9 )
+	{
+	}
+	potential (node7 | node15 node8 node13 node4 node5 node14 )
+	{
+	}
+	potential (node8 | node4 node18 node9 node14 node5 )
+	{
+	}
+	potential (node9 | node2 node1 node0 node5 node14 node15 node18 node13 )
+	{
+	}
+	potential (node10 | node15 node17 node5 node18 node2 node8 node0 node6 )
+	{
+	}
+}
+

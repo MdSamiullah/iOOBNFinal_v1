@@ -1,0 +1,134 @@
+class ThemedaSow
+{
+    inputs = (Input_Seeds SowStrategy);
+    outputs = (Output_Seeds);
+    node_size = (100 55);
+    HR_ToolBar_CDVT = "0";
+    HR_Html_Desc = "0";
+    HR_HTML_Desc = "";
+    HR_Groups_IDs = "";
+    HR_Node_Label_Style = "0";
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "1";
+    HR_Zoom_ZoomFactor = "100";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_DiscreteFunction = "5";
+    HR_Color_Function = "4";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Mean_Variance = "1";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "5";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "javax.swing.plaf.FontUIResource[family=Tahoma,name=Tahoma,style=plain,size=11]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+
+    node SowStrategy
+    {
+	label = "Strategy";
+	position = (351 98);
+	states = ("Sow50" "Sow300" "Sow500");
+	HR_LinkMode = "[BurnStrategy:0][CrashGrazeStrategy:0][HS:0][ScarifyStrategy:0][RemoveTopSoilStrategy:0][C1:0][C2:0][C3:0][SS:0][Intervention_1:0][Inter:0][PlanBurn:0][SowCost:0][Output_Seeds:0]";
+	HR_State_12 = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_State_5 = "";
+	HR_State_6 = "";
+	HR_State_7 = "";
+	HR_State_8 = "";
+	HR_State_9 = "";
+	HR_State_10 = "";
+	HR_State_11 = "";
+	HR_LinkControlPoints = "";
+	HR_NodeSize = "(100, 55)";
+	HR_Group = "0";
+    }
+
+    node Input_Seeds
+    {
+	label = "Input Seed\nDensity";
+	position = (86 191);
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 30 70 400 700);
+	HR_State_2 = "";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkControlPoints = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_LinkMode = "[C2:0][C4:0][C5:0][Output_Seed:0][Output_Seeds:0][Death_Seeds:0][Germ_Seeds:0]";
+	HR_Group = "0";
+    }
+
+    node Output_Seeds
+    {
+	label = "Output Seed\nDensity";
+	position = (587 193);
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 30 70 400 700);
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_State_2 = "";
+	HR_Group = "0";
+    }
+
+    potential (SowStrategy)
+    {
+	data = ( 1 1 1 );
+    }
+
+    potential (Input_Seeds)
+    {
+	data = ( 1 1 1 1 1 );
+    }
+
+    potential (Output_Seeds | SowStrategy Input_Seeds)
+    {
+	model_nodes = (SowStrategy);
+	samples_per_interval = 1000;
+	model_data  = ( min (700, Input_Seeds + 50),
+			min (700, Input_Seeds + 300),
+			min (700, Input_Seeds + 500) );
+    }
+} % class ThemedaSow

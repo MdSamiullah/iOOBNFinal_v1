@@ -1,0 +1,49 @@
+class test2Hugin
+{
+	node C_0
+	{
+		label= "C_0";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node C_1
+	{
+		label= "C_1";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node C_2
+	{
+		label= "C_2";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	potential ( C_0 )
+	{
+		data=(0.8 0.2 )
+;
+	}
+	potential ( C_1 | C_2 C_0  )
+	{
+		data=(
+	(
+		(0.4 0.6 )
+		(0.6 0.4 )
+	)
+	(
+		(0.3 0.7 )
+		(0.9 0.1 )
+	)
+)
+;
+	}
+	potential ( C_2 )
+	{
+		data=(0.3 0.7 )
+;
+	}
+
+}

@@ -1,0 +1,5210 @@
+class BiomassSummaries
+{
+    inputs = (HardyNative_Cover Grain_Cover BroadWeeds_Cover SensitNative_Cover RedLeg_Cover Windmill_Cover Wallaby_Cover Ruderals_Cover ST_Cover Spear_Cover Needle_Cover Themeda_Cover Onion_Cover Blanket_Cover ExoticAnnual_Cover Themeda_Dead RedLeg_Dead Needle_Dead Wallaby_Dead Blanket_Dead Windmill_Dead ST_Dead Spear_Dead Grain_Dead Onion_Dead ExoticAnnual_Dead HardyNative_Dead Ruderals_Dead SensitNative_Dead BroadWeeds_Dead Windmill_Basal SensitNative_Basal Spear_Basal Themeda_Basal Onion_Basal ST_Basal Wallaby_Basal HardyNative_Basal Ruderals_Basal BroadWeeds_Basal RedLeg_Basal Needle_Basal Season NL);
+    outputs = (LBio DBio BBio TBio HPalC MPalC LPalC VLPalC HPalS MPalS LPalS VLPalS WComp MComp SComp VSComp);
+    node_size = (100 55);
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "1";
+    HR_Zoom_ZoomFactor = "100";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_DiscreteFunction = "5";
+    HR_Color_Function = "4";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Mean_Variance = "1";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "5";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "javax.swing.plaf.FontUIResource[family=Tahoma,name=Tahoma,style=plain,size=11]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+
+    node VSComp
+    {
+	position = (3460 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+    }
+
+    node VSComp1
+    {
+	position = (3700 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VSComp:0]";
+    }
+
+    node VSComp11
+    {
+	position = (3820 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VSComp1:0]";
+    }
+
+    node VSComp10
+    {
+	position = (3700 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VSComp1:0]";
+    }
+
+    node VSComp0
+    {
+	position = (3460 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VSComp:0]";
+    }
+
+    node VSComp01
+    {
+	position = (3580 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VSComp0:0]";
+    }
+
+    node VSComp00
+    {
+	position = (3460 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VSComp0:0]";
+    }
+
+    node SComp
+    {
+	position = (2980 440);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+    }
+
+    node SComp1
+    {
+	position = (3220 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[SComp:0]";
+    }
+
+    node SComp11
+    {
+	position = (3340 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[SComp1:0]";
+    }
+
+    node SComp10
+    {
+	position = (3220 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[SComp1:0]";
+    }
+
+    node SComp101
+    {
+	position = (3340 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[SComp10:0]";
+    }
+
+    node SComp100
+    {
+	position = (3220 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[SComp10:0]";
+    }
+
+    node SComp0
+    {
+	position = (2980 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[SComp:0]";
+    }
+
+    node SComp01
+    {
+	position = (3100 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[SComp0:0]";
+    }
+
+    node SComp00
+    {
+	position = (2980 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[SComp0:0]";
+    }
+
+    node SComp001
+    {
+	position = (3100 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[SComp00:0]";
+    }
+
+    node SComp000
+    {
+	position = (2980 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[SComp00:0]";
+    }
+
+    node MComp
+    {
+	position = (2020 540);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+    }
+
+    node MComp1
+    {
+	position = (2500 440);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MComp:0]";
+    }
+
+    node MComp11
+    {
+	position = (2740 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MComp1:0]";
+    }
+
+    node MComp111
+    {
+	position = (2860 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MComp11:0]";
+    }
+
+    node MComp110
+    {
+	position = (2740 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MComp11:0]";
+    }
+
+    node MComp10
+    {
+	position = (2500 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MComp1:0]";
+    }
+
+    node MComp101
+    {
+	position = (2620 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MComp10:0]";
+    }
+
+    node MComp100
+    {
+	position = (2500 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MComp10:0]";
+    }
+
+    node MComp1001
+    {
+	position = (2620 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MComp100:0]";
+    }
+
+    node MComp1000
+    {
+	position = (2500 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MComp100:0]";
+    }
+
+    node MComp0
+    {
+	position = (2020 440);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MComp:0]";
+    }
+
+    node MComp01
+    {
+	position = (2260 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MComp0:0]";
+    }
+
+    node MComp011
+    {
+	position = (2380 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MComp01:0]";
+    }
+
+    node MComp010
+    {
+	position = (2260 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MComp01:0]";
+    }
+
+    node MComp00
+    {
+	position = (2020 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MComp0:0]";
+    }
+
+    node MComp001
+    {
+	position = (2140 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MComp00:0]";
+    }
+
+    node MComp000
+    {
+	position = (2020 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MComp00:0]";
+    }
+
+    node MComp0001
+    {
+	position = (2140 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MComp000:0]";
+    }
+
+    node MComp0000
+    {
+	position = (2020 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MComp000:0]";
+    }
+
+    node WComp
+    {
+	position = (100 640);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+    }
+
+    node WComp1
+    {
+	position = (1060 540);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp:0]";
+    }
+
+    node WComp11
+    {
+	position = (1540 440);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp1:0]";
+    }
+
+    node WComp111
+    {
+	position = (1780 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp11:0]";
+    }
+
+    node WComp1111
+    {
+	position = (1900 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp111:0]";
+    }
+
+    node WComp1110
+    {
+	position = (1780 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp111:0]";
+    }
+
+    node WComp110
+    {
+	position = (1540 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp11:0]";
+    }
+
+    node WComp1101
+    {
+	position = (1660 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp110:0]";
+    }
+
+    node WComp1100
+    {
+	position = (1540 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp110:0]";
+    }
+
+    node WComp11001
+    {
+	position = (1660 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp1100:0]";
+    }
+
+    node WComp11000
+    {
+	position = (1540 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp1100:0]";
+    }
+
+    node WComp10
+    {
+	position = (1060 440);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp1:0]";
+    }
+
+    node WComp101
+    {
+	position = (1300 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp10:0]";
+    }
+
+    node WComp1011
+    {
+	position = (1420 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp101:0]";
+    }
+
+    node WComp1010
+    {
+	position = (1300 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp101:0]";
+    }
+
+    node WComp10101
+    {
+	position = (1420 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp1010:0]";
+    }
+
+    node WComp10100
+    {
+	position = (1300 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp1010:0]";
+    }
+
+    node WComp100
+    {
+	position = (1060 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp10:0]";
+    }
+
+    node WComp1001
+    {
+	position = (1180 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp100:0]";
+    }
+
+    node WComp1000
+    {
+	position = (1060 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp100:0]";
+    }
+
+    node WComp10001
+    {
+	position = (1180 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp1000:0]";
+    }
+
+    node WComp10000
+    {
+	position = (1060 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp1000:0]";
+    }
+
+    node WComp0
+    {
+	position = (100 540);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp:0]";
+    }
+
+    node WComp01
+    {
+	position = (580 440);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp0:0]";
+    }
+
+    node WComp011
+    {
+	position = (820 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp01:0]";
+    }
+
+    node WComp0111
+    {
+	position = (940 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp011:0]";
+    }
+
+    node WComp0110
+    {
+	position = (820 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp011:0]";
+    }
+
+    node WComp010
+    {
+	position = (580 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp01:0]";
+    }
+
+    node WComp0101
+    {
+	position = (700 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp010:0]";
+    }
+
+    node WComp0100
+    {
+	position = (580 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp010:0]";
+    }
+
+    node WComp01001
+    {
+	position = (700 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp0100:0]";
+    }
+
+    node WComp01000
+    {
+	position = (580 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp0100:0]";
+    }
+
+    node WComp00
+    {
+	position = (100 440);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp0:0]";
+    }
+
+    node WComp001
+    {
+	position = (340 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp00:0]";
+    }
+
+    node WComp0011
+    {
+	position = (460 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp001:0]";
+    }
+
+    node WComp0010
+    {
+	position = (340 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp001:0]";
+    }
+
+    node WComp00101
+    {
+	position = (460 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp0010:0]";
+    }
+
+    node WComp00100
+    {
+	position = (340 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp0010:0]";
+    }
+
+    node WComp000
+    {
+	position = (100 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp00:0]";
+    }
+
+    node WComp0001
+    {
+	position = (220 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp000:0]";
+    }
+
+    node WComp0000
+    {
+	position = (100 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp000:0]";
+    }
+
+    node WComp00001
+    {
+	position = (220 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp0000:0]";
+    }
+
+    node WComp00000
+    {
+	position = (100 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp0000:0]";
+    }
+
+    node NL
+    {
+	position = (1960 40);
+	states = ("Highly Enriched" "Moderately Enriched" "Natural");
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[WComp00000:0][WComp00001:0][WComp0001:0][WComp00100:0][WComp00101:0][WComp0011:0][WComp01000:0][WComp01001:0][WComp0101:0][WComp0110:0][WComp0111:0][WComp10000:0][WComp10001:0][WComp1001:0][WComp10100:0][WComp10101:0][WComp1011:0][WComp11000:0][WComp11001:0][WComp1101:0][WComp1110:0][WComp1111:0][MComp0000:0][MComp0001:0][MComp001:0][MComp010:0][MComp011:0][MComp1000:0][MComp1001:0][MComp101:0][MComp110:0][MComp111:0][SComp000:0][SComp001:0][SComp01:0][SComp100:0][SComp101:0][SComp11:0][VSComp00:0][VSComp01:0][VSComp10:0][VSComp11:0]";
+    }
+
+    node VLPalS
+    {
+	position = (8760 640);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+    }
+
+    node VLPalS1
+    {
+	position = (9720 540);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS:0]";
+    }
+
+    node VLPalS11
+    {
+	position = (10200 440);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS1:0]";
+    }
+
+    node VLPalS111
+    {
+	position = (10440 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS11:0]";
+    }
+
+    node VLPalS1111
+    {
+	position = (10560 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS111:0]";
+    }
+
+    node VLPalS1110
+    {
+	position = (10440 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS111:0]";
+    }
+
+    node VLPalS110
+    {
+	position = (10200 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS11:0]";
+    }
+
+    node VLPalS1101
+    {
+	position = (10320 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS110:0]";
+    }
+
+    node VLPalS1100
+    {
+	position = (10200 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS110:0]";
+    }
+
+    node VLPalS11001
+    {
+	position = (10320 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS1100:0]";
+    }
+
+    node VLPalS11000
+    {
+	position = (10200 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS1100:0]";
+    }
+
+    node VLPalS10
+    {
+	position = (9720 440);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS1:0]";
+    }
+
+    node VLPalS101
+    {
+	position = (9960 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS10:0]";
+    }
+
+    node VLPalS1011
+    {
+	position = (10080 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS101:0]";
+    }
+
+    node VLPalS1010
+    {
+	position = (9960 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS101:0]";
+    }
+
+    node VLPalS10101
+    {
+	position = (10080 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS1010:0]";
+    }
+
+    node VLPalS10100
+    {
+	position = (9960 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS1010:0]";
+    }
+
+    node VLPalS100
+    {
+	position = (9720 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS10:0]";
+    }
+
+    node VLPalS1001
+    {
+	position = (9840 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS100:0]";
+    }
+
+    node VLPalS1000
+    {
+	position = (9720 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS100:0]";
+    }
+
+    node VLPalS10001
+    {
+	position = (9840 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS1000:0]";
+    }
+
+    node VLPalS10000
+    {
+	position = (9720 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS1000:0]";
+    }
+
+    node VLPalS0
+    {
+	position = (8760 540);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS:0]";
+    }
+
+    node VLPalS01
+    {
+	position = (9240 440);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS0:0]";
+    }
+
+    node VLPalS011
+    {
+	position = (9480 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS01:0]";
+    }
+
+    node VLPalS0111
+    {
+	position = (9600 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS011:0]";
+    }
+
+    node VLPalS0110
+    {
+	position = (9480 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS011:0]";
+    }
+
+    node VLPalS010
+    {
+	position = (9240 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS01:0]";
+    }
+
+    node VLPalS0101
+    {
+	position = (9360 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS010:0]";
+    }
+
+    node VLPalS0100
+    {
+	position = (9240 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS010:0]";
+    }
+
+    node VLPalS01001
+    {
+	position = (9360 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS0100:0]";
+    }
+
+    node VLPalS01000
+    {
+	position = (9240 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS0100:0]";
+    }
+
+    node VLPalS00
+    {
+	position = (8760 440);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS0:0]";
+    }
+
+    node VLPalS001
+    {
+	position = (9000 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS00:0]";
+    }
+
+    node VLPalS0011
+    {
+	position = (9120 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS001:0]";
+    }
+
+    node VLPalS0010
+    {
+	position = (9000 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS001:0]";
+    }
+
+    node VLPalS00101
+    {
+	position = (9120 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS0010:0]";
+    }
+
+    node VLPalS00100
+    {
+	position = (9000 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS0010:0]";
+    }
+
+    node VLPalS000
+    {
+	position = (8760 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS00:0]";
+    }
+
+    node VLPalS0001
+    {
+	position = (8880 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS000:0]";
+    }
+
+    node VLPalS0000
+    {
+	position = (8760 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS000:0]";
+    }
+
+    node VLPalS00001
+    {
+	position = (8880 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS0000:0]";
+    }
+
+    node VLPalS00000
+    {
+	position = (8760 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalS0000:0]";
+    }
+
+    node LPalS
+    {
+	position = (8280 440);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+    }
+
+    node LPalS1
+    {
+	position = (8520 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LPalS:0]";
+    }
+
+    node LPalS11
+    {
+	position = (8640 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LPalS1:0]";
+    }
+
+    node LPalS10
+    {
+	position = (8520 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LPalS1:0]";
+    }
+
+    node LPalS0
+    {
+	position = (8280 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LPalS:0]";
+    }
+
+    node LPalS01
+    {
+	position = (8400 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LPalS0:0]";
+    }
+
+    node LPalS00
+    {
+	position = (8280 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LPalS0:0]";
+    }
+
+    node LPalS001
+    {
+	position = (8400 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LPalS00:0]";
+    }
+
+    node LPalS000
+    {
+	position = (8280 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LPalS00:0]";
+    }
+
+    node MPalS
+    {
+	position = (7800 440);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+    }
+
+    node MPalS1
+    {
+	position = (8040 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MPalS:0]";
+    }
+
+    node MPalS11
+    {
+	position = (8160 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MPalS1:0]";
+    }
+
+    node MPalS10
+    {
+	position = (8040 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MPalS1:0]";
+    }
+
+    node MPalS0
+    {
+	position = (7800 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MPalS:0]";
+    }
+
+    node MPalS01
+    {
+	position = (7920 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MPalS0:0]";
+    }
+
+    node MPalS00
+    {
+	position = (7800 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MPalS0:0]";
+    }
+
+    node MPalS001
+    {
+	position = (7920 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MPalS00:0]";
+    }
+
+    node MPalS000
+    {
+	position = (7800 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MPalS00:0]";
+    }
+
+    node HPalS
+    {
+	position = (7320 440);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+    }
+
+    node HPalS1
+    {
+	position = (7560 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[HPalS:0]";
+    }
+
+    node HPalS11
+    {
+	position = (7680 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[HPalS1:0]";
+    }
+
+    node HPalS10
+    {
+	position = (7560 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[HPalS1:0]";
+    }
+
+    node HPalS101
+    {
+	position = (7680 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[HPalS10:0]";
+    }
+
+    node HPalS100
+    {
+	position = (7560 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[HPalS10:0]";
+    }
+
+    node HPalS0
+    {
+	position = (7320 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[HPalS:0]";
+    }
+
+    node HPalS01
+    {
+	position = (7440 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[HPalS0:0]";
+    }
+
+    node HPalS00
+    {
+	position = (7320 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[HPalS0:0]";
+    }
+
+    node HPalS001
+    {
+	position = (7440 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[HPalS00:0]";
+    }
+
+    node HPalS000
+    {
+	position = (7320 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[HPalS00:0]";
+    }
+
+    node VLPalC
+    {
+	position = (5400 640);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+    }
+
+    node VLPalC1
+    {
+	position = (6360 540);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC:0]";
+    }
+
+    node VLPalC11
+    {
+	position = (6840 440);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC1:0]";
+    }
+
+    node VLPalC111
+    {
+	position = (7080 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC11:0]";
+    }
+
+    node VLPalC1111
+    {
+	position = (7200 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC111:0]";
+    }
+
+    node VLPalC1110
+    {
+	position = (7080 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC111:0]";
+    }
+
+    node VLPalC110
+    {
+	position = (6840 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC11:0]";
+    }
+
+    node VLPalC1101
+    {
+	position = (6960 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC110:0]";
+    }
+
+    node VLPalC1100
+    {
+	position = (6840 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC110:0]";
+    }
+
+    node VLPalC11001
+    {
+	position = (6960 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC1100:0]";
+    }
+
+    node VLPalC11000
+    {
+	position = (6840 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC1100:0]";
+    }
+
+    node VLPalC10
+    {
+	position = (6360 440);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC1:0]";
+    }
+
+    node VLPalC101
+    {
+	position = (6600 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC10:0]";
+    }
+
+    node VLPalC1011
+    {
+	position = (6720 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC101:0]";
+    }
+
+    node VLPalC1010
+    {
+	position = (6600 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC101:0]";
+    }
+
+    node VLPalC100
+    {
+	position = (6360 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC10:0]";
+    }
+
+    node VLPalC1001
+    {
+	position = (6480 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC100:0]";
+    }
+
+    node VLPalC1000
+    {
+	position = (6360 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC100:0]";
+    }
+
+    node VLPalC10001
+    {
+	position = (6480 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC1000:0]";
+    }
+
+    node VLPalC10000
+    {
+	position = (6360 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC1000:0]";
+    }
+
+    node VLPalC0
+    {
+	position = (5400 540);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC:0]";
+    }
+
+    node VLPalC01
+    {
+	position = (5880 440);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC0:0]";
+    }
+
+    node VLPalC011
+    {
+	position = (6120 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC01:0]";
+    }
+
+    node VLPalC0111
+    {
+	position = (6240 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC011:0]";
+    }
+
+    node VLPalC0110
+    {
+	position = (6120 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC011:0]";
+    }
+
+    node VLPalC010
+    {
+	position = (5880 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC01:0]";
+    }
+
+    node VLPalC0101
+    {
+	position = (6000 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC010:0]";
+    }
+
+    node VLPalC0100
+    {
+	position = (5880 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC010:0]";
+    }
+
+    node VLPalC01001
+    {
+	position = (6000 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC0100:0]";
+    }
+
+    node VLPalC01000
+    {
+	position = (5880 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC0100:0]";
+    }
+
+    node VLPalC00
+    {
+	position = (5400 440);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC0:0]";
+    }
+
+    node VLPalC001
+    {
+	position = (5640 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC00:0]";
+    }
+
+    node VLPalC0011
+    {
+	position = (5760 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC001:0]";
+    }
+
+    node VLPalC0010
+    {
+	position = (5640 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC001:0]";
+    }
+
+    node VLPalC00101
+    {
+	position = (5760 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC0010:0]";
+    }
+
+    node VLPalC00100
+    {
+	position = (5640 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC0010:0]";
+    }
+
+    node VLPalC000
+    {
+	position = (5400 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC00:0]";
+    }
+
+    node VLPalC0001
+    {
+	position = (5520 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC000:0]";
+    }
+
+    node VLPalC0000
+    {
+	position = (5400 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC000:0]";
+    }
+
+    node VLPalC00001
+    {
+	position = (5520 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC0000:0]";
+    }
+
+    node VLPalC00000
+    {
+	position = (5400 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[VLPalC0000:0]";
+    }
+
+    node LPalC
+    {
+	position = (4920 440);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+    }
+
+    node LPalC1
+    {
+	position = (5160 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LPalC:0]";
+    }
+
+    node LPalC11
+    {
+	position = (5280 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LPalC1:0]";
+    }
+
+    node LPalC10
+    {
+	position = (5160 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LPalC1:0]";
+    }
+
+    node LPalC101
+    {
+	position = (5280 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LPalC10:0]";
+    }
+
+    node LPalC100
+    {
+	position = (5160 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LPalC10:0]";
+    }
+
+    node LPalC0
+    {
+	position = (4920 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LPalC:0]";
+    }
+
+    node LPalC01
+    {
+	position = (5040 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LPalC0:0]";
+    }
+
+    node LPalC00
+    {
+	position = (4920 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LPalC0:0]";
+    }
+
+    node LPalC001
+    {
+	position = (5040 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LPalC00:0]";
+    }
+
+    node LPalC000
+    {
+	position = (4920 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LPalC00:0]";
+    }
+
+    node MPalC
+    {
+	position = (4440 440);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+    }
+
+    node MPalC1
+    {
+	position = (4680 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MPalC:0]";
+    }
+
+    node MPalC11
+    {
+	position = (4800 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MPalC1:0]";
+    }
+
+    node MPalC10
+    {
+	position = (4680 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MPalC1:0]";
+    }
+
+    node MPalC101
+    {
+	position = (4800 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MPalC10:0]";
+    }
+
+    node MPalC100
+    {
+	position = (4680 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MPalC10:0]";
+    }
+
+    node MPalC0
+    {
+	position = (4440 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MPalC:0]";
+    }
+
+    node MPalC01
+    {
+	position = (4560 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MPalC0:0]";
+    }
+
+    node MPalC00
+    {
+	position = (4440 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MPalC0:0]";
+    }
+
+    node MPalC001
+    {
+	position = (4560 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MPalC00:0]";
+    }
+
+    node MPalC000
+    {
+	position = (4440 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[MPalC00:0]";
+    }
+
+    node HPalC
+    {
+	position = (3940 440);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+    }
+
+    node HPalC1
+    {
+	position = (4200 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[HPalC:0]";
+    }
+
+    node HPalC11
+    {
+	position = (4320 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[HPalC1:0]";
+    }
+
+    node HPalC10
+    {
+	position = (4200 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[HPalC1:0]";
+    }
+
+    node HPalC0
+    {
+	position = (3940 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[HPalC:0]";
+    }
+
+    node HPalC01
+    {
+	position = (4080 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[HPalC0:0]";
+    }
+
+    node HPalC00
+    {
+	position = (3940 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[HPalC0:0]";
+    }
+
+    node HPalC001
+    {
+	position = (4060 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[HPalC00:0]";
+    }
+
+    node HPalC000
+    {
+	position = (3940 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[HPalC00:0]";
+    }
+
+    node Season
+    {
+	position = (7250 40);
+	states = ("Spring" "Summer" "Autumn" "Winter");
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[HPalC000:0][HPalC001:0][HPalC01:0][HPalC10:0][HPalC11:0][MPalC000:0][MPalC001:0][MPalC01:0][MPalC100:0][MPalC101:0][MPalC11:0][LPalC000:0][LPalC001:0][LPalC01:0][LPalC100:0][LPalC101:0][LPalC11:0][VLPalC00000:0][VLPalC00001:0][VLPalC0001:0][VLPalC00100:0][VLPalC00101:0][VLPalC0011:0][VLPalC01000:0][VLPalC01001:0][VLPalC0101:0][VLPalC0110:0][VLPalC0111:0][VLPalC10000:0][VLPalC10001:0][VLPalC1001:0][VLPalC1010:0][VLPalC1011:0][VLPalC11000:0][VLPalC11001:0][VLPalC1101:0][VLPalC1110:0][VLPalC1111:0][HPalS000:0][HPalS001:0][HPalS01:0][HPalS100:0][HPalS101:0][HPalS11:0][MPalS000:0][MPalS001:0][MPalS01:0][MPalS10:0][MPalS11:0][LPalS000:0][LPalS001:0][LPalS01:0][LPalS10:0][LPalS11:0][VLPalS00000:0][VLPalS00001:0][VLPalS0001:0][VLPalS00100:0][VLPalS00101:0][VLPalS0011:0][VLPalS01000:0][VLPalS01001:0][VLPalS0101:0][VLPalS0110:0][VLPalS0111:0][VLPalS10000:0][VLPalS10001:0][VLPalS1001:0][VLPalS10100:0][VLPalS10101:0][VLPalS1011:0][VLPalS11000:0][VLPalS11001:0][VLPalS1101:0][VLPalS1110:0][VLPalS1111:0]";
+    }
+
+    node TBio
+    {
+	position = (11640 540);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+    }
+
+    node BBio
+    {
+	position = (10680 440);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+    }
+
+    node BBio1
+    {
+	position = (11160 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[BBio:0]";
+    }
+
+    node BBio11
+    {
+	position = (11400 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[BBio1:0]";
+    }
+
+    node BBio110
+    {
+	position = (11400 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[BBio11:0]";
+    }
+
+    node BBio10
+    {
+	position = (11160 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[BBio1:0]";
+    }
+
+    node BBio100
+    {
+	position = (11160 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[BBio10:0]";
+    }
+
+    node BBio0
+    {
+	position = (10680 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[BBio:0]";
+    }
+
+    node BBio01
+    {
+	position = (10920 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[BBio0:0]";
+    }
+
+    node BBio010
+    {
+	position = (10920 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[BBio01:0]";
+    }
+
+    node BBio00
+    {
+	position = (10680 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[BBio0:0]";
+    }
+
+    node BBio000
+    {
+	position = (10680 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[BBio00:0]";
+    }
+
+    node DBio
+    {
+	position = (11640 440);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[TBio:0]";
+    }
+
+    node DBio1
+    {
+	position = (12600 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio:0]";
+    }
+
+    node DBio11
+    {
+	position = (13080 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio1:0]";
+    }
+
+    node DBio110
+    {
+	position = (13080 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio11:0]";
+    }
+
+    node DBio10
+    {
+	position = (12600 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio1:0]";
+    }
+
+    node DBio101
+    {
+	position = (12840 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio10:0]";
+    }
+
+    node DBio100
+    {
+	position = (12600 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio10:0]";
+    }
+
+    node DBio0
+    {
+	position = (11640 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio:0]";
+    }
+
+    node DBio01
+    {
+	position = (12120 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio0:0]";
+    }
+
+    node DBio011
+    {
+	position = (12360 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio01:0]";
+    }
+
+    node DBio010
+    {
+	position = (12120 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio01:0]";
+    }
+
+    node DBio00
+    {
+	position = (11640 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio0:0]";
+    }
+
+    node DBio001
+    {
+	position = (11880 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio00:0]";
+    }
+
+    node DBio000
+    {
+	position = (11640 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio00:0]";
+    }
+
+    node LBio
+    {
+	position = (13440 440);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[TBio:0]";
+    }
+
+    node LBio1
+    {
+	position = (14400 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio:0]";
+    }
+
+    node LBio11
+    {
+	position = (14880 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio1:0]";
+    }
+
+    node LBio110
+    {
+	position = (14880 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio11:0]";
+    }
+
+    node LBio10
+    {
+	position = (14400 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio1:0]";
+    }
+
+    node LBio101
+    {
+	position = (14640 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio10:0]";
+    }
+
+    node LBio100
+    {
+	position = (14400 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio10:0]";
+    }
+
+    node LBio0
+    {
+	position = (13440 340);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio:0]";
+    }
+
+    node LBio01
+    {
+	position = (13920 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio0:0]";
+    }
+
+    node LBio011
+    {
+	position = (14160 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio01:0]";
+    }
+
+    node LBio010
+    {
+	position = (13920 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio01:0]";
+    }
+
+    node LBio00
+    {
+	position = (13440 240);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio0:0]";
+    }
+
+    node LBio001
+    {
+	position = (13680 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio00:0]";
+    }
+
+    node LBio000
+    {
+	position = (13440 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio00:0]";
+    }
+
+    node Needle_Basal
+    {
+	position = (10680 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[BBio000:0]";
+    }
+
+    node RedLeg_Basal
+    {
+	position = (10800 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[BBio000:0]";
+    }
+
+    node BroadWeeds_Basal
+    {
+	position = (10800 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[BBio00:0]";
+    }
+
+    node Ruderals_Basal
+    {
+	position = (10920 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[BBio010:0]";
+    }
+
+    node HardyNative_Basal
+    {
+	position = (11040 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[BBio010:0]";
+    }
+
+    node Wallaby_Basal
+    {
+	position = (11040 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[BBio01:0]";
+    }
+
+    node ST_Basal
+    {
+	position = (11160 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[BBio100:0]";
+    }
+
+    node Onion_Basal
+    {
+	position = (11280 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[BBio100:0]";
+    }
+
+    node Themeda_Basal
+    {
+	position = (11280 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[BBio10:0]";
+    }
+
+    node Spear_Basal
+    {
+	position = (11400 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[BBio110:0]";
+    }
+
+    node SensitNative_Basal
+    {
+	position = (11520 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[BBio110:0]";
+    }
+
+    node Windmill_Basal
+    {
+	position = (11520 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[BBio11:0]";
+    }
+
+    node BroadWeeds_Dead
+    {
+	position = (11640 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio000:0][VLPalC0011:0][VLPalS01000:0][WComp0011:0]";
+    }
+
+    node SensitNative_Dead
+    {
+	position = (11760 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio000:0][VLPalC1011:0][VLPalS1011:0][WComp1011:0]";
+    }
+
+    node Ruderals_Dead
+    {
+	position = (11880 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio001:0][VLPalC10000:0][VLPalS10001:0][WComp10000:0]";
+    }
+
+    node HardyNative_Dead
+    {
+	position = (12000 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio001:0][VLPalC0110:0][VLPalS0111:0][WComp0101:0]";
+    }
+
+    node ExoticAnnual_Dead
+    {
+	position = (12120 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio010:0][VLPalC0101:0][VLPalS0110:0][WComp01001:0]";
+    }
+
+    node Onion_Dead
+    {
+	position = (12240 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio010:0][VLPalC1101:0][VLPalS1101:0][WComp1101:0]";
+    }
+
+    node Grain_Dead
+    {
+	position = (12360 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio011:0][VLPalC00101:0][VLPalS0011:0][WComp00101:0]";
+    }
+
+    node Spear_Dead
+    {
+	position = (12480 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio011:0][VLPalC1111:0][VLPalS1111:0][WComp1111:0]";
+    }
+
+    node ST_Dead
+    {
+	position = (12600 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio100:0][VLPalC00001:0][VLPalS0001:0][WComp00000:0]";
+    }
+
+    node Windmill_Dead
+    {
+	position = (12720 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio100:0][VLPalC10001:0][VLPalS1001:0][WComp1001:0]";
+    }
+
+    node Blanket_Dead
+    {
+	position = (12840 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio101:0][VLPalC11000:0][VLPalS11000:0][WComp11000:0]";
+    }
+
+    node Wallaby_Dead
+    {
+	position = (12960 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio101:0][VLPalC1010:0][VLPalS10101:0][WComp10101:0]";
+    }
+
+    node Needle_Dead
+    {
+	position = (13080 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio110:0][VLPalC0111:0][VLPalS10000:0][WComp0111:0]";
+    }
+
+    node RedLeg_Dead
+    {
+	position = (13200 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio110:0][VLPalC1001:0][VLPalS10100:0][WComp10100:0]";
+    }
+
+    node Themeda_Dead
+    {
+	position = (13320 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[DBio11:0][VLPalC00100:0][VLPalS00101:0][WComp00100:0]";
+    }
+
+    node ExoticAnnual_Cover
+    {
+	position = (13440 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio000:0][HPalC01:0][MPalC01:0][VLPalC0001:0][HPalS01:0][MPalS001:0][VLPalS00100:0][WComp00001:0][MComp011:0]";
+    }
+
+    node Blanket_Cover
+    {
+	position = (13560 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio000:0][MPalC001:0][LPalC01:0][VLPalS00001:0][SComp01:0][VSComp00:0]";
+    }
+
+    node Onion_Cover
+    {
+	position = (13680 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio001:0][VLPalC11001:0][VLPalS11001:0][WComp11001:0][MComp1001:0][SComp101:0]";
+    }
+
+    node Themeda_Cover
+    {
+	position = (13800 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio001:0][MPalC101:0][HPalS101:0][MPalS10:0][WComp1110:0][MComp101:0][VSComp11:0]";
+    }
+
+    node Needle_Cover
+    {
+	position = (13920 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio010:0][LPalC101:0][VLPalC01000:0][LPalS10:0][VLPalS01001:0][VSComp10:0]";
+    }
+
+    node Spear_Cover
+    {
+	position = (14040 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio010:0][LPalC100:0][LPalS01:0][MComp1000:0][SComp100:0]";
+    }
+
+    node ST_Cover
+    {
+	position = (14160 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio011:0][VLPalC01001:0][VLPalS0101:0][VSComp01:0]";
+    }
+
+    node Ruderals_Cover
+    {
+	position = (14280 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio011:0][LPalC001:0][LPalS001:0][WComp10001:0]";
+    }
+
+    node Wallaby_Cover
+    {
+	position = (14400 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio100:0][HPalC000:0][HPalS000:0][MComp001:0]";
+    }
+
+    node Windmill_Cover
+    {
+	position = (14520 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio100:0][HPalC10:0][MPalC100:0][HPalS100:0][MPalS01:0][WComp01000:0]";
+    }
+
+    node RedLeg_Cover
+    {
+	position = (14640 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio101:0][MPalC000:0][LPalC000:0][MPalS000:0][LPalS000:0][MComp0000:0][SComp000:0]";
+    }
+
+    node SensitNative_Cover
+    {
+	position = (14760 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio101:0][HPalC001:0][HPalS001:0][WComp0001:0][MComp010:0]";
+    }
+
+    node BroadWeeds_Cover
+    {
+	position = (14880 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio110:0][VLPalC00000:0][VLPalS00000:0][MComp0001:0][SComp001:0]";
+    }
+
+    node Grain_Cover
+    {
+	position = (15000 40);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio110:0][HPalC11:0][MPalC11:0][VLPalC1110:0][HPalS11:0][MPalS11:0][VLPalS1110:0][MComp111:0]";
+    }
+
+    node HardyNative_Cover
+    {
+	position = (15020 140);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[LBio11:0][LPalC11:0][LPalS11:0][WComp0110:0][MComp110:0][SComp11:0]";
+    }
+
+    potential (VSComp | VSComp1 VSComp0)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VSComp0 + VSComp1 - VSComp0 * VSComp1 / 100)) );
+    }
+
+    potential (VSComp1 | VSComp11 VSComp10)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VSComp10 + VSComp11 - VSComp10 * VSComp11 / 100)) );
+    }
+
+    potential (VSComp11 | Themeda_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( 0,
+			0,
+			Themeda_Cover );
+    }
+
+    potential (VSComp10 | Needle_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( Needle_Cover,
+			Needle_Cover,
+			Needle_Cover );
+    }
+
+    potential (VSComp0 | VSComp01 VSComp00)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VSComp00 + VSComp01 - VSComp00 * VSComp01 / 100)) );
+    }
+
+    potential (VSComp01 | ST_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( ST_Cover,
+			ST_Cover,
+			ST_Cover );
+    }
+
+    potential (VSComp00 | Blanket_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( Blanket_Cover,
+			Blanket_Cover,
+			0 );
+    }
+
+    potential (SComp | SComp1 SComp0)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, SComp0 + SComp1 - SComp0 * SComp1 / 100)) );
+    }
+
+    potential (SComp1 | SComp11 SComp10)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, SComp10 + SComp11 - SComp10 * SComp11 / 100)) );
+    }
+
+    potential (SComp11 | HardyNative_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( 0,
+			0,
+			HardyNative_Cover );
+    }
+
+    potential (SComp10 | SComp101 SComp100)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, SComp100 + SComp101 - SComp100 * SComp101 / 100)) );
+    }
+
+    potential (SComp101 | Onion_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( 0,
+			0,
+			Onion_Cover );
+    }
+
+    potential (SComp100 | Spear_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( 0,
+			Spear_Cover,
+			Spear_Cover );
+    }
+
+    potential (SComp0 | SComp01 SComp00)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, SComp00 + SComp01 - SComp00 * SComp01 / 100)) );
+    }
+
+    potential (SComp01 | Blanket_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( 0,
+			0,
+			Blanket_Cover );
+    }
+
+    potential (SComp00 | SComp001 SComp000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, SComp000 + SComp001 - SComp000 * SComp001 / 100)) );
+    }
+
+    potential (SComp001 | BroadWeeds_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( BroadWeeds_Cover,
+			BroadWeeds_Cover,
+			0 );
+    }
+
+    potential (SComp000 | RedLeg_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( 0,
+			RedLeg_Cover,
+			RedLeg_Cover );
+    }
+
+    potential (MComp | MComp1 MComp0)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, MComp0 + MComp1 - MComp0 * MComp1 / 100)) );
+    }
+
+    potential (MComp1 | MComp11 MComp10)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, MComp10 + MComp11 - MComp10 * MComp11 / 100)) );
+    }
+
+    potential (MComp11 | MComp111 MComp110)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, MComp110 + MComp111 - MComp110 * MComp111 / 100)) );
+    }
+
+    potential (MComp111 | Grain_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( Grain_Cover,
+			0,
+			0 );
+    }
+
+    potential (MComp110 | HardyNative_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( 0,
+			HardyNative_Cover,
+			0 );
+    }
+
+    potential (MComp10 | MComp101 MComp100)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, MComp100 + MComp101 - MComp100 * MComp101 / 100)) );
+    }
+
+    potential (MComp101 | Themeda_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( 0,
+			Themeda_Cover,
+			0 );
+    }
+
+    potential (MComp100 | MComp1001 MComp1000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, MComp1000 + MComp1001 - MComp1000 * MComp1001 / 100)) );
+    }
+
+    potential (MComp1001 | Onion_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( 0,
+			Onion_Cover,
+			0 );
+    }
+
+    potential (MComp1000 | Spear_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( Spear_Cover,
+			0,
+			0 );
+    }
+
+    potential (MComp0 | MComp01 MComp00)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, MComp00 + MComp01 - MComp00 * MComp01 / 100)) );
+    }
+
+    potential (MComp01 | MComp011 MComp010)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, MComp010 + MComp011 - MComp010 * MComp011 / 100)) );
+    }
+
+    potential (MComp011 | ExoticAnnual_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( ExoticAnnual_Cover,
+			0,
+			0 );
+    }
+
+    potential (MComp010 | SensitNative_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( 0,
+			0,
+			SensitNative_Cover );
+    }
+
+    potential (MComp00 | MComp001 MComp000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, MComp000 + MComp001 - MComp000 * MComp001 / 100)) );
+    }
+
+    potential (MComp001 | Wallaby_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( Wallaby_Cover,
+			Wallaby_Cover,
+			Wallaby_Cover );
+    }
+
+    potential (MComp000 | MComp0001 MComp0000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, MComp0000 + MComp0001 - MComp0000 * MComp0001 / 100)) );
+    }
+
+    potential (MComp0001 | BroadWeeds_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( 0,
+			0,
+			BroadWeeds_Cover );
+    }
+
+    potential (MComp0000 | RedLeg_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( RedLeg_Cover,
+			0,
+			0 );
+    }
+
+    potential (WComp | WComp1 WComp0)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, WComp0 + WComp1 - WComp0 * WComp1 / 100)) );
+    }
+
+    potential (WComp1 | WComp11 WComp10)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, WComp10 + WComp11 - WComp10 * WComp11 / 100)) );
+    }
+
+    potential (WComp11 | WComp111 WComp110)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, WComp110 + WComp111 - WComp110 * WComp111 / 100)) );
+    }
+
+    potential (WComp111 | WComp1111 WComp1110)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, WComp1110 + WComp1111 - WComp1110 * WComp1111 / 100)) );
+    }
+
+    potential (WComp1111 | Spear_Dead NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( Spear_Dead,
+			Spear_Dead,
+			Spear_Dead );
+    }
+
+    potential (WComp1110 | Themeda_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( Themeda_Cover,
+			0,
+			0 );
+    }
+
+    potential (WComp110 | WComp1101 WComp1100)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, WComp1100 + WComp1101 - WComp1100 * WComp1101 / 100)) );
+    }
+
+    potential (WComp1101 | Onion_Dead NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( Onion_Dead,
+			Onion_Dead,
+			Onion_Dead );
+    }
+
+    potential (WComp1100 | WComp11001 WComp11000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, WComp11000 + WComp11001 - WComp11000 * WComp11001 / 100)) );
+    }
+
+    potential (WComp11001 | Onion_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( Onion_Cover,
+			0,
+			0 );
+    }
+
+    potential (WComp11000 | Blanket_Dead NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( Blanket_Dead,
+			Blanket_Dead,
+			Blanket_Dead );
+    }
+
+    potential (WComp10 | WComp101 WComp100)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, WComp100 + WComp101 - WComp100 * WComp101 / 100)) );
+    }
+
+    potential (WComp101 | WComp1011 WComp1010)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, WComp1010 + WComp1011 - WComp1010 * WComp1011 / 100)) );
+    }
+
+    potential (WComp1011 | SensitNative_Dead NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( SensitNative_Dead,
+			SensitNative_Dead,
+			SensitNative_Dead );
+    }
+
+    potential (WComp1010 | WComp10101 WComp10100)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, WComp10100 + WComp10101 - WComp10100 * WComp10101 / 100)) );
+    }
+
+    potential (WComp10101 | Wallaby_Dead NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( Wallaby_Dead,
+			Wallaby_Dead,
+			Wallaby_Dead );
+    }
+
+    potential (WComp10100 | RedLeg_Dead NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( RedLeg_Dead,
+			RedLeg_Dead,
+			RedLeg_Dead );
+    }
+
+    potential (WComp100 | WComp1001 WComp1000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, WComp1000 + WComp1001 - WComp1000 * WComp1001 / 100)) );
+    }
+
+    potential (WComp1001 | Windmill_Dead NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( Windmill_Dead,
+			Windmill_Dead,
+			Windmill_Dead );
+    }
+
+    potential (WComp1000 | WComp10001 WComp10000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, WComp10000 + WComp10001 - WComp10000 * WComp10001 / 100)) );
+    }
+
+    potential (WComp10001 | Ruderals_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( Ruderals_Cover,
+			Ruderals_Cover,
+			Ruderals_Cover );
+    }
+
+    potential (WComp10000 | Ruderals_Dead NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( Ruderals_Dead,
+			Ruderals_Dead,
+			Ruderals_Dead );
+    }
+
+    potential (WComp0 | WComp01 WComp00)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, WComp00 + WComp01 - WComp00 * WComp01 / 100)) );
+    }
+
+    potential (WComp01 | WComp011 WComp010)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, WComp010 + WComp011 - WComp010 * WComp011 / 100)) );
+    }
+
+    potential (WComp011 | WComp0111 WComp0110)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, WComp0110 + WComp0111 - WComp0110 * WComp0111 / 100)) );
+    }
+
+    potential (WComp0111 | Needle_Dead NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( Needle_Dead,
+			Needle_Dead,
+			Needle_Dead );
+    }
+
+    potential (WComp0110 | HardyNative_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( HardyNative_Cover,
+			0,
+			0 );
+    }
+
+    potential (WComp010 | WComp0101 WComp0100)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, WComp0100 + WComp0101 - WComp0100 * WComp0101 / 100)) );
+    }
+
+    potential (WComp0101 | HardyNative_Dead NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( HardyNative_Dead,
+			HardyNative_Dead,
+			HardyNative_Dead );
+    }
+
+    potential (WComp0100 | WComp01001 WComp01000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, WComp01000 + WComp01001 - WComp01000 * WComp01001 / 100)) );
+    }
+
+    potential (WComp01001 | ExoticAnnual_Dead NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( ExoticAnnual_Dead,
+			ExoticAnnual_Dead,
+			ExoticAnnual_Dead );
+    }
+
+    potential (WComp01000 | Windmill_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( Windmill_Cover,
+			Windmill_Cover,
+			Windmill_Cover );
+    }
+
+    potential (WComp00 | WComp001 WComp000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, WComp000 + WComp001 - WComp000 * WComp001 / 100)) );
+    }
+
+    potential (WComp001 | WComp0011 WComp0010)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, WComp0010 + WComp0011 - WComp0010 * WComp0011 / 100)) );
+    }
+
+    potential (WComp0011 | BroadWeeds_Dead NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( BroadWeeds_Dead,
+			BroadWeeds_Dead,
+			BroadWeeds_Dead );
+    }
+
+    potential (WComp0010 | WComp00101 WComp00100)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, WComp00100 + WComp00101 - WComp00100 * WComp00101 / 100)) );
+    }
+
+    potential (WComp00101 | Grain_Dead NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( Grain_Dead,
+			Grain_Dead,
+			Grain_Dead );
+    }
+
+    potential (WComp00100 | Themeda_Dead NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( Themeda_Dead,
+			Themeda_Dead,
+			Themeda_Dead );
+    }
+
+    potential (WComp000 | WComp0001 WComp0000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, WComp0000 + WComp0001 - WComp0000 * WComp0001 / 100)) );
+    }
+
+    potential (WComp0001 | SensitNative_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( 0,
+			SensitNative_Cover,
+			0 );
+    }
+
+    potential (WComp0000 | WComp00001 WComp00000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, WComp00000 + WComp00001 - WComp00000 * WComp00001 / 100)) );
+    }
+
+    potential (WComp00001 | ExoticAnnual_Cover NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( 0,
+			ExoticAnnual_Cover,
+			ExoticAnnual_Cover );
+    }
+
+    potential (WComp00000 | ST_Dead NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( ST_Dead,
+			ST_Dead,
+			ST_Dead );
+    }
+
+    potential (NL)
+    {
+	data = ( 1 1 1 );
+    }
+
+    potential (VLPalS | VLPalS1 VLPalS0)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalS0 + VLPalS1 - VLPalS0 * VLPalS1 / 100)) );
+    }
+
+    potential (VLPalS1 | VLPalS11 VLPalS10)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalS10 + VLPalS11 - VLPalS10 * VLPalS11 / 100)) );
+    }
+
+    potential (VLPalS11 | VLPalS111 VLPalS110)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalS110 + VLPalS111 - VLPalS110 * VLPalS111 / 100)) );
+    }
+
+    potential (VLPalS111 | VLPalS1111 VLPalS1110)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalS1110 + VLPalS1111 - VLPalS1110 * VLPalS1111 / 100)) );
+    }
+
+    potential (VLPalS1111 | Spear_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Spear_Dead,
+			Spear_Dead,
+			Spear_Dead,
+			Spear_Dead );
+    }
+
+    potential (VLPalS1110 | Grain_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( 0,
+			Grain_Cover,
+			Grain_Cover,
+			0 );
+    }
+
+    potential (VLPalS110 | VLPalS1101 VLPalS1100)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalS1100 + VLPalS1101 - VLPalS1100 * VLPalS1101 / 100)) );
+    }
+
+    potential (VLPalS1101 | Onion_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Onion_Dead,
+			Onion_Dead,
+			Onion_Dead,
+			Onion_Dead );
+    }
+
+    potential (VLPalS1100 | VLPalS11001 VLPalS11000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalS11000 + VLPalS11001 - VLPalS11000 * VLPalS11001 / 100)) );
+    }
+
+    potential (VLPalS11001 | Onion_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Onion_Cover,
+			Onion_Cover,
+			Onion_Cover,
+			Onion_Cover );
+    }
+
+    potential (VLPalS11000 | Blanket_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Blanket_Dead,
+			Blanket_Dead,
+			Blanket_Dead,
+			Blanket_Dead );
+    }
+
+    potential (VLPalS10 | VLPalS101 VLPalS100)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalS100 + VLPalS101 - VLPalS100 * VLPalS101 / 100)) );
+    }
+
+    potential (VLPalS101 | VLPalS1011 VLPalS1010)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalS1010 + VLPalS1011 - VLPalS1010 * VLPalS1011 / 100)) );
+    }
+
+    potential (VLPalS1011 | SensitNative_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( SensitNative_Dead,
+			SensitNative_Dead,
+			SensitNative_Dead,
+			SensitNative_Dead );
+    }
+
+    potential (VLPalS1010 | VLPalS10101 VLPalS10100)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalS10100 + VLPalS10101 - VLPalS10100 * VLPalS10101 / 100)) );
+    }
+
+    potential (VLPalS10101 | Wallaby_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Wallaby_Dead,
+			Wallaby_Dead,
+			Wallaby_Dead,
+			Wallaby_Dead );
+    }
+
+    potential (VLPalS10100 | RedLeg_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( RedLeg_Dead,
+			RedLeg_Dead,
+			RedLeg_Dead,
+			RedLeg_Dead );
+    }
+
+    potential (VLPalS100 | VLPalS1001 VLPalS1000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalS1000 + VLPalS1001 - VLPalS1000 * VLPalS1001 / 100)) );
+    }
+
+    potential (VLPalS1001 | Windmill_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Windmill_Dead,
+			Windmill_Dead,
+			Windmill_Dead,
+			Windmill_Dead );
+    }
+
+    potential (VLPalS1000 | VLPalS10001 VLPalS10000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalS10000 + VLPalS10001 - VLPalS10000 * VLPalS10001 / 100)) );
+    }
+
+    potential (VLPalS10001 | Ruderals_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Ruderals_Dead,
+			Ruderals_Dead,
+			Ruderals_Dead,
+			Ruderals_Dead );
+    }
+
+    potential (VLPalS10000 | Needle_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Needle_Dead,
+			Needle_Dead,
+			Needle_Dead,
+			Needle_Dead );
+    }
+
+    potential (VLPalS0 | VLPalS01 VLPalS00)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalS00 + VLPalS01 - VLPalS00 * VLPalS01 / 100)) );
+    }
+
+    potential (VLPalS01 | VLPalS011 VLPalS010)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalS010 + VLPalS011 - VLPalS010 * VLPalS011 / 100)) );
+    }
+
+    potential (VLPalS011 | VLPalS0111 VLPalS0110)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalS0110 + VLPalS0111 - VLPalS0110 * VLPalS0111 / 100)) );
+    }
+
+    potential (VLPalS0111 | HardyNative_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( HardyNative_Dead,
+			HardyNative_Dead,
+			HardyNative_Dead,
+			HardyNative_Dead );
+    }
+
+    potential (VLPalS0110 | ExoticAnnual_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( ExoticAnnual_Dead,
+			ExoticAnnual_Dead,
+			ExoticAnnual_Dead,
+			ExoticAnnual_Dead );
+    }
+
+    potential (VLPalS010 | VLPalS0101 VLPalS0100)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalS0100 + VLPalS0101 - VLPalS0100 * VLPalS0101 / 100)) );
+    }
+
+    potential (VLPalS0101 | ST_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( ST_Cover,
+			ST_Cover,
+			ST_Cover,
+			ST_Cover );
+    }
+
+    potential (VLPalS0100 | VLPalS01001 VLPalS01000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalS01000 + VLPalS01001 - VLPalS01000 * VLPalS01001 / 100)) );
+    }
+
+    potential (VLPalS01001 | Needle_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Needle_Cover,
+			Needle_Cover,
+			0,
+			0 );
+    }
+
+    potential (VLPalS01000 | BroadWeeds_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( BroadWeeds_Dead,
+			BroadWeeds_Dead,
+			BroadWeeds_Dead,
+			BroadWeeds_Dead );
+    }
+
+    potential (VLPalS00 | VLPalS001 VLPalS000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalS000 + VLPalS001 - VLPalS000 * VLPalS001 / 100)) );
+    }
+
+    potential (VLPalS001 | VLPalS0011 VLPalS0010)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalS0010 + VLPalS0011 - VLPalS0010 * VLPalS0011 / 100)) );
+    }
+
+    potential (VLPalS0011 | Grain_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Grain_Dead,
+			Grain_Dead,
+			Grain_Dead,
+			Grain_Dead );
+    }
+
+    potential (VLPalS0010 | VLPalS00101 VLPalS00100)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalS00100 + VLPalS00101 - VLPalS00100 * VLPalS00101 / 100)) );
+    }
+
+    potential (VLPalS00101 | Themeda_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Themeda_Dead,
+			Themeda_Dead,
+			Themeda_Dead,
+			Themeda_Dead );
+    }
+
+    potential (VLPalS00100 | ExoticAnnual_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( 0,
+			ExoticAnnual_Cover,
+			ExoticAnnual_Cover,
+			0 );
+    }
+
+    potential (VLPalS000 | VLPalS0001 VLPalS0000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalS0000 + VLPalS0001 - VLPalS0000 * VLPalS0001 / 100)) );
+    }
+
+    potential (VLPalS0001 | ST_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( ST_Dead,
+			ST_Dead,
+			ST_Dead,
+			ST_Dead );
+    }
+
+    potential (VLPalS0000 | VLPalS00001 VLPalS00000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalS00000 + VLPalS00001 - VLPalS00000 * VLPalS00001 / 100)) );
+    }
+
+    potential (VLPalS00001 | Blanket_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Blanket_Cover,
+			Blanket_Cover,
+			Blanket_Cover,
+			Blanket_Cover );
+    }
+
+    potential (VLPalS00000 | BroadWeeds_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( BroadWeeds_Cover,
+			BroadWeeds_Cover,
+			BroadWeeds_Cover,
+			BroadWeeds_Cover );
+    }
+
+    potential (LPalS | LPalS1 LPalS0)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, LPalS0 + LPalS1 - LPalS0 * LPalS1 / 100)) );
+    }
+
+    potential (LPalS1 | LPalS11 LPalS10)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, LPalS10 + LPalS11 - LPalS10 * LPalS11 / 100)) );
+    }
+
+    potential (LPalS11 | HardyNative_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( HardyNative_Cover,
+			HardyNative_Cover,
+			HardyNative_Cover,
+			HardyNative_Cover );
+    }
+
+    potential (LPalS10 | Needle_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( 0,
+			0,
+			Needle_Cover,
+			Needle_Cover );
+    }
+
+    potential (LPalS0 | LPalS01 LPalS00)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, LPalS00 + LPalS01 - LPalS00 * LPalS01 / 100)) );
+    }
+
+    potential (LPalS01 | Spear_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Spear_Cover,
+			Spear_Cover,
+			Spear_Cover,
+			Spear_Cover );
+    }
+
+    potential (LPalS00 | LPalS001 LPalS000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, LPalS000 + LPalS001 - LPalS000 * LPalS001 / 100)) );
+    }
+
+    potential (LPalS001 | Ruderals_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Ruderals_Cover,
+			Ruderals_Cover,
+			Ruderals_Cover,
+			Ruderals_Cover );
+    }
+
+    potential (LPalS000 | RedLeg_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( RedLeg_Cover,
+			0,
+			RedLeg_Cover,
+			RedLeg_Cover );
+    }
+
+    potential (MPalS | MPalS1 MPalS0)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, MPalS0 + MPalS1 - MPalS0 * MPalS1 / 100)) );
+    }
+
+    potential (MPalS1 | MPalS11 MPalS10)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, MPalS10 + MPalS11 - MPalS10 * MPalS11 / 100)) );
+    }
+
+    potential (MPalS11 | Grain_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Grain_Cover,
+			0,
+			0,
+			0 );
+    }
+
+    potential (MPalS10 | Themeda_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( 0,
+			0,
+			Themeda_Cover,
+			Themeda_Cover );
+    }
+
+    potential (MPalS0 | MPalS01 MPalS00)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, MPalS00 + MPalS01 - MPalS00 * MPalS01 / 100)) );
+    }
+
+    potential (MPalS01 | Windmill_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( 0,
+			Windmill_Cover,
+			0,
+			0 );
+    }
+
+    potential (MPalS00 | MPalS001 MPalS000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, MPalS000 + MPalS001 - MPalS000 * MPalS001 / 100)) );
+    }
+
+    potential (MPalS001 | ExoticAnnual_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( ExoticAnnual_Cover,
+			0,
+			0,
+			0 );
+    }
+
+    potential (MPalS000 | RedLeg_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( 0,
+			RedLeg_Cover,
+			0,
+			0 );
+    }
+
+    potential (HPalS | HPalS1 HPalS0)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, HPalS0 + HPalS1 - HPalS0 * HPalS1 / 100)) );
+    }
+
+    potential (HPalS1 | HPalS11 HPalS10)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, HPalS10 + HPalS11 - HPalS10 * HPalS11 / 100)) );
+    }
+
+    potential (HPalS11 | Grain_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( 0,
+			0,
+			0,
+			Grain_Cover );
+    }
+
+    potential (HPalS10 | HPalS101 HPalS100)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, HPalS100 + HPalS101 - HPalS100 * HPalS101 / 100)) );
+    }
+
+    potential (HPalS101 | Themeda_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Themeda_Cover,
+			Themeda_Cover,
+			0,
+			0 );
+    }
+
+    potential (HPalS100 | Windmill_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Windmill_Cover,
+			0,
+			Windmill_Cover,
+			Windmill_Cover );
+    }
+
+    potential (HPalS0 | HPalS01 HPalS00)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, HPalS00 + HPalS01 - HPalS00 * HPalS01 / 100)) );
+    }
+
+    potential (HPalS01 | ExoticAnnual_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( 0,
+			0,
+			0,
+			ExoticAnnual_Cover );
+    }
+
+    potential (HPalS00 | HPalS001 HPalS000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, HPalS000 + HPalS001 - HPalS000 * HPalS001 / 100)) );
+    }
+
+    potential (HPalS001 | SensitNative_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( SensitNative_Cover,
+			SensitNative_Cover,
+			SensitNative_Cover,
+			SensitNative_Cover );
+    }
+
+    potential (HPalS000 | Wallaby_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Wallaby_Cover,
+			Wallaby_Cover,
+			Wallaby_Cover,
+			Wallaby_Cover );
+    }
+
+    potential (VLPalC | VLPalC1 VLPalC0)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalC0 + VLPalC1 - VLPalC0 * VLPalC1 / 100)) );
+    }
+
+    potential (VLPalC1 | VLPalC11 VLPalC10)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalC10 + VLPalC11 - VLPalC10 * VLPalC11 / 100)) );
+    }
+
+    potential (VLPalC11 | VLPalC111 VLPalC110)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalC110 + VLPalC111 - VLPalC110 * VLPalC111 / 100)) );
+    }
+
+    potential (VLPalC111 | VLPalC1111 VLPalC1110)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalC1110 + VLPalC1111 - VLPalC1110 * VLPalC1111 / 100)) );
+    }
+
+    potential (VLPalC1111 | Spear_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Spear_Dead,
+			Spear_Dead,
+			Spear_Dead,
+			Spear_Dead );
+    }
+
+    potential (VLPalC1110 | Grain_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( 0,
+			Grain_Cover,
+			Grain_Cover,
+			0 );
+    }
+
+    potential (VLPalC110 | VLPalC1101 VLPalC1100)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalC1100 + VLPalC1101 - VLPalC1100 * VLPalC1101 / 100)) );
+    }
+
+    potential (VLPalC1101 | Onion_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Onion_Dead,
+			Onion_Dead,
+			Onion_Dead,
+			Onion_Dead );
+    }
+
+    potential (VLPalC1100 | VLPalC11001 VLPalC11000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalC11000 + VLPalC11001 - VLPalC11000 * VLPalC11001 / 100)) );
+    }
+
+    potential (VLPalC11001 | Onion_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Onion_Cover,
+			Onion_Cover,
+			Onion_Cover,
+			Onion_Cover );
+    }
+
+    potential (VLPalC11000 | Blanket_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Blanket_Dead,
+			Blanket_Dead,
+			Blanket_Dead,
+			Blanket_Dead );
+    }
+
+    potential (VLPalC10 | VLPalC101 VLPalC100)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalC100 + VLPalC101 - VLPalC100 * VLPalC101 / 100)) );
+    }
+
+    potential (VLPalC101 | VLPalC1011 VLPalC1010)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalC1010 + VLPalC1011 - VLPalC1010 * VLPalC1011 / 100)) );
+    }
+
+    potential (VLPalC1011 | SensitNative_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( SensitNative_Dead,
+			SensitNative_Dead,
+			SensitNative_Dead,
+			SensitNative_Dead );
+    }
+
+    potential (VLPalC1010 | Wallaby_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Wallaby_Dead,
+			Wallaby_Dead,
+			Wallaby_Dead,
+			Wallaby_Dead );
+    }
+
+    potential (VLPalC100 | VLPalC1001 VLPalC1000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalC1000 + VLPalC1001 - VLPalC1000 * VLPalC1001 / 100)) );
+    }
+
+    potential (VLPalC1001 | RedLeg_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( RedLeg_Dead,
+			RedLeg_Dead,
+			RedLeg_Dead,
+			RedLeg_Dead );
+    }
+
+    potential (VLPalC1000 | VLPalC10001 VLPalC10000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalC10000 + VLPalC10001 - VLPalC10000 * VLPalC10001 / 100)) );
+    }
+
+    potential (VLPalC10001 | Windmill_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Windmill_Dead,
+			Windmill_Dead,
+			Windmill_Dead,
+			Windmill_Dead );
+    }
+
+    potential (VLPalC10000 | Ruderals_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Ruderals_Dead,
+			Ruderals_Dead,
+			Ruderals_Dead,
+			Ruderals_Dead );
+    }
+
+    potential (VLPalC0 | VLPalC01 VLPalC00)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalC00 + VLPalC01 - VLPalC00 * VLPalC01 / 100)) );
+    }
+
+    potential (VLPalC01 | VLPalC011 VLPalC010)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalC010 + VLPalC011 - VLPalC010 * VLPalC011 / 100)) );
+    }
+
+    potential (VLPalC011 | VLPalC0111 VLPalC0110)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalC0110 + VLPalC0111 - VLPalC0110 * VLPalC0111 / 100)) );
+    }
+
+    potential (VLPalC0111 | Needle_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Needle_Dead,
+			Needle_Dead,
+			Needle_Dead,
+			Needle_Dead );
+    }
+
+    potential (VLPalC0110 | HardyNative_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( HardyNative_Dead,
+			HardyNative_Dead,
+			HardyNative_Dead,
+			HardyNative_Dead );
+    }
+
+    potential (VLPalC010 | VLPalC0101 VLPalC0100)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalC0100 + VLPalC0101 - VLPalC0100 * VLPalC0101 / 100)) );
+    }
+
+    potential (VLPalC0101 | ExoticAnnual_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( ExoticAnnual_Dead,
+			ExoticAnnual_Dead,
+			ExoticAnnual_Dead,
+			ExoticAnnual_Dead );
+    }
+
+    potential (VLPalC0100 | VLPalC01001 VLPalC01000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalC01000 + VLPalC01001 - VLPalC01000 * VLPalC01001 / 100)) );
+    }
+
+    potential (VLPalC01001 | ST_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( ST_Cover,
+			ST_Cover,
+			ST_Cover,
+			ST_Cover );
+    }
+
+    potential (VLPalC01000 | Needle_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Needle_Cover,
+			Needle_Cover,
+			0,
+			0 );
+    }
+
+    potential (VLPalC00 | VLPalC001 VLPalC000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalC000 + VLPalC001 - VLPalC000 * VLPalC001 / 100)) );
+    }
+
+    potential (VLPalC001 | VLPalC0011 VLPalC0010)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalC0010 + VLPalC0011 - VLPalC0010 * VLPalC0011 / 100)) );
+    }
+
+    potential (VLPalC0011 | BroadWeeds_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( BroadWeeds_Dead,
+			BroadWeeds_Dead,
+			BroadWeeds_Dead,
+			BroadWeeds_Dead );
+    }
+
+    potential (VLPalC0010 | VLPalC00101 VLPalC00100)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalC00100 + VLPalC00101 - VLPalC00100 * VLPalC00101 / 100)) );
+    }
+
+    potential (VLPalC00101 | Grain_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Grain_Dead,
+			Grain_Dead,
+			Grain_Dead,
+			Grain_Dead );
+    }
+
+    potential (VLPalC00100 | Themeda_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Themeda_Dead,
+			Themeda_Dead,
+			Themeda_Dead,
+			Themeda_Dead );
+    }
+
+    potential (VLPalC000 | VLPalC0001 VLPalC0000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalC0000 + VLPalC0001 - VLPalC0000 * VLPalC0001 / 100)) );
+    }
+
+    potential (VLPalC0001 | ExoticAnnual_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( 0,
+			ExoticAnnual_Cover,
+			ExoticAnnual_Cover,
+			0 );
+    }
+
+    potential (VLPalC0000 | VLPalC00001 VLPalC00000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, VLPalC00000 + VLPalC00001 - VLPalC00000 * VLPalC00001 / 100)) );
+    }
+
+    potential (VLPalC00001 | ST_Dead Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( ST_Dead,
+			ST_Dead,
+			ST_Dead,
+			ST_Dead );
+    }
+
+    potential (VLPalC00000 | BroadWeeds_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( BroadWeeds_Cover,
+			BroadWeeds_Cover,
+			BroadWeeds_Cover,
+			BroadWeeds_Cover );
+    }
+
+    potential (LPalC | LPalC1 LPalC0)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, LPalC0 + LPalC1 - LPalC0 * LPalC1 / 100)) );
+    }
+
+    potential (LPalC1 | LPalC11 LPalC10)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, LPalC10 + LPalC11 - LPalC10 * LPalC11 / 100)) );
+    }
+
+    potential (LPalC11 | HardyNative_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( HardyNative_Cover,
+			HardyNative_Cover,
+			HardyNative_Cover,
+			HardyNative_Cover );
+    }
+
+    potential (LPalC10 | LPalC101 LPalC100)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, LPalC100 + LPalC101 - LPalC100 * LPalC101 / 100)) );
+    }
+
+    potential (LPalC101 | Needle_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( 0,
+			0,
+			Needle_Cover,
+			Needle_Cover );
+    }
+
+    potential (LPalC100 | Spear_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Spear_Cover,
+			Spear_Cover,
+			Spear_Cover,
+			Spear_Cover );
+    }
+
+    potential (LPalC0 | LPalC01 LPalC00)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, LPalC00 + LPalC01 - LPalC00 * LPalC01 / 100)) );
+    }
+
+    potential (LPalC01 | Blanket_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Blanket_Cover,
+			0,
+			0,
+			Blanket_Cover );
+    }
+
+    potential (LPalC00 | LPalC001 LPalC000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, LPalC000 + LPalC001 - LPalC000 * LPalC001 / 100)) );
+    }
+
+    potential (LPalC001 | Ruderals_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Ruderals_Cover,
+			Ruderals_Cover,
+			Ruderals_Cover,
+			Ruderals_Cover );
+    }
+
+    potential (LPalC000 | RedLeg_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( RedLeg_Cover,
+			0,
+			RedLeg_Cover,
+			RedLeg_Cover );
+    }
+
+    potential (MPalC | MPalC1 MPalC0)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, MPalC0 + MPalC1 - MPalC0 * MPalC1 / 100)) );
+    }
+
+    potential (MPalC1 | MPalC11 MPalC10)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, MPalC10 + MPalC11 - MPalC10 * MPalC11 / 100)) );
+    }
+
+    potential (MPalC11 | Grain_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Grain_Cover,
+			0,
+			0,
+			0 );
+    }
+
+    potential (MPalC10 | MPalC101 MPalC100)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, MPalC100 + MPalC101 - MPalC100 * MPalC101 / 100)) );
+    }
+
+    potential (MPalC101 | Themeda_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Themeda_Cover,
+			Themeda_Cover,
+			Themeda_Cover,
+			Themeda_Cover );
+    }
+
+    potential (MPalC100 | Windmill_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( 0,
+			Windmill_Cover,
+			0,
+			0 );
+    }
+
+    potential (MPalC0 | MPalC01 MPalC00)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, MPalC00 + MPalC01 - MPalC00 * MPalC01 / 100)) );
+    }
+
+    potential (MPalC01 | ExoticAnnual_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( ExoticAnnual_Cover,
+			0,
+			0,
+			0 );
+    }
+
+    potential (MPalC00 | MPalC001 MPalC000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, MPalC000 + MPalC001 - MPalC000 * MPalC001 / 100)) );
+    }
+
+    potential (MPalC001 | Blanket_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( 0,
+			Blanket_Cover,
+			Blanket_Cover,
+			0 );
+    }
+
+    potential (MPalC000 | RedLeg_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( 0,
+			RedLeg_Cover,
+			0,
+			0 );
+    }
+
+    potential (HPalC | HPalC1 HPalC0)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, HPalC0 + HPalC1 - HPalC0 * HPalC1 / 100)) );
+    }
+
+    potential (HPalC1 | HPalC11 HPalC10)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, HPalC10 + HPalC11 - HPalC10 * HPalC11 / 100)) );
+    }
+
+    potential (HPalC11 | Grain_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( 0,
+			0,
+			0,
+			Grain_Cover );
+    }
+
+    potential (HPalC10 | Windmill_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Windmill_Cover,
+			0,
+			Windmill_Cover,
+			Windmill_Cover );
+    }
+
+    potential (HPalC0 | HPalC01 HPalC00)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, HPalC00 + HPalC01 - HPalC00 * HPalC01 / 100)) );
+    }
+
+    potential (HPalC01 | ExoticAnnual_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( 0,
+			0,
+			0,
+			ExoticAnnual_Cover );
+    }
+
+    potential (HPalC00 | HPalC001 HPalC000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, HPalC000 + HPalC001 - HPalC000 * HPalC001 / 100)) );
+    }
+
+    potential (HPalC001 | SensitNative_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( SensitNative_Cover,
+			SensitNative_Cover,
+			SensitNative_Cover,
+			SensitNative_Cover );
+    }
+
+    potential (HPalC000 | Wallaby_Cover Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( Wallaby_Cover,
+			Wallaby_Cover,
+			Wallaby_Cover,
+			Wallaby_Cover );
+    }
+
+    potential (Season)
+    {
+	data = ( 1 1 1 1 );
+    }
+
+    potential (TBio | DBio LBio)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, LBio + DBio - LBio * DBio / 100)) );
+    }
+
+    potential (BBio | BBio1 BBio0)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, BBio0 + BBio1 - BBio0 * BBio1 / 100)) );
+    }
+
+    potential (BBio1 | BBio11 BBio10)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, BBio10 + BBio11 - BBio10 * BBio11 / 100)) );
+    }
+
+    potential (BBio11 | Windmill_Basal BBio110)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, BBio110 + Windmill_Basal - BBio110 * Windmill_Basal / 100)) );
+    }
+
+    potential (BBio110 | Spear_Basal SensitNative_Basal)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, SensitNative_Basal + Spear_Basal - SensitNative_Basal * Spear_Basal / 100)) );
+    }
+
+    potential (BBio10 | Themeda_Basal BBio100)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, BBio100 + Themeda_Basal - BBio100 * Themeda_Basal / 100)) );
+    }
+
+    potential (BBio100 | ST_Basal Onion_Basal)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, Onion_Basal + ST_Basal - Onion_Basal * ST_Basal / 100)) );
+    }
+
+    potential (BBio0 | BBio01 BBio00)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, BBio00 + BBio01 - BBio00 * BBio01 / 100)) );
+    }
+
+    potential (BBio01 | Wallaby_Basal BBio010)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, BBio010 + Wallaby_Basal - BBio010 * Wallaby_Basal / 100)) );
+    }
+
+    potential (BBio010 | Ruderals_Basal HardyNative_Basal)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, HardyNative_Basal + Ruderals_Basal - HardyNative_Basal * Ruderals_Basal / 100)) );
+    }
+
+    potential (BBio00 | BroadWeeds_Basal BBio000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, BBio000 + BroadWeeds_Basal - BBio000 * BroadWeeds_Basal / 100)) );
+    }
+
+    potential (BBio000 | Needle_Basal RedLeg_Basal)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, RedLeg_Basal + Needle_Basal - RedLeg_Basal * Needle_Basal / 100)) );
+    }
+
+    potential (DBio | DBio1 DBio0)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, DBio0 + DBio1 - DBio0 * DBio1 / 100)) );
+    }
+
+    potential (DBio1 | DBio11 DBio10)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, DBio10 + DBio11 - DBio10 * DBio11 / 100)) );
+    }
+
+    potential (DBio11 | Themeda_Dead DBio110)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, DBio110 + Themeda_Dead - DBio110 * Themeda_Dead / 100)) );
+    }
+
+    potential (DBio110 | Needle_Dead RedLeg_Dead)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, RedLeg_Dead + Needle_Dead - RedLeg_Dead * Needle_Dead / 100)) );
+    }
+
+    potential (DBio10 | DBio101 DBio100)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, DBio100 + DBio101 - DBio100 * DBio101 / 100)) );
+    }
+
+    potential (DBio101 | Blanket_Dead Wallaby_Dead)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, Wallaby_Dead + Blanket_Dead - Wallaby_Dead * Blanket_Dead / 100)) );
+    }
+
+    potential (DBio100 | ST_Dead Windmill_Dead)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, Windmill_Dead + ST_Dead - Windmill_Dead * ST_Dead / 100)) );
+    }
+
+    potential (DBio0 | DBio01 DBio00)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, DBio00 + DBio01 - DBio00 * DBio01 / 100)) );
+    }
+
+    potential (DBio01 | DBio011 DBio010)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, DBio010 + DBio011 - DBio010 * DBio011 / 100)) );
+    }
+
+    potential (DBio011 | Grain_Dead Spear_Dead)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, Spear_Dead + Grain_Dead - Spear_Dead * Grain_Dead / 100)) );
+    }
+
+    potential (DBio010 | ExoticAnnual_Dead Onion_Dead)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, Onion_Dead + ExoticAnnual_Dead - Onion_Dead * ExoticAnnual_Dead / 100)) );
+    }
+
+    potential (DBio00 | DBio001 DBio000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, DBio000 + DBio001 - DBio000 * DBio001 / 100)) );
+    }
+
+    potential (DBio001 | Ruderals_Dead HardyNative_Dead)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, HardyNative_Dead + Ruderals_Dead - HardyNative_Dead * Ruderals_Dead / 100)) );
+    }
+
+    potential (DBio000 | BroadWeeds_Dead SensitNative_Dead)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, SensitNative_Dead + BroadWeeds_Dead - SensitNative_Dead * BroadWeeds_Dead / 100)) );
+    }
+
+    potential (LBio | LBio1 LBio0)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, LBio0 + LBio1 - LBio0 * LBio1 / 100)) );
+    }
+
+    potential (LBio1 | LBio11 LBio10)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, LBio10 + LBio11 - LBio10 * LBio11 / 100)) );
+    }
+
+    potential (LBio11 | HardyNative_Cover LBio110)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, LBio110 + HardyNative_Cover - LBio110 * HardyNative_Cover / 100)) );
+    }
+
+    potential (LBio110 | BroadWeeds_Cover Grain_Cover)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, Grain_Cover + BroadWeeds_Cover - Grain_Cover * BroadWeeds_Cover / 100)) );
+    }
+
+    potential (LBio10 | LBio101 LBio100)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, LBio100 + LBio101 - LBio100 * LBio101 / 100)) );
+    }
+
+    potential (LBio101 | RedLeg_Cover SensitNative_Cover)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, SensitNative_Cover + RedLeg_Cover - SensitNative_Cover * RedLeg_Cover / 100)) );
+    }
+
+    potential (LBio100 | Wallaby_Cover Windmill_Cover)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, Windmill_Cover + Wallaby_Cover - Windmill_Cover * Wallaby_Cover / 100)) );
+    }
+
+    potential (LBio0 | LBio01 LBio00)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, LBio00 + LBio01 - LBio00 * LBio01 / 100)) );
+    }
+
+    potential (LBio01 | LBio011 LBio010)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, LBio010 + LBio011 - LBio010 * LBio011 / 100)) );
+    }
+
+    potential (LBio011 | ST_Cover Ruderals_Cover)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, Ruderals_Cover + ST_Cover - Ruderals_Cover * ST_Cover / 100)) );
+    }
+
+    potential (LBio010 | Needle_Cover Spear_Cover)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, Spear_Cover + Needle_Cover - Spear_Cover * Needle_Cover / 100)) );
+    }
+
+    potential (LBio00 | LBio001 LBio000)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, LBio000 + LBio001 - LBio000 * LBio001 / 100)) );
+    }
+
+    potential (LBio001 | Onion_Cover Themeda_Cover)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, Themeda_Cover + Onion_Cover - Themeda_Cover * Onion_Cover / 100)) );
+    }
+
+    potential (LBio000 | ExoticAnnual_Cover Blanket_Cover)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, Blanket_Cover + ExoticAnnual_Cover - Blanket_Cover * ExoticAnnual_Cover / 100)) );
+    }
+
+    potential (Needle_Basal)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (RedLeg_Basal)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (BroadWeeds_Basal)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Ruderals_Basal)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (HardyNative_Basal)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Wallaby_Basal)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (ST_Basal)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Onion_Basal)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Themeda_Basal)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Spear_Basal)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (SensitNative_Basal)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Windmill_Basal)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (BroadWeeds_Dead)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (SensitNative_Dead)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Ruderals_Dead)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (HardyNative_Dead)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (ExoticAnnual_Dead)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Onion_Dead)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Grain_Dead)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Spear_Dead)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (ST_Dead)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Windmill_Dead)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Blanket_Dead)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Wallaby_Dead)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Needle_Dead)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (RedLeg_Dead)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Themeda_Dead)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (ExoticAnnual_Cover)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Blanket_Cover)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Onion_Cover)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Themeda_Cover)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Needle_Cover)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Spear_Cover)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (ST_Cover)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Ruderals_Cover)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Wallaby_Cover)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Windmill_Cover)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (RedLeg_Cover)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (SensitNative_Cover)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (BroadWeeds_Cover)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Grain_Cover)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (HardyNative_Cover)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+} % class BiomassSummaries

@@ -1,0 +1,15 @@
+Duration : 
+BACG_SBR : Output_Basal 
+LPal : 
+PalSumCattle : CSumIndex 
+Input_Cover : Output_Cover 
+BACG_DR : Output_Dead 
+Output_Dead : 
+BACG_CR : Output_Cover 
+Input_Basal : Output_Basal 
+Output_Cover : 
+CSumIndex : 
+DPal : 
+Output_Basal : Output_Cover 
+Input_Dead : Output_Dead 
+Season : LPal 

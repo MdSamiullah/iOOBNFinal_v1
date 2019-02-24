@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iOOBN type=".interface">
+	<node  id="2" name="Food" label="Food" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="3" name="Locale" label="Locale" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="4" name="Meat" label="Meat" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="5" name="Sex" label="Sex" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="6" name="Milk" label="Milk" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="7" name="Health" label="Health" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="8" name="Breed" label="Breed" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="9" name="Calves" label="Calves" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+	</node>
+</iOOBN>

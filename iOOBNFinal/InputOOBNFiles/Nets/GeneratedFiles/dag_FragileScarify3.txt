@@ -1,0 +1,10 @@
+BR : Output_Basal 
+Input_Cover : Output_Cover Cover_Dec 
+Output_Dead : 
+Input_Basal : Output_Basal 
+Output_Cover : 
+Output_Basal : 
+Scarify : BR CR 
+Input_Dead : Output_Dead 
+Cover_Dec : Output_Dead Output_Cover 
+CR : 

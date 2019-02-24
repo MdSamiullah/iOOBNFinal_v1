@@ -1,0 +1,31 @@
+CompSum : CSumIndex 
+BCGD_C4PMCCR : Output_Cover 
+BCGD_C4PMBCR : Output_Basal 
+Cover_Dec : 
+Output_Seeds : 
+Output_Dead : 
+Input_Basal : Output_Basal Output_Seeds 
+SI : 
+CCondS : 
+Input_Dead : Output_Dead Dead_Dec 
+Season : SI GR SP 
+SP : 
+SR : 
+CC : Output_Cover 
+Cover_Inc : 
+Input_Seeds : New_Adults Output_Seeds 
+New_Adults : 
+BCGD_C4PMCDR : Cover_Dec 
+CCondBAC : 
+GR : 
+Output_NUI : 
+BCGD_DDRM : Dead_Dec 
+Input_Cover : Cover_Inc Output_Cover Cover_Dec 
+SSR : Output_Seeds 
+BCGD_C4PMCGR : Cover_Inc 
+Output_Cover : 
+CSumIndex : 
+Output_Basal : 
+NH : Output_NUI 
+NL : CCondS CCondBAC 
+Dead_Dec : 

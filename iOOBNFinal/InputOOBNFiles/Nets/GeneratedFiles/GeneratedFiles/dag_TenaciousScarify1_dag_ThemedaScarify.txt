@@ -1,0 +1,13 @@
+Cover_Dec : 
+CR : 
+BR : 
+Input_Seedlings : Output_Seedlings 
+Input_Cover : Output_Cover Cover_Dec 
+Output_Dead : 
+Input_Basal : Output_Basal 
+Output_Cover : 
+Output_Basal : 
+Scarify : BR CR SR 
+Input_Dead : Output_Dead 
+Output_Seedlings : 
+SR : 

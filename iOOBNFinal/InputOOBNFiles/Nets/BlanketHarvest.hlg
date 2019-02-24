@@ -1,0 +1,403 @@
+Thu Nov 07 16:39:00 2013
+
+
+Moral links:
+
+    Marrying CR and Output_Adults
+    Marrying Input_Adults and ADR
+    Marrying BioRes and CR
+    Marrying Input_Cover and Output_Adults
+    Marrying Input_Cover and CR
+    Marrying Input_Cover and BioRes
+    Marrying Input_Dead and CR
+    Marrying Input_Dead and Input_Cover
+    Marrying Input_Dead and BioRes
+
+
+Triangulating prime component with 3 members:
+    Output_Adults, ADR, Input_Adults
+This component is a clique of cost 72
+
+Triangulating prime component with 4 members:
+    CR, LOBio, Output_Dead, Input_Dead
+This component is a clique of cost 735
+
+Triangulating prime component with 4 members:
+    Output_Adults, CR, Output_Cover, Input_Cover
+This component is a clique of cost 882
+
+Triangulating prime component with 5 members:
+    CR, BioRes, LOBio, Input_Cover, Input_Dead
+This component is a clique of cost 2205
+
+Triangulating prime component with 6 members:
+    Output_Adults, CR, ADR, BioRes, Input_Cover, Harvest
+
+    Using the best greedy heuristic for triangulation
+
+
+
+Total cost of triangulation for all prime components is 4296
+
+
+Elimination sequence:
+
+    Output_Dead
+    Input_Dead
+    LOBio
+    Output_Cover
+    BioRes
+    Input_Cover
+    CR
+    Harvest
+    Input_Adults
+    ADR
+    Output_Adults
+
+
+Cliques:
+
+Clique 7, 3 members, table size = 72:
+    Output_Adults, ADR, Input_Adults
+
+Clique 6, 3 members, table size = 24:
+    Output_Adults, ADR, Harvest
+
+Clique 5, 4 members, table size = 252:
+    Output_Adults, Harvest, CR, Input_Cover
+
+Clique 4, 4 members, table size = 126:
+    Harvest, CR, Input_Cover, BioRes
+
+Clique 3, 5 members, table size = 2205:
+    CR, Input_Cover, BioRes, LOBio, Input_Dead
+
+Clique 2, 4 members, table size = 735:
+    CR, LOBio, Input_Dead, Output_Dead
+
+Clique 1, 4 members, table size = 882:
+    Output_Adults, CR, Input_Cover, Output_Cover
+
+Total clique table size: 4296
+
+
+The junction forest:
+
+Creating junction tree with clique 7 as root ...
+
+Cliques 6 and 7 linked, separator has 2 members and table size = 12:
+    Output_Adults, ADR
+
+Cliques 5 and 6 linked, separator has 2 members and table size = 12:
+    Output_Adults, Harvest
+
+Cliques 4 and 5 linked, separator has 3 members and table size = 42:
+    Harvest, CR, Input_Cover
+
+Cliques 3 and 4 linked, separator has 3 members and table size = 63:
+    CR, Input_Cover, BioRes
+
+Cliques 2 and 3 linked, separator has 3 members and table size = 105:
+    CR, LOBio, Input_Dead
+
+Cliques 1 and 5 linked, separator has 3 members and table size = 126:
+    Output_Adults, CR, Input_Cover
+
+
+Assignment of potentials to cliques:
+
+    Node Output_Adults assigned to clique 7
+    Node CR assigned to clique 4
+    Node ADR assigned to clique 6
+    Node Input_Adults assigned to clique 7
+    Node BioRes assigned to clique 4
+    Node LOBio assigned to clique 3
+    Node Output_Cover assigned to clique 1
+    Node Output_Dead assigned to clique 2
+    Node Input_Cover assigned to clique 4
+    Node Input_Dead assigned to clique 2
+    Node Harvest assigned to clique 6
+
+
+Checking conditional probability potentials:
+
+    No error found
+Using model for Output_Adults to generate a conditional probability table
+(1,1,0): 0.0016 (min=0, max=1)
+(1,1,1): 0.9984 (min=0, max=1)
+(1,2,1): 0.4016 (min=0, max=1)
+(1,2,2): 0.5984 (min=0, max=1)
+(1,3,1): 0.1424 (min=0, max=1)
+(1,3,2): 0.5568 (min=0, max=1)
+(1,3,3): 0.3008 (min=0, max=1)
+(1,4,1): 0.0576 (min=0, max=1)
+(1,4,2): 0.248 (min=0, max=1)
+(1,4,3): 0.3072 (min=0, max=1)
+(1,4,4): 0.3872 (min=0, max=1)
+(1,5,1): 0.0128 (min=0, max=1)
+(1,5,2): 0.08 (min=0, max=1)
+(1,5,3): 0.096 (min=0, max=1)
+(1,5,4): 0.2752 (min=0, max=1)
+(1,5,5): 0.536 (min=0, max=1)
+Using model for BioRes to generate a conditional probability table
+Using model for Output_Cover to generate a conditional probability table
+(0,0,2,1): 0.0464 (min=0, max=1)
+(0,0,2,2): 0.9536 (min=0, max=1)
+(0,0,3,2): 0.0464 (min=0, max=1)
+(0,0,3,3): 0.9536 (min=0, max=1)
+(0,0,4,3): 0.1872 (min=0, max=1)
+(0,0,4,4): 0.8128 (min=0, max=1)
+(0,0,5,4): 0.376 (min=0, max=1)
+(0,0,5,5): 0.624 (min=0, max=1)
+(0,0,6,5): 0.5392 (min=0, max=1)
+(0,0,6,6): 0.4608 (min=0, max=1)
+(0,1,1,0): 0.0192 (min=0, max=1)
+(0,1,1,1): 0.9808 (min=0, max=1)
+(0,1,2,1): 0.48 (min=0, max=1)
+(0,1,2,2): 0.52 (min=0, max=1)
+(0,1,3,1): 0.0176 (min=0, max=1)
+(0,1,3,2): 0.4624 (min=0, max=1)
+(0,1,3,3): 0.52 (min=0, max=1)
+(0,1,4,2): 0.064 (min=0, max=1)
+(0,1,4,3): 0.8304 (min=0, max=1)
+(0,1,4,4): 0.1056 (min=0, max=1)
+(0,1,5,3): 0.5088 (min=0, max=1)
+(0,1,5,4): 0.488 (min=0, max=1)
+(0,1,5,5): 0.0032 (min=0, max=1)
+(0,1,6,3): 0.312 (min=0, max=1)
+(0,1,6,4): 0.4784 (min=0, max=1)
+(0,1,6,5): 0.2096 (min=0, max=1)
+(0,2,1,0): 0.3232 (min=0, max=1)
+(0,2,1,1): 0.6768 (min=0, max=1)
+(0,2,2,0): 0.0464 (min=0, max=1)
+(0,2,2,1): 0.9536 (min=0, max=1)
+(0,2,3,1): 0.712 (min=0, max=1)
+(0,2,3,2): 0.288 (min=0, max=1)
+(0,2,4,1): 0.2736 (min=0, max=1)
+(0,2,4,2): 0.7264 (min=0, max=1)
+(0,2,5,1): 0.1632 (min=0, max=1)
+(0,2,5,2): 0.648 (min=0, max=1)
+(0,2,5,3): 0.1888 (min=0, max=1)
+(0,2,6,1): 0.12 (min=0, max=1)
+(0,2,6,2): 0.4576 (min=0, max=1)
+(0,2,6,3): 0.4224 (min=0, max=1)
+(1,0,0,0): 0.04 (min=0, max=1)
+(1,0,0,1): 0.96 (min=0, max=1)
+(1,0,2,1): 0.0464 (min=0, max=1)
+(1,0,2,2): 0.9536 (min=0, max=1)
+(1,0,3,2): 0.0464 (min=0, max=1)
+(1,0,3,3): 0.9536 (min=0, max=1)
+(1,0,4,3): 0.1872 (min=0, max=1)
+(1,0,4,4): 0.8128 (min=0, max=1)
+(1,0,5,4): 0.376 (min=0, max=1)
+(1,0,5,5): 0.624 (min=0, max=1)
+(1,0,6,5): 0.5392 (min=0, max=1)
+(1,0,6,6): 0.4608 (min=0, max=1)
+(1,1,0,0): 0.04 (min=0, max=1)
+(1,1,0,1): 0.96 (min=0, max=1)
+(1,1,1,0): 0.000768 (min=0, max=1)
+(1,1,1,1): 0.999232 (min=0, max=1)
+(1,1,2,1): 0.48 (min=0, max=1)
+(1,1,2,2): 0.52 (min=0, max=1)
+(1,1,3,1): 0.0176 (min=0, max=1)
+(1,1,3,2): 0.4624 (min=0, max=1)
+(1,1,3,3): 0.52 (min=0, max=1)
+(1,1,4,2): 0.064 (min=0, max=1)
+(1,1,4,3): 0.8304 (min=0, max=1)
+(1,1,4,4): 0.1056 (min=0, max=1)
+(1,1,5,3): 0.5088 (min=0, max=1)
+(1,1,5,4): 0.488 (min=0, max=1)
+(1,1,5,5): 0.0032 (min=0, max=1)
+(1,1,6,3): 0.312 (min=0, max=1)
+(1,1,6,4): 0.4784 (min=0, max=1)
+(1,1,6,5): 0.2096 (min=0, max=1)
+(1,2,0,0): 0.04 (min=0, max=1)
+(1,2,0,1): 0.96 (min=0, max=1)
+(1,2,1,0): 0.012928 (min=0, max=1)
+(1,2,1,1): 0.987072 (min=0, max=1)
+(1,2,2,0): 0.001856 (min=0, max=1)
+(1,2,2,1): 0.998144 (min=0, max=1)
+(1,2,3,1): 0.712 (min=0, max=1)
+(1,2,3,2): 0.288 (min=0, max=1)
+(1,2,4,1): 0.2736 (min=0, max=1)
+(1,2,4,2): 0.7264 (min=0, max=1)
+(1,2,5,1): 0.1632 (min=0, max=1)
+(1,2,5,2): 0.648 (min=0, max=1)
+(1,2,5,3): 0.1888 (min=0, max=1)
+(1,2,6,1): 0.12 (min=0, max=1)
+(1,2,6,2): 0.4576 (min=0, max=1)
+(1,2,6,3): 0.4224 (min=0, max=1)
+(2,0,2,1): 0.0464 (min=0, max=1)
+(2,0,2,2): 0.9536 (min=0, max=1)
+(2,0,3,2): 0.0464 (min=0, max=1)
+(2,0,3,3): 0.9536 (min=0, max=1)
+(2,0,4,3): 0.1872 (min=0, max=1)
+(2,0,4,4): 0.8128 (min=0, max=1)
+(2,0,5,4): 0.376 (min=0, max=1)
+(2,0,5,5): 0.624 (min=0, max=1)
+(2,0,6,5): 0.5392 (min=0, max=1)
+(2,0,6,6): 0.4608 (min=0, max=1)
+(2,1,2,1): 0.48 (min=0, max=1)
+(2,1,2,2): 0.52 (min=0, max=1)
+(2,1,3,1): 0.0176 (min=0, max=1)
+(2,1,3,2): 0.4624 (min=0, max=1)
+(2,1,3,3): 0.52 (min=0, max=1)
+(2,1,4,2): 0.064 (min=0, max=1)
+(2,1,4,3): 0.8304 (min=0, max=1)
+(2,1,4,4): 0.1056 (min=0, max=1)
+(2,1,5,3): 0.5088 (min=0, max=1)
+(2,1,5,4): 0.488 (min=0, max=1)
+(2,1,5,5): 0.0032 (min=0, max=1)
+(2,1,6,3): 0.312 (min=0, max=1)
+(2,1,6,4): 0.4784 (min=0, max=1)
+(2,1,6,5): 0.2096 (min=0, max=1)
+(2,2,3,1): 0.712 (min=0, max=1)
+(2,2,3,2): 0.288 (min=0, max=1)
+(2,2,4,1): 0.2736 (min=0, max=1)
+(2,2,4,2): 0.7264 (min=0, max=1)
+(2,2,5,1): 0.1632 (min=0, max=1)
+(2,2,5,2): 0.648 (min=0, max=1)
+(2,2,5,3): 0.1888 (min=0, max=1)
+(2,2,6,1): 0.12 (min=0, max=1)
+(2,2,6,2): 0.4576 (min=0, max=1)
+(2,2,6,3): 0.4224 (min=0, max=1)
+(3,0,3,2): 0.0464 (min=0, max=1)
+(3,0,3,3): 0.9536 (min=0, max=1)
+(3,0,4,3): 0.1872 (min=0, max=1)
+(3,0,4,4): 0.8128 (min=0, max=1)
+(3,0,5,4): 0.376 (min=0, max=1)
+(3,0,5,5): 0.624 (min=0, max=1)
+(3,0,6,5): 0.5392 (min=0, max=1)
+(3,0,6,6): 0.4608 (min=0, max=1)
+(3,1,3,2): 0.48 (min=0, max=1)
+(3,1,3,3): 0.52 (min=0, max=1)
+(3,1,4,2): 0.064 (min=0, max=1)
+(3,1,4,3): 0.8304 (min=0, max=1)
+(3,1,4,4): 0.1056 (min=0, max=1)
+(3,1,5,3): 0.5088 (min=0, max=1)
+(3,1,5,4): 0.488 (min=0, max=1)
+(3,1,5,5): 0.0032 (min=0, max=1)
+(3,1,6,3): 0.312 (min=0, max=1)
+(3,1,6,4): 0.4784 (min=0, max=1)
+(3,1,6,5): 0.2096 (min=0, max=1)
+(3,2,5,2): 0.8112 (min=0, max=1)
+(3,2,5,3): 0.1888 (min=0, max=1)
+(3,2,6,2): 0.5776 (min=0, max=1)
+(3,2,6,3): 0.4224 (min=0, max=1)
+(4,0,3,2): 0.0464 (min=0, max=1)
+(4,0,3,3): 0.9536 (min=0, max=1)
+(4,0,4,3): 0.1872 (min=0, max=1)
+(4,0,4,4): 0.8128 (min=0, max=1)
+(4,0,5,4): 0.376 (min=0, max=1)
+(4,0,5,5): 0.624 (min=0, max=1)
+(4,0,6,5): 0.5392 (min=0, max=1)
+(4,0,6,6): 0.4608 (min=0, max=1)
+(4,1,3,2): 0.48 (min=0, max=1)
+(4,1,3,3): 0.52 (min=0, max=1)
+(4,1,4,2): 0.064 (min=0, max=1)
+(4,1,4,3): 0.8304 (min=0, max=1)
+(4,1,4,4): 0.1056 (min=0, max=1)
+(4,1,5,3): 0.5088 (min=0, max=1)
+(4,1,5,4): 0.488 (min=0, max=1)
+(4,1,5,5): 0.0032 (min=0, max=1)
+(4,1,6,3): 0.312 (min=0, max=1)
+(4,1,6,4): 0.4784 (min=0, max=1)
+(4,1,6,5): 0.2096 (min=0, max=1)
+(4,2,5,2): 0.8112 (min=0, max=1)
+(4,2,5,3): 0.1888 (min=0, max=1)
+(4,2,6,2): 0.5776 (min=0, max=1)
+(4,2,6,3): 0.4224 (min=0, max=1)
+(5,0,4,3): 0.1872 (min=0, max=1)
+(5,0,4,4): 0.8128 (min=0, max=1)
+(5,0,5,4): 0.376 (min=0, max=1)
+(5,0,5,5): 0.624 (min=0, max=1)
+(5,0,6,5): 0.5392 (min=0, max=1)
+(5,0,6,6): 0.4608 (min=0, max=1)
+(5,1,4,3): 0.8944 (min=0, max=1)
+(5,1,4,4): 0.1056 (min=0, max=1)
+(5,1,5,3): 0.5088 (min=0, max=1)
+(5,1,5,4): 0.488 (min=0, max=1)
+(5,1,5,5): 0.0032 (min=0, max=1)
+(5,1,6,3): 0.312 (min=0, max=1)
+(5,1,6,4): 0.4784 (min=0, max=1)
+(5,1,6,5): 0.2096 (min=0, max=1)
+
+
+Beliefs for chance nodes:
+
+    Output_Adults:
+	0 - 1      0.1668
+	1 - 2      0.217733
+	state2   0.206933
+	state3   0.142
+	state4   0.138533
+	state5   0.128
+
+    CR:
+	0 - 1      0.99985
+	1 - 2      0.000149577
+	2 - 3      3.48451e-073
+
+    ADR:
+	0 - 1      0.5
+	1 - 2      0.5
+
+    Input_Adults:
+	0 - 1      0.166667
+	1 - 2      0.166667
+	state2   0.166667
+	state3   0.166667
+	state4   0.166667
+	state5   0.166667
+
+    BioRes:
+	0 - 1      0.99985
+	1 - 2      0.000149578
+	2 - 3      3.48451e-073
+
+    LOBio:
+	state0   0.0298234
+	state1   0.91689
+	state2   0.053282
+	state3   4.103e-006
+	state4   4.68767e-009
+
+    Output_Cover:
+	state0   0.0250728
+	state1   0.147845
+	state2   0.206586
+	state3   0.2187
+	state4   0.169826
+	state5   0.166151
+	state6   0.0658187
+
+    Output_Dead:
+	state0   0.0245408
+	state1   0.0759568
+	state2   0.446843
+	state3   0.412391
+	state4   0.0401308
+	state5   0.000130744
+	state6   7.54042e-006
+
+    Input_Cover:
+	state0   0.142857
+	state1   0.142857
+	state2   0.142857
+	state3   0.142857
+	state4   0.142857
+	state5   0.142857
+	state6   0.142857
+
+    Input_Dead:
+	state0   0.142857
+	state1   0.142857
+	state2   0.142857
+	state3   0.142857
+	state4   0.142857
+	state5   0.142857
+	state6   0.142857
+
+    Harvest:
+	false      0.5
+	true       0.5

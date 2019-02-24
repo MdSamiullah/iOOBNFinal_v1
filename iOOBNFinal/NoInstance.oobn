@@ -1,0 +1,126 @@
+class NoInstance
+{
+	inputs = ( C_7 C_8 );
+	outputs = ( C_14 );
+	node C_7
+	{
+		label= "C_7";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node C_8
+	{
+		label= "C_8";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node C_9
+	{
+		label= "C_9";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node C_10
+	{
+		label= "C_10";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node C_11
+	{
+		label= "C_11";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node C_12
+	{
+		label= "C_12";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node C_13
+	{
+		label= "C_13";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node C_14
+	{
+		label= "C_14";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	potential ( C_7 )
+	{
+		data=(0.5 0.5 );
+	}
+	potential ( C_8 )
+	{
+		data=(0.5 0.5 );
+	}
+	potential ( C_9 )
+	{
+		data=(0.5 0.5 );
+	}
+	potential ( C_10 | C_7  )
+	{
+		data=
+		(
+			(0.5 0.5 )
+			(0.5 0.5 )
+		);
+	}
+	potential ( C_11 | C_8  )
+	{
+		data=
+		(
+			(0.5 0.5 )
+			(0.5 0.5 )
+		);
+	}
+	potential ( C_12 | C_10 C_11  )
+	{
+		data=
+		(
+			(
+				(0.5 0.5 )
+				(0.5 0.5 )
+			)
+			(
+				(0.5 0.5 )
+				(0.5 0.5 )
+			)
+		);
+	}
+	potential ( C_13 | C_12  )
+	{
+		data=
+		(
+			(0.5 0.5 )
+			(0.5 0.5 )
+		);
+	}
+	potential ( C_14 | C_13 C_9  )
+	{
+		data=
+		(
+			(
+				(0.5 0.5 )
+				(0.5 0.5 )
+			)
+			(
+				(0.5 0.5 )
+				(0.5 0.5 )
+			)
+		);
+	}
+
+}

@@ -1,0 +1,138 @@
+class Diag2
+{
+    inputs = ();
+    outputs = ();
+    node_size = (80 40);
+    HR_DBN_Num_Slices = "5";
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "1";
+    HR_Zoom_ZoomFactor = "100";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Utility_Link = "63";
+    HR_Probabilistic_Link = "63";
+    HR_Functional_Link = "63";
+    HR_Binding_Link = "63";
+    HR_Information_Arc = "63";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_DiscreteFunction = "5";
+    HR_Color_Function = "4";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Mean_Variance = "1";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "5";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "javax.swing.plaf.FontUIResource[family=Dialog,name=Dialog,style=bold,size=12]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+
+    instance C_A : Asia (V = V, S = S; C_A_X = X, C_A_D = D)
+    {
+	label = "";
+	position = (970 219);
+	HR_InterfaceNode_placement = "horizontal";
+	HR_InterfaceNode_size = "80,40";
+	HR_NodeSize = "(80, 40)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_isCollapsed = "false";
+    }
+
+    node V
+    {
+	label = "V";
+	position = (350 40);
+	states = ("True" "False");
+	HR_LinkControlPoints = "";
+	HR_LinkGroup = "[A_V:0][B_V:0][Asia_1_V:0][C_V:0]";
+	HR_LinkMode = "[V:0]";
+	type = "Discrete";
+	subType = "Boolean";
+    }
+
+    node S
+    {
+	label = "S";
+	position = (450 40);
+	states = ("True" "False");
+	HR_LinkGroup = "[A_S:0][B_S:0][A_A_D:0][Asia_1_S:0][C_S:0]";
+	HR_LinkMode = "[S:0][A_D:0]";
+	type = "Discrete";
+	subType = "Boolean";
+    }
+
+    node N
+    {
+	label = "N";
+	position = (360 637);
+	states = ("True" "False");
+	type = "Discrete";
+	subType = "Boolean";
+    }
+
+    instance A : Asia (V = V, S = S; A_X = X, A_D = D)
+    {
+	label = "";
+	position = (177 211);
+	HR_isCollapsed = "false";
+	HR_LinkModeInstance = "";
+	HR_LinkControlPointsInstance = "";
+	HR_LinkGroupInstance = "[A_X;N:-4][A_D;B_V:-2][A_D;B_B_X:-4]";
+    }
+
+    instance B : Asia2 (V = V, S = S; B_X = X, B_G = G)
+    {
+	label = "";
+	position = (636 298);
+	HR_isCollapsed = "false";
+	HR_LinkModeInstance = "";
+	HR_LinkControlPointsInstance = "";
+	HR_LinkGroupInstance = "[B_G;N:-4][B_X;N:-4]";
+    }
+
+    potential (V)
+    {
+	data = ( 0.5 0.5 );
+    }
+
+    potential (S)
+    {
+	data = ( 0.5 0.5 );
+    }
+
+    potential (N | B_X B_G A_X)
+    {
+	data = (((( 0.5 0.5 )	%  B_X=True  B_G=True  A_X=True
+		  ( 0.5 0.5 ))	%  B_X=True  B_G=True  A_X=False
+		 (( 0.5 0.5 )	%  B_X=True  B_G=False  A_X=True
+		  ( 0.5 0.5 )))	%  B_X=True  B_G=False  A_X=False
+		((( 0.5 0.5 )	%  B_X=False  B_G=True  A_X=True
+		  ( 0.5 0.5 ))	%  B_X=False  B_G=True  A_X=False
+		 (( 0.5 0.5 )	%  B_X=False  B_G=False  A_X=True
+		  ( 0.5 0.5 ))));	%  B_X=False  B_G=False  A_X=False
+    }
+} % class Diag2

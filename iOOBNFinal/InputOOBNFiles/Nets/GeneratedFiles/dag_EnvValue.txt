@@ -1,0 +1,25 @@
+ExoticAnnual_Cover : EnvironValue 
+Onion_Cover : 
+HardyNative_Cover : NativeHerbCover 
+Blanket_Cover : 
+EnvironValue : 
+SensitNative_Cover : NativeHerbCover 
+NativeHerbDivScale : EnvironValue 
+DeRocked : EnvironValue 
+BareGround : 
+Windmill_Cover : OtherNativeGrassCover1 
+Needle_Cover : ExoticPerennialCover 
+ExoticPerennialCover : 
+Wallaby_Cover : OtherNativeGrassCover0 
+Themeda_Cover : EnvironValue 
+BroadWeeds_Cover : 
+Ruderals_Cover : 
+Grain_Cover : 
+NativeHerbCover : 
+RedLeg_Cover : OtherNativeGrassCover0 
+Spear_Cover : OtherNativeGrassCover1 
+OtherNativeGrassCover : 
+TBio : BareGround 
+ST_Cover : ExoticPerennialCover 
+OtherNativeGrassCover1 : OtherNativeGrassCover 
+OtherNativeGrassCover0 : OtherNativeGrassCover 

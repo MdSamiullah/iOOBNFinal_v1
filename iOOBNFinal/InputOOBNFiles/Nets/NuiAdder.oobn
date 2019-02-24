@@ -1,0 +1,966 @@
+class NuiAdder
+{
+    inputs = (Windmill_NUI BroadWeeds_NUI HardyNative_NUI Spear_NUI ST_NUI Wallaby_NUI SensitNative_NUI Grain_NUI Onion_NUI ExoticAnnual_NUI Needle_NUI Themeda_NUI Blanket_NUI RedLeg_NUI Ruderals_NUI);
+    outputs = (NUI);
+    node_size = (0 0);
+
+    node NUI
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+    }
+
+    node NUI2
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+    }
+
+    node NUI21
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+    }
+
+    node NUI20
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+    }
+
+    node NUI1
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+    }
+
+    node NUI11
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+    }
+
+    node NUI10
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+    }
+
+    node NUI0
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+    }
+
+    node NUI01
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+    }
+
+    node NUI00
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+    }
+
+    node Ruderals_NUI
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+    }
+
+    node RedLeg_NUI
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+    }
+
+    node Blanket_NUI
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+    }
+
+    node Themeda_NUI
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+    }
+
+    node Needle_NUI
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+    }
+
+    node ExoticAnnual_NUI
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+    }
+
+    node Onion_NUI
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+    }
+
+    node Grain_NUI
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+    }
+
+    node SensitNative_NUI
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+    }
+
+    node Wallaby_NUI
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+    }
+
+    node ST_NUI
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+    }
+
+    node Spear_NUI
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+    }
+
+    node HardyNative_NUI
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+    }
+
+    node BroadWeeds_NUI
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+    }
+
+    node Windmill_NUI
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+    }
+
+    potential (NUI | NUI2 NUI1 NUI0)
+    {
+	model_nodes = ();
+	model_data = ( min (1, max (-1, 0 + NUI0 + NUI1 + NUI2)) );
+	data = (((( 1 0 0 0 0 )	%  NUI2=interval(-1,-0.5)  NUI1=interval(-1,-0.5)  NUI0=interval(-1,-0.5)
+		  ( 1 0 0 0 0 )	%  NUI2=interval(-1,-0.5)  NUI1=interval(-1,-0.5)  NUI0=interval(-0.5,-0.1)
+		  ( 1 0 0 0 0 )	%  NUI2=interval(-1,-0.5)  NUI1=interval(-1,-0.5)  NUI0=interval(-0.1,0.1)
+		  ( 1 0 0 0 0 )	%  NUI2=interval(-1,-0.5)  NUI1=interval(-1,-0.5)  NUI0=interval(0.1,0.5)
+		  ( 0.8336 0.16512 0.00128 0 0 ))	%  NUI2=interval(-1,-0.5)  NUI1=interval(-1,-0.5)  NUI0=interval(0.5,1)
+		 (( 1 0 0 0 0 )	%  NUI2=interval(-1,-0.5)  NUI1=interval(-0.5,-0.1)  NUI0=interval(-1,-0.5)
+		  ( 1 0 0 0 0 )	%  NUI2=interval(-1,-0.5)  NUI1=interval(-0.5,-0.1)  NUI0=interval(-0.5,-0.1)
+		  ( 1 0 0 0 0 )	%  NUI2=interval(-1,-0.5)  NUI1=interval(-0.5,-0.1)  NUI0=interval(-0.1,0.1)
+		  ( 0.86656 0.13344 0 0 0 )	%  NUI2=interval(-1,-0.5)  NUI1=interval(-0.5,-0.1)  NUI0=interval(0.1,0.5)
+		  ( 0.203904 0.588672 0.163008 0.044416 0 ))	%  NUI2=interval(-1,-0.5)  NUI1=interval(-0.5,-0.1)  NUI0=interval(0.5,1)
+		 (( 1 0 0 0 0 )	%  NUI2=interval(-1,-0.5)  NUI1=interval(-0.1,0.1)  NUI0=interval(-1,-0.5)
+		  ( 1 0 0 0 0 )	%  NUI2=interval(-1,-0.5)  NUI1=interval(-0.1,0.1)  NUI0=interval(-0.5,-0.1)
+		  ( 0.93376 0.06624 0 0 0 )	%  NUI2=interval(-1,-0.5)  NUI1=interval(-0.1,0.1)  NUI0=interval(-0.1,0.1)
+		  ( 0.404032 0.562688 0.03328 0 0 )	%  NUI2=interval(-1,-0.5)  NUI1=interval(-0.1,0.1)  NUI0=interval(0.1,0.5)
+		  ( 0.003008 0.32128 0.350144 0.322176 0.003392 ))	%  NUI2=interval(-1,-0.5)  NUI1=interval(-0.1,0.1)  NUI0=interval(0.5,1)
+		 (( 1 0 0 0 0 )	%  NUI2=interval(-1,-0.5)  NUI1=interval(0.1,0.5)  NUI0=interval(-1,-0.5)
+		  ( 0.86656 0.13344 0 0 0 )	%  NUI2=interval(-1,-0.5)  NUI1=interval(0.1,0.5)  NUI0=interval(-0.5,-0.1)
+		  ( 0.404032 0.562688 0.03328 0 0 )	%  NUI2=interval(-1,-0.5)  NUI1=interval(0.1,0.5)  NUI0=interval(-0.1,0.1)
+		  ( 0.056192 0.529536 0.280832 0.13344 0 )	%  NUI2=interval(-1,-0.5)  NUI1=interval(0.1,0.5)  NUI0=interval(0.1,0.5)
+		  ( 0 0.04384 0.16256 0.58592 0.20768 ))	%  NUI2=interval(-1,-0.5)  NUI1=interval(0.1,0.5)  NUI0=interval(0.5,1)
+		 (( 0.8336 0.16512 0.00128 0 0 )	%  NUI2=interval(-1,-0.5)  NUI1=interval(0.5,1)  NUI0=interval(-1,-0.5)
+		  ( 0.203904 0.588672 0.163008 0.044416 0 )	%  NUI2=interval(-1,-0.5)  NUI1=interval(0.5,1)  NUI0=interval(-0.5,-0.1)
+		  ( 0.003008 0.32128 0.350144 0.322176 0.003392 )	%  NUI2=interval(-1,-0.5)  NUI1=interval(0.5,1)  NUI0=interval(-0.1,0.1)
+		  ( 0 0.04384 0.16256 0.58592 0.20768 )	%  NUI2=interval(-1,-0.5)  NUI1=interval(0.5,1)  NUI0=interval(0.1,0.5)
+		  ( 0 0 0.00128 0.16512 0.8336 )))	%  NUI2=interval(-1,-0.5)  NUI1=interval(0.5,1)  NUI0=interval(0.5,1)
+		((( 1 0 0 0 0 )	%  NUI2=interval(-0.5,-0.1)  NUI1=interval(-1,-0.5)  NUI0=interval(-1,-0.5)
+		  ( 1 0 0 0 0 )	%  NUI2=interval(-0.5,-0.1)  NUI1=interval(-1,-0.5)  NUI0=interval(-0.5,-0.1)
+		  ( 1 0 0 0 0 )	%  NUI2=interval(-0.5,-0.1)  NUI1=interval(-1,-0.5)  NUI0=interval(-0.1,0.1)
+		  ( 0.86656 0.13344 0 0 0 )	%  NUI2=interval(-0.5,-0.1)  NUI1=interval(-1,-0.5)  NUI0=interval(0.1,0.5)
+		  ( 0.203904 0.5888 0.162816 0.04448 0 ))	%  NUI2=interval(-0.5,-0.1)  NUI1=interval(-1,-0.5)  NUI0=interval(0.5,1)
+		 (( 1 0 0 0 0 )	%  NUI2=interval(-0.5,-0.1)  NUI1=interval(-0.5,-0.1)  NUI0=interval(-1,-0.5)
+		  ( 0.976704 0.023296 0 0 0 )	%  NUI2=interval(-0.5,-0.1)  NUI1=interval(-0.5,-0.1)  NUI0=interval(-0.5,-0.1)
+		  ( 0.7088 0.2912 0 0 0 )	%  NUI2=interval(-0.5,-0.1)  NUI1=interval(-0.5,-0.1)  NUI0=interval(-0.1,0.1)
+		  ( 0.1664 0.6672 0.145216 0.021184 0 )	%  NUI2=interval(-0.5,-0.1)  NUI1=interval(-0.5,-0.1)  NUI0=interval(0.1,0.5)
+		  ( 0 0.13344 0.280832 0.529536 0.056192 ))	%  NUI2=interval(-0.5,-0.1)  NUI1=interval(-0.5,-0.1)  NUI0=interval(0.5,1)
+		 (( 1 0 0 0 0 )	%  NUI2=interval(-0.5,-0.1)  NUI1=interval(-0.1,0.1)  NUI0=interval(-1,-0.5)
+		  ( 0.7088 0.2912 0 0 0 )	%  NUI2=interval(-0.5,-0.1)  NUI1=interval(-0.1,0.1)  NUI0=interval(-0.5,-0.1)
+		  ( 0.078208 0.835776 0.086016 0 0 )	%  NUI2=interval(-0.5,-0.1)  NUI1=interval(-0.1,0.1)  NUI0=interval(-0.1,0.1)
+		  ( 0 0.2912 0.4176 0.2912 0 )	%  NUI2=interval(-0.5,-0.1)  NUI1=interval(-0.1,0.1)  NUI0=interval(0.1,0.5)
+		  ( 0 0 0.03328 0.562688 0.404032 ))	%  NUI2=interval(-0.5,-0.1)  NUI1=interval(-0.1,0.1)  NUI0=interval(0.5,1)
+		 (( 0.86656 0.13344 0 0 0 )	%  NUI2=interval(-0.5,-0.1)  NUI1=interval(0.1,0.5)  NUI0=interval(-1,-0.5)
+		  ( 0.1664 0.6672 0.145216 0.021184 0 )	%  NUI2=interval(-0.5,-0.1)  NUI1=interval(0.1,0.5)  NUI0=interval(-0.5,-0.1)
+		  ( 0 0.2912 0.4176 0.2912 0 )	%  NUI2=interval(-0.5,-0.1)  NUI1=interval(0.1,0.5)  NUI0=interval(-0.1,0.1)
+		  ( 0 0.019392 0.147008 0.6672 0.1664 )	%  NUI2=interval(-0.5,-0.1)  NUI1=interval(0.1,0.5)  NUI0=interval(0.1,0.5)
+		  ( 0 0 0 0.13344 0.86656 ))	%  NUI2=interval(-0.5,-0.1)  NUI1=interval(0.1,0.5)  NUI0=interval(0.5,1)
+		 (( 0.203904 0.5888 0.162816 0.04448 0 )	%  NUI2=interval(-0.5,-0.1)  NUI1=interval(0.5,1)  NUI0=interval(-1,-0.5)
+		  ( 0 0.13344 0.280832 0.529536 0.056192 )	%  NUI2=interval(-0.5,-0.1)  NUI1=interval(0.5,1)  NUI0=interval(-0.5,-0.1)
+		  ( 0 0 0.03328 0.562688 0.404032 )	%  NUI2=interval(-0.5,-0.1)  NUI1=interval(0.5,1)  NUI0=interval(-0.1,0.1)
+		  ( 0 0 0 0.13344 0.86656 )	%  NUI2=interval(-0.5,-0.1)  NUI1=interval(0.5,1)  NUI0=interval(0.1,0.5)
+		  ( 0 0 0 0 1 )))	%  NUI2=interval(-0.5,-0.1)  NUI1=interval(0.5,1)  NUI0=interval(0.5,1)
+		((( 1 0 0 0 0 )	%  NUI2=interval(-0.1,0.1)  NUI1=interval(-1,-0.5)  NUI0=interval(-1,-0.5)
+		  ( 1 0 0 0 0 )	%  NUI2=interval(-0.1,0.1)  NUI1=interval(-1,-0.5)  NUI0=interval(-0.5,-0.1)
+		  ( 0.93376 0.06624 0 0 0 )	%  NUI2=interval(-0.1,0.1)  NUI1=interval(-1,-0.5)  NUI0=interval(-0.1,0.1)
+		  ( 0.404032 0.562688 0.03328 0 0 )	%  NUI2=interval(-0.1,0.1)  NUI1=interval(-1,-0.5)  NUI0=interval(0.1,0.5)
+		  ( 0.003008 0.322112 0.347584 0.32416 0.003136 ))	%  NUI2=interval(-0.1,0.1)  NUI1=interval(-1,-0.5)  NUI0=interval(0.5,1)
+		 (( 1 0 0 0 0 )	%  NUI2=interval(-0.1,0.1)  NUI1=interval(-0.5,-0.1)  NUI0=interval(-1,-0.5)
+		  ( 0.7088 0.2912 0 0 0 )	%  NUI2=interval(-0.1,0.1)  NUI1=interval(-0.5,-0.1)  NUI0=interval(-0.5,-0.1)
+		  ( 0.078336 0.8352 0.086464 0 0 )	%  NUI2=interval(-0.1,0.1)  NUI1=interval(-0.5,-0.1)  NUI0=interval(-0.1,0.1)
+		  ( 0 0.2912 0.4176 0.2912 0 )	%  NUI2=interval(-0.1,0.1)  NUI1=interval(-0.5,-0.1)  NUI0=interval(0.1,0.5)
+		  ( 0 0 0.03328 0.562688 0.404032 ))	%  NUI2=interval(-0.1,0.1)  NUI1=interval(-0.5,-0.1)  NUI0=interval(0.5,1)
+		 (( 0.93376 0.06624 0 0 0 )	%  NUI2=interval(-0.1,0.1)  NUI1=interval(-0.1,0.1)  NUI0=interval(-1,-0.5)
+		  ( 0.078336 0.8352 0.086464 0 0 )	%  NUI2=interval(-0.1,0.1)  NUI1=interval(-0.1,0.1)  NUI0=interval(-0.5,-0.1)
+		  ( 0 0.1664 0.6672 0.1664 0 )	%  NUI2=interval(-0.1,0.1)  NUI1=interval(-0.1,0.1)  NUI0=interval(-0.1,0.1)
+		  ( 0 0 0.082496 0.830784 0.08672 )	%  NUI2=interval(-0.1,0.1)  NUI1=interval(-0.1,0.1)  NUI0=interval(0.1,0.5)
+		  ( 0 0 0 0.06624 0.93376 ))	%  NUI2=interval(-0.1,0.1)  NUI1=interval(-0.1,0.1)  NUI0=interval(0.5,1)
+		 (( 0.404032 0.562688 0.03328 0 0 )	%  NUI2=interval(-0.1,0.1)  NUI1=interval(0.1,0.5)  NUI0=interval(-1,-0.5)
+		  ( 0 0.2912 0.4176 0.2912 0 )	%  NUI2=interval(-0.1,0.1)  NUI1=interval(0.1,0.5)  NUI0=interval(-0.5,-0.1)
+		  ( 0 0 0.082496 0.830784 0.08672 )	%  NUI2=interval(-0.1,0.1)  NUI1=interval(0.1,0.5)  NUI0=interval(-0.1,0.1)
+		  ( 0 0 0 0.2912 0.7088 )	%  NUI2=interval(-0.1,0.1)  NUI1=interval(0.1,0.5)  NUI0=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))	%  NUI2=interval(-0.1,0.1)  NUI1=interval(0.1,0.5)  NUI0=interval(0.5,1)
+		 (( 0.003008 0.322112 0.347584 0.32416 0.003136 )	%  NUI2=interval(-0.1,0.1)  NUI1=interval(0.5,1)  NUI0=interval(-1,-0.5)
+		  ( 0 0 0.03328 0.562688 0.404032 )	%  NUI2=interval(-0.1,0.1)  NUI1=interval(0.5,1)  NUI0=interval(-0.5,-0.1)
+		  ( 0 0 0 0.06624 0.93376 )	%  NUI2=interval(-0.1,0.1)  NUI1=interval(0.5,1)  NUI0=interval(-0.1,0.1)
+		  ( 0 0 0 0 1 )	%  NUI2=interval(-0.1,0.1)  NUI1=interval(0.5,1)  NUI0=interval(0.1,0.5)
+		  ( 0 0 0 0 1 )))	%  NUI2=interval(-0.1,0.1)  NUI1=interval(0.5,1)  NUI0=interval(0.5,1)
+		((( 1 0 0 0 0 )	%  NUI2=interval(0.1,0.5)  NUI1=interval(-1,-0.5)  NUI0=interval(-1,-0.5)
+		  ( 0.86656 0.13344 0 0 0 )	%  NUI2=interval(0.1,0.5)  NUI1=interval(-1,-0.5)  NUI0=interval(-0.5,-0.1)
+		  ( 0.404032 0.562688 0.03328 0 0 )	%  NUI2=interval(0.1,0.5)  NUI1=interval(-1,-0.5)  NUI0=interval(-0.1,0.1)
+		  ( 0.056192 0.529536 0.280832 0.13344 0 )	%  NUI2=interval(0.1,0.5)  NUI1=interval(-1,-0.5)  NUI0=interval(0.1,0.5)
+		  ( 0 0.04384 0.161856 0.586112 0.208192 ))	%  NUI2=interval(0.1,0.5)  NUI1=interval(-1,-0.5)  NUI0=interval(0.5,1)
+		 (( 0.86656 0.13344 0 0 0 )	%  NUI2=interval(0.1,0.5)  NUI1=interval(-0.5,-0.1)  NUI0=interval(-1,-0.5)
+		  ( 0.1664 0.6672 0.145216 0.021184 0 )	%  NUI2=interval(0.1,0.5)  NUI1=interval(-0.5,-0.1)  NUI0=interval(-0.5,-0.1)
+		  ( 0 0.2912 0.4176 0.2912 0 )	%  NUI2=interval(0.1,0.5)  NUI1=interval(-0.5,-0.1)  NUI0=interval(-0.1,0.1)
+		  ( 0 0.018752 0.147648 0.6672 0.1664 )	%  NUI2=interval(0.1,0.5)  NUI1=interval(-0.5,-0.1)  NUI0=interval(0.1,0.5)
+		  ( 0 0 0 0.13344 0.86656 ))	%  NUI2=interval(0.1,0.5)  NUI1=interval(-0.5,-0.1)  NUI0=interval(0.5,1)
+		 (( 0.404032 0.562688 0.03328 0 0 )	%  NUI2=interval(0.1,0.5)  NUI1=interval(-0.1,0.1)  NUI0=interval(-1,-0.5)
+		  ( 0 0.2912 0.4176 0.2912 0 )	%  NUI2=interval(0.1,0.5)  NUI1=interval(-0.1,0.1)  NUI0=interval(-0.5,-0.1)
+		  ( 0 0 0.082688 0.8304 0.086912 )	%  NUI2=interval(0.1,0.5)  NUI1=interval(-0.1,0.1)  NUI0=interval(-0.1,0.1)
+		  ( 0 0 0 0.2912 0.7088 )	%  NUI2=interval(0.1,0.5)  NUI1=interval(-0.1,0.1)  NUI0=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))	%  NUI2=interval(0.1,0.5)  NUI1=interval(-0.1,0.1)  NUI0=interval(0.5,1)
+		 (( 0.056192 0.529536 0.280832 0.13344 0 )	%  NUI2=interval(0.1,0.5)  NUI1=interval(0.1,0.5)  NUI0=interval(-1,-0.5)
+		  ( 0 0.018752 0.147648 0.6672 0.1664 )	%  NUI2=interval(0.1,0.5)  NUI1=interval(0.1,0.5)  NUI0=interval(-0.5,-0.1)
+		  ( 0 0 0 0.2912 0.7088 )	%  NUI2=interval(0.1,0.5)  NUI1=interval(0.1,0.5)  NUI0=interval(-0.1,0.1)
+		  ( 0 0 0 0.018304 0.981696 )	%  NUI2=interval(0.1,0.5)  NUI1=interval(0.1,0.5)  NUI0=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))	%  NUI2=interval(0.1,0.5)  NUI1=interval(0.1,0.5)  NUI0=interval(0.5,1)
+		 (( 0 0.04384 0.161856 0.586112 0.208192 )	%  NUI2=interval(0.1,0.5)  NUI1=interval(0.5,1)  NUI0=interval(-1,-0.5)
+		  ( 0 0 0 0.13344 0.86656 )	%  NUI2=interval(0.1,0.5)  NUI1=interval(0.5,1)  NUI0=interval(-0.5,-0.1)
+		  ( 0 0 0 0 1 )	%  NUI2=interval(0.1,0.5)  NUI1=interval(0.5,1)  NUI0=interval(-0.1,0.1)
+		  ( 0 0 0 0 1 )	%  NUI2=interval(0.1,0.5)  NUI1=interval(0.5,1)  NUI0=interval(0.1,0.5)
+		  ( 0 0 0 0 1 )))	%  NUI2=interval(0.1,0.5)  NUI1=interval(0.5,1)  NUI0=interval(0.5,1)
+		((( 0.8336 0.16512 0.00128 0 0 )	%  NUI2=interval(0.5,1)  NUI1=interval(-1,-0.5)  NUI0=interval(-1,-0.5)
+		  ( 0.20416 0.588352 0.163072 0.044416 0 )	%  NUI2=interval(0.5,1)  NUI1=interval(-1,-0.5)  NUI0=interval(-0.5,-0.1)
+		  ( 0.003008 0.32128 0.350336 0.32224 0.003136 )	%  NUI2=interval(0.5,1)  NUI1=interval(-1,-0.5)  NUI0=interval(-0.1,0.1)
+		  ( 0 0.04384 0.162624 0.585344 0.208192 )	%  NUI2=interval(0.5,1)  NUI1=interval(-1,-0.5)  NUI0=interval(0.1,0.5)
+		  ( 0 0 0.00128 0.16512 0.8336 ))	%  NUI2=interval(0.5,1)  NUI1=interval(-1,-0.5)  NUI0=interval(0.5,1)
+		 (( 0.20416 0.588352 0.163072 0.044416 0 )	%  NUI2=interval(0.5,1)  NUI1=interval(-0.5,-0.1)  NUI0=interval(-1,-0.5)
+		  ( 0 0.13344 0.280832 0.529536 0.056192 )	%  NUI2=interval(0.5,1)  NUI1=interval(-0.5,-0.1)  NUI0=interval(-0.5,-0.1)
+		  ( 0 0 0.03328 0.562688 0.404032 )	%  NUI2=interval(0.5,1)  NUI1=interval(-0.5,-0.1)  NUI0=interval(-0.1,0.1)
+		  ( 0 0 0 0.13344 0.86656 )	%  NUI2=interval(0.5,1)  NUI1=interval(-0.5,-0.1)  NUI0=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))	%  NUI2=interval(0.5,1)  NUI1=interval(-0.5,-0.1)  NUI0=interval(0.5,1)
+		 (( 0.003008 0.32128 0.350336 0.32224 0.003136 )	%  NUI2=interval(0.5,1)  NUI1=interval(-0.1,0.1)  NUI0=interval(-1,-0.5)
+		  ( 0 0 0.03328 0.562688 0.404032 )	%  NUI2=interval(0.5,1)  NUI1=interval(-0.1,0.1)  NUI0=interval(-0.5,-0.1)
+		  ( 0 0 0 0.06624 0.93376 )	%  NUI2=interval(0.5,1)  NUI1=interval(-0.1,0.1)  NUI0=interval(-0.1,0.1)
+		  ( 0 0 0 0 1 )	%  NUI2=interval(0.5,1)  NUI1=interval(-0.1,0.1)  NUI0=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))	%  NUI2=interval(0.5,1)  NUI1=interval(-0.1,0.1)  NUI0=interval(0.5,1)
+		 (( 0 0.04384 0.162624 0.585344 0.208192 )	%  NUI2=interval(0.5,1)  NUI1=interval(0.1,0.5)  NUI0=interval(-1,-0.5)
+		  ( 0 0 0 0.13344 0.86656 )	%  NUI2=interval(0.5,1)  NUI1=interval(0.1,0.5)  NUI0=interval(-0.5,-0.1)
+		  ( 0 0 0 0 1 )	%  NUI2=interval(0.5,1)  NUI1=interval(0.1,0.5)  NUI0=interval(-0.1,0.1)
+		  ( 0 0 0 0 1 )	%  NUI2=interval(0.5,1)  NUI1=interval(0.1,0.5)  NUI0=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))	%  NUI2=interval(0.5,1)  NUI1=interval(0.1,0.5)  NUI0=interval(0.5,1)
+		 (( 0 0 0.00128 0.16512 0.8336 )	%  NUI2=interval(0.5,1)  NUI1=interval(0.5,1)  NUI0=interval(-1,-0.5)
+		  ( 0 0 0 0 1 )	%  NUI2=interval(0.5,1)  NUI1=interval(0.5,1)  NUI0=interval(-0.5,-0.1)
+		  ( 0 0 0 0 1 )	%  NUI2=interval(0.5,1)  NUI1=interval(0.5,1)  NUI0=interval(-0.1,0.1)
+		  ( 0 0 0 0 1 )	%  NUI2=interval(0.5,1)  NUI1=interval(0.5,1)  NUI0=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))));	%  NUI2=interval(0.5,1)  NUI1=interval(0.5,1)  NUI0=interval(0.5,1)
+    }
+
+    potential (NUI2 | Windmill_NUI NUI21 NUI20)
+    {
+	model_nodes = ();
+	model_data = ( min (1, max (-1, 0 + NUI20 + NUI21 + Windmill_NUI)) );
+	data = (((( 1 0 0 0 0 )	%  Windmill_NUI=interval(-1,-0.5)  NUI21=interval(-1,-0.5)  NUI20=interval(-1,-0.5)
+		  ( 1 0 0 0 0 )	%  Windmill_NUI=interval(-1,-0.5)  NUI21=interval(-1,-0.5)  NUI20=interval(-0.5,-0.1)
+		  ( 1 0 0 0 0 )	%  Windmill_NUI=interval(-1,-0.5)  NUI21=interval(-1,-0.5)  NUI20=interval(-0.1,0.1)
+		  ( 1 0 0 0 0 )	%  Windmill_NUI=interval(-1,-0.5)  NUI21=interval(-1,-0.5)  NUI20=interval(0.1,0.5)
+		  ( 0.8336 0.16512 0.00128 0 0 ))	%  Windmill_NUI=interval(-1,-0.5)  NUI21=interval(-1,-0.5)  NUI20=interval(0.5,1)
+		 (( 1 0 0 0 0 )	%  Windmill_NUI=interval(-1,-0.5)  NUI21=interval(-0.5,-0.1)  NUI20=interval(-1,-0.5)
+		  ( 1 0 0 0 0 )	%  Windmill_NUI=interval(-1,-0.5)  NUI21=interval(-0.5,-0.1)  NUI20=interval(-0.5,-0.1)
+		  ( 1 0 0 0 0 )	%  Windmill_NUI=interval(-1,-0.5)  NUI21=interval(-0.5,-0.1)  NUI20=interval(-0.1,0.1)
+		  ( 0.86656 0.13344 0 0 0 )	%  Windmill_NUI=interval(-1,-0.5)  NUI21=interval(-0.5,-0.1)  NUI20=interval(0.1,0.5)
+		  ( 0.203904 0.588672 0.163008 0.044416 0 ))	%  Windmill_NUI=interval(-1,-0.5)  NUI21=interval(-0.5,-0.1)  NUI20=interval(0.5,1)
+		 (( 1 0 0 0 0 )	%  Windmill_NUI=interval(-1,-0.5)  NUI21=interval(-0.1,0.1)  NUI20=interval(-1,-0.5)
+		  ( 1 0 0 0 0 )	%  Windmill_NUI=interval(-1,-0.5)  NUI21=interval(-0.1,0.1)  NUI20=interval(-0.5,-0.1)
+		  ( 0.93376 0.06624 0 0 0 )	%  Windmill_NUI=interval(-1,-0.5)  NUI21=interval(-0.1,0.1)  NUI20=interval(-0.1,0.1)
+		  ( 0.404032 0.562688 0.03328 0 0 )	%  Windmill_NUI=interval(-1,-0.5)  NUI21=interval(-0.1,0.1)  NUI20=interval(0.1,0.5)
+		  ( 0.003008 0.32128 0.350144 0.322176 0.003392 ))	%  Windmill_NUI=interval(-1,-0.5)  NUI21=interval(-0.1,0.1)  NUI20=interval(0.5,1)
+		 (( 1 0 0 0 0 )	%  Windmill_NUI=interval(-1,-0.5)  NUI21=interval(0.1,0.5)  NUI20=interval(-1,-0.5)
+		  ( 0.86656 0.13344 0 0 0 )	%  Windmill_NUI=interval(-1,-0.5)  NUI21=interval(0.1,0.5)  NUI20=interval(-0.5,-0.1)
+		  ( 0.404032 0.562688 0.03328 0 0 )	%  Windmill_NUI=interval(-1,-0.5)  NUI21=interval(0.1,0.5)  NUI20=interval(-0.1,0.1)
+		  ( 0.056192 0.529536 0.280832 0.13344 0 )	%  Windmill_NUI=interval(-1,-0.5)  NUI21=interval(0.1,0.5)  NUI20=interval(0.1,0.5)
+		  ( 0 0.04384 0.16256 0.58592 0.20768 ))	%  Windmill_NUI=interval(-1,-0.5)  NUI21=interval(0.1,0.5)  NUI20=interval(0.5,1)
+		 (( 0.8336 0.16512 0.00128 0 0 )	%  Windmill_NUI=interval(-1,-0.5)  NUI21=interval(0.5,1)  NUI20=interval(-1,-0.5)
+		  ( 0.203904 0.588672 0.163008 0.044416 0 )	%  Windmill_NUI=interval(-1,-0.5)  NUI21=interval(0.5,1)  NUI20=interval(-0.5,-0.1)
+		  ( 0.003008 0.32128 0.350144 0.322176 0.003392 )	%  Windmill_NUI=interval(-1,-0.5)  NUI21=interval(0.5,1)  NUI20=interval(-0.1,0.1)
+		  ( 0 0.04384 0.16256 0.58592 0.20768 )	%  Windmill_NUI=interval(-1,-0.5)  NUI21=interval(0.5,1)  NUI20=interval(0.1,0.5)
+		  ( 0 0 0.00128 0.16512 0.8336 )))	%  Windmill_NUI=interval(-1,-0.5)  NUI21=interval(0.5,1)  NUI20=interval(0.5,1)
+		((( 1 0 0 0 0 )	%  Windmill_NUI=interval(-0.5,-0.1)  NUI21=interval(-1,-0.5)  NUI20=interval(-1,-0.5)
+		  ( 1 0 0 0 0 )	%  Windmill_NUI=interval(-0.5,-0.1)  NUI21=interval(-1,-0.5)  NUI20=interval(-0.5,-0.1)
+		  ( 1 0 0 0 0 )	%  Windmill_NUI=interval(-0.5,-0.1)  NUI21=interval(-1,-0.5)  NUI20=interval(-0.1,0.1)
+		  ( 0.86656 0.13344 0 0 0 )	%  Windmill_NUI=interval(-0.5,-0.1)  NUI21=interval(-1,-0.5)  NUI20=interval(0.1,0.5)
+		  ( 0.203904 0.5888 0.162816 0.04448 0 ))	%  Windmill_NUI=interval(-0.5,-0.1)  NUI21=interval(-1,-0.5)  NUI20=interval(0.5,1)
+		 (( 1 0 0 0 0 )	%  Windmill_NUI=interval(-0.5,-0.1)  NUI21=interval(-0.5,-0.1)  NUI20=interval(-1,-0.5)
+		  ( 0.976704 0.023296 0 0 0 )	%  Windmill_NUI=interval(-0.5,-0.1)  NUI21=interval(-0.5,-0.1)  NUI20=interval(-0.5,-0.1)
+		  ( 0.7088 0.2912 0 0 0 )	%  Windmill_NUI=interval(-0.5,-0.1)  NUI21=interval(-0.5,-0.1)  NUI20=interval(-0.1,0.1)
+		  ( 0.1664 0.6672 0.145216 0.021184 0 )	%  Windmill_NUI=interval(-0.5,-0.1)  NUI21=interval(-0.5,-0.1)  NUI20=interval(0.1,0.5)
+		  ( 0 0.13344 0.280832 0.529536 0.056192 ))	%  Windmill_NUI=interval(-0.5,-0.1)  NUI21=interval(-0.5,-0.1)  NUI20=interval(0.5,1)
+		 (( 1 0 0 0 0 )	%  Windmill_NUI=interval(-0.5,-0.1)  NUI21=interval(-0.1,0.1)  NUI20=interval(-1,-0.5)
+		  ( 0.7088 0.2912 0 0 0 )	%  Windmill_NUI=interval(-0.5,-0.1)  NUI21=interval(-0.1,0.1)  NUI20=interval(-0.5,-0.1)
+		  ( 0.078208 0.835776 0.086016 0 0 )	%  Windmill_NUI=interval(-0.5,-0.1)  NUI21=interval(-0.1,0.1)  NUI20=interval(-0.1,0.1)
+		  ( 0 0.2912 0.4176 0.2912 0 )	%  Windmill_NUI=interval(-0.5,-0.1)  NUI21=interval(-0.1,0.1)  NUI20=interval(0.1,0.5)
+		  ( 0 0 0.03328 0.562688 0.404032 ))	%  Windmill_NUI=interval(-0.5,-0.1)  NUI21=interval(-0.1,0.1)  NUI20=interval(0.5,1)
+		 (( 0.86656 0.13344 0 0 0 )	%  Windmill_NUI=interval(-0.5,-0.1)  NUI21=interval(0.1,0.5)  NUI20=interval(-1,-0.5)
+		  ( 0.1664 0.6672 0.145216 0.021184 0 )	%  Windmill_NUI=interval(-0.5,-0.1)  NUI21=interval(0.1,0.5)  NUI20=interval(-0.5,-0.1)
+		  ( 0 0.2912 0.4176 0.2912 0 )	%  Windmill_NUI=interval(-0.5,-0.1)  NUI21=interval(0.1,0.5)  NUI20=interval(-0.1,0.1)
+		  ( 0 0.019392 0.147008 0.6672 0.1664 )	%  Windmill_NUI=interval(-0.5,-0.1)  NUI21=interval(0.1,0.5)  NUI20=interval(0.1,0.5)
+		  ( 0 0 0 0.13344 0.86656 ))	%  Windmill_NUI=interval(-0.5,-0.1)  NUI21=interval(0.1,0.5)  NUI20=interval(0.5,1)
+		 (( 0.203904 0.5888 0.162816 0.04448 0 )	%  Windmill_NUI=interval(-0.5,-0.1)  NUI21=interval(0.5,1)  NUI20=interval(-1,-0.5)
+		  ( 0 0.13344 0.280832 0.529536 0.056192 )	%  Windmill_NUI=interval(-0.5,-0.1)  NUI21=interval(0.5,1)  NUI20=interval(-0.5,-0.1)
+		  ( 0 0 0.03328 0.562688 0.404032 )	%  Windmill_NUI=interval(-0.5,-0.1)  NUI21=interval(0.5,1)  NUI20=interval(-0.1,0.1)
+		  ( 0 0 0 0.13344 0.86656 )	%  Windmill_NUI=interval(-0.5,-0.1)  NUI21=interval(0.5,1)  NUI20=interval(0.1,0.5)
+		  ( 0 0 0 0 1 )))	%  Windmill_NUI=interval(-0.5,-0.1)  NUI21=interval(0.5,1)  NUI20=interval(0.5,1)
+		((( 1 0 0 0 0 )	%  Windmill_NUI=interval(-0.1,0.1)  NUI21=interval(-1,-0.5)  NUI20=interval(-1,-0.5)
+		  ( 1 0 0 0 0 )	%  Windmill_NUI=interval(-0.1,0.1)  NUI21=interval(-1,-0.5)  NUI20=interval(-0.5,-0.1)
+		  ( 0.93376 0.06624 0 0 0 )	%  Windmill_NUI=interval(-0.1,0.1)  NUI21=interval(-1,-0.5)  NUI20=interval(-0.1,0.1)
+		  ( 0.404032 0.562688 0.03328 0 0 )	%  Windmill_NUI=interval(-0.1,0.1)  NUI21=interval(-1,-0.5)  NUI20=interval(0.1,0.5)
+		  ( 0.003008 0.322112 0.347584 0.32416 0.003136 ))	%  Windmill_NUI=interval(-0.1,0.1)  NUI21=interval(-1,-0.5)  NUI20=interval(0.5,1)
+		 (( 1 0 0 0 0 )	%  Windmill_NUI=interval(-0.1,0.1)  NUI21=interval(-0.5,-0.1)  NUI20=interval(-1,-0.5)
+		  ( 0.7088 0.2912 0 0 0 )	%  Windmill_NUI=interval(-0.1,0.1)  NUI21=interval(-0.5,-0.1)  NUI20=interval(-0.5,-0.1)
+		  ( 0.078336 0.8352 0.086464 0 0 )	%  Windmill_NUI=interval(-0.1,0.1)  NUI21=interval(-0.5,-0.1)  NUI20=interval(-0.1,0.1)
+		  ( 0 0.2912 0.4176 0.2912 0 )	%  Windmill_NUI=interval(-0.1,0.1)  NUI21=interval(-0.5,-0.1)  NUI20=interval(0.1,0.5)
+		  ( 0 0 0.03328 0.562688 0.404032 ))	%  Windmill_NUI=interval(-0.1,0.1)  NUI21=interval(-0.5,-0.1)  NUI20=interval(0.5,1)
+		 (( 0.93376 0.06624 0 0 0 )	%  Windmill_NUI=interval(-0.1,0.1)  NUI21=interval(-0.1,0.1)  NUI20=interval(-1,-0.5)
+		  ( 0.078336 0.8352 0.086464 0 0 )	%  Windmill_NUI=interval(-0.1,0.1)  NUI21=interval(-0.1,0.1)  NUI20=interval(-0.5,-0.1)
+		  ( 0 0.1664 0.6672 0.1664 0 )	%  Windmill_NUI=interval(-0.1,0.1)  NUI21=interval(-0.1,0.1)  NUI20=interval(-0.1,0.1)
+		  ( 0 0 0.082496 0.830784 0.08672 )	%  Windmill_NUI=interval(-0.1,0.1)  NUI21=interval(-0.1,0.1)  NUI20=interval(0.1,0.5)
+		  ( 0 0 0 0.06624 0.93376 ))	%  Windmill_NUI=interval(-0.1,0.1)  NUI21=interval(-0.1,0.1)  NUI20=interval(0.5,1)
+		 (( 0.404032 0.562688 0.03328 0 0 )	%  Windmill_NUI=interval(-0.1,0.1)  NUI21=interval(0.1,0.5)  NUI20=interval(-1,-0.5)
+		  ( 0 0.2912 0.4176 0.2912 0 )	%  Windmill_NUI=interval(-0.1,0.1)  NUI21=interval(0.1,0.5)  NUI20=interval(-0.5,-0.1)
+		  ( 0 0 0.082496 0.830784 0.08672 )	%  Windmill_NUI=interval(-0.1,0.1)  NUI21=interval(0.1,0.5)  NUI20=interval(-0.1,0.1)
+		  ( 0 0 0 0.2912 0.7088 )	%  Windmill_NUI=interval(-0.1,0.1)  NUI21=interval(0.1,0.5)  NUI20=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))	%  Windmill_NUI=interval(-0.1,0.1)  NUI21=interval(0.1,0.5)  NUI20=interval(0.5,1)
+		 (( 0.003008 0.322112 0.347584 0.32416 0.003136 )	%  Windmill_NUI=interval(-0.1,0.1)  NUI21=interval(0.5,1)  NUI20=interval(-1,-0.5)
+		  ( 0 0 0.03328 0.562688 0.404032 )	%  Windmill_NUI=interval(-0.1,0.1)  NUI21=interval(0.5,1)  NUI20=interval(-0.5,-0.1)
+		  ( 0 0 0 0.06624 0.93376 )	%  Windmill_NUI=interval(-0.1,0.1)  NUI21=interval(0.5,1)  NUI20=interval(-0.1,0.1)
+		  ( 0 0 0 0 1 )	%  Windmill_NUI=interval(-0.1,0.1)  NUI21=interval(0.5,1)  NUI20=interval(0.1,0.5)
+		  ( 0 0 0 0 1 )))	%  Windmill_NUI=interval(-0.1,0.1)  NUI21=interval(0.5,1)  NUI20=interval(0.5,1)
+		((( 1 0 0 0 0 )	%  Windmill_NUI=interval(0.1,0.5)  NUI21=interval(-1,-0.5)  NUI20=interval(-1,-0.5)
+		  ( 0.86656 0.13344 0 0 0 )	%  Windmill_NUI=interval(0.1,0.5)  NUI21=interval(-1,-0.5)  NUI20=interval(-0.5,-0.1)
+		  ( 0.404032 0.562688 0.03328 0 0 )	%  Windmill_NUI=interval(0.1,0.5)  NUI21=interval(-1,-0.5)  NUI20=interval(-0.1,0.1)
+		  ( 0.056192 0.529536 0.280832 0.13344 0 )	%  Windmill_NUI=interval(0.1,0.5)  NUI21=interval(-1,-0.5)  NUI20=interval(0.1,0.5)
+		  ( 0 0.04384 0.161856 0.586112 0.208192 ))	%  Windmill_NUI=interval(0.1,0.5)  NUI21=interval(-1,-0.5)  NUI20=interval(0.5,1)
+		 (( 0.86656 0.13344 0 0 0 )	%  Windmill_NUI=interval(0.1,0.5)  NUI21=interval(-0.5,-0.1)  NUI20=interval(-1,-0.5)
+		  ( 0.1664 0.6672 0.145216 0.021184 0 )	%  Windmill_NUI=interval(0.1,0.5)  NUI21=interval(-0.5,-0.1)  NUI20=interval(-0.5,-0.1)
+		  ( 0 0.2912 0.4176 0.2912 0 )	%  Windmill_NUI=interval(0.1,0.5)  NUI21=interval(-0.5,-0.1)  NUI20=interval(-0.1,0.1)
+		  ( 0 0.018752 0.147648 0.6672 0.1664 )	%  Windmill_NUI=interval(0.1,0.5)  NUI21=interval(-0.5,-0.1)  NUI20=interval(0.1,0.5)
+		  ( 0 0 0 0.13344 0.86656 ))	%  Windmill_NUI=interval(0.1,0.5)  NUI21=interval(-0.5,-0.1)  NUI20=interval(0.5,1)
+		 (( 0.404032 0.562688 0.03328 0 0 )	%  Windmill_NUI=interval(0.1,0.5)  NUI21=interval(-0.1,0.1)  NUI20=interval(-1,-0.5)
+		  ( 0 0.2912 0.4176 0.2912 0 )	%  Windmill_NUI=interval(0.1,0.5)  NUI21=interval(-0.1,0.1)  NUI20=interval(-0.5,-0.1)
+		  ( 0 0 0.082688 0.8304 0.086912 )	%  Windmill_NUI=interval(0.1,0.5)  NUI21=interval(-0.1,0.1)  NUI20=interval(-0.1,0.1)
+		  ( 0 0 0 0.2912 0.7088 )	%  Windmill_NUI=interval(0.1,0.5)  NUI21=interval(-0.1,0.1)  NUI20=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))	%  Windmill_NUI=interval(0.1,0.5)  NUI21=interval(-0.1,0.1)  NUI20=interval(0.5,1)
+		 (( 0.056192 0.529536 0.280832 0.13344 0 )	%  Windmill_NUI=interval(0.1,0.5)  NUI21=interval(0.1,0.5)  NUI20=interval(-1,-0.5)
+		  ( 0 0.018752 0.147648 0.6672 0.1664 )	%  Windmill_NUI=interval(0.1,0.5)  NUI21=interval(0.1,0.5)  NUI20=interval(-0.5,-0.1)
+		  ( 0 0 0 0.2912 0.7088 )	%  Windmill_NUI=interval(0.1,0.5)  NUI21=interval(0.1,0.5)  NUI20=interval(-0.1,0.1)
+		  ( 0 0 0 0.018304 0.981696 )	%  Windmill_NUI=interval(0.1,0.5)  NUI21=interval(0.1,0.5)  NUI20=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))	%  Windmill_NUI=interval(0.1,0.5)  NUI21=interval(0.1,0.5)  NUI20=interval(0.5,1)
+		 (( 0 0.04384 0.161856 0.586112 0.208192 )	%  Windmill_NUI=interval(0.1,0.5)  NUI21=interval(0.5,1)  NUI20=interval(-1,-0.5)
+		  ( 0 0 0 0.13344 0.86656 )	%  Windmill_NUI=interval(0.1,0.5)  NUI21=interval(0.5,1)  NUI20=interval(-0.5,-0.1)
+		  ( 0 0 0 0 1 )	%  Windmill_NUI=interval(0.1,0.5)  NUI21=interval(0.5,1)  NUI20=interval(-0.1,0.1)
+		  ( 0 0 0 0 1 )	%  Windmill_NUI=interval(0.1,0.5)  NUI21=interval(0.5,1)  NUI20=interval(0.1,0.5)
+		  ( 0 0 0 0 1 )))	%  Windmill_NUI=interval(0.1,0.5)  NUI21=interval(0.5,1)  NUI20=interval(0.5,1)
+		((( 0.8336 0.16512 0.00128 0 0 )	%  Windmill_NUI=interval(0.5,1)  NUI21=interval(-1,-0.5)  NUI20=interval(-1,-0.5)
+		  ( 0.20416 0.588352 0.163072 0.044416 0 )	%  Windmill_NUI=interval(0.5,1)  NUI21=interval(-1,-0.5)  NUI20=interval(-0.5,-0.1)
+		  ( 0.003008 0.32128 0.350336 0.32224 0.003136 )	%  Windmill_NUI=interval(0.5,1)  NUI21=interval(-1,-0.5)  NUI20=interval(-0.1,0.1)
+		  ( 0 0.04384 0.162624 0.585344 0.208192 )	%  Windmill_NUI=interval(0.5,1)  NUI21=interval(-1,-0.5)  NUI20=interval(0.1,0.5)
+		  ( 0 0 0.00128 0.16512 0.8336 ))	%  Windmill_NUI=interval(0.5,1)  NUI21=interval(-1,-0.5)  NUI20=interval(0.5,1)
+		 (( 0.20416 0.588352 0.163072 0.044416 0 )	%  Windmill_NUI=interval(0.5,1)  NUI21=interval(-0.5,-0.1)  NUI20=interval(-1,-0.5)
+		  ( 0 0.13344 0.280832 0.529536 0.056192 )	%  Windmill_NUI=interval(0.5,1)  NUI21=interval(-0.5,-0.1)  NUI20=interval(-0.5,-0.1)
+		  ( 0 0 0.03328 0.562688 0.404032 )	%  Windmill_NUI=interval(0.5,1)  NUI21=interval(-0.5,-0.1)  NUI20=interval(-0.1,0.1)
+		  ( 0 0 0 0.13344 0.86656 )	%  Windmill_NUI=interval(0.5,1)  NUI21=interval(-0.5,-0.1)  NUI20=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))	%  Windmill_NUI=interval(0.5,1)  NUI21=interval(-0.5,-0.1)  NUI20=interval(0.5,1)
+		 (( 0.003008 0.32128 0.350336 0.32224 0.003136 )	%  Windmill_NUI=interval(0.5,1)  NUI21=interval(-0.1,0.1)  NUI20=interval(-1,-0.5)
+		  ( 0 0 0.03328 0.562688 0.404032 )	%  Windmill_NUI=interval(0.5,1)  NUI21=interval(-0.1,0.1)  NUI20=interval(-0.5,-0.1)
+		  ( 0 0 0 0.06624 0.93376 )	%  Windmill_NUI=interval(0.5,1)  NUI21=interval(-0.1,0.1)  NUI20=interval(-0.1,0.1)
+		  ( 0 0 0 0 1 )	%  Windmill_NUI=interval(0.5,1)  NUI21=interval(-0.1,0.1)  NUI20=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))	%  Windmill_NUI=interval(0.5,1)  NUI21=interval(-0.1,0.1)  NUI20=interval(0.5,1)
+		 (( 0 0.04384 0.162624 0.585344 0.208192 )	%  Windmill_NUI=interval(0.5,1)  NUI21=interval(0.1,0.5)  NUI20=interval(-1,-0.5)
+		  ( 0 0 0 0.13344 0.86656 )	%  Windmill_NUI=interval(0.5,1)  NUI21=interval(0.1,0.5)  NUI20=interval(-0.5,-0.1)
+		  ( 0 0 0 0 1 )	%  Windmill_NUI=interval(0.5,1)  NUI21=interval(0.1,0.5)  NUI20=interval(-0.1,0.1)
+		  ( 0 0 0 0 1 )	%  Windmill_NUI=interval(0.5,1)  NUI21=interval(0.1,0.5)  NUI20=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))	%  Windmill_NUI=interval(0.5,1)  NUI21=interval(0.1,0.5)  NUI20=interval(0.5,1)
+		 (( 0 0 0.00128 0.16512 0.8336 )	%  Windmill_NUI=interval(0.5,1)  NUI21=interval(0.5,1)  NUI20=interval(-1,-0.5)
+		  ( 0 0 0 0 1 )	%  Windmill_NUI=interval(0.5,1)  NUI21=interval(0.5,1)  NUI20=interval(-0.5,-0.1)
+		  ( 0 0 0 0 1 )	%  Windmill_NUI=interval(0.5,1)  NUI21=interval(0.5,1)  NUI20=interval(-0.1,0.1)
+		  ( 0 0 0 0 1 )	%  Windmill_NUI=interval(0.5,1)  NUI21=interval(0.5,1)  NUI20=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))));	%  Windmill_NUI=interval(0.5,1)  NUI21=interval(0.5,1)  NUI20=interval(0.5,1)
+    }
+
+    potential (NUI21 | HardyNative_NUI BroadWeeds_NUI)
+    {
+	model_nodes = ();
+	model_data = ( min (1, max (-1, 0 + BroadWeeds_NUI + HardyNative_NUI)) );
+	data = ((( 1 0 0 0 0 )	%  HardyNative_NUI=interval(-1,-0.5)  BroadWeeds_NUI=interval(-1,-0.5)
+		 ( 1 0 0 0 0 )	%  HardyNative_NUI=interval(-1,-0.5)  BroadWeeds_NUI=interval(-0.5,-0.1)
+		 ( 0.9504 0.0496 0 0 0 )	%  HardyNative_NUI=interval(-1,-0.5)  BroadWeeds_NUI=interval(-0.1,0.1)
+		 ( 0.4 0.5744 0.0256 0 0 )	%  HardyNative_NUI=interval(-1,-0.5)  BroadWeeds_NUI=interval(0.1,0.5)
+		 ( 0 0.3072 0.3792 0.3136 0 ))	%  HardyNative_NUI=interval(-1,-0.5)  BroadWeeds_NUI=interval(0.5,1)
+		(( 1 0 0 0 0 )	%  HardyNative_NUI=interval(-0.5,-0.1)  BroadWeeds_NUI=interval(-1,-0.5)
+		 ( 0.7264 0.2736 0 0 0 )	%  HardyNative_NUI=interval(-0.5,-0.1)  BroadWeeds_NUI=interval(-0.5,-0.1)
+		 ( 0.0576 0.8752 0.0672 0 0 )	%  HardyNative_NUI=interval(-0.5,-0.1)  BroadWeeds_NUI=interval(-0.1,0.1)
+		 ( 0 0.2736 0.4528 0.2736 0 )	%  HardyNative_NUI=interval(-0.5,-0.1)  BroadWeeds_NUI=interval(0.1,0.5)
+		 ( 0 0 0.0256 0.5744 0.4 ))	%  HardyNative_NUI=interval(-0.5,-0.1)  BroadWeeds_NUI=interval(0.5,1)
+		(( 0.9504 0.0496 0 0 0 )	%  HardyNative_NUI=interval(-0.1,0.1)  BroadWeeds_NUI=interval(-1,-0.5)
+		 ( 0.0576 0.8752 0.0672 0 0 )	%  HardyNative_NUI=interval(-0.1,0.1)  BroadWeeds_NUI=interval(-0.5,-0.1)
+		 ( 0 0.1248 0.7504 0.1248 0 )	%  HardyNative_NUI=interval(-0.1,0.1)  BroadWeeds_NUI=interval(-0.1,0.1)
+		 ( 0 0 0.0624 0.8704 0.0672 )	%  HardyNative_NUI=interval(-0.1,0.1)  BroadWeeds_NUI=interval(0.1,0.5)
+		 ( 0 0 0 0.0496 0.9504 ))	%  HardyNative_NUI=interval(-0.1,0.1)  BroadWeeds_NUI=interval(0.5,1)
+		(( 0.4 0.5744 0.0256 0 0 )	%  HardyNative_NUI=interval(0.1,0.5)  BroadWeeds_NUI=interval(-1,-0.5)
+		 ( 0 0.2736 0.4528 0.2736 0 )	%  HardyNative_NUI=interval(0.1,0.5)  BroadWeeds_NUI=interval(-0.5,-0.1)
+		 ( 0 0 0.0624 0.8704 0.0672 )	%  HardyNative_NUI=interval(0.1,0.5)  BroadWeeds_NUI=interval(-0.1,0.1)
+		 ( 0 0 0 0.2736 0.7264 )	%  HardyNative_NUI=interval(0.1,0.5)  BroadWeeds_NUI=interval(0.1,0.5)
+		 ( 0 0 0 0 1 ))	%  HardyNative_NUI=interval(0.1,0.5)  BroadWeeds_NUI=interval(0.5,1)
+		(( 0 0.3072 0.3792 0.3136 0 )	%  HardyNative_NUI=interval(0.5,1)  BroadWeeds_NUI=interval(-1,-0.5)
+		 ( 0 0 0.0256 0.5744 0.4 )	%  HardyNative_NUI=interval(0.5,1)  BroadWeeds_NUI=interval(-0.5,-0.1)
+		 ( 0 0 0 0.0496 0.9504 )	%  HardyNative_NUI=interval(0.5,1)  BroadWeeds_NUI=interval(-0.1,0.1)
+		 ( 0 0 0 0 1 )	%  HardyNative_NUI=interval(0.5,1)  BroadWeeds_NUI=interval(0.1,0.5)
+		 ( 0 0 0 0 1 )));	%  HardyNative_NUI=interval(0.5,1)  BroadWeeds_NUI=interval(0.5,1)
+    }
+
+    potential (NUI20 | ST_NUI Spear_NUI)
+    {
+	model_nodes = ();
+	model_data = ( min (1, max (-1, 0 + Spear_NUI + ST_NUI)) );
+	data = ((( 1 0 0 0 0 )	%  ST_NUI=interval(-1,-0.5)  Spear_NUI=interval(-1,-0.5)
+		 ( 1 0 0 0 0 )	%  ST_NUI=interval(-1,-0.5)  Spear_NUI=interval(-0.5,-0.1)
+		 ( 0.9504 0.0496 0 0 0 )	%  ST_NUI=interval(-1,-0.5)  Spear_NUI=interval(-0.1,0.1)
+		 ( 0.4 0.5744 0.0256 0 0 )	%  ST_NUI=interval(-1,-0.5)  Spear_NUI=interval(0.1,0.5)
+		 ( 0 0.3072 0.3792 0.3136 0 ))	%  ST_NUI=interval(-1,-0.5)  Spear_NUI=interval(0.5,1)
+		(( 1 0 0 0 0 )	%  ST_NUI=interval(-0.5,-0.1)  Spear_NUI=interval(-1,-0.5)
+		 ( 0.7264 0.2736 0 0 0 )	%  ST_NUI=interval(-0.5,-0.1)  Spear_NUI=interval(-0.5,-0.1)
+		 ( 0.0576 0.8752 0.0672 0 0 )	%  ST_NUI=interval(-0.5,-0.1)  Spear_NUI=interval(-0.1,0.1)
+		 ( 0 0.2736 0.4528 0.2736 0 )	%  ST_NUI=interval(-0.5,-0.1)  Spear_NUI=interval(0.1,0.5)
+		 ( 0 0 0.0256 0.5744 0.4 ))	%  ST_NUI=interval(-0.5,-0.1)  Spear_NUI=interval(0.5,1)
+		(( 0.9504 0.0496 0 0 0 )	%  ST_NUI=interval(-0.1,0.1)  Spear_NUI=interval(-1,-0.5)
+		 ( 0.0576 0.8752 0.0672 0 0 )	%  ST_NUI=interval(-0.1,0.1)  Spear_NUI=interval(-0.5,-0.1)
+		 ( 0 0.1248 0.7504 0.1248 0 )	%  ST_NUI=interval(-0.1,0.1)  Spear_NUI=interval(-0.1,0.1)
+		 ( 0 0 0.0624 0.8704 0.0672 )	%  ST_NUI=interval(-0.1,0.1)  Spear_NUI=interval(0.1,0.5)
+		 ( 0 0 0 0.0496 0.9504 ))	%  ST_NUI=interval(-0.1,0.1)  Spear_NUI=interval(0.5,1)
+		(( 0.4 0.5744 0.0256 0 0 )	%  ST_NUI=interval(0.1,0.5)  Spear_NUI=interval(-1,-0.5)
+		 ( 0 0.2736 0.4528 0.2736 0 )	%  ST_NUI=interval(0.1,0.5)  Spear_NUI=interval(-0.5,-0.1)
+		 ( 0 0 0.0624 0.8704 0.0672 )	%  ST_NUI=interval(0.1,0.5)  Spear_NUI=interval(-0.1,0.1)
+		 ( 0 0 0 0.2736 0.7264 )	%  ST_NUI=interval(0.1,0.5)  Spear_NUI=interval(0.1,0.5)
+		 ( 0 0 0 0 1 ))	%  ST_NUI=interval(0.1,0.5)  Spear_NUI=interval(0.5,1)
+		(( 0 0.3072 0.3792 0.3136 0 )	%  ST_NUI=interval(0.5,1)  Spear_NUI=interval(-1,-0.5)
+		 ( 0 0 0.0256 0.5744 0.4 )	%  ST_NUI=interval(0.5,1)  Spear_NUI=interval(-0.5,-0.1)
+		 ( 0 0 0 0.0496 0.9504 )	%  ST_NUI=interval(0.5,1)  Spear_NUI=interval(-0.1,0.1)
+		 ( 0 0 0 0 1 )	%  ST_NUI=interval(0.5,1)  Spear_NUI=interval(0.1,0.5)
+		 ( 0 0 0 0 1 )));	%  ST_NUI=interval(0.5,1)  Spear_NUI=interval(0.5,1)
+    }
+
+    potential (NUI1 | Wallaby_NUI NUI11 NUI10)
+    {
+	model_nodes = ();
+	model_data = ( min (1, max (-1, 0 + NUI10 + NUI11 + Wallaby_NUI)) );
+	data = (((( 1 0 0 0 0 )	%  Wallaby_NUI=interval(-1,-0.5)  NUI11=interval(-1,-0.5)  NUI10=interval(-1,-0.5)
+		  ( 1 0 0 0 0 )	%  Wallaby_NUI=interval(-1,-0.5)  NUI11=interval(-1,-0.5)  NUI10=interval(-0.5,-0.1)
+		  ( 1 0 0 0 0 )	%  Wallaby_NUI=interval(-1,-0.5)  NUI11=interval(-1,-0.5)  NUI10=interval(-0.1,0.1)
+		  ( 1 0 0 0 0 )	%  Wallaby_NUI=interval(-1,-0.5)  NUI11=interval(-1,-0.5)  NUI10=interval(0.1,0.5)
+		  ( 0.8336 0.16512 0.00128 0 0 ))	%  Wallaby_NUI=interval(-1,-0.5)  NUI11=interval(-1,-0.5)  NUI10=interval(0.5,1)
+		 (( 1 0 0 0 0 )	%  Wallaby_NUI=interval(-1,-0.5)  NUI11=interval(-0.5,-0.1)  NUI10=interval(-1,-0.5)
+		  ( 1 0 0 0 0 )	%  Wallaby_NUI=interval(-1,-0.5)  NUI11=interval(-0.5,-0.1)  NUI10=interval(-0.5,-0.1)
+		  ( 1 0 0 0 0 )	%  Wallaby_NUI=interval(-1,-0.5)  NUI11=interval(-0.5,-0.1)  NUI10=interval(-0.1,0.1)
+		  ( 0.86656 0.13344 0 0 0 )	%  Wallaby_NUI=interval(-1,-0.5)  NUI11=interval(-0.5,-0.1)  NUI10=interval(0.1,0.5)
+		  ( 0.203904 0.588672 0.163008 0.044416 0 ))	%  Wallaby_NUI=interval(-1,-0.5)  NUI11=interval(-0.5,-0.1)  NUI10=interval(0.5,1)
+		 (( 1 0 0 0 0 )	%  Wallaby_NUI=interval(-1,-0.5)  NUI11=interval(-0.1,0.1)  NUI10=interval(-1,-0.5)
+		  ( 1 0 0 0 0 )	%  Wallaby_NUI=interval(-1,-0.5)  NUI11=interval(-0.1,0.1)  NUI10=interval(-0.5,-0.1)
+		  ( 0.93376 0.06624 0 0 0 )	%  Wallaby_NUI=interval(-1,-0.5)  NUI11=interval(-0.1,0.1)  NUI10=interval(-0.1,0.1)
+		  ( 0.404032 0.562688 0.03328 0 0 )	%  Wallaby_NUI=interval(-1,-0.5)  NUI11=interval(-0.1,0.1)  NUI10=interval(0.1,0.5)
+		  ( 0.003008 0.32128 0.350144 0.322176 0.003392 ))	%  Wallaby_NUI=interval(-1,-0.5)  NUI11=interval(-0.1,0.1)  NUI10=interval(0.5,1)
+		 (( 1 0 0 0 0 )	%  Wallaby_NUI=interval(-1,-0.5)  NUI11=interval(0.1,0.5)  NUI10=interval(-1,-0.5)
+		  ( 0.86656 0.13344 0 0 0 )	%  Wallaby_NUI=interval(-1,-0.5)  NUI11=interval(0.1,0.5)  NUI10=interval(-0.5,-0.1)
+		  ( 0.404032 0.562688 0.03328 0 0 )	%  Wallaby_NUI=interval(-1,-0.5)  NUI11=interval(0.1,0.5)  NUI10=interval(-0.1,0.1)
+		  ( 0.056192 0.529536 0.280832 0.13344 0 )	%  Wallaby_NUI=interval(-1,-0.5)  NUI11=interval(0.1,0.5)  NUI10=interval(0.1,0.5)
+		  ( 0 0.04384 0.16256 0.58592 0.20768 ))	%  Wallaby_NUI=interval(-1,-0.5)  NUI11=interval(0.1,0.5)  NUI10=interval(0.5,1)
+		 (( 0.8336 0.16512 0.00128 0 0 )	%  Wallaby_NUI=interval(-1,-0.5)  NUI11=interval(0.5,1)  NUI10=interval(-1,-0.5)
+		  ( 0.203904 0.588672 0.163008 0.044416 0 )	%  Wallaby_NUI=interval(-1,-0.5)  NUI11=interval(0.5,1)  NUI10=interval(-0.5,-0.1)
+		  ( 0.003008 0.32128 0.350144 0.322176 0.003392 )	%  Wallaby_NUI=interval(-1,-0.5)  NUI11=interval(0.5,1)  NUI10=interval(-0.1,0.1)
+		  ( 0 0.04384 0.16256 0.58592 0.20768 )	%  Wallaby_NUI=interval(-1,-0.5)  NUI11=interval(0.5,1)  NUI10=interval(0.1,0.5)
+		  ( 0 0 0.00128 0.16512 0.8336 )))	%  Wallaby_NUI=interval(-1,-0.5)  NUI11=interval(0.5,1)  NUI10=interval(0.5,1)
+		((( 1 0 0 0 0 )	%  Wallaby_NUI=interval(-0.5,-0.1)  NUI11=interval(-1,-0.5)  NUI10=interval(-1,-0.5)
+		  ( 1 0 0 0 0 )	%  Wallaby_NUI=interval(-0.5,-0.1)  NUI11=interval(-1,-0.5)  NUI10=interval(-0.5,-0.1)
+		  ( 1 0 0 0 0 )	%  Wallaby_NUI=interval(-0.5,-0.1)  NUI11=interval(-1,-0.5)  NUI10=interval(-0.1,0.1)
+		  ( 0.86656 0.13344 0 0 0 )	%  Wallaby_NUI=interval(-0.5,-0.1)  NUI11=interval(-1,-0.5)  NUI10=interval(0.1,0.5)
+		  ( 0.203904 0.5888 0.162816 0.04448 0 ))	%  Wallaby_NUI=interval(-0.5,-0.1)  NUI11=interval(-1,-0.5)  NUI10=interval(0.5,1)
+		 (( 1 0 0 0 0 )	%  Wallaby_NUI=interval(-0.5,-0.1)  NUI11=interval(-0.5,-0.1)  NUI10=interval(-1,-0.5)
+		  ( 0.976704 0.023296 0 0 0 )	%  Wallaby_NUI=interval(-0.5,-0.1)  NUI11=interval(-0.5,-0.1)  NUI10=interval(-0.5,-0.1)
+		  ( 0.7088 0.2912 0 0 0 )	%  Wallaby_NUI=interval(-0.5,-0.1)  NUI11=interval(-0.5,-0.1)  NUI10=interval(-0.1,0.1)
+		  ( 0.1664 0.6672 0.145216 0.021184 0 )	%  Wallaby_NUI=interval(-0.5,-0.1)  NUI11=interval(-0.5,-0.1)  NUI10=interval(0.1,0.5)
+		  ( 0 0.13344 0.280832 0.529536 0.056192 ))	%  Wallaby_NUI=interval(-0.5,-0.1)  NUI11=interval(-0.5,-0.1)  NUI10=interval(0.5,1)
+		 (( 1 0 0 0 0 )	%  Wallaby_NUI=interval(-0.5,-0.1)  NUI11=interval(-0.1,0.1)  NUI10=interval(-1,-0.5)
+		  ( 0.7088 0.2912 0 0 0 )	%  Wallaby_NUI=interval(-0.5,-0.1)  NUI11=interval(-0.1,0.1)  NUI10=interval(-0.5,-0.1)
+		  ( 0.078208 0.835776 0.086016 0 0 )	%  Wallaby_NUI=interval(-0.5,-0.1)  NUI11=interval(-0.1,0.1)  NUI10=interval(-0.1,0.1)
+		  ( 0 0.2912 0.4176 0.2912 0 )	%  Wallaby_NUI=interval(-0.5,-0.1)  NUI11=interval(-0.1,0.1)  NUI10=interval(0.1,0.5)
+		  ( 0 0 0.03328 0.562688 0.404032 ))	%  Wallaby_NUI=interval(-0.5,-0.1)  NUI11=interval(-0.1,0.1)  NUI10=interval(0.5,1)
+		 (( 0.86656 0.13344 0 0 0 )	%  Wallaby_NUI=interval(-0.5,-0.1)  NUI11=interval(0.1,0.5)  NUI10=interval(-1,-0.5)
+		  ( 0.1664 0.6672 0.145216 0.021184 0 )	%  Wallaby_NUI=interval(-0.5,-0.1)  NUI11=interval(0.1,0.5)  NUI10=interval(-0.5,-0.1)
+		  ( 0 0.2912 0.4176 0.2912 0 )	%  Wallaby_NUI=interval(-0.5,-0.1)  NUI11=interval(0.1,0.5)  NUI10=interval(-0.1,0.1)
+		  ( 0 0.019392 0.147008 0.6672 0.1664 )	%  Wallaby_NUI=interval(-0.5,-0.1)  NUI11=interval(0.1,0.5)  NUI10=interval(0.1,0.5)
+		  ( 0 0 0 0.13344 0.86656 ))	%  Wallaby_NUI=interval(-0.5,-0.1)  NUI11=interval(0.1,0.5)  NUI10=interval(0.5,1)
+		 (( 0.203904 0.5888 0.162816 0.04448 0 )	%  Wallaby_NUI=interval(-0.5,-0.1)  NUI11=interval(0.5,1)  NUI10=interval(-1,-0.5)
+		  ( 0 0.13344 0.280832 0.529536 0.056192 )	%  Wallaby_NUI=interval(-0.5,-0.1)  NUI11=interval(0.5,1)  NUI10=interval(-0.5,-0.1)
+		  ( 0 0 0.03328 0.562688 0.404032 )	%  Wallaby_NUI=interval(-0.5,-0.1)  NUI11=interval(0.5,1)  NUI10=interval(-0.1,0.1)
+		  ( 0 0 0 0.13344 0.86656 )	%  Wallaby_NUI=interval(-0.5,-0.1)  NUI11=interval(0.5,1)  NUI10=interval(0.1,0.5)
+		  ( 0 0 0 0 1 )))	%  Wallaby_NUI=interval(-0.5,-0.1)  NUI11=interval(0.5,1)  NUI10=interval(0.5,1)
+		((( 1 0 0 0 0 )	%  Wallaby_NUI=interval(-0.1,0.1)  NUI11=interval(-1,-0.5)  NUI10=interval(-1,-0.5)
+		  ( 1 0 0 0 0 )	%  Wallaby_NUI=interval(-0.1,0.1)  NUI11=interval(-1,-0.5)  NUI10=interval(-0.5,-0.1)
+		  ( 0.93376 0.06624 0 0 0 )	%  Wallaby_NUI=interval(-0.1,0.1)  NUI11=interval(-1,-0.5)  NUI10=interval(-0.1,0.1)
+		  ( 0.404032 0.562688 0.03328 0 0 )	%  Wallaby_NUI=interval(-0.1,0.1)  NUI11=interval(-1,-0.5)  NUI10=interval(0.1,0.5)
+		  ( 0.003008 0.322112 0.347584 0.32416 0.003136 ))	%  Wallaby_NUI=interval(-0.1,0.1)  NUI11=interval(-1,-0.5)  NUI10=interval(0.5,1)
+		 (( 1 0 0 0 0 )	%  Wallaby_NUI=interval(-0.1,0.1)  NUI11=interval(-0.5,-0.1)  NUI10=interval(-1,-0.5)
+		  ( 0.7088 0.2912 0 0 0 )	%  Wallaby_NUI=interval(-0.1,0.1)  NUI11=interval(-0.5,-0.1)  NUI10=interval(-0.5,-0.1)
+		  ( 0.078336 0.8352 0.086464 0 0 )	%  Wallaby_NUI=interval(-0.1,0.1)  NUI11=interval(-0.5,-0.1)  NUI10=interval(-0.1,0.1)
+		  ( 0 0.2912 0.4176 0.2912 0 )	%  Wallaby_NUI=interval(-0.1,0.1)  NUI11=interval(-0.5,-0.1)  NUI10=interval(0.1,0.5)
+		  ( 0 0 0.03328 0.562688 0.404032 ))	%  Wallaby_NUI=interval(-0.1,0.1)  NUI11=interval(-0.5,-0.1)  NUI10=interval(0.5,1)
+		 (( 0.93376 0.06624 0 0 0 )	%  Wallaby_NUI=interval(-0.1,0.1)  NUI11=interval(-0.1,0.1)  NUI10=interval(-1,-0.5)
+		  ( 0.078336 0.8352 0.086464 0 0 )	%  Wallaby_NUI=interval(-0.1,0.1)  NUI11=interval(-0.1,0.1)  NUI10=interval(-0.5,-0.1)
+		  ( 0 0.1664 0.6672 0.1664 0 )	%  Wallaby_NUI=interval(-0.1,0.1)  NUI11=interval(-0.1,0.1)  NUI10=interval(-0.1,0.1)
+		  ( 0 0 0.082496 0.830784 0.08672 )	%  Wallaby_NUI=interval(-0.1,0.1)  NUI11=interval(-0.1,0.1)  NUI10=interval(0.1,0.5)
+		  ( 0 0 0 0.06624 0.93376 ))	%  Wallaby_NUI=interval(-0.1,0.1)  NUI11=interval(-0.1,0.1)  NUI10=interval(0.5,1)
+		 (( 0.404032 0.562688 0.03328 0 0 )	%  Wallaby_NUI=interval(-0.1,0.1)  NUI11=interval(0.1,0.5)  NUI10=interval(-1,-0.5)
+		  ( 0 0.2912 0.4176 0.2912 0 )	%  Wallaby_NUI=interval(-0.1,0.1)  NUI11=interval(0.1,0.5)  NUI10=interval(-0.5,-0.1)
+		  ( 0 0 0.082496 0.830784 0.08672 )	%  Wallaby_NUI=interval(-0.1,0.1)  NUI11=interval(0.1,0.5)  NUI10=interval(-0.1,0.1)
+		  ( 0 0 0 0.2912 0.7088 )	%  Wallaby_NUI=interval(-0.1,0.1)  NUI11=interval(0.1,0.5)  NUI10=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))	%  Wallaby_NUI=interval(-0.1,0.1)  NUI11=interval(0.1,0.5)  NUI10=interval(0.5,1)
+		 (( 0.003008 0.322112 0.347584 0.32416 0.003136 )	%  Wallaby_NUI=interval(-0.1,0.1)  NUI11=interval(0.5,1)  NUI10=interval(-1,-0.5)
+		  ( 0 0 0.03328 0.562688 0.404032 )	%  Wallaby_NUI=interval(-0.1,0.1)  NUI11=interval(0.5,1)  NUI10=interval(-0.5,-0.1)
+		  ( 0 0 0 0.06624 0.93376 )	%  Wallaby_NUI=interval(-0.1,0.1)  NUI11=interval(0.5,1)  NUI10=interval(-0.1,0.1)
+		  ( 0 0 0 0 1 )	%  Wallaby_NUI=interval(-0.1,0.1)  NUI11=interval(0.5,1)  NUI10=interval(0.1,0.5)
+		  ( 0 0 0 0 1 )))	%  Wallaby_NUI=interval(-0.1,0.1)  NUI11=interval(0.5,1)  NUI10=interval(0.5,1)
+		((( 1 0 0 0 0 )	%  Wallaby_NUI=interval(0.1,0.5)  NUI11=interval(-1,-0.5)  NUI10=interval(-1,-0.5)
+		  ( 0.86656 0.13344 0 0 0 )	%  Wallaby_NUI=interval(0.1,0.5)  NUI11=interval(-1,-0.5)  NUI10=interval(-0.5,-0.1)
+		  ( 0.404032 0.562688 0.03328 0 0 )	%  Wallaby_NUI=interval(0.1,0.5)  NUI11=interval(-1,-0.5)  NUI10=interval(-0.1,0.1)
+		  ( 0.056192 0.529536 0.280832 0.13344 0 )	%  Wallaby_NUI=interval(0.1,0.5)  NUI11=interval(-1,-0.5)  NUI10=interval(0.1,0.5)
+		  ( 0 0.04384 0.161856 0.586112 0.208192 ))	%  Wallaby_NUI=interval(0.1,0.5)  NUI11=interval(-1,-0.5)  NUI10=interval(0.5,1)
+		 (( 0.86656 0.13344 0 0 0 )	%  Wallaby_NUI=interval(0.1,0.5)  NUI11=interval(-0.5,-0.1)  NUI10=interval(-1,-0.5)
+		  ( 0.1664 0.6672 0.145216 0.021184 0 )	%  Wallaby_NUI=interval(0.1,0.5)  NUI11=interval(-0.5,-0.1)  NUI10=interval(-0.5,-0.1)
+		  ( 0 0.2912 0.4176 0.2912 0 )	%  Wallaby_NUI=interval(0.1,0.5)  NUI11=interval(-0.5,-0.1)  NUI10=interval(-0.1,0.1)
+		  ( 0 0.018752 0.147648 0.6672 0.1664 )	%  Wallaby_NUI=interval(0.1,0.5)  NUI11=interval(-0.5,-0.1)  NUI10=interval(0.1,0.5)
+		  ( 0 0 0 0.13344 0.86656 ))	%  Wallaby_NUI=interval(0.1,0.5)  NUI11=interval(-0.5,-0.1)  NUI10=interval(0.5,1)
+		 (( 0.404032 0.562688 0.03328 0 0 )	%  Wallaby_NUI=interval(0.1,0.5)  NUI11=interval(-0.1,0.1)  NUI10=interval(-1,-0.5)
+		  ( 0 0.2912 0.4176 0.2912 0 )	%  Wallaby_NUI=interval(0.1,0.5)  NUI11=interval(-0.1,0.1)  NUI10=interval(-0.5,-0.1)
+		  ( 0 0 0.082688 0.8304 0.086912 )	%  Wallaby_NUI=interval(0.1,0.5)  NUI11=interval(-0.1,0.1)  NUI10=interval(-0.1,0.1)
+		  ( 0 0 0 0.2912 0.7088 )	%  Wallaby_NUI=interval(0.1,0.5)  NUI11=interval(-0.1,0.1)  NUI10=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))	%  Wallaby_NUI=interval(0.1,0.5)  NUI11=interval(-0.1,0.1)  NUI10=interval(0.5,1)
+		 (( 0.056192 0.529536 0.280832 0.13344 0 )	%  Wallaby_NUI=interval(0.1,0.5)  NUI11=interval(0.1,0.5)  NUI10=interval(-1,-0.5)
+		  ( 0 0.018752 0.147648 0.6672 0.1664 )	%  Wallaby_NUI=interval(0.1,0.5)  NUI11=interval(0.1,0.5)  NUI10=interval(-0.5,-0.1)
+		  ( 0 0 0 0.2912 0.7088 )	%  Wallaby_NUI=interval(0.1,0.5)  NUI11=interval(0.1,0.5)  NUI10=interval(-0.1,0.1)
+		  ( 0 0 0 0.018304 0.981696 )	%  Wallaby_NUI=interval(0.1,0.5)  NUI11=interval(0.1,0.5)  NUI10=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))	%  Wallaby_NUI=interval(0.1,0.5)  NUI11=interval(0.1,0.5)  NUI10=interval(0.5,1)
+		 (( 0 0.04384 0.161856 0.586112 0.208192 )	%  Wallaby_NUI=interval(0.1,0.5)  NUI11=interval(0.5,1)  NUI10=interval(-1,-0.5)
+		  ( 0 0 0 0.13344 0.86656 )	%  Wallaby_NUI=interval(0.1,0.5)  NUI11=interval(0.5,1)  NUI10=interval(-0.5,-0.1)
+		  ( 0 0 0 0 1 )	%  Wallaby_NUI=interval(0.1,0.5)  NUI11=interval(0.5,1)  NUI10=interval(-0.1,0.1)
+		  ( 0 0 0 0 1 )	%  Wallaby_NUI=interval(0.1,0.5)  NUI11=interval(0.5,1)  NUI10=interval(0.1,0.5)
+		  ( 0 0 0 0 1 )))	%  Wallaby_NUI=interval(0.1,0.5)  NUI11=interval(0.5,1)  NUI10=interval(0.5,1)
+		((( 0.8336 0.16512 0.00128 0 0 )	%  Wallaby_NUI=interval(0.5,1)  NUI11=interval(-1,-0.5)  NUI10=interval(-1,-0.5)
+		  ( 0.20416 0.588352 0.163072 0.044416 0 )	%  Wallaby_NUI=interval(0.5,1)  NUI11=interval(-1,-0.5)  NUI10=interval(-0.5,-0.1)
+		  ( 0.003008 0.32128 0.350336 0.32224 0.003136 )	%  Wallaby_NUI=interval(0.5,1)  NUI11=interval(-1,-0.5)  NUI10=interval(-0.1,0.1)
+		  ( 0 0.04384 0.162624 0.585344 0.208192 )	%  Wallaby_NUI=interval(0.5,1)  NUI11=interval(-1,-0.5)  NUI10=interval(0.1,0.5)
+		  ( 0 0 0.00128 0.16512 0.8336 ))	%  Wallaby_NUI=interval(0.5,1)  NUI11=interval(-1,-0.5)  NUI10=interval(0.5,1)
+		 (( 0.20416 0.588352 0.163072 0.044416 0 )	%  Wallaby_NUI=interval(0.5,1)  NUI11=interval(-0.5,-0.1)  NUI10=interval(-1,-0.5)
+		  ( 0 0.13344 0.280832 0.529536 0.056192 )	%  Wallaby_NUI=interval(0.5,1)  NUI11=interval(-0.5,-0.1)  NUI10=interval(-0.5,-0.1)
+		  ( 0 0 0.03328 0.562688 0.404032 )	%  Wallaby_NUI=interval(0.5,1)  NUI11=interval(-0.5,-0.1)  NUI10=interval(-0.1,0.1)
+		  ( 0 0 0 0.13344 0.86656 )	%  Wallaby_NUI=interval(0.5,1)  NUI11=interval(-0.5,-0.1)  NUI10=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))	%  Wallaby_NUI=interval(0.5,1)  NUI11=interval(-0.5,-0.1)  NUI10=interval(0.5,1)
+		 (( 0.003008 0.32128 0.350336 0.32224 0.003136 )	%  Wallaby_NUI=interval(0.5,1)  NUI11=interval(-0.1,0.1)  NUI10=interval(-1,-0.5)
+		  ( 0 0 0.03328 0.562688 0.404032 )	%  Wallaby_NUI=interval(0.5,1)  NUI11=interval(-0.1,0.1)  NUI10=interval(-0.5,-0.1)
+		  ( 0 0 0 0.06624 0.93376 )	%  Wallaby_NUI=interval(0.5,1)  NUI11=interval(-0.1,0.1)  NUI10=interval(-0.1,0.1)
+		  ( 0 0 0 0 1 )	%  Wallaby_NUI=interval(0.5,1)  NUI11=interval(-0.1,0.1)  NUI10=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))	%  Wallaby_NUI=interval(0.5,1)  NUI11=interval(-0.1,0.1)  NUI10=interval(0.5,1)
+		 (( 0 0.04384 0.162624 0.585344 0.208192 )	%  Wallaby_NUI=interval(0.5,1)  NUI11=interval(0.1,0.5)  NUI10=interval(-1,-0.5)
+		  ( 0 0 0 0.13344 0.86656 )	%  Wallaby_NUI=interval(0.5,1)  NUI11=interval(0.1,0.5)  NUI10=interval(-0.5,-0.1)
+		  ( 0 0 0 0 1 )	%  Wallaby_NUI=interval(0.5,1)  NUI11=interval(0.1,0.5)  NUI10=interval(-0.1,0.1)
+		  ( 0 0 0 0 1 )	%  Wallaby_NUI=interval(0.5,1)  NUI11=interval(0.1,0.5)  NUI10=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))	%  Wallaby_NUI=interval(0.5,1)  NUI11=interval(0.1,0.5)  NUI10=interval(0.5,1)
+		 (( 0 0 0.00128 0.16512 0.8336 )	%  Wallaby_NUI=interval(0.5,1)  NUI11=interval(0.5,1)  NUI10=interval(-1,-0.5)
+		  ( 0 0 0 0 1 )	%  Wallaby_NUI=interval(0.5,1)  NUI11=interval(0.5,1)  NUI10=interval(-0.5,-0.1)
+		  ( 0 0 0 0 1 )	%  Wallaby_NUI=interval(0.5,1)  NUI11=interval(0.5,1)  NUI10=interval(-0.1,0.1)
+		  ( 0 0 0 0 1 )	%  Wallaby_NUI=interval(0.5,1)  NUI11=interval(0.5,1)  NUI10=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))));	%  Wallaby_NUI=interval(0.5,1)  NUI11=interval(0.5,1)  NUI10=interval(0.5,1)
+    }
+
+    potential (NUI11 | Grain_NUI SensitNative_NUI)
+    {
+	model_nodes = ();
+	model_data = ( min (1, max (-1, 0 + SensitNative_NUI + Grain_NUI)) );
+	data = ((( 1 0 0 0 0 )	%  Grain_NUI=interval(-1,-0.5)  SensitNative_NUI=interval(-1,-0.5)
+		 ( 1 0 0 0 0 )	%  Grain_NUI=interval(-1,-0.5)  SensitNative_NUI=interval(-0.5,-0.1)
+		 ( 0.9504 0.0496 0 0 0 )	%  Grain_NUI=interval(-1,-0.5)  SensitNative_NUI=interval(-0.1,0.1)
+		 ( 0.4 0.5744 0.0256 0 0 )	%  Grain_NUI=interval(-1,-0.5)  SensitNative_NUI=interval(0.1,0.5)
+		 ( 0 0.3072 0.3792 0.3136 0 ))	%  Grain_NUI=interval(-1,-0.5)  SensitNative_NUI=interval(0.5,1)
+		(( 1 0 0 0 0 )	%  Grain_NUI=interval(-0.5,-0.1)  SensitNative_NUI=interval(-1,-0.5)
+		 ( 0.7264 0.2736 0 0 0 )	%  Grain_NUI=interval(-0.5,-0.1)  SensitNative_NUI=interval(-0.5,-0.1)
+		 ( 0.0576 0.8752 0.0672 0 0 )	%  Grain_NUI=interval(-0.5,-0.1)  SensitNative_NUI=interval(-0.1,0.1)
+		 ( 0 0.2736 0.4528 0.2736 0 )	%  Grain_NUI=interval(-0.5,-0.1)  SensitNative_NUI=interval(0.1,0.5)
+		 ( 0 0 0.0256 0.5744 0.4 ))	%  Grain_NUI=interval(-0.5,-0.1)  SensitNative_NUI=interval(0.5,1)
+		(( 0.9504 0.0496 0 0 0 )	%  Grain_NUI=interval(-0.1,0.1)  SensitNative_NUI=interval(-1,-0.5)
+		 ( 0.0576 0.8752 0.0672 0 0 )	%  Grain_NUI=interval(-0.1,0.1)  SensitNative_NUI=interval(-0.5,-0.1)
+		 ( 0 0.1248 0.7504 0.1248 0 )	%  Grain_NUI=interval(-0.1,0.1)  SensitNative_NUI=interval(-0.1,0.1)
+		 ( 0 0 0.0624 0.8704 0.0672 )	%  Grain_NUI=interval(-0.1,0.1)  SensitNative_NUI=interval(0.1,0.5)
+		 ( 0 0 0 0.0496 0.9504 ))	%  Grain_NUI=interval(-0.1,0.1)  SensitNative_NUI=interval(0.5,1)
+		(( 0.4 0.5744 0.0256 0 0 )	%  Grain_NUI=interval(0.1,0.5)  SensitNative_NUI=interval(-1,-0.5)
+		 ( 0 0.2736 0.4528 0.2736 0 )	%  Grain_NUI=interval(0.1,0.5)  SensitNative_NUI=interval(-0.5,-0.1)
+		 ( 0 0 0.0624 0.8704 0.0672 )	%  Grain_NUI=interval(0.1,0.5)  SensitNative_NUI=interval(-0.1,0.1)
+		 ( 0 0 0 0.2736 0.7264 )	%  Grain_NUI=interval(0.1,0.5)  SensitNative_NUI=interval(0.1,0.5)
+		 ( 0 0 0 0 1 ))	%  Grain_NUI=interval(0.1,0.5)  SensitNative_NUI=interval(0.5,1)
+		(( 0 0.3072 0.3792 0.3136 0 )	%  Grain_NUI=interval(0.5,1)  SensitNative_NUI=interval(-1,-0.5)
+		 ( 0 0 0.0256 0.5744 0.4 )	%  Grain_NUI=interval(0.5,1)  SensitNative_NUI=interval(-0.5,-0.1)
+		 ( 0 0 0 0.0496 0.9504 )	%  Grain_NUI=interval(0.5,1)  SensitNative_NUI=interval(-0.1,0.1)
+		 ( 0 0 0 0 1 )	%  Grain_NUI=interval(0.5,1)  SensitNative_NUI=interval(0.1,0.5)
+		 ( 0 0 0 0 1 )));	%  Grain_NUI=interval(0.5,1)  SensitNative_NUI=interval(0.5,1)
+    }
+
+    potential (NUI10 | ExoticAnnual_NUI Onion_NUI)
+    {
+	model_nodes = ();
+	model_data = ( min (1, max (-1, 0 + Onion_NUI + ExoticAnnual_NUI)) );
+	data = ((( 1 0 0 0 0 )	%  ExoticAnnual_NUI=interval(-1,-0.5)  Onion_NUI=interval(-1,-0.5)
+		 ( 1 0 0 0 0 )	%  ExoticAnnual_NUI=interval(-1,-0.5)  Onion_NUI=interval(-0.5,-0.1)
+		 ( 0.9504 0.0496 0 0 0 )	%  ExoticAnnual_NUI=interval(-1,-0.5)  Onion_NUI=interval(-0.1,0.1)
+		 ( 0.4 0.5744 0.0256 0 0 )	%  ExoticAnnual_NUI=interval(-1,-0.5)  Onion_NUI=interval(0.1,0.5)
+		 ( 0 0.3072 0.3792 0.3136 0 ))	%  ExoticAnnual_NUI=interval(-1,-0.5)  Onion_NUI=interval(0.5,1)
+		(( 1 0 0 0 0 )	%  ExoticAnnual_NUI=interval(-0.5,-0.1)  Onion_NUI=interval(-1,-0.5)
+		 ( 0.7264 0.2736 0 0 0 )	%  ExoticAnnual_NUI=interval(-0.5,-0.1)  Onion_NUI=interval(-0.5,-0.1)
+		 ( 0.0576 0.8752 0.0672 0 0 )	%  ExoticAnnual_NUI=interval(-0.5,-0.1)  Onion_NUI=interval(-0.1,0.1)
+		 ( 0 0.2736 0.4528 0.2736 0 )	%  ExoticAnnual_NUI=interval(-0.5,-0.1)  Onion_NUI=interval(0.1,0.5)
+		 ( 0 0 0.0256 0.5744 0.4 ))	%  ExoticAnnual_NUI=interval(-0.5,-0.1)  Onion_NUI=interval(0.5,1)
+		(( 0.9504 0.0496 0 0 0 )	%  ExoticAnnual_NUI=interval(-0.1,0.1)  Onion_NUI=interval(-1,-0.5)
+		 ( 0.0576 0.8752 0.0672 0 0 )	%  ExoticAnnual_NUI=interval(-0.1,0.1)  Onion_NUI=interval(-0.5,-0.1)
+		 ( 0 0.1248 0.7504 0.1248 0 )	%  ExoticAnnual_NUI=interval(-0.1,0.1)  Onion_NUI=interval(-0.1,0.1)
+		 ( 0 0 0.0624 0.8704 0.0672 )	%  ExoticAnnual_NUI=interval(-0.1,0.1)  Onion_NUI=interval(0.1,0.5)
+		 ( 0 0 0 0.0496 0.9504 ))	%  ExoticAnnual_NUI=interval(-0.1,0.1)  Onion_NUI=interval(0.5,1)
+		(( 0.4 0.5744 0.0256 0 0 )	%  ExoticAnnual_NUI=interval(0.1,0.5)  Onion_NUI=interval(-1,-0.5)
+		 ( 0 0.2736 0.4528 0.2736 0 )	%  ExoticAnnual_NUI=interval(0.1,0.5)  Onion_NUI=interval(-0.5,-0.1)
+		 ( 0 0 0.0624 0.8704 0.0672 )	%  ExoticAnnual_NUI=interval(0.1,0.5)  Onion_NUI=interval(-0.1,0.1)
+		 ( 0 0 0 0.2736 0.7264 )	%  ExoticAnnual_NUI=interval(0.1,0.5)  Onion_NUI=interval(0.1,0.5)
+		 ( 0 0 0 0 1 ))	%  ExoticAnnual_NUI=interval(0.1,0.5)  Onion_NUI=interval(0.5,1)
+		(( 0 0.3072 0.3792 0.3136 0 )	%  ExoticAnnual_NUI=interval(0.5,1)  Onion_NUI=interval(-1,-0.5)
+		 ( 0 0 0.0256 0.5744 0.4 )	%  ExoticAnnual_NUI=interval(0.5,1)  Onion_NUI=interval(-0.5,-0.1)
+		 ( 0 0 0 0.0496 0.9504 )	%  ExoticAnnual_NUI=interval(0.5,1)  Onion_NUI=interval(-0.1,0.1)
+		 ( 0 0 0 0 1 )	%  ExoticAnnual_NUI=interval(0.5,1)  Onion_NUI=interval(0.1,0.5)
+		 ( 0 0 0 0 1 )));	%  ExoticAnnual_NUI=interval(0.5,1)  Onion_NUI=interval(0.5,1)
+    }
+
+    potential (NUI0 | Needle_NUI NUI01 NUI00)
+    {
+	model_nodes = ();
+	model_data = ( min (1, max (-1, 0 + NUI00 + NUI01 + Needle_NUI)) );
+	data = (((( 1 0 0 0 0 )	%  Needle_NUI=interval(-1,-0.5)  NUI01=interval(-1,-0.5)  NUI00=interval(-1,-0.5)
+		  ( 1 0 0 0 0 )	%  Needle_NUI=interval(-1,-0.5)  NUI01=interval(-1,-0.5)  NUI00=interval(-0.5,-0.1)
+		  ( 1 0 0 0 0 )	%  Needle_NUI=interval(-1,-0.5)  NUI01=interval(-1,-0.5)  NUI00=interval(-0.1,0.1)
+		  ( 1 0 0 0 0 )	%  Needle_NUI=interval(-1,-0.5)  NUI01=interval(-1,-0.5)  NUI00=interval(0.1,0.5)
+		  ( 0.8336 0.16512 0.00128 0 0 ))	%  Needle_NUI=interval(-1,-0.5)  NUI01=interval(-1,-0.5)  NUI00=interval(0.5,1)
+		 (( 1 0 0 0 0 )	%  Needle_NUI=interval(-1,-0.5)  NUI01=interval(-0.5,-0.1)  NUI00=interval(-1,-0.5)
+		  ( 1 0 0 0 0 )	%  Needle_NUI=interval(-1,-0.5)  NUI01=interval(-0.5,-0.1)  NUI00=interval(-0.5,-0.1)
+		  ( 1 0 0 0 0 )	%  Needle_NUI=interval(-1,-0.5)  NUI01=interval(-0.5,-0.1)  NUI00=interval(-0.1,0.1)
+		  ( 0.86656 0.13344 0 0 0 )	%  Needle_NUI=interval(-1,-0.5)  NUI01=interval(-0.5,-0.1)  NUI00=interval(0.1,0.5)
+		  ( 0.203904 0.588672 0.163008 0.044416 0 ))	%  Needle_NUI=interval(-1,-0.5)  NUI01=interval(-0.5,-0.1)  NUI00=interval(0.5,1)
+		 (( 1 0 0 0 0 )	%  Needle_NUI=interval(-1,-0.5)  NUI01=interval(-0.1,0.1)  NUI00=interval(-1,-0.5)
+		  ( 1 0 0 0 0 )	%  Needle_NUI=interval(-1,-0.5)  NUI01=interval(-0.1,0.1)  NUI00=interval(-0.5,-0.1)
+		  ( 0.93376 0.06624 0 0 0 )	%  Needle_NUI=interval(-1,-0.5)  NUI01=interval(-0.1,0.1)  NUI00=interval(-0.1,0.1)
+		  ( 0.404032 0.562688 0.03328 0 0 )	%  Needle_NUI=interval(-1,-0.5)  NUI01=interval(-0.1,0.1)  NUI00=interval(0.1,0.5)
+		  ( 0.003008 0.32128 0.350144 0.322176 0.003392 ))	%  Needle_NUI=interval(-1,-0.5)  NUI01=interval(-0.1,0.1)  NUI00=interval(0.5,1)
+		 (( 1 0 0 0 0 )	%  Needle_NUI=interval(-1,-0.5)  NUI01=interval(0.1,0.5)  NUI00=interval(-1,-0.5)
+		  ( 0.86656 0.13344 0 0 0 )	%  Needle_NUI=interval(-1,-0.5)  NUI01=interval(0.1,0.5)  NUI00=interval(-0.5,-0.1)
+		  ( 0.404032 0.562688 0.03328 0 0 )	%  Needle_NUI=interval(-1,-0.5)  NUI01=interval(0.1,0.5)  NUI00=interval(-0.1,0.1)
+		  ( 0.056192 0.529536 0.280832 0.13344 0 )	%  Needle_NUI=interval(-1,-0.5)  NUI01=interval(0.1,0.5)  NUI00=interval(0.1,0.5)
+		  ( 0 0.04384 0.16256 0.58592 0.20768 ))	%  Needle_NUI=interval(-1,-0.5)  NUI01=interval(0.1,0.5)  NUI00=interval(0.5,1)
+		 (( 0.8336 0.16512 0.00128 0 0 )	%  Needle_NUI=interval(-1,-0.5)  NUI01=interval(0.5,1)  NUI00=interval(-1,-0.5)
+		  ( 0.203904 0.588672 0.163008 0.044416 0 )	%  Needle_NUI=interval(-1,-0.5)  NUI01=interval(0.5,1)  NUI00=interval(-0.5,-0.1)
+		  ( 0.003008 0.32128 0.350144 0.322176 0.003392 )	%  Needle_NUI=interval(-1,-0.5)  NUI01=interval(0.5,1)  NUI00=interval(-0.1,0.1)
+		  ( 0 0.04384 0.16256 0.58592 0.20768 )	%  Needle_NUI=interval(-1,-0.5)  NUI01=interval(0.5,1)  NUI00=interval(0.1,0.5)
+		  ( 0 0 0.00128 0.16512 0.8336 )))	%  Needle_NUI=interval(-1,-0.5)  NUI01=interval(0.5,1)  NUI00=interval(0.5,1)
+		((( 1 0 0 0 0 )	%  Needle_NUI=interval(-0.5,-0.1)  NUI01=interval(-1,-0.5)  NUI00=interval(-1,-0.5)
+		  ( 1 0 0 0 0 )	%  Needle_NUI=interval(-0.5,-0.1)  NUI01=interval(-1,-0.5)  NUI00=interval(-0.5,-0.1)
+		  ( 1 0 0 0 0 )	%  Needle_NUI=interval(-0.5,-0.1)  NUI01=interval(-1,-0.5)  NUI00=interval(-0.1,0.1)
+		  ( 0.86656 0.13344 0 0 0 )	%  Needle_NUI=interval(-0.5,-0.1)  NUI01=interval(-1,-0.5)  NUI00=interval(0.1,0.5)
+		  ( 0.203904 0.5888 0.162816 0.04448 0 ))	%  Needle_NUI=interval(-0.5,-0.1)  NUI01=interval(-1,-0.5)  NUI00=interval(0.5,1)
+		 (( 1 0 0 0 0 )	%  Needle_NUI=interval(-0.5,-0.1)  NUI01=interval(-0.5,-0.1)  NUI00=interval(-1,-0.5)
+		  ( 0.976704 0.023296 0 0 0 )	%  Needle_NUI=interval(-0.5,-0.1)  NUI01=interval(-0.5,-0.1)  NUI00=interval(-0.5,-0.1)
+		  ( 0.7088 0.2912 0 0 0 )	%  Needle_NUI=interval(-0.5,-0.1)  NUI01=interval(-0.5,-0.1)  NUI00=interval(-0.1,0.1)
+		  ( 0.1664 0.6672 0.145216 0.021184 0 )	%  Needle_NUI=interval(-0.5,-0.1)  NUI01=interval(-0.5,-0.1)  NUI00=interval(0.1,0.5)
+		  ( 0 0.13344 0.280832 0.529536 0.056192 ))	%  Needle_NUI=interval(-0.5,-0.1)  NUI01=interval(-0.5,-0.1)  NUI00=interval(0.5,1)
+		 (( 1 0 0 0 0 )	%  Needle_NUI=interval(-0.5,-0.1)  NUI01=interval(-0.1,0.1)  NUI00=interval(-1,-0.5)
+		  ( 0.7088 0.2912 0 0 0 )	%  Needle_NUI=interval(-0.5,-0.1)  NUI01=interval(-0.1,0.1)  NUI00=interval(-0.5,-0.1)
+		  ( 0.078208 0.835776 0.086016 0 0 )	%  Needle_NUI=interval(-0.5,-0.1)  NUI01=interval(-0.1,0.1)  NUI00=interval(-0.1,0.1)
+		  ( 0 0.2912 0.4176 0.2912 0 )	%  Needle_NUI=interval(-0.5,-0.1)  NUI01=interval(-0.1,0.1)  NUI00=interval(0.1,0.5)
+		  ( 0 0 0.03328 0.562688 0.404032 ))	%  Needle_NUI=interval(-0.5,-0.1)  NUI01=interval(-0.1,0.1)  NUI00=interval(0.5,1)
+		 (( 0.86656 0.13344 0 0 0 )	%  Needle_NUI=interval(-0.5,-0.1)  NUI01=interval(0.1,0.5)  NUI00=interval(-1,-0.5)
+		  ( 0.1664 0.6672 0.145216 0.021184 0 )	%  Needle_NUI=interval(-0.5,-0.1)  NUI01=interval(0.1,0.5)  NUI00=interval(-0.5,-0.1)
+		  ( 0 0.2912 0.4176 0.2912 0 )	%  Needle_NUI=interval(-0.5,-0.1)  NUI01=interval(0.1,0.5)  NUI00=interval(-0.1,0.1)
+		  ( 0 0.019392 0.147008 0.6672 0.1664 )	%  Needle_NUI=interval(-0.5,-0.1)  NUI01=interval(0.1,0.5)  NUI00=interval(0.1,0.5)
+		  ( 0 0 0 0.13344 0.86656 ))	%  Needle_NUI=interval(-0.5,-0.1)  NUI01=interval(0.1,0.5)  NUI00=interval(0.5,1)
+		 (( 0.203904 0.5888 0.162816 0.04448 0 )	%  Needle_NUI=interval(-0.5,-0.1)  NUI01=interval(0.5,1)  NUI00=interval(-1,-0.5)
+		  ( 0 0.13344 0.280832 0.529536 0.056192 )	%  Needle_NUI=interval(-0.5,-0.1)  NUI01=interval(0.5,1)  NUI00=interval(-0.5,-0.1)
+		  ( 0 0 0.03328 0.562688 0.404032 )	%  Needle_NUI=interval(-0.5,-0.1)  NUI01=interval(0.5,1)  NUI00=interval(-0.1,0.1)
+		  ( 0 0 0 0.13344 0.86656 )	%  Needle_NUI=interval(-0.5,-0.1)  NUI01=interval(0.5,1)  NUI00=interval(0.1,0.5)
+		  ( 0 0 0 0 1 )))	%  Needle_NUI=interval(-0.5,-0.1)  NUI01=interval(0.5,1)  NUI00=interval(0.5,1)
+		((( 1 0 0 0 0 )	%  Needle_NUI=interval(-0.1,0.1)  NUI01=interval(-1,-0.5)  NUI00=interval(-1,-0.5)
+		  ( 1 0 0 0 0 )	%  Needle_NUI=interval(-0.1,0.1)  NUI01=interval(-1,-0.5)  NUI00=interval(-0.5,-0.1)
+		  ( 0.93376 0.06624 0 0 0 )	%  Needle_NUI=interval(-0.1,0.1)  NUI01=interval(-1,-0.5)  NUI00=interval(-0.1,0.1)
+		  ( 0.404032 0.562688 0.03328 0 0 )	%  Needle_NUI=interval(-0.1,0.1)  NUI01=interval(-1,-0.5)  NUI00=interval(0.1,0.5)
+		  ( 0.003008 0.322112 0.347584 0.32416 0.003136 ))	%  Needle_NUI=interval(-0.1,0.1)  NUI01=interval(-1,-0.5)  NUI00=interval(0.5,1)
+		 (( 1 0 0 0 0 )	%  Needle_NUI=interval(-0.1,0.1)  NUI01=interval(-0.5,-0.1)  NUI00=interval(-1,-0.5)
+		  ( 0.7088 0.2912 0 0 0 )	%  Needle_NUI=interval(-0.1,0.1)  NUI01=interval(-0.5,-0.1)  NUI00=interval(-0.5,-0.1)
+		  ( 0.078336 0.8352 0.086464 0 0 )	%  Needle_NUI=interval(-0.1,0.1)  NUI01=interval(-0.5,-0.1)  NUI00=interval(-0.1,0.1)
+		  ( 0 0.2912 0.4176 0.2912 0 )	%  Needle_NUI=interval(-0.1,0.1)  NUI01=interval(-0.5,-0.1)  NUI00=interval(0.1,0.5)
+		  ( 0 0 0.03328 0.562688 0.404032 ))	%  Needle_NUI=interval(-0.1,0.1)  NUI01=interval(-0.5,-0.1)  NUI00=interval(0.5,1)
+		 (( 0.93376 0.06624 0 0 0 )	%  Needle_NUI=interval(-0.1,0.1)  NUI01=interval(-0.1,0.1)  NUI00=interval(-1,-0.5)
+		  ( 0.078336 0.8352 0.086464 0 0 )	%  Needle_NUI=interval(-0.1,0.1)  NUI01=interval(-0.1,0.1)  NUI00=interval(-0.5,-0.1)
+		  ( 0 0.1664 0.6672 0.1664 0 )	%  Needle_NUI=interval(-0.1,0.1)  NUI01=interval(-0.1,0.1)  NUI00=interval(-0.1,0.1)
+		  ( 0 0 0.082496 0.830784 0.08672 )	%  Needle_NUI=interval(-0.1,0.1)  NUI01=interval(-0.1,0.1)  NUI00=interval(0.1,0.5)
+		  ( 0 0 0 0.06624 0.93376 ))	%  Needle_NUI=interval(-0.1,0.1)  NUI01=interval(-0.1,0.1)  NUI00=interval(0.5,1)
+		 (( 0.404032 0.562688 0.03328 0 0 )	%  Needle_NUI=interval(-0.1,0.1)  NUI01=interval(0.1,0.5)  NUI00=interval(-1,-0.5)
+		  ( 0 0.2912 0.4176 0.2912 0 )	%  Needle_NUI=interval(-0.1,0.1)  NUI01=interval(0.1,0.5)  NUI00=interval(-0.5,-0.1)
+		  ( 0 0 0.082496 0.830784 0.08672 )	%  Needle_NUI=interval(-0.1,0.1)  NUI01=interval(0.1,0.5)  NUI00=interval(-0.1,0.1)
+		  ( 0 0 0 0.2912 0.7088 )	%  Needle_NUI=interval(-0.1,0.1)  NUI01=interval(0.1,0.5)  NUI00=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))	%  Needle_NUI=interval(-0.1,0.1)  NUI01=interval(0.1,0.5)  NUI00=interval(0.5,1)
+		 (( 0.003008 0.322112 0.347584 0.32416 0.003136 )	%  Needle_NUI=interval(-0.1,0.1)  NUI01=interval(0.5,1)  NUI00=interval(-1,-0.5)
+		  ( 0 0 0.03328 0.562688 0.404032 )	%  Needle_NUI=interval(-0.1,0.1)  NUI01=interval(0.5,1)  NUI00=interval(-0.5,-0.1)
+		  ( 0 0 0 0.06624 0.93376 )	%  Needle_NUI=interval(-0.1,0.1)  NUI01=interval(0.5,1)  NUI00=interval(-0.1,0.1)
+		  ( 0 0 0 0 1 )	%  Needle_NUI=interval(-0.1,0.1)  NUI01=interval(0.5,1)  NUI00=interval(0.1,0.5)
+		  ( 0 0 0 0 1 )))	%  Needle_NUI=interval(-0.1,0.1)  NUI01=interval(0.5,1)  NUI00=interval(0.5,1)
+		((( 1 0 0 0 0 )	%  Needle_NUI=interval(0.1,0.5)  NUI01=interval(-1,-0.5)  NUI00=interval(-1,-0.5)
+		  ( 0.86656 0.13344 0 0 0 )	%  Needle_NUI=interval(0.1,0.5)  NUI01=interval(-1,-0.5)  NUI00=interval(-0.5,-0.1)
+		  ( 0.404032 0.562688 0.03328 0 0 )	%  Needle_NUI=interval(0.1,0.5)  NUI01=interval(-1,-0.5)  NUI00=interval(-0.1,0.1)
+		  ( 0.056192 0.529536 0.280832 0.13344 0 )	%  Needle_NUI=interval(0.1,0.5)  NUI01=interval(-1,-0.5)  NUI00=interval(0.1,0.5)
+		  ( 0 0.04384 0.161856 0.586112 0.208192 ))	%  Needle_NUI=interval(0.1,0.5)  NUI01=interval(-1,-0.5)  NUI00=interval(0.5,1)
+		 (( 0.86656 0.13344 0 0 0 )	%  Needle_NUI=interval(0.1,0.5)  NUI01=interval(-0.5,-0.1)  NUI00=interval(-1,-0.5)
+		  ( 0.1664 0.6672 0.145216 0.021184 0 )	%  Needle_NUI=interval(0.1,0.5)  NUI01=interval(-0.5,-0.1)  NUI00=interval(-0.5,-0.1)
+		  ( 0 0.2912 0.4176 0.2912 0 )	%  Needle_NUI=interval(0.1,0.5)  NUI01=interval(-0.5,-0.1)  NUI00=interval(-0.1,0.1)
+		  ( 0 0.018752 0.147648 0.6672 0.1664 )	%  Needle_NUI=interval(0.1,0.5)  NUI01=interval(-0.5,-0.1)  NUI00=interval(0.1,0.5)
+		  ( 0 0 0 0.13344 0.86656 ))	%  Needle_NUI=interval(0.1,0.5)  NUI01=interval(-0.5,-0.1)  NUI00=interval(0.5,1)
+		 (( 0.404032 0.562688 0.03328 0 0 )	%  Needle_NUI=interval(0.1,0.5)  NUI01=interval(-0.1,0.1)  NUI00=interval(-1,-0.5)
+		  ( 0 0.2912 0.4176 0.2912 0 )	%  Needle_NUI=interval(0.1,0.5)  NUI01=interval(-0.1,0.1)  NUI00=interval(-0.5,-0.1)
+		  ( 0 0 0.082688 0.8304 0.086912 )	%  Needle_NUI=interval(0.1,0.5)  NUI01=interval(-0.1,0.1)  NUI00=interval(-0.1,0.1)
+		  ( 0 0 0 0.2912 0.7088 )	%  Needle_NUI=interval(0.1,0.5)  NUI01=interval(-0.1,0.1)  NUI00=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))	%  Needle_NUI=interval(0.1,0.5)  NUI01=interval(-0.1,0.1)  NUI00=interval(0.5,1)
+		 (( 0.056192 0.529536 0.280832 0.13344 0 )	%  Needle_NUI=interval(0.1,0.5)  NUI01=interval(0.1,0.5)  NUI00=interval(-1,-0.5)
+		  ( 0 0.018752 0.147648 0.6672 0.1664 )	%  Needle_NUI=interval(0.1,0.5)  NUI01=interval(0.1,0.5)  NUI00=interval(-0.5,-0.1)
+		  ( 0 0 0 0.2912 0.7088 )	%  Needle_NUI=interval(0.1,0.5)  NUI01=interval(0.1,0.5)  NUI00=interval(-0.1,0.1)
+		  ( 0 0 0 0.018304 0.981696 )	%  Needle_NUI=interval(0.1,0.5)  NUI01=interval(0.1,0.5)  NUI00=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))	%  Needle_NUI=interval(0.1,0.5)  NUI01=interval(0.1,0.5)  NUI00=interval(0.5,1)
+		 (( 0 0.04384 0.161856 0.586112 0.208192 )	%  Needle_NUI=interval(0.1,0.5)  NUI01=interval(0.5,1)  NUI00=interval(-1,-0.5)
+		  ( 0 0 0 0.13344 0.86656 )	%  Needle_NUI=interval(0.1,0.5)  NUI01=interval(0.5,1)  NUI00=interval(-0.5,-0.1)
+		  ( 0 0 0 0 1 )	%  Needle_NUI=interval(0.1,0.5)  NUI01=interval(0.5,1)  NUI00=interval(-0.1,0.1)
+		  ( 0 0 0 0 1 )	%  Needle_NUI=interval(0.1,0.5)  NUI01=interval(0.5,1)  NUI00=interval(0.1,0.5)
+		  ( 0 0 0 0 1 )))	%  Needle_NUI=interval(0.1,0.5)  NUI01=interval(0.5,1)  NUI00=interval(0.5,1)
+		((( 0.8336 0.16512 0.00128 0 0 )	%  Needle_NUI=interval(0.5,1)  NUI01=interval(-1,-0.5)  NUI00=interval(-1,-0.5)
+		  ( 0.20416 0.588352 0.163072 0.044416 0 )	%  Needle_NUI=interval(0.5,1)  NUI01=interval(-1,-0.5)  NUI00=interval(-0.5,-0.1)
+		  ( 0.003008 0.32128 0.350336 0.32224 0.003136 )	%  Needle_NUI=interval(0.5,1)  NUI01=interval(-1,-0.5)  NUI00=interval(-0.1,0.1)
+		  ( 0 0.04384 0.162624 0.585344 0.208192 )	%  Needle_NUI=interval(0.5,1)  NUI01=interval(-1,-0.5)  NUI00=interval(0.1,0.5)
+		  ( 0 0 0.00128 0.16512 0.8336 ))	%  Needle_NUI=interval(0.5,1)  NUI01=interval(-1,-0.5)  NUI00=interval(0.5,1)
+		 (( 0.20416 0.588352 0.163072 0.044416 0 )	%  Needle_NUI=interval(0.5,1)  NUI01=interval(-0.5,-0.1)  NUI00=interval(-1,-0.5)
+		  ( 0 0.13344 0.280832 0.529536 0.056192 )	%  Needle_NUI=interval(0.5,1)  NUI01=interval(-0.5,-0.1)  NUI00=interval(-0.5,-0.1)
+		  ( 0 0 0.03328 0.562688 0.404032 )	%  Needle_NUI=interval(0.5,1)  NUI01=interval(-0.5,-0.1)  NUI00=interval(-0.1,0.1)
+		  ( 0 0 0 0.13344 0.86656 )	%  Needle_NUI=interval(0.5,1)  NUI01=interval(-0.5,-0.1)  NUI00=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))	%  Needle_NUI=interval(0.5,1)  NUI01=interval(-0.5,-0.1)  NUI00=interval(0.5,1)
+		 (( 0.003008 0.32128 0.350336 0.32224 0.003136 )	%  Needle_NUI=interval(0.5,1)  NUI01=interval(-0.1,0.1)  NUI00=interval(-1,-0.5)
+		  ( 0 0 0.03328 0.562688 0.404032 )	%  Needle_NUI=interval(0.5,1)  NUI01=interval(-0.1,0.1)  NUI00=interval(-0.5,-0.1)
+		  ( 0 0 0 0.06624 0.93376 )	%  Needle_NUI=interval(0.5,1)  NUI01=interval(-0.1,0.1)  NUI00=interval(-0.1,0.1)
+		  ( 0 0 0 0 1 )	%  Needle_NUI=interval(0.5,1)  NUI01=interval(-0.1,0.1)  NUI00=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))	%  Needle_NUI=interval(0.5,1)  NUI01=interval(-0.1,0.1)  NUI00=interval(0.5,1)
+		 (( 0 0.04384 0.162624 0.585344 0.208192 )	%  Needle_NUI=interval(0.5,1)  NUI01=interval(0.1,0.5)  NUI00=interval(-1,-0.5)
+		  ( 0 0 0 0.13344 0.86656 )	%  Needle_NUI=interval(0.5,1)  NUI01=interval(0.1,0.5)  NUI00=interval(-0.5,-0.1)
+		  ( 0 0 0 0 1 )	%  Needle_NUI=interval(0.5,1)  NUI01=interval(0.1,0.5)  NUI00=interval(-0.1,0.1)
+		  ( 0 0 0 0 1 )	%  Needle_NUI=interval(0.5,1)  NUI01=interval(0.1,0.5)  NUI00=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))	%  Needle_NUI=interval(0.5,1)  NUI01=interval(0.1,0.5)  NUI00=interval(0.5,1)
+		 (( 0 0 0.00128 0.16512 0.8336 )	%  Needle_NUI=interval(0.5,1)  NUI01=interval(0.5,1)  NUI00=interval(-1,-0.5)
+		  ( 0 0 0 0 1 )	%  Needle_NUI=interval(0.5,1)  NUI01=interval(0.5,1)  NUI00=interval(-0.5,-0.1)
+		  ( 0 0 0 0 1 )	%  Needle_NUI=interval(0.5,1)  NUI01=interval(0.5,1)  NUI00=interval(-0.1,0.1)
+		  ( 0 0 0 0 1 )	%  Needle_NUI=interval(0.5,1)  NUI01=interval(0.5,1)  NUI00=interval(0.1,0.5)
+		  ( 0 0 0 0 1 ))));	%  Needle_NUI=interval(0.5,1)  NUI01=interval(0.5,1)  NUI00=interval(0.5,1)
+    }
+
+    potential (NUI01 | Blanket_NUI Themeda_NUI)
+    {
+	model_nodes = ();
+	model_data = ( min (1, max (-1, 0 + Themeda_NUI + Blanket_NUI)) );
+	data = ((( 1 0 0 0 0 )	%  Blanket_NUI=interval(-1,-0.5)  Themeda_NUI=interval(-1,-0.5)
+		 ( 1 0 0 0 0 )	%  Blanket_NUI=interval(-1,-0.5)  Themeda_NUI=interval(-0.5,-0.1)
+		 ( 0.9504 0.0496 0 0 0 )	%  Blanket_NUI=interval(-1,-0.5)  Themeda_NUI=interval(-0.1,0.1)
+		 ( 0.4 0.5744 0.0256 0 0 )	%  Blanket_NUI=interval(-1,-0.5)  Themeda_NUI=interval(0.1,0.5)
+		 ( 0 0.3072 0.3792 0.3136 0 ))	%  Blanket_NUI=interval(-1,-0.5)  Themeda_NUI=interval(0.5,1)
+		(( 1 0 0 0 0 )	%  Blanket_NUI=interval(-0.5,-0.1)  Themeda_NUI=interval(-1,-0.5)
+		 ( 0.7264 0.2736 0 0 0 )	%  Blanket_NUI=interval(-0.5,-0.1)  Themeda_NUI=interval(-0.5,-0.1)
+		 ( 0.0576 0.8752 0.0672 0 0 )	%  Blanket_NUI=interval(-0.5,-0.1)  Themeda_NUI=interval(-0.1,0.1)
+		 ( 0 0.2736 0.4528 0.2736 0 )	%  Blanket_NUI=interval(-0.5,-0.1)  Themeda_NUI=interval(0.1,0.5)
+		 ( 0 0 0.0256 0.5744 0.4 ))	%  Blanket_NUI=interval(-0.5,-0.1)  Themeda_NUI=interval(0.5,1)
+		(( 0.9504 0.0496 0 0 0 )	%  Blanket_NUI=interval(-0.1,0.1)  Themeda_NUI=interval(-1,-0.5)
+		 ( 0.0576 0.8752 0.0672 0 0 )	%  Blanket_NUI=interval(-0.1,0.1)  Themeda_NUI=interval(-0.5,-0.1)
+		 ( 0 0.1248 0.7504 0.1248 0 )	%  Blanket_NUI=interval(-0.1,0.1)  Themeda_NUI=interval(-0.1,0.1)
+		 ( 0 0 0.0624 0.8704 0.0672 )	%  Blanket_NUI=interval(-0.1,0.1)  Themeda_NUI=interval(0.1,0.5)
+		 ( 0 0 0 0.0496 0.9504 ))	%  Blanket_NUI=interval(-0.1,0.1)  Themeda_NUI=interval(0.5,1)
+		(( 0.4 0.5744 0.0256 0 0 )	%  Blanket_NUI=interval(0.1,0.5)  Themeda_NUI=interval(-1,-0.5)
+		 ( 0 0.2736 0.4528 0.2736 0 )	%  Blanket_NUI=interval(0.1,0.5)  Themeda_NUI=interval(-0.5,-0.1)
+		 ( 0 0 0.0624 0.8704 0.0672 )	%  Blanket_NUI=interval(0.1,0.5)  Themeda_NUI=interval(-0.1,0.1)
+		 ( 0 0 0 0.2736 0.7264 )	%  Blanket_NUI=interval(0.1,0.5)  Themeda_NUI=interval(0.1,0.5)
+		 ( 0 0 0 0 1 ))	%  Blanket_NUI=interval(0.1,0.5)  Themeda_NUI=interval(0.5,1)
+		(( 0 0.3072 0.3792 0.3136 0 )	%  Blanket_NUI=interval(0.5,1)  Themeda_NUI=interval(-1,-0.5)
+		 ( 0 0 0.0256 0.5744 0.4 )	%  Blanket_NUI=interval(0.5,1)  Themeda_NUI=interval(-0.5,-0.1)
+		 ( 0 0 0 0.0496 0.9504 )	%  Blanket_NUI=interval(0.5,1)  Themeda_NUI=interval(-0.1,0.1)
+		 ( 0 0 0 0 1 )	%  Blanket_NUI=interval(0.5,1)  Themeda_NUI=interval(0.1,0.5)
+		 ( 0 0 0 0 1 )));	%  Blanket_NUI=interval(0.5,1)  Themeda_NUI=interval(0.5,1)
+    }
+
+    potential (NUI00 | Ruderals_NUI RedLeg_NUI)
+    {
+	model_nodes = ();
+	model_data = ( min (1, max (-1, 0 + RedLeg_NUI + Ruderals_NUI)) );
+	data = ((( 1 0 0 0 0 )	%  Ruderals_NUI=interval(-1,-0.5)  RedLeg_NUI=interval(-1,-0.5)
+		 ( 1 0 0 0 0 )	%  Ruderals_NUI=interval(-1,-0.5)  RedLeg_NUI=interval(-0.5,-0.1)
+		 ( 0.9504 0.0496 0 0 0 )	%  Ruderals_NUI=interval(-1,-0.5)  RedLeg_NUI=interval(-0.1,0.1)
+		 ( 0.4 0.5744 0.0256 0 0 )	%  Ruderals_NUI=interval(-1,-0.5)  RedLeg_NUI=interval(0.1,0.5)
+		 ( 0 0.3072 0.3792 0.3136 0 ))	%  Ruderals_NUI=interval(-1,-0.5)  RedLeg_NUI=interval(0.5,1)
+		(( 1 0 0 0 0 )	%  Ruderals_NUI=interval(-0.5,-0.1)  RedLeg_NUI=interval(-1,-0.5)
+		 ( 0.7264 0.2736 0 0 0 )	%  Ruderals_NUI=interval(-0.5,-0.1)  RedLeg_NUI=interval(-0.5,-0.1)
+		 ( 0.0576 0.8752 0.0672 0 0 )	%  Ruderals_NUI=interval(-0.5,-0.1)  RedLeg_NUI=interval(-0.1,0.1)
+		 ( 0 0.2736 0.4528 0.2736 0 )	%  Ruderals_NUI=interval(-0.5,-0.1)  RedLeg_NUI=interval(0.1,0.5)
+		 ( 0 0 0.0256 0.5744 0.4 ))	%  Ruderals_NUI=interval(-0.5,-0.1)  RedLeg_NUI=interval(0.5,1)
+		(( 0.9504 0.0496 0 0 0 )	%  Ruderals_NUI=interval(-0.1,0.1)  RedLeg_NUI=interval(-1,-0.5)
+		 ( 0.0576 0.8752 0.0672 0 0 )	%  Ruderals_NUI=interval(-0.1,0.1)  RedLeg_NUI=interval(-0.5,-0.1)
+		 ( 0 0.1248 0.7504 0.1248 0 )	%  Ruderals_NUI=interval(-0.1,0.1)  RedLeg_NUI=interval(-0.1,0.1)
+		 ( 0 0 0.0624 0.8704 0.0672 )	%  Ruderals_NUI=interval(-0.1,0.1)  RedLeg_NUI=interval(0.1,0.5)
+		 ( 0 0 0 0.0496 0.9504 ))	%  Ruderals_NUI=interval(-0.1,0.1)  RedLeg_NUI=interval(0.5,1)
+		(( 0.4 0.5744 0.0256 0 0 )	%  Ruderals_NUI=interval(0.1,0.5)  RedLeg_NUI=interval(-1,-0.5)
+		 ( 0 0.2736 0.4528 0.2736 0 )	%  Ruderals_NUI=interval(0.1,0.5)  RedLeg_NUI=interval(-0.5,-0.1)
+		 ( 0 0 0.0624 0.8704 0.0672 )	%  Ruderals_NUI=interval(0.1,0.5)  RedLeg_NUI=interval(-0.1,0.1)
+		 ( 0 0 0 0.2736 0.7264 )	%  Ruderals_NUI=interval(0.1,0.5)  RedLeg_NUI=interval(0.1,0.5)
+		 ( 0 0 0 0 1 ))	%  Ruderals_NUI=interval(0.1,0.5)  RedLeg_NUI=interval(0.5,1)
+		(( 0 0.3072 0.3792 0.3136 0 )	%  Ruderals_NUI=interval(0.5,1)  RedLeg_NUI=interval(-1,-0.5)
+		 ( 0 0 0.0256 0.5744 0.4 )	%  Ruderals_NUI=interval(0.5,1)  RedLeg_NUI=interval(-0.5,-0.1)
+		 ( 0 0 0 0.0496 0.9504 )	%  Ruderals_NUI=interval(0.5,1)  RedLeg_NUI=interval(-0.1,0.1)
+		 ( 0 0 0 0 1 )	%  Ruderals_NUI=interval(0.5,1)  RedLeg_NUI=interval(0.1,0.5)
+		 ( 0 0 0 0 1 )));	%  Ruderals_NUI=interval(0.5,1)  RedLeg_NUI=interval(0.5,1)
+    }
+
+    potential (Ruderals_NUI)
+    {
+	data = ( 1 1 1 1 1 );
+    }
+
+    potential (RedLeg_NUI)
+    {
+	data = ( 1 1 1 1 1 );
+    }
+
+    potential (Blanket_NUI)
+    {
+	data = ( 1 1 1 1 1 );
+    }
+
+    potential (Themeda_NUI)
+    {
+	data = ( 1 1 1 1 1 );
+    }
+
+    potential (Needle_NUI)
+    {
+	data = ( 1 1 1 1 1 );
+    }
+
+    potential (ExoticAnnual_NUI)
+    {
+	data = ( 1 1 1 1 1 );
+    }
+
+    potential (Onion_NUI)
+    {
+	data = ( 1 1 1 1 1 );
+    }
+
+    potential (Grain_NUI)
+    {
+	data = ( 1 1 1 1 1 );
+    }
+
+    potential (SensitNative_NUI)
+    {
+	data = ( 1 1 1 1 1 );
+    }
+
+    potential (Wallaby_NUI)
+    {
+	data = ( 1 1 1 1 1 );
+    }
+
+    potential (ST_NUI)
+    {
+	data = ( 1 1 1 1 1 );
+    }
+
+    potential (Spear_NUI)
+    {
+	data = ( 1 1 1 1 1 );
+    }
+
+    potential (HardyNative_NUI)
+    {
+	data = ( 1 1 1 1 1 );
+    }
+
+    potential (BroadWeeds_NUI)
+    {
+	data = ( 1 1 1 1 1 );
+    }
+
+    potential (Windmill_NUI)
+    {
+	data = ( 1 1 1 1 1 );
+    }
+} % class NuiAdder

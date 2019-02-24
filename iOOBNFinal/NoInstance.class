@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iOOBN type=".class">
+	<node  id="4" name="C_7" label="C_7" type="Discrete" subType="Boolean" kind="1">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="5" name="C_8" label="C_8" type="Discrete" subType="Boolean" kind="1">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="6" name="C_9" label="C_9" type="Discrete" subType="Boolean" kind="0">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="11" name="C_10" label="C_10" type="Discrete" subType="Boolean" kind="0">
+		<state name="True" />
+		<state name="False" />
+		<parent id="4" />
+	</node>
+	<node  id="12" name="C_11" label="C_11" type="Discrete" subType="Boolean" kind="0">
+		<state name="True" />
+		<state name="False" />
+		<parent id="5" />
+	</node>
+	<node  id="13" name="C_12" label="C_12" type="Discrete" subType="Boolean" kind="0">
+		<state name="True" />
+		<state name="False" />
+		<parent id="11" />
+		<parent id="12" />
+	</node>
+	<node  id="16" name="C_13" label="C_13" type="Discrete" subType="Boolean" kind="0">
+		<state name="True" />
+		<state name="False" />
+		<parent id="13" />
+	</node>
+	<node  id="18" name="C_14" label="C_14" type="Discrete" subType="Boolean" kind="2">
+		<state name="True" />
+		<state name="False" />
+		<parent id="16" />
+		<parent id="6" />
+	</node>
+</iOOBN>

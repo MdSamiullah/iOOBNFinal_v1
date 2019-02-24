@@ -1,0 +1,77 @@
+class test
+{
+	node I
+	{
+		label= "I";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node J
+	{
+		label= "J";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node K
+	{
+		label= "K";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node O
+	{
+		label= "O";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node P
+	{
+		label= "P";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	potential ( I )
+	{
+		data=(1 0 );
+	}
+	potential ( J )
+	{
+		data=(0.5 0 );
+	}
+	potential ( K | I J  )
+	{
+		data=
+		(
+			(
+				(0.5 0.5 )
+				(0.5 0.5 )
+			)
+			(
+				(0.5 0.5 )
+				(0.5 0.5 )
+			)
+		);
+	}
+	potential ( O | K  )
+	{
+		data=
+		(
+			(0.5 0.5 )
+			(0.5 0.5 )
+		);
+	}
+	potential ( P | K  )
+	{
+		data=
+		(
+			(0.5 0.5 )
+			(0.5 0.5 )
+		);
+	}
+
+}

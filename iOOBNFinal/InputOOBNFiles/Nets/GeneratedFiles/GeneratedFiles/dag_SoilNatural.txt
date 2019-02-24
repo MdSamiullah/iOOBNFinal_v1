@@ -1,0 +1,9 @@
+Rain : SoilMoisture 
+TBio : Shade 
+Temp : SoilTemperature 
+SoilTemperature : 
+SoilMoisture : 
+Season : Rain Temp 
+C1 : SoilMoisture 
+LBio : C1 
+Shade : SoilTemperature SoilMoisture 

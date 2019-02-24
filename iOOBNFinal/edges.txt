@@ -1,0 +1,16 @@
+X-S
+X-V
+X-T
+X-L
+X-C
+X-R
+X-M
+S-V
+S-T
+S-Y
+S-E
+S-C
+S-R
+C-T
+C-Y
+M-Y

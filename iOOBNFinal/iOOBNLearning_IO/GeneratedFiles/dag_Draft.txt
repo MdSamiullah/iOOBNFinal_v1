@@ -1,0 +1,7 @@
+Locale : Metabolism Strength 
+Draft : 
+Castration : Strength 
+Metabolism : Meat 
+Strength : Draft 
+Meat : 
+Food : Metabolism Strength 

@@ -1,0 +1,345 @@
+class BurnIntervention
+{
+    inputs = (Season BD TBio BurnStrategy BBio LBio Scale);
+    outputs = (Burn BurnCost);
+    node_size = (100 55);
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "1";
+    HR_Zoom_ZoomFactor = "100";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_DiscreteFunction = "5";
+    HR_Color_Function = "4";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Mean_Variance = "1";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "5";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "javax.swing.plaf.FontUIResource[family=Tahoma,name=Tahoma,style=plain,size=11]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+
+    node Scale
+    {
+	label = "Scale\n";
+	position = (836 119);
+	states = ("0 - 1" "1 - 2" "2 - 3");
+	subtype = interval;
+	state_values = (0 5 50 500);
+	HR_LinkMode = "[U1:0][BurnCost:0]";
+	HR_Desc = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_Group = "0";
+    }
+
+    node LBio
+    {
+	label = "Live\nCover";
+	position = (334 66);
+	states = ("0 - 1" "1 - 2" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_HTML_Desc = "";
+	HR_LinkMode = "[Shade:0][C22:0][C7_1_1:0][C1:0][C1_1:0][C1_1_1:0][Wildfire:0][ManagementBurn:0][TargetBurn:0]";
+	HR_LinkControlPoints = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_State_5 = "";
+	HR_State_6 = "";
+	HR_Group = "0";
+    }
+
+    node BBio
+    {
+	label = "Basal\nCover";
+	position = (443 66);
+	states = ("0 - 1" "1 - 2" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_HTML_Desc = "";
+	HR_LinkMode = "[Shade:0][C22:0][C7_1_1:0][C1:0][C1_1:0][C1_1_1:0][Wildfire:0][ManagementBurn:0][TargetBurn:0]";
+	HR_LinkControlPoints = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_State_5 = "";
+	HR_State_6 = "";
+	HR_Group = "0";
+    }
+
+    node TBio
+    {
+	label = "Total\nCover";
+	position = (228 68);
+	states = ("0 - 1" "1 - 2" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 20 40 60 80 99.99 100);
+	HR_State_6 = "";
+	HR_State_5 = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[Shade:0][C22:0][C7_1_1:0][C1:0][C1_1:0][C1_1_1:0][Wildfire:0][ManagementBurn:0][TargetBurn:0]";
+	HR_HTML_Desc = "";
+	HR_Group = "0";
+    }
+
+    node BD
+    {
+	label = "Burn\nDifficulty";
+	position = (697 67);
+	states = ("High" "Medium" "Low");
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_State_2 = "";
+	HR_Desc = "";
+	HR_LinkMode = "[U1:0][BurnCost:0]";
+	HR_Group = "0";
+    }
+
+    utility BurnCost
+    {
+	label = "Burn\nCost";
+	position = (695 218);
+	HR_Desc = "";
+	HR_Group = "0";
+    }
+
+    node Burn
+    {
+	label = "Burn\nHappens?";
+	position = (423 348);
+	states = ("Hot Burn" "Cold Burn" "None");
+	subtype = label;
+	HR_State_2 = "";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[BurnHappens:0][Intervention_1:0]";
+	HR_Group = "0";
+    }
+
+    node TargetBurn
+    {
+	label = "Targeted\nBurn?";
+	position = (485 217);
+	states = ("Hot Burn" "Cold Burn" "None");
+	subtype = label;
+	HR_LinkControlPoints = "";
+	HR_State_2 = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[U1:0][C2:0][C1:0][HotBurn:0][ColdBurn:0][BurnCost:0][Burn:0]";
+	HR_Group = "0";
+    }
+
+    node Season
+    {
+	label = "Season";
+	position = (103 68);
+	states = ("Spring" "Summer" "Autumn" "Winter");
+	HR_LinkControlPoints = "";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_LinkMode = "[C7:0][Seas:0][Temperature:0][Rainfall:0][UnplanBurn:0][SowCost:0][Piggy:0][C3:0][Wildfire:0][ManagementBurn:0]";
+	HR_Group = "0";
+    }
+
+    node Wildfire
+    {
+	label = "Wildfire\nBurn?";
+	position = (302 228);
+	states = ("false" "true");
+	subtype = boolean;
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[C1:0][HotBurn:0][Burn:0]";
+	HR_Group = "0";
+    }
+
+    node BurnStrategy
+    {
+	label = "Strategy";
+	position = (551 67);
+	states = ("Hot Burn" "Cold Burn" "None");
+	HR_NodeSize = "(100, 55)";
+	HR_LinkControlPoints = "";
+	HR_State_11 = "";
+	HR_State_10 = "";
+	HR_State_9 = "";
+	HR_State_8 = "";
+	HR_State_7 = "";
+	HR_State_6 = "";
+	HR_State_5 = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_State_12 = "";
+	HR_LinkMode = "[BurnStrategy:0][CrashGrazeStrategy:0][HS:0][ScarifyStrategy:0][RemoveTopSoilStrategy:0][C1:0][C2:0][C3:0][SS:0][Intervention_1:0][Inter:0][PlanBurn:0][TargetBurn:0]";
+	HR_Group = "0";
+    }
+
+    potential (Scale)
+    {
+	data = ( 1 1 1 );
+    }
+
+    potential (LBio)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (BBio)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (TBio)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (BD)
+    {
+	data = ( 1 1 1 );
+    }
+
+    potential (BurnCost | Scale TargetBurn BD)
+    {
+	data = ((( 4850	%  Scale=0 - 1  TargetBurn=Hot Burn  BD=High
+		   3900	%  Scale=0 - 1  TargetBurn=Hot Burn  BD=Medium
+		   3100 )	%  Scale=0 - 1  TargetBurn=Hot Burn  BD=Low
+		 ( 4850	%  Scale=0 - 1  TargetBurn=Cold Burn  BD=High
+		   3900	%  Scale=0 - 1  TargetBurn=Cold Burn  BD=Medium
+		   3100 )	%  Scale=0 - 1  TargetBurn=Cold Burn  BD=Low
+		 ( 0	%  Scale=0 - 1  TargetBurn=None  BD=High
+		   0	%  Scale=0 - 1  TargetBurn=None  BD=Medium
+		   0 ))	%  Scale=0 - 1  TargetBurn=None  BD=Low
+		(( 1050	%  Scale=1 - 2  TargetBurn=Hot Burn  BD=High
+		   850	%  Scale=1 - 2  TargetBurn=Hot Burn  BD=Medium
+		   700 )	%  Scale=1 - 2  TargetBurn=Hot Burn  BD=Low
+		 ( 1050	%  Scale=1 - 2  TargetBurn=Cold Burn  BD=High
+		   850	%  Scale=1 - 2  TargetBurn=Cold Burn  BD=Medium
+		   700 )	%  Scale=1 - 2  TargetBurn=Cold Burn  BD=Low
+		 ( 0	%  Scale=1 - 2  TargetBurn=None  BD=High
+		   0	%  Scale=1 - 2  TargetBurn=None  BD=Medium
+		   0 ))	%  Scale=1 - 2  TargetBurn=None  BD=Low
+		(( 650	%  Scale=2 - 3  TargetBurn=Hot Burn  BD=High
+		   500	%  Scale=2 - 3  TargetBurn=Hot Burn  BD=Medium
+		   400 )	%  Scale=2 - 3  TargetBurn=Hot Burn  BD=Low
+		 ( 650	%  Scale=2 - 3  TargetBurn=Cold Burn  BD=High
+		   500	%  Scale=2 - 3  TargetBurn=Cold Burn  BD=Medium
+		   400 )	%  Scale=2 - 3  TargetBurn=Cold Burn  BD=Low
+		 ( 0	%  Scale=2 - 3  TargetBurn=None  BD=High
+		   0	%  Scale=2 - 3  TargetBurn=None  BD=Medium
+		   0 )));	%  Scale=2 - 3  TargetBurn=None  BD=Low
+    }
+
+    potential (Burn | TargetBurn Wildfire)
+    {
+	model_nodes = ();
+	model_data = ( if (or (TargetBurn == "Hot Burn", Wildfire), "Hot Burn", if (TargetBurn == "Cold Burn", "Cold Burn", "None")) );
+    }
+
+    potential (TargetBurn | BBio LBio TBio BurnStrategy)
+    {
+	model_nodes = (BurnStrategy);
+	model_data  = ( if (and (TBio > 50, LBio / BBio > 2), "Hot Burn", "None"),
+			if (and (TBio > 25, LBio / BBio > 2), "Cold Burn", "None"),
+			"None" );
+    }
+
+    potential (Season)
+    {
+	data = ( 1 1 1 1 );
+    }
+
+    potential (Wildfire | Season TBio)
+    {
+	data = ((( 1 0 )	%  Season=Spring  TBio=0 - 1
+		 ( 1 0 )	%  Season=Spring  TBio=1 - 2
+		 ( 1 0 )	%  Season=Spring  TBio=interval(20,40)
+		 ( 0.999 0.001 )	%  Season=Spring  TBio=interval(40,60)
+		 ( 0.999 0.001 )	%  Season=Spring  TBio=interval(60,80)
+		 ( 0.998 0.002 )	%  Season=Spring  TBio=interval(80,99.99)
+		 ( 0.998 0.002 ))	%  Season=Spring  TBio=interval(99.99,100)
+		(( 1 0 )	%  Season=Summer  TBio=0 - 1
+		 ( 1 0 )	%  Season=Summer  TBio=1 - 2
+		 ( 0.998 0.002 )	%  Season=Summer  TBio=interval(20,40)
+		 ( 0.997 0.003 )	%  Season=Summer  TBio=interval(40,60)
+		 ( 0.99 0.01 )	%  Season=Summer  TBio=interval(60,80)
+		 ( 0.98 0.02 )	%  Season=Summer  TBio=interval(80,99.99)
+		 ( 0.98 0.02 ))	%  Season=Summer  TBio=interval(99.99,100)
+		(( 1 0 )	%  Season=Autumn  TBio=0 - 1
+		 ( 1 0 )	%  Season=Autumn  TBio=1 - 2
+		 ( 0.998 0.002 )	%  Season=Autumn  TBio=interval(20,40)
+		 ( 0.997 0.003 )	%  Season=Autumn  TBio=interval(40,60)
+		 ( 0.99 0.01 )	%  Season=Autumn  TBio=interval(60,80)
+		 ( 0.98 0.02 )	%  Season=Autumn  TBio=interval(80,99.99)
+		 ( 0.98 0.02 ))	%  Season=Autumn  TBio=interval(99.99,100)
+		(( 1 0 )	%  Season=Winter  TBio=0 - 1
+		 ( 1 0 )	%  Season=Winter  TBio=1 - 2
+		 ( 1 0 )	%  Season=Winter  TBio=interval(20,40)
+		 ( 1 0 )	%  Season=Winter  TBio=interval(40,60)
+		 ( 1 0 )	%  Season=Winter  TBio=interval(60,80)
+		 ( 1 0 )	%  Season=Winter  TBio=interval(80,99.99)
+		 ( 1 0 )));	%  Season=Winter  TBio=interval(99.99,100)
+    }
+
+    potential (BurnStrategy)
+    {
+	data = ( 1 1 1 );
+    }
+} % class BurnIntervention

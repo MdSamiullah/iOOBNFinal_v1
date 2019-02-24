@@ -1,0 +1,37 @@
+CompSum : CSumIndex 
+SoilTemperature : GP SP 
+BCGD_C4PLCDR : Cover_Dec 
+DP : Seed_Dec 
+Cover_Dec : Output_Dead 
+Seed_Inc : Output_Seeds 
+Output_Seeds : 
+Shade : SP 
+Input_Seedlings : New_Adults 
+Output_Dead : 
+Input_Basal : Output_Basal Seed_Inc 
+SPR : 
+CCond : 
+SI : Output_Basal 
+Soil_Friability : GP 
+Input_Dead : Output_Dead Dead_Dec 
+Season : SPR SI GP 
+SP : 
+Cover_Inc : Output_NUI 
+Input_Seeds : Germ_Seeds Seed_Dec Output_Seeds 
+New_Adults : Output_Basal 
+BCGD_C4PLBCR : Output_Basal 
+GP : Germ_Seeds 
+Seed_Dec : 
+BCGD_C4PLCGR : Cover_Inc 
+Output_NUI : 
+BCGD_DDRM : Dead_Dec 
+BCGD_C4PLCCR : Output_Cover 
+Input_Cover : Cover_Inc Output_Cover Cover_Dec 
+Germ_Seeds : Seed_Dec 
+Output_Cover : 
+CSumIndex : CCond 
+SoilMoisture : GP SP 
+Output_Basal : 
+Output_Seedlings : 
+NL : CCond 
+Dead_Dec : 

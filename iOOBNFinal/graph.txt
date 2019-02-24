@@ -1,0 +1,14 @@
+V:T,C,X,S
+S:L,B,M,V,T,Y,E,C,R,X
+T:V,E,L,C,S,X
+L:T,S,B,E,X
+B:E,D,L,S
+C:V,M,R,T,Y,S,X
+M:C,S,R,Y,X
+E:T,L,B,D,X,S
+D:B,E
+R:C,M,Y,G,S,X
+X:E,Y,G,N,S,V,T,L,C,R,M
+Y:X,R,G,N,M,S,C
+G:X,Y,N,R
+N:X,Y,G

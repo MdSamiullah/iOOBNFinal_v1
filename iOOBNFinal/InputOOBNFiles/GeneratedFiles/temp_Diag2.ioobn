@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel>
+	<root>
+		<mxCell id="0" />
+		<mxCell id="1" parent="0" />
+		<mxCell connectable="0" id="23" parent="1" value="" vertex="1">
+			<mxGeometry as="geometry" height="400.0" width="250.0" x="636" y="298">
+				<mxRectangle as="alternateBounds" height="40.0" width="40.0" x="636" y="298" />
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="Asia2.class::B_11" parent="23" edge = "1" source = "Asia2.class::B_4" target = "Asia2.class::B_6"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="150.0" y= "140.0"/>
+				<mxPoint as="targetPoint" x="150.0" y= "240.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="Asia2.class::B_12" parent="23" edge = "1" source = "Asia2.class::B_5" target = "Asia2.class::B_6"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="250.0" y= "140.0"/>
+				<mxPoint as="targetPoint" x="150.0" y= "240.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="Asia2.class::B_13" parent="23" edge = "1" source = "Asia2.class::B_6" target = "Asia2.class::B_7"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="150.0" y= "240.0"/>
+				<mxPoint as="targetPoint" x="200.0" y= "340.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="Asia2.class::B_14" parent="23" edge = "1" source = "Asia2.class::B_6" target = "Asia2.class::B_8"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="150.0" y= "240.0"/>
+				<mxPoint as="targetPoint" x="100.0" y= "340.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="Asia2.class::B_2" parent="23" style = "ellipse;dashed=1" value = "V" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="50.0" y="0.0"/>
+		</mxCell>
+		<mxCell  id="Asia2.class::B_3" parent="23" style = "ellipse;dashed=1" value = "S" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="150.0" y="0.0"/>
+		</mxCell>
+		<mxCell  id="Asia2.class::B_4" parent="23" style = "ellipse" value = "C" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="50.0" y="100.0"/>
+		</mxCell>
+		<mxCell  id="Asia2.class::B_5" parent="23" style = "ellipse" value = "L" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="150.0" y="100.0"/>
+		</mxCell>
+		<mxCell  id="Asia2.class::B_6" parent="23" style = "ellipse" value = "R" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="50.0" y="200.0"/>
+		</mxCell>
+		<mxCell  id="Asia2.class::B_7" parent="23" style = "ellipse;strokeWidth=5" value = "X" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="100.0" y="300.0"/>
+		</mxCell>
+		<mxCell  id="Asia2.class::B_8" parent="23" style = "ellipse;strokeWidth=5" value = "G" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="0.0" y="300.0"/>
+		</mxCell>
+		<mxCell  id="Asia2.class::B_9" parent="23" edge = "1" source = "Asia2.class::B_2" target = "Asia2.class::B_4"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="150.0" y= "40.0"/>
+				<mxPoint as="targetPoint" x="150.0" y= "140.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="Asia2.class::B_10" parent="23" edge = "1" source = "Asia2.class::B_3" target = "Asia2.class::B_5"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="250.0" y= "40.0"/>
+				<mxPoint as="targetPoint" x="250.0" y= "140.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell connectable="0" id="24" parent="1" value="" vertex="1">
+			<mxGeometry as="geometry" height="400.0" width="250.0" x="970" y="219">
+				<mxRectangle as="alternateBounds" height="40.0" width="40.0" x="970" y="219" />
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="Asia.class::C_A_11" parent="24" edge = "1" source = "Asia.class::C_A_3" target = "Asia.class::C_A_5"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="250.0" y= "40.0"/>
+				<mxPoint as="targetPoint" x="250.0" y= "140.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="Asia.class::C_A_12" parent="24" edge = "1" source = "Asia.class::C_A_3" target = "Asia.class::C_A_6"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="250.0" y= "40.0"/>
+				<mxPoint as="targetPoint" x="250.0" y= "240.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="Asia.class::C_A_13" parent="24" edge = "1" source = "Asia.class::C_A_5" target = "Asia.class::C_A_7"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="250.0" y= "140.0"/>
+				<mxPoint as="targetPoint" x="150.0" y= "240.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="Asia.class::C_A_14" parent="24" edge = "1" source = "Asia.class::C_A_4" target = "Asia.class::C_A_7"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="150.0" y= "140.0"/>
+				<mxPoint as="targetPoint" x="150.0" y= "240.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="Asia.class::C_A_15" parent="24" edge = "1" source = "Asia.class::C_A_7" target = "Asia.class::C_A_8"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="150.0" y= "240.0"/>
+				<mxPoint as="targetPoint" x="200.0" y= "340.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="Asia.class::C_A_16" parent="24" edge = "1" source = "Asia.class::C_A_7" target = "Asia.class::C_A_9"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="150.0" y= "240.0"/>
+				<mxPoint as="targetPoint" x="100.0" y= "340.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="Asia.class::C_A_17" parent="24" edge = "1" source = "Asia.class::C_A_6" target = "Asia.class::C_A_9"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="250.0" y= "240.0"/>
+				<mxPoint as="targetPoint" x="100.0" y= "340.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="Asia.class::C_A_2" parent="24" style = "ellipse;dashed=1" value = "V" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="50.0" y="0.0"/>
+		</mxCell>
+		<mxCell  id="Asia.class::C_A_3" parent="24" style = "ellipse;dashed=1" value = "S" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="150.0" y="0.0"/>
+		</mxCell>
+		<mxCell  id="Asia.class::C_A_4" parent="24" style = "ellipse" value = "T" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="50.0" y="100.0"/>
+		</mxCell>
+		<mxCell  id="Asia.class::C_A_5" parent="24" style = "ellipse" value = "L" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="150.0" y="100.0"/>
+		</mxCell>
+		<mxCell  id="Asia.class::C_A_6" parent="24" style = "ellipse" value = "B" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="150.0" y="200.0"/>
+		</mxCell>
+		<mxCell  id="Asia.class::C_A_7" parent="24" style = "ellipse" value = "E" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="50.0" y="200.0"/>
+		</mxCell>
+		<mxCell  id="Asia.class::C_A_8" parent="24" style = "ellipse;strokeWidth=5" value = "X" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="100.0" y="300.0"/>
+		</mxCell>
+		<mxCell  id="Asia.class::C_A_9" parent="24" style = "ellipse;strokeWidth=5" value = "D" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="0.0" y="300.0"/>
+		</mxCell>
+		<mxCell  id="Asia.class::C_A_10" parent="24" edge = "1" source = "Asia.class::C_A_2" target = "Asia.class::C_A_4"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="150.0" y= "40.0"/>
+				<mxPoint as="targetPoint" x="150.0" y= "140.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell connectable="0" id="25" parent="1" value="" vertex="1">
+			<mxGeometry as="geometry" height="400.0" width="250.0" x="177" y="211">
+				<mxRectangle as="alternateBounds" height="40.0" width="40.0" x="177" y="211" />
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="Asia.class::A_11" parent="25" edge = "1" source = "Asia.class::A_3" target = "Asia.class::A_5"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="250.0" y= "40.0"/>
+				<mxPoint as="targetPoint" x="250.0" y= "140.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="Asia.class::A_12" parent="25" edge = "1" source = "Asia.class::A_3" target = "Asia.class::A_6"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="250.0" y= "40.0"/>
+				<mxPoint as="targetPoint" x="250.0" y= "240.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="Asia.class::A_13" parent="25" edge = "1" source = "Asia.class::A_5" target = "Asia.class::A_7"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="250.0" y= "140.0"/>
+				<mxPoint as="targetPoint" x="150.0" y= "240.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="Asia.class::A_14" parent="25" edge = "1" source = "Asia.class::A_4" target = "Asia.class::A_7"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="150.0" y= "140.0"/>
+				<mxPoint as="targetPoint" x="150.0" y= "240.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="Asia.class::A_15" parent="25" edge = "1" source = "Asia.class::A_7" target = "Asia.class::A_8"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="150.0" y= "240.0"/>
+				<mxPoint as="targetPoint" x="200.0" y= "340.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="Asia.class::A_16" parent="25" edge = "1" source = "Asia.class::A_7" target = "Asia.class::A_9"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="150.0" y= "240.0"/>
+				<mxPoint as="targetPoint" x="100.0" y= "340.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="Asia.class::A_17" parent="25" edge = "1" source = "Asia.class::A_6" target = "Asia.class::A_9"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="250.0" y= "240.0"/>
+				<mxPoint as="targetPoint" x="100.0" y= "340.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="Asia.class::A_2" parent="25" style = "ellipse;dashed=1" value = "V" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="50.0" y="0.0"/>
+		</mxCell>
+		<mxCell  id="Asia.class::A_3" parent="25" style = "ellipse;dashed=1" value = "S" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="150.0" y="0.0"/>
+		</mxCell>
+		<mxCell  id="Asia.class::A_4" parent="25" style = "ellipse" value = "T" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="50.0" y="100.0"/>
+		</mxCell>
+		<mxCell  id="Asia.class::A_5" parent="25" style = "ellipse" value = "L" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="150.0" y="100.0"/>
+		</mxCell>
+		<mxCell  id="Asia.class::A_6" parent="25" style = "ellipse" value = "B" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="150.0" y="200.0"/>
+		</mxCell>
+		<mxCell  id="Asia.class::A_7" parent="25" style = "ellipse" value = "E" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="50.0" y="200.0"/>
+		</mxCell>
+		<mxCell  id="Asia.class::A_8" parent="25" style = "ellipse;strokeWidth=5" value = "X" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="100.0" y="300.0"/>
+		</mxCell>
+		<mxCell  id="Asia.class::A_9" parent="25" style = "ellipse;strokeWidth=5" value = "D" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="0.0" y="300.0"/>
+		</mxCell>
+		<mxCell  id="Asia.class::A_10" parent="25" edge = "1" source = "Asia.class::A_2" target = "Asia.class::A_4"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="150.0" y= "40.0"/>
+				<mxPoint as="targetPoint" x="150.0" y= "140.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="2" parent="1" style = "ellipse" value = "V" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="350.0" y="40.0"/>
+		</mxCell>
+		<mxCell  id="RefLink20" parent="1" edge = "1" source = "3" target = "Asia2.class::B_3"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="450.0" y= "40.0"/>
+				<mxPoint as="targetPoint" x="250.0" y= "40.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="3" parent="1" style = "ellipse" value = "S" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="450.0" y="40.0"/>
+		</mxCell>
+		<mxCell  id="4" parent="1" style = "ellipse" value = "N" vertex = "1" >
+			<mxGeometry as="geometry" height="55.0" width="80.0" x="360.0" y="637.0"/>
+		</mxCell>
+		<mxCell  id="RefLink22" parent="1" edge = "1" source = "2" target = "Asia.class::A_2"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="350.0" y= "40.0"/>
+				<mxPoint as="targetPoint" x="150.0" y= "40.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="5" parent="1" edge = "1" source = "Asia2.class::B_7" target = "4"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="200.0" y= "340.0"/>
+				<mxPoint as="targetPoint" x="360.0" y= "637.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="RefLink21" parent="1" edge = "1" source = "2" target = "Asia.class::C_A_2"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="350.0" y= "40.0"/>
+				<mxPoint as="targetPoint" x="150.0" y= "40.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="6" parent="1" edge = "1" source = "Asia2.class::B_8" target = "4"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="100.0" y= "340.0"/>
+				<mxPoint as="targetPoint" x="360.0" y= "637.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="7" parent="1" edge = "1" source = "Asia.class::A_8" target = "4"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="200.0" y= "340.0"/>
+				<mxPoint as="targetPoint" x="360.0" y= "637.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="RefLink23" parent="1" edge = "1" source = "2" target = "Asia2.class::B_2"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="350.0" y= "40.0"/>
+				<mxPoint as="targetPoint" x="150.0" y= "40.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="RefLink19" parent="1" edge = "1" source = "3" target = "Asia.class::A_3"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="450.0" y= "40.0"/>
+				<mxPoint as="targetPoint" x="250.0" y= "40.0"/>
+			</mxGeometry>
+		</mxCell>
+		<mxCell  id="RefLink18" parent="1" edge = "1" source = "3" target = "Asia.class::C_A_3"  value = "" >
+			<mxGeometry as="geometry" relative="1">
+				<mxPoint as="sourcePoint" x="450.0" y= "40.0"/>
+				<mxPoint as="targetPoint" x="250.0" y= "40.0"/>
+			</mxGeometry>
+		</mxCell>
+
+	</root>
+</mxGraphModel>

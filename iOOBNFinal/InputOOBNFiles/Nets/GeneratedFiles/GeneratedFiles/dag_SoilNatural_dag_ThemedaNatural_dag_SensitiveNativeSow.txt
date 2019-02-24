@@ -1,0 +1,3 @@
+SoilTemperature : 
+SoilMoisture : 
+Shade : 

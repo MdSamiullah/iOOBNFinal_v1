@@ -1,0 +1,460 @@
+class main
+{
+	inputs = ( node0 node2 );
+	outputs = ( node25 node41 node43 node44 );
+	node node44 
+	{
+		type = "Discrete";
+		position = ( 1964 1229 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node45 
+	{
+		type = "Discrete";
+		position = ( 2084 1244 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node46 
+	{
+		type = "Discrete";
+		position = ( 2204 1230 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node47 
+	{
+		type = "Discrete";
+		position = ( 1215 1110 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node48 
+	{
+		type = "Discrete";
+		position = ( 1335 1095 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node49 
+	{
+		type = "Discrete";
+		position = ( 2324 1215 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node10 
+	{
+		type = "Discrete";
+		position = ( 44 750 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node11 
+	{
+		type = "Discrete";
+		position = ( 135 1124 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node12 
+	{
+		type = "Discrete";
+		position = ( 255 390 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node13 
+	{
+		type = "Discrete";
+		position = ( 164 1244 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node14 
+	{
+		type = "Discrete";
+		position = ( 375 375 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node15 
+	{
+		type = "Discrete";
+		position = ( 255 1110 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node16 
+	{
+		type = "Discrete";
+		position = ( 495 389 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node17 
+	{
+		type = "Discrete";
+		position = ( 15 630 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node18 
+	{
+		type = "Discrete";
+		position = ( 375 1095 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node19 
+	{
+		type = "Discrete";
+		position = ( 495 1109 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node0 
+	{
+		type = "Discrete";
+		position = ( 45 30 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node1 
+	{
+		type = "Discrete";
+		position = ( 15 390 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node2 
+	{
+		type = "Discrete";
+		position = ( 165 44 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node3 
+	{
+		type = "Discrete";
+		position = ( 15 1110 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node4 
+	{
+		type = "Discrete";
+		position = ( 44 510 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node5 
+	{
+		type = "Discrete";
+		position = ( 135 404 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node6 
+	{
+		type = "Discrete";
+		position = ( 44 270 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node7 
+	{
+		type = "Discrete";
+		position = ( 44 1230 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node8 
+	{
+		type = "Discrete";
+		position = ( 15 150 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node9 
+	{
+		type = "Discrete";
+		position = ( 164 524 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node20 
+	{
+		type = "Discrete";
+		position = ( 135 164 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node21 
+	{
+		type = "Discrete";
+		position = ( 164 764 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node22 
+	{
+		type = "Discrete";
+		position = ( 44 990 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node23 
+	{
+		type = "Discrete";
+		position = ( 15 870 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node24 
+	{
+		type = "Discrete";
+		position = ( 284 1230 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node25 
+	{
+		type = "Discrete";
+		position = ( 404 1215 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node26 
+	{
+		type = "Discrete";
+		position = ( 524 1229 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node27 
+	{
+		type = "Discrete";
+		position = ( 644 1244 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node28 
+	{
+		type = "Discrete";
+		position = ( 615 1124 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node29 
+	{
+		type = "Discrete";
+		position = ( 764 1230 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node30 
+	{
+		type = "Discrete";
+		position = ( 735 1110 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node31 
+	{
+		type = "Discrete";
+		position = ( 164 1004 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node32 
+	{
+		type = "Discrete";
+		position = ( 855 1095 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node33 
+	{
+		type = "Discrete";
+		position = ( 884 1215 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node34 
+	{
+		type = "Discrete";
+		position = ( 1004 1229 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node35 
+	{
+		type = "Discrete";
+		position = ( 1124 1244 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node36 
+	{
+		type = "Discrete";
+		position = ( 1244 1230 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node37 
+	{
+		type = "Discrete";
+		position = ( 1364 1215 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node38 
+	{
+		type = "Discrete";
+		position = ( 975 1109 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node39 
+	{
+		type = "Discrete";
+		position = ( 1484 1229 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node40 
+	{
+		type = "Discrete";
+		position = ( 1095 1124 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node41 
+	{
+		type = "Discrete";
+		position = ( 1604 1244 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node42 
+	{
+		type = "Discrete";
+		position = ( 1724 1230 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	node node43 
+	{
+		type = "Discrete";
+		position = ( 1844 1215 );
+		states = ( "State0" "State1" "State2" "State3"  );
+	}
+	instance Obj0C1 : main1 (node4 = node21;Obj0C1_node42 = node42, Obj0C1_node48 = node48)
+	{
+		position = ( 255 150 );
+	}
+	potential (node44 | node4 node36 node32 node27 node34 node47 node17 node29 node35 node39 )
+	{
+	}
+	potential (node45 | node33 node37 node12 node49 node18 node2 node4 node8 node38 node46 )
+	{
+	}
+	potential (node46 | node3 node1 node10 node11 node20 node17 node30 node36 node14 node0 )
+	{
+	}
+	potential (node47 | node20 node31 node18 node24 node26 node29 node19 node16 node13 )
+	{
+	}
+	potential (node48 | node49 node0 node38 node7 node14 node35 node33 node29 node6 )
+	{
+	}
+	potential (node49 | node17 node9 node16 node26 node2 node28 node8 node11 node18 node4 )
+	{
+	}
+	potential (node10 | node1 node2 node9 node12 node4 node6 )
+	{
+	}
+	potential (node11 | node2 node10 node6 node12 node1 node14 node20 node9 node5 )
+	{
+	}
+	potential (node12 | node2 node4 node20 )
+	{
+	}
+	potential (node13 | node8 node9 node2 node23 node0 node6 node1 node10 node20 node7 )
+	{
+	}
+	potential (node14 | node0 node12 node1 )
+	{
+	}
+	potential (node15 | node4 node16 node10 node26 node28 node49 node37 node40 node22 )
+	{
+	}
+	potential (node16 | node2 node20 node11 )
+	{
+	}
+	potential (node17 | node4 node16 node5 node14 node20 )
+	{
+	}
+	potential (node18 | node10 node1 node4 node16 node11 node2 node0 node5 node21 )
+	{
+	}
+	potential (node19 | node10 node11 node2 node27 node26 node18 node21 node23 node9 )
+	{
+	}
+	potential (node0)
+	{
+	}
+	potential (node1 | node6 node12 node2 )
+	{
+	}
+	potential (node2)
+	{
+	}
+	potential (node3 | node27 node16 node18 node9 node10 node4 node6 node26 Obj0C1_node48 )
+	{
+	}
+	potential (node4 | node0 node6 node20 node2 )
+	{
+	}
+	potential (node5 | node12 node4 node8 )
+	{
+	}
+	potential (node6 | node0 node2 )
+	{
+	}
+	potential (node7 | node9 node20 node3 node5 node12 node19 node4 node27 node16 node23 )
+	{
+	}
+	potential (node8 | node2 )
+	{
+	}
+	potential (node9 | node5 node8 node1 node20 )
+	{
+	}
+	potential (node20 | node8 )
+	{
+	}
+	potential (node21 | node16 node17 node12 node11 node2 node10 )
+	{
+	}
+	potential (node22 | node14 node33 node24 node23 node12 node18 node1 node20 )
+	{
+	}
+	potential (node23 | node1 node18 node12 node17 node9 node5 Obj0C1_node42 )
+	{
+	}
+	potential (node24 | node7 node31 node8 node29 node9 node14 node3 node46 node38 node1 )
+	{
+	}
+	potential (node25 | node19 node20 node35 node5 node16 node10 node46 node2 node26 node12 )
+	{
+	}
+	potential (node26 | node18 node20 node5 node12 node0 node17 node2 node8 node16 node6 )
+	{
+	}
+	potential (node27 | node26 node8 node10 node2 node6 node5 node4 node12 node20 node1 )
+	{
+	}
+	potential (node28 | node11 node2 node27 node0 node4 node3 node19 node23 node10 )
+	{
+	}
+	potential (node29 | node19 node1 node4 node18 node49 node11 node16 node36 node2 node27 )
+	{
+	}
+	potential (node30 | node29 node7 node16 node9 node3 node2 node8 node27 node11 )
+	{
+	}
+	potential (node31 | node17 node2 node33 node10 node23 node6 node26 node4 )
+	{
+	}
+	potential (node32 | node17 node16 node5 node4 node42 node6 node36 node15 node7 )
+	{
+	}
+	potential (node33 | node36 node13 node28 node20 node29 node21 node18 node14 node27 node5 )
+	{
+	}
+	potential (node34 | node18 node24 node29 node21 node49 node27 node11 node38 node45 node22 )
+	{
+	}
+	potential (node35 | node20 node21 node29 node31 node16 node8 node4 node6 node5 node26 )
+	{
+	}
+	potential (node36 | node11 node7 node21 node0 node13 node4 node10 node27 node6 node18 )
+	{
+	}
+	potential (node37 | node22 node27 node8 node5 node10 node39 node28 node9 node47 node29 )
+	{
+	}
+	potential (node38 | node28 node13 node7 node46 node0 node20 node35 node16 node10 )
+	{
+	}
+	potential (node39 | node14 node18 node30 node12 node49 node24 node13 node7 node48 node6 )
+	{
+	}
+	potential (node40 | node47 node1 node8 node48 node23 node39 node0 node16 node29 )
+	{
+	}
+	potential (node41 | node7 node24 node32 node48 node2 node26 node27 node15 node17 node11 )
+	{
+	}
+	potential (node42 | node2 node5 node24 node1 node3 node27 node35 node28 node7 node36 )
+	{
+	}
+	potential (node43 | node11 node38 node22 node12 node17 node32 node1 node31 node8 node40 )
+	{
+	}
+}
+

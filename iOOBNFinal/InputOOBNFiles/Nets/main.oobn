@@ -1,0 +1,2246 @@
+class main
+{
+    inputs = ();
+    outputs = ();
+    node_size = (0 0);
+
+    node TargetHerbicideTargetWinter2000
+    {
+	states = ("ST" "Needle" "Blanket" "BroadWeeds");
+	subtype = label;
+    }
+
+    node HerbicideStrategyHerbicideTargetWinter2000
+    {
+	states = ("Eradicate" "PermitModerate" "PermitHigh" "None");
+	subtype = label;
+    }
+
+    node BurnStrategyBurnWinter2000
+    {
+	states = ("Hot Burn" "Cold Burn" "None");
+	subtype = label;
+    }
+
+    node Winter2000
+    {
+	states = ("Spring" "Summer" "Autumn" "Winter");
+	subtype = label;
+    }
+
+    node DurationGrazeSheepAutumn2000
+    {
+	states = ("" "" "");
+	subtype = interval;
+	state_values = (0 10 60 90);
+    }
+
+    node BurnStrategyBurnAutumn2000
+    {
+	states = ("Hot Burn" "Cold Burn" "None");
+	subtype = label;
+    }
+
+    node Autumn2000
+    {
+	states = ("Spring" "Summer" "Autumn" "Winter");
+	subtype = label;
+    }
+
+    node DurationGrazeCattleSummer2000
+    {
+	states = ("" "" "");
+	subtype = interval;
+	state_values = (0 10 60 90);
+    }
+
+    node Intervention_Fences
+    {
+	states = ("Yes" "No");
+	subtype = label;
+    }
+
+    node BurnStrategyBurnSummer2000
+    {
+	states = ("Hot Burn" "Cold Burn" "None");
+	subtype = label;
+    }
+
+    node Summer2000
+    {
+	states = ("Spring" "Summer" "Autumn" "Winter");
+	subtype = label;
+    }
+
+    node Ruderals_Seeds
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 10 25 50 100);
+    }
+
+    node SensitNative_Seeds
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 10 25 50 100);
+    }
+
+    node Wallaby_Seedlings
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 0.25 5 25 50);
+    }
+
+    node Spear_Seedlings
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 0.25 5 25 50);
+    }
+
+    node Windmill_Seedlings
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 0.25 5 25 50);
+    }
+
+    node TargetHerbicideTargetSpring2000
+    {
+	states = ("ST" "Needle" "Blanket" "BroadWeeds");
+	subtype = label;
+    }
+
+    node HerbicideStrategyHerbicideTargetSpring2000
+    {
+	states = ("Eradicate" "PermitModerate" "PermitHigh" "None");
+	subtype = label;
+    }
+
+    node Onion_Seedlings
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 0.25 5 25 50);
+    }
+
+    node BroadWeeds_Seedlings
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 0.25 5 25 50);
+    }
+
+    node Ruderals_Seedlings
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 0.25 5 25 50);
+    }
+
+    node HardyNative_Seedlings
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 0.25 5 25 50);
+    }
+
+    node SensitNative_Seedlings
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 0.25 5 25 50);
+    }
+
+    node Needle_Seedlings
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 0.25 5 25 50);
+    }
+
+    node ST_Seedlings
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 0.25 5 25 50);
+    }
+
+    node RedLeg_Seedlings
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 0.25 5 25 50);
+    }
+
+    node Scale
+    {
+	states = ("" "" "");
+	subtype = interval;
+	state_values = (0 5 50 500);
+    }
+
+    node BurnStrategyBurnSpring2000
+    {
+	states = ("Hot Burn" "Cold Burn" "None");
+	subtype = label;
+    }
+
+    node BD
+    {
+	states = ("High" "Medium" "Low");
+	subtype = label;
+    }
+
+    node Nutrient_Carbon
+    {
+	states = ("Enhanced" "Natural");
+	subtype = label;
+    }
+
+    node Nutrient_Nitrogen
+    {
+	states = ("" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 1 2 3 4 5 6);
+    }
+
+    node Nutrient_Phosphorous
+    {
+	states = ("" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 1 2 3 4 5 6);
+    }
+
+    node Onion_Seeds
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 30 70 400 700);
+    }
+
+    node BroadWeeds_Seeds
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 30 70 400 700);
+    }
+
+    node Blanket_Adults
+    {
+	states = ("" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 10 50 100 250 1000);
+    }
+
+    node Blanket_Seeds
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 10000 25000 50000 100000);
+    }
+
+    node HardyNative_Seeds
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 10 25 50 100);
+    }
+
+    node Grain_Adults
+    {
+	states = ("" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 10 50 100 250 10000);
+    }
+
+    node Grain_Seeds
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 50 100 200 300);
+    }
+
+    node ExoticAnnual_Adults
+    {
+	states = ("" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 100 250 500 1000 2000);
+    }
+
+    node ExoticAnnual_Seeds
+    {
+	states = ("" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1000 3000 12000 25000 50000);
+    }
+
+    node Needle_Seeds
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 500 1500 5000 10000);
+    }
+
+    node ST_Seeds
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 10000 25000 50000 100000);
+    }
+
+    node Wallaby_Seeds
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 30 70 400 700);
+    }
+
+    node Spear_Seeds
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 30 70 400 700);
+    }
+
+    node Windmill_Seeds
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 30 70 400 700);
+    }
+
+    node RedLeg_Seeds
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 30 70 400 700);
+    }
+
+    node Themeda_Seedlings
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 0.25 5 25 50);
+    }
+
+    node Themeda_Seeds
+    {
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 30 70 400 700);
+    }
+
+    node Soil_Friability
+    {
+	states = ("Enhanced" "Satisfactory" "Inhibited");
+	subtype = label;
+    }
+
+    node DeRocked
+    {
+	states = ("Yes" "No");
+	subtype = label;
+    }
+
+    node NL
+    {
+	states = ("Highly Enriched" "Moderately Enriched" "Natural");
+	subtype = label;
+    }
+
+    node Needle_Basal
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node RedLeg_Basal
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node BroadWeeds_Basal
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node Ruderals_Basal
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node HardyNative_Basal
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node Wallaby_Basal
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node ST_Basal
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node Onion_Basal
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node Themeda_Basal
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node Spear_Basal
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node SensitNative_Basal
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node Windmill_Basal
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node BroadWeeds_Dead
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node SensitNative_Dead
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node Ruderals_Dead
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node HardyNative_Dead
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node ExoticAnnual_Dead
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node Onion_Dead
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node Grain_Dead
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node Spear_Dead
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node ST_Dead
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node Windmill_Dead
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node Blanket_Dead
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node Wallaby_Dead
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node Needle_Dead
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node RedLeg_Dead
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node Themeda_Dead
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node ExoticAnnual_Cover
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node Blanket_Cover
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node Onion_Cover
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node Themeda_Cover
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node Needle_Cover
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node Spear_Cover
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node ST_Cover
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node Ruderals_Cover
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node Wallaby_Cover
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node Windmill_Cover
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node RedLeg_Cover
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node SensitNative_Cover
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node BroadWeeds_Cover
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node Grain_Cover
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node HardyNative_Cover
+    {
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+    }
+
+    node Spring2000
+    {
+	states = ("Spring" "Summer" "Autumn" "Winter");
+	subtype = label;
+    }
+
+    instance HerbicideTargetOnionWinter2000 : OnionHerbicideTarget (Input_Seeds = NaturalOnionWinter2000_Output_Seeds, Input_Seedlings = BurnOnionWinter2000_Output_Seedlings, Input_Basal = BurnOnionWinter2000_Output_Basal, Input_Cover = BurnOnionWinter2000_Output_Cover, Input_Dead = BurnOnionWinter2000_Output_Dead, Application = HerbicideTargetInterventionWinter2000_Application, Target = TargetHerbicideTargetWinter2000; HerbicideTargetOnionWinter2000_Output_Cover = Output_Cover, HerbicideTargetOnionWinter2000_Output_Basal = Output_Basal, HerbicideTargetOnionWinter2000_Output_Seedlings = Output_Seedlings, HerbicideTargetOnionWinter2000_Output_Seeds = Output_Seeds, HerbicideTargetOnionWinter2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance HerbicideTargetBroadWeedsWinter2000 : BroadWeedsHerbicideTarget (Input_Seeds = NaturalBroadWeedsWinter2000_Output_Seeds, Input_Seedlings = BurnBroadWeedsWinter2000_Output_Seedlings, Input_Basal = BurnBroadWeedsWinter2000_Output_Basal, Input_Cover = BurnBroadWeedsWinter2000_Output_Cover, Input_Dead = BurnBroadWeedsWinter2000_Output_Dead, Target = TargetHerbicideTargetWinter2000, Application = HerbicideTargetInterventionWinter2000_Application; HerbicideTargetBroadWeedsWinter2000_Output_Cover = Output_Cover, HerbicideTargetBroadWeedsWinter2000_Output_Basal = Output_Basal, HerbicideTargetBroadWeedsWinter2000_Output_Seedlings = Output_Seedlings, HerbicideTargetBroadWeedsWinter2000_Output_Seeds = Output_Seeds, HerbicideTargetBroadWeedsWinter2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance HerbicideTargetBlanketWinter2000 : BlanketHerbicideTarget (Input_Cover = BurnBlanketWinter2000_Output_Cover, Input_Dead = BurnBlanketWinter2000_Output_Dead, Input_Adults = BurnBlanketWinter2000_Output_Adults, Input_Seeds = NaturalBlanketWinter2000_Output_Seeds, Target = TargetHerbicideTargetWinter2000, Application = HerbicideTargetInterventionWinter2000_Application; HerbicideTargetBlanketWinter2000_Output_Cover = Output_Cover, HerbicideTargetBlanketWinter2000_Output_Dead = Output_Dead, HerbicideTargetBlanketWinter2000_Output_Adults = Output_Adults, HerbicideTargetBlanketWinter2000_Output_Seeds = Output_Seeds)
+    {
+    }
+
+    instance HerbicideTargetRuderalsWinter2000 : RuderHerbicideTarget (Input_Seeds = HerbicideTargetRuderalsSpring2000_Output_Seeds, Input_Seedlings = BurnRuderalsWinter2000_Output_Seedlings, Input_Basal = BurnRuderalsWinter2000_Output_Basal, Input_Cover = BurnRuderalsWinter2000_Output_Cover, Input_Dead = BurnRuderalsWinter2000_Output_Dead, Target = TargetHerbicideTargetWinter2000, Application = HerbicideTargetInterventionWinter2000_Application; HerbicideTargetRuderalsWinter2000_Output_Cover = Output_Cover, HerbicideTargetRuderalsWinter2000_Output_Basal = Output_Basal, HerbicideTargetRuderalsWinter2000_Output_Seedlings = Output_Seedlings, HerbicideTargetRuderalsWinter2000_Output_Seeds = Output_Seeds, HerbicideTargetRuderalsWinter2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance HerbicideTargetHardyNativeWinter2000 : HardyNativeHerbicideTarget (Input_Seeds = NaturalHardyNativeWinter2000_Output_Seeds, Input_Seedlings = BurnHardyNativeWinter2000_Output_Seedlings, Input_Basal = BurnHardyNativeWinter2000_Output_Basal, Input_Cover = BurnHardyNativeWinter2000_Output_Cover, Input_Dead = BurnHardyNativeWinter2000_Output_Dead, Target = TargetHerbicideTargetWinter2000, Application = HerbicideTargetInterventionWinter2000_Application; HerbicideTargetHardyNativeWinter2000_Output_Cover = Output_Cover, HerbicideTargetHardyNativeWinter2000_Output_Basal = Output_Basal, HerbicideTargetHardyNativeWinter2000_Output_Seedlings = Output_Seedlings, HerbicideTargetHardyNativeWinter2000_Output_Seeds = Output_Seeds, HerbicideTargetHardyNativeWinter2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance HerbicideTargetSensitNativeWinter2000 : SensitNativeHerbicideTarget (Input_Seeds = HerbicideTargetSensitNativeSpring2000_Output_Seeds, Input_Seedlings = BurnSensitNativeWinter2000_Output_Seedlings, Input_Basal = BurnSensitNativeWinter2000_Output_Basal, Input_Cover = BurnSensitNativeWinter2000_Output_Cover, Input_Dead = BurnSensitNativeWinter2000_Output_Dead, Target = TargetHerbicideTargetWinter2000, Application = HerbicideTargetInterventionWinter2000_Application; HerbicideTargetSensitNativeWinter2000_Output_Cover = Output_Cover, HerbicideTargetSensitNativeWinter2000_Output_Basal = Output_Basal, HerbicideTargetSensitNativeWinter2000_Output_Seedlings = Output_Seedlings, HerbicideTargetSensitNativeWinter2000_Output_Seeds = Output_Seeds, HerbicideTargetSensitNativeWinter2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance HerbicideTargetGrainWinter2000 : GrainHerbicideTarget (Input_Seeds = NaturalGrainWinter2000_Output_Seeds, Input_Cover = BurnGrainWinter2000_Output_Cover, Input_Dead = BurnGrainWinter2000_Output_Dead, Input_Adults = BurnGrainWinter2000_Output_Adults, Target = TargetHerbicideTargetWinter2000, Application = HerbicideTargetInterventionWinter2000_Application; HerbicideTargetGrainWinter2000_Output_Cover = Output_Cover, HerbicideTargetGrainWinter2000_Output_Seeds = Output_Seeds, HerbicideTargetGrainWinter2000_Output_Dead = Output_Dead, HerbicideTargetGrainWinter2000_Output_Adults = Output_Adults)
+    {
+    }
+
+    instance HerbicideTargetExoticAnnualWinter2000 : ExoticAnnualHerbicideTarget (Input_Cover = BurnExoticAnnualWinter2000_Output_Cover, Input_Dead = BurnExoticAnnualWinter2000_Output_Dead, Input_Adults = BurnExoticAnnualWinter2000_Output_Adults, Input_Seeds = NaturalExoticAnnualWinter2000_Output_Seeds, Target = TargetHerbicideTargetWinter2000, Application = HerbicideTargetInterventionWinter2000_Application; HerbicideTargetExoticAnnualWinter2000_Output_Cover = Output_Cover, HerbicideTargetExoticAnnualWinter2000_Output_Dead = Output_Dead, HerbicideTargetExoticAnnualWinter2000_Output_Adults = Output_Adults, HerbicideTargetExoticAnnualWinter2000_Output_Seeds = Output_Seeds)
+    {
+    }
+
+    instance HerbicideTargetNeedleWinter2000 : NeedleHerbicideTarget (Input_Seeds = NaturalNeedleWinter2000_Output_Seeds, Input_Seedlings = BurnNeedleWinter2000_Output_Seedlings, Input_Basal = BurnNeedleWinter2000_Output_Basal, Input_Cover = BurnNeedleWinter2000_Output_Cover, Input_Dead = BurnNeedleWinter2000_Output_Dead, Target = TargetHerbicideTargetWinter2000, Application = HerbicideTargetInterventionWinter2000_Application; HerbicideTargetNeedleWinter2000_Output_Cover = Output_Cover, HerbicideTargetNeedleWinter2000_Output_Basal = Output_Basal, HerbicideTargetNeedleWinter2000_Output_Seedlings = Output_Seedlings, HerbicideTargetNeedleWinter2000_Output_Seeds = Output_Seeds, HerbicideTargetNeedleWinter2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance HerbicideTargetSTWinter2000 : STHerbicideTarget (Input_Seeds = NaturalSTWinter2000_Output_Seeds, Input_Seedlings = BurnSTWinter2000_Output_Seedlings, Input_Basal = BurnSTWinter2000_Output_Basal, Input_Cover = BurnSTWinter2000_Output_Cover, Input_Dead = BurnSTWinter2000_Output_Dead, Target = TargetHerbicideTargetWinter2000, Application = HerbicideTargetInterventionWinter2000_Application; HerbicideTargetSTWinter2000_Output_Cover = Output_Cover, HerbicideTargetSTWinter2000_Output_Basal = Output_Basal, HerbicideTargetSTWinter2000_Output_Seedlings = Output_Seedlings, HerbicideTargetSTWinter2000_Output_Seeds = Output_Seeds, HerbicideTargetSTWinter2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance HerbicideTargetWallabyWinter2000 : WallabyHerbicideTarget (Input_Seeds = NaturalWallabyWinter2000_Output_Seeds, Input_Seedlings = HerbicideTargetWallabySpring2000_Output_Seedlings, Input_Basal = BurnWallabyWinter2000_Output_Basal, Input_Cover = BurnWallabyWinter2000_Output_Cover, Input_Dead = BurnWallabyWinter2000_Output_Dead, Target = TargetHerbicideTargetWinter2000, Application = HerbicideTargetInterventionWinter2000_Application; HerbicideTargetWallabyWinter2000_Output_Cover = Output_Cover, HerbicideTargetWallabyWinter2000_Output_Basal = Output_Basal, HerbicideTargetWallabyWinter2000_Output_Seedlings = Output_Seedlings, HerbicideTargetWallabyWinter2000_Output_Seeds = Output_Seeds, HerbicideTargetWallabyWinter2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance HerbicideTargetSpearWinter2000 : SpearHerbicideTarget (Input_Seeds = NaturalSpearWinter2000_Output_Seeds, Input_Seedlings = HerbicideTargetSpearSpring2000_Output_Seedlings, Input_Basal = BurnSpearWinter2000_Output_Basal, Input_Cover = BurnSpearWinter2000_Output_Cover, Input_Dead = BurnSpearWinter2000_Output_Dead, Target = TargetHerbicideTargetWinter2000, Application = HerbicideTargetInterventionWinter2000_Application; HerbicideTargetSpearWinter2000_Output_Cover = Output_Cover, HerbicideTargetSpearWinter2000_Output_Basal = Output_Basal, HerbicideTargetSpearWinter2000_Output_Seedlings = Output_Seedlings, HerbicideTargetSpearWinter2000_Output_Seeds = Output_Seeds, HerbicideTargetSpearWinter2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance HerbicideTargetWindmillWinter2000 : WindmillHerbicideTarget (Input_Seeds = NaturalWindmillWinter2000_Output_Seeds, Input_Seedlings = HerbicideTargetWindmillSpring2000_Output_Seedlings, Input_Basal = BurnWindmillWinter2000_Output_Basal, Input_Cover = BurnWindmillWinter2000_Output_Cover, Input_Dead = BurnWindmillWinter2000_Output_Dead, Target = TargetHerbicideTargetWinter2000, Application = HerbicideTargetInterventionWinter2000_Application; HerbicideTargetWindmillWinter2000_Output_Cover = Output_Cover, HerbicideTargetWindmillWinter2000_Output_Basal = Output_Basal, HerbicideTargetWindmillWinter2000_Output_Seedlings = Output_Seedlings, HerbicideTargetWindmillWinter2000_Output_Seeds = Output_Seeds, HerbicideTargetWindmillWinter2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance HerbicideTargetRedLegWinter2000 : RedLegHerbicideTarget (Input_Seeds = NaturalRedLegWinter2000_Output_Seeds, Input_Seedlings = BurnRedLegWinter2000_Output_Seedlings, Input_Basal = BurnRedLegWinter2000_Output_Basal, Input_Cover = BurnRedLegWinter2000_Output_Cover, Input_Dead = BurnRedLegWinter2000_Output_Dead, Target = TargetHerbicideTargetWinter2000, Application = HerbicideTargetInterventionWinter2000_Application; HerbicideTargetRedLegWinter2000_Output_Cover = Output_Cover, HerbicideTargetRedLegWinter2000_Output_Basal = Output_Basal, HerbicideTargetRedLegWinter2000_Output_Seedlings = Output_Seedlings, HerbicideTargetRedLegWinter2000_Output_Seeds = Output_Seeds, HerbicideTargetRedLegWinter2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance HerbicideTargetThemedaWinter2000 : ThemedaHerbicideTarget (Input_Seeds = NaturalThemedaWinter2000_Output_Seeds, Input_Seedlings = BurnThemedaWinter2000_Output_Seedlings, Input_Basal = BurnThemedaWinter2000_Output_Basal, Input_Cover = BurnThemedaWinter2000_Output_Cover, Input_Dead = BurnThemedaWinter2000_Output_Dead, Target = TargetHerbicideTargetWinter2000, Application = HerbicideTargetInterventionWinter2000_Application; HerbicideTargetThemedaWinter2000_Output_Cover = Output_Cover, HerbicideTargetThemedaWinter2000_Output_Basal = Output_Basal, HerbicideTargetThemedaWinter2000_Output_Seedlings = Output_Seedlings, HerbicideTargetThemedaWinter2000_Output_Seeds = Output_Seeds, HerbicideTargetThemedaWinter2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance HerbicideTargetInterventionWinter2000 : HerbicideInterventionTarget (Blanket_Cover = BurnBlanketWinter2000_Output_Cover, Needle_Cover = BurnNeedleWinter2000_Output_Cover, ST_Cover = BurnSTWinter2000_Output_Cover, BroadWeeds_Cover = BurnBroadWeedsWinter2000_Output_Cover, HerbicideStrategy = HerbicideStrategyHerbicideTargetWinter2000, Target = TargetHerbicideTargetWinter2000; HerbicideTargetInterventionWinter2000_HerbicideCost = HerbicideCost, HerbicideTargetInterventionWinter2000_Application = Application)
+    {
+    }
+
+    instance BurnNutrientWinter2000 : NutrientFire (Input_Phosphorous = NaturalNutrientWinter2000_Output_Phosphorous, Input_Nitrogen = NaturalNutrientWinter2000_Output_Nitrogen, Input_Carbon = NaturalNutrientWinter2000_Output_Carbon, Burn = BurnInterventionWinter2000_Burn, NUI = BurnNUIWinter2000_NUI; BurnNutrientWinter2000_Output_Nitrogen = Output_Nitrogen, BurnNutrientWinter2000_Output_Phosphorous = Output_Phosphorous, BurnNutrientWinter2000_NL = NL, BurnNutrientWinter2000_Output_Carbon = Output_Carbon)
+    {
+    }
+
+    instance BurnNUIWinter2000 : NuiAdder (Windmill_NUI = BurnWindmillWinter2000_Output_NUI, BroadWeeds_NUI = BurnBroadWeedsWinter2000_Output_NUI, HardyNative_NUI = BurnHardyNativeWinter2000_Output_NUI, Spear_NUI = BurnSpearWinter2000_Output_NUI, ST_NUI = BurnSTWinter2000_Output_NUI, Wallaby_NUI = BurnWallabyWinter2000_Output_NUI, SensitNative_NUI = BurnSensitNativeWinter2000_Output_NUI, Grain_NUI = BurnGrainWinter2000_Output_NUI, Onion_NUI = BurnOnionWinter2000_Output_NUI, ExoticAnnual_NUI = BurnExoticAnnualWinter2000_Output_NUI, Needle_NUI = BurnNeedleWinter2000_Output_NUI, Themeda_NUI = BurnThemedaWinter2000_Output_NUI, Blanket_NUI = BurnBlanketWinter2000_Output_NUI, RedLeg_NUI = BurnRedLegWinter2000_Output_NUI, Ruderals_NUI = BurnRuderalsWinter2000_Output_NUI; BurnNUIWinter2000_NUI = NUI)
+    {
+    }
+
+    instance BurnOnionWinter2000 : TolerantFire (Input_Cover = NaturalOnionWinter2000_Output_Cover, Input_Dead = NaturalOnionWinter2000_Output_Dead, Input_Basal = NaturalOnionWinter2000_Output_Basal, Input_Seedlings = BurnOnionAutumn2000_Output_Seedlings, Burn = BurnInterventionWinter2000_Burn; BurnOnionWinter2000_Output_NUI = Output_NUI, BurnOnionWinter2000_Output_Dead = Output_Dead, BurnOnionWinter2000_Output_Seedlings = Output_Seedlings, BurnOnionWinter2000_Output_Basal = Output_Basal, BurnOnionWinter2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnBroadWeedsWinter2000 : TolerantFire (Input_Cover = NaturalBroadWeedsWinter2000_Output_Cover, Input_Dead = NaturalBroadWeedsWinter2000_Output_Dead, Input_Basal = NaturalBroadWeedsWinter2000_Output_Basal, Input_Seedlings = BurnBroadWeedsAutumn2000_Output_Seedlings, Burn = BurnInterventionWinter2000_Burn; BurnBroadWeedsWinter2000_Output_NUI = Output_NUI, BurnBroadWeedsWinter2000_Output_Dead = Output_Dead, BurnBroadWeedsWinter2000_Output_Seedlings = Output_Seedlings, BurnBroadWeedsWinter2000_Output_Basal = Output_Basal, BurnBroadWeedsWinter2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnBlanketWinter2000 : KilledFire3 (Input_Adults = NaturalBlanketWinter2000_Output_Adults, Burn = BurnInterventionWinter2000_Burn, Input_Dead = NaturalBlanketWinter2000_Output_Dead, Input_Cover = NaturalBlanketWinter2000_Output_Cover; BurnBlanketWinter2000_Output_Adults = Output_Adults, BurnBlanketWinter2000_Output_Cover = Output_Cover, BurnBlanketWinter2000_Output_Dead = Output_Dead, BurnBlanketWinter2000_Output_NUI = Output_NUI)
+    {
+    }
+
+    instance BurnRuderalsWinter2000 : TolerantFire (Input_Cover = NaturalRuderalsWinter2000_Output_Cover, Input_Dead = NaturalRuderalsWinter2000_Output_Dead, Input_Basal = NaturalRuderalsWinter2000_Output_Basal, Input_Seedlings = BurnRuderalsAutumn2000_Output_Seedlings, Burn = BurnInterventionWinter2000_Burn; BurnRuderalsWinter2000_Output_NUI = Output_NUI, BurnRuderalsWinter2000_Output_Dead = Output_Dead, BurnRuderalsWinter2000_Output_Seedlings = Output_Seedlings, BurnRuderalsWinter2000_Output_Basal = Output_Basal, BurnRuderalsWinter2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnHardyNativeWinter2000 : TolerantFire (Input_Cover = NaturalHardyNativeWinter2000_Output_Cover, Input_Dead = NaturalHardyNativeWinter2000_Output_Dead, Input_Basal = NaturalHardyNativeWinter2000_Output_Basal, Input_Seedlings = BurnHardyNativeAutumn2000_Output_Seedlings, Burn = BurnInterventionWinter2000_Burn; BurnHardyNativeWinter2000_Output_NUI = Output_NUI, BurnHardyNativeWinter2000_Output_Dead = Output_Dead, BurnHardyNativeWinter2000_Output_Seedlings = Output_Seedlings, BurnHardyNativeWinter2000_Output_Basal = Output_Basal, BurnHardyNativeWinter2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnSensitNativeWinter2000 : TolerantFire (Input_Cover = NaturalSensitNativeWinter2000_Output_Cover, Input_Dead = NaturalSensitNativeWinter2000_Output_Dead, Input_Basal = NaturalSensitNativeWinter2000_Output_Basal, Input_Seedlings = BurnSensitNativeAutumn2000_Output_Seedlings, Burn = BurnInterventionWinter2000_Burn; BurnSensitNativeWinter2000_Output_NUI = Output_NUI, BurnSensitNativeWinter2000_Output_Dead = Output_Dead, BurnSensitNativeWinter2000_Output_Seedlings = Output_Seedlings, BurnSensitNativeWinter2000_Output_Basal = Output_Basal, BurnSensitNativeWinter2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnGrainWinter2000 : KilledFire2 (Input_Cover = NaturalGrainWinter2000_Output_Cover, Input_Dead = NaturalGrainWinter2000_Output_Dead, Burn = BurnInterventionWinter2000_Burn, Input_Adults = NaturalGrainWinter2000_Output_Adults; BurnGrainWinter2000_Output_NUI = Output_NUI, BurnGrainWinter2000_Output_Dead = Output_Dead, BurnGrainWinter2000_Output_Cover = Output_Cover, BurnGrainWinter2000_Output_Adults = Output_Adults)
+    {
+    }
+
+    instance BurnExoticAnnualWinter2000 : KilledFire1 (Input_Cover = NaturalExoticAnnualWinter2000_Output_Cover, Input_Dead = NaturalExoticAnnualWinter2000_Output_Dead, Burn = BurnInterventionWinter2000_Burn, Input_Adults = NaturalExoticAnnualWinter2000_Output_Adults; BurnExoticAnnualWinter2000_Output_NUI = Output_NUI, BurnExoticAnnualWinter2000_Output_Dead = Output_Dead, BurnExoticAnnualWinter2000_Output_Cover = Output_Cover, BurnExoticAnnualWinter2000_Output_Adults = Output_Adults)
+    {
+    }
+
+    instance BurnNeedleWinter2000 : TolerantFire (Input_Cover = NaturalNeedleWinter2000_Output_Cover, Input_Dead = NaturalNeedleWinter2000_Output_Dead, Input_Basal = NaturalNeedleWinter2000_Output_Basal, Input_Seedlings = BurnNeedleAutumn2000_Output_Seedlings, Burn = BurnInterventionWinter2000_Burn; BurnNeedleWinter2000_Output_NUI = Output_NUI, BurnNeedleWinter2000_Output_Dead = Output_Dead, BurnNeedleWinter2000_Output_Seedlings = Output_Seedlings, BurnNeedleWinter2000_Output_Basal = Output_Basal, BurnNeedleWinter2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnSTWinter2000 : TolerantFire (Input_Cover = NaturalSTWinter2000_Output_Cover, Input_Dead = NaturalSTWinter2000_Output_Dead, Input_Basal = NaturalSTWinter2000_Output_Basal, Input_Seedlings = BurnSTAutumn2000_Output_Seedlings, Burn = BurnInterventionWinter2000_Burn; BurnSTWinter2000_Output_NUI = Output_NUI, BurnSTWinter2000_Output_Dead = Output_Dead, BurnSTWinter2000_Output_Seedlings = Output_Seedlings, BurnSTWinter2000_Output_Basal = Output_Basal, BurnSTWinter2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnWallabyWinter2000 : ModerateFire (Input_Cover = NaturalWallabyWinter2000_Output_Cover, Input_Dead = NaturalWallabyWinter2000_Output_Dead, Input_Basal = NaturalWallabyWinter2000_Output_Basal, Burn = BurnInterventionWinter2000_Burn; BurnWallabyWinter2000_Output_NUI = Output_NUI, BurnWallabyWinter2000_Output_Dead = Output_Dead, BurnWallabyWinter2000_Output_Basal = Output_Basal, BurnWallabyWinter2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnSpearWinter2000 : SensitiveFire (Input_Cover = NaturalSpearWinter2000_Output_Cover, Input_Dead = NaturalSpearWinter2000_Output_Dead, Input_Basal = NaturalSpearWinter2000_Output_Basal, Burn = BurnInterventionWinter2000_Burn; BurnSpearWinter2000_Output_NUI = Output_NUI, BurnSpearWinter2000_Output_Dead = Output_Dead, BurnSpearWinter2000_Output_Basal = Output_Basal, BurnSpearWinter2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnWindmillWinter2000 : ModerateFire (Input_Cover = NaturalWindmillWinter2000_Output_Cover, Input_Dead = NaturalWindmillWinter2000_Output_Dead, Input_Basal = NaturalWindmillWinter2000_Output_Basal, Burn = BurnInterventionWinter2000_Burn; BurnWindmillWinter2000_Output_NUI = Output_NUI, BurnWindmillWinter2000_Output_Dead = Output_Dead, BurnWindmillWinter2000_Output_Basal = Output_Basal, BurnWindmillWinter2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnRedLegWinter2000 : TolerantFire (Input_Cover = NaturalRedLegWinter2000_Output_Cover, Input_Dead = NaturalRedLegWinter2000_Output_Dead, Input_Basal = NaturalRedLegWinter2000_Output_Basal, Input_Seedlings = BurnRedLegAutumn2000_Output_Seedlings, Burn = BurnInterventionWinter2000_Burn; BurnRedLegWinter2000_Output_NUI = Output_NUI, BurnRedLegWinter2000_Output_Dead = Output_Dead, BurnRedLegWinter2000_Output_Seedlings = Output_Seedlings, BurnRedLegWinter2000_Output_Basal = Output_Basal, BurnRedLegWinter2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnThemedaWinter2000 : TolerantFire (Input_Cover = NaturalThemedaWinter2000_Output_Cover, Input_Dead = NaturalThemedaWinter2000_Output_Dead, Input_Basal = NaturalThemedaWinter2000_Output_Basal, Input_Seedlings = NaturalThemedaWinter2000_Output_Seedlings, Burn = BurnInterventionWinter2000_Burn; BurnThemedaWinter2000_Output_NUI = Output_NUI, BurnThemedaWinter2000_Output_Dead = Output_Dead, BurnThemedaWinter2000_Output_Seedlings = Output_Seedlings, BurnThemedaWinter2000_Output_Basal = Output_Basal, BurnThemedaWinter2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnInterventionWinter2000 : BurnIntervention (Season = Winter2000, BD = BD, TBio = BurnBiomass1Winter2000_TBio, BurnStrategy = BurnStrategyBurnWinter2000, BBio = BurnBiomass1Winter2000_BBio, LBio = BurnBiomass1Winter2000_LBio, Scale = Scale; BurnInterventionWinter2000_Burn = Burn, BurnInterventionWinter2000_BurnCost = BurnCost)
+    {
+    }
+
+    instance BurnBiomass1Winter2000 : BiomassSummaries (HardyNative_Cover = NaturalHardyNativeWinter2000_Output_Cover, Grain_Cover = NaturalGrainWinter2000_Output_Cover, BroadWeeds_Cover = NaturalBroadWeedsWinter2000_Output_Cover, SensitNative_Cover = NaturalSensitNativeWinter2000_Output_Cover, RedLeg_Cover = NaturalRedLegWinter2000_Output_Cover, Windmill_Cover = NaturalWindmillWinter2000_Output_Cover, Wallaby_Cover = NaturalWallabyWinter2000_Output_Cover, Ruderals_Cover = NaturalRuderalsWinter2000_Output_Cover, ST_Cover = NaturalSTWinter2000_Output_Cover, Spear_Cover = NaturalSpearWinter2000_Output_Cover, Needle_Cover = NaturalNeedleWinter2000_Output_Cover, Themeda_Cover = NaturalThemedaWinter2000_Output_Cover, Onion_Cover = NaturalOnionWinter2000_Output_Cover, Blanket_Cover = NaturalBlanketWinter2000_Output_Cover, ExoticAnnual_Cover = NaturalExoticAnnualWinter2000_Output_Cover, Themeda_Dead = NaturalThemedaWinter2000_Output_Dead, RedLeg_Dead = NaturalRedLegWinter2000_Output_Dead, Needle_Dead = NaturalNeedleWinter2000_Output_Dead, Wallaby_Dead = NaturalWallabyWinter2000_Output_Dead, Blanket_Dead = NaturalBlanketWinter2000_Output_Dead, Windmill_Dead = NaturalWindmillWinter2000_Output_Dead, ST_Dead = NaturalSTWinter2000_Output_Dead, Spear_Dead = NaturalSpearWinter2000_Output_Dead, Grain_Dead = NaturalGrainWinter2000_Output_Dead, Onion_Dead = NaturalOnionWinter2000_Output_Dead, ExoticAnnual_Dead = NaturalExoticAnnualWinter2000_Output_Dead, HardyNative_Dead = NaturalHardyNativeWinter2000_Output_Dead, Ruderals_Dead = NaturalRuderalsWinter2000_Output_Dead, SensitNative_Dead = NaturalSensitNativeWinter2000_Output_Dead, BroadWeeds_Dead = NaturalBroadWeedsWinter2000_Output_Dead, Windmill_Basal = NaturalWindmillWinter2000_Output_Basal, SensitNative_Basal = NaturalSensitNativeWinter2000_Output_Basal, Spear_Basal = NaturalSpearWinter2000_Output_Basal, Themeda_Basal = NaturalThemedaWinter2000_Output_Basal, Onion_Basal = NaturalOnionWinter2000_Output_Basal, ST_Basal = NaturalSTWinter2000_Output_Basal, Wallaby_Basal = NaturalWallabyWinter2000_Output_Basal, HardyNative_Basal = NaturalHardyNativeWinter2000_Output_Basal, Ruderals_Basal = NaturalRuderalsWinter2000_Output_Basal, BroadWeeds_Basal = NaturalBroadWeedsWinter2000_Output_Basal, RedLeg_Basal = NaturalRedLegWinter2000_Output_Basal, Needle_Basal = NaturalNeedleWinter2000_Output_Basal, Season = Winter2000, NL = NaturalNutrientWinter2000_NL; BurnBiomass1Winter2000_LBio = LBio, BurnBiomass1Winter2000_DBio = DBio, BurnBiomass1Winter2000_BBio = BBio, BurnBiomass1Winter2000_TBio = TBio, BurnBiomass1Winter2000_HPalC = HPalC, BurnBiomass1Winter2000_MPalC = MPalC, BurnBiomass1Winter2000_LPalC = LPalC, BurnBiomass1Winter2000_VLPalC = VLPalC, BurnBiomass1Winter2000_HPalS = HPalS, BurnBiomass1Winter2000_MPalS = MPalS, BurnBiomass1Winter2000_LPalS = LPalS, BurnBiomass1Winter2000_VLPalS = VLPalS, BurnBiomass1Winter2000_WComp = WComp, BurnBiomass1Winter2000_MComp = MComp, BurnBiomass1Winter2000_SComp = SComp, BurnBiomass1Winter2000_VSComp = VSComp)
+    {
+    }
+
+    instance NaturalNutrientWinter2000 : NutrientNatural (Input_Phosphorous = GrazeSheepNutrientAutumn2000_Output_Phosphorous, Input_Nitrogen = GrazeSheepNutrientAutumn2000_Output_Nitrogen, Input_Carbon = GrazeSheepNutrientAutumn2000_Output_Carbon, NUI = NaturalNUIWinter2000_NUI; NaturalNutrientWinter2000_Output_Nitrogen = Output_Nitrogen, NaturalNutrientWinter2000_Output_Phosphorous = Output_Phosphorous, NaturalNutrientWinter2000_NL = NL, NaturalNutrientWinter2000_Output_Carbon = Output_Carbon)
+    {
+    }
+
+    instance NaturalNUIWinter2000 : NuiAdder (Windmill_NUI = NaturalWindmillWinter2000_Output_NUI, BroadWeeds_NUI = NaturalBroadWeedsWinter2000_Output_NUI, HardyNative_NUI = NaturalHardyNativeWinter2000_Output_NUI, Spear_NUI = NaturalSpearWinter2000_Output_NUI, ST_NUI = NaturalSTWinter2000_Output_NUI, Wallaby_NUI = NaturalWallabyWinter2000_Output_NUI, SensitNative_NUI = NaturalSensitNativeWinter2000_Output_NUI, Grain_NUI = NaturalGrainWinter2000_Output_NUI, Onion_NUI = NaturalOnionWinter2000_Output_NUI, ExoticAnnual_NUI = NaturalExoticAnnualWinter2000_Output_NUI, Needle_NUI = NaturalNeedleWinter2000_Output_NUI, Themeda_NUI = NaturalThemedaWinter2000_Output_NUI, Blanket_NUI = NaturalBlanketWinter2000_Output_NUI, RedLeg_NUI = NaturalRedLegWinter2000_Output_NUI, Ruderals_NUI = NaturalRuderalsWinter2000_Output_NUI; NaturalNUIWinter2000_NUI = NUI)
+    {
+    }
+
+    instance NaturalOnionWinter2000 : OnionNatural (Input_Cover = GrazeSheepOnionAutumn2000_Output_Cover, Input_Dead = GrazeSheepOnionAutumn2000_Output_Dead, Input_Seeds = NaturalOnionAutumn2000_Output_Seeds, Input_Basal = GrazeSheepOnionAutumn2000_Output_Basal, CompSum = NaturalBiomass2Winter2000_CompSum, Season = Winter2000, NL = GrazeSheepNutrientAutumn2000_NL; NaturalOnionWinter2000_Output_Dead = Output_Dead, NaturalOnionWinter2000_Output_Cover = Output_Cover, NaturalOnionWinter2000_Output_Basal = Output_Basal, NaturalOnionWinter2000_Output_Seeds = Output_Seeds, NaturalOnionWinter2000_Output_NUI = Output_NUI)
+    {
+    }
+
+    instance NaturalBroadWeedsWinter2000 : BroadWeedsNatural (NL = GrazeSheepNutrientAutumn2000_NL, Season = Winter2000, CompSum = NaturalBiomass2Winter2000_CompSum, Input_Basal = GrazeSheepBroadWeedsAutumn2000_Output_Basal, Input_Seeds = NaturalBroadWeedsAutumn2000_Output_Seeds, Input_Dead = GrazeSheepBroadWeedsAutumn2000_Output_Dead, Input_Cover = GrazeSheepBroadWeedsAutumn2000_Output_Cover; NaturalBroadWeedsWinter2000_Output_NUI = Output_NUI, NaturalBroadWeedsWinter2000_Output_Seeds = Output_Seeds, NaturalBroadWeedsWinter2000_Output_Basal = Output_Basal, NaturalBroadWeedsWinter2000_Output_Cover = Output_Cover, NaturalBroadWeedsWinter2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance NaturalBlanketWinter2000 : BlanketNatural (NL = GrazeSheepNutrientAutumn2000_NL, Season = Winter2000, CompSum = NaturalBiomass2Winter2000_CompSum, Input_Seeds = NaturalBlanketAutumn2000_Output_Seeds, Input_Dead = GrazeSheepBlanketAutumn2000_Output_Dead, Input_Cover = GrazeSheepBlanketAutumn2000_Output_Cover, Input_Adults = GrazeSheepBlanketAutumn2000_Output_Adults; NaturalBlanketWinter2000_Output_NUI = Output_NUI, NaturalBlanketWinter2000_Output_Seeds = Output_Seeds, NaturalBlanketWinter2000_Output_Cover = Output_Cover, NaturalBlanketWinter2000_Output_Dead = Output_Dead, NaturalBlanketWinter2000_Output_Adults = Output_Adults)
+    {
+    }
+
+    instance NaturalRuderalsWinter2000 : RuderNatural (Season = Winter2000, NL = GrazeSheepNutrientAutumn2000_NL, Input_Dead = GrazeSheepRuderalsAutumn2000_Output_Dead, Input_Cover = GrazeSheepRuderalsAutumn2000_Output_Cover, Input_Basal = GrazeSheepRuderalsAutumn2000_Output_Basal, CompSum = NaturalBiomass2Winter2000_CompSum; NaturalRuderalsWinter2000_Output_Cover = Output_Cover, NaturalRuderalsWinter2000_Output_Basal = Output_Basal, NaturalRuderalsWinter2000_Output_Dead = Output_Dead, NaturalRuderalsWinter2000_Output_NUI = Output_NUI)
+    {
+    }
+
+    instance NaturalHardyNativeWinter2000 : HardyNativeNatural (Input_Basal = GrazeSheepHardyNativeAutumn2000_Output_Basal, Input_Cover = GrazeSheepHardyNativeAutumn2000_Output_Cover, Input_Dead = GrazeSheepHardyNativeAutumn2000_Output_Dead, Input_Seeds = NaturalHardyNativeAutumn2000_Output_Seeds, NL = GrazeSheepNutrientAutumn2000_NL, Season = Winter2000, CompSum = NaturalBiomass2Winter2000_CompSum; NaturalHardyNativeWinter2000_Output_Seeds = Output_Seeds, NaturalHardyNativeWinter2000_Output_Cover = Output_Cover, NaturalHardyNativeWinter2000_Output_Dead = Output_Dead, NaturalHardyNativeWinter2000_Output_NUI = Output_NUI, NaturalHardyNativeWinter2000_Output_Basal = Output_Basal)
+    {
+    }
+
+    instance NaturalSensitNativeWinter2000 : SensitNativeNatural (CompSum = NaturalBiomass2Winter2000_CompSum, Input_Basal = GrazeSheepSensitNativeAutumn2000_Output_Basal, Input_Cover = GrazeSheepSensitNativeAutumn2000_Output_Cover, Input_Dead = GrazeSheepSensitNativeAutumn2000_Output_Dead, NL = GrazeSheepNutrientAutumn2000_NL, Season = Winter2000; NaturalSensitNativeWinter2000_Output_NUI = Output_NUI, NaturalSensitNativeWinter2000_Output_Dead = Output_Dead, NaturalSensitNativeWinter2000_Output_Basal = Output_Basal, NaturalSensitNativeWinter2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance NaturalGrainWinter2000 : GrainNatural (CompSum = NaturalBiomass2Winter2000_CompSum, NL = GrazeSheepNutrientAutumn2000_NL, Season = Winter2000, Input_Seeds = NaturalGrainAutumn2000_Output_Seeds, Input_Adults = GrazeSheepGrainAutumn2000_Output_Adults, Input_Dead = GrazeSheepGrainAutumn2000_Output_Dead, Input_Cover = GrazeSheepGrainAutumn2000_Output_Cover; NaturalGrainWinter2000_Output_Cover = Output_Cover, NaturalGrainWinter2000_Output_Adults = Output_Adults, NaturalGrainWinter2000_Output_Seeds = Output_Seeds, NaturalGrainWinter2000_Output_NUI = Output_NUI, NaturalGrainWinter2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance NaturalExoticAnnualWinter2000 : ExoticAnnualNatural (CompSum = NaturalBiomass2Winter2000_CompSum, Input_Seeds = NaturalExoticAnnualAutumn2000_Output_Seeds, NL = GrazeSheepNutrientAutumn2000_NL, Season = Winter2000, Input_Adults = GrazeSheepExoticAnnualAutumn2000_Output_Adults, Input_Dead = GrazeSheepExoticAnnualAutumn2000_Output_Dead, Input_Cover = GrazeSheepExoticAnnualAutumn2000_Output_Cover; NaturalExoticAnnualWinter2000_Output_Seeds = Output_Seeds, NaturalExoticAnnualWinter2000_Output_Adults = Output_Adults, NaturalExoticAnnualWinter2000_Output_Cover = Output_Cover, NaturalExoticAnnualWinter2000_Output_Dead = Output_Dead, NaturalExoticAnnualWinter2000_Output_NUI = Output_NUI)
+    {
+    }
+
+    instance NaturalNeedleWinter2000 : NeedleNatural (CompSum = NaturalBiomass2Winter2000_CompSum, Input_Seeds = NaturalNeedleAutumn2000_Output_Seeds, Season = Winter2000, Input_Dead = GrazeSheepNeedleAutumn2000_Output_Dead, Input_Cover = GrazeSheepNeedleAutumn2000_Output_Cover, Input_Basal = GrazeSheepNeedleAutumn2000_Output_Basal, NL = GrazeSheepNutrientAutumn2000_NL; NaturalNeedleWinter2000_Output_Basal = Output_Basal, NaturalNeedleWinter2000_Output_NUI = Output_NUI, NaturalNeedleWinter2000_Output_Dead = Output_Dead, NaturalNeedleWinter2000_Output_Cover = Output_Cover, NaturalNeedleWinter2000_Output_Seeds = Output_Seeds)
+    {
+    }
+
+    instance NaturalSTWinter2000 : STNatural (NL = GrazeSheepNutrientAutumn2000_NL, Input_Basal = GrazeSheepSTAutumn2000_Output_Basal, Input_Cover = GrazeSheepSTAutumn2000_Output_Cover, Input_Dead = GrazeSheepSTAutumn2000_Output_Dead, Season = Winter2000, Input_Seeds = NaturalSTAutumn2000_Output_Seeds, CompSum = NaturalBiomass2Winter2000_CompSum; NaturalSTWinter2000_Output_Seeds = Output_Seeds, NaturalSTWinter2000_Output_Cover = Output_Cover, NaturalSTWinter2000_Output_Dead = Output_Dead, NaturalSTWinter2000_Output_NUI = Output_NUI, NaturalSTWinter2000_Output_Basal = Output_Basal)
+    {
+    }
+
+    instance NaturalWallabyWinter2000 : WallabyNatural (NL = GrazeSheepNutrientAutumn2000_NL, Input_Basal = GrazeSheepWallabyAutumn2000_Output_Basal, Input_Cover = GrazeSheepWallabyAutumn2000_Output_Cover, Input_Dead = GrazeSheepWallabyAutumn2000_Output_Dead, Season = Winter2000, Input_Seeds = NaturalWallabyAutumn2000_Output_Seeds, CompSum = NaturalBiomass2Winter2000_CompSum; NaturalWallabyWinter2000_Output_Seeds = Output_Seeds, NaturalWallabyWinter2000_Output_Cover = Output_Cover, NaturalWallabyWinter2000_Output_Dead = Output_Dead, NaturalWallabyWinter2000_Output_NUI = Output_NUI, NaturalWallabyWinter2000_Output_Basal = Output_Basal)
+    {
+    }
+
+    instance NaturalSpearWinter2000 : SpearNatural (CompSum = NaturalBiomass2Winter2000_CompSum, Season = Winter2000, NL = GrazeSheepNutrientAutumn2000_NL, Input_Seeds = NaturalSpearAutumn2000_Output_Seeds, Input_Dead = GrazeSheepSpearAutumn2000_Output_Dead, Input_Cover = GrazeSheepSpearAutumn2000_Output_Cover, Input_Basal = GrazeSheepSpearAutumn2000_Output_Basal; NaturalSpearWinter2000_Output_Basal = Output_Basal, NaturalSpearWinter2000_Output_Cover = Output_Cover, NaturalSpearWinter2000_Output_Seeds = Output_Seeds, NaturalSpearWinter2000_Output_Dead = Output_Dead, NaturalSpearWinter2000_Output_NUI = Output_NUI)
+    {
+    }
+
+    instance NaturalWindmillWinter2000 : WindmillNatural (Input_Seeds = NaturalWindmillAutumn2000_Output_Seeds, Input_Dead = GrazeSheepWindmillAutumn2000_Output_Dead, Input_Cover = GrazeSheepWindmillAutumn2000_Output_Cover, Input_Basal = GrazeSheepWindmillAutumn2000_Output_Basal, NL = GrazeSheepNutrientAutumn2000_NL, CompSum = NaturalBiomass2Winter2000_CompSum, Season = Winter2000; NaturalWindmillWinter2000_Output_Basal = Output_Basal, NaturalWindmillWinter2000_Output_Dead = Output_Dead, NaturalWindmillWinter2000_Output_Seeds = Output_Seeds, NaturalWindmillWinter2000_Output_Cover = Output_Cover, NaturalWindmillWinter2000_Output_NUI = Output_NUI)
+    {
+    }
+
+    instance NaturalRedLegWinter2000 : RedLegNatural (CompSum = NaturalBiomass2Winter2000_CompSum, Season = Winter2000, NL = GrazeSheepNutrientAutumn2000_NL, Input_Seeds = NaturalRedLegAutumn2000_Output_Seeds, Input_Dead = GrazeSheepRedLegAutumn2000_Output_Dead, Input_Cover = GrazeSheepRedLegAutumn2000_Output_Cover, Input_Basal = GrazeSheepRedLegAutumn2000_Output_Basal; NaturalRedLegWinter2000_Output_Basal = Output_Basal, NaturalRedLegWinter2000_Output_NUI = Output_NUI, NaturalRedLegWinter2000_Output_Dead = Output_Dead, NaturalRedLegWinter2000_Output_Cover = Output_Cover, NaturalRedLegWinter2000_Output_Seeds = Output_Seeds)
+    {
+    }
+
+    instance NaturalThemedaWinter2000 : ThemedaNatural (Input_Dead = GrazeSheepThemedaAutumn2000_Output_Dead, Input_Cover = GrazeSheepThemedaAutumn2000_Output_Cover, Soil_Friability = GrazeSheepSoilAutumn2000_Output_Friability, SoilTemperature = NaturalSoilWinter2000_SoilTemperature, Input_Basal = GrazeSheepThemedaAutumn2000_Output_Basal, Season = Winter2000, Input_Seeds = NaturalThemedaAutumn2000_Output_Seeds, SoilMoisture = NaturalSoilWinter2000_SoilMoisture, Shade = NaturalSoilWinter2000_Shade, Input_Seedlings = GrazeSheepThemedaAutumn2000_Output_Seedlings, CompSum = NaturalBiomass2Winter2000_CompSum, NL = GrazeSheepNutrientAutumn2000_NL; NaturalThemedaWinter2000_Output_Basal = Output_Basal, NaturalThemedaWinter2000_Output_NUI = Output_NUI, NaturalThemedaWinter2000_Output_Dead = Output_Dead, NaturalThemedaWinter2000_Output_Cover = Output_Cover, NaturalThemedaWinter2000_Output_Seeds = Output_Seeds, NaturalThemedaWinter2000_Output_Seedlings = Output_Seedlings)
+    {
+    }
+
+    instance NaturalSoilWinter2000 : SoilNatural (Season = Winter2000, TBio = NaturalBiomass1Winter2000_TBio, LBio = NaturalBiomass1Winter2000_LBio; NaturalSoilWinter2000_SoilMoisture = SoilMoisture, NaturalSoilWinter2000_SoilTemperature = SoilTemperature, NaturalSoilWinter2000_Shade = Shade)
+    {
+    }
+
+    instance NaturalEnvValueWinter2000 : EnvValue (HardyNative_Cover = GrazeSheepHardyNativeAutumn2000_Output_Cover, BroadWeeds_Cover = GrazeSheepBroadWeedsAutumn2000_Output_Cover, SensitNative_Cover = GrazeSheepSensitNativeAutumn2000_Output_Cover, RedLeg_Cover = GrazeSheepRedLegAutumn2000_Output_Cover, Windmill_Cover = GrazeSheepWindmillAutumn2000_Output_Cover, Wallaby_Cover = GrazeSheepWallabyAutumn2000_Output_Cover, Ruderals_Cover = GrazeSheepRuderalsAutumn2000_Output_Cover, ST_Cover = GrazeSheepSTAutumn2000_Output_Cover, Spear_Cover = GrazeSheepSpearAutumn2000_Output_Cover, Needle_Cover = GrazeSheepNeedleAutumn2000_Output_Cover, Themeda_Cover = GrazeSheepThemedaAutumn2000_Output_Cover, Onion_Cover = GrazeSheepOnionAutumn2000_Output_Cover, ExoticAnnual_Cover = GrazeSheepExoticAnnualAutumn2000_Output_Cover, Blanket_Cover = GrazeSheepBlanketAutumn2000_Output_Cover, Grain_Cover = GrazeSheepGrainAutumn2000_Output_Cover, TBio = NaturalBiomass1Winter2000_TBio, DeRocked = DeRocked; NaturalEnvValueWinter2000_EnvironValue = EnvironValue)
+    {
+    }
+
+    instance NaturalBiomass2Winter2000 : BiomassNatural (WComp = NaturalBiomass1Winter2000_WComp, MComp = NaturalBiomass1Winter2000_MComp, SComp = NaturalBiomass1Winter2000_SComp, VSComp = NaturalBiomass1Winter2000_VSComp, VLPalC = NaturalBiomass1Winter2000_VLPalC, LPalC = NaturalBiomass1Winter2000_LPalC, MPalC = NaturalBiomass1Winter2000_MPalC, HPalC = NaturalBiomass1Winter2000_HPalC, VLPalS = NaturalBiomass1Winter2000_VLPalS, LPalS = NaturalBiomass1Winter2000_LPalS, MPalS = NaturalBiomass1Winter2000_MPalS, HPalS = NaturalBiomass1Winter2000_HPalS; NaturalBiomass2Winter2000_CompSum = CompSum, NaturalBiomass2Winter2000_PalSumCattle = PalSumCattle, NaturalBiomass2Winter2000_PalSumSheep = PalSumSheep)
+    {
+    }
+
+    instance NaturalBiomass1Winter2000 : BiomassSummaries (HardyNative_Cover = GrazeSheepHardyNativeAutumn2000_Output_Cover, Grain_Cover = GrazeSheepGrainAutumn2000_Output_Cover, BroadWeeds_Cover = GrazeSheepBroadWeedsAutumn2000_Output_Cover, SensitNative_Cover = GrazeSheepSensitNativeAutumn2000_Output_Cover, RedLeg_Cover = GrazeSheepRedLegAutumn2000_Output_Cover, Windmill_Cover = GrazeSheepWindmillAutumn2000_Output_Cover, Wallaby_Cover = GrazeSheepWallabyAutumn2000_Output_Cover, Ruderals_Cover = GrazeSheepRuderalsAutumn2000_Output_Cover, ST_Cover = GrazeSheepSTAutumn2000_Output_Cover, Spear_Cover = GrazeSheepSpearAutumn2000_Output_Cover, Needle_Cover = GrazeSheepNeedleAutumn2000_Output_Cover, Themeda_Cover = GrazeSheepThemedaAutumn2000_Output_Cover, Onion_Cover = GrazeSheepOnionAutumn2000_Output_Cover, Blanket_Cover = GrazeSheepBlanketAutumn2000_Output_Cover, ExoticAnnual_Cover = GrazeSheepExoticAnnualAutumn2000_Output_Cover, Themeda_Dead = GrazeSheepThemedaAutumn2000_Output_Dead, RedLeg_Dead = GrazeSheepRedLegAutumn2000_Output_Dead, Needle_Dead = GrazeSheepNeedleAutumn2000_Output_Dead, Wallaby_Dead = GrazeSheepWallabyAutumn2000_Output_Dead, Blanket_Dead = GrazeSheepBlanketAutumn2000_Output_Dead, Windmill_Dead = GrazeSheepWindmillAutumn2000_Output_Dead, ST_Dead = GrazeSheepSTAutumn2000_Output_Dead, Spear_Dead = GrazeSheepSpearAutumn2000_Output_Dead, Grain_Dead = GrazeSheepGrainAutumn2000_Output_Dead, Onion_Dead = GrazeSheepOnionAutumn2000_Output_Dead, ExoticAnnual_Dead = GrazeSheepExoticAnnualAutumn2000_Output_Dead, HardyNative_Dead = GrazeSheepHardyNativeAutumn2000_Output_Dead, Ruderals_Dead = GrazeSheepRuderalsAutumn2000_Output_Dead, SensitNative_Dead = GrazeSheepSensitNativeAutumn2000_Output_Dead, BroadWeeds_Dead = GrazeSheepBroadWeedsAutumn2000_Output_Dead, Windmill_Basal = GrazeSheepWindmillAutumn2000_Output_Basal, SensitNative_Basal = GrazeSheepSensitNativeAutumn2000_Output_Basal, Spear_Basal = GrazeSheepSpearAutumn2000_Output_Basal, Themeda_Basal = GrazeSheepThemedaAutumn2000_Output_Basal, Onion_Basal = GrazeSheepOnionAutumn2000_Output_Basal, ST_Basal = GrazeSheepSTAutumn2000_Output_Basal, Wallaby_Basal = GrazeSheepWallabyAutumn2000_Output_Basal, HardyNative_Basal = GrazeSheepHardyNativeAutumn2000_Output_Basal, Ruderals_Basal = GrazeSheepRuderalsAutumn2000_Output_Basal, BroadWeeds_Basal = GrazeSheepBroadWeedsAutumn2000_Output_Basal, RedLeg_Basal = GrazeSheepRedLegAutumn2000_Output_Basal, Needle_Basal = GrazeSheepNeedleAutumn2000_Output_Basal, Season = Winter2000, NL = GrazeSheepNutrientAutumn2000_NL; NaturalBiomass1Winter2000_LBio = LBio, NaturalBiomass1Winter2000_DBio = DBio, NaturalBiomass1Winter2000_BBio = BBio, NaturalBiomass1Winter2000_TBio = TBio, NaturalBiomass1Winter2000_HPalC = HPalC, NaturalBiomass1Winter2000_MPalC = MPalC, NaturalBiomass1Winter2000_LPalC = LPalC, NaturalBiomass1Winter2000_VLPalC = VLPalC, NaturalBiomass1Winter2000_HPalS = HPalS, NaturalBiomass1Winter2000_MPalS = MPalS, NaturalBiomass1Winter2000_LPalS = LPalS, NaturalBiomass1Winter2000_VLPalS = VLPalS, NaturalBiomass1Winter2000_WComp = WComp, NaturalBiomass1Winter2000_MComp = MComp, NaturalBiomass1Winter2000_SComp = SComp, NaturalBiomass1Winter2000_VSComp = VSComp)
+    {
+    }
+
+    instance GrazeSheepNutrientAutumn2000 : NutrientGrazeSheep (Input_Phosphorous = BurnNutrientAutumn2000_Output_Phosphorous, Input_Nitrogen = BurnNutrientAutumn2000_Output_Nitrogen, Input_Carbon = BurnNutrientAutumn2000_Output_Carbon, Duration = DurationGrazeSheepAutumn2000; GrazeSheepNutrientAutumn2000_Output_Nitrogen = Output_Nitrogen, GrazeSheepNutrientAutumn2000_Output_Phosphorous = Output_Phosphorous, GrazeSheepNutrientAutumn2000_NL = NL, GrazeSheepNutrientAutumn2000_Output_Carbon = Output_Carbon)
+    {
+    }
+
+    instance GrazeSheepOnionAutumn2000 : OnionGrazeSheep (Input_Basal = BurnOnionAutumn2000_Output_Basal, Input_Cover = BurnOnionAutumn2000_Output_Cover, Season = Autumn2000, Duration = DurationGrazeSheepAutumn2000, Input_Dead = BurnOnionAutumn2000_Output_Dead, PalSumSheep = GrazeSheepBiomass2Autumn2000_PalSumSheep; GrazeSheepOnionAutumn2000_Output_Cover = Output_Cover, GrazeSheepOnionAutumn2000_Output_Basal = Output_Basal, GrazeSheepOnionAutumn2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeSheepBroadWeedsAutumn2000 : BroadWeedsGrazeSheep (Input_Basal = BurnBroadWeedsAutumn2000_Output_Basal, Input_Cover = BurnBroadWeedsAutumn2000_Output_Cover, Season = Autumn2000, Duration = DurationGrazeSheepAutumn2000, Input_Dead = BurnBroadWeedsAutumn2000_Output_Dead, PalSumSheep = GrazeSheepBiomass2Autumn2000_PalSumSheep; GrazeSheepBroadWeedsAutumn2000_Output_Cover = Output_Cover, GrazeSheepBroadWeedsAutumn2000_Output_Basal = Output_Basal, GrazeSheepBroadWeedsAutumn2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeSheepBlanketAutumn2000 : BlanketGrazeSheep (Input_Adults = BurnBlanketAutumn2000_Output_Adults, Input_Dead = BurnBlanketAutumn2000_Output_Dead, Input_Cover = BurnBlanketAutumn2000_Output_Cover, Season = Autumn2000, Duration = DurationGrazeSheepAutumn2000, PalSumSheep = GrazeSheepBiomass2Autumn2000_PalSumSheep; GrazeSheepBlanketAutumn2000_Output_Adults = Output_Adults, GrazeSheepBlanketAutumn2000_Output_Cover = Output_Cover, GrazeSheepBlanketAutumn2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeSheepRuderalsAutumn2000 : RuderGrazeSheep (Input_Basal = BurnRuderalsAutumn2000_Output_Basal, Input_Cover = BurnRuderalsAutumn2000_Output_Cover, Season = Autumn2000, Duration = DurationGrazeSheepAutumn2000, Input_Dead = BurnRuderalsAutumn2000_Output_Dead, PalSumSheep = GrazeSheepBiomass2Autumn2000_PalSumSheep; GrazeSheepRuderalsAutumn2000_Output_Cover = Output_Cover, GrazeSheepRuderalsAutumn2000_Output_Basal = Output_Basal, GrazeSheepRuderalsAutumn2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeSheepHardyNativeAutumn2000 : HardyNativeGrazeSheep (Input_Basal = BurnHardyNativeAutumn2000_Output_Basal, Input_Cover = BurnHardyNativeAutumn2000_Output_Cover, Season = Autumn2000, Duration = DurationGrazeSheepAutumn2000, Input_Dead = BurnHardyNativeAutumn2000_Output_Dead, PalSumSheep = GrazeSheepBiomass2Autumn2000_PalSumSheep; GrazeSheepHardyNativeAutumn2000_Output_Cover = Output_Cover, GrazeSheepHardyNativeAutumn2000_Output_Basal = Output_Basal, GrazeSheepHardyNativeAutumn2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeSheepSensitNativeAutumn2000 : SensitNativeGrazeSheep (Input_Basal = BurnSensitNativeAutumn2000_Output_Basal, Input_Cover = BurnSensitNativeAutumn2000_Output_Cover, Season = Autumn2000, Duration = DurationGrazeSheepAutumn2000, Input_Dead = BurnSensitNativeAutumn2000_Output_Dead, PalSumSheep = GrazeSheepBiomass2Autumn2000_PalSumSheep; GrazeSheepSensitNativeAutumn2000_Output_Cover = Output_Cover, GrazeSheepSensitNativeAutumn2000_Output_Basal = Output_Basal, GrazeSheepSensitNativeAutumn2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeSheepGrainAutumn2000 : GrainGrazeSheep (Season = Autumn2000, Duration = DurationGrazeSheepAutumn2000, PalSumSheep = GrazeSheepBiomass2Autumn2000_PalSumSheep, Input_Dead = BurnGrainAutumn2000_Output_Dead, Input_Adults = BurnGrainAutumn2000_Output_Adults, Input_Cover = BurnGrainAutumn2000_Output_Cover; GrazeSheepGrainAutumn2000_Output_Adults = Output_Adults, GrazeSheepGrainAutumn2000_Output_Cover = Output_Cover, GrazeSheepGrainAutumn2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeSheepExoticAnnualAutumn2000 : ExoticAnnualGrazeSheep (Input_Adults = BurnExoticAnnualAutumn2000_Output_Adults, Input_Dead = BurnExoticAnnualAutumn2000_Output_Dead, Input_Cover = BurnExoticAnnualAutumn2000_Output_Cover, Season = Autumn2000, Duration = DurationGrazeSheepAutumn2000, PalSumSheep = GrazeSheepBiomass2Autumn2000_PalSumSheep; GrazeSheepExoticAnnualAutumn2000_Output_Adults = Output_Adults, GrazeSheepExoticAnnualAutumn2000_Output_Cover = Output_Cover, GrazeSheepExoticAnnualAutumn2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeSheepNeedleAutumn2000 : NeedleGrazeSheep (Input_Basal = BurnNeedleAutumn2000_Output_Basal, Input_Cover = BurnNeedleAutumn2000_Output_Cover, Season = Autumn2000, Duration = DurationGrazeSheepAutumn2000, Input_Dead = BurnNeedleAutumn2000_Output_Dead, PalSumSheep = GrazeSheepBiomass2Autumn2000_PalSumSheep; GrazeSheepNeedleAutumn2000_Output_Cover = Output_Cover, GrazeSheepNeedleAutumn2000_Output_Basal = Output_Basal, GrazeSheepNeedleAutumn2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeSheepSTAutumn2000 : STGrazeSheep (Input_Basal = BurnSTAutumn2000_Output_Basal, Input_Cover = BurnSTAutumn2000_Output_Cover, Season = Autumn2000, Duration = DurationGrazeSheepAutumn2000, Input_Dead = BurnSTAutumn2000_Output_Dead, PalSumSheep = GrazeSheepBiomass2Autumn2000_PalSumSheep; GrazeSheepSTAutumn2000_Output_Cover = Output_Cover, GrazeSheepSTAutumn2000_Output_Basal = Output_Basal, GrazeSheepSTAutumn2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeSheepWallabyAutumn2000 : WallabyGrazeSheep (Input_Basal = BurnWallabyAutumn2000_Output_Basal, Input_Cover = BurnWallabyAutumn2000_Output_Cover, Season = Autumn2000, Duration = DurationGrazeSheepAutumn2000, Input_Dead = BurnWallabyAutumn2000_Output_Dead, PalSumSheep = GrazeSheepBiomass2Autumn2000_PalSumSheep; GrazeSheepWallabyAutumn2000_Output_Cover = Output_Cover, GrazeSheepWallabyAutumn2000_Output_Basal = Output_Basal, GrazeSheepWallabyAutumn2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeSheepSpearAutumn2000 : SpearGrazeSheep (Input_Basal = BurnSpearAutumn2000_Output_Basal, Input_Cover = BurnSpearAutumn2000_Output_Cover, Season = Autumn2000, Duration = DurationGrazeSheepAutumn2000, Input_Dead = BurnSpearAutumn2000_Output_Dead, PalSumSheep = GrazeSheepBiomass2Autumn2000_PalSumSheep; GrazeSheepSpearAutumn2000_Output_Cover = Output_Cover, GrazeSheepSpearAutumn2000_Output_Basal = Output_Basal, GrazeSheepSpearAutumn2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeSheepWindmillAutumn2000 : WindmillGrazeSheep (Input_Basal = BurnWindmillAutumn2000_Output_Basal, Input_Cover = BurnWindmillAutumn2000_Output_Cover, Season = Autumn2000, Duration = DurationGrazeSheepAutumn2000, Input_Dead = BurnWindmillAutumn2000_Output_Dead, PalSumSheep = GrazeSheepBiomass2Autumn2000_PalSumSheep; GrazeSheepWindmillAutumn2000_Output_Cover = Output_Cover, GrazeSheepWindmillAutumn2000_Output_Basal = Output_Basal, GrazeSheepWindmillAutumn2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeSheepRedLegAutumn2000 : RedLegGrazeSheep (Input_Basal = BurnRedLegAutumn2000_Output_Basal, Input_Cover = BurnRedLegAutumn2000_Output_Cover, Season = Autumn2000, Duration = DurationGrazeSheepAutumn2000, Input_Dead = BurnRedLegAutumn2000_Output_Dead, PalSumSheep = GrazeSheepBiomass2Autumn2000_PalSumSheep; GrazeSheepRedLegAutumn2000_Output_Cover = Output_Cover, GrazeSheepRedLegAutumn2000_Output_Basal = Output_Basal, GrazeSheepRedLegAutumn2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeSheepThemedaAutumn2000 : ThemedaGrazeSheep (Input_Dead = BurnThemedaAutumn2000_Output_Dead, Duration = DurationGrazeSheepAutumn2000, Season = Autumn2000, Input_Cover = BurnThemedaAutumn2000_Output_Cover, Input_Basal = BurnThemedaAutumn2000_Output_Basal, Input_Seedlings = BurnThemedaAutumn2000_Output_Seedlings, PalSumSheep = GrazeSheepBiomass2Autumn2000_PalSumSheep; GrazeSheepThemedaAutumn2000_Output_Dead = Output_Dead, GrazeSheepThemedaAutumn2000_Output_Seedlings = Output_Seedlings, GrazeSheepThemedaAutumn2000_Output_Basal = Output_Basal, GrazeSheepThemedaAutumn2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance GrazeSheepSoilAutumn2000 : SoilGrazeSheep (Input_Friability = GrazeCattleSoilSummer2000_Output_Friability; GrazeSheepSoilAutumn2000_Output_Friability = Output_Friability)
+    {
+    }
+
+    instance GrazeSheepInterventionAutumn2000 : GrazeInterventionSheep (Input_Fences = GrazeCattleInterventionSummer2000_Output_Fences, Duration = DurationGrazeSheepAutumn2000, Scale = Scale; GrazeSheepInterventionAutumn2000_Output_Fences = Output_Fences, GrazeSheepInterventionAutumn2000_GrazeCost = GrazeCost)
+    {
+    }
+
+    instance GrazeSheepBiomass2Autumn2000 : BiomassNatural (WComp = GrazeSheepBiomass1Autumn2000_WComp, MComp = GrazeSheepBiomass1Autumn2000_MComp, SComp = GrazeSheepBiomass1Autumn2000_SComp, VSComp = GrazeSheepBiomass1Autumn2000_VSComp, VLPalC = GrazeSheepBiomass1Autumn2000_VLPalC, LPalC = GrazeSheepBiomass1Autumn2000_LPalC, MPalC = GrazeSheepBiomass1Autumn2000_MPalC, HPalC = GrazeSheepBiomass1Autumn2000_HPalC, VLPalS = GrazeSheepBiomass1Autumn2000_VLPalS, LPalS = GrazeSheepBiomass1Autumn2000_LPalS, MPalS = GrazeSheepBiomass1Autumn2000_MPalS, HPalS = GrazeSheepBiomass1Autumn2000_HPalS; GrazeSheepBiomass2Autumn2000_CompSum = CompSum, GrazeSheepBiomass2Autumn2000_PalSumCattle = PalSumCattle, GrazeSheepBiomass2Autumn2000_PalSumSheep = PalSumSheep)
+    {
+    }
+
+    instance GrazeSheepBiomass1Autumn2000 : BiomassSummaries (HardyNative_Cover = BurnHardyNativeAutumn2000_Output_Cover, Grain_Cover = BurnGrainAutumn2000_Output_Cover, BroadWeeds_Cover = BurnBroadWeedsAutumn2000_Output_Cover, SensitNative_Cover = BurnSensitNativeAutumn2000_Output_Cover, RedLeg_Cover = BurnRedLegAutumn2000_Output_Cover, Windmill_Cover = BurnWindmillAutumn2000_Output_Cover, Wallaby_Cover = BurnWallabyAutumn2000_Output_Cover, Ruderals_Cover = BurnRuderalsAutumn2000_Output_Cover, ST_Cover = BurnSTAutumn2000_Output_Cover, Spear_Cover = BurnSpearAutumn2000_Output_Cover, Needle_Cover = BurnNeedleAutumn2000_Output_Cover, Themeda_Cover = BurnThemedaAutumn2000_Output_Cover, Onion_Cover = BurnOnionAutumn2000_Output_Cover, Blanket_Cover = BurnBlanketAutumn2000_Output_Cover, ExoticAnnual_Cover = BurnExoticAnnualAutumn2000_Output_Cover, Themeda_Dead = BurnThemedaAutumn2000_Output_Dead, RedLeg_Dead = BurnRedLegAutumn2000_Output_Dead, Needle_Dead = BurnNeedleAutumn2000_Output_Dead, Wallaby_Dead = BurnWallabyAutumn2000_Output_Dead, Blanket_Dead = BurnBlanketAutumn2000_Output_Dead, Windmill_Dead = BurnWindmillAutumn2000_Output_Dead, ST_Dead = BurnSTAutumn2000_Output_Dead, Spear_Dead = BurnSpearAutumn2000_Output_Dead, Grain_Dead = BurnGrainAutumn2000_Output_Dead, Onion_Dead = BurnOnionAutumn2000_Output_Dead, ExoticAnnual_Dead = BurnExoticAnnualAutumn2000_Output_Dead, HardyNative_Dead = BurnHardyNativeAutumn2000_Output_Dead, Ruderals_Dead = BurnRuderalsAutumn2000_Output_Dead, SensitNative_Dead = BurnSensitNativeAutumn2000_Output_Dead, BroadWeeds_Dead = BurnBroadWeedsAutumn2000_Output_Dead, Windmill_Basal = BurnWindmillAutumn2000_Output_Basal, SensitNative_Basal = BurnSensitNativeAutumn2000_Output_Basal, Spear_Basal = BurnSpearAutumn2000_Output_Basal, Themeda_Basal = BurnThemedaAutumn2000_Output_Basal, Onion_Basal = BurnOnionAutumn2000_Output_Basal, ST_Basal = BurnSTAutumn2000_Output_Basal, Wallaby_Basal = BurnWallabyAutumn2000_Output_Basal, HardyNative_Basal = BurnHardyNativeAutumn2000_Output_Basal, Ruderals_Basal = BurnRuderalsAutumn2000_Output_Basal, BroadWeeds_Basal = BurnBroadWeedsAutumn2000_Output_Basal, RedLeg_Basal = BurnRedLegAutumn2000_Output_Basal, Needle_Basal = BurnNeedleAutumn2000_Output_Basal, Season = Autumn2000, NL = BurnNutrientAutumn2000_NL; GrazeSheepBiomass1Autumn2000_LBio = LBio, GrazeSheepBiomass1Autumn2000_DBio = DBio, GrazeSheepBiomass1Autumn2000_BBio = BBio, GrazeSheepBiomass1Autumn2000_TBio = TBio, GrazeSheepBiomass1Autumn2000_HPalC = HPalC, GrazeSheepBiomass1Autumn2000_MPalC = MPalC, GrazeSheepBiomass1Autumn2000_LPalC = LPalC, GrazeSheepBiomass1Autumn2000_VLPalC = VLPalC, GrazeSheepBiomass1Autumn2000_HPalS = HPalS, GrazeSheepBiomass1Autumn2000_MPalS = MPalS, GrazeSheepBiomass1Autumn2000_LPalS = LPalS, GrazeSheepBiomass1Autumn2000_VLPalS = VLPalS, GrazeSheepBiomass1Autumn2000_WComp = WComp, GrazeSheepBiomass1Autumn2000_MComp = MComp, GrazeSheepBiomass1Autumn2000_SComp = SComp, GrazeSheepBiomass1Autumn2000_VSComp = VSComp)
+    {
+    }
+
+    instance BurnNutrientAutumn2000 : NutrientFire (Input_Phosphorous = NaturalNutrientAutumn2000_Output_Phosphorous, Input_Nitrogen = NaturalNutrientAutumn2000_Output_Nitrogen, Input_Carbon = NaturalNutrientAutumn2000_Output_Carbon, Burn = BurnInterventionAutumn2000_Burn, NUI = BurnNUIAutumn2000_NUI; BurnNutrientAutumn2000_Output_Nitrogen = Output_Nitrogen, BurnNutrientAutumn2000_Output_Phosphorous = Output_Phosphorous, BurnNutrientAutumn2000_NL = NL, BurnNutrientAutumn2000_Output_Carbon = Output_Carbon)
+    {
+    }
+
+    instance BurnNUIAutumn2000 : NuiAdder (Windmill_NUI = BurnWindmillAutumn2000_Output_NUI, BroadWeeds_NUI = BurnBroadWeedsAutumn2000_Output_NUI, HardyNative_NUI = BurnHardyNativeAutumn2000_Output_NUI, Spear_NUI = BurnSpearAutumn2000_Output_NUI, ST_NUI = BurnSTAutumn2000_Output_NUI, Wallaby_NUI = BurnWallabyAutumn2000_Output_NUI, SensitNative_NUI = BurnSensitNativeAutumn2000_Output_NUI, Grain_NUI = BurnGrainAutumn2000_Output_NUI, Onion_NUI = BurnOnionAutumn2000_Output_NUI, ExoticAnnual_NUI = BurnExoticAnnualAutumn2000_Output_NUI, Needle_NUI = BurnNeedleAutumn2000_Output_NUI, Themeda_NUI = BurnThemedaAutumn2000_Output_NUI, Blanket_NUI = BurnBlanketAutumn2000_Output_NUI, RedLeg_NUI = BurnRedLegAutumn2000_Output_NUI, Ruderals_NUI = BurnRuderalsAutumn2000_Output_NUI; BurnNUIAutumn2000_NUI = NUI)
+    {
+    }
+
+    instance BurnOnionAutumn2000 : TolerantFire (Input_Cover = NaturalOnionAutumn2000_Output_Cover, Input_Dead = NaturalOnionAutumn2000_Output_Dead, Input_Basal = NaturalOnionAutumn2000_Output_Basal, Input_Seedlings = BurnOnionSummer2000_Output_Seedlings, Burn = BurnInterventionAutumn2000_Burn; BurnOnionAutumn2000_Output_NUI = Output_NUI, BurnOnionAutumn2000_Output_Dead = Output_Dead, BurnOnionAutumn2000_Output_Seedlings = Output_Seedlings, BurnOnionAutumn2000_Output_Basal = Output_Basal, BurnOnionAutumn2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnBroadWeedsAutumn2000 : TolerantFire (Input_Cover = NaturalBroadWeedsAutumn2000_Output_Cover, Input_Dead = NaturalBroadWeedsAutumn2000_Output_Dead, Input_Basal = NaturalBroadWeedsAutumn2000_Output_Basal, Input_Seedlings = BurnBroadWeedsSummer2000_Output_Seedlings, Burn = BurnInterventionAutumn2000_Burn; BurnBroadWeedsAutumn2000_Output_NUI = Output_NUI, BurnBroadWeedsAutumn2000_Output_Dead = Output_Dead, BurnBroadWeedsAutumn2000_Output_Seedlings = Output_Seedlings, BurnBroadWeedsAutumn2000_Output_Basal = Output_Basal, BurnBroadWeedsAutumn2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnBlanketAutumn2000 : KilledFire3 (Input_Adults = NaturalBlanketAutumn2000_Output_Adults, Burn = BurnInterventionAutumn2000_Burn, Input_Dead = NaturalBlanketAutumn2000_Output_Dead, Input_Cover = NaturalBlanketAutumn2000_Output_Cover; BurnBlanketAutumn2000_Output_Adults = Output_Adults, BurnBlanketAutumn2000_Output_Cover = Output_Cover, BurnBlanketAutumn2000_Output_Dead = Output_Dead, BurnBlanketAutumn2000_Output_NUI = Output_NUI)
+    {
+    }
+
+    instance BurnRuderalsAutumn2000 : TolerantFire (Input_Cover = NaturalRuderalsAutumn2000_Output_Cover, Input_Dead = NaturalRuderalsAutumn2000_Output_Dead, Input_Basal = NaturalRuderalsAutumn2000_Output_Basal, Input_Seedlings = BurnRuderalsSummer2000_Output_Seedlings, Burn = BurnInterventionAutumn2000_Burn; BurnRuderalsAutumn2000_Output_NUI = Output_NUI, BurnRuderalsAutumn2000_Output_Dead = Output_Dead, BurnRuderalsAutumn2000_Output_Seedlings = Output_Seedlings, BurnRuderalsAutumn2000_Output_Basal = Output_Basal, BurnRuderalsAutumn2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnHardyNativeAutumn2000 : TolerantFire (Input_Cover = NaturalHardyNativeAutumn2000_Output_Cover, Input_Dead = NaturalHardyNativeAutumn2000_Output_Dead, Input_Basal = NaturalHardyNativeAutumn2000_Output_Basal, Input_Seedlings = BurnHardyNativeSummer2000_Output_Seedlings, Burn = BurnInterventionAutumn2000_Burn; BurnHardyNativeAutumn2000_Output_NUI = Output_NUI, BurnHardyNativeAutumn2000_Output_Dead = Output_Dead, BurnHardyNativeAutumn2000_Output_Seedlings = Output_Seedlings, BurnHardyNativeAutumn2000_Output_Basal = Output_Basal, BurnHardyNativeAutumn2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnSensitNativeAutumn2000 : TolerantFire (Input_Cover = NaturalSensitNativeAutumn2000_Output_Cover, Input_Dead = NaturalSensitNativeAutumn2000_Output_Dead, Input_Basal = NaturalSensitNativeAutumn2000_Output_Basal, Input_Seedlings = BurnSensitNativeSummer2000_Output_Seedlings, Burn = BurnInterventionAutumn2000_Burn; BurnSensitNativeAutumn2000_Output_NUI = Output_NUI, BurnSensitNativeAutumn2000_Output_Dead = Output_Dead, BurnSensitNativeAutumn2000_Output_Seedlings = Output_Seedlings, BurnSensitNativeAutumn2000_Output_Basal = Output_Basal, BurnSensitNativeAutumn2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnGrainAutumn2000 : KilledFire2 (Input_Cover = NaturalGrainAutumn2000_Output_Cover, Input_Dead = NaturalGrainAutumn2000_Output_Dead, Burn = BurnInterventionAutumn2000_Burn, Input_Adults = NaturalGrainAutumn2000_Output_Adults; BurnGrainAutumn2000_Output_NUI = Output_NUI, BurnGrainAutumn2000_Output_Dead = Output_Dead, BurnGrainAutumn2000_Output_Cover = Output_Cover, BurnGrainAutumn2000_Output_Adults = Output_Adults)
+    {
+    }
+
+    instance BurnExoticAnnualAutumn2000 : KilledFire1 (Input_Cover = NaturalExoticAnnualAutumn2000_Output_Cover, Input_Dead = NaturalExoticAnnualAutumn2000_Output_Dead, Burn = BurnInterventionAutumn2000_Burn, Input_Adults = NaturalExoticAnnualAutumn2000_Output_Adults; BurnExoticAnnualAutumn2000_Output_NUI = Output_NUI, BurnExoticAnnualAutumn2000_Output_Dead = Output_Dead, BurnExoticAnnualAutumn2000_Output_Cover = Output_Cover, BurnExoticAnnualAutumn2000_Output_Adults = Output_Adults)
+    {
+    }
+
+    instance BurnNeedleAutumn2000 : TolerantFire (Input_Cover = NaturalNeedleAutumn2000_Output_Cover, Input_Dead = NaturalNeedleAutumn2000_Output_Dead, Input_Basal = NaturalNeedleAutumn2000_Output_Basal, Input_Seedlings = BurnNeedleSummer2000_Output_Seedlings, Burn = BurnInterventionAutumn2000_Burn; BurnNeedleAutumn2000_Output_NUI = Output_NUI, BurnNeedleAutumn2000_Output_Dead = Output_Dead, BurnNeedleAutumn2000_Output_Seedlings = Output_Seedlings, BurnNeedleAutumn2000_Output_Basal = Output_Basal, BurnNeedleAutumn2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnSTAutumn2000 : TolerantFire (Input_Cover = NaturalSTAutumn2000_Output_Cover, Input_Dead = NaturalSTAutumn2000_Output_Dead, Input_Basal = NaturalSTAutumn2000_Output_Basal, Input_Seedlings = BurnSTSummer2000_Output_Seedlings, Burn = BurnInterventionAutumn2000_Burn; BurnSTAutumn2000_Output_NUI = Output_NUI, BurnSTAutumn2000_Output_Dead = Output_Dead, BurnSTAutumn2000_Output_Seedlings = Output_Seedlings, BurnSTAutumn2000_Output_Basal = Output_Basal, BurnSTAutumn2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnWallabyAutumn2000 : ModerateFire (Input_Cover = NaturalWallabyAutumn2000_Output_Cover, Input_Dead = NaturalWallabyAutumn2000_Output_Dead, Input_Basal = NaturalWallabyAutumn2000_Output_Basal, Burn = BurnInterventionAutumn2000_Burn; BurnWallabyAutumn2000_Output_NUI = Output_NUI, BurnWallabyAutumn2000_Output_Dead = Output_Dead, BurnWallabyAutumn2000_Output_Basal = Output_Basal, BurnWallabyAutumn2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnSpearAutumn2000 : SensitiveFire (Input_Cover = NaturalSpearAutumn2000_Output_Cover, Input_Dead = NaturalSpearAutumn2000_Output_Dead, Input_Basal = NaturalSpearAutumn2000_Output_Basal, Burn = BurnInterventionAutumn2000_Burn; BurnSpearAutumn2000_Output_NUI = Output_NUI, BurnSpearAutumn2000_Output_Dead = Output_Dead, BurnSpearAutumn2000_Output_Basal = Output_Basal, BurnSpearAutumn2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnWindmillAutumn2000 : ModerateFire (Input_Cover = NaturalWindmillAutumn2000_Output_Cover, Input_Dead = NaturalWindmillAutumn2000_Output_Dead, Input_Basal = NaturalWindmillAutumn2000_Output_Basal, Burn = BurnInterventionAutumn2000_Burn; BurnWindmillAutumn2000_Output_NUI = Output_NUI, BurnWindmillAutumn2000_Output_Dead = Output_Dead, BurnWindmillAutumn2000_Output_Basal = Output_Basal, BurnWindmillAutumn2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnRedLegAutumn2000 : TolerantFire (Input_Cover = NaturalRedLegAutumn2000_Output_Cover, Input_Dead = NaturalRedLegAutumn2000_Output_Dead, Input_Basal = NaturalRedLegAutumn2000_Output_Basal, Input_Seedlings = BurnRedLegSummer2000_Output_Seedlings, Burn = BurnInterventionAutumn2000_Burn; BurnRedLegAutumn2000_Output_NUI = Output_NUI, BurnRedLegAutumn2000_Output_Dead = Output_Dead, BurnRedLegAutumn2000_Output_Seedlings = Output_Seedlings, BurnRedLegAutumn2000_Output_Basal = Output_Basal, BurnRedLegAutumn2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnThemedaAutumn2000 : TolerantFire (Input_Cover = NaturalThemedaAutumn2000_Output_Cover, Input_Dead = NaturalThemedaAutumn2000_Output_Dead, Input_Basal = NaturalThemedaAutumn2000_Output_Basal, Input_Seedlings = NaturalThemedaAutumn2000_Output_Seedlings, Burn = BurnInterventionAutumn2000_Burn; BurnThemedaAutumn2000_Output_NUI = Output_NUI, BurnThemedaAutumn2000_Output_Dead = Output_Dead, BurnThemedaAutumn2000_Output_Seedlings = Output_Seedlings, BurnThemedaAutumn2000_Output_Basal = Output_Basal, BurnThemedaAutumn2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnInterventionAutumn2000 : BurnIntervention (Season = Autumn2000, BD = BD, TBio = BurnBiomass1Autumn2000_TBio, BurnStrategy = BurnStrategyBurnAutumn2000, BBio = BurnBiomass1Autumn2000_BBio, LBio = BurnBiomass1Autumn2000_LBio, Scale = Scale; BurnInterventionAutumn2000_Burn = Burn, BurnInterventionAutumn2000_BurnCost = BurnCost)
+    {
+    }
+
+    instance BurnBiomass1Autumn2000 : BiomassSummaries (HardyNative_Cover = NaturalHardyNativeAutumn2000_Output_Cover, Grain_Cover = NaturalGrainAutumn2000_Output_Cover, BroadWeeds_Cover = NaturalBroadWeedsAutumn2000_Output_Cover, SensitNative_Cover = NaturalSensitNativeAutumn2000_Output_Cover, RedLeg_Cover = NaturalRedLegAutumn2000_Output_Cover, Windmill_Cover = NaturalWindmillAutumn2000_Output_Cover, Wallaby_Cover = NaturalWallabyAutumn2000_Output_Cover, Ruderals_Cover = NaturalRuderalsAutumn2000_Output_Cover, ST_Cover = NaturalSTAutumn2000_Output_Cover, Spear_Cover = NaturalSpearAutumn2000_Output_Cover, Needle_Cover = NaturalNeedleAutumn2000_Output_Cover, Themeda_Cover = NaturalThemedaAutumn2000_Output_Cover, Onion_Cover = NaturalOnionAutumn2000_Output_Cover, Blanket_Cover = NaturalBlanketAutumn2000_Output_Cover, ExoticAnnual_Cover = NaturalExoticAnnualAutumn2000_Output_Cover, Themeda_Dead = NaturalThemedaAutumn2000_Output_Dead, RedLeg_Dead = NaturalRedLegAutumn2000_Output_Dead, Needle_Dead = NaturalNeedleAutumn2000_Output_Dead, Wallaby_Dead = NaturalWallabyAutumn2000_Output_Dead, Blanket_Dead = NaturalBlanketAutumn2000_Output_Dead, Windmill_Dead = NaturalWindmillAutumn2000_Output_Dead, ST_Dead = NaturalSTAutumn2000_Output_Dead, Spear_Dead = NaturalSpearAutumn2000_Output_Dead, Grain_Dead = NaturalGrainAutumn2000_Output_Dead, Onion_Dead = NaturalOnionAutumn2000_Output_Dead, ExoticAnnual_Dead = NaturalExoticAnnualAutumn2000_Output_Dead, HardyNative_Dead = NaturalHardyNativeAutumn2000_Output_Dead, Ruderals_Dead = NaturalRuderalsAutumn2000_Output_Dead, SensitNative_Dead = NaturalSensitNativeAutumn2000_Output_Dead, BroadWeeds_Dead = NaturalBroadWeedsAutumn2000_Output_Dead, Windmill_Basal = NaturalWindmillAutumn2000_Output_Basal, SensitNative_Basal = NaturalSensitNativeAutumn2000_Output_Basal, Spear_Basal = NaturalSpearAutumn2000_Output_Basal, Themeda_Basal = NaturalThemedaAutumn2000_Output_Basal, Onion_Basal = NaturalOnionAutumn2000_Output_Basal, ST_Basal = NaturalSTAutumn2000_Output_Basal, Wallaby_Basal = NaturalWallabyAutumn2000_Output_Basal, HardyNative_Basal = NaturalHardyNativeAutumn2000_Output_Basal, Ruderals_Basal = NaturalRuderalsAutumn2000_Output_Basal, BroadWeeds_Basal = NaturalBroadWeedsAutumn2000_Output_Basal, RedLeg_Basal = NaturalRedLegAutumn2000_Output_Basal, Needle_Basal = NaturalNeedleAutumn2000_Output_Basal, Season = Autumn2000, NL = NaturalNutrientAutumn2000_NL; BurnBiomass1Autumn2000_LBio = LBio, BurnBiomass1Autumn2000_DBio = DBio, BurnBiomass1Autumn2000_BBio = BBio, BurnBiomass1Autumn2000_TBio = TBio, BurnBiomass1Autumn2000_HPalC = HPalC, BurnBiomass1Autumn2000_MPalC = MPalC, BurnBiomass1Autumn2000_LPalC = LPalC, BurnBiomass1Autumn2000_VLPalC = VLPalC, BurnBiomass1Autumn2000_HPalS = HPalS, BurnBiomass1Autumn2000_MPalS = MPalS, BurnBiomass1Autumn2000_LPalS = LPalS, BurnBiomass1Autumn2000_VLPalS = VLPalS, BurnBiomass1Autumn2000_WComp = WComp, BurnBiomass1Autumn2000_MComp = MComp, BurnBiomass1Autumn2000_SComp = SComp, BurnBiomass1Autumn2000_VSComp = VSComp)
+    {
+    }
+
+    instance NaturalNutrientAutumn2000 : NutrientNatural (Input_Phosphorous = GrazeCattleNutrientSummer2000_Output_Phosphorous, Input_Nitrogen = GrazeCattleNutrientSummer2000_Output_Nitrogen, Input_Carbon = GrazeCattleNutrientSummer2000_Output_Carbon, NUI = NaturalNUIAutumn2000_NUI; NaturalNutrientAutumn2000_Output_Nitrogen = Output_Nitrogen, NaturalNutrientAutumn2000_Output_Phosphorous = Output_Phosphorous, NaturalNutrientAutumn2000_NL = NL, NaturalNutrientAutumn2000_Output_Carbon = Output_Carbon)
+    {
+    }
+
+    instance NaturalNUIAutumn2000 : NuiAdder (Windmill_NUI = NaturalWindmillAutumn2000_Output_NUI, BroadWeeds_NUI = NaturalBroadWeedsAutumn2000_Output_NUI, HardyNative_NUI = NaturalHardyNativeAutumn2000_Output_NUI, Spear_NUI = NaturalSpearAutumn2000_Output_NUI, ST_NUI = NaturalSTAutumn2000_Output_NUI, Wallaby_NUI = NaturalWallabyAutumn2000_Output_NUI, SensitNative_NUI = NaturalSensitNativeAutumn2000_Output_NUI, Grain_NUI = NaturalGrainAutumn2000_Output_NUI, Onion_NUI = NaturalOnionAutumn2000_Output_NUI, ExoticAnnual_NUI = NaturalExoticAnnualAutumn2000_Output_NUI, Needle_NUI = NaturalNeedleAutumn2000_Output_NUI, Themeda_NUI = NaturalThemedaAutumn2000_Output_NUI, Blanket_NUI = NaturalBlanketAutumn2000_Output_NUI, RedLeg_NUI = NaturalRedLegAutumn2000_Output_NUI, Ruderals_NUI = NaturalRuderalsAutumn2000_Output_NUI; NaturalNUIAutumn2000_NUI = NUI)
+    {
+    }
+
+    instance NaturalOnionAutumn2000 : OnionNatural (Input_Cover = GrazeCattleOnionSummer2000_Output_Cover, Input_Dead = GrazeCattleOnionSummer2000_Output_Dead, Input_Seeds = NaturalOnionSummer2000_Output_Seeds, Input_Basal = GrazeCattleOnionSummer2000_Output_Basal, CompSum = NaturalBiomass2Autumn2000_CompSum, Season = Autumn2000, NL = GrazeCattleNutrientSummer2000_NL; NaturalOnionAutumn2000_Output_Dead = Output_Dead, NaturalOnionAutumn2000_Output_Cover = Output_Cover, NaturalOnionAutumn2000_Output_Basal = Output_Basal, NaturalOnionAutumn2000_Output_Seeds = Output_Seeds, NaturalOnionAutumn2000_Output_NUI = Output_NUI)
+    {
+    }
+
+    instance NaturalBroadWeedsAutumn2000 : BroadWeedsNatural (NL = GrazeCattleNutrientSummer2000_NL, Season = Autumn2000, CompSum = NaturalBiomass2Autumn2000_CompSum, Input_Basal = GrazeCattleBroadWeedsSummer2000_Output_Basal, Input_Seeds = NaturalBroadWeedsSummer2000_Output_Seeds, Input_Dead = GrazeCattleBroadWeedsSummer2000_Output_Dead, Input_Cover = GrazeCattleBroadWeedsSummer2000_Output_Cover; NaturalBroadWeedsAutumn2000_Output_NUI = Output_NUI, NaturalBroadWeedsAutumn2000_Output_Seeds = Output_Seeds, NaturalBroadWeedsAutumn2000_Output_Basal = Output_Basal, NaturalBroadWeedsAutumn2000_Output_Cover = Output_Cover, NaturalBroadWeedsAutumn2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance NaturalBlanketAutumn2000 : BlanketNatural (NL = GrazeCattleNutrientSummer2000_NL, Season = Autumn2000, CompSum = NaturalBiomass2Autumn2000_CompSum, Input_Seeds = NaturalBlanketSummer2000_Output_Seeds, Input_Dead = GrazeCattleBlanketSummer2000_Output_Dead, Input_Cover = GrazeCattleBlanketSummer2000_Output_Cover, Input_Adults = GrazeCattleBlanketSummer2000_Output_Adults; NaturalBlanketAutumn2000_Output_NUI = Output_NUI, NaturalBlanketAutumn2000_Output_Seeds = Output_Seeds, NaturalBlanketAutumn2000_Output_Cover = Output_Cover, NaturalBlanketAutumn2000_Output_Dead = Output_Dead, NaturalBlanketAutumn2000_Output_Adults = Output_Adults)
+    {
+    }
+
+    instance NaturalRuderalsAutumn2000 : RuderNatural (Season = Autumn2000, NL = GrazeCattleNutrientSummer2000_NL, Input_Dead = GrazeCattleRuderalsSummer2000_Output_Dead, Input_Cover = GrazeCattleRuderalsSummer2000_Output_Cover, Input_Basal = GrazeCattleRuderalsSummer2000_Output_Basal, CompSum = NaturalBiomass2Autumn2000_CompSum; NaturalRuderalsAutumn2000_Output_Cover = Output_Cover, NaturalRuderalsAutumn2000_Output_Basal = Output_Basal, NaturalRuderalsAutumn2000_Output_Dead = Output_Dead, NaturalRuderalsAutumn2000_Output_NUI = Output_NUI)
+    {
+    }
+
+    instance NaturalHardyNativeAutumn2000 : HardyNativeNatural (Input_Basal = GrazeCattleHardyNativeSummer2000_Output_Basal, Input_Cover = GrazeCattleHardyNativeSummer2000_Output_Cover, Input_Dead = GrazeCattleHardyNativeSummer2000_Output_Dead, Input_Seeds = NaturalHardyNativeSummer2000_Output_Seeds, NL = GrazeCattleNutrientSummer2000_NL, Season = Autumn2000, CompSum = NaturalBiomass2Autumn2000_CompSum; NaturalHardyNativeAutumn2000_Output_Seeds = Output_Seeds, NaturalHardyNativeAutumn2000_Output_Cover = Output_Cover, NaturalHardyNativeAutumn2000_Output_Dead = Output_Dead, NaturalHardyNativeAutumn2000_Output_NUI = Output_NUI, NaturalHardyNativeAutumn2000_Output_Basal = Output_Basal)
+    {
+    }
+
+    instance NaturalSensitNativeAutumn2000 : SensitNativeNatural (CompSum = NaturalBiomass2Autumn2000_CompSum, Input_Basal = GrazeCattleSensitNativeSummer2000_Output_Basal, Input_Cover = GrazeCattleSensitNativeSummer2000_Output_Cover, Input_Dead = GrazeCattleSensitNativeSummer2000_Output_Dead, NL = GrazeCattleNutrientSummer2000_NL, Season = Autumn2000; NaturalSensitNativeAutumn2000_Output_NUI = Output_NUI, NaturalSensitNativeAutumn2000_Output_Dead = Output_Dead, NaturalSensitNativeAutumn2000_Output_Basal = Output_Basal, NaturalSensitNativeAutumn2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance NaturalGrainAutumn2000 : GrainNatural (CompSum = NaturalBiomass2Autumn2000_CompSum, NL = GrazeCattleNutrientSummer2000_NL, Season = Autumn2000, Input_Seeds = NaturalGrainSummer2000_Output_Seeds, Input_Adults = GrazeCattleGrainSummer2000_Output_Adults, Input_Dead = GrazeCattleGrainSummer2000_Output_Dead, Input_Cover = GrazeCattleGrainSummer2000_Output_Cover; NaturalGrainAutumn2000_Output_Cover = Output_Cover, NaturalGrainAutumn2000_Output_Adults = Output_Adults, NaturalGrainAutumn2000_Output_Seeds = Output_Seeds, NaturalGrainAutumn2000_Output_NUI = Output_NUI, NaturalGrainAutumn2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance NaturalExoticAnnualAutumn2000 : ExoticAnnualNatural (CompSum = NaturalBiomass2Autumn2000_CompSum, Input_Seeds = NaturalExoticAnnualSummer2000_Output_Seeds, NL = GrazeCattleNutrientSummer2000_NL, Season = Autumn2000, Input_Adults = GrazeCattleExoticAnnualSummer2000_Output_Adults, Input_Dead = GrazeCattleExoticAnnualSummer2000_Output_Dead, Input_Cover = GrazeCattleExoticAnnualSummer2000_Output_Cover; NaturalExoticAnnualAutumn2000_Output_Seeds = Output_Seeds, NaturalExoticAnnualAutumn2000_Output_Adults = Output_Adults, NaturalExoticAnnualAutumn2000_Output_Cover = Output_Cover, NaturalExoticAnnualAutumn2000_Output_Dead = Output_Dead, NaturalExoticAnnualAutumn2000_Output_NUI = Output_NUI)
+    {
+    }
+
+    instance NaturalNeedleAutumn2000 : NeedleNatural (CompSum = NaturalBiomass2Autumn2000_CompSum, Input_Seeds = NaturalNeedleSummer2000_Output_Seeds, Season = Autumn2000, Input_Dead = GrazeCattleNeedleSummer2000_Output_Dead, Input_Cover = GrazeCattleNeedleSummer2000_Output_Cover, Input_Basal = GrazeCattleNeedleSummer2000_Output_Basal, NL = GrazeCattleNutrientSummer2000_NL; NaturalNeedleAutumn2000_Output_Basal = Output_Basal, NaturalNeedleAutumn2000_Output_NUI = Output_NUI, NaturalNeedleAutumn2000_Output_Dead = Output_Dead, NaturalNeedleAutumn2000_Output_Cover = Output_Cover, NaturalNeedleAutumn2000_Output_Seeds = Output_Seeds)
+    {
+    }
+
+    instance NaturalSTAutumn2000 : STNatural (NL = GrazeCattleNutrientSummer2000_NL, Input_Basal = GrazeCattleSTSummer2000_Output_Basal, Input_Cover = GrazeCattleSTSummer2000_Output_Cover, Input_Dead = GrazeCattleSTSummer2000_Output_Dead, Season = Autumn2000, Input_Seeds = NaturalSTSummer2000_Output_Seeds, CompSum = NaturalBiomass2Autumn2000_CompSum; NaturalSTAutumn2000_Output_Seeds = Output_Seeds, NaturalSTAutumn2000_Output_Cover = Output_Cover, NaturalSTAutumn2000_Output_Dead = Output_Dead, NaturalSTAutumn2000_Output_NUI = Output_NUI, NaturalSTAutumn2000_Output_Basal = Output_Basal)
+    {
+    }
+
+    instance NaturalWallabyAutumn2000 : WallabyNatural (NL = GrazeCattleNutrientSummer2000_NL, Input_Basal = GrazeCattleWallabySummer2000_Output_Basal, Input_Cover = GrazeCattleWallabySummer2000_Output_Cover, Input_Dead = GrazeCattleWallabySummer2000_Output_Dead, Season = Autumn2000, Input_Seeds = NaturalWallabySummer2000_Output_Seeds, CompSum = NaturalBiomass2Autumn2000_CompSum; NaturalWallabyAutumn2000_Output_Seeds = Output_Seeds, NaturalWallabyAutumn2000_Output_Cover = Output_Cover, NaturalWallabyAutumn2000_Output_Dead = Output_Dead, NaturalWallabyAutumn2000_Output_NUI = Output_NUI, NaturalWallabyAutumn2000_Output_Basal = Output_Basal)
+    {
+    }
+
+    instance NaturalSpearAutumn2000 : SpearNatural (CompSum = NaturalBiomass2Autumn2000_CompSum, Season = Autumn2000, NL = GrazeCattleNutrientSummer2000_NL, Input_Seeds = NaturalSpearSummer2000_Output_Seeds, Input_Dead = GrazeCattleSpearSummer2000_Output_Dead, Input_Cover = GrazeCattleSpearSummer2000_Output_Cover, Input_Basal = GrazeCattleSpearSummer2000_Output_Basal; NaturalSpearAutumn2000_Output_Basal = Output_Basal, NaturalSpearAutumn2000_Output_Cover = Output_Cover, NaturalSpearAutumn2000_Output_Seeds = Output_Seeds, NaturalSpearAutumn2000_Output_Dead = Output_Dead, NaturalSpearAutumn2000_Output_NUI = Output_NUI)
+    {
+    }
+
+    instance NaturalWindmillAutumn2000 : WindmillNatural (Input_Seeds = NaturalWindmillSummer2000_Output_Seeds, Input_Dead = GrazeCattleWindmillSummer2000_Output_Dead, Input_Cover = GrazeCattleWindmillSummer2000_Output_Cover, Input_Basal = GrazeCattleWindmillSummer2000_Output_Basal, NL = GrazeCattleNutrientSummer2000_NL, CompSum = NaturalBiomass2Autumn2000_CompSum, Season = Autumn2000; NaturalWindmillAutumn2000_Output_Basal = Output_Basal, NaturalWindmillAutumn2000_Output_Dead = Output_Dead, NaturalWindmillAutumn2000_Output_Seeds = Output_Seeds, NaturalWindmillAutumn2000_Output_Cover = Output_Cover, NaturalWindmillAutumn2000_Output_NUI = Output_NUI)
+    {
+    }
+
+    instance NaturalRedLegAutumn2000 : RedLegNatural (CompSum = NaturalBiomass2Autumn2000_CompSum, Season = Autumn2000, NL = GrazeCattleNutrientSummer2000_NL, Input_Seeds = NaturalRedLegSummer2000_Output_Seeds, Input_Dead = GrazeCattleRedLegSummer2000_Output_Dead, Input_Cover = GrazeCattleRedLegSummer2000_Output_Cover, Input_Basal = GrazeCattleRedLegSummer2000_Output_Basal; NaturalRedLegAutumn2000_Output_Basal = Output_Basal, NaturalRedLegAutumn2000_Output_NUI = Output_NUI, NaturalRedLegAutumn2000_Output_Dead = Output_Dead, NaturalRedLegAutumn2000_Output_Cover = Output_Cover, NaturalRedLegAutumn2000_Output_Seeds = Output_Seeds)
+    {
+    }
+
+    instance NaturalThemedaAutumn2000 : ThemedaNatural (Input_Dead = GrazeCattleThemedaSummer2000_Output_Dead, Input_Cover = GrazeCattleThemedaSummer2000_Output_Cover, Soil_Friability = GrazeCattleSoilSummer2000_Output_Friability, SoilTemperature = NaturalSoilAutumn2000_SoilTemperature, Input_Basal = GrazeCattleThemedaSummer2000_Output_Basal, Season = Autumn2000, Input_Seeds = NaturalThemedaSummer2000_Output_Seeds, SoilMoisture = NaturalSoilAutumn2000_SoilMoisture, Shade = NaturalSoilAutumn2000_Shade, Input_Seedlings = GrazeCattleThemedaSummer2000_Output_Seedlings, CompSum = NaturalBiomass2Autumn2000_CompSum, NL = GrazeCattleNutrientSummer2000_NL; NaturalThemedaAutumn2000_Output_Basal = Output_Basal, NaturalThemedaAutumn2000_Output_NUI = Output_NUI, NaturalThemedaAutumn2000_Output_Dead = Output_Dead, NaturalThemedaAutumn2000_Output_Cover = Output_Cover, NaturalThemedaAutumn2000_Output_Seeds = Output_Seeds, NaturalThemedaAutumn2000_Output_Seedlings = Output_Seedlings)
+    {
+    }
+
+    instance NaturalSoilAutumn2000 : SoilNatural (Season = Autumn2000, TBio = NaturalBiomass1Autumn2000_TBio, LBio = NaturalBiomass1Autumn2000_LBio; NaturalSoilAutumn2000_SoilMoisture = SoilMoisture, NaturalSoilAutumn2000_SoilTemperature = SoilTemperature, NaturalSoilAutumn2000_Shade = Shade)
+    {
+    }
+
+    instance NaturalEnvValueAutumn2000 : EnvValue (HardyNative_Cover = GrazeCattleHardyNativeSummer2000_Output_Cover, BroadWeeds_Cover = GrazeCattleBroadWeedsSummer2000_Output_Cover, SensitNative_Cover = GrazeCattleSensitNativeSummer2000_Output_Cover, RedLeg_Cover = GrazeCattleRedLegSummer2000_Output_Cover, Windmill_Cover = GrazeCattleWindmillSummer2000_Output_Cover, Wallaby_Cover = GrazeCattleWallabySummer2000_Output_Cover, Ruderals_Cover = GrazeCattleRuderalsSummer2000_Output_Cover, ST_Cover = GrazeCattleSTSummer2000_Output_Cover, Spear_Cover = GrazeCattleSpearSummer2000_Output_Cover, Needle_Cover = GrazeCattleNeedleSummer2000_Output_Cover, Themeda_Cover = GrazeCattleThemedaSummer2000_Output_Cover, Onion_Cover = GrazeCattleOnionSummer2000_Output_Cover, ExoticAnnual_Cover = GrazeCattleExoticAnnualSummer2000_Output_Cover, Blanket_Cover = GrazeCattleBlanketSummer2000_Output_Cover, Grain_Cover = GrazeCattleGrainSummer2000_Output_Cover, TBio = NaturalBiomass1Autumn2000_TBio, DeRocked = DeRocked; NaturalEnvValueAutumn2000_EnvironValue = EnvironValue)
+    {
+    }
+
+    instance NaturalBiomass2Autumn2000 : BiomassNatural (WComp = NaturalBiomass1Autumn2000_WComp, MComp = NaturalBiomass1Autumn2000_MComp, SComp = NaturalBiomass1Autumn2000_SComp, VSComp = NaturalBiomass1Autumn2000_VSComp, VLPalC = NaturalBiomass1Autumn2000_VLPalC, LPalC = NaturalBiomass1Autumn2000_LPalC, MPalC = NaturalBiomass1Autumn2000_MPalC, HPalC = NaturalBiomass1Autumn2000_HPalC, VLPalS = NaturalBiomass1Autumn2000_VLPalS, LPalS = NaturalBiomass1Autumn2000_LPalS, MPalS = NaturalBiomass1Autumn2000_MPalS, HPalS = NaturalBiomass1Autumn2000_HPalS; NaturalBiomass2Autumn2000_CompSum = CompSum, NaturalBiomass2Autumn2000_PalSumCattle = PalSumCattle, NaturalBiomass2Autumn2000_PalSumSheep = PalSumSheep)
+    {
+    }
+
+    instance NaturalBiomass1Autumn2000 : BiomassSummaries (HardyNative_Cover = GrazeCattleHardyNativeSummer2000_Output_Cover, Grain_Cover = GrazeCattleGrainSummer2000_Output_Cover, BroadWeeds_Cover = GrazeCattleBroadWeedsSummer2000_Output_Cover, SensitNative_Cover = GrazeCattleSensitNativeSummer2000_Output_Cover, RedLeg_Cover = GrazeCattleRedLegSummer2000_Output_Cover, Windmill_Cover = GrazeCattleWindmillSummer2000_Output_Cover, Wallaby_Cover = GrazeCattleWallabySummer2000_Output_Cover, Ruderals_Cover = GrazeCattleRuderalsSummer2000_Output_Cover, ST_Cover = GrazeCattleSTSummer2000_Output_Cover, Spear_Cover = GrazeCattleSpearSummer2000_Output_Cover, Needle_Cover = GrazeCattleNeedleSummer2000_Output_Cover, Themeda_Cover = GrazeCattleThemedaSummer2000_Output_Cover, Onion_Cover = GrazeCattleOnionSummer2000_Output_Cover, Blanket_Cover = GrazeCattleBlanketSummer2000_Output_Cover, ExoticAnnual_Cover = GrazeCattleExoticAnnualSummer2000_Output_Cover, Themeda_Dead = GrazeCattleThemedaSummer2000_Output_Dead, RedLeg_Dead = GrazeCattleRedLegSummer2000_Output_Dead, Needle_Dead = GrazeCattleNeedleSummer2000_Output_Dead, Wallaby_Dead = GrazeCattleWallabySummer2000_Output_Dead, Blanket_Dead = GrazeCattleBlanketSummer2000_Output_Dead, Windmill_Dead = GrazeCattleWindmillSummer2000_Output_Dead, ST_Dead = GrazeCattleSTSummer2000_Output_Dead, Spear_Dead = GrazeCattleSpearSummer2000_Output_Dead, Grain_Dead = GrazeCattleGrainSummer2000_Output_Dead, Onion_Dead = GrazeCattleOnionSummer2000_Output_Dead, ExoticAnnual_Dead = GrazeCattleExoticAnnualSummer2000_Output_Dead, HardyNative_Dead = GrazeCattleHardyNativeSummer2000_Output_Dead, Ruderals_Dead = GrazeCattleRuderalsSummer2000_Output_Dead, SensitNative_Dead = GrazeCattleSensitNativeSummer2000_Output_Dead, BroadWeeds_Dead = GrazeCattleBroadWeedsSummer2000_Output_Dead, Windmill_Basal = GrazeCattleWindmillSummer2000_Output_Basal, SensitNative_Basal = GrazeCattleSensitNativeSummer2000_Output_Basal, Spear_Basal = GrazeCattleSpearSummer2000_Output_Basal, Themeda_Basal = GrazeCattleThemedaSummer2000_Output_Basal, Onion_Basal = GrazeCattleOnionSummer2000_Output_Basal, ST_Basal = GrazeCattleSTSummer2000_Output_Basal, Wallaby_Basal = GrazeCattleWallabySummer2000_Output_Basal, HardyNative_Basal = GrazeCattleHardyNativeSummer2000_Output_Basal, Ruderals_Basal = GrazeCattleRuderalsSummer2000_Output_Basal, BroadWeeds_Basal = GrazeCattleBroadWeedsSummer2000_Output_Basal, RedLeg_Basal = GrazeCattleRedLegSummer2000_Output_Basal, Needle_Basal = GrazeCattleNeedleSummer2000_Output_Basal, Season = Autumn2000, NL = GrazeCattleNutrientSummer2000_NL; NaturalBiomass1Autumn2000_LBio = LBio, NaturalBiomass1Autumn2000_DBio = DBio, NaturalBiomass1Autumn2000_BBio = BBio, NaturalBiomass1Autumn2000_TBio = TBio, NaturalBiomass1Autumn2000_HPalC = HPalC, NaturalBiomass1Autumn2000_MPalC = MPalC, NaturalBiomass1Autumn2000_LPalC = LPalC, NaturalBiomass1Autumn2000_VLPalC = VLPalC, NaturalBiomass1Autumn2000_HPalS = HPalS, NaturalBiomass1Autumn2000_MPalS = MPalS, NaturalBiomass1Autumn2000_LPalS = LPalS, NaturalBiomass1Autumn2000_VLPalS = VLPalS, NaturalBiomass1Autumn2000_WComp = WComp, NaturalBiomass1Autumn2000_MComp = MComp, NaturalBiomass1Autumn2000_SComp = SComp, NaturalBiomass1Autumn2000_VSComp = VSComp)
+    {
+    }
+
+    instance GrazeCattleNutrientSummer2000 : NutrientGrazeCattle (Input_Phosphorous = BurnNutrientSummer2000_Output_Phosphorous, Input_Nitrogen = BurnNutrientSummer2000_Output_Nitrogen, Input_Carbon = BurnNutrientSummer2000_Output_Carbon, Duration = DurationGrazeCattleSummer2000; GrazeCattleNutrientSummer2000_Output_Nitrogen = Output_Nitrogen, GrazeCattleNutrientSummer2000_Output_Phosphorous = Output_Phosphorous, GrazeCattleNutrientSummer2000_NL = NL, GrazeCattleNutrientSummer2000_Output_Carbon = Output_Carbon)
+    {
+    }
+
+    instance GrazeCattleOnionSummer2000 : OnionGrazeCattle (Input_Basal = BurnOnionSummer2000_Output_Basal, Input_Cover = BurnOnionSummer2000_Output_Cover, Season = Summer2000, Duration = DurationGrazeCattleSummer2000, Input_Dead = BurnOnionSummer2000_Output_Dead, PalSumCattle = GrazeCattleBiomass2Summer2000_PalSumCattle; GrazeCattleOnionSummer2000_Output_Cover = Output_Cover, GrazeCattleOnionSummer2000_Output_Basal = Output_Basal, GrazeCattleOnionSummer2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeCattleBroadWeedsSummer2000 : BroadWeedsGrazeCattle (Input_Basal = BurnBroadWeedsSummer2000_Output_Basal, Input_Cover = BurnBroadWeedsSummer2000_Output_Cover, Season = Summer2000, Duration = DurationGrazeCattleSummer2000, Input_Dead = BurnBroadWeedsSummer2000_Output_Dead, PalSumCattle = GrazeCattleBiomass2Summer2000_PalSumCattle; GrazeCattleBroadWeedsSummer2000_Output_Cover = Output_Cover, GrazeCattleBroadWeedsSummer2000_Output_Basal = Output_Basal, GrazeCattleBroadWeedsSummer2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeCattleBlanketSummer2000 : BlanketGrazeCattle (Input_Adults = BurnBlanketSummer2000_Output_Adults, Input_Dead = BurnBlanketSummer2000_Output_Dead, Input_Cover = BurnBlanketSummer2000_Output_Cover, Season = Summer2000, Duration = DurationGrazeCattleSummer2000, PalSumCattle = GrazeCattleBiomass2Summer2000_PalSumCattle; GrazeCattleBlanketSummer2000_Output_Adults = Output_Adults, GrazeCattleBlanketSummer2000_Output_Cover = Output_Cover, GrazeCattleBlanketSummer2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeCattleRuderalsSummer2000 : RuderGrazeCattle (Input_Basal = BurnRuderalsSummer2000_Output_Basal, Input_Cover = BurnRuderalsSummer2000_Output_Cover, Season = Summer2000, Duration = DurationGrazeCattleSummer2000, Input_Dead = BurnRuderalsSummer2000_Output_Dead, PalSumCattle = GrazeCattleBiomass2Summer2000_PalSumCattle; GrazeCattleRuderalsSummer2000_Output_Cover = Output_Cover, GrazeCattleRuderalsSummer2000_Output_Basal = Output_Basal, GrazeCattleRuderalsSummer2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeCattleHardyNativeSummer2000 : HardyNativeGrazeCattle (Input_Basal = BurnHardyNativeSummer2000_Output_Basal, Input_Cover = BurnHardyNativeSummer2000_Output_Cover, Season = Summer2000, Duration = DurationGrazeCattleSummer2000, Input_Dead = BurnHardyNativeSummer2000_Output_Dead, PalSumCattle = GrazeCattleBiomass2Summer2000_PalSumCattle; GrazeCattleHardyNativeSummer2000_Output_Cover = Output_Cover, GrazeCattleHardyNativeSummer2000_Output_Basal = Output_Basal, GrazeCattleHardyNativeSummer2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeCattleSensitNativeSummer2000 : SensitNativeGrazeCattle (Input_Basal = BurnSensitNativeSummer2000_Output_Basal, Input_Cover = BurnSensitNativeSummer2000_Output_Cover, Season = Summer2000, Duration = DurationGrazeCattleSummer2000, Input_Dead = BurnSensitNativeSummer2000_Output_Dead, PalSumCattle = GrazeCattleBiomass2Summer2000_PalSumCattle; GrazeCattleSensitNativeSummer2000_Output_Cover = Output_Cover, GrazeCattleSensitNativeSummer2000_Output_Basal = Output_Basal, GrazeCattleSensitNativeSummer2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeCattleGrainSummer2000 : GrainGrazeCattle (Season = Summer2000, Duration = DurationGrazeCattleSummer2000, PalSumCattle = GrazeCattleBiomass2Summer2000_PalSumCattle, Input_Dead = BurnGrainSummer2000_Output_Dead, Input_Adults = BurnGrainSummer2000_Output_Adults, Input_Cover = BurnGrainSummer2000_Output_Cover; GrazeCattleGrainSummer2000_Output_Adults = Output_Adults, GrazeCattleGrainSummer2000_Output_Cover = Output_Cover, GrazeCattleGrainSummer2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeCattleExoticAnnualSummer2000 : ExoticAnnualGrazeCattle (Input_Adults = BurnExoticAnnualSummer2000_Output_Adults, Input_Dead = BurnExoticAnnualSummer2000_Output_Dead, Input_Cover = BurnExoticAnnualSummer2000_Output_Cover, Season = Summer2000, Duration = DurationGrazeCattleSummer2000, PalSumCattle = GrazeCattleBiomass2Summer2000_PalSumCattle; GrazeCattleExoticAnnualSummer2000_Output_Adults = Output_Adults, GrazeCattleExoticAnnualSummer2000_Output_Cover = Output_Cover, GrazeCattleExoticAnnualSummer2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeCattleNeedleSummer2000 : NeedleGrazeCattle (Input_Basal = BurnNeedleSummer2000_Output_Basal, Input_Cover = BurnNeedleSummer2000_Output_Cover, Season = Summer2000, Duration = DurationGrazeCattleSummer2000, Input_Dead = BurnNeedleSummer2000_Output_Dead, PalSumCattle = GrazeCattleBiomass2Summer2000_PalSumCattle; GrazeCattleNeedleSummer2000_Output_Cover = Output_Cover, GrazeCattleNeedleSummer2000_Output_Basal = Output_Basal, GrazeCattleNeedleSummer2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeCattleSTSummer2000 : STGrazeCattle (Input_Basal = BurnSTSummer2000_Output_Basal, Input_Cover = BurnSTSummer2000_Output_Cover, Season = Summer2000, Duration = DurationGrazeCattleSummer2000, Input_Dead = BurnSTSummer2000_Output_Dead, PalSumCattle = GrazeCattleBiomass2Summer2000_PalSumCattle; GrazeCattleSTSummer2000_Output_Cover = Output_Cover, GrazeCattleSTSummer2000_Output_Basal = Output_Basal, GrazeCattleSTSummer2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeCattleWallabySummer2000 : WallabyGrazeCattle (Input_Basal = BurnWallabySummer2000_Output_Basal, Input_Cover = BurnWallabySummer2000_Output_Cover, Season = Summer2000, Duration = DurationGrazeCattleSummer2000, Input_Dead = BurnWallabySummer2000_Output_Dead, PalSumCattle = GrazeCattleBiomass2Summer2000_PalSumCattle; GrazeCattleWallabySummer2000_Output_Cover = Output_Cover, GrazeCattleWallabySummer2000_Output_Basal = Output_Basal, GrazeCattleWallabySummer2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeCattleSpearSummer2000 : SpearGrazeCattle (Input_Basal = BurnSpearSummer2000_Output_Basal, Input_Cover = BurnSpearSummer2000_Output_Cover, Season = Summer2000, Duration = DurationGrazeCattleSummer2000, Input_Dead = BurnSpearSummer2000_Output_Dead, PalSumCattle = GrazeCattleBiomass2Summer2000_PalSumCattle; GrazeCattleSpearSummer2000_Output_Cover = Output_Cover, GrazeCattleSpearSummer2000_Output_Basal = Output_Basal, GrazeCattleSpearSummer2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeCattleWindmillSummer2000 : WindmillGrazeCattle (Input_Basal = BurnWindmillSummer2000_Output_Basal, Input_Cover = BurnWindmillSummer2000_Output_Cover, Season = Summer2000, Duration = DurationGrazeCattleSummer2000, Input_Dead = BurnWindmillSummer2000_Output_Dead, PalSumCattle = GrazeCattleBiomass2Summer2000_PalSumCattle; GrazeCattleWindmillSummer2000_Output_Cover = Output_Cover, GrazeCattleWindmillSummer2000_Output_Basal = Output_Basal, GrazeCattleWindmillSummer2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeCattleRedLegSummer2000 : RedLegGrazeCattle (Input_Basal = BurnRedLegSummer2000_Output_Basal, Input_Cover = BurnRedLegSummer2000_Output_Cover, Season = Summer2000, Duration = DurationGrazeCattleSummer2000, Input_Dead = BurnRedLegSummer2000_Output_Dead, PalSumCattle = GrazeCattleBiomass2Summer2000_PalSumCattle; GrazeCattleRedLegSummer2000_Output_Cover = Output_Cover, GrazeCattleRedLegSummer2000_Output_Basal = Output_Basal, GrazeCattleRedLegSummer2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance GrazeCattleThemedaSummer2000 : ThemedaGrazeCattle (Input_Dead = BurnThemedaSummer2000_Output_Dead, Duration = DurationGrazeCattleSummer2000, Season = Summer2000, Input_Cover = BurnThemedaSummer2000_Output_Cover, Input_Basal = BurnThemedaSummer2000_Output_Basal, Input_Seedlings = BurnThemedaSummer2000_Output_Seedlings, PalSumCattle = GrazeCattleBiomass2Summer2000_PalSumCattle; GrazeCattleThemedaSummer2000_Output_Dead = Output_Dead, GrazeCattleThemedaSummer2000_Output_Seedlings = Output_Seedlings, GrazeCattleThemedaSummer2000_Output_Basal = Output_Basal, GrazeCattleThemedaSummer2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance GrazeCattleSoilSummer2000 : SoilGrazeCattle (Input_Friability = Soil_Friability; GrazeCattleSoilSummer2000_Output_Friability = Output_Friability)
+    {
+    }
+
+    instance GrazeCattleInterventionSummer2000 : GrazeInterventionCattle (Input_Fences = Intervention_Fences, Duration = DurationGrazeCattleSummer2000, Scale = Scale; GrazeCattleInterventionSummer2000_Output_Fences = Output_Fences, GrazeCattleInterventionSummer2000_GrazeCost = GrazeCost)
+    {
+    }
+
+    instance GrazeCattleBiomass2Summer2000 : BiomassNatural (WComp = GrazeCattleBiomass1Summer2000_WComp, MComp = GrazeCattleBiomass1Summer2000_MComp, SComp = GrazeCattleBiomass1Summer2000_SComp, VSComp = GrazeCattleBiomass1Summer2000_VSComp, VLPalC = GrazeCattleBiomass1Summer2000_VLPalC, LPalC = GrazeCattleBiomass1Summer2000_LPalC, MPalC = GrazeCattleBiomass1Summer2000_MPalC, HPalC = GrazeCattleBiomass1Summer2000_HPalC, VLPalS = GrazeCattleBiomass1Summer2000_VLPalS, LPalS = GrazeCattleBiomass1Summer2000_LPalS, MPalS = GrazeCattleBiomass1Summer2000_MPalS, HPalS = GrazeCattleBiomass1Summer2000_HPalS; GrazeCattleBiomass2Summer2000_CompSum = CompSum, GrazeCattleBiomass2Summer2000_PalSumCattle = PalSumCattle, GrazeCattleBiomass2Summer2000_PalSumSheep = PalSumSheep)
+    {
+    }
+
+    instance GrazeCattleBiomass1Summer2000 : BiomassSummaries (HardyNative_Cover = BurnHardyNativeSummer2000_Output_Cover, Grain_Cover = BurnGrainSummer2000_Output_Cover, BroadWeeds_Cover = BurnBroadWeedsSummer2000_Output_Cover, SensitNative_Cover = BurnSensitNativeSummer2000_Output_Cover, RedLeg_Cover = BurnRedLegSummer2000_Output_Cover, Windmill_Cover = BurnWindmillSummer2000_Output_Cover, Wallaby_Cover = BurnWallabySummer2000_Output_Cover, Ruderals_Cover = BurnRuderalsSummer2000_Output_Cover, ST_Cover = BurnSTSummer2000_Output_Cover, Spear_Cover = BurnSpearSummer2000_Output_Cover, Needle_Cover = BurnNeedleSummer2000_Output_Cover, Themeda_Cover = BurnThemedaSummer2000_Output_Cover, Onion_Cover = BurnOnionSummer2000_Output_Cover, Blanket_Cover = BurnBlanketSummer2000_Output_Cover, ExoticAnnual_Cover = BurnExoticAnnualSummer2000_Output_Cover, Themeda_Dead = BurnThemedaSummer2000_Output_Dead, RedLeg_Dead = BurnRedLegSummer2000_Output_Dead, Needle_Dead = BurnNeedleSummer2000_Output_Dead, Wallaby_Dead = BurnWallabySummer2000_Output_Dead, Blanket_Dead = BurnBlanketSummer2000_Output_Dead, Windmill_Dead = BurnWindmillSummer2000_Output_Dead, ST_Dead = BurnSTSummer2000_Output_Dead, Spear_Dead = BurnSpearSummer2000_Output_Dead, Grain_Dead = BurnGrainSummer2000_Output_Dead, Onion_Dead = BurnOnionSummer2000_Output_Dead, ExoticAnnual_Dead = BurnExoticAnnualSummer2000_Output_Dead, HardyNative_Dead = BurnHardyNativeSummer2000_Output_Dead, Ruderals_Dead = BurnRuderalsSummer2000_Output_Dead, SensitNative_Dead = BurnSensitNativeSummer2000_Output_Dead, BroadWeeds_Dead = BurnBroadWeedsSummer2000_Output_Dead, Windmill_Basal = BurnWindmillSummer2000_Output_Basal, SensitNative_Basal = BurnSensitNativeSummer2000_Output_Basal, Spear_Basal = BurnSpearSummer2000_Output_Basal, Themeda_Basal = BurnThemedaSummer2000_Output_Basal, Onion_Basal = BurnOnionSummer2000_Output_Basal, ST_Basal = BurnSTSummer2000_Output_Basal, Wallaby_Basal = BurnWallabySummer2000_Output_Basal, HardyNative_Basal = BurnHardyNativeSummer2000_Output_Basal, Ruderals_Basal = BurnRuderalsSummer2000_Output_Basal, BroadWeeds_Basal = BurnBroadWeedsSummer2000_Output_Basal, RedLeg_Basal = BurnRedLegSummer2000_Output_Basal, Needle_Basal = BurnNeedleSummer2000_Output_Basal, Season = Summer2000, NL = BurnNutrientSummer2000_NL; GrazeCattleBiomass1Summer2000_LBio = LBio, GrazeCattleBiomass1Summer2000_DBio = DBio, GrazeCattleBiomass1Summer2000_BBio = BBio, GrazeCattleBiomass1Summer2000_TBio = TBio, GrazeCattleBiomass1Summer2000_HPalC = HPalC, GrazeCattleBiomass1Summer2000_MPalC = MPalC, GrazeCattleBiomass1Summer2000_LPalC = LPalC, GrazeCattleBiomass1Summer2000_VLPalC = VLPalC, GrazeCattleBiomass1Summer2000_HPalS = HPalS, GrazeCattleBiomass1Summer2000_MPalS = MPalS, GrazeCattleBiomass1Summer2000_LPalS = LPalS, GrazeCattleBiomass1Summer2000_VLPalS = VLPalS, GrazeCattleBiomass1Summer2000_WComp = WComp, GrazeCattleBiomass1Summer2000_MComp = MComp, GrazeCattleBiomass1Summer2000_SComp = SComp, GrazeCattleBiomass1Summer2000_VSComp = VSComp)
+    {
+    }
+
+    instance BurnNutrientSummer2000 : NutrientFire (Input_Phosphorous = NaturalNutrientSummer2000_Output_Phosphorous, Input_Nitrogen = NaturalNutrientSummer2000_Output_Nitrogen, Input_Carbon = NaturalNutrientSummer2000_Output_Carbon, Burn = BurnInterventionSummer2000_Burn, NUI = BurnNUISummer2000_NUI; BurnNutrientSummer2000_Output_Nitrogen = Output_Nitrogen, BurnNutrientSummer2000_Output_Phosphorous = Output_Phosphorous, BurnNutrientSummer2000_NL = NL, BurnNutrientSummer2000_Output_Carbon = Output_Carbon)
+    {
+    }
+
+    instance BurnNUISummer2000 : NuiAdder (Windmill_NUI = BurnWindmillSummer2000_Output_NUI, BroadWeeds_NUI = BurnBroadWeedsSummer2000_Output_NUI, HardyNative_NUI = BurnHardyNativeSummer2000_Output_NUI, Spear_NUI = BurnSpearSummer2000_Output_NUI, ST_NUI = BurnSTSummer2000_Output_NUI, Wallaby_NUI = BurnWallabySummer2000_Output_NUI, SensitNative_NUI = BurnSensitNativeSummer2000_Output_NUI, Grain_NUI = BurnGrainSummer2000_Output_NUI, Onion_NUI = BurnOnionSummer2000_Output_NUI, ExoticAnnual_NUI = BurnExoticAnnualSummer2000_Output_NUI, Needle_NUI = BurnNeedleSummer2000_Output_NUI, Themeda_NUI = BurnThemedaSummer2000_Output_NUI, Blanket_NUI = BurnBlanketSummer2000_Output_NUI, RedLeg_NUI = BurnRedLegSummer2000_Output_NUI, Ruderals_NUI = BurnRuderalsSummer2000_Output_NUI; BurnNUISummer2000_NUI = NUI)
+    {
+    }
+
+    instance BurnOnionSummer2000 : TolerantFire (Input_Cover = NaturalOnionSummer2000_Output_Cover, Input_Dead = NaturalOnionSummer2000_Output_Dead, Input_Basal = NaturalOnionSummer2000_Output_Basal, Input_Seedlings = HerbicideTargetOnionSpring2000_Output_Seedlings, Burn = BurnInterventionSummer2000_Burn; BurnOnionSummer2000_Output_NUI = Output_NUI, BurnOnionSummer2000_Output_Dead = Output_Dead, BurnOnionSummer2000_Output_Seedlings = Output_Seedlings, BurnOnionSummer2000_Output_Basal = Output_Basal, BurnOnionSummer2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnBroadWeedsSummer2000 : TolerantFire (Input_Cover = NaturalBroadWeedsSummer2000_Output_Cover, Input_Dead = NaturalBroadWeedsSummer2000_Output_Dead, Input_Basal = NaturalBroadWeedsSummer2000_Output_Basal, Input_Seedlings = HerbicideTargetBroadWeedsSpring2000_Output_Seedlings, Burn = BurnInterventionSummer2000_Burn; BurnBroadWeedsSummer2000_Output_NUI = Output_NUI, BurnBroadWeedsSummer2000_Output_Dead = Output_Dead, BurnBroadWeedsSummer2000_Output_Seedlings = Output_Seedlings, BurnBroadWeedsSummer2000_Output_Basal = Output_Basal, BurnBroadWeedsSummer2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnBlanketSummer2000 : KilledFire3 (Input_Adults = NaturalBlanketSummer2000_Output_Adults, Burn = BurnInterventionSummer2000_Burn, Input_Dead = NaturalBlanketSummer2000_Output_Dead, Input_Cover = NaturalBlanketSummer2000_Output_Cover; BurnBlanketSummer2000_Output_Adults = Output_Adults, BurnBlanketSummer2000_Output_Cover = Output_Cover, BurnBlanketSummer2000_Output_Dead = Output_Dead, BurnBlanketSummer2000_Output_NUI = Output_NUI)
+    {
+    }
+
+    instance BurnRuderalsSummer2000 : TolerantFire (Input_Cover = NaturalRuderalsSummer2000_Output_Cover, Input_Dead = NaturalRuderalsSummer2000_Output_Dead, Input_Basal = NaturalRuderalsSummer2000_Output_Basal, Input_Seedlings = HerbicideTargetRuderalsSpring2000_Output_Seedlings, Burn = BurnInterventionSummer2000_Burn; BurnRuderalsSummer2000_Output_NUI = Output_NUI, BurnRuderalsSummer2000_Output_Dead = Output_Dead, BurnRuderalsSummer2000_Output_Seedlings = Output_Seedlings, BurnRuderalsSummer2000_Output_Basal = Output_Basal, BurnRuderalsSummer2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnHardyNativeSummer2000 : TolerantFire (Input_Cover = NaturalHardyNativeSummer2000_Output_Cover, Input_Dead = NaturalHardyNativeSummer2000_Output_Dead, Input_Basal = NaturalHardyNativeSummer2000_Output_Basal, Input_Seedlings = HerbicideTargetHardyNativeSpring2000_Output_Seedlings, Burn = BurnInterventionSummer2000_Burn; BurnHardyNativeSummer2000_Output_NUI = Output_NUI, BurnHardyNativeSummer2000_Output_Dead = Output_Dead, BurnHardyNativeSummer2000_Output_Seedlings = Output_Seedlings, BurnHardyNativeSummer2000_Output_Basal = Output_Basal, BurnHardyNativeSummer2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnSensitNativeSummer2000 : TolerantFire (Input_Cover = NaturalSensitNativeSummer2000_Output_Cover, Input_Dead = NaturalSensitNativeSummer2000_Output_Dead, Input_Basal = NaturalSensitNativeSummer2000_Output_Basal, Input_Seedlings = HerbicideTargetSensitNativeSpring2000_Output_Seedlings, Burn = BurnInterventionSummer2000_Burn; BurnSensitNativeSummer2000_Output_NUI = Output_NUI, BurnSensitNativeSummer2000_Output_Dead = Output_Dead, BurnSensitNativeSummer2000_Output_Seedlings = Output_Seedlings, BurnSensitNativeSummer2000_Output_Basal = Output_Basal, BurnSensitNativeSummer2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnGrainSummer2000 : KilledFire2 (Input_Cover = NaturalGrainSummer2000_Output_Cover, Input_Dead = NaturalGrainSummer2000_Output_Dead, Burn = BurnInterventionSummer2000_Burn, Input_Adults = NaturalGrainSummer2000_Output_Adults; BurnGrainSummer2000_Output_NUI = Output_NUI, BurnGrainSummer2000_Output_Dead = Output_Dead, BurnGrainSummer2000_Output_Cover = Output_Cover, BurnGrainSummer2000_Output_Adults = Output_Adults)
+    {
+    }
+
+    instance BurnExoticAnnualSummer2000 : KilledFire1 (Input_Cover = NaturalExoticAnnualSummer2000_Output_Cover, Input_Dead = NaturalExoticAnnualSummer2000_Output_Dead, Burn = BurnInterventionSummer2000_Burn, Input_Adults = NaturalExoticAnnualSummer2000_Output_Adults; BurnExoticAnnualSummer2000_Output_NUI = Output_NUI, BurnExoticAnnualSummer2000_Output_Dead = Output_Dead, BurnExoticAnnualSummer2000_Output_Cover = Output_Cover, BurnExoticAnnualSummer2000_Output_Adults = Output_Adults)
+    {
+    }
+
+    instance BurnNeedleSummer2000 : TolerantFire (Input_Cover = NaturalNeedleSummer2000_Output_Cover, Input_Dead = NaturalNeedleSummer2000_Output_Dead, Input_Basal = NaturalNeedleSummer2000_Output_Basal, Input_Seedlings = HerbicideTargetNeedleSpring2000_Output_Seedlings, Burn = BurnInterventionSummer2000_Burn; BurnNeedleSummer2000_Output_NUI = Output_NUI, BurnNeedleSummer2000_Output_Dead = Output_Dead, BurnNeedleSummer2000_Output_Seedlings = Output_Seedlings, BurnNeedleSummer2000_Output_Basal = Output_Basal, BurnNeedleSummer2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnSTSummer2000 : TolerantFire (Input_Cover = NaturalSTSummer2000_Output_Cover, Input_Dead = NaturalSTSummer2000_Output_Dead, Input_Basal = NaturalSTSummer2000_Output_Basal, Input_Seedlings = HerbicideTargetSTSpring2000_Output_Seedlings, Burn = BurnInterventionSummer2000_Burn; BurnSTSummer2000_Output_NUI = Output_NUI, BurnSTSummer2000_Output_Dead = Output_Dead, BurnSTSummer2000_Output_Seedlings = Output_Seedlings, BurnSTSummer2000_Output_Basal = Output_Basal, BurnSTSummer2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnWallabySummer2000 : ModerateFire (Input_Cover = NaturalWallabySummer2000_Output_Cover, Input_Dead = NaturalWallabySummer2000_Output_Dead, Input_Basal = NaturalWallabySummer2000_Output_Basal, Burn = BurnInterventionSummer2000_Burn; BurnWallabySummer2000_Output_NUI = Output_NUI, BurnWallabySummer2000_Output_Dead = Output_Dead, BurnWallabySummer2000_Output_Basal = Output_Basal, BurnWallabySummer2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnSpearSummer2000 : SensitiveFire (Input_Cover = NaturalSpearSummer2000_Output_Cover, Input_Dead = NaturalSpearSummer2000_Output_Dead, Input_Basal = NaturalSpearSummer2000_Output_Basal, Burn = BurnInterventionSummer2000_Burn; BurnSpearSummer2000_Output_NUI = Output_NUI, BurnSpearSummer2000_Output_Dead = Output_Dead, BurnSpearSummer2000_Output_Basal = Output_Basal, BurnSpearSummer2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnWindmillSummer2000 : ModerateFire (Input_Cover = NaturalWindmillSummer2000_Output_Cover, Input_Dead = NaturalWindmillSummer2000_Output_Dead, Input_Basal = NaturalWindmillSummer2000_Output_Basal, Burn = BurnInterventionSummer2000_Burn; BurnWindmillSummer2000_Output_NUI = Output_NUI, BurnWindmillSummer2000_Output_Dead = Output_Dead, BurnWindmillSummer2000_Output_Basal = Output_Basal, BurnWindmillSummer2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnRedLegSummer2000 : TolerantFire (Input_Cover = NaturalRedLegSummer2000_Output_Cover, Input_Dead = NaturalRedLegSummer2000_Output_Dead, Input_Basal = NaturalRedLegSummer2000_Output_Basal, Input_Seedlings = HerbicideTargetRedLegSpring2000_Output_Seedlings, Burn = BurnInterventionSummer2000_Burn; BurnRedLegSummer2000_Output_NUI = Output_NUI, BurnRedLegSummer2000_Output_Dead = Output_Dead, BurnRedLegSummer2000_Output_Seedlings = Output_Seedlings, BurnRedLegSummer2000_Output_Basal = Output_Basal, BurnRedLegSummer2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnThemedaSummer2000 : TolerantFire (Input_Cover = NaturalThemedaSummer2000_Output_Cover, Input_Dead = NaturalThemedaSummer2000_Output_Dead, Input_Basal = NaturalThemedaSummer2000_Output_Basal, Input_Seedlings = NaturalThemedaSummer2000_Output_Seedlings, Burn = BurnInterventionSummer2000_Burn; BurnThemedaSummer2000_Output_NUI = Output_NUI, BurnThemedaSummer2000_Output_Dead = Output_Dead, BurnThemedaSummer2000_Output_Seedlings = Output_Seedlings, BurnThemedaSummer2000_Output_Basal = Output_Basal, BurnThemedaSummer2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnInterventionSummer2000 : BurnIntervention (Season = Summer2000, BD = BD, TBio = BurnBiomass1Summer2000_TBio, BurnStrategy = BurnStrategyBurnSummer2000, BBio = BurnBiomass1Summer2000_BBio, LBio = BurnBiomass1Summer2000_LBio, Scale = Scale; BurnInterventionSummer2000_Burn = Burn, BurnInterventionSummer2000_BurnCost = BurnCost)
+    {
+    }
+
+    instance BurnBiomass1Summer2000 : BiomassSummaries (HardyNative_Cover = NaturalHardyNativeSummer2000_Output_Cover, Grain_Cover = NaturalGrainSummer2000_Output_Cover, BroadWeeds_Cover = NaturalBroadWeedsSummer2000_Output_Cover, SensitNative_Cover = NaturalSensitNativeSummer2000_Output_Cover, RedLeg_Cover = NaturalRedLegSummer2000_Output_Cover, Windmill_Cover = NaturalWindmillSummer2000_Output_Cover, Wallaby_Cover = NaturalWallabySummer2000_Output_Cover, Ruderals_Cover = NaturalRuderalsSummer2000_Output_Cover, ST_Cover = NaturalSTSummer2000_Output_Cover, Spear_Cover = NaturalSpearSummer2000_Output_Cover, Needle_Cover = NaturalNeedleSummer2000_Output_Cover, Themeda_Cover = NaturalThemedaSummer2000_Output_Cover, Onion_Cover = NaturalOnionSummer2000_Output_Cover, Blanket_Cover = NaturalBlanketSummer2000_Output_Cover, ExoticAnnual_Cover = NaturalExoticAnnualSummer2000_Output_Cover, Themeda_Dead = NaturalThemedaSummer2000_Output_Dead, RedLeg_Dead = NaturalRedLegSummer2000_Output_Dead, Needle_Dead = NaturalNeedleSummer2000_Output_Dead, Wallaby_Dead = NaturalWallabySummer2000_Output_Dead, Blanket_Dead = NaturalBlanketSummer2000_Output_Dead, Windmill_Dead = NaturalWindmillSummer2000_Output_Dead, ST_Dead = NaturalSTSummer2000_Output_Dead, Spear_Dead = NaturalSpearSummer2000_Output_Dead, Grain_Dead = NaturalGrainSummer2000_Output_Dead, Onion_Dead = NaturalOnionSummer2000_Output_Dead, ExoticAnnual_Dead = NaturalExoticAnnualSummer2000_Output_Dead, HardyNative_Dead = NaturalHardyNativeSummer2000_Output_Dead, Ruderals_Dead = NaturalRuderalsSummer2000_Output_Dead, SensitNative_Dead = NaturalSensitNativeSummer2000_Output_Dead, BroadWeeds_Dead = NaturalBroadWeedsSummer2000_Output_Dead, Windmill_Basal = NaturalWindmillSummer2000_Output_Basal, SensitNative_Basal = NaturalSensitNativeSummer2000_Output_Basal, Spear_Basal = NaturalSpearSummer2000_Output_Basal, Themeda_Basal = NaturalThemedaSummer2000_Output_Basal, Onion_Basal = NaturalOnionSummer2000_Output_Basal, ST_Basal = NaturalSTSummer2000_Output_Basal, Wallaby_Basal = NaturalWallabySummer2000_Output_Basal, HardyNative_Basal = NaturalHardyNativeSummer2000_Output_Basal, Ruderals_Basal = NaturalRuderalsSummer2000_Output_Basal, BroadWeeds_Basal = NaturalBroadWeedsSummer2000_Output_Basal, RedLeg_Basal = NaturalRedLegSummer2000_Output_Basal, Needle_Basal = NaturalNeedleSummer2000_Output_Basal, Season = Summer2000, NL = NaturalNutrientSummer2000_NL; BurnBiomass1Summer2000_LBio = LBio, BurnBiomass1Summer2000_DBio = DBio, BurnBiomass1Summer2000_BBio = BBio, BurnBiomass1Summer2000_TBio = TBio, BurnBiomass1Summer2000_HPalC = HPalC, BurnBiomass1Summer2000_MPalC = MPalC, BurnBiomass1Summer2000_LPalC = LPalC, BurnBiomass1Summer2000_VLPalC = VLPalC, BurnBiomass1Summer2000_HPalS = HPalS, BurnBiomass1Summer2000_MPalS = MPalS, BurnBiomass1Summer2000_LPalS = LPalS, BurnBiomass1Summer2000_VLPalS = VLPalS, BurnBiomass1Summer2000_WComp = WComp, BurnBiomass1Summer2000_MComp = MComp, BurnBiomass1Summer2000_SComp = SComp, BurnBiomass1Summer2000_VSComp = VSComp)
+    {
+    }
+
+    instance NaturalNutrientSummer2000 : NutrientNatural (Input_Phosphorous = BurnNutrientSpring2000_Output_Phosphorous, Input_Nitrogen = BurnNutrientSpring2000_Output_Nitrogen, Input_Carbon = BurnNutrientSpring2000_Output_Carbon, NUI = NaturalNUISummer2000_NUI; NaturalNutrientSummer2000_Output_Nitrogen = Output_Nitrogen, NaturalNutrientSummer2000_Output_Phosphorous = Output_Phosphorous, NaturalNutrientSummer2000_NL = NL, NaturalNutrientSummer2000_Output_Carbon = Output_Carbon)
+    {
+    }
+
+    instance NaturalNUISummer2000 : NuiAdder (Windmill_NUI = NaturalWindmillSummer2000_Output_NUI, BroadWeeds_NUI = NaturalBroadWeedsSummer2000_Output_NUI, HardyNative_NUI = NaturalHardyNativeSummer2000_Output_NUI, Spear_NUI = NaturalSpearSummer2000_Output_NUI, ST_NUI = NaturalSTSummer2000_Output_NUI, Wallaby_NUI = NaturalWallabySummer2000_Output_NUI, SensitNative_NUI = NaturalSensitNativeSummer2000_Output_NUI, Grain_NUI = NaturalGrainSummer2000_Output_NUI, Onion_NUI = NaturalOnionSummer2000_Output_NUI, ExoticAnnual_NUI = NaturalExoticAnnualSummer2000_Output_NUI, Needle_NUI = NaturalNeedleSummer2000_Output_NUI, Themeda_NUI = NaturalThemedaSummer2000_Output_NUI, Blanket_NUI = NaturalBlanketSummer2000_Output_NUI, RedLeg_NUI = NaturalRedLegSummer2000_Output_NUI, Ruderals_NUI = NaturalRuderalsSummer2000_Output_NUI; NaturalNUISummer2000_NUI = NUI)
+    {
+    }
+
+    instance NaturalOnionSummer2000 : OnionNatural (Input_Cover = HerbicideTargetOnionSpring2000_Output_Cover, Input_Dead = HerbicideTargetOnionSpring2000_Output_Dead, Input_Seeds = HerbicideTargetOnionSpring2000_Output_Seeds, Input_Basal = HerbicideTargetOnionSpring2000_Output_Basal, CompSum = NaturalBiomass2Summer2000_CompSum, Season = Summer2000, NL = BurnNutrientSpring2000_NL; NaturalOnionSummer2000_Output_Dead = Output_Dead, NaturalOnionSummer2000_Output_Cover = Output_Cover, NaturalOnionSummer2000_Output_Basal = Output_Basal, NaturalOnionSummer2000_Output_Seeds = Output_Seeds, NaturalOnionSummer2000_Output_NUI = Output_NUI)
+    {
+    }
+
+    instance NaturalBroadWeedsSummer2000 : BroadWeedsNatural (NL = BurnNutrientSpring2000_NL, Season = Summer2000, CompSum = NaturalBiomass2Summer2000_CompSum, Input_Basal = HerbicideTargetBroadWeedsSpring2000_Output_Basal, Input_Seeds = HerbicideTargetBroadWeedsSpring2000_Output_Seeds, Input_Dead = HerbicideTargetBroadWeedsSpring2000_Output_Dead, Input_Cover = HerbicideTargetBroadWeedsSpring2000_Output_Cover; NaturalBroadWeedsSummer2000_Output_NUI = Output_NUI, NaturalBroadWeedsSummer2000_Output_Seeds = Output_Seeds, NaturalBroadWeedsSummer2000_Output_Basal = Output_Basal, NaturalBroadWeedsSummer2000_Output_Cover = Output_Cover, NaturalBroadWeedsSummer2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance NaturalBlanketSummer2000 : BlanketNatural (NL = BurnNutrientSpring2000_NL, Season = Summer2000, CompSum = NaturalBiomass2Summer2000_CompSum, Input_Seeds = HerbicideTargetBlanketSpring2000_Output_Seeds, Input_Dead = HerbicideTargetBlanketSpring2000_Output_Dead, Input_Cover = HerbicideTargetBlanketSpring2000_Output_Cover, Input_Adults = HerbicideTargetBlanketSpring2000_Output_Adults; NaturalBlanketSummer2000_Output_NUI = Output_NUI, NaturalBlanketSummer2000_Output_Seeds = Output_Seeds, NaturalBlanketSummer2000_Output_Cover = Output_Cover, NaturalBlanketSummer2000_Output_Dead = Output_Dead, NaturalBlanketSummer2000_Output_Adults = Output_Adults)
+    {
+    }
+
+    instance NaturalRuderalsSummer2000 : RuderNatural (Season = Summer2000, NL = BurnNutrientSpring2000_NL, Input_Dead = HerbicideTargetRuderalsSpring2000_Output_Dead, Input_Cover = HerbicideTargetRuderalsSpring2000_Output_Cover, Input_Basal = HerbicideTargetRuderalsSpring2000_Output_Basal, CompSum = NaturalBiomass2Summer2000_CompSum; NaturalRuderalsSummer2000_Output_Cover = Output_Cover, NaturalRuderalsSummer2000_Output_Basal = Output_Basal, NaturalRuderalsSummer2000_Output_Dead = Output_Dead, NaturalRuderalsSummer2000_Output_NUI = Output_NUI)
+    {
+    }
+
+    instance NaturalHardyNativeSummer2000 : HardyNativeNatural (Input_Basal = HerbicideTargetHardyNativeSpring2000_Output_Basal, Input_Cover = HerbicideTargetHardyNativeSpring2000_Output_Cover, Input_Dead = HerbicideTargetHardyNativeSpring2000_Output_Dead, Input_Seeds = HerbicideTargetHardyNativeSpring2000_Output_Seeds, NL = BurnNutrientSpring2000_NL, Season = Summer2000, CompSum = NaturalBiomass2Summer2000_CompSum; NaturalHardyNativeSummer2000_Output_Seeds = Output_Seeds, NaturalHardyNativeSummer2000_Output_Cover = Output_Cover, NaturalHardyNativeSummer2000_Output_Dead = Output_Dead, NaturalHardyNativeSummer2000_Output_NUI = Output_NUI, NaturalHardyNativeSummer2000_Output_Basal = Output_Basal)
+    {
+    }
+
+    instance NaturalSensitNativeSummer2000 : SensitNativeNatural (CompSum = NaturalBiomass2Summer2000_CompSum, Input_Basal = HerbicideTargetSensitNativeSpring2000_Output_Basal, Input_Cover = HerbicideTargetSensitNativeSpring2000_Output_Cover, Input_Dead = HerbicideTargetSensitNativeSpring2000_Output_Dead, NL = BurnNutrientSpring2000_NL, Season = Summer2000; NaturalSensitNativeSummer2000_Output_NUI = Output_NUI, NaturalSensitNativeSummer2000_Output_Dead = Output_Dead, NaturalSensitNativeSummer2000_Output_Basal = Output_Basal, NaturalSensitNativeSummer2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance NaturalGrainSummer2000 : GrainNatural (CompSum = NaturalBiomass2Summer2000_CompSum, NL = BurnNutrientSpring2000_NL, Season = Summer2000, Input_Seeds = HerbicideTargetGrainSpring2000_Output_Seeds, Input_Adults = HerbicideTargetGrainSpring2000_Output_Adults, Input_Dead = HerbicideTargetGrainSpring2000_Output_Dead, Input_Cover = HerbicideTargetGrainSpring2000_Output_Cover; NaturalGrainSummer2000_Output_Cover = Output_Cover, NaturalGrainSummer2000_Output_Adults = Output_Adults, NaturalGrainSummer2000_Output_Seeds = Output_Seeds, NaturalGrainSummer2000_Output_NUI = Output_NUI, NaturalGrainSummer2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance NaturalExoticAnnualSummer2000 : ExoticAnnualNatural (CompSum = NaturalBiomass2Summer2000_CompSum, Input_Seeds = HerbicideTargetExoticAnnualSpring2000_Output_Seeds, NL = BurnNutrientSpring2000_NL, Season = Summer2000, Input_Adults = HerbicideTargetExoticAnnualSpring2000_Output_Adults, Input_Dead = HerbicideTargetExoticAnnualSpring2000_Output_Dead, Input_Cover = HerbicideTargetExoticAnnualSpring2000_Output_Cover; NaturalExoticAnnualSummer2000_Output_Seeds = Output_Seeds, NaturalExoticAnnualSummer2000_Output_Adults = Output_Adults, NaturalExoticAnnualSummer2000_Output_Cover = Output_Cover, NaturalExoticAnnualSummer2000_Output_Dead = Output_Dead, NaturalExoticAnnualSummer2000_Output_NUI = Output_NUI)
+    {
+    }
+
+    instance NaturalNeedleSummer2000 : NeedleNatural (CompSum = NaturalBiomass2Summer2000_CompSum, Input_Seeds = HerbicideTargetNeedleSpring2000_Output_Seeds, Season = Summer2000, Input_Dead = HerbicideTargetNeedleSpring2000_Output_Dead, Input_Cover = HerbicideTargetNeedleSpring2000_Output_Cover, Input_Basal = HerbicideTargetNeedleSpring2000_Output_Basal, NL = BurnNutrientSpring2000_NL; NaturalNeedleSummer2000_Output_Basal = Output_Basal, NaturalNeedleSummer2000_Output_NUI = Output_NUI, NaturalNeedleSummer2000_Output_Dead = Output_Dead, NaturalNeedleSummer2000_Output_Cover = Output_Cover, NaturalNeedleSummer2000_Output_Seeds = Output_Seeds)
+    {
+    }
+
+    instance NaturalSTSummer2000 : STNatural (NL = BurnNutrientSpring2000_NL, Input_Basal = HerbicideTargetSTSpring2000_Output_Basal, Input_Cover = HerbicideTargetSTSpring2000_Output_Cover, Input_Dead = HerbicideTargetSTSpring2000_Output_Dead, Season = Summer2000, Input_Seeds = HerbicideTargetSTSpring2000_Output_Seeds, CompSum = NaturalBiomass2Summer2000_CompSum; NaturalSTSummer2000_Output_Seeds = Output_Seeds, NaturalSTSummer2000_Output_Cover = Output_Cover, NaturalSTSummer2000_Output_Dead = Output_Dead, NaturalSTSummer2000_Output_NUI = Output_NUI, NaturalSTSummer2000_Output_Basal = Output_Basal)
+    {
+    }
+
+    instance NaturalWallabySummer2000 : WallabyNatural (NL = BurnNutrientSpring2000_NL, Input_Basal = HerbicideTargetWallabySpring2000_Output_Basal, Input_Cover = HerbicideTargetWallabySpring2000_Output_Cover, Input_Dead = HerbicideTargetWallabySpring2000_Output_Dead, Season = Summer2000, Input_Seeds = HerbicideTargetWallabySpring2000_Output_Seeds, CompSum = NaturalBiomass2Summer2000_CompSum; NaturalWallabySummer2000_Output_Seeds = Output_Seeds, NaturalWallabySummer2000_Output_Cover = Output_Cover, NaturalWallabySummer2000_Output_Dead = Output_Dead, NaturalWallabySummer2000_Output_NUI = Output_NUI, NaturalWallabySummer2000_Output_Basal = Output_Basal)
+    {
+    }
+
+    instance NaturalSpearSummer2000 : SpearNatural (CompSum = NaturalBiomass2Summer2000_CompSum, Season = Summer2000, NL = BurnNutrientSpring2000_NL, Input_Seeds = HerbicideTargetSpearSpring2000_Output_Seeds, Input_Dead = HerbicideTargetSpearSpring2000_Output_Dead, Input_Cover = HerbicideTargetSpearSpring2000_Output_Cover, Input_Basal = HerbicideTargetSpearSpring2000_Output_Basal; NaturalSpearSummer2000_Output_Basal = Output_Basal, NaturalSpearSummer2000_Output_Cover = Output_Cover, NaturalSpearSummer2000_Output_Seeds = Output_Seeds, NaturalSpearSummer2000_Output_Dead = Output_Dead, NaturalSpearSummer2000_Output_NUI = Output_NUI)
+    {
+    }
+
+    instance NaturalWindmillSummer2000 : WindmillNatural (Input_Seeds = HerbicideTargetWindmillSpring2000_Output_Seeds, Input_Dead = HerbicideTargetWindmillSpring2000_Output_Dead, Input_Cover = HerbicideTargetWindmillSpring2000_Output_Cover, Input_Basal = HerbicideTargetWindmillSpring2000_Output_Basal, NL = BurnNutrientSpring2000_NL, CompSum = NaturalBiomass2Summer2000_CompSum, Season = Summer2000; NaturalWindmillSummer2000_Output_Basal = Output_Basal, NaturalWindmillSummer2000_Output_Dead = Output_Dead, NaturalWindmillSummer2000_Output_Seeds = Output_Seeds, NaturalWindmillSummer2000_Output_Cover = Output_Cover, NaturalWindmillSummer2000_Output_NUI = Output_NUI)
+    {
+    }
+
+    instance NaturalRedLegSummer2000 : RedLegNatural (CompSum = NaturalBiomass2Summer2000_CompSum, Season = Summer2000, NL = BurnNutrientSpring2000_NL, Input_Seeds = HerbicideTargetRedLegSpring2000_Output_Seeds, Input_Dead = HerbicideTargetRedLegSpring2000_Output_Dead, Input_Cover = HerbicideTargetRedLegSpring2000_Output_Cover, Input_Basal = HerbicideTargetRedLegSpring2000_Output_Basal; NaturalRedLegSummer2000_Output_Basal = Output_Basal, NaturalRedLegSummer2000_Output_NUI = Output_NUI, NaturalRedLegSummer2000_Output_Dead = Output_Dead, NaturalRedLegSummer2000_Output_Cover = Output_Cover, NaturalRedLegSummer2000_Output_Seeds = Output_Seeds)
+    {
+    }
+
+    instance NaturalThemedaSummer2000 : ThemedaNatural (Input_Dead = HerbicideTargetThemedaSpring2000_Output_Dead, Input_Cover = HerbicideTargetThemedaSpring2000_Output_Cover, Soil_Friability = Soil_Friability, SoilTemperature = NaturalSoilSummer2000_SoilTemperature, Input_Basal = HerbicideTargetThemedaSpring2000_Output_Basal, Season = Summer2000, Input_Seeds = HerbicideTargetThemedaSpring2000_Output_Seeds, SoilMoisture = NaturalSoilSummer2000_SoilMoisture, Shade = NaturalSoilSummer2000_Shade, Input_Seedlings = HerbicideTargetThemedaSpring2000_Output_Seedlings, CompSum = NaturalBiomass2Summer2000_CompSum, NL = BurnNutrientSpring2000_NL; NaturalThemedaSummer2000_Output_Basal = Output_Basal, NaturalThemedaSummer2000_Output_NUI = Output_NUI, NaturalThemedaSummer2000_Output_Dead = Output_Dead, NaturalThemedaSummer2000_Output_Cover = Output_Cover, NaturalThemedaSummer2000_Output_Seeds = Output_Seeds, NaturalThemedaSummer2000_Output_Seedlings = Output_Seedlings)
+    {
+    }
+
+    instance NaturalSoilSummer2000 : SoilNatural (Season = Summer2000, TBio = NaturalBiomass1Summer2000_TBio, LBio = NaturalBiomass1Summer2000_LBio; NaturalSoilSummer2000_SoilMoisture = SoilMoisture, NaturalSoilSummer2000_SoilTemperature = SoilTemperature, NaturalSoilSummer2000_Shade = Shade)
+    {
+    }
+
+    instance NaturalEnvValueSummer2000 : EnvValue (HardyNative_Cover = HerbicideTargetHardyNativeSpring2000_Output_Cover, BroadWeeds_Cover = HerbicideTargetBroadWeedsSpring2000_Output_Cover, SensitNative_Cover = HerbicideTargetSensitNativeSpring2000_Output_Cover, RedLeg_Cover = HerbicideTargetRedLegSpring2000_Output_Cover, Windmill_Cover = HerbicideTargetWindmillSpring2000_Output_Cover, Wallaby_Cover = HerbicideTargetWallabySpring2000_Output_Cover, Ruderals_Cover = HerbicideTargetRuderalsSpring2000_Output_Cover, ST_Cover = HerbicideTargetSTSpring2000_Output_Cover, Spear_Cover = HerbicideTargetSpearSpring2000_Output_Cover, Needle_Cover = HerbicideTargetNeedleSpring2000_Output_Cover, Themeda_Cover = HerbicideTargetThemedaSpring2000_Output_Cover, Onion_Cover = HerbicideTargetOnionSpring2000_Output_Cover, ExoticAnnual_Cover = HerbicideTargetExoticAnnualSpring2000_Output_Cover, Blanket_Cover = HerbicideTargetBlanketSpring2000_Output_Cover, Grain_Cover = HerbicideTargetGrainSpring2000_Output_Cover, TBio = NaturalBiomass1Summer2000_TBio, DeRocked = DeRocked; NaturalEnvValueSummer2000_EnvironValue = EnvironValue)
+    {
+    }
+
+    instance NaturalBiomass2Summer2000 : BiomassNatural (WComp = NaturalBiomass1Summer2000_WComp, MComp = NaturalBiomass1Summer2000_MComp, SComp = NaturalBiomass1Summer2000_SComp, VSComp = NaturalBiomass1Summer2000_VSComp, VLPalC = NaturalBiomass1Summer2000_VLPalC, LPalC = NaturalBiomass1Summer2000_LPalC, MPalC = NaturalBiomass1Summer2000_MPalC, HPalC = NaturalBiomass1Summer2000_HPalC, VLPalS = NaturalBiomass1Summer2000_VLPalS, LPalS = NaturalBiomass1Summer2000_LPalS, MPalS = NaturalBiomass1Summer2000_MPalS, HPalS = NaturalBiomass1Summer2000_HPalS; NaturalBiomass2Summer2000_CompSum = CompSum, NaturalBiomass2Summer2000_PalSumCattle = PalSumCattle, NaturalBiomass2Summer2000_PalSumSheep = PalSumSheep)
+    {
+    }
+
+    instance NaturalBiomass1Summer2000 : BiomassSummaries (HardyNative_Cover = HerbicideTargetHardyNativeSpring2000_Output_Cover, Grain_Cover = HerbicideTargetGrainSpring2000_Output_Cover, BroadWeeds_Cover = HerbicideTargetBroadWeedsSpring2000_Output_Cover, SensitNative_Cover = HerbicideTargetSensitNativeSpring2000_Output_Cover, RedLeg_Cover = HerbicideTargetRedLegSpring2000_Output_Cover, Windmill_Cover = HerbicideTargetWindmillSpring2000_Output_Cover, Wallaby_Cover = HerbicideTargetWallabySpring2000_Output_Cover, Ruderals_Cover = HerbicideTargetRuderalsSpring2000_Output_Cover, ST_Cover = HerbicideTargetSTSpring2000_Output_Cover, Spear_Cover = HerbicideTargetSpearSpring2000_Output_Cover, Needle_Cover = HerbicideTargetNeedleSpring2000_Output_Cover, Themeda_Cover = HerbicideTargetThemedaSpring2000_Output_Cover, Onion_Cover = HerbicideTargetOnionSpring2000_Output_Cover, Blanket_Cover = HerbicideTargetBlanketSpring2000_Output_Cover, ExoticAnnual_Cover = HerbicideTargetExoticAnnualSpring2000_Output_Cover, Themeda_Dead = HerbicideTargetThemedaSpring2000_Output_Dead, RedLeg_Dead = HerbicideTargetRedLegSpring2000_Output_Dead, Needle_Dead = HerbicideTargetNeedleSpring2000_Output_Dead, Wallaby_Dead = HerbicideTargetWallabySpring2000_Output_Dead, Blanket_Dead = HerbicideTargetBlanketSpring2000_Output_Dead, Windmill_Dead = HerbicideTargetWindmillSpring2000_Output_Dead, ST_Dead = HerbicideTargetSTSpring2000_Output_Dead, Spear_Dead = HerbicideTargetSpearSpring2000_Output_Dead, Grain_Dead = HerbicideTargetGrainSpring2000_Output_Dead, Onion_Dead = HerbicideTargetOnionSpring2000_Output_Dead, ExoticAnnual_Dead = HerbicideTargetExoticAnnualSpring2000_Output_Dead, HardyNative_Dead = HerbicideTargetHardyNativeSpring2000_Output_Dead, Ruderals_Dead = HerbicideTargetRuderalsSpring2000_Output_Dead, SensitNative_Dead = HerbicideTargetSensitNativeSpring2000_Output_Dead, BroadWeeds_Dead = HerbicideTargetBroadWeedsSpring2000_Output_Dead, Windmill_Basal = HerbicideTargetWindmillSpring2000_Output_Basal, SensitNative_Basal = HerbicideTargetSensitNativeSpring2000_Output_Basal, Spear_Basal = HerbicideTargetSpearSpring2000_Output_Basal, Themeda_Basal = HerbicideTargetThemedaSpring2000_Output_Basal, Onion_Basal = HerbicideTargetOnionSpring2000_Output_Basal, ST_Basal = HerbicideTargetSTSpring2000_Output_Basal, Wallaby_Basal = HerbicideTargetWallabySpring2000_Output_Basal, HardyNative_Basal = HerbicideTargetHardyNativeSpring2000_Output_Basal, Ruderals_Basal = HerbicideTargetRuderalsSpring2000_Output_Basal, BroadWeeds_Basal = HerbicideTargetBroadWeedsSpring2000_Output_Basal, RedLeg_Basal = HerbicideTargetRedLegSpring2000_Output_Basal, Needle_Basal = HerbicideTargetNeedleSpring2000_Output_Basal, Season = Summer2000, NL = BurnNutrientSpring2000_NL; NaturalBiomass1Summer2000_LBio = LBio, NaturalBiomass1Summer2000_DBio = DBio, NaturalBiomass1Summer2000_BBio = BBio, NaturalBiomass1Summer2000_TBio = TBio, NaturalBiomass1Summer2000_HPalC = HPalC, NaturalBiomass1Summer2000_MPalC = MPalC, NaturalBiomass1Summer2000_LPalC = LPalC, NaturalBiomass1Summer2000_VLPalC = VLPalC, NaturalBiomass1Summer2000_HPalS = HPalS, NaturalBiomass1Summer2000_MPalS = MPalS, NaturalBiomass1Summer2000_LPalS = LPalS, NaturalBiomass1Summer2000_VLPalS = VLPalS, NaturalBiomass1Summer2000_WComp = WComp, NaturalBiomass1Summer2000_MComp = MComp, NaturalBiomass1Summer2000_SComp = SComp, NaturalBiomass1Summer2000_VSComp = VSComp)
+    {
+    }
+
+    instance HerbicideTargetOnionSpring2000 : OnionHerbicideTarget (Input_Seeds = NaturalOnionSpring2000_Output_Seeds, Input_Seedlings = BurnOnionSpring2000_Output_Seedlings, Input_Basal = BurnOnionSpring2000_Output_Basal, Input_Cover = BurnOnionSpring2000_Output_Cover, Input_Dead = BurnOnionSpring2000_Output_Dead, Application = HerbicideTargetInterventionSpring2000_Application, Target = TargetHerbicideTargetSpring2000; HerbicideTargetOnionSpring2000_Output_Cover = Output_Cover, HerbicideTargetOnionSpring2000_Output_Basal = Output_Basal, HerbicideTargetOnionSpring2000_Output_Seedlings = Output_Seedlings, HerbicideTargetOnionSpring2000_Output_Seeds = Output_Seeds, HerbicideTargetOnionSpring2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance HerbicideTargetBroadWeedsSpring2000 : BroadWeedsHerbicideTarget (Input_Seeds = NaturalBroadWeedsSpring2000_Output_Seeds, Input_Seedlings = BurnBroadWeedsSpring2000_Output_Seedlings, Input_Basal = BurnBroadWeedsSpring2000_Output_Basal, Input_Cover = BurnBroadWeedsSpring2000_Output_Cover, Input_Dead = BurnBroadWeedsSpring2000_Output_Dead, Target = TargetHerbicideTargetSpring2000, Application = HerbicideTargetInterventionSpring2000_Application; HerbicideTargetBroadWeedsSpring2000_Output_Cover = Output_Cover, HerbicideTargetBroadWeedsSpring2000_Output_Basal = Output_Basal, HerbicideTargetBroadWeedsSpring2000_Output_Seedlings = Output_Seedlings, HerbicideTargetBroadWeedsSpring2000_Output_Seeds = Output_Seeds, HerbicideTargetBroadWeedsSpring2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance HerbicideTargetBlanketSpring2000 : BlanketHerbicideTarget (Input_Cover = BurnBlanketSpring2000_Output_Cover, Input_Dead = BurnBlanketSpring2000_Output_Dead, Input_Adults = BurnBlanketSpring2000_Output_Adults, Input_Seeds = NaturalBlanketSpring2000_Output_Seeds, Target = TargetHerbicideTargetSpring2000, Application = HerbicideTargetInterventionSpring2000_Application; HerbicideTargetBlanketSpring2000_Output_Cover = Output_Cover, HerbicideTargetBlanketSpring2000_Output_Dead = Output_Dead, HerbicideTargetBlanketSpring2000_Output_Adults = Output_Adults, HerbicideTargetBlanketSpring2000_Output_Seeds = Output_Seeds)
+    {
+    }
+
+    instance HerbicideTargetRuderalsSpring2000 : RuderHerbicideTarget (Input_Seeds = Ruderals_Seeds, Input_Seedlings = BurnRuderalsSpring2000_Output_Seedlings, Input_Basal = BurnRuderalsSpring2000_Output_Basal, Input_Cover = BurnRuderalsSpring2000_Output_Cover, Input_Dead = BurnRuderalsSpring2000_Output_Dead, Target = TargetHerbicideTargetSpring2000, Application = HerbicideTargetInterventionSpring2000_Application; HerbicideTargetRuderalsSpring2000_Output_Cover = Output_Cover, HerbicideTargetRuderalsSpring2000_Output_Basal = Output_Basal, HerbicideTargetRuderalsSpring2000_Output_Seedlings = Output_Seedlings, HerbicideTargetRuderalsSpring2000_Output_Seeds = Output_Seeds, HerbicideTargetRuderalsSpring2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance HerbicideTargetHardyNativeSpring2000 : HardyNativeHerbicideTarget (Input_Seeds = NaturalHardyNativeSpring2000_Output_Seeds, Input_Seedlings = BurnHardyNativeSpring2000_Output_Seedlings, Input_Basal = BurnHardyNativeSpring2000_Output_Basal, Input_Cover = BurnHardyNativeSpring2000_Output_Cover, Input_Dead = BurnHardyNativeSpring2000_Output_Dead, Target = TargetHerbicideTargetSpring2000, Application = HerbicideTargetInterventionSpring2000_Application; HerbicideTargetHardyNativeSpring2000_Output_Cover = Output_Cover, HerbicideTargetHardyNativeSpring2000_Output_Basal = Output_Basal, HerbicideTargetHardyNativeSpring2000_Output_Seedlings = Output_Seedlings, HerbicideTargetHardyNativeSpring2000_Output_Seeds = Output_Seeds, HerbicideTargetHardyNativeSpring2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance HerbicideTargetSensitNativeSpring2000 : SensitNativeHerbicideTarget (Input_Seeds = SensitNative_Seeds, Input_Seedlings = BurnSensitNativeSpring2000_Output_Seedlings, Input_Basal = BurnSensitNativeSpring2000_Output_Basal, Input_Cover = BurnSensitNativeSpring2000_Output_Cover, Input_Dead = BurnSensitNativeSpring2000_Output_Dead, Target = TargetHerbicideTargetSpring2000, Application = HerbicideTargetInterventionSpring2000_Application; HerbicideTargetSensitNativeSpring2000_Output_Cover = Output_Cover, HerbicideTargetSensitNativeSpring2000_Output_Basal = Output_Basal, HerbicideTargetSensitNativeSpring2000_Output_Seedlings = Output_Seedlings, HerbicideTargetSensitNativeSpring2000_Output_Seeds = Output_Seeds, HerbicideTargetSensitNativeSpring2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance HerbicideTargetGrainSpring2000 : GrainHerbicideTarget (Input_Seeds = NaturalGrainSpring2000_Output_Seeds, Input_Cover = BurnGrainSpring2000_Output_Cover, Input_Dead = BurnGrainSpring2000_Output_Dead, Input_Adults = BurnGrainSpring2000_Output_Adults, Target = TargetHerbicideTargetSpring2000, Application = HerbicideTargetInterventionSpring2000_Application; HerbicideTargetGrainSpring2000_Output_Cover = Output_Cover, HerbicideTargetGrainSpring2000_Output_Seeds = Output_Seeds, HerbicideTargetGrainSpring2000_Output_Dead = Output_Dead, HerbicideTargetGrainSpring2000_Output_Adults = Output_Adults)
+    {
+    }
+
+    instance HerbicideTargetExoticAnnualSpring2000 : ExoticAnnualHerbicideTarget (Input_Cover = BurnExoticAnnualSpring2000_Output_Cover, Input_Dead = BurnExoticAnnualSpring2000_Output_Dead, Input_Adults = BurnExoticAnnualSpring2000_Output_Adults, Input_Seeds = NaturalExoticAnnualSpring2000_Output_Seeds, Target = TargetHerbicideTargetSpring2000, Application = HerbicideTargetInterventionSpring2000_Application; HerbicideTargetExoticAnnualSpring2000_Output_Cover = Output_Cover, HerbicideTargetExoticAnnualSpring2000_Output_Dead = Output_Dead, HerbicideTargetExoticAnnualSpring2000_Output_Adults = Output_Adults, HerbicideTargetExoticAnnualSpring2000_Output_Seeds = Output_Seeds)
+    {
+    }
+
+    instance HerbicideTargetNeedleSpring2000 : NeedleHerbicideTarget (Input_Seeds = NaturalNeedleSpring2000_Output_Seeds, Input_Seedlings = BurnNeedleSpring2000_Output_Seedlings, Input_Basal = BurnNeedleSpring2000_Output_Basal, Input_Cover = BurnNeedleSpring2000_Output_Cover, Input_Dead = BurnNeedleSpring2000_Output_Dead, Target = TargetHerbicideTargetSpring2000, Application = HerbicideTargetInterventionSpring2000_Application; HerbicideTargetNeedleSpring2000_Output_Cover = Output_Cover, HerbicideTargetNeedleSpring2000_Output_Basal = Output_Basal, HerbicideTargetNeedleSpring2000_Output_Seedlings = Output_Seedlings, HerbicideTargetNeedleSpring2000_Output_Seeds = Output_Seeds, HerbicideTargetNeedleSpring2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance HerbicideTargetSTSpring2000 : STHerbicideTarget (Input_Seeds = NaturalSTSpring2000_Output_Seeds, Input_Seedlings = BurnSTSpring2000_Output_Seedlings, Input_Basal = BurnSTSpring2000_Output_Basal, Input_Cover = BurnSTSpring2000_Output_Cover, Input_Dead = BurnSTSpring2000_Output_Dead, Target = TargetHerbicideTargetSpring2000, Application = HerbicideTargetInterventionSpring2000_Application; HerbicideTargetSTSpring2000_Output_Cover = Output_Cover, HerbicideTargetSTSpring2000_Output_Basal = Output_Basal, HerbicideTargetSTSpring2000_Output_Seedlings = Output_Seedlings, HerbicideTargetSTSpring2000_Output_Seeds = Output_Seeds, HerbicideTargetSTSpring2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance HerbicideTargetWallabySpring2000 : WallabyHerbicideTarget (Input_Seeds = NaturalWallabySpring2000_Output_Seeds, Input_Seedlings = Wallaby_Seedlings, Input_Basal = BurnWallabySpring2000_Output_Basal, Input_Cover = BurnWallabySpring2000_Output_Cover, Input_Dead = BurnWallabySpring2000_Output_Dead, Target = TargetHerbicideTargetSpring2000, Application = HerbicideTargetInterventionSpring2000_Application; HerbicideTargetWallabySpring2000_Output_Cover = Output_Cover, HerbicideTargetWallabySpring2000_Output_Basal = Output_Basal, HerbicideTargetWallabySpring2000_Output_Seedlings = Output_Seedlings, HerbicideTargetWallabySpring2000_Output_Seeds = Output_Seeds, HerbicideTargetWallabySpring2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance HerbicideTargetSpearSpring2000 : SpearHerbicideTarget (Input_Seeds = NaturalSpearSpring2000_Output_Seeds, Input_Seedlings = Spear_Seedlings, Input_Basal = BurnSpearSpring2000_Output_Basal, Input_Cover = BurnSpearSpring2000_Output_Cover, Input_Dead = BurnSpearSpring2000_Output_Dead, Target = TargetHerbicideTargetSpring2000, Application = HerbicideTargetInterventionSpring2000_Application; HerbicideTargetSpearSpring2000_Output_Cover = Output_Cover, HerbicideTargetSpearSpring2000_Output_Basal = Output_Basal, HerbicideTargetSpearSpring2000_Output_Seedlings = Output_Seedlings, HerbicideTargetSpearSpring2000_Output_Seeds = Output_Seeds, HerbicideTargetSpearSpring2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance HerbicideTargetWindmillSpring2000 : WindmillHerbicideTarget (Input_Seeds = NaturalWindmillSpring2000_Output_Seeds, Input_Seedlings = Windmill_Seedlings, Input_Basal = BurnWindmillSpring2000_Output_Basal, Input_Cover = BurnWindmillSpring2000_Output_Cover, Input_Dead = BurnWindmillSpring2000_Output_Dead, Target = TargetHerbicideTargetSpring2000, Application = HerbicideTargetInterventionSpring2000_Application; HerbicideTargetWindmillSpring2000_Output_Cover = Output_Cover, HerbicideTargetWindmillSpring2000_Output_Basal = Output_Basal, HerbicideTargetWindmillSpring2000_Output_Seedlings = Output_Seedlings, HerbicideTargetWindmillSpring2000_Output_Seeds = Output_Seeds, HerbicideTargetWindmillSpring2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance HerbicideTargetRedLegSpring2000 : RedLegHerbicideTarget (Input_Seeds = NaturalRedLegSpring2000_Output_Seeds, Input_Seedlings = BurnRedLegSpring2000_Output_Seedlings, Input_Basal = BurnRedLegSpring2000_Output_Basal, Input_Cover = BurnRedLegSpring2000_Output_Cover, Input_Dead = BurnRedLegSpring2000_Output_Dead, Target = TargetHerbicideTargetSpring2000, Application = HerbicideTargetInterventionSpring2000_Application; HerbicideTargetRedLegSpring2000_Output_Cover = Output_Cover, HerbicideTargetRedLegSpring2000_Output_Basal = Output_Basal, HerbicideTargetRedLegSpring2000_Output_Seedlings = Output_Seedlings, HerbicideTargetRedLegSpring2000_Output_Seeds = Output_Seeds, HerbicideTargetRedLegSpring2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance HerbicideTargetThemedaSpring2000 : ThemedaHerbicideTarget (Input_Seeds = NaturalThemedaSpring2000_Output_Seeds, Input_Seedlings = BurnThemedaSpring2000_Output_Seedlings, Input_Basal = BurnThemedaSpring2000_Output_Basal, Input_Cover = BurnThemedaSpring2000_Output_Cover, Input_Dead = BurnThemedaSpring2000_Output_Dead, Target = TargetHerbicideTargetSpring2000, Application = HerbicideTargetInterventionSpring2000_Application; HerbicideTargetThemedaSpring2000_Output_Cover = Output_Cover, HerbicideTargetThemedaSpring2000_Output_Basal = Output_Basal, HerbicideTargetThemedaSpring2000_Output_Seedlings = Output_Seedlings, HerbicideTargetThemedaSpring2000_Output_Seeds = Output_Seeds, HerbicideTargetThemedaSpring2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance HerbicideTargetInterventionSpring2000 : HerbicideInterventionTarget (Blanket_Cover = BurnBlanketSpring2000_Output_Cover, Needle_Cover = BurnNeedleSpring2000_Output_Cover, ST_Cover = BurnSTSpring2000_Output_Cover, BroadWeeds_Cover = BurnBroadWeedsSpring2000_Output_Cover, HerbicideStrategy = HerbicideStrategyHerbicideTargetSpring2000, Target = TargetHerbicideTargetSpring2000; HerbicideTargetInterventionSpring2000_HerbicideCost = HerbicideCost, HerbicideTargetInterventionSpring2000_Application = Application)
+    {
+    }
+
+    instance BurnNutrientSpring2000 : NutrientFire (Input_Phosphorous = NaturalNutrientSpring2000_Output_Phosphorous, Input_Nitrogen = NaturalNutrientSpring2000_Output_Nitrogen, Input_Carbon = NaturalNutrientSpring2000_Output_Carbon, Burn = BurnInterventionSpring2000_Burn, NUI = BurnNUISpring2000_NUI; BurnNutrientSpring2000_Output_Nitrogen = Output_Nitrogen, BurnNutrientSpring2000_Output_Phosphorous = Output_Phosphorous, BurnNutrientSpring2000_NL = NL, BurnNutrientSpring2000_Output_Carbon = Output_Carbon)
+    {
+    }
+
+    instance BurnNUISpring2000 : NuiAdder (Windmill_NUI = BurnWindmillSpring2000_Output_NUI, BroadWeeds_NUI = BurnBroadWeedsSpring2000_Output_NUI, HardyNative_NUI = BurnHardyNativeSpring2000_Output_NUI, Spear_NUI = BurnSpearSpring2000_Output_NUI, ST_NUI = BurnSTSpring2000_Output_NUI, Wallaby_NUI = BurnWallabySpring2000_Output_NUI, SensitNative_NUI = BurnSensitNativeSpring2000_Output_NUI, Grain_NUI = BurnGrainSpring2000_Output_NUI, Onion_NUI = BurnOnionSpring2000_Output_NUI, ExoticAnnual_NUI = BurnExoticAnnualSpring2000_Output_NUI, Needle_NUI = BurnNeedleSpring2000_Output_NUI, Themeda_NUI = BurnThemedaSpring2000_Output_NUI, Blanket_NUI = BurnBlanketSpring2000_Output_NUI, RedLeg_NUI = BurnRedLegSpring2000_Output_NUI, Ruderals_NUI = BurnRuderalsSpring2000_Output_NUI; BurnNUISpring2000_NUI = NUI)
+    {
+    }
+
+    instance BurnOnionSpring2000 : TolerantFire (Input_Cover = NaturalOnionSpring2000_Output_Cover, Input_Dead = NaturalOnionSpring2000_Output_Dead, Input_Basal = NaturalOnionSpring2000_Output_Basal, Input_Seedlings = Onion_Seedlings, Burn = BurnInterventionSpring2000_Burn; BurnOnionSpring2000_Output_NUI = Output_NUI, BurnOnionSpring2000_Output_Dead = Output_Dead, BurnOnionSpring2000_Output_Seedlings = Output_Seedlings, BurnOnionSpring2000_Output_Basal = Output_Basal, BurnOnionSpring2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnBroadWeedsSpring2000 : TolerantFire (Input_Cover = NaturalBroadWeedsSpring2000_Output_Cover, Input_Dead = NaturalBroadWeedsSpring2000_Output_Dead, Input_Basal = NaturalBroadWeedsSpring2000_Output_Basal, Input_Seedlings = BroadWeeds_Seedlings, Burn = BurnInterventionSpring2000_Burn; BurnBroadWeedsSpring2000_Output_NUI = Output_NUI, BurnBroadWeedsSpring2000_Output_Dead = Output_Dead, BurnBroadWeedsSpring2000_Output_Seedlings = Output_Seedlings, BurnBroadWeedsSpring2000_Output_Basal = Output_Basal, BurnBroadWeedsSpring2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnBlanketSpring2000 : KilledFire3 (Input_Adults = NaturalBlanketSpring2000_Output_Adults, Burn = BurnInterventionSpring2000_Burn, Input_Dead = NaturalBlanketSpring2000_Output_Dead, Input_Cover = NaturalBlanketSpring2000_Output_Cover; BurnBlanketSpring2000_Output_Adults = Output_Adults, BurnBlanketSpring2000_Output_Cover = Output_Cover, BurnBlanketSpring2000_Output_Dead = Output_Dead, BurnBlanketSpring2000_Output_NUI = Output_NUI)
+    {
+    }
+
+    instance BurnRuderalsSpring2000 : TolerantFire (Input_Cover = NaturalRuderalsSpring2000_Output_Cover, Input_Dead = NaturalRuderalsSpring2000_Output_Dead, Input_Basal = NaturalRuderalsSpring2000_Output_Basal, Input_Seedlings = Ruderals_Seedlings, Burn = BurnInterventionSpring2000_Burn; BurnRuderalsSpring2000_Output_NUI = Output_NUI, BurnRuderalsSpring2000_Output_Dead = Output_Dead, BurnRuderalsSpring2000_Output_Seedlings = Output_Seedlings, BurnRuderalsSpring2000_Output_Basal = Output_Basal, BurnRuderalsSpring2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnHardyNativeSpring2000 : TolerantFire (Input_Cover = NaturalHardyNativeSpring2000_Output_Cover, Input_Dead = NaturalHardyNativeSpring2000_Output_Dead, Input_Basal = NaturalHardyNativeSpring2000_Output_Basal, Input_Seedlings = HardyNative_Seedlings, Burn = BurnInterventionSpring2000_Burn; BurnHardyNativeSpring2000_Output_NUI = Output_NUI, BurnHardyNativeSpring2000_Output_Dead = Output_Dead, BurnHardyNativeSpring2000_Output_Seedlings = Output_Seedlings, BurnHardyNativeSpring2000_Output_Basal = Output_Basal, BurnHardyNativeSpring2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnSensitNativeSpring2000 : TolerantFire (Input_Cover = NaturalSensitNativeSpring2000_Output_Cover, Input_Dead = NaturalSensitNativeSpring2000_Output_Dead, Input_Basal = NaturalSensitNativeSpring2000_Output_Basal, Input_Seedlings = SensitNative_Seedlings, Burn = BurnInterventionSpring2000_Burn; BurnSensitNativeSpring2000_Output_NUI = Output_NUI, BurnSensitNativeSpring2000_Output_Dead = Output_Dead, BurnSensitNativeSpring2000_Output_Seedlings = Output_Seedlings, BurnSensitNativeSpring2000_Output_Basal = Output_Basal, BurnSensitNativeSpring2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnGrainSpring2000 : KilledFire2 (Input_Cover = NaturalGrainSpring2000_Output_Cover, Input_Dead = NaturalGrainSpring2000_Output_Dead, Burn = BurnInterventionSpring2000_Burn, Input_Adults = NaturalGrainSpring2000_Output_Adults; BurnGrainSpring2000_Output_NUI = Output_NUI, BurnGrainSpring2000_Output_Dead = Output_Dead, BurnGrainSpring2000_Output_Cover = Output_Cover, BurnGrainSpring2000_Output_Adults = Output_Adults)
+    {
+    }
+
+    instance BurnExoticAnnualSpring2000 : KilledFire1 (Input_Cover = NaturalExoticAnnualSpring2000_Output_Cover, Input_Dead = NaturalExoticAnnualSpring2000_Output_Dead, Burn = BurnInterventionSpring2000_Burn, Input_Adults = NaturalExoticAnnualSpring2000_Output_Adults; BurnExoticAnnualSpring2000_Output_NUI = Output_NUI, BurnExoticAnnualSpring2000_Output_Dead = Output_Dead, BurnExoticAnnualSpring2000_Output_Cover = Output_Cover, BurnExoticAnnualSpring2000_Output_Adults = Output_Adults)
+    {
+    }
+
+    instance BurnNeedleSpring2000 : TolerantFire (Input_Cover = NaturalNeedleSpring2000_Output_Cover, Input_Dead = NaturalNeedleSpring2000_Output_Dead, Input_Basal = NaturalNeedleSpring2000_Output_Basal, Input_Seedlings = Needle_Seedlings, Burn = BurnInterventionSpring2000_Burn; BurnNeedleSpring2000_Output_NUI = Output_NUI, BurnNeedleSpring2000_Output_Dead = Output_Dead, BurnNeedleSpring2000_Output_Seedlings = Output_Seedlings, BurnNeedleSpring2000_Output_Basal = Output_Basal, BurnNeedleSpring2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnSTSpring2000 : TolerantFire (Input_Cover = NaturalSTSpring2000_Output_Cover, Input_Dead = NaturalSTSpring2000_Output_Dead, Input_Basal = NaturalSTSpring2000_Output_Basal, Input_Seedlings = ST_Seedlings, Burn = BurnInterventionSpring2000_Burn; BurnSTSpring2000_Output_NUI = Output_NUI, BurnSTSpring2000_Output_Dead = Output_Dead, BurnSTSpring2000_Output_Seedlings = Output_Seedlings, BurnSTSpring2000_Output_Basal = Output_Basal, BurnSTSpring2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnWallabySpring2000 : ModerateFire (Input_Cover = NaturalWallabySpring2000_Output_Cover, Input_Dead = NaturalWallabySpring2000_Output_Dead, Input_Basal = NaturalWallabySpring2000_Output_Basal, Burn = BurnInterventionSpring2000_Burn; BurnWallabySpring2000_Output_NUI = Output_NUI, BurnWallabySpring2000_Output_Dead = Output_Dead, BurnWallabySpring2000_Output_Basal = Output_Basal, BurnWallabySpring2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnSpearSpring2000 : SensitiveFire (Input_Cover = NaturalSpearSpring2000_Output_Cover, Input_Dead = NaturalSpearSpring2000_Output_Dead, Input_Basal = NaturalSpearSpring2000_Output_Basal, Burn = BurnInterventionSpring2000_Burn; BurnSpearSpring2000_Output_NUI = Output_NUI, BurnSpearSpring2000_Output_Dead = Output_Dead, BurnSpearSpring2000_Output_Basal = Output_Basal, BurnSpearSpring2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnWindmillSpring2000 : ModerateFire (Input_Cover = NaturalWindmillSpring2000_Output_Cover, Input_Dead = NaturalWindmillSpring2000_Output_Dead, Input_Basal = NaturalWindmillSpring2000_Output_Basal, Burn = BurnInterventionSpring2000_Burn; BurnWindmillSpring2000_Output_NUI = Output_NUI, BurnWindmillSpring2000_Output_Dead = Output_Dead, BurnWindmillSpring2000_Output_Basal = Output_Basal, BurnWindmillSpring2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnRedLegSpring2000 : TolerantFire (Input_Cover = NaturalRedLegSpring2000_Output_Cover, Input_Dead = NaturalRedLegSpring2000_Output_Dead, Input_Basal = NaturalRedLegSpring2000_Output_Basal, Input_Seedlings = RedLeg_Seedlings, Burn = BurnInterventionSpring2000_Burn; BurnRedLegSpring2000_Output_NUI = Output_NUI, BurnRedLegSpring2000_Output_Dead = Output_Dead, BurnRedLegSpring2000_Output_Seedlings = Output_Seedlings, BurnRedLegSpring2000_Output_Basal = Output_Basal, BurnRedLegSpring2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnThemedaSpring2000 : TolerantFire (Input_Cover = NaturalThemedaSpring2000_Output_Cover, Input_Dead = NaturalThemedaSpring2000_Output_Dead, Input_Basal = NaturalThemedaSpring2000_Output_Basal, Input_Seedlings = NaturalThemedaSpring2000_Output_Seedlings, Burn = BurnInterventionSpring2000_Burn; BurnThemedaSpring2000_Output_NUI = Output_NUI, BurnThemedaSpring2000_Output_Dead = Output_Dead, BurnThemedaSpring2000_Output_Seedlings = Output_Seedlings, BurnThemedaSpring2000_Output_Basal = Output_Basal, BurnThemedaSpring2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance BurnInterventionSpring2000 : BurnIntervention (Season = Spring2000, BD = BD, TBio = BurnBiomass1Spring2000_TBio, BurnStrategy = BurnStrategyBurnSpring2000, BBio = BurnBiomass1Spring2000_BBio, LBio = BurnBiomass1Spring2000_LBio, Scale = Scale; BurnInterventionSpring2000_Burn = Burn, BurnInterventionSpring2000_BurnCost = BurnCost)
+    {
+    }
+
+    instance BurnBiomass1Spring2000 : BiomassSummaries (HardyNative_Cover = NaturalHardyNativeSpring2000_Output_Cover, Grain_Cover = NaturalGrainSpring2000_Output_Cover, BroadWeeds_Cover = NaturalBroadWeedsSpring2000_Output_Cover, SensitNative_Cover = NaturalSensitNativeSpring2000_Output_Cover, RedLeg_Cover = NaturalRedLegSpring2000_Output_Cover, Windmill_Cover = NaturalWindmillSpring2000_Output_Cover, Wallaby_Cover = NaturalWallabySpring2000_Output_Cover, Ruderals_Cover = NaturalRuderalsSpring2000_Output_Cover, ST_Cover = NaturalSTSpring2000_Output_Cover, Spear_Cover = NaturalSpearSpring2000_Output_Cover, Needle_Cover = NaturalNeedleSpring2000_Output_Cover, Themeda_Cover = NaturalThemedaSpring2000_Output_Cover, Onion_Cover = NaturalOnionSpring2000_Output_Cover, Blanket_Cover = NaturalBlanketSpring2000_Output_Cover, ExoticAnnual_Cover = NaturalExoticAnnualSpring2000_Output_Cover, Themeda_Dead = NaturalThemedaSpring2000_Output_Dead, RedLeg_Dead = NaturalRedLegSpring2000_Output_Dead, Needle_Dead = NaturalNeedleSpring2000_Output_Dead, Wallaby_Dead = NaturalWallabySpring2000_Output_Dead, Blanket_Dead = NaturalBlanketSpring2000_Output_Dead, Windmill_Dead = NaturalWindmillSpring2000_Output_Dead, ST_Dead = NaturalSTSpring2000_Output_Dead, Spear_Dead = NaturalSpearSpring2000_Output_Dead, Grain_Dead = NaturalGrainSpring2000_Output_Dead, Onion_Dead = NaturalOnionSpring2000_Output_Dead, ExoticAnnual_Dead = NaturalExoticAnnualSpring2000_Output_Dead, HardyNative_Dead = NaturalHardyNativeSpring2000_Output_Dead, Ruderals_Dead = NaturalRuderalsSpring2000_Output_Dead, SensitNative_Dead = NaturalSensitNativeSpring2000_Output_Dead, BroadWeeds_Dead = NaturalBroadWeedsSpring2000_Output_Dead, Windmill_Basal = NaturalWindmillSpring2000_Output_Basal, SensitNative_Basal = NaturalSensitNativeSpring2000_Output_Basal, Spear_Basal = NaturalSpearSpring2000_Output_Basal, Themeda_Basal = NaturalThemedaSpring2000_Output_Basal, Onion_Basal = NaturalOnionSpring2000_Output_Basal, ST_Basal = NaturalSTSpring2000_Output_Basal, Wallaby_Basal = NaturalWallabySpring2000_Output_Basal, HardyNative_Basal = NaturalHardyNativeSpring2000_Output_Basal, Ruderals_Basal = NaturalRuderalsSpring2000_Output_Basal, BroadWeeds_Basal = NaturalBroadWeedsSpring2000_Output_Basal, RedLeg_Basal = NaturalRedLegSpring2000_Output_Basal, Needle_Basal = NaturalNeedleSpring2000_Output_Basal, Season = Spring2000, NL = NaturalNutrientSpring2000_NL; BurnBiomass1Spring2000_LBio = LBio, BurnBiomass1Spring2000_DBio = DBio, BurnBiomass1Spring2000_BBio = BBio, BurnBiomass1Spring2000_TBio = TBio, BurnBiomass1Spring2000_HPalC = HPalC, BurnBiomass1Spring2000_MPalC = MPalC, BurnBiomass1Spring2000_LPalC = LPalC, BurnBiomass1Spring2000_VLPalC = VLPalC, BurnBiomass1Spring2000_HPalS = HPalS, BurnBiomass1Spring2000_MPalS = MPalS, BurnBiomass1Spring2000_LPalS = LPalS, BurnBiomass1Spring2000_VLPalS = VLPalS, BurnBiomass1Spring2000_WComp = WComp, BurnBiomass1Spring2000_MComp = MComp, BurnBiomass1Spring2000_SComp = SComp, BurnBiomass1Spring2000_VSComp = VSComp)
+    {
+    }
+
+    instance NaturalNutrientSpring2000 : NutrientNatural (Input_Phosphorous = Nutrient_Phosphorous, Input_Nitrogen = Nutrient_Nitrogen, Input_Carbon = Nutrient_Carbon, NUI = NaturalNUISpring2000_NUI; NaturalNutrientSpring2000_Output_Nitrogen = Output_Nitrogen, NaturalNutrientSpring2000_Output_Phosphorous = Output_Phosphorous, NaturalNutrientSpring2000_NL = NL, NaturalNutrientSpring2000_Output_Carbon = Output_Carbon)
+    {
+    }
+
+    instance NaturalNUISpring2000 : NuiAdder (Windmill_NUI = NaturalWindmillSpring2000_Output_NUI, BroadWeeds_NUI = NaturalBroadWeedsSpring2000_Output_NUI, HardyNative_NUI = NaturalHardyNativeSpring2000_Output_NUI, Spear_NUI = NaturalSpearSpring2000_Output_NUI, ST_NUI = NaturalSTSpring2000_Output_NUI, Wallaby_NUI = NaturalWallabySpring2000_Output_NUI, SensitNative_NUI = NaturalSensitNativeSpring2000_Output_NUI, Grain_NUI = NaturalGrainSpring2000_Output_NUI, Onion_NUI = NaturalOnionSpring2000_Output_NUI, ExoticAnnual_NUI = NaturalExoticAnnualSpring2000_Output_NUI, Needle_NUI = NaturalNeedleSpring2000_Output_NUI, Themeda_NUI = NaturalThemedaSpring2000_Output_NUI, Blanket_NUI = NaturalBlanketSpring2000_Output_NUI, RedLeg_NUI = NaturalRedLegSpring2000_Output_NUI, Ruderals_NUI = NaturalRuderalsSpring2000_Output_NUI; NaturalNUISpring2000_NUI = NUI)
+    {
+    }
+
+    instance NaturalOnionSpring2000 : OnionNatural (Input_Cover = Onion_Cover, Input_Dead = Onion_Dead, Input_Seeds = Onion_Seeds, Input_Basal = Onion_Basal, CompSum = NaturalBiomass2Spring2000_CompSum, Season = Spring2000, NL = NL; NaturalOnionSpring2000_Output_Dead = Output_Dead, NaturalOnionSpring2000_Output_Cover = Output_Cover, NaturalOnionSpring2000_Output_Basal = Output_Basal, NaturalOnionSpring2000_Output_Seeds = Output_Seeds, NaturalOnionSpring2000_Output_NUI = Output_NUI)
+    {
+    }
+
+    instance NaturalBroadWeedsSpring2000 : BroadWeedsNatural (NL = NL, Season = Spring2000, CompSum = NaturalBiomass2Spring2000_CompSum, Input_Basal = BroadWeeds_Basal, Input_Seeds = BroadWeeds_Seeds, Input_Dead = BroadWeeds_Dead, Input_Cover = BroadWeeds_Cover; NaturalBroadWeedsSpring2000_Output_NUI = Output_NUI, NaturalBroadWeedsSpring2000_Output_Seeds = Output_Seeds, NaturalBroadWeedsSpring2000_Output_Basal = Output_Basal, NaturalBroadWeedsSpring2000_Output_Cover = Output_Cover, NaturalBroadWeedsSpring2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance NaturalBlanketSpring2000 : BlanketNatural (NL = NL, Season = Spring2000, CompSum = NaturalBiomass2Spring2000_CompSum, Input_Seeds = Blanket_Seeds, Input_Dead = Blanket_Dead, Input_Cover = Blanket_Cover, Input_Adults = Blanket_Adults; NaturalBlanketSpring2000_Output_NUI = Output_NUI, NaturalBlanketSpring2000_Output_Seeds = Output_Seeds, NaturalBlanketSpring2000_Output_Cover = Output_Cover, NaturalBlanketSpring2000_Output_Dead = Output_Dead, NaturalBlanketSpring2000_Output_Adults = Output_Adults)
+    {
+    }
+
+    instance NaturalRuderalsSpring2000 : RuderNatural (Season = Spring2000, NL = NL, Input_Dead = Ruderals_Dead, Input_Cover = Ruderals_Cover, Input_Basal = Ruderals_Basal, CompSum = NaturalBiomass2Spring2000_CompSum; NaturalRuderalsSpring2000_Output_Cover = Output_Cover, NaturalRuderalsSpring2000_Output_Basal = Output_Basal, NaturalRuderalsSpring2000_Output_Dead = Output_Dead, NaturalRuderalsSpring2000_Output_NUI = Output_NUI)
+    {
+    }
+
+    instance NaturalHardyNativeSpring2000 : HardyNativeNatural (Input_Basal = HardyNative_Basal, Input_Cover = HardyNative_Cover, Input_Dead = HardyNative_Dead, Input_Seeds = HardyNative_Seeds, NL = NL, Season = Spring2000, CompSum = NaturalBiomass2Spring2000_CompSum; NaturalHardyNativeSpring2000_Output_Seeds = Output_Seeds, NaturalHardyNativeSpring2000_Output_Cover = Output_Cover, NaturalHardyNativeSpring2000_Output_Dead = Output_Dead, NaturalHardyNativeSpring2000_Output_NUI = Output_NUI, NaturalHardyNativeSpring2000_Output_Basal = Output_Basal)
+    {
+    }
+
+    instance NaturalSensitNativeSpring2000 : SensitNativeNatural (CompSum = NaturalBiomass2Spring2000_CompSum, Input_Basal = SensitNative_Basal, Input_Cover = SensitNative_Cover, Input_Dead = SensitNative_Dead, NL = NL, Season = Spring2000; NaturalSensitNativeSpring2000_Output_NUI = Output_NUI, NaturalSensitNativeSpring2000_Output_Dead = Output_Dead, NaturalSensitNativeSpring2000_Output_Basal = Output_Basal, NaturalSensitNativeSpring2000_Output_Cover = Output_Cover)
+    {
+    }
+
+    instance NaturalGrainSpring2000 : GrainNatural (CompSum = NaturalBiomass2Spring2000_CompSum, NL = NL, Season = Spring2000, Input_Seeds = Grain_Seeds, Input_Adults = Grain_Adults, Input_Dead = Grain_Dead, Input_Cover = Grain_Cover; NaturalGrainSpring2000_Output_Cover = Output_Cover, NaturalGrainSpring2000_Output_Adults = Output_Adults, NaturalGrainSpring2000_Output_Seeds = Output_Seeds, NaturalGrainSpring2000_Output_NUI = Output_NUI, NaturalGrainSpring2000_Output_Dead = Output_Dead)
+    {
+    }
+
+    instance NaturalExoticAnnualSpring2000 : ExoticAnnualNatural (CompSum = NaturalBiomass2Spring2000_CompSum, Input_Seeds = ExoticAnnual_Seeds, NL = NL, Season = Spring2000, Input_Adults = ExoticAnnual_Adults, Input_Dead = ExoticAnnual_Dead, Input_Cover = ExoticAnnual_Cover; NaturalExoticAnnualSpring2000_Output_Seeds = Output_Seeds, NaturalExoticAnnualSpring2000_Output_Adults = Output_Adults, NaturalExoticAnnualSpring2000_Output_Cover = Output_Cover, NaturalExoticAnnualSpring2000_Output_Dead = Output_Dead, NaturalExoticAnnualSpring2000_Output_NUI = Output_NUI)
+    {
+    }
+
+    instance NaturalNeedleSpring2000 : NeedleNatural (CompSum = NaturalBiomass2Spring2000_CompSum, Input_Seeds = Needle_Seeds, Season = Spring2000, Input_Dead = Needle_Dead, Input_Cover = Needle_Cover, Input_Basal = Needle_Basal, NL = NL; NaturalNeedleSpring2000_Output_Basal = Output_Basal, NaturalNeedleSpring2000_Output_NUI = Output_NUI, NaturalNeedleSpring2000_Output_Dead = Output_Dead, NaturalNeedleSpring2000_Output_Cover = Output_Cover, NaturalNeedleSpring2000_Output_Seeds = Output_Seeds)
+    {
+    }
+
+    instance NaturalSTSpring2000 : STNatural (NL = NL, Input_Basal = ST_Basal, Input_Cover = ST_Cover, Input_Dead = ST_Dead, Season = Spring2000, Input_Seeds = ST_Seeds, CompSum = NaturalBiomass2Spring2000_CompSum; NaturalSTSpring2000_Output_Seeds = Output_Seeds, NaturalSTSpring2000_Output_Cover = Output_Cover, NaturalSTSpring2000_Output_Dead = Output_Dead, NaturalSTSpring2000_Output_NUI = Output_NUI, NaturalSTSpring2000_Output_Basal = Output_Basal)
+    {
+    }
+
+    instance NaturalWallabySpring2000 : WallabyNatural (NL = NL, Input_Basal = Wallaby_Basal, Input_Cover = Wallaby_Cover, Input_Dead = Wallaby_Dead, Season = Spring2000, Input_Seeds = Wallaby_Seeds, CompSum = NaturalBiomass2Spring2000_CompSum; NaturalWallabySpring2000_Output_Seeds = Output_Seeds, NaturalWallabySpring2000_Output_Cover = Output_Cover, NaturalWallabySpring2000_Output_Dead = Output_Dead, NaturalWallabySpring2000_Output_NUI = Output_NUI, NaturalWallabySpring2000_Output_Basal = Output_Basal)
+    {
+    }
+
+    instance NaturalSpearSpring2000 : SpearNatural (CompSum = NaturalBiomass2Spring2000_CompSum, Season = Spring2000, NL = NL, Input_Seeds = Spear_Seeds, Input_Dead = Spear_Dead, Input_Cover = Spear_Cover, Input_Basal = Spear_Basal; NaturalSpearSpring2000_Output_Basal = Output_Basal, NaturalSpearSpring2000_Output_Cover = Output_Cover, NaturalSpearSpring2000_Output_Seeds = Output_Seeds, NaturalSpearSpring2000_Output_Dead = Output_Dead, NaturalSpearSpring2000_Output_NUI = Output_NUI)
+    {
+    }
+
+    instance NaturalWindmillSpring2000 : WindmillNatural (Input_Seeds = Windmill_Seeds, Input_Dead = Windmill_Dead, Input_Cover = Windmill_Cover, Input_Basal = Windmill_Basal, NL = NL, CompSum = NaturalBiomass2Spring2000_CompSum, Season = Spring2000; NaturalWindmillSpring2000_Output_Basal = Output_Basal, NaturalWindmillSpring2000_Output_Dead = Output_Dead, NaturalWindmillSpring2000_Output_Seeds = Output_Seeds, NaturalWindmillSpring2000_Output_Cover = Output_Cover, NaturalWindmillSpring2000_Output_NUI = Output_NUI)
+    {
+    }
+
+    instance NaturalRedLegSpring2000 : RedLegNatural (CompSum = NaturalBiomass2Spring2000_CompSum, Season = Spring2000, NL = NL, Input_Seeds = RedLeg_Seeds, Input_Dead = RedLeg_Dead, Input_Cover = RedLeg_Cover, Input_Basal = RedLeg_Basal; NaturalRedLegSpring2000_Output_Basal = Output_Basal, NaturalRedLegSpring2000_Output_NUI = Output_NUI, NaturalRedLegSpring2000_Output_Dead = Output_Dead, NaturalRedLegSpring2000_Output_Cover = Output_Cover, NaturalRedLegSpring2000_Output_Seeds = Output_Seeds)
+    {
+    }
+
+    instance NaturalThemedaSpring2000 : ThemedaNatural (Input_Dead = Themeda_Dead, Input_Cover = Themeda_Cover, Soil_Friability = Soil_Friability, SoilTemperature = NaturalSoilSpring2000_SoilTemperature, Input_Basal = Themeda_Basal, Season = Spring2000, Input_Seeds = Themeda_Seeds, SoilMoisture = NaturalSoilSpring2000_SoilMoisture, Shade = NaturalSoilSpring2000_Shade, Input_Seedlings = Themeda_Seedlings, CompSum = NaturalBiomass2Spring2000_CompSum, NL = NL; NaturalThemedaSpring2000_Output_Basal = Output_Basal, NaturalThemedaSpring2000_Output_NUI = Output_NUI, NaturalThemedaSpring2000_Output_Dead = Output_Dead, NaturalThemedaSpring2000_Output_Cover = Output_Cover, NaturalThemedaSpring2000_Output_Seeds = Output_Seeds, NaturalThemedaSpring2000_Output_Seedlings = Output_Seedlings)
+    {
+    }
+
+    instance NaturalSoilSpring2000 : SoilNatural (Season = Spring2000, TBio = NaturalBiomass1Spring2000_TBio, LBio = NaturalBiomass1Spring2000_LBio; NaturalSoilSpring2000_SoilMoisture = SoilMoisture, NaturalSoilSpring2000_SoilTemperature = SoilTemperature, NaturalSoilSpring2000_Shade = Shade)
+    {
+    }
+
+    instance NaturalEnvValueSpring2000 : EnvValue (HardyNative_Cover = HardyNative_Cover, BroadWeeds_Cover = BroadWeeds_Cover, SensitNative_Cover = SensitNative_Cover, RedLeg_Cover = RedLeg_Cover, Windmill_Cover = Windmill_Cover, Wallaby_Cover = Wallaby_Cover, Ruderals_Cover = Ruderals_Cover, ST_Cover = ST_Cover, Spear_Cover = Spear_Cover, Needle_Cover = Needle_Cover, Themeda_Cover = Themeda_Cover, Onion_Cover = Onion_Cover, ExoticAnnual_Cover = ExoticAnnual_Cover, Blanket_Cover = Blanket_Cover, Grain_Cover = Grain_Cover, TBio = NaturalBiomass1Spring2000_TBio, DeRocked = DeRocked; NaturalEnvValueSpring2000_EnvironValue = EnvironValue)
+    {
+    }
+
+    instance NaturalBiomass2Spring2000 : BiomassNatural (WComp = NaturalBiomass1Spring2000_WComp, MComp = NaturalBiomass1Spring2000_MComp, SComp = NaturalBiomass1Spring2000_SComp, VSComp = NaturalBiomass1Spring2000_VSComp, VLPalC = NaturalBiomass1Spring2000_VLPalC, LPalC = NaturalBiomass1Spring2000_LPalC, MPalC = NaturalBiomass1Spring2000_MPalC, HPalC = NaturalBiomass1Spring2000_HPalC, VLPalS = NaturalBiomass1Spring2000_VLPalS, LPalS = NaturalBiomass1Spring2000_LPalS, MPalS = NaturalBiomass1Spring2000_MPalS, HPalS = NaturalBiomass1Spring2000_HPalS; NaturalBiomass2Spring2000_CompSum = CompSum, NaturalBiomass2Spring2000_PalSumCattle = PalSumCattle, NaturalBiomass2Spring2000_PalSumSheep = PalSumSheep)
+    {
+    }
+
+    instance NaturalBiomass1Spring2000 : BiomassSummaries (HardyNative_Cover = HardyNative_Cover, Grain_Cover = Grain_Cover, BroadWeeds_Cover = BroadWeeds_Cover, SensitNative_Cover = SensitNative_Cover, RedLeg_Cover = RedLeg_Cover, Windmill_Cover = Windmill_Cover, Wallaby_Cover = Wallaby_Cover, Ruderals_Cover = Ruderals_Cover, ST_Cover = ST_Cover, Spear_Cover = Spear_Cover, Needle_Cover = Needle_Cover, Themeda_Cover = Themeda_Cover, Onion_Cover = Onion_Cover, Blanket_Cover = Blanket_Cover, ExoticAnnual_Cover = ExoticAnnual_Cover, Themeda_Dead = Themeda_Dead, RedLeg_Dead = RedLeg_Dead, Needle_Dead = Needle_Dead, Wallaby_Dead = Wallaby_Dead, Blanket_Dead = Blanket_Dead, Windmill_Dead = Windmill_Dead, ST_Dead = ST_Dead, Spear_Dead = Spear_Dead, Grain_Dead = Grain_Dead, Onion_Dead = Onion_Dead, ExoticAnnual_Dead = ExoticAnnual_Dead, HardyNative_Dead = HardyNative_Dead, Ruderals_Dead = Ruderals_Dead, SensitNative_Dead = SensitNative_Dead, BroadWeeds_Dead = BroadWeeds_Dead, Windmill_Basal = Windmill_Basal, SensitNative_Basal = SensitNative_Basal, Spear_Basal = Spear_Basal, Themeda_Basal = Themeda_Basal, Onion_Basal = Onion_Basal, ST_Basal = ST_Basal, Wallaby_Basal = Wallaby_Basal, HardyNative_Basal = HardyNative_Basal, Ruderals_Basal = Ruderals_Basal, BroadWeeds_Basal = BroadWeeds_Basal, RedLeg_Basal = RedLeg_Basal, Needle_Basal = Needle_Basal, Season = Spring2000, NL = NL; NaturalBiomass1Spring2000_LBio = LBio, NaturalBiomass1Spring2000_DBio = DBio, NaturalBiomass1Spring2000_BBio = BBio, NaturalBiomass1Spring2000_TBio = TBio, NaturalBiomass1Spring2000_HPalC = HPalC, NaturalBiomass1Spring2000_MPalC = MPalC, NaturalBiomass1Spring2000_LPalC = LPalC, NaturalBiomass1Spring2000_VLPalC = VLPalC, NaturalBiomass1Spring2000_HPalS = HPalS, NaturalBiomass1Spring2000_MPalS = MPalS, NaturalBiomass1Spring2000_LPalS = LPalS, NaturalBiomass1Spring2000_VLPalS = VLPalS, NaturalBiomass1Spring2000_WComp = WComp, NaturalBiomass1Spring2000_MComp = MComp, NaturalBiomass1Spring2000_SComp = SComp, NaturalBiomass1Spring2000_VSComp = VSComp)
+    {
+    }
+
+    potential (TargetHerbicideTargetWinter2000)
+    {
+	model_nodes = ();
+	model_data = ( "ST" );
+	data = ( 1 0 0 0 );
+    }
+
+    potential (HerbicideStrategyHerbicideTargetWinter2000)
+    {
+	model_nodes = ();
+	model_data = ( "Eradicate" );
+	data = ( 1 0 0 0 );
+    }
+
+    potential (BurnStrategyBurnWinter2000)
+    {
+	model_nodes = ();
+	model_data = ( Distribution (50, 0, 50) );
+	data = ( 0.5 0 0.5 );
+    }
+
+    potential (Winter2000)
+    {
+	model_nodes = ();
+	model_data = ( "Winter" );
+	data = ( 0 0 0 1 );
+    }
+
+    potential (DurationGrazeSheepAutumn2000)
+    {
+	model_nodes = ();
+	model_data = ( Distribution (50, 0, 50) );
+	data = ( 0.5 0 0.5 );
+    }
+
+    potential (BurnStrategyBurnAutumn2000)
+    {
+	model_nodes = ();
+	model_data = ( "None" );
+	data = ( 0 0 1 );
+    }
+
+    potential (Autumn2000)
+    {
+	model_nodes = ();
+	model_data = ( "Autumn" );
+	data = ( 0 0 1 0 );
+    }
+
+    potential (DurationGrazeCattleSummer2000)
+    {
+	model_nodes = ();
+	model_data = ( Distribution (50, 0, 50) );
+	data = ( 0.5 0 0.5 );
+    }
+
+    potential (Intervention_Fences)
+    {
+	model_nodes = ();
+	model_data = ( "No" );
+	data = ( 0 1 );
+    }
+
+    potential (BurnStrategyBurnSummer2000)
+    {
+	model_nodes = ();
+	model_data = ( "None" );
+	data = ( 0 0 1 );
+    }
+
+    potential (Summer2000)
+    {
+	model_nodes = ();
+	model_data = ( "Summer" );
+	data = ( 0 1 0 0 );
+    }
+
+    potential (Ruderals_Seeds)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (SensitNative_Seeds)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (Wallaby_Seedlings)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (Spear_Seedlings)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (Windmill_Seedlings)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (TargetHerbicideTargetSpring2000)
+    {
+	model_nodes = ();
+	model_data = ( "Needle" );
+	data = ( 0 1 0 0 );
+    }
+
+    potential (HerbicideStrategyHerbicideTargetSpring2000)
+    {
+	model_nodes = ();
+	model_data = ( "PermitHigh" );
+	data = ( 0 0 1 0 );
+    }
+
+    potential (Onion_Seedlings)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (BroadWeeds_Seedlings)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (Ruderals_Seedlings)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (HardyNative_Seedlings)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (SensitNative_Seedlings)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (Needle_Seedlings)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (ST_Seedlings)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (RedLeg_Seedlings)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (Scale)
+    {
+	model_nodes = ();
+	model_data = ( 4 );
+	data = ( 1 0 0 );
+    }
+
+    potential (BurnStrategyBurnSpring2000)
+    {
+	model_nodes = ();
+	model_data = ( Distribution (50, 0, 50) );
+	data = ( 0.5 0 0.5 );
+    }
+
+    potential (BD)
+    {
+	model_nodes = ();
+	model_data = ( "Medium" );
+	data = ( 0 1 0 );
+    }
+
+    potential (Nutrient_Carbon)
+    {
+	model_nodes = ();
+	model_data = ( "Natural" );
+	data = ( 0 1 );
+    }
+
+    potential (Nutrient_Nitrogen)
+    {
+	model_nodes = ();
+	model_data = ( 5 );
+	data = ( 0 0 0 0 0 1 );
+    }
+
+    potential (Nutrient_Phosphorous)
+    {
+	model_nodes = ();
+	model_data = ( 5 );
+	data = ( 0 0 0 0 0 1 );
+    }
+
+    potential (Onion_Seeds)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (BroadWeeds_Seeds)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (Blanket_Adults)
+    {
+	model_nodes = ();
+	model_data = ( 0.057 );
+	data = ( 0 1 0 0 0 0 );
+    }
+
+    potential (Blanket_Seeds)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (HardyNative_Seeds)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (Grain_Adults)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 );
+    }
+
+    potential (Grain_Seeds)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (ExoticAnnual_Adults)
+    {
+	model_nodes = ();
+	model_data = ( 54.12 );
+	data = ( 0 1 0 0 0 0 );
+    }
+
+    potential (ExoticAnnual_Seeds)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 );
+    }
+
+    potential (Needle_Seeds)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (ST_Seeds)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (Wallaby_Seeds)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (Spear_Seeds)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (Windmill_Seeds)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (RedLeg_Seeds)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (Themeda_Seedlings)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (Themeda_Seeds)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 );
+    }
+
+    potential (Soil_Friability)
+    {
+	model_nodes = ();
+	model_data = ( "Satisfactory" );
+	data = ( 0 1 0 );
+    }
+
+    potential (DeRocked)
+    {
+	model_nodes = ();
+	model_data = ( "No" );
+	data = ( 0 1 );
+    }
+
+    potential (NL)
+    {
+	model_nodes = ();
+	model_data = ( "Natural" );
+	data = ( 0 0 1 );
+    }
+
+    potential (Needle_Basal)
+    {
+	model_nodes = ();
+	model_data = ( 0.16 );
+	data = ( 0 1 0 0 0 0 0 );
+    }
+
+    potential (RedLeg_Basal)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 0 );
+    }
+
+    potential (BroadWeeds_Basal)
+    {
+	model_nodes = ();
+	model_data = ( 0.28 );
+	data = ( 0 1 0 0 0 0 0 );
+    }
+
+    potential (Ruderals_Basal)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 0 );
+    }
+
+    potential (HardyNative_Basal)
+    {
+	model_nodes = ();
+	model_data = ( 0.04 );
+	data = ( 0 1 0 0 0 0 0 );
+    }
+
+    potential (Wallaby_Basal)
+    {
+	model_nodes = ();
+	model_data = ( 2.36 );
+	data = ( 0 0 1 0 0 0 0 );
+    }
+
+    potential (ST_Basal)
+    {
+	model_nodes = ();
+	model_data = ( 0.64 );
+	data = ( 0 1 0 0 0 0 0 );
+    }
+
+    potential (Onion_Basal)
+    {
+	model_nodes = ();
+	model_data = ( 0.6 );
+	data = ( 0 1 0 0 0 0 0 );
+    }
+
+    potential (Themeda_Basal)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 0 );
+    }
+
+    potential (Spear_Basal)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 0 );
+    }
+
+    potential (SensitNative_Basal)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 0 );
+    }
+
+    potential (Windmill_Basal)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 0 );
+    }
+
+    potential (BroadWeeds_Dead)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 0 );
+    }
+
+    potential (SensitNative_Dead)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 0 );
+    }
+
+    potential (Ruderals_Dead)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 0 );
+    }
+
+    potential (HardyNative_Dead)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 0 );
+    }
+
+    potential (ExoticAnnual_Dead)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 0 );
+    }
+
+    potential (Onion_Dead)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 0 );
+    }
+
+    potential (Grain_Dead)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 0 );
+    }
+
+    potential (Spear_Dead)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 0 );
+    }
+
+    potential (ST_Dead)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 0 );
+    }
+
+    potential (Windmill_Dead)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 0 );
+    }
+
+    potential (Blanket_Dead)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 0 );
+    }
+
+    potential (Wallaby_Dead)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 0 );
+    }
+
+    potential (Needle_Dead)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 0 );
+    }
+
+    potential (RedLeg_Dead)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 0 );
+    }
+
+    potential (Themeda_Dead)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 0 );
+    }
+
+    potential (ExoticAnnual_Cover)
+    {
+	model_nodes = ();
+	model_data = ( 54.12 );
+	data = ( 0 0 0 0 0 1 0 );
+    }
+
+    potential (Blanket_Cover)
+    {
+	model_nodes = ();
+	model_data = ( 4.52 );
+	data = ( 0 0 1 0 0 0 0 );
+    }
+
+    potential (Onion_Cover)
+    {
+	model_nodes = ();
+	model_data = ( 13.36 );
+	data = ( 0 0 0 1 0 0 0 );
+    }
+
+    potential (Themeda_Cover)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 0 );
+    }
+
+    potential (Needle_Cover)
+    {
+	model_nodes = ();
+	model_data = ( 1.24 );
+	data = ( 0 0 1 0 0 0 0 );
+    }
+
+    potential (Spear_Cover)
+    {
+	model_nodes = ();
+	model_data = ( 0.16 );
+	data = ( 0 1 0 0 0 0 0 );
+    }
+
+    potential (ST_Cover)
+    {
+	model_nodes = ();
+	model_data = ( 5 );
+	data = ( 0 0 0 1 0 0 0 );
+    }
+
+    potential (Ruderals_Cover)
+    {
+	model_nodes = ();
+	model_data = ( 0.2 );
+	data = ( 0 1 0 0 0 0 0 );
+    }
+
+    potential (Wallaby_Cover)
+    {
+	model_nodes = ();
+	model_data = ( 8.76 );
+	data = ( 0 0 0 1 0 0 0 );
+    }
+
+    potential (Windmill_Cover)
+    {
+	model_nodes = ();
+	model_data = ( truncate (0, Normal (0.48, 0.1), 100) );
+	data = ( 0.00436476 0.942135 0.0535003 1.28407E-046 0 0 0 );
+    }
+
+    potential (RedLeg_Cover)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 0 );
+    }
+
+    potential (SensitNative_Cover)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 0 );
+    }
+
+    potential (BroadWeeds_Cover)
+    {
+	model_nodes = ();
+	model_data = ( 4.52 );
+	data = ( 0 0 1 0 0 0 0 );
+    }
+
+    potential (Grain_Cover)
+    {
+	model_nodes = ();
+	model_data = ( 0 );
+	data = ( 1 0 0 0 0 0 0 );
+    }
+
+    potential (HardyNative_Cover)
+    {
+	model_nodes = ();
+	model_data = ( 1.36 );
+	data = ( 0 0 1 0 0 0 0 );
+    }
+
+    potential (Spring2000)
+    {
+	model_nodes = ();
+	model_data = ( "Spring" );
+	data = ( 1 0 0 0 );
+    }
+} % class main

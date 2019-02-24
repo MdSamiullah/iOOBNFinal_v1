@@ -1,0 +1,10 @@
+Seed_No : New_Germ 
+Input_Basal : Output_Basal 
+SoilTemperature : Germ_Rate 
+New_Germ : Output_Basal 
+SowStrategy : Seed_No 
+SoilMoisture : Germ_Rate 
+Output_Basal : 
+Surv_Pro : Output_Basal 
+Shade : Surv_Pro 
+Germ_Rate : New_Germ 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iOOBN type=".class">
+	<node  id="2" name="Food" label="Food" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="3" name="Locale" label="Locale" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="4" name="Meat" label="Meat" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+	</node>
+</iOOBN>

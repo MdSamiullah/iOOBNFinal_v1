@@ -1,0 +1,420 @@
+class SensitiveNativeSow
+{
+    inputs = (SowStrategy Input_Basal Shade SoilMoisture SoilTemperature);
+    outputs = (Output_Basal);
+    node_size = (80 40);
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "1";
+    HR_Zoom_ZoomFactor = "100";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_DiscreteFunction = "5";
+    HR_Color_Function = "4";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Mean_Variance = "1";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "5";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "javax.swing.plaf.FontUIResource[family=Tahoma,name=Tahoma,style=plain,size=11]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+
+    node Seed_No
+    {
+	label = "No of Seeds";
+	position = (249 236);
+	states = ("37.5" "212.5" "450");
+	subtype = number;
+	state_values = (50 300 500);
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkMode = "[Output_Basal:0][New_Germ:0]";
+	HR_NodeSize = "(94, 59)";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_Group = "0";
+    }
+
+    node SoilTemperature
+    {
+	label = "Soil\nTemperature";
+	position = (271 55);
+	states = ("" "" "");
+	subtype = interval;
+	state_values = (0 20 40 50);
+	HR_LinkMode = "[GP:0][SP:0][C1:0][GermCond:0][Germ_Rate:0]";
+	HR_LinkControlPoints = "";
+	HR_State_2 = "";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_Group = "0";
+    }
+
+    node SoilMoisture
+    {
+	label = "Soil\nMoisture";
+	position = (154 55);
+	states = ("Adequate" "Inadequate");
+	HR_LinkMode = "[GP:0][SP:0][C1:0][GermCond:0][Germ_Rate:0]";
+	HR_LinkControlPoints = "";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_Group = "0";
+    }
+
+    node Shade
+    {
+	label = "Shade";
+	position = (467 37);
+	states = ("High" "Medium" "Low");
+	HR_LinkControlPoints = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_State_2 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_LinkMode = "[SoilMoisture:0][SoilTemperature:0][SP:0][Surv_Pro:0]";
+	HR_Group = "0";
+    }
+
+    node Surv_Pro
+    {
+	label = "Survival\nProportion ";
+	position = (566 158);
+	states = ("0 - 1" "1 - 2" "2 - 3" "3 - 4");
+	subtype = interval;
+	state_values = (0 0.1 0.3 0.5 1);
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkMode = "[Output_Basal:0]";
+	HR_NodeSize = "(88, 54)";
+	HR_Group = "0";
+    }
+
+    node Germ_Rate
+    {
+	label = "Germination\nRate";
+	position = (301 142);
+	states = ("0 - 1" "1 - 2" "" "");
+	subtype = interval;
+	state_values = (0 0.1 0.25 0.5 1);
+	HR_LinkControlPoints = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkMode = "[Output_Basal:0][New_Germ:0]";
+	HR_NodeSize = "(90, 54)";
+	HR_Group = "0";
+    }
+
+    node Input_Basal
+    {
+	label = "Input Basal \nArea";
+	position = (91 303);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkMode = "[C1:0][C3:0][C10:0][C11:0][Output_Basal:0][Prod_Seeds:0][Basal_Dec:0][Basal_Inc:0][Seed_Inc:0][Output_Seeds:0]";
+	HR_NodeSize = "(100, 55)";
+	HR_LinkControlPoints = "";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_5 = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_State_6 = "";
+	HR_Group = "0";
+    }
+
+    node New_Germ
+    {
+	label = "New\nGerminates";
+	position = (415 236);
+	states = ("0 - 1" "1 - 2" "2 - 3" "3 - 4");
+	subtype = interval;
+	state_values = (0 50 100 250 500);
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_NodeSize = "(88, 58)";
+	HR_LinkMode = "[Output_Basal:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node SowStrategy
+    {
+	label = "Strategy";
+	position = (90 205);
+	states = ("Sow50" "Sow300" "Sow500");
+	HR_NodeSize = "(100, 55)";
+	HR_LinkControlPoints = "";
+	HR_State_11 = "";
+	HR_State_10 = "";
+	HR_State_9 = "";
+	HR_State_8 = "";
+	HR_State_7 = "";
+	HR_State_6 = "";
+	HR_State_5 = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_State_12 = "";
+	HR_LinkMode = "[BurnStrategy:0][CrashGrazeStrategy:0][HS:0][ScarifyStrategy:0][RemoveTopSoilStrategy:0][C1:0][C2:0][C3:0][SS:0][Intervention_1:0][Inter:0][PlanBurn:0][SowCost:0][Output_Seeds:0][New_Germinates:0][Seed_No:0]";
+	HR_Group = "0";
+    }
+
+    node Output_Basal
+    {
+	label = "Output Basal \nArea";
+	position = (723 304);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkMode = "[Output_Cover:0]";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_State_5 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_LinkControlPoints = "";
+	HR_State_6 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_Group = "0";
+    }
+
+    potential (Seed_No | SowStrategy)
+    {
+	data = (( 1 0 0 )	%  SowStrategy=Sow50
+		( 0 1 0 )	%  SowStrategy=Sow300
+		( 0 0 1 ));	%  SowStrategy=Sow500
+    }
+
+    potential (SoilTemperature)
+    {
+	data = ( 1 1 1 );
+    }
+
+    potential (SoilMoisture)
+    {
+	data = ( 1 1 );
+    }
+
+    potential (Shade)
+    {
+	data = ( 1 1 1 );
+    }
+
+    potential (Surv_Pro | Shade)
+    {
+	model_nodes = (Shade);
+	model_data  = ( Beta (8, 35, 0, 1),
+			Beta (12, 30, 0, 1),
+			Beta (8, 10, 0, 1) );
+	data = (( 0.0539163 0.90824 0.0378363 7.5486E-006 )	%  Shade=High
+		( 0.000489723 0.598462 0.398886 0.002162 )	%  Shade=Medium
+		( 0.000105646 0.104534 0.58083 0.314529 ));	%  Shade=Low
+    }
+
+    potential (Germ_Rate | SoilTemperature SoilMoisture)
+    {
+	data = ((( 0.6 0.35 0.05 0 )	%  SoilTemperature=interval(0,20)  SoilMoisture=Adequate
+		 ( 0.7 0.28 0.02 0 ))	%  SoilTemperature=interval(0,20)  SoilMoisture=Inadequate
+		(( 0.2 0.5 0.25 0.05 )	%  SoilTemperature=interval(20,40)  SoilMoisture=Adequate
+		 ( 0.6 0.35 0.05 0 ))	%  SoilTemperature=interval(20,40)  SoilMoisture=Inadequate
+		(( 0.98 0.02 0 0 )	%  SoilTemperature=interval(40,50)  SoilMoisture=Adequate
+		 ( 1 0 0 0 )));	%  SoilTemperature=interval(40,50)  SoilMoisture=Inadequate
+    }
+
+    potential (Input_Basal)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (New_Germ | Seed_No Germ_Rate)
+    {
+	model_nodes = ();
+	model_data = ( Seed_No * Germ_Rate );
+	data = ((( 1 0 0 0 )	%  Seed_No=37.5  Germ_Rate=0 - 1
+		 ( 1 0 0 0 )	%  Seed_No=37.5  Germ_Rate=1 - 2
+		 ( 1 0 0 0 )	%  Seed_No=37.5  Germ_Rate=interval(0.25,0.5)
+		 ( 1 0 0 0 ))	%  Seed_No=37.5  Germ_Rate=interval(0.5,1)
+		(( 1 0 0 0 )	%  Seed_No=212.5  Germ_Rate=0 - 1
+		 ( 0.44 0.56 0 0 )	%  Seed_No=212.5  Germ_Rate=1 - 2
+		 ( 0 0.32 0.68 0 )	%  Seed_No=212.5  Germ_Rate=interval(0.25,0.5)
+		 ( 0 0 0.68 0.32 ))	%  Seed_No=212.5  Germ_Rate=interval(0.5,1)
+		(( 1 0 0 0 )	%  Seed_No=450  Germ_Rate=0 - 1
+		 ( 0 0.68 0.32 0 )	%  Seed_No=450  Germ_Rate=1 - 2
+		 ( 0 0 1 0 )	%  Seed_No=450  Germ_Rate=interval(0.25,0.5)
+		 ( 0 0 0 1 )));	%  Seed_No=450  Germ_Rate=interval(0.5,1)
+    }
+
+    potential (SowStrategy)
+    {
+	data = ( 1 1 1 );
+    }
+
+    potential (Output_Basal | Surv_Pro Input_Basal New_Germ)
+    {
+	model_nodes = ();
+	model_data = ( min (100, New_Germ * Surv_Pro + Input_Basal) );
+	data = (((( 0.00256 0.52064 0.4768 0 0 0 0 )	%  Surv_Pro=0 - 1  Input_Basal=interval(0,0.01)  New_Germ=0 - 1
+		  ( 0 0.14176 0.55136 0.30688 0 0 0 )	%  Surv_Pro=0 - 1  Input_Basal=interval(0,0.01)  New_Germ=1 - 2
+		  ( 0 0.0576 0.2448 0.6976 0 0 0 )	%  Surv_Pro=0 - 1  Input_Basal=interval(0,0.01)  New_Germ=2 - 3
+		  ( 0 0.04 0.1024 0.552 0.3056 0 0 ))	%  Surv_Pro=0 - 1  Input_Basal=interval(0,0.01)  New_Germ=3 - 4
+		 (( 0 0.30944 0.683776 0.006784 0 0 0 )	%  Surv_Pro=0 - 1  Input_Basal=interval(0.01,1)  New_Germ=0 - 1
+		  ( 0 0.068352 0.55488 0.376768 0 0 0 )	%  Surv_Pro=0 - 1  Input_Basal=interval(0.01,1)  New_Germ=1 - 2
+		  ( 0 0.029248 0.245312 0.72512 0.00032 0 0 )	%  Surv_Pro=0 - 1  Input_Basal=interval(0.01,1)  New_Germ=2 - 3
+		  ( 0 0.009984 0.11456 0.554752 0.320704 0 0 ))	%  Surv_Pro=0 - 1  Input_Basal=interval(0.01,1)  New_Germ=3 - 4
+		 (( 0 0 0.689664 0.310336 0 0 0 )	%  Surv_Pro=0 - 1  Input_Basal=interval(1,5)  New_Germ=0 - 1
+		  ( 0 0 0.2768 0.7232 0 0 0 )	%  Surv_Pro=0 - 1  Input_Basal=interval(1,5)  New_Germ=1 - 2
+		  ( 0 0 0.121664 0.863808 0.014528 0 0 )	%  Surv_Pro=0 - 1  Input_Basal=interval(1,5)  New_Germ=2 - 3
+		  ( 0 0 0.054848 0.555072 0.385856 0.004224 0 ))	%  Surv_Pro=0 - 1  Input_Basal=interval(1,5)  New_Germ=3 - 4
+		 (( 0 0 0 0.938432 0.061568 0 0 )	%  Surv_Pro=0 - 1  Input_Basal=interval(5,25)  New_Germ=0 - 1
+		  ( 0 0 0 0.812352 0.187648 0 0 )	%  Surv_Pro=0 - 1  Input_Basal=interval(5,25)  New_Germ=1 - 2
+		  ( 0 0 0 0.566208 0.433792 0 0 )	%  Surv_Pro=0 - 1  Input_Basal=interval(5,25)  New_Germ=2 - 3
+		  ( 0 0 0 0.2768 0.604032 0.119168 0 ))	%  Surv_Pro=0 - 1  Input_Basal=interval(5,25)  New_Germ=3 - 4
+		 (( 0 0 0 0 0.951488 0.048512 0 )	%  Surv_Pro=0 - 1  Input_Basal=interval(25,50)  New_Germ=0 - 1
+		  ( 0 0 0 0 0.850048 0.149952 0 )	%  Surv_Pro=0 - 1  Input_Basal=interval(25,50)  New_Germ=1 - 2
+		  ( 0 0 0 0 0.65088 0.34912 0 )	%  Surv_Pro=0 - 1  Input_Basal=interval(25,50)  New_Germ=2 - 3
+		  ( 0 0 0 0 0.345728 0.557248 0.097024 ))	%  Surv_Pro=0 - 1  Input_Basal=interval(25,50)  New_Germ=3 - 4
+		 (( 0 0 0 0 0 0.951488 0.048512 )	%  Surv_Pro=0 - 1  Input_Basal=interval(50,75)  New_Germ=0 - 1
+		  ( 0 0 0 0 0 0.850048 0.149952 )	%  Surv_Pro=0 - 1  Input_Basal=interval(50,75)  New_Germ=1 - 2
+		  ( 0 0 0 0 0 0.65088 0.34912 )	%  Surv_Pro=0 - 1  Input_Basal=interval(50,75)  New_Germ=2 - 3
+		  ( 0 0 0 0 0 0.345728 0.654272 ))	%  Surv_Pro=0 - 1  Input_Basal=interval(50,75)  New_Germ=3 - 4
+		 (( 0 0 0 0 0 0 1 )	%  Surv_Pro=0 - 1  Input_Basal=interval(75,100)  New_Germ=0 - 1
+		  ( 0 0 0 0 0 0 1 )	%  Surv_Pro=0 - 1  Input_Basal=interval(75,100)  New_Germ=1 - 2
+		  ( 0 0 0 0 0 0 1 )	%  Surv_Pro=0 - 1  Input_Basal=interval(75,100)  New_Germ=2 - 3
+		  ( 0 0 0 0 0 0 1 )))	%  Surv_Pro=0 - 1  Input_Basal=interval(75,100)  New_Germ=3 - 4
+		((( 0 0.1088 0.43808 0.45312 0 0 0 )	%  Surv_Pro=1 - 2  Input_Basal=interval(0,0.01)  New_Germ=0 - 1
+		  ( 0 0 0 0.9552 0.0448 0 0 )	%  Surv_Pro=1 - 2  Input_Basal=interval(0,0.01)  New_Germ=1 - 2
+		  ( 0 0 0 0.2624 0.5792 0.1584 0 )	%  Surv_Pro=1 - 2  Input_Basal=interval(0,0.01)  New_Germ=2 - 3
+		  ( 0 0 0 0 0.1936 0.344 0.4624 ))	%  Surv_Pro=1 - 2  Input_Basal=interval(0,0.01)  New_Germ=3 - 4
+		 (( 0 0.054016 0.43968 0.506304 0 0 0 )	%  Surv_Pro=1 - 2  Input_Basal=interval(0.01,1)  New_Germ=0 - 1
+		  ( 0 0 0 0.946176 0.053824 0 0 )	%  Surv_Pro=1 - 2  Input_Basal=interval(0.01,1)  New_Germ=1 - 2
+		  ( 0 0 0 0.248128 0.588032 0.16384 0 )	%  Surv_Pro=1 - 2  Input_Basal=interval(0.01,1)  New_Germ=2 - 3
+		  ( 0 0 0 0 0.18624 0.34496 0.4688 ))	%  Surv_Pro=1 - 2  Input_Basal=interval(0.01,1)  New_Germ=3 - 4
+		 (( 0 0 0.218688 0.781312 0 0 0 )	%  Surv_Pro=1 - 2  Input_Basal=interval(1,5)  New_Germ=0 - 1
+		  ( 0 0 0 0.878848 0.121152 0 0 )	%  Surv_Pro=1 - 2  Input_Basal=interval(1,5)  New_Germ=1 - 2
+		  ( 0 0 0 0.178944 0.619392 0.199488 0.002176 )	%  Surv_Pro=1 - 2  Input_Basal=interval(1,5)  New_Germ=2 - 3
+		  ( 0 0 0 0 0.153152 0.344832 0.502016 ))	%  Surv_Pro=1 - 2  Input_Basal=interval(1,5)  New_Germ=3 - 4
+		 (( 0 0 0 0.749568 0.250432 0 0 )	%  Surv_Pro=1 - 2  Input_Basal=interval(5,25)  New_Germ=0 - 1
+		  ( 0 0 0 0.280384 0.716096 0.00352 0 )	%  Surv_Pro=1 - 2  Input_Basal=interval(5,25)  New_Germ=1 - 2
+		  ( 0 0 0 0.022336 0.517888 0.397056 0.06272 )	%  Surv_Pro=1 - 2  Input_Basal=interval(5,25)  New_Germ=2 - 3
+		  ( 0 0 0 0 0.044608 0.286464 0.668928 ))	%  Surv_Pro=1 - 2  Input_Basal=interval(5,25)  New_Germ=3 - 4
+		 (( 0 0 0 0 0.800192 0.199808 0 )	%  Surv_Pro=1 - 2  Input_Basal=interval(25,50)  New_Germ=0 - 1
+		  ( 0 0 0 0 0.402496 0.594624 0.00288 )	%  Surv_Pro=1 - 2  Input_Basal=interval(25,50)  New_Germ=1 - 2
+		  ( 0 0 0 0 0.057088 0.537152 0.40576 )	%  Surv_Pro=1 - 2  Input_Basal=interval(25,50)  New_Germ=2 - 3
+		  ( 0 0 0 0 0 0.067712 0.932288 ))	%  Surv_Pro=1 - 2  Input_Basal=interval(25,50)  New_Germ=3 - 4
+		 (( 0 0 0 0 0 0.800192 0.199808 )	%  Surv_Pro=1 - 2  Input_Basal=interval(50,75)  New_Germ=0 - 1
+		  ( 0 0 0 0 0 0.402496 0.597504 )	%  Surv_Pro=1 - 2  Input_Basal=interval(50,75)  New_Germ=1 - 2
+		  ( 0 0 0 0 0 0.057088 0.942912 )	%  Surv_Pro=1 - 2  Input_Basal=interval(50,75)  New_Germ=2 - 3
+		  ( 0 0 0 0 0 0 1 ))	%  Surv_Pro=1 - 2  Input_Basal=interval(50,75)  New_Germ=3 - 4
+		 (( 0 0 0 0 0 0 1 )	%  Surv_Pro=1 - 2  Input_Basal=interval(75,100)  New_Germ=0 - 1
+		  ( 0 0 0 0 0 0 1 )	%  Surv_Pro=1 - 2  Input_Basal=interval(75,100)  New_Germ=1 - 2
+		  ( 0 0 0 0 0 0 1 )	%  Surv_Pro=1 - 2  Input_Basal=interval(75,100)  New_Germ=2 - 3
+		  ( 0 0 0 0 0 0 1 )))	%  Surv_Pro=1 - 2  Input_Basal=interval(75,100)  New_Germ=3 - 4
+		((( 0 0.0464 0.20768 0.74592 0 0 0 )	%  Surv_Pro=2 - 3  Input_Basal=interval(0,0.01)  New_Germ=0 - 1
+		  ( 0 0 0 0.27488 0.72512 0 0 )	%  Surv_Pro=2 - 3  Input_Basal=interval(0,0.01)  New_Germ=1 - 2
+		  ( 0 0 0 0 0.184 0.4256 0.3904 )	%  Surv_Pro=2 - 3  Input_Basal=interval(0,0.01)  New_Germ=2 - 3
+		  ( 0 0 0 0 0 0 1 ))	%  Surv_Pro=2 - 3  Input_Basal=interval(0,0.01)  New_Germ=3 - 4
+		 (( 0 0.024064 0.205696 0.769728 0.000512 0 0 )	%  Surv_Pro=2 - 3  Input_Basal=interval(0.01,1)  New_Germ=0 - 1
+		  ( 0 0 0 0.251968 0.74784 0.000192 0 )	%  Surv_Pro=2 - 3  Input_Basal=interval(0.01,1)  New_Germ=1 - 2
+		  ( 0 0 0 0 0.176064 0.424704 0.399232 )	%  Surv_Pro=2 - 3  Input_Basal=interval(0.01,1)  New_Germ=2 - 3
+		  ( 0 0 0 0 0 0 1 ))	%  Surv_Pro=2 - 3  Input_Basal=interval(0.01,1)  New_Germ=3 - 4
+		 (( 0 0 0.10144 0.876928 0.021632 0 0 )	%  Surv_Pro=2 - 3  Input_Basal=interval(1,5)  New_Germ=0 - 1
+		  ( 0 0 0 0.145344 0.844096 0.01056 0 )	%  Surv_Pro=2 - 3  Input_Basal=interval(1,5)  New_Germ=1 - 2
+		  ( 0 0 0 0 0.136512 0.422656 0.440832 )	%  Surv_Pro=2 - 3  Input_Basal=interval(1,5)  New_Germ=2 - 3
+		  ( 0 0 0 0 0 0 1 ))	%  Surv_Pro=2 - 3  Input_Basal=interval(1,5)  New_Germ=3 - 4
+		 (( 0 0 0 0.503168 0.496832 0 0 )	%  Surv_Pro=2 - 3  Input_Basal=interval(5,25)  New_Germ=0 - 1
+		  ( 0 0 0 0.006464 0.6976 0.295936 0 )	%  Surv_Pro=2 - 3  Input_Basal=interval(5,25)  New_Germ=1 - 2
+		  ( 0 0 0 0 0.027904 0.326784 0.645312 )	%  Surv_Pro=2 - 3  Input_Basal=interval(5,25)  New_Germ=2 - 3
+		  ( 0 0 0 0 0 0 1 ))	%  Surv_Pro=2 - 3  Input_Basal=interval(5,25)  New_Germ=3 - 4
+		 (( 0 0 0 0 0.601664 0.398336 0 )	%  Surv_Pro=2 - 3  Input_Basal=interval(25,50)  New_Germ=0 - 1
+		  ( 0 0 0 0 0.038272 0.723648 0.23808 )	%  Surv_Pro=2 - 3  Input_Basal=interval(25,50)  New_Germ=1 - 2
+		  ( 0 0 0 0 0 0.050816 0.949184 )	%  Surv_Pro=2 - 3  Input_Basal=interval(25,50)  New_Germ=2 - 3
+		  ( 0 0 0 0 0 0 1 ))	%  Surv_Pro=2 - 3  Input_Basal=interval(25,50)  New_Germ=3 - 4
+		 (( 0 0 0 0 0 0.601664 0.398336 )	%  Surv_Pro=2 - 3  Input_Basal=interval(50,75)  New_Germ=0 - 1
+		  ( 0 0 0 0 0 0.038272 0.961728 )	%  Surv_Pro=2 - 3  Input_Basal=interval(50,75)  New_Germ=1 - 2
+		  ( 0 0 0 0 0 0 1 )	%  Surv_Pro=2 - 3  Input_Basal=interval(50,75)  New_Germ=2 - 3
+		  ( 0 0 0 0 0 0 1 ))	%  Surv_Pro=2 - 3  Input_Basal=interval(50,75)  New_Germ=3 - 4
+		 (( 0 0 0 0 0 0 1 )	%  Surv_Pro=2 - 3  Input_Basal=interval(75,100)  New_Germ=0 - 1
+		  ( 0 0 0 0 0 0 1 )	%  Surv_Pro=2 - 3  Input_Basal=interval(75,100)  New_Germ=1 - 2
+		  ( 0 0 0 0 0 0 1 )	%  Surv_Pro=2 - 3  Input_Basal=interval(75,100)  New_Germ=2 - 3
+		  ( 0 0 0 0 0 0 1 )))	%  Surv_Pro=2 - 3  Input_Basal=interval(75,100)  New_Germ=3 - 4
+		((( 0 0.04 0.1024 0.552 0.3056 0 0 )	%  Surv_Pro=3 - 4  Input_Basal=interval(0,0.01)  New_Germ=0 - 1
+		  ( 0 0 0 0 0.3808 0.48 0.1392 )	%  Surv_Pro=3 - 4  Input_Basal=interval(0,0.01)  New_Germ=1 - 2
+		  ( 0 0 0 0 0 0.072 0.928 )	%  Surv_Pro=3 - 4  Input_Basal=interval(0,0.01)  New_Germ=2 - 3
+		  ( 0 0 0 0 0 0 1 ))	%  Surv_Pro=3 - 4  Input_Basal=interval(0,0.01)  New_Germ=3 - 4
+		 (( 0 0.009984 0.11456 0.554752 0.320704 0 0 )	%  Surv_Pro=3 - 4  Input_Basal=interval(0.01,1)  New_Germ=0 - 1
+		  ( 0 0 0 0 0.372736 0.48512 0.142144 )	%  Surv_Pro=3 - 4  Input_Basal=interval(0.01,1)  New_Germ=1 - 2
+		  ( 0 0 0 0 0 0.069312 0.930688 )	%  Surv_Pro=3 - 4  Input_Basal=interval(0.01,1)  New_Germ=2 - 3
+		  ( 0 0 0 0 0 0 1 ))	%  Surv_Pro=3 - 4  Input_Basal=interval(0.01,1)  New_Germ=3 - 4
+		 (( 0 0 0.054848 0.555072 0.385856 0.004224 0 )	%  Surv_Pro=3 - 4  Input_Basal=interval(1,5)  New_Germ=0 - 1
+		  ( 0 0 0 0 0.3072 0.518528 0.174272 )	%  Surv_Pro=3 - 4  Input_Basal=interval(1,5)  New_Germ=1 - 2
+		  ( 0 0 0 0 0 0.056512 0.943488 )	%  Surv_Pro=3 - 4  Input_Basal=interval(1,5)  New_Germ=2 - 3
+		  ( 0 0 0 0 0 0 1 ))	%  Surv_Pro=3 - 4  Input_Basal=interval(1,5)  New_Germ=3 - 4
+		 (( 0 0 0 0.2768 0.604032 0.119168 0 )	%  Surv_Pro=3 - 4  Input_Basal=interval(5,25)  New_Germ=0 - 1
+		  ( 0 0 0 0 0.090112 0.525056 0.384832 )	%  Surv_Pro=3 - 4  Input_Basal=interval(5,25)  New_Germ=1 - 2
+		  ( 0 0 0 0 0 0.016 0.984 )	%  Surv_Pro=3 - 4  Input_Basal=interval(5,25)  New_Germ=2 - 3
+		  ( 0 0 0 0 0 0 1 ))	%  Surv_Pro=3 - 4  Input_Basal=interval(5,25)  New_Germ=3 - 4
+		 (( 0 0 0 0 0.345728 0.557248 0.097024 )	%  Surv_Pro=3 - 4  Input_Basal=interval(25,50)  New_Germ=0 - 1
+		  ( 0 0 0 0 0 0.136768 0.863232 )	%  Surv_Pro=3 - 4  Input_Basal=interval(25,50)  New_Germ=1 - 2
+		  ( 0 0 0 0 0 0 1 )	%  Surv_Pro=3 - 4  Input_Basal=interval(25,50)  New_Germ=2 - 3
+		  ( 0 0 0 0 0 0 1 ))	%  Surv_Pro=3 - 4  Input_Basal=interval(25,50)  New_Germ=3 - 4
+		 (( 0 0 0 0 0 0.345728 0.654272 )	%  Surv_Pro=3 - 4  Input_Basal=interval(50,75)  New_Germ=0 - 1
+		  ( 0 0 0 0 0 0 1 )	%  Surv_Pro=3 - 4  Input_Basal=interval(50,75)  New_Germ=1 - 2
+		  ( 0 0 0 0 0 0 1 )	%  Surv_Pro=3 - 4  Input_Basal=interval(50,75)  New_Germ=2 - 3
+		  ( 0 0 0 0 0 0 1 ))	%  Surv_Pro=3 - 4  Input_Basal=interval(50,75)  New_Germ=3 - 4
+		 (( 0 0 0 0 0 0 1 )	%  Surv_Pro=3 - 4  Input_Basal=interval(75,100)  New_Germ=0 - 1
+		  ( 0 0 0 0 0 0 1 )	%  Surv_Pro=3 - 4  Input_Basal=interval(75,100)  New_Germ=1 - 2
+		  ( 0 0 0 0 0 0 1 )	%  Surv_Pro=3 - 4  Input_Basal=interval(75,100)  New_Germ=2 - 3
+		  ( 0 0 0 0 0 0 1 ))));	%  Surv_Pro=3 - 4  Input_Basal=interval(75,100)  New_Germ=3 - 4
+    }
+} % class SensitiveNativeSow

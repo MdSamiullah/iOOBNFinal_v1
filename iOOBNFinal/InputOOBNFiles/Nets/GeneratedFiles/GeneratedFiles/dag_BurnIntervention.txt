@@ -1,0 +1,11 @@
+Burn : 
+Wildfire : 
+BurnCost : 
+BD : BurnCost 
+TBio : Wildfire TargetBurn 
+BBio : TargetBurn 
+TargetBurn : 
+Scale : BurnCost 
+BurnStrategy : TargetBurn 
+Season : Wildfire 
+LBio : TargetBurn 

@@ -1,0 +1,2362 @@
+class ThemedaNatural
+{
+    inputs = (Input_Dead Input_Cover Soil_Friability SoilTemperature Input_Basal Season Input_Seeds SoilMoisture Shade Input_Seedlings CompSum NL);
+    outputs = (Output_Basal Output_NUI Output_Dead Output_Cover Output_Seeds Output_Seedlings);
+    node_size = (100 55);
+    HR_ToolBar_CDVT = "0";
+    HR_Html_Desc = "0";
+    HR_HTML_Desc = "";
+    HR_Groups_IDs = "";
+    HR_Node_Label_Style = "0";
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "0";
+    HR_Zoom_ZoomFactor = "75";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_DiscreteFunction = "5";
+    HR_Color_Function = "4";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Mean_Variance = "1";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "5";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "javax.swing.plaf.FontUIResource[family=Tahoma,name=Tahoma,style=plain,size=11]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+
+    instance BCGD : BasalCoverGrowthDeath (CCond = CCond, Season = Season; BCGD_C3PLCDR = C3PLCDR, BCGD_C4PLCDR = C4PLCDR, BCGD_C3PLBCR = C3PLBCR, BCGD_C3PLCCR = C3PLCCR, BCGD_C3PLCGR = C3PLCGR, BCGD_DDRH = DDRH, BCGD_C4PLBCR = C4PLBCR, BCGD_C4PLCCR = C4PLCCR, BCGD_C4PLCGR = C4PLCGR, BCGD_DDRM = DDRM, BCGD_DDRL = DDRL, BCGD_C3PMBCR = C3PMBCR, BCGD_C3PMCCR = C3PMCCR, BCGD_C3PMCGR = C3PMCGR, BCGD_C3PMCDR = C3PMCDR, BCGD_C4PMBCR = C4PMBCR, BCGD_C4PMCGR = C4PMCGR, BCGD_C4PMCDR = C4PMCDR, BCGD_C4PMCCR = C4PMCCR, BCGD_C3PSCDR = C3PSCDR, BCGD_C3PSCGR = C3PSCGR, BCGD_C3PSCCR = C3PSCCR, BCGD_C3PSBCR = C3PSBCR, BCGD_C4PSBCR = C4PSBCR, BCGD_C4PSCDR = C4PSCDR, BCGD_C4PSCGR = C4PSCGR, BCGD_C4PSCCR = C4PSCCR)
+    {
+	label = "";
+	position = (692 154);
+	HR_LinkModeInstance = "";
+	HR_LinkControlPointsInstance = "";
+	HR_Input_Order = "Season\tCCond\t";
+	HR_isCollapsed = "true";
+	HR_InterfaceNode_placement = "vertical";
+	HR_InterfaceNode_size = "100,55";
+	HR_NodeSize = "(100, 55)";
+	HR_Group = "0";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+    }
+
+    node CSumIndex
+    {
+	label = "Comp\nSummary\nIndex";
+	position = (721 21);
+	states = ("" "" "" "" "");
+	subtype = number;
+	state_values = (1 2 3 4 5);
+	HR_State_2 = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_HTML_Desc = "";
+	HR_NodeSize = "(100, 55)";
+	HR_LinkMode = "[CCond:0]";
+	HR_Group = "0";
+    }
+
+    node NL
+    {
+	label = "Nutrient\nLoad";
+	position = (639 23);
+	states = ("Highly Enriched" "Moderately Enriched" "Natural");
+	HR_NodeSize = "(100, 55)";
+	HR_LinkMode = "[C16:0][C1_1:0][CCond:0]";
+	HR_LinkControlPoints = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_State_2 = "";
+	HR_HTML_Desc = "";
+	HR_Group = "0";
+    }
+
+    node CompSum
+    {
+	label = "Comp\nSummary";
+	position = (810 21);
+	states = ("Very Strong" "Strong" "Medium" "Weak" "Very Weak");
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[CSumIndex:0]";
+	HR_NodeSize = "(100, 55)";
+	HR_HTML_Desc = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_State_2 = "";
+	HR_Group = "0";
+    }
+
+    node New_Adults
+    {
+	label = "New\nAdults";
+	position = (462 294);
+	states = ("0 - 1" "1 - 2" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 2.5 5 25 50);
+	HR_State_4 = "";
+	HR_LinkMode = "[Output_Seed:0][Output_Seedling:0][Seed_Dec:0][C10:0][Basal_Inc:0][Output_Basal:0]";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_HTML_Desc = "";
+	HR_LinkControlPoints = "";
+	HR_Group = "0";
+    }
+
+    node Output_Seedlings
+    {
+	label = "Output Seedling\nDensity";
+	position = (975 292);
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 0.25 5 25 50);
+	HR_State_4 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_State_2 = "";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_State_3 = "";
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[NTA:0][ThemedaBasalArea_2:0]";
+	HR_Group = "0";
+    }
+
+    node Input_Seedlings
+    {
+	label = "Input Seedling\nDensity";
+	position = (46 296);
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 0.25 5 25 50);
+	HR_LinkMode = "[NTA:0][ThemedaBasalArea_2:0][New_Adults:0]";
+	HR_LinkControlPoints = "";
+	HR_State_3 = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_State_2 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_State_4 = "";
+	HR_Group = "0";
+    }
+
+    node Shade
+    {
+	label = "Shade";
+	position = (441 23);
+	states = ("High" "Medium" "Low");
+	HR_LinkMode = "[SoilMoisture:0][SoilTemperature:0][SP:0]";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkControlPoints = "";
+	HR_Group = "0";
+    }
+
+    node SP
+    {
+	label = "Survival\nProportion";
+	position = (460 135);
+	states = ("" "" "" "");
+	subtype = interval;
+	state_values = (0 0.001 33 66 100);
+	HR_LinkMode = "[NTA:0][ThemedaBasalArea_2:0][New_Adults:0]";
+	HR_LinkControlPoints = "";
+	HR_State_3 = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_State_2 = "";
+	HR_Group = "0";
+    }
+
+    node GP
+    {
+	label = "Germination\nProportion";
+	position = (288 136);
+	states = ("" "" "" "");
+	subtype = interval;
+	state_values = (0 0.0001 10 50 100);
+	HR_LinkMode = "[C1_1:0][TS:0][ThemedaSeedlingDensity:0][Germ_Seeds:0]";
+	HR_LinkControlPoints = "";
+	HR_NodeSize = "(100, 55)";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_HTML_Desc = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_Group = "0";
+    }
+
+    node SoilMoisture
+    {
+	label = "Soil\nMoisture";
+	position = (285 23);
+	states = ("Adequate" "Inadequate");
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[GP:0][SP:0][C1:0][GermCond:0]";
+	HR_Group = "0";
+    }
+
+    node Germ_Seeds
+    {
+	label = "New\nGerminants";
+	position = (289 266);
+	states = ("0 - 1" "1 - 2" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 0.25 5 25 50);
+	HR_NodeSize = "(100, 55)";
+	HR_State_4 = "";
+	HR_LinkControlPoints = "";
+	HR_HTML_Desc = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_LinkMode = "[Output_Seed:0][Output_Seedling:0][Output_Seedlings:0][Seed_Dec:0]";
+	HR_Group = "0";
+    }
+
+    node Seed_Inc
+    {
+	label = "Seed\nIncrease";
+	position = (168 198);
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 30 70 400 700);
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_LinkControlPoints = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_LinkMode = "[Output_Seed:0][Output_Seeds:0]";
+	HR_Group = "0";
+    }
+
+    node Input_Seeds
+    {
+	label = "Input Seed\nDensity";
+	position = (44 223);
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 30 70 400 700);
+	HR_NodeSize = "(100, 55)";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_LinkControlPoints = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_State_2 = "";
+	HR_LinkMode = "[C2:0][C4:0][C5:0][Output_Seed:0][Output_Seeds:0][Death_Seeds:0][Germ_Seeds:0][Seed_Dec:0]";
+	HR_Group = "0";
+    }
+
+    node DP
+    {
+	label = "Seed Death\nProportion";
+	position = (375 136);
+	states = ("0 - 1" "1 - 2" "");
+	subtype = interval;
+	state_values = (0 10 30 40);
+	HR_NodeSize = "(100, 55)";
+	HR_LinkControlPoints = "";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_LinkMode = "[C4:0][Death_Seeds:0][Seed_Dec:0]";
+	HR_Group = "0";
+    }
+
+    node SI
+    {
+	label = "Introduced?";
+	position = (120 131);
+	states = ("false" "true");
+	subtype = boolean;
+	HR_NodeSize = "(100, 55)";
+	HR_LinkControlPoints = "";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[C29:0][Intro_Seeds:0][Output_Basal:0]";
+	HR_Group = "0";
+    }
+
+    node Season
+    {
+	label = "Season";
+	position = (540 23);
+	states = ("Spring" "Summer" "Autumn" "Winter");
+	HR_HTML_Desc = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[C13:0][C14:0][C16:0][C17:0][C18:0][Temp:0][Rain:0][C22:0][C24:0][C23:0][C26:0][C28:0][SP:0][SI:0][C15:0][CGR:0][BADR:0][CDR:0][BGR:0][Season:0][GP:0][SPR:0]";
+	HR_Group = "0";
+    }
+
+    node Input_Basal
+    {
+	label = "Input Basal \nArea";
+	position = (44 356);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_State_6 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_LinkControlPoints = "";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_5 = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[C1:0][C3:0][C10:0][C11:0][Output_Basal:0][Prod_Seeds:0][Basal_Dec:0][Basal_Inc:0][Seed_Inc:0]";
+	HR_Group = "0";
+    }
+
+    node SPR
+    {
+	label = "Seed\nProduction\nRate";
+	position = (206 134);
+	states = ("0 - 1" "" "" "" "1 - 2");
+	subtype = interval;
+	state_values = (0 0.001 30 70 400 700);
+	HR_LinkControlPoints = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_LinkMode = "[C1_1:0][C1:0][C3:0][DF1:0][Prod_Seeds:0][Seed_Inc:0]";
+	HR_Group = "0";
+    }
+
+    node CCond
+    {
+	label = "Relative\nCompetition\nConditions";
+	position = (693 74);
+	states = ("Favourable" "Neutral" "Unfavourable");
+	subtype = label;
+	HR_NodeSize = "(100, 55)";
+	HR_LinkControlPoints = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_State_2 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_LinkMode = "[GP:0][C15:0][CGR:0][BGR:0][BADR:0][CDR:0][CCond:0]";
+	HR_Group = "0";
+    }
+
+    node SoilTemperature
+    {
+	label = "Soil\nTemperature";
+	position = (361 23);
+	states = ("" "" "");
+	subtype = interval;
+	state_values = (0 20 40 50);
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_State_2 = "";
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[GP:0][SP:0][C1:0][GermCond:0]";
+	HR_Group = "0";
+    }
+
+    node Soil_Friability
+    {
+	label = "Friability";
+	position = (206 23);
+	states = ("Enhanced" "Satisfactory" "Inhibited");
+	HR_NodeSize = "(100, 55)";
+	HR_State_2 = "";
+	HR_HTML_Desc = "";
+	HR_LinkControlPoints = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[C9:0][C13:0][C1:0][GermCond:0][GP:0]";
+	HR_Group = "0";
+    }
+
+    node Cover_Inc
+    {
+	label = "Cover Growth";
+	position = (613 395);
+	states = ("0 - 1" "" "1 - 2" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_State_6 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_State_5 = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_HTML_Desc = "";
+	HR_LinkControlPoints = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[C25:0][Output_NUI_1:0][Output_NUI:0]";
+	HR_Group = "0";
+    }
+
+    node Cover_Dec
+    {
+	label = "Cover Death";
+	position = (729 460);
+	states = ("0 - 1" "1 - 2" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 10 20);
+	HR_NodeSize = "(100, 55)";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_HTML_Desc = "";
+	HR_LinkControlPoints = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[Output_Dead:0]";
+	HR_Group = "0";
+    }
+
+    node Input_Cover
+    {
+	label = "Input \nCover";
+	position = (46 428);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_NodeSize = "(100, 55)";
+	HR_State_6 = "";
+	HR_LinkControlPoints = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_State_5 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_LinkMode = "[C2:0][CT:0][Output_Cover:0][C19:0][C20:0][Cover_Inc:0][Cover_Dec:0]";
+	HR_Group = "0";
+    }
+
+    node Input_Dead
+    {
+	label = "Input Dead \nCover";
+	position = (44 492);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_State_6 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_LinkControlPoints = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_State_5 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_LinkMode = "[NCG_1_1:0][Com:0][TC:0][OC:0][Output_Dead:0][C27:0][Dead_Dec:0]";
+	HR_Group = "0";
+    }
+
+    node Output_Seeds
+    {
+	label = "Output Seed\nDensity";
+	position = (977 225);
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 30 70 400 700);
+	HR_State_2 = "";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "";
+	HR_LinkControlPoints = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_Group = "0";
+    }
+
+    node Output_Cover
+    {
+	label = "Output \nCover";
+	position = (975 427);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_NodeSize = "(100, 55)";
+	HR_State_6 = "";
+	HR_LinkMode = "[C2:0][CT:0]";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_5 = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_Group = "0";
+    }
+
+    node Output_Dead
+    {
+	label = "Output Dead \nCover";
+	position = (975 481);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_State_6 = "";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_5 = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[NCG_1_1:0][Com:0][TC:0][OC:0]";
+	HR_LinkControlPoints = "";
+	HR_NodeSize = "(100, 55)";
+	HR_Group = "0";
+    }
+
+    node Output_NUI
+    {
+	label = "Nitrogen\nUptake/Input";
+	position = (972 553);
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+	HR_State_6 = "";
+	HR_State_5 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_Group = "0";
+    }
+
+    node Dead_Dec
+    {
+	label = "Dead Cover\nDeterioration";
+	position = (837 517);
+	states = ("0 - 1" "1 - 2" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25);
+	HR_LinkControlPoints = "";
+	HR_NodeSize = "(100, 55)";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[C25:0][Output_Dead:0][Output_NUI_2:0][Output_NUI:0]";
+	HR_Group = "0";
+    }
+
+    node Seed_Dec
+    {
+	label = "Seed\nDecrease";
+	position = (376 245);
+	states = ("0 - 1" "1 - 2" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 30 70 100 300);
+	HR_NodeSize = "(100, 55)";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[Output_Seed:0][Output_Seeds:0]";
+	HR_Group = "0";
+    }
+
+    node Output_Basal
+    {
+	label = "Output Basal \nArea";
+	position = (976 358);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_NodeSize = "(100, 55)";
+	HR_State_6 = "";
+	HR_LinkMode = "[Output_Cover:0]";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_State_5 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_LinkControlPoints = "";
+	HR_Group = "0";
+    }
+
+    potential (CSumIndex | CompSum)
+    {
+	model_nodes = (CompSum);
+	model_data  = ( 5,
+			4,
+			3,
+			2,
+			1 );
+	data = (( 0 0 0 0 1 )	%  CompSum=Very Strong
+		( 0 0 0 1 0 )	%  CompSum=Strong
+		( 0 0 1 0 0 )	%  CompSum=Medium
+		( 0 1 0 0 0 )	%  CompSum=Weak
+		( 1 0 0 0 0 ));	%  CompSum=Very Weak
+    }
+
+    potential (NL)
+    {
+	data = ( 1 1 1 );
+    }
+
+    potential (CompSum)
+    {
+	data = ( 1 1 1 1 1 );
+    }
+
+    potential (New_Adults | SP Input_Seedlings)
+    {
+	model_nodes = ();
+	model_data = ( min (50, max (0, Input_Seedlings * SP / 100)) );
+	data = ((( 1 0 0 0 0 )	%  SP=interval(0,0.001)  Input_Seedlings=interval(0,0.01)
+		 ( 1 0 0 0 0 )	%  SP=interval(0,0.001)  Input_Seedlings=interval(0.01,0.25)
+		 ( 1 0 0 0 0 )	%  SP=interval(0,0.001)  Input_Seedlings=interval(0.25,5)
+		 ( 1 0 0 0 0 )	%  SP=interval(0,0.001)  Input_Seedlings=interval(5,25)
+		 ( 1 0 0 0 0 ))	%  SP=interval(0,0.001)  Input_Seedlings=interval(25,50)
+		(( 1 0 0 0 0 )	%  SP=interval(0.001,33)  Input_Seedlings=interval(0,0.01)
+		 ( 0.3456 0.6544 0 0 0 )	%  SP=interval(0.001,33)  Input_Seedlings=interval(0.01,0.25)
+		 ( 0.0128 0.9872 0 0 0 )	%  SP=interval(0.001,33)  Input_Seedlings=interval(0.25,5)
+		 ( 0 0.5808 0.3056 0.1136 0 )	%  SP=interval(0.001,33)  Input_Seedlings=interval(5,25)
+		 ( 0 0.208 0.2128 0.5792 0 ))	%  SP=interval(0.001,33)  Input_Seedlings=interval(25,50)
+		(( 1 0 0 0 0 )	%  SP=interval(33,66)  Input_Seedlings=interval(0,0.01)
+		 ( 0.0496 0.9504 0 0 0 )	%  SP=interval(33,66)  Input_Seedlings=interval(0.01,0.25)
+		 ( 0 0.9344 0.0656 0 0 )	%  SP=interval(33,66)  Input_Seedlings=interval(0.25,5)
+		 ( 0 0.0288 0.2448 0.7264 0 )	%  SP=interval(33,66)  Input_Seedlings=interval(5,25)
+		 ( 0 0 0 0.8752 0.1248 ))	%  SP=interval(33,66)  Input_Seedlings=interval(25,50)
+		(( 1 0 0 0 0 )	%  SP=interval(66,100)  Input_Seedlings=interval(0,0.01)
+		 ( 0.0016 0.9984 0 0 0 )	%  SP=interval(66,100)  Input_Seedlings=interval(0.01,0.25)
+		 ( 0 0.5904 0.4096 0 0 )	%  SP=interval(66,100)  Input_Seedlings=interval(0.25,5)
+		 ( 0 0 0.056 0.944 0 )	%  SP=interval(66,100)  Input_Seedlings=interval(5,25)
+		 ( 0 0 0 0.2224 0.7776 )));	%  SP=interval(66,100)  Input_Seedlings=interval(25,50)
+    }
+
+    potential (Output_Seedlings | Germ_Seeds)
+    {
+	model_nodes = ();
+	model_data = ( min (50, max (0, Germ_Seeds)) );
+	data = (( 1 0 0 0 0 )	%  Germ_Seeds=0 - 1
+		( 0 1 0 0 0 )	%  Germ_Seeds=1 - 2
+		( 0 0 1 0 0 )	%  Germ_Seeds=interval(0.25,5)
+		( 0 0 0 1 0 )	%  Germ_Seeds=interval(5,25)
+		( 0 0 0 0 1 ));	%  Germ_Seeds=interval(25,50)
+    }
+
+    potential (Input_Seedlings)
+    {
+	data = ( 1 1 1 1 1 );
+    }
+
+    potential (Shade)
+    {
+	data = ( 1 1 1 );
+    }
+
+    potential (SP | Shade SoilMoisture SoilTemperature)
+    {
+	data = (((( 0.01 0.24 0.55 0.2 )	%  Shade=High  SoilMoisture=Adequate  SoilTemperature=interval(0,20)
+		  ( 0.01 0.24 0.5 0.25 )	%  Shade=High  SoilMoisture=Adequate  SoilTemperature=interval(20,40)
+		  ( 0.05 0.4 0.4 0.15 ))	%  Shade=High  SoilMoisture=Adequate  SoilTemperature=interval(40,50)
+		 (( 0.01 0.69 0.2 0.1 )	%  Shade=High  SoilMoisture=Inadequate  SoilTemperature=interval(0,20)
+		  ( 0.05 0.73 0.2 0.02 )	%  Shade=High  SoilMoisture=Inadequate  SoilTemperature=interval(20,40)
+		  ( 0.09 0.85 0.05 0.01 )))	%  Shade=High  SoilMoisture=Inadequate  SoilTemperature=interval(40,50)
+		((( 0.01 0.21 0.49 0.29 )	%  Shade=Medium  SoilMoisture=Adequate  SoilTemperature=interval(0,20)
+		  ( 0.01 0.21 0.49 0.29 )	%  Shade=Medium  SoilMoisture=Adequate  SoilTemperature=interval(20,40)
+		  ( 0.01 0.71 0.19 0.09 ))	%  Shade=Medium  SoilMoisture=Adequate  SoilTemperature=interval(40,50)
+		 (( 0.03 0.7 0.2 0.07 )	%  Shade=Medium  SoilMoisture=Inadequate  SoilTemperature=interval(0,20)
+		  ( 0.03 0.65 0.22 0.1 )	%  Shade=Medium  SoilMoisture=Inadequate  SoilTemperature=interval(20,40)
+		  ( 0.09 0.85 0.05 0.01 )))	%  Shade=Medium  SoilMoisture=Inadequate  SoilTemperature=interval(40,50)
+		((( 0.01 0.21 0.49 0.29 )	%  Shade=Low  SoilMoisture=Adequate  SoilTemperature=interval(0,20)
+		  ( 0.01 0.19 0.5 0.3 )	%  Shade=Low  SoilMoisture=Adequate  SoilTemperature=interval(20,40)
+		  ( 0.01 0.69 0.2 0.1 ))	%  Shade=Low  SoilMoisture=Adequate  SoilTemperature=interval(40,50)
+		 (( 0.05 0.73 0.2 0.02 )	%  Shade=Low  SoilMoisture=Inadequate  SoilTemperature=interval(0,20)
+		  ( 0.01 0.59 0.25 0.15 )	%  Shade=Low  SoilMoisture=Inadequate  SoilTemperature=interval(20,40)
+		  ( 0.09 0.85 0.05 0.01 ))));	%  Shade=Low  SoilMoisture=Inadequate  SoilTemperature=interval(40,50)
+    }
+
+    potential (GP | Season Soil_Friability SoilMoisture SoilTemperature)
+    {
+	data = ((((( 0 0.3 0.5 0.2 )	%  Season=Spring  Soil_Friability=Enhanced  SoilMoisture=Adequate  SoilTemperature=interval(0,20)
+		   ( 0 0.05 0.15 0.8 )	%  Season=Spring  Soil_Friability=Enhanced  SoilMoisture=Adequate  SoilTemperature=interval(20,40)
+		   ( 0 0.5 0.3 0.2 ))	%  Season=Spring  Soil_Friability=Enhanced  SoilMoisture=Adequate  SoilTemperature=interval(40,50)
+		  (( 0 0.7 0.25 0.05 )	%  Season=Spring  Soil_Friability=Enhanced  SoilMoisture=Inadequate  SoilTemperature=interval(0,20)
+		   ( 0 0.5 0.3 0.2 )	%  Season=Spring  Soil_Friability=Enhanced  SoilMoisture=Inadequate  SoilTemperature=interval(20,40)
+		   ( 0 0.7 0.25 0.05 )))	%  Season=Spring  Soil_Friability=Enhanced  SoilMoisture=Inadequate  SoilTemperature=interval(40,50)
+		 ((( 0 0.4 0.45 0.15 )	%  Season=Spring  Soil_Friability=Satisfactory  SoilMoisture=Adequate  SoilTemperature=interval(0,20)
+		   ( 0 0.1 0.15 0.75 )	%  Season=Spring  Soil_Friability=Satisfactory  SoilMoisture=Adequate  SoilTemperature=interval(20,40)
+		   ( 0 0.6 0.25 0.15 ))	%  Season=Spring  Soil_Friability=Satisfactory  SoilMoisture=Adequate  SoilTemperature=interval(40,50)
+		  (( 0 0.8 0.18 0.02 )	%  Season=Spring  Soil_Friability=Satisfactory  SoilMoisture=Inadequate  SoilTemperature=interval(0,20)
+		   ( 0 0.6 0.25 0.15 )	%  Season=Spring  Soil_Friability=Satisfactory  SoilMoisture=Inadequate  SoilTemperature=interval(20,40)
+		   ( 0 0.8 0.18 0.02 )))	%  Season=Spring  Soil_Friability=Satisfactory  SoilMoisture=Inadequate  SoilTemperature=interval(40,50)
+		 ((( 0 0.5 0.4 0.1 )	%  Season=Spring  Soil_Friability=Inhibited  SoilMoisture=Adequate  SoilTemperature=interval(0,20)
+		   ( 0 0.5 0.3 0.2 )	%  Season=Spring  Soil_Friability=Inhibited  SoilMoisture=Adequate  SoilTemperature=interval(20,40)
+		   ( 0 0.5 0.4 0.1 ))	%  Season=Spring  Soil_Friability=Inhibited  SoilMoisture=Adequate  SoilTemperature=interval(40,50)
+		  (( 0 0.94 0.05 0.01 )	%  Season=Spring  Soil_Friability=Inhibited  SoilMoisture=Inadequate  SoilTemperature=interval(0,20)
+		   ( 0 0.7 0.25 0.05 )	%  Season=Spring  Soil_Friability=Inhibited  SoilMoisture=Inadequate  SoilTemperature=interval(20,40)
+		   ( 0 0.94 0.05 0.01 ))))	%  Season=Spring  Soil_Friability=Inhibited  SoilMoisture=Inadequate  SoilTemperature=interval(40,50)
+		(((( 0 0.3 0.5 0.2 )	%  Season=Summer  Soil_Friability=Enhanced  SoilMoisture=Adequate  SoilTemperature=interval(0,20)
+		   ( 0 0.05 0.15 0.8 )	%  Season=Summer  Soil_Friability=Enhanced  SoilMoisture=Adequate  SoilTemperature=interval(20,40)
+		   ( 0 0.5 0.3 0.2 ))	%  Season=Summer  Soil_Friability=Enhanced  SoilMoisture=Adequate  SoilTemperature=interval(40,50)
+		  (( 0 0.7 0.25 0.05 )	%  Season=Summer  Soil_Friability=Enhanced  SoilMoisture=Inadequate  SoilTemperature=interval(0,20)
+		   ( 0 0.5 0.3 0.2 )	%  Season=Summer  Soil_Friability=Enhanced  SoilMoisture=Inadequate  SoilTemperature=interval(20,40)
+		   ( 0 0.7 0.25 0.05 )))	%  Season=Summer  Soil_Friability=Enhanced  SoilMoisture=Inadequate  SoilTemperature=interval(40,50)
+		 ((( 0 0.4 0.45 0.15 )	%  Season=Summer  Soil_Friability=Satisfactory  SoilMoisture=Adequate  SoilTemperature=interval(0,20)
+		   ( 0 0.1 0.15 0.75 )	%  Season=Summer  Soil_Friability=Satisfactory  SoilMoisture=Adequate  SoilTemperature=interval(20,40)
+		   ( 0 0.6 0.25 0.15 ))	%  Season=Summer  Soil_Friability=Satisfactory  SoilMoisture=Adequate  SoilTemperature=interval(40,50)
+		  (( 0 0.8 0.18 0.02 )	%  Season=Summer  Soil_Friability=Satisfactory  SoilMoisture=Inadequate  SoilTemperature=interval(0,20)
+		   ( 0 0.6 0.25 0.15 )	%  Season=Summer  Soil_Friability=Satisfactory  SoilMoisture=Inadequate  SoilTemperature=interval(20,40)
+		   ( 0 0.8 0.18 0.02 )))	%  Season=Summer  Soil_Friability=Satisfactory  SoilMoisture=Inadequate  SoilTemperature=interval(40,50)
+		 ((( 0 0.5 0.4 0.1 )	%  Season=Summer  Soil_Friability=Inhibited  SoilMoisture=Adequate  SoilTemperature=interval(0,20)
+		   ( 0 0.5 0.3 0.2 )	%  Season=Summer  Soil_Friability=Inhibited  SoilMoisture=Adequate  SoilTemperature=interval(20,40)
+		   ( 0 0.5 0.4 0.1 ))	%  Season=Summer  Soil_Friability=Inhibited  SoilMoisture=Adequate  SoilTemperature=interval(40,50)
+		  (( 0 0.94 0.05 0.01 )	%  Season=Summer  Soil_Friability=Inhibited  SoilMoisture=Inadequate  SoilTemperature=interval(0,20)
+		   ( 0 0.7 0.25 0.05 )	%  Season=Summer  Soil_Friability=Inhibited  SoilMoisture=Inadequate  SoilTemperature=interval(20,40)
+		   ( 0 0.94 0.05 0.01 ))))	%  Season=Summer  Soil_Friability=Inhibited  SoilMoisture=Inadequate  SoilTemperature=interval(40,50)
+		(((( 1 0 0 0 )	%  Season=Autumn  Soil_Friability=Enhanced  SoilMoisture=Adequate  SoilTemperature=interval(0,20)
+		   ( 1 0 0 0 )	%  Season=Autumn  Soil_Friability=Enhanced  SoilMoisture=Adequate  SoilTemperature=interval(20,40)
+		   ( 1 0 0 0 ))	%  Season=Autumn  Soil_Friability=Enhanced  SoilMoisture=Adequate  SoilTemperature=interval(40,50)
+		  (( 1 0 0 0 )	%  Season=Autumn  Soil_Friability=Enhanced  SoilMoisture=Inadequate  SoilTemperature=interval(0,20)
+		   ( 1 0 0 0 )	%  Season=Autumn  Soil_Friability=Enhanced  SoilMoisture=Inadequate  SoilTemperature=interval(20,40)
+		   ( 1 0 0 0 )))	%  Season=Autumn  Soil_Friability=Enhanced  SoilMoisture=Inadequate  SoilTemperature=interval(40,50)
+		 ((( 1 0 0 0 )	%  Season=Autumn  Soil_Friability=Satisfactory  SoilMoisture=Adequate  SoilTemperature=interval(0,20)
+		   ( 1 0 0 0 )	%  Season=Autumn  Soil_Friability=Satisfactory  SoilMoisture=Adequate  SoilTemperature=interval(20,40)
+		   ( 1 0 0 0 ))	%  Season=Autumn  Soil_Friability=Satisfactory  SoilMoisture=Adequate  SoilTemperature=interval(40,50)
+		  (( 1 0 0 0 )	%  Season=Autumn  Soil_Friability=Satisfactory  SoilMoisture=Inadequate  SoilTemperature=interval(0,20)
+		   ( 1 0 0 0 )	%  Season=Autumn  Soil_Friability=Satisfactory  SoilMoisture=Inadequate  SoilTemperature=interval(20,40)
+		   ( 1 0 0 0 )))	%  Season=Autumn  Soil_Friability=Satisfactory  SoilMoisture=Inadequate  SoilTemperature=interval(40,50)
+		 ((( 1 0 0 0 )	%  Season=Autumn  Soil_Friability=Inhibited  SoilMoisture=Adequate  SoilTemperature=interval(0,20)
+		   ( 1 0 0 0 )	%  Season=Autumn  Soil_Friability=Inhibited  SoilMoisture=Adequate  SoilTemperature=interval(20,40)
+		   ( 1 0 0 0 ))	%  Season=Autumn  Soil_Friability=Inhibited  SoilMoisture=Adequate  SoilTemperature=interval(40,50)
+		  (( 1 0 0 0 )	%  Season=Autumn  Soil_Friability=Inhibited  SoilMoisture=Inadequate  SoilTemperature=interval(0,20)
+		   ( 1 0 0 0 )	%  Season=Autumn  Soil_Friability=Inhibited  SoilMoisture=Inadequate  SoilTemperature=interval(20,40)
+		   ( 1 0 0 0 ))))	%  Season=Autumn  Soil_Friability=Inhibited  SoilMoisture=Inadequate  SoilTemperature=interval(40,50)
+		(((( 1 0 0 0 )	%  Season=Winter  Soil_Friability=Enhanced  SoilMoisture=Adequate  SoilTemperature=interval(0,20)
+		   ( 1 0 0 0 )	%  Season=Winter  Soil_Friability=Enhanced  SoilMoisture=Adequate  SoilTemperature=interval(20,40)
+		   ( 1 0 0 0 ))	%  Season=Winter  Soil_Friability=Enhanced  SoilMoisture=Adequate  SoilTemperature=interval(40,50)
+		  (( 1 0 0 0 )	%  Season=Winter  Soil_Friability=Enhanced  SoilMoisture=Inadequate  SoilTemperature=interval(0,20)
+		   ( 1 0 0 0 )	%  Season=Winter  Soil_Friability=Enhanced  SoilMoisture=Inadequate  SoilTemperature=interval(20,40)
+		   ( 1 0 0 0 )))	%  Season=Winter  Soil_Friability=Enhanced  SoilMoisture=Inadequate  SoilTemperature=interval(40,50)
+		 ((( 1 0 0 0 )	%  Season=Winter  Soil_Friability=Satisfactory  SoilMoisture=Adequate  SoilTemperature=interval(0,20)
+		   ( 1 0 0 0 )	%  Season=Winter  Soil_Friability=Satisfactory  SoilMoisture=Adequate  SoilTemperature=interval(20,40)
+		   ( 1 0 0 0 ))	%  Season=Winter  Soil_Friability=Satisfactory  SoilMoisture=Adequate  SoilTemperature=interval(40,50)
+		  (( 1 0 0 0 )	%  Season=Winter  Soil_Friability=Satisfactory  SoilMoisture=Inadequate  SoilTemperature=interval(0,20)
+		   ( 1 0 0 0 )	%  Season=Winter  Soil_Friability=Satisfactory  SoilMoisture=Inadequate  SoilTemperature=interval(20,40)
+		   ( 1 0 0 0 )))	%  Season=Winter  Soil_Friability=Satisfactory  SoilMoisture=Inadequate  SoilTemperature=interval(40,50)
+		 ((( 1 0 0 0 )	%  Season=Winter  Soil_Friability=Inhibited  SoilMoisture=Adequate  SoilTemperature=interval(0,20)
+		   ( 1 0 0 0 )	%  Season=Winter  Soil_Friability=Inhibited  SoilMoisture=Adequate  SoilTemperature=interval(20,40)
+		   ( 1 0 0 0 ))	%  Season=Winter  Soil_Friability=Inhibited  SoilMoisture=Adequate  SoilTemperature=interval(40,50)
+		  (( 1 0 0 0 )	%  Season=Winter  Soil_Friability=Inhibited  SoilMoisture=Inadequate  SoilTemperature=interval(0,20)
+		   ( 1 0 0 0 )	%  Season=Winter  Soil_Friability=Inhibited  SoilMoisture=Inadequate  SoilTemperature=interval(20,40)
+		   ( 1 0 0 0 )))));	%  Season=Winter  Soil_Friability=Inhibited  SoilMoisture=Inadequate  SoilTemperature=interval(40,50)
+    }
+
+    potential (SoilMoisture)
+    {
+	data = ( 1 1 );
+    }
+
+    potential (Germ_Seeds | GP Input_Seeds)
+    {
+	model_nodes = ();
+	model_data = ( min (50, max (0, Input_Seeds * GP / 100)) );
+	data = ((( 1 0 0 0 0 )	%  GP=interval(0,0.0001)  Input_Seeds=interval(0,0.01)
+		 ( 1 0 0 0 0 )	%  GP=interval(0,0.0001)  Input_Seeds=interval(0.01,30)
+		 ( 1 0 0 0 0 )	%  GP=interval(0,0.0001)  Input_Seeds=interval(30,70)
+		 ( 1 0 0 0 0 )	%  GP=interval(0,0.0001)  Input_Seeds=interval(70,400)
+		 ( 1 0 0 0 0 ))	%  GP=interval(0,0.0001)  Input_Seeds=interval(400,700)
+		(( 1 0 0 0 0 )	%  GP=interval(0.0001,10)  Input_Seeds=interval(0,0.01)
+		 ( 0.0112 0.2784 0.7104 0 0 )	%  GP=interval(0.0001,10)  Input_Seeds=interval(0.01,30)
+		 ( 0 0.0512 0.8672 0.0816 0 )	%  GP=interval(0.0001,10)  Input_Seeds=interval(30,70)
+		 ( 0 0.0064 0.2576 0.6384 0.0976 )	%  GP=interval(0.0001,10)  Input_Seeds=interval(70,400)
+		 ( 0 0 0.0928 0.3712 0.536 ))	%  GP=interval(0.0001,10)  Input_Seeds=interval(400,700)
+		(( 1 0 0 0 0 )	%  GP=interval(10,50)  Input_Seeds=interval(0,0.01)
+		 ( 0 0.0336 0.592 0.3744 0 )	%  GP=interval(10,50)  Input_Seeds=interval(0.01,30)
+		 ( 0 0 0.0336 0.8656 0.1008 )	%  GP=interval(10,50)  Input_Seeds=interval(30,70)
+		 ( 0 0 0 0.104 0.896 )	%  GP=interval(10,50)  Input_Seeds=interval(70,400)
+		 ( 0 0 0 0 1 ))	%  GP=interval(10,50)  Input_Seeds=interval(400,700)
+		(( 1 0 0 0 0 )	%  GP=interval(50,100)  Input_Seeds=interval(0,0.01)
+		 ( 0 0 0.2304 0.7392 0.0304 )	%  GP=interval(50,100)  Input_Seeds=interval(0.01,30)
+		 ( 0 0 0 0.1424 0.8576 )	%  GP=interval(50,100)  Input_Seeds=interval(30,70)
+		 ( 0 0 0 0 1 )	%  GP=interval(50,100)  Input_Seeds=interval(70,400)
+		 ( 0 0 0 0 1 )));	%  GP=interval(50,100)  Input_Seeds=interval(400,700)
+    }
+
+    potential (Seed_Inc | Input_Basal SPR)
+    {
+	model_nodes = ();
+	model_data = ( min (700, max (0, Input_Basal / 100 * SPR)) );
+	data = ((( 1 0 0 0 0 )	%  Input_Basal=interval(0,0.01)  SPR=0 - 1
+		 ( 1 0 0 0 0 )	%  Input_Basal=interval(0,0.01)  SPR=interval(0.001,30)
+		 ( 1 0 0 0 0 )	%  Input_Basal=interval(0,0.01)  SPR=interval(30,70)
+		 ( 0.5136 0.4864 0 0 0 )	%  Input_Basal=interval(0,0.01)  SPR=interval(70,400)
+		 ( 0.1888 0.8112 0 0 0 ))	%  Input_Basal=interval(0,0.01)  SPR=1 - 2
+		(( 1 0 0 0 0 )	%  Input_Basal=interval(0.01,1)  SPR=0 - 1
+		 ( 0.1408 0.8592 0 0 0 )	%  Input_Basal=interval(0.01,1)  SPR=interval(0.001,30)
+		 ( 0.0032 0.9968 0 0 0 )	%  Input_Basal=interval(0.01,1)  SPR=interval(30,70)
+		 ( 0 1 0 0 0 )	%  Input_Basal=interval(0.01,1)  SPR=interval(70,400)
+		 ( 0 1 0 0 0 ))	%  Input_Basal=interval(0.01,1)  SPR=1 - 2
+		(( 1 0 0 0 0 )	%  Input_Basal=interval(1,5)  SPR=0 - 1
+		 ( 0.0064 0.9936 0 0 0 )	%  Input_Basal=interval(1,5)  SPR=interval(0.001,30)
+		 ( 0 1 0 0 0 )	%  Input_Basal=interval(1,5)  SPR=interval(30,70)
+		 ( 0 1 0 0 0 )	%  Input_Basal=interval(1,5)  SPR=interval(70,400)
+		 ( 0 0.968 0.032 0 0 ))	%  Input_Basal=interval(1,5)  SPR=1 - 2
+		(( 1 0 0 0 0 )	%  Input_Basal=interval(5,25)  SPR=0 - 1
+		 ( 0 1 0 0 0 )	%  Input_Basal=interval(5,25)  SPR=interval(0.001,30)
+		 ( 0 1 0 0 0 )	%  Input_Basal=interval(5,25)  SPR=interval(30,70)
+		 ( 0 0.488 0.4352 0.0768 0 )	%  Input_Basal=interval(5,25)  SPR=interval(70,400)
+		 ( 0 0.0352 0.3696 0.5952 0 ))	%  Input_Basal=interval(5,25)  SPR=1 - 2
+		(( 1 0 0 0 0 )	%  Input_Basal=interval(25,50)  SPR=0 - 1
+		 ( 0 1 0 0 0 )	%  Input_Basal=interval(25,50)  SPR=interval(0.001,30)
+		 ( 0 0.9616 0.0384 0 0 )	%  Input_Basal=interval(25,50)  SPR=interval(30,70)
+		 ( 0 0.0432 0.3328 0.624 0 )	%  Input_Basal=interval(25,50)  SPR=interval(70,400)
+		 ( 0 0 0 1 0 ))	%  Input_Basal=interval(25,50)  SPR=1 - 2
+		(( 1 0 0 0 0 )	%  Input_Basal=interval(50,75)  SPR=0 - 1
+		 ( 0 1 0 0 0 )	%  Input_Basal=interval(50,75)  SPR=interval(0.001,30)
+		 ( 0 0.464 0.536 0 0 )	%  Input_Basal=interval(50,75)  SPR=interval(30,70)
+		 ( 0 0 0.1312 0.8688 0 )	%  Input_Basal=interval(50,75)  SPR=interval(70,400)
+		 ( 0 0 0 0.7856 0.2144 ))	%  Input_Basal=interval(50,75)  SPR=1 - 2
+		(( 1 0 0 0 0 )	%  Input_Basal=interval(75,100)  SPR=0 - 1
+		 ( 0 1 0 0 0 )	%  Input_Basal=interval(75,100)  SPR=interval(0.001,30)
+		 ( 0 0.112 0.888 0 0 )	%  Input_Basal=interval(75,100)  SPR=interval(30,70)
+		 ( 0 0 0.0304 0.9696 0 )	%  Input_Basal=interval(75,100)  SPR=interval(70,400)
+		 ( 0 0 0 0.2032 0.7968 )));	%  Input_Basal=interval(75,100)  SPR=1 - 2
+    }
+
+    potential (Input_Seeds)
+    {
+	data = ( 1 1 1 1 1 );
+    }
+
+    potential (DP)
+    {
+	model_nodes = ();
+	model_data = ( truncate (0, Normal (21, 10), 40) );
+    }
+
+    potential (SI | Season)
+    {
+	data = (( 1 0 )	%  Season=Spring
+		( 99 1 )	%  Season=Summer
+		( 1 0 )	%  Season=Autumn
+		( 1 0 ));	%  Season=Winter
+    }
+
+    potential (Season)
+    {
+	data = ( 1 1 1 1 );
+    }
+
+    potential (Input_Basal)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (SPR | Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( 0,
+			Beta (2.5, 5, 0, 700),
+			0,
+			0 );
+	data = (( 1 0 0 0 0 )	%  Season=Spring
+		( 5.72267E-014 0.0078818 0.047452 0.856963 0.0877028 )	%  Season=Summer
+		( 1 0 0 0 0 )	%  Season=Autumn
+		( 1 0 0 0 0 ));	%  Season=Winter
+    }
+
+    potential (CCond | CSumIndex NL)
+    {
+	model_nodes = (NL);
+	model_data  = ( if (CSumIndex > 2, "Unfavourable", if (CSumIndex < 2, "Favourable", "Neutral")),
+			if (CSumIndex > 3, "Unfavourable", if (CSumIndex < 3, "Favourable", "Neutral")),
+			if (CSumIndex > 5, "Unfavourable", if (CSumIndex < 5, "Favourable", "Neutral")) );
+    }
+
+    potential (SoilTemperature)
+    {
+	data = ( 1 1 1 );
+    }
+
+    potential (Soil_Friability)
+    {
+	data = ( 1 1 1 );
+    }
+
+    potential (Cover_Inc | BCGD_C4PLCGR Input_Cover)
+    {
+	model_nodes = ();
+	samples_per_interval = 100;
+	model_data = ( min (100, max (0, Input_Cover * BCGD_C4PLCGR / 100)) );
+	data = ((( 1 0 0 0 0 0 0 )	%  BCGD_C4PLCGR=0 - 1  Input_Cover=interval(0,0.01)
+		 ( 1 0 0 0 0 0 0 )	%  BCGD_C4PLCGR=0 - 1  Input_Cover=interval(0.01,1)
+		 ( 1 0 0 0 0 0 0 )	%  BCGD_C4PLCGR=0 - 1  Input_Cover=interval(1,5)
+		 ( 1 0 0 0 0 0 0 )	%  BCGD_C4PLCGR=0 - 1  Input_Cover=interval(5,25)
+		 ( 1 0 0 0 0 0 0 )	%  BCGD_C4PLCGR=0 - 1  Input_Cover=interval(25,50)
+		 ( 1 0 0 0 0 0 0 )	%  BCGD_C4PLCGR=0 - 1  Input_Cover=interval(50,75)
+		 ( 1 0 0 0 0 0 0 ))	%  BCGD_C4PLCGR=0 - 1  Input_Cover=interval(75,100)
+		(( 1 0 0 0 0 0 0 )	%  BCGD_C4PLCGR=1 - 2  Input_Cover=interval(0,0.01)
+		 ( 0.5165 0.4835 0 0 0 0 0 )	%  BCGD_C4PLCGR=1 - 2  Input_Cover=interval(0.01,1)
+		 ( 0.0804 0.9196 0 0 0 0 0 )	%  BCGD_C4PLCGR=1 - 2  Input_Cover=interval(1,5)
+		 ( 0.0159 0.9574 0.0267 0 0 0 0 )	%  BCGD_C4PLCGR=1 - 2  Input_Cover=interval(5,25)
+		 ( 0.0054 0.549 0.4456 0 0 0 0 )	%  BCGD_C4PLCGR=1 - 2  Input_Cover=interval(25,50)
+		 ( 0 0.3243 0.6757 0 0 0 0 )	%  BCGD_C4PLCGR=1 - 2  Input_Cover=interval(50,75)
+		 ( 0 0.2299 0.7701 0 0 0 0 ))	%  BCGD_C4PLCGR=1 - 2  Input_Cover=interval(75,100)
+		(( 1 0 0 0 0 0 0 )	%  BCGD_C4PLCGR=interval(5,20)  Input_Cover=interval(0,0.01)
+		 ( 0.083 0.917 0 0 0 0 0 )	%  BCGD_C4PLCGR=interval(5,20)  Input_Cover=interval(0.01,1)
+		 ( 0 1 0 0 0 0 0 )	%  BCGD_C4PLCGR=interval(5,20)  Input_Cover=interval(1,5)
+		 ( 0 0.2123 0.7877 0 0 0 0 )	%  BCGD_C4PLCGR=interval(5,20)  Input_Cover=interval(5,25)
+		 ( 0 0 0.5909 0.4091 0 0 0 )	%  BCGD_C4PLCGR=interval(5,20)  Input_Cover=interval(25,50)
+		 ( 0 0 0.2075 0.7925 0 0 0 )	%  BCGD_C4PLCGR=interval(5,20)  Input_Cover=interval(50,75)
+		 ( 0 0 0.0502 0.9498 0 0 0 ))	%  BCGD_C4PLCGR=interval(5,20)  Input_Cover=interval(75,100)
+		(( 1 0 0 0 0 0 0 )	%  BCGD_C4PLCGR=interval(20,50)  Input_Cover=interval(0,0.01)
+		 ( 0.0204 0.9796 0 0 0 0 0 )	%  BCGD_C4PLCGR=interval(20,50)  Input_Cover=interval(0.01,1)
+		 ( 0 0.5134 0.4866 0 0 0 0 )	%  BCGD_C4PLCGR=interval(20,50)  Input_Cover=interval(1,5)
+		 ( 0 0 0.5134 0.4866 0 0 0 )	%  BCGD_C4PLCGR=interval(20,50)  Input_Cover=interval(5,25)
+		 ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCGR=interval(20,50)  Input_Cover=interval(25,50)
+		 ( 0 0 0 0.6848 0.3152 0 0 )	%  BCGD_C4PLCGR=interval(20,50)  Input_Cover=interval(50,75)
+		 ( 0 0 0 0.2923 0.7077 0 0 ))	%  BCGD_C4PLCGR=interval(20,50)  Input_Cover=interval(75,100)
+		(( 1 0 0 0 0 0 0 )	%  BCGD_C4PLCGR=interval(50,100)  Input_Cover=interval(0,0.01)
+		 ( 0.0034 0.9966 0 0 0 0 0 )	%  BCGD_C4PLCGR=interval(50,100)  Input_Cover=interval(0.01,1)
+		 ( 0 0.0965 0.9035 0 0 0 0 )	%  BCGD_C4PLCGR=interval(50,100)  Input_Cover=interval(1,5)
+		 ( 0 0 0.0965 0.9035 0 0 0 )	%  BCGD_C4PLCGR=interval(50,100)  Input_Cover=interval(5,25)
+		 ( 0 0 0 0.3861 0.6139 0 0 )	%  BCGD_C4PLCGR=interval(50,100)  Input_Cover=interval(25,50)
+		 ( 0 0 0 0 0.6224 0.3776 0 )	%  BCGD_C4PLCGR=interval(50,100)  Input_Cover=interval(50,75)
+		 ( 0 0 0 0 0.1507 0.5754 0.2739 ))	%  BCGD_C4PLCGR=interval(50,100)  Input_Cover=interval(75,100)
+		(( 0.4023 0.5977 0 0 0 0 0 )	%  BCGD_C4PLCGR=interval(100,500)  Input_Cover=interval(0,0.01)
+		 ( 0 0.396 0.604 0 0 0 0 )	%  BCGD_C4PLCGR=interval(100,500)  Input_Cover=interval(0.01,1)
+		 ( 0 0 0.2529 0.7471 0 0 0 )	%  BCGD_C4PLCGR=interval(100,500)  Input_Cover=interval(1,5)
+		 ( 0 0 0 0.2529 0.3827 0.218 0.1464 )	%  BCGD_C4PLCGR=interval(100,500)  Input_Cover=interval(5,25)
+		 ( 0 0 0 0 0.0965 0.1735 0.73 )	%  BCGD_C4PLCGR=interval(100,500)  Input_Cover=interval(25,50)
+		 ( 0 0 0 0 0 0.0539 0.9461 )	%  BCGD_C4PLCGR=interval(100,500)  Input_Cover=interval(50,75)
+		 ( 0 0 0 0 0 0 1 )));	%  BCGD_C4PLCGR=interval(100,500)  Input_Cover=interval(75,100)
+    }
+
+    potential (Cover_Dec | BCGD_C4PLCDR Input_Cover)
+    {
+	model_nodes = ();
+	model_data = ( min (20, max (0, Input_Cover * BCGD_C4PLCDR / 100)) );
+	data = ((( 1 0 0 0 0 )	%  BCGD_C4PLCDR=0 - 1  Input_Cover=interval(0,0.01)
+		 ( 1 0 0 0 0 )	%  BCGD_C4PLCDR=0 - 1  Input_Cover=interval(0.01,1)
+		 ( 0.4016 0.5984 0 0 0 )	%  BCGD_C4PLCDR=0 - 1  Input_Cover=interval(1,5)
+		 ( 0.08 0.92 0 0 0 )	%  BCGD_C4PLCDR=0 - 1  Input_Cover=interval(5,25)
+		 ( 0.04 0.96 0 0 0 )	%  BCGD_C4PLCDR=0 - 1  Input_Cover=interval(25,50)
+		 ( 0 1 0 0 0 )	%  BCGD_C4PLCDR=0 - 1  Input_Cover=interval(50,75)
+		 ( 0 1 0 0 0 ))	%  BCGD_C4PLCDR=0 - 1  Input_Cover=interval(75,100)
+		(( 1 0 0 0 0 )	%  BCGD_C4PLCDR=1 - 2  Input_Cover=interval(0,0.01)
+		 ( 0.3936 0.6064 0 0 0 )	%  BCGD_C4PLCDR=1 - 2  Input_Cover=interval(0.01,1)
+		 ( 0 1 0 0 0 )	%  BCGD_C4PLCDR=1 - 2  Input_Cover=interval(1,5)
+		 ( 0 0.9664 0.0336 0 0 )	%  BCGD_C4PLCDR=1 - 2  Input_Cover=interval(5,25)
+		 ( 0 0.44 0.56 0 0 )	%  BCGD_C4PLCDR=1 - 2  Input_Cover=interval(25,50)
+		 ( 0 0.1536 0.8464 0 0 )	%  BCGD_C4PLCDR=1 - 2  Input_Cover=interval(50,75)
+		 ( 0 0.0384 0.9616 0 0 ))	%  BCGD_C4PLCDR=1 - 2  Input_Cover=interval(75,100)
+		(( 1 0 0 0 0 )	%  BCGD_C4PLCDR=interval(5,10)  Input_Cover=interval(0,0.01)
+		 ( 0.1312 0.8688 0 0 0 )	%  BCGD_C4PLCDR=interval(5,10)  Input_Cover=interval(0.01,1)
+		 ( 0 1 0 0 0 )	%  BCGD_C4PLCDR=interval(5,10)  Input_Cover=interval(1,5)
+		 ( 0 0.44 0.56 0 0 )	%  BCGD_C4PLCDR=interval(5,10)  Input_Cover=interval(5,25)
+		 ( 0 0 1 0 0 )	%  BCGD_C4PLCDR=interval(5,10)  Input_Cover=interval(25,50)
+		 ( 0 0 0.6224 0.3776 0 )	%  BCGD_C4PLCDR=interval(5,10)  Input_Cover=interval(50,75)
+		 ( 0 0 0.1504 0.8496 0 ))	%  BCGD_C4PLCDR=interval(5,10)  Input_Cover=interval(75,100)
+		(( 1 0 0 0 0 )	%  BCGD_C4PLCDR=interval(10,25)  Input_Cover=interval(0,0.01)
+		 ( 0.0512 0.9488 0 0 0 )	%  BCGD_C4PLCDR=interval(10,25)  Input_Cover=interval(0.01,1)
+		 ( 0 0.9552 0.0448 0 0 )	%  BCGD_C4PLCDR=interval(10,25)  Input_Cover=interval(1,5)
+		 ( 0 0.064 0.8912 0.0448 0 )	%  BCGD_C4PLCDR=interval(10,25)  Input_Cover=interval(5,25)
+		 ( 0 0 0.2592 0.6688 0.072 )	%  BCGD_C4PLCDR=interval(10,25)  Input_Cover=interval(25,50)
+		 ( 0 0 0 0.4128 0.5872 )	%  BCGD_C4PLCDR=interval(10,25)  Input_Cover=interval(50,75)
+		 ( 0 0 0 0.1008 0.8992 )));	%  BCGD_C4PLCDR=interval(10,25)  Input_Cover=interval(75,100)
+    }
+
+    potential (Input_Cover)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Input_Dead)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Output_Seeds | Input_Seeds Seed_Inc Seed_Dec)
+    {
+	model_nodes = ();
+	model_data = ( min (600, max (0, Input_Seeds + Seed_Inc - Seed_Dec)) );
+	data = (((( 0.8336 0.1664 0 0 0 )	%  Input_Seeds=interval(0,0.01)  Seed_Inc=interval(0,0.01)  Seed_Dec=0 - 1
+		  ( 1 0 0 0 0 )	%  Input_Seeds=interval(0,0.01)  Seed_Inc=interval(0,0.01)  Seed_Dec=1 - 2
+		  ( 1 0 0 0 0 )	%  Input_Seeds=interval(0,0.01)  Seed_Inc=interval(0,0.01)  Seed_Dec=interval(30,70)
+		  ( 1 0 0 0 0 )	%  Input_Seeds=interval(0,0.01)  Seed_Inc=interval(0,0.01)  Seed_Dec=interval(70,100)
+		  ( 1 0 0 0 0 ))	%  Input_Seeds=interval(0,0.01)  Seed_Inc=interval(0,0.01)  Seed_Dec=interval(100,300)
+		 (( 0 1 0 0 0 )	%  Input_Seeds=interval(0,0.01)  Seed_Inc=interval(0.01,30)  Seed_Dec=0 - 1
+		  ( 0.52 0.48 0 0 0 )	%  Input_Seeds=interval(0,0.01)  Seed_Inc=interval(0.01,30)  Seed_Dec=1 - 2
+		  ( 1 0 0 0 0 )	%  Input_Seeds=interval(0,0.01)  Seed_Inc=interval(0.01,30)  Seed_Dec=interval(30,70)
+		  ( 1 0 0 0 0 )	%  Input_Seeds=interval(0,0.01)  Seed_Inc=interval(0.01,30)  Seed_Dec=interval(70,100)
+		  ( 1 0 0 0 0 ))	%  Input_Seeds=interval(0,0.01)  Seed_Inc=interval(0.01,30)  Seed_Dec=interval(100,300)
+		 (( 0 0 1 0 0 )	%  Input_Seeds=interval(0,0.01)  Seed_Inc=interval(30,70)  Seed_Dec=0 - 1
+		  ( 0 0.3744 0.6256 0 0 )	%  Input_Seeds=interval(0,0.01)  Seed_Inc=interval(30,70)  Seed_Dec=1 - 2
+		  ( 0.52 0.4464 0.0336 0 0 )	%  Input_Seeds=interval(0,0.01)  Seed_Inc=interval(30,70)  Seed_Dec=interval(30,70)
+		  ( 1 0 0 0 0 )	%  Input_Seeds=interval(0,0.01)  Seed_Inc=interval(30,70)  Seed_Dec=interval(70,100)
+		  ( 1 0 0 0 0 ))	%  Input_Seeds=interval(0,0.01)  Seed_Inc=interval(30,70)  Seed_Dec=interval(100,300)
+		 (( 0 0 0 1 0 )	%  Input_Seeds=interval(0,0.01)  Seed_Inc=interval(70,400)  Seed_Dec=0 - 1
+		  ( 0 0 0.044928 0.955072 0 )	%  Input_Seeds=interval(0,0.01)  Seed_Inc=interval(70,400)  Seed_Dec=1 - 2
+		  ( 0 0.0336 0.1184 0.848 0 )	%  Input_Seeds=interval(0,0.01)  Seed_Inc=interval(70,400)  Seed_Dec=interval(30,70)
+		  ( 0.0464 0.0864 0.1248 0.7424 0 )	%  Input_Seeds=interval(0,0.01)  Seed_Inc=interval(70,400)  Seed_Dec=interval(70,100)
+		  ( 0.3936 0.0912 0.1216 0.3936 0 ))	%  Input_Seeds=interval(0,0.01)  Seed_Inc=interval(70,400)  Seed_Dec=interval(100,300)
+		 (( 0 0 0 0 1 )	%  Input_Seeds=interval(0,0.01)  Seed_Inc=interval(400,700)  Seed_Dec=0 - 1
+		  ( 0 0 0 0.048 0.952 )	%  Input_Seeds=interval(0,0.01)  Seed_Inc=interval(400,700)  Seed_Dec=1 - 2
+		  ( 0 0 0 0.1664 0.8336 )	%  Input_Seeds=interval(0,0.01)  Seed_Inc=interval(400,700)  Seed_Dec=interval(30,70)
+		  ( 0 0 0 0.2816 0.7184 )	%  Input_Seeds=interval(0,0.01)  Seed_Inc=interval(400,700)  Seed_Dec=interval(70,100)
+		  ( 0 0 0 0.6672 0.3328 )))	%  Input_Seeds=interval(0,0.01)  Seed_Inc=interval(400,700)  Seed_Dec=interval(100,300)
+		((( 0 1 0 0 0 )	%  Input_Seeds=interval(0.01,30)  Seed_Inc=interval(0,0.01)  Seed_Dec=0 - 1
+		  ( 0.52 0.48 0 0 0 )	%  Input_Seeds=interval(0.01,30)  Seed_Inc=interval(0,0.01)  Seed_Dec=1 - 2
+		  ( 1 0 0 0 0 )	%  Input_Seeds=interval(0.01,30)  Seed_Inc=interval(0,0.01)  Seed_Dec=interval(30,70)
+		  ( 1 0 0 0 0 )	%  Input_Seeds=interval(0.01,30)  Seed_Inc=interval(0,0.01)  Seed_Dec=interval(70,100)
+		  ( 1 0 0 0 0 ))	%  Input_Seeds=interval(0.01,30)  Seed_Inc=interval(0,0.01)  Seed_Dec=interval(100,300)
+		 (( 0 0.48 0.52 0 0 )	%  Input_Seeds=interval(0.01,30)  Seed_Inc=interval(0.01,30)  Seed_Dec=0 - 1
+		  ( 0.1664 0.6672 0.1664 0 0 )	%  Input_Seeds=interval(0.01,30)  Seed_Inc=interval(0.01,30)  Seed_Dec=1 - 2
+		  ( 0.877504 0.122496 0 0 0 )	%  Input_Seeds=interval(0.01,30)  Seed_Inc=interval(0.01,30)  Seed_Dec=interval(30,70)
+		  ( 1 0 0 0 0 )	%  Input_Seeds=interval(0.01,30)  Seed_Inc=interval(0.01,30)  Seed_Dec=interval(70,100)
+		  ( 1 0 0 0 0 ))	%  Input_Seeds=interval(0.01,30)  Seed_Inc=interval(0.01,30)  Seed_Dec=interval(100,300)
+		 (( 0 0 0.6256 0.3744 0 )	%  Input_Seeds=interval(0.01,30)  Seed_Inc=interval(30,70)  Seed_Dec=0 - 1
+		  ( 0 0.122496 0.755008 0.122496 0 )	%  Input_Seeds=interval(0.01,30)  Seed_Inc=interval(30,70)  Seed_Dec=1 - 2
+		  ( 0.218304 0.563392 0.218304 0 0 )	%  Input_Seeds=interval(0.01,30)  Seed_Inc=interval(30,70)  Seed_Dec=interval(30,70)
+		  ( 0.877504 0.122496 0 0 0 )	%  Input_Seeds=interval(0.01,30)  Seed_Inc=interval(30,70)  Seed_Dec=interval(70,100)
+		  ( 1 0 0 0 0 ))	%  Input_Seeds=interval(0.01,30)  Seed_Inc=interval(30,70)  Seed_Dec=interval(100,300)
+		 (( 0 0 0 0.954944 0.045056 )	%  Input_Seeds=interval(0.01,30)  Seed_Inc=interval(70,400)  Seed_Dec=0 - 1
+		  ( 0 0 0.014464 0.971072 0.014464 )	%  Input_Seeds=interval(0.01,30)  Seed_Inc=interval(70,400)  Seed_Dec=1 - 2
+		  ( 0 0.010624 0.094848 0.894528 0 )	%  Input_Seeds=interval(0.01,30)  Seed_Inc=interval(70,400)  Seed_Dec=interval(30,70)
+		  ( 0.014464 0.076288 0.12 0.789248 0 )	%  Input_Seeds=interval(0.01,30)  Seed_Inc=interval(70,400)  Seed_Dec=interval(70,100)
+		  ( 0.348992 0.089856 0.121152 0.44 0 ))	%  Input_Seeds=interval(0.01,30)  Seed_Inc=interval(70,400)  Seed_Dec=interval(100,300)
+		 (( 0 0 0 0 1 )	%  Input_Seeds=interval(0.01,30)  Seed_Inc=interval(400,700)  Seed_Dec=0 - 1
+		  ( 0 0 0 0.01504 0.98496 )	%  Input_Seeds=interval(0.01,30)  Seed_Inc=interval(400,700)  Seed_Dec=1 - 2
+		  ( 0 0 0 0.116672 0.883328 )	%  Input_Seeds=interval(0.01,30)  Seed_Inc=interval(400,700)  Seed_Dec=interval(30,70)
+		  ( 0 0 0 0.234176 0.765824 )	%  Input_Seeds=interval(0.01,30)  Seed_Inc=interval(400,700)  Seed_Dec=interval(70,100)
+		  ( 0 0 0 0.617088 0.382912 )))	%  Input_Seeds=interval(0.01,30)  Seed_Inc=interval(400,700)  Seed_Dec=interval(100,300)
+		((( 0 0 1 0 0 )	%  Input_Seeds=interval(30,70)  Seed_Inc=interval(0,0.01)  Seed_Dec=0 - 1
+		  ( 0 0.3744 0.6256 0 0 )	%  Input_Seeds=interval(30,70)  Seed_Inc=interval(0,0.01)  Seed_Dec=1 - 2
+		  ( 0.52 0.4464 0.0336 0 0 )	%  Input_Seeds=interval(30,70)  Seed_Inc=interval(0,0.01)  Seed_Dec=interval(30,70)
+		  ( 1 0 0 0 0 )	%  Input_Seeds=interval(30,70)  Seed_Inc=interval(0,0.01)  Seed_Dec=interval(70,100)
+		  ( 1 0 0 0 0 ))	%  Input_Seeds=interval(30,70)  Seed_Inc=interval(0,0.01)  Seed_Dec=interval(100,300)
+		 (( 0 0 0.6256 0.3744 0 )	%  Input_Seeds=interval(30,70)  Seed_Inc=interval(0.01,30)  Seed_Dec=0 - 1
+		  ( 0 0.122496 0.755008 0.122496 0 )	%  Input_Seeds=interval(30,70)  Seed_Inc=interval(0.01,30)  Seed_Dec=1 - 2
+		  ( 0.218304 0.563392 0.218304 0 0 )	%  Input_Seeds=interval(30,70)  Seed_Inc=interval(0.01,30)  Seed_Dec=interval(30,70)
+		  ( 0.877504 0.122496 0 0 0 )	%  Input_Seeds=interval(30,70)  Seed_Inc=interval(0.01,30)  Seed_Dec=interval(70,100)
+		  ( 1 0 0 0 0 ))	%  Input_Seeds=interval(30,70)  Seed_Inc=interval(0.01,30)  Seed_Dec=interval(100,300)
+		 (( 0 0 0.0336 0.9664 0 )	%  Input_Seeds=interval(30,70)  Seed_Inc=interval(30,70)  Seed_Dec=0 - 1
+		  ( 0 0 0.218304 0.781696 0 )	%  Input_Seeds=interval(30,70)  Seed_Inc=interval(30,70)  Seed_Dec=1 - 2
+		  ( 0.00224 0.16416 0.6672 0.1664 0 )	%  Input_Seeds=interval(30,70)  Seed_Inc=interval(30,70)  Seed_Dec=interval(30,70)
+		  ( 0.218304 0.563392 0.218304 0 0 )	%  Input_Seeds=interval(30,70)  Seed_Inc=interval(30,70)  Seed_Dec=interval(70,100)
+		  ( 0.96704 0.032576 0.000384 0 0 ))	%  Input_Seeds=interval(30,70)  Seed_Inc=interval(30,70)  Seed_Dec=interval(100,300)
+		 (( 0 0 0 0.848 0.152 )	%  Input_Seeds=interval(30,70)  Seed_Inc=interval(70,400)  Seed_Dec=0 - 1
+		  ( 0 0 0 0.894528 0.105472 )	%  Input_Seeds=interval(30,70)  Seed_Inc=interval(70,400)  Seed_Dec=1 - 2
+		  ( 0 0 0.019072 0.961856 0.019072 )	%  Input_Seeds=interval(30,70)  Seed_Inc=interval(70,400)  Seed_Dec=interval(30,70)
+		  ( 0 0.010816 0.095104 0.89408 0 )	%  Input_Seeds=interval(30,70)  Seed_Inc=interval(70,400)  Seed_Dec=interval(70,100)
+		  ( 0.246208 0.087168 0.121152 0.545472 0 ))	%  Input_Seeds=interval(30,70)  Seed_Inc=interval(70,400)  Seed_Dec=interval(100,300)
+		 (( 0 0 0 0 1 )	%  Input_Seeds=interval(30,70)  Seed_Inc=interval(400,700)  Seed_Dec=0 - 1
+		  ( 0 0 0 0 1 )	%  Input_Seeds=interval(30,70)  Seed_Inc=interval(400,700)  Seed_Dec=1 - 2
+		  ( 0 0 0 0.021952 0.978048 )	%  Input_Seeds=interval(30,70)  Seed_Inc=interval(400,700)  Seed_Dec=interval(30,70)
+		  ( 0 0 0 0.116672 0.883328 )	%  Input_Seeds=interval(30,70)  Seed_Inc=interval(400,700)  Seed_Dec=interval(70,100)
+		  ( 0 0 0 0.498688 0.501312 )))	%  Input_Seeds=interval(30,70)  Seed_Inc=interval(400,700)  Seed_Dec=interval(100,300)
+		((( 0 0 0 1 0 )	%  Input_Seeds=interval(70,400)  Seed_Inc=interval(0,0.01)  Seed_Dec=0 - 1
+		  ( 0 0 0.044928 0.955072 0 )	%  Input_Seeds=interval(70,400)  Seed_Inc=interval(0,0.01)  Seed_Dec=1 - 2
+		  ( 0 0.0336 0.1184 0.848 0 )	%  Input_Seeds=interval(70,400)  Seed_Inc=interval(0,0.01)  Seed_Dec=interval(30,70)
+		  ( 0.0464 0.0864 0.1248 0.7424 0 )	%  Input_Seeds=interval(70,400)  Seed_Inc=interval(0,0.01)  Seed_Dec=interval(70,100)
+		  ( 0.3936 0.0912 0.1216 0.3936 0 ))	%  Input_Seeds=interval(70,400)  Seed_Inc=interval(0,0.01)  Seed_Dec=interval(100,300)
+		 (( 0 0 0 0.954944 0.045056 )	%  Input_Seeds=interval(70,400)  Seed_Inc=interval(0.01,30)  Seed_Dec=0 - 1
+		  ( 0 0 0.014464 0.971072 0.014464 )	%  Input_Seeds=interval(70,400)  Seed_Inc=interval(0.01,30)  Seed_Dec=1 - 2
+		  ( 0 0.010624 0.094848 0.894528 0 )	%  Input_Seeds=interval(70,400)  Seed_Inc=interval(0.01,30)  Seed_Dec=interval(30,70)
+		  ( 0.014464 0.076288 0.12 0.789248 0 )	%  Input_Seeds=interval(70,400)  Seed_Inc=interval(0.01,30)  Seed_Dec=interval(70,100)
+		  ( 0.348992 0.089856 0.121152 0.44 0 ))	%  Input_Seeds=interval(70,400)  Seed_Inc=interval(0.01,30)  Seed_Dec=interval(100,300)
+		 (( 0 0 0 0.848 0.152 )	%  Input_Seeds=interval(70,400)  Seed_Inc=interval(30,70)  Seed_Dec=0 - 1
+		  ( 0 0 0 0.894528 0.105472 )	%  Input_Seeds=interval(70,400)  Seed_Inc=interval(30,70)  Seed_Dec=1 - 2
+		  ( 0 0 0.019072 0.961856 0.019072 )	%  Input_Seeds=interval(70,400)  Seed_Inc=interval(30,70)  Seed_Dec=interval(30,70)
+		  ( 0 0.010816 0.095104 0.89408 0 )	%  Input_Seeds=interval(70,400)  Seed_Inc=interval(30,70)  Seed_Dec=interval(70,100)
+		  ( 0.246208 0.087168 0.121152 0.545472 0 ))	%  Input_Seeds=interval(70,400)  Seed_Inc=interval(30,70)  Seed_Dec=interval(100,300)
+		 (( 0 0 0 0.304 0.696 )	%  Input_Seeds=interval(70,400)  Seed_Inc=interval(70,400)  Seed_Dec=0 - 1
+		  ( 0 0 0 0.346944 0.653056 )	%  Input_Seeds=interval(70,400)  Seed_Inc=interval(70,400)  Seed_Dec=1 - 2
+		  ( 0 0 0 0.441344 0.558656 )	%  Input_Seeds=interval(70,400)  Seed_Inc=interval(70,400)  Seed_Dec=interval(30,70)
+		  ( 0 0 0.00128 0.54464 0.45408 )	%  Input_Seeds=interval(70,400)  Seed_Inc=interval(70,400)  Seed_Dec=interval(70,100)
+		  ( 0.031232 0.02144 0.040448 0.70816 0.19872 ))	%  Input_Seeds=interval(70,400)  Seed_Inc=interval(70,400)  Seed_Dec=interval(100,300)
+		 (( 0 0 0 0 1 )	%  Input_Seeds=interval(70,400)  Seed_Inc=interval(400,700)  Seed_Dec=0 - 1
+		  ( 0 0 0 0 1 )	%  Input_Seeds=interval(70,400)  Seed_Inc=interval(400,700)  Seed_Dec=1 - 2
+		  ( 0 0 0 0 1 )	%  Input_Seeds=interval(70,400)  Seed_Inc=interval(400,700)  Seed_Dec=interval(30,70)
+		  ( 0 0 0 0.001344 0.998656 )	%  Input_Seeds=interval(70,400)  Seed_Inc=interval(400,700)  Seed_Dec=interval(70,100)
+		  ( 0 0 0 0.102208 0.897792 )))	%  Input_Seeds=interval(70,400)  Seed_Inc=interval(400,700)  Seed_Dec=interval(100,300)
+		((( 0 0 0 0 1 )	%  Input_Seeds=interval(400,700)  Seed_Inc=interval(0,0.01)  Seed_Dec=0 - 1
+		  ( 0 0 0 0.048 0.952 )	%  Input_Seeds=interval(400,700)  Seed_Inc=interval(0,0.01)  Seed_Dec=1 - 2
+		  ( 0 0 0 0.1664 0.8336 )	%  Input_Seeds=interval(400,700)  Seed_Inc=interval(0,0.01)  Seed_Dec=interval(30,70)
+		  ( 0 0 0 0.2816 0.7184 )	%  Input_Seeds=interval(400,700)  Seed_Inc=interval(0,0.01)  Seed_Dec=interval(70,100)
+		  ( 0 0 0 0.6672 0.3328 ))	%  Input_Seeds=interval(400,700)  Seed_Inc=interval(0,0.01)  Seed_Dec=interval(100,300)
+		 (( 0 0 0 0 1 )	%  Input_Seeds=interval(400,700)  Seed_Inc=interval(0.01,30)  Seed_Dec=0 - 1
+		  ( 0 0 0 0.01504 0.98496 )	%  Input_Seeds=interval(400,700)  Seed_Inc=interval(0.01,30)  Seed_Dec=1 - 2
+		  ( 0 0 0 0.116672 0.883328 )	%  Input_Seeds=interval(400,700)  Seed_Inc=interval(0.01,30)  Seed_Dec=interval(30,70)
+		  ( 0 0 0 0.234176 0.765824 )	%  Input_Seeds=interval(400,700)  Seed_Inc=interval(0.01,30)  Seed_Dec=interval(70,100)
+		  ( 0 0 0 0.617088 0.382912 ))	%  Input_Seeds=interval(400,700)  Seed_Inc=interval(0.01,30)  Seed_Dec=interval(100,300)
+		 (( 0 0 0 0 1 )	%  Input_Seeds=interval(400,700)  Seed_Inc=interval(30,70)  Seed_Dec=0 - 1
+		  ( 0 0 0 0 1 )	%  Input_Seeds=interval(400,700)  Seed_Inc=interval(30,70)  Seed_Dec=1 - 2
+		  ( 0 0 0 0.021952 0.978048 )	%  Input_Seeds=interval(400,700)  Seed_Inc=interval(30,70)  Seed_Dec=interval(30,70)
+		  ( 0 0 0 0.116672 0.883328 )	%  Input_Seeds=interval(400,700)  Seed_Inc=interval(30,70)  Seed_Dec=interval(70,100)
+		  ( 0 0 0 0.498688 0.501312 ))	%  Input_Seeds=interval(400,700)  Seed_Inc=interval(30,70)  Seed_Dec=interval(100,300)
+		 (( 0 0 0 0 1 )	%  Input_Seeds=interval(400,700)  Seed_Inc=interval(70,400)  Seed_Dec=0 - 1
+		  ( 0 0 0 0 1 )	%  Input_Seeds=interval(400,700)  Seed_Inc=interval(70,400)  Seed_Dec=1 - 2
+		  ( 0 0 0 0 1 )	%  Input_Seeds=interval(400,700)  Seed_Inc=interval(70,400)  Seed_Dec=interval(30,70)
+		  ( 0 0 0 0.001344 0.998656 )	%  Input_Seeds=interval(400,700)  Seed_Inc=interval(70,400)  Seed_Dec=interval(70,100)
+		  ( 0 0 0 0.102208 0.897792 ))	%  Input_Seeds=interval(400,700)  Seed_Inc=interval(70,400)  Seed_Dec=interval(100,300)
+		 (( 0 0 0 0 1 )	%  Input_Seeds=interval(400,700)  Seed_Inc=interval(400,700)  Seed_Dec=0 - 1
+		  ( 0 0 0 0 1 )	%  Input_Seeds=interval(400,700)  Seed_Inc=interval(400,700)  Seed_Dec=1 - 2
+		  ( 0 0 0 0 1 )	%  Input_Seeds=interval(400,700)  Seed_Inc=interval(400,700)  Seed_Dec=interval(30,70)
+		  ( 0 0 0 0 1 )	%  Input_Seeds=interval(400,700)  Seed_Inc=interval(400,700)  Seed_Dec=interval(70,100)
+		  ( 0 0 0 0 1 ))));	%  Input_Seeds=interval(400,700)  Seed_Inc=interval(400,700)  Seed_Dec=interval(100,300)
+    }
+
+    potential (Output_Cover | BCGD_C4PLCCR Output_Basal Input_Cover)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (Output_Basal, Input_Cover * (1 + BCGD_C4PLCCR / 100))) );
+	data = (((( 1 0 0 0 0 0 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(0,0.01)  Input_Cover=interval(0,0.01)
+		  ( 0 1 0 0 0 0 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(0,0.01)  Input_Cover=interval(0.01,1)
+		  ( 0 0.0544 0.9456 0 0 0 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(0,0.01)  Input_Cover=interval(1,5)
+		  ( 0 0 0.0544 0.9456 0 0 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(0,0.01)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0.2144 0.7856 0 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(0,0.01)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0.4288 0.5712 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(0,0.01)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0.6496 0.3504 ))	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(0,0.01)  Input_Cover=interval(75,100)
+		 (( 0 1 0 0 0 0 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(0.01,1)  Input_Cover=interval(0,0.01)
+		  ( 0 1 0 0 0 0 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(0.01,1)  Input_Cover=interval(0.01,1)
+		  ( 0 0.0544 0.9456 0 0 0 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(0.01,1)  Input_Cover=interval(1,5)
+		  ( 0 0 0.0544 0.9456 0 0 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(0.01,1)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0.2144 0.7856 0 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(0.01,1)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0.4288 0.5712 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(0.01,1)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0.6496 0.3504 ))	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(0.01,1)  Input_Cover=interval(75,100)
+		 (( 0 0 1 0 0 0 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(1,5)  Input_Cover=interval(0,0.01)
+		  ( 0 0 1 0 0 0 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(1,5)  Input_Cover=interval(0.01,1)
+		  ( 0 0 1 0 0 0 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(1,5)  Input_Cover=interval(1,5)
+		  ( 0 0 0.0544 0.9456 0 0 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(1,5)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0.2144 0.7856 0 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(1,5)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0.4288 0.5712 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(1,5)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0.6496 0.3504 ))	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(1,5)  Input_Cover=interval(75,100)
+		 (( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(5,25)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(5,25)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(5,25)  Input_Cover=interval(1,5)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(5,25)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0.2144 0.7856 0 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(5,25)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0.4288 0.5712 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(5,25)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0.6496 0.3504 ))	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(5,25)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(25,50)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(25,50)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(25,50)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(25,50)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(25,50)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0.4288 0.5712 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(25,50)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0.6496 0.3504 ))	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(25,50)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(50,75)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(50,75)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(50,75)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(50,75)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(50,75)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(50,75)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0.6496 0.3504 ))	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(50,75)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(75,100)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(75,100)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(75,100)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(75,100)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(75,100)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(75,100)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 )))	%  BCGD_C4PLCCR=interval(-25,-10)  Output_Basal=interval(75,100)  Input_Cover=interval(75,100)
+		((( 1 0 0 0 0 0 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(0,0.01)  Input_Cover=interval(0,0.01)
+		  ( 0 1 0 0 0 0 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(0,0.01)  Input_Cover=interval(0.01,1)
+		  ( 0 0.0208 0.9792 0 0 0 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(0,0.01)  Input_Cover=interval(1,5)
+		  ( 0 0 0.0208 0.9792 0 0 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(0,0.01)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0.0832 0.9168 0 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(0,0.01)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0.1616 0.8384 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(0,0.01)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0.2448 0.7552 ))	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(0,0.01)  Input_Cover=interval(75,100)
+		 (( 0 1 0 0 0 0 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(0.01,1)  Input_Cover=interval(0,0.01)
+		  ( 0 1 0 0 0 0 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(0.01,1)  Input_Cover=interval(0.01,1)
+		  ( 0 0.0208 0.9792 0 0 0 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(0.01,1)  Input_Cover=interval(1,5)
+		  ( 0 0 0.0208 0.9792 0 0 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(0.01,1)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0.0832 0.9168 0 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(0.01,1)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0.1616 0.8384 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(0.01,1)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0.2448 0.7552 ))	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(0.01,1)  Input_Cover=interval(75,100)
+		 (( 0 0 1 0 0 0 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(1,5)  Input_Cover=interval(0,0.01)
+		  ( 0 0 1 0 0 0 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(1,5)  Input_Cover=interval(0.01,1)
+		  ( 0 0 1 0 0 0 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(1,5)  Input_Cover=interval(1,5)
+		  ( 0 0 0.0208 0.9792 0 0 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(1,5)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0.0832 0.9168 0 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(1,5)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0.1616 0.8384 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(1,5)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0.2448 0.7552 ))	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(1,5)  Input_Cover=interval(75,100)
+		 (( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(5,25)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(5,25)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(5,25)  Input_Cover=interval(1,5)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(5,25)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0.0832 0.9168 0 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(5,25)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0.1616 0.8384 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(5,25)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0.2448 0.7552 ))	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(5,25)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(25,50)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(25,50)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(25,50)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(25,50)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(25,50)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0.1616 0.8384 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(25,50)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0.2448 0.7552 ))	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(25,50)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(50,75)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(50,75)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(50,75)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(50,75)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(50,75)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(50,75)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0.2448 0.7552 ))	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(50,75)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(75,100)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(75,100)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(75,100)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(75,100)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(75,100)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(75,100)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 )))	%  BCGD_C4PLCCR=interval(-10,-5)  Output_Basal=interval(75,100)  Input_Cover=interval(75,100)
+		((( 1 0 0 0 0 0 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(0,0.01)  Input_Cover=interval(0,0.01)
+		  ( 0 1 0 0 0 0 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(0,0.01)  Input_Cover=interval(0.01,1)
+		  ( 0 0 1 0 0 0 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(0,0.01)  Input_Cover=interval(1,5)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(0,0.01)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0.0304 0.9696 0 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(0,0.01)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0.0624 0.9376 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(0,0.01)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0.0928 0.9072 ))	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(0,0.01)  Input_Cover=interval(75,100)
+		 (( 0 1 0 0 0 0 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(0.01,1)  Input_Cover=interval(0,0.01)
+		  ( 0 1 0 0 0 0 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(0.01,1)  Input_Cover=interval(0.01,1)
+		  ( 0 0 1 0 0 0 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(0.01,1)  Input_Cover=interval(1,5)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(0.01,1)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0.0304 0.9696 0 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(0.01,1)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0.0624 0.9376 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(0.01,1)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0.0928 0.9072 ))	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(0.01,1)  Input_Cover=interval(75,100)
+		 (( 0 0 1 0 0 0 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(1,5)  Input_Cover=interval(0,0.01)
+		  ( 0 0 1 0 0 0 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(1,5)  Input_Cover=interval(0.01,1)
+		  ( 0 0 1 0 0 0 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(1,5)  Input_Cover=interval(1,5)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(1,5)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0.0304 0.9696 0 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(1,5)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0.0624 0.9376 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(1,5)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0.0928 0.9072 ))	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(1,5)  Input_Cover=interval(75,100)
+		 (( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(5,25)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(5,25)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(5,25)  Input_Cover=interval(1,5)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(5,25)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0.0304 0.9696 0 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(5,25)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0.0624 0.9376 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(5,25)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0.0928 0.9072 ))	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(5,25)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(25,50)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(25,50)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(25,50)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(25,50)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(25,50)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0.0624 0.9376 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(25,50)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0.0928 0.9072 ))	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(25,50)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(50,75)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(50,75)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(50,75)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(50,75)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(50,75)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(50,75)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0.0928 0.9072 ))	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(50,75)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(75,100)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(75,100)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(75,100)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(75,100)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(75,100)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(75,100)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 )))	%  BCGD_C4PLCCR=0 - 1  Output_Basal=interval(75,100)  Input_Cover=interval(75,100)
+		((( 1 0 0 0 0 0 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(0,0.01)  Input_Cover=interval(0,0.01)
+		  ( 0 1 0 0 0 0 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(0,0.01)  Input_Cover=interval(0.01,1)
+		  ( 0 0 1 0 0 0 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(0,0.01)  Input_Cover=interval(1,5)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(0,0.01)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(0,0.01)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0.9936 0.0064 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(0,0.01)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0.0064 0.9936 ))	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(0,0.01)  Input_Cover=interval(75,100)
+		 (( 0 1 0 0 0 0 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(0.01,1)  Input_Cover=interval(0,0.01)
+		  ( 0 1 0 0 0 0 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(0.01,1)  Input_Cover=interval(0.01,1)
+		  ( 0 0 1 0 0 0 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(0.01,1)  Input_Cover=interval(1,5)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(0.01,1)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(0.01,1)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0.9936 0.0064 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(0.01,1)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0.0064 0.9936 ))	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(0.01,1)  Input_Cover=interval(75,100)
+		 (( 0 0 1 0 0 0 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(1,5)  Input_Cover=interval(0,0.01)
+		  ( 0 0 1 0 0 0 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(1,5)  Input_Cover=interval(0.01,1)
+		  ( 0 0 1 0 0 0 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(1,5)  Input_Cover=interval(1,5)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(1,5)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(1,5)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0.9936 0.0064 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(1,5)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0.0064 0.9936 ))	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(1,5)  Input_Cover=interval(75,100)
+		 (( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(5,25)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(5,25)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(5,25)  Input_Cover=interval(1,5)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(5,25)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(5,25)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0.9936 0.0064 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(5,25)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0.0064 0.9936 ))	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(5,25)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(25,50)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(25,50)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(25,50)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(25,50)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(25,50)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0.9936 0.0064 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(25,50)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0.0064 0.9936 ))	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(25,50)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(50,75)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(50,75)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(50,75)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(50,75)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(50,75)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0.9936 0.0064 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(50,75)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0.0064 0.9936 ))	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(50,75)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(75,100)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(75,100)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(75,100)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(75,100)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(75,100)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(75,100)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 )))	%  BCGD_C4PLCCR=1 - 2  Output_Basal=interval(75,100)  Input_Cover=interval(75,100)
+		((( 0.9712 0.0288 0 0 0 0 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(0,0.01)  Input_Cover=interval(0,0.01)
+		  ( 0 0.9696 0.0304 0 0 0 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(0,0.01)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0.9664 0.0336 0 0 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(0,0.01)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0.9664 0.0336 0 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(0,0.01)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0.9408 0.0592 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(0,0.01)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0.9136 0.0864 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(0,0.01)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(0,0.01)  Input_Cover=interval(75,100)
+		 (( 0 1 0 0 0 0 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(0.01,1)  Input_Cover=interval(0,0.01)
+		  ( 0 0.9696 0.0304 0 0 0 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(0.01,1)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0.9664 0.0336 0 0 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(0.01,1)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0.9664 0.0336 0 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(0.01,1)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0.9408 0.0592 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(0.01,1)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0.9136 0.0864 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(0.01,1)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(0.01,1)  Input_Cover=interval(75,100)
+		 (( 0 0 1 0 0 0 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(1,5)  Input_Cover=interval(0,0.01)
+		  ( 0 0 1 0 0 0 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(1,5)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0.9664 0.0336 0 0 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(1,5)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0.9664 0.0336 0 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(1,5)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0.9408 0.0592 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(1,5)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0.9136 0.0864 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(1,5)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(1,5)  Input_Cover=interval(75,100)
+		 (( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(5,25)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(5,25)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(5,25)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0.9664 0.0336 0 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(5,25)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0.9408 0.0592 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(5,25)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0.9136 0.0864 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(5,25)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(5,25)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(25,50)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(25,50)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(25,50)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(25,50)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0.9408 0.0592 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(25,50)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0.9136 0.0864 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(25,50)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(25,50)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(50,75)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(50,75)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(50,75)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(50,75)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(50,75)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0.9136 0.0864 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(50,75)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(50,75)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(75,100)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(75,100)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(75,100)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(75,100)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(75,100)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(75,100)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 )))	%  BCGD_C4PLCCR=interval(1,5)  Output_Basal=interval(75,100)  Input_Cover=interval(75,100)
+		((( 0.8896 0.1104 0 0 0 0 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(0,0.01)  Input_Cover=interval(0,0.01)
+		  ( 0 0.888 0.112 0 0 0 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(0,0.01)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0.8624 0.1376 0 0 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(0,0.01)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0.8624 0.1376 0 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(0,0.01)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0.7792 0.2208 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(0,0.01)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0.6704 0.3296 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(0,0.01)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(0,0.01)  Input_Cover=interval(75,100)
+		 (( 0 1 0 0 0 0 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(0.01,1)  Input_Cover=interval(0,0.01)
+		  ( 0 0.888 0.112 0 0 0 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(0.01,1)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0.8624 0.1376 0 0 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(0.01,1)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0.8624 0.1376 0 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(0.01,1)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0.7792 0.2208 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(0.01,1)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0.6704 0.3296 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(0.01,1)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(0.01,1)  Input_Cover=interval(75,100)
+		 (( 0 0 1 0 0 0 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(1,5)  Input_Cover=interval(0,0.01)
+		  ( 0 0 1 0 0 0 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(1,5)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0.8624 0.1376 0 0 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(1,5)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0.8624 0.1376 0 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(1,5)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0.7792 0.2208 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(1,5)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0.6704 0.3296 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(1,5)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(1,5)  Input_Cover=interval(75,100)
+		 (( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(5,25)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(5,25)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(5,25)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0.8624 0.1376 0 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(5,25)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0.7792 0.2208 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(5,25)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0.6704 0.3296 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(5,25)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(5,25)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(25,50)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(25,50)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(25,50)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(25,50)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0.7792 0.2208 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(25,50)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0.6704 0.3296 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(25,50)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(25,50)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(50,75)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(50,75)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(50,75)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(50,75)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(50,75)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0.6704 0.3296 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(50,75)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(50,75)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(75,100)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(75,100)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(75,100)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(75,100)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(75,100)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(75,100)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 )))	%  BCGD_C4PLCCR=interval(5,20)  Output_Basal=interval(75,100)  Input_Cover=interval(75,100)
+		((( 0.7456 0.2544 0 0 0 0 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(0,0.01)  Input_Cover=interval(0,0.01)
+		  ( 0 0.7424 0.2576 0 0 0 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(0,0.01)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0.68 0.32 0 0 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(0,0.01)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0.68 0.32 0 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(0,0.01)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0.4848 0.5152 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(0,0.01)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0.2336 0.7664 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(0,0.01)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(0,0.01)  Input_Cover=interval(75,100)
+		 (( 0 1 0 0 0 0 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(0.01,1)  Input_Cover=interval(0,0.01)
+		  ( 0 0.7424 0.2576 0 0 0 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(0.01,1)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0.68 0.32 0 0 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(0.01,1)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0.68 0.32 0 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(0.01,1)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0.4848 0.5152 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(0.01,1)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0.2336 0.7664 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(0.01,1)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(0.01,1)  Input_Cover=interval(75,100)
+		 (( 0 0 1 0 0 0 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(1,5)  Input_Cover=interval(0,0.01)
+		  ( 0 0 1 0 0 0 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(1,5)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0.68 0.32 0 0 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(1,5)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0.68 0.32 0 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(1,5)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0.4848 0.5152 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(1,5)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0.2336 0.7664 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(1,5)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(1,5)  Input_Cover=interval(75,100)
+		 (( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(5,25)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(5,25)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(5,25)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0.68 0.32 0 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(5,25)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0.4848 0.5152 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(5,25)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0.2336 0.7664 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(5,25)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(5,25)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(25,50)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(25,50)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(25,50)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(25,50)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0.4848 0.5152 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(25,50)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0.2336 0.7664 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(25,50)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(25,50)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(50,75)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(50,75)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(50,75)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(50,75)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(50,75)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0.2336 0.7664 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(50,75)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(50,75)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(75,100)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(75,100)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(75,100)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(75,100)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(75,100)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(75,100)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 )))	%  BCGD_C4PLCCR=interval(20,50)  Output_Basal=interval(75,100)  Input_Cover=interval(75,100)
+		((( 0.5776 0.4224 0 0 0 0 0 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(0,0.01)  Input_Cover=interval(0,0.01)
+		  ( 0 0.5712 0.4288 0 0 0 0 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(0,0.01)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0.4672 0.5328 0 0 0 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(0,0.01)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0.4672 0.5328 0 0 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(0,0.01)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0.1504 0.5744 0.2752 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(0,0.01)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(0,0.01)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(0,0.01)  Input_Cover=interval(75,100)
+		 (( 0 1 0 0 0 0 0 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(0.01,1)  Input_Cover=interval(0,0.01)
+		  ( 0 0.5712 0.4288 0 0 0 0 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(0.01,1)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0.4672 0.5328 0 0 0 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(0.01,1)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0.4672 0.5328 0 0 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(0.01,1)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0.1504 0.5744 0.2752 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(0.01,1)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(0.01,1)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(0.01,1)  Input_Cover=interval(75,100)
+		 (( 0 0 1 0 0 0 0 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(1,5)  Input_Cover=interval(0,0.01)
+		  ( 0 0 1 0 0 0 0 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(1,5)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0.4672 0.5328 0 0 0 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(1,5)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0.4672 0.5328 0 0 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(1,5)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0.1504 0.5744 0.2752 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(1,5)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(1,5)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(1,5)  Input_Cover=interval(75,100)
+		 (( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(5,25)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(5,25)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(5,25)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0.4672 0.5328 0 0 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(5,25)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0.1504 0.5744 0.2752 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(5,25)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(5,25)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(5,25)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(25,50)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(25,50)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(25,50)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(25,50)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0.1504 0.5744 0.2752 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(25,50)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(25,50)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(25,50)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(50,75)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(50,75)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(50,75)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(50,75)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0 0.7248 0.2752 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(50,75)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(50,75)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(50,75)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(75,100)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(75,100)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(75,100)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(75,100)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(75,100)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(75,100)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 )))	%  BCGD_C4PLCCR=interval(50,100)  Output_Basal=interval(75,100)  Input_Cover=interval(75,100)
+		((( 0.2736 0.7264 0 0 0 0 0 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(0,0.01)  Input_Cover=interval(0,0.01)
+		  ( 0 0.2688 0.7088 0.0224 0 0 0 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(0,0.01)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0.1008 0.8704 0.0288 0 0 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(0,0.01)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0.1008 0.336 0.2752 0.288 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(0,0.01)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0 0.0528 0.9472 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(0,0.01)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(0,0.01)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(0,0.01)  Input_Cover=interval(75,100)
+		 (( 0 1 0 0 0 0 0 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(0.01,1)  Input_Cover=interval(0,0.01)
+		  ( 0 0.2688 0.7088 0.0224 0 0 0 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(0.01,1)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0.1008 0.8704 0.0288 0 0 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(0.01,1)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0.1008 0.336 0.2752 0.288 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(0.01,1)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0 0.0528 0.9472 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(0.01,1)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(0.01,1)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(0.01,1)  Input_Cover=interval(75,100)
+		 (( 0 0 1 0 0 0 0 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(1,5)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0.9776 0.0224 0 0 0 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(1,5)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0.1008 0.8704 0.0288 0 0 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(1,5)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0.1008 0.336 0.2752 0.288 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(1,5)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0 0.0528 0.9472 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(1,5)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(1,5)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(1,5)  Input_Cover=interval(75,100)
+		 (( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(5,25)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 1 0 0 0 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(5,25)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0.9712 0.0288 0 0 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(5,25)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0.1008 0.336 0.2752 0.288 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(5,25)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0 0.0528 0.9472 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(5,25)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(5,25)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(5,25)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(25,50)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(25,50)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 1 0 0 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(25,50)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 0.4368 0.2752 0.288 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(25,50)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0 0.0528 0.9472 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(25,50)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(25,50)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(25,50)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(50,75)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(50,75)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 0 1 0 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(50,75)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 0 0.712 0.288 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(50,75)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0 0.0528 0.9472 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(50,75)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(50,75)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(50,75)  Input_Cover=interval(75,100)
+		 (( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(75,100)  Input_Cover=interval(0,0.01)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(75,100)  Input_Cover=interval(0.01,1)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(75,100)  Input_Cover=interval(1,5)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(75,100)  Input_Cover=interval(5,25)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(75,100)  Input_Cover=interval(25,50)
+		  ( 0 0 0 0 0 0 1 )	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(75,100)  Input_Cover=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))));	%  BCGD_C4PLCCR=interval(100,500)  Output_Basal=interval(75,100)  Input_Cover=interval(75,100)
+    }
+
+    potential (Output_Dead | Input_Dead Cover_Dec Dead_Dec)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, Input_Dead + Cover_Dec - Dead_Dec)) );
+	data = (((( 0.8336 0.1664 0 0 0 0 0 )	%  Input_Dead=interval(0,0.01)  Cover_Dec=0 - 1  Dead_Dec=0 - 1
+		  ( 1 0 0 0 0 0 0 )	%  Input_Dead=interval(0,0.01)  Cover_Dec=0 - 1  Dead_Dec=1 - 2
+		  ( 1 0 0 0 0 0 0 )	%  Input_Dead=interval(0,0.01)  Cover_Dec=0 - 1  Dead_Dec=interval(1,5)
+		  ( 1 0 0 0 0 0 0 ))	%  Input_Dead=interval(0,0.01)  Cover_Dec=0 - 1  Dead_Dec=interval(5,25)
+		 (( 0 1 0 0 0 0 0 )	%  Input_Dead=interval(0,0.01)  Cover_Dec=1 - 2  Dead_Dec=0 - 1
+		  ( 0.52 0.48 0 0 0 0 0 )	%  Input_Dead=interval(0,0.01)  Cover_Dec=1 - 2  Dead_Dec=1 - 2
+		  ( 1 0 0 0 0 0 0 )	%  Input_Dead=interval(0,0.01)  Cover_Dec=1 - 2  Dead_Dec=interval(1,5)
+		  ( 1 0 0 0 0 0 0 ))	%  Input_Dead=interval(0,0.01)  Cover_Dec=1 - 2  Dead_Dec=interval(5,25)
+		 (( 0 0 1 0 0 0 0 )	%  Input_Dead=interval(0,0.01)  Cover_Dec=interval(1,5)  Dead_Dec=0 - 1
+		  ( 0 0.1248 0.8752 0 0 0 0 )	%  Input_Dead=interval(0,0.01)  Cover_Dec=interval(1,5)  Dead_Dec=1 - 2
+		  ( 0.52 0.2064 0.2736 0 0 0 0 )	%  Input_Dead=interval(0,0.01)  Cover_Dec=interval(1,5)  Dead_Dec=interval(1,5)
+		  ( 1 0 0 0 0 0 0 ))	%  Input_Dead=interval(0,0.01)  Cover_Dec=interval(1,5)  Dead_Dec=interval(5,25)
+		 (( 0 0 0 1 0 0 0 )	%  Input_Dead=interval(0,0.01)  Cover_Dec=interval(5,10)  Dead_Dec=0 - 1
+		  ( 0 0 0.099904 0.900096 0 0 0 )	%  Input_Dead=interval(0,0.01)  Cover_Dec=interval(5,10)  Dead_Dec=1 - 2
+		  ( 0 0.0256 0.5744 0.4 0 0 0 )	%  Input_Dead=interval(0,0.01)  Cover_Dec=interval(5,10)  Dead_Dec=interval(1,5)
+		  ( 0.8752 0.0448 0.08 0 0 0 0 ))	%  Input_Dead=interval(0,0.01)  Cover_Dec=interval(5,10)  Dead_Dec=interval(5,25)
+		 (( 0 0 0 1 0 0 0 )	%  Input_Dead=interval(0,0.01)  Cover_Dec=interval(10,20)  Dead_Dec=0 - 1
+		  ( 0 0 0 1 0 0 0 )	%  Input_Dead=interval(0,0.01)  Cover_Dec=interval(10,20)  Dead_Dec=1 - 2
+		  ( 0 0 0 1 0 0 0 )	%  Input_Dead=interval(0,0.01)  Cover_Dec=interval(10,20)  Dead_Dec=interval(1,5)
+		  ( 0.5104 0.04 0.2 0.2496 0 0 0 )))	%  Input_Dead=interval(0,0.01)  Cover_Dec=interval(10,20)  Dead_Dec=interval(5,25)
+		((( 0 1 0 0 0 0 0 )	%  Input_Dead=interval(0.01,1)  Cover_Dec=0 - 1  Dead_Dec=0 - 1
+		  ( 0.52 0.48 0 0 0 0 0 )	%  Input_Dead=interval(0.01,1)  Cover_Dec=0 - 1  Dead_Dec=1 - 2
+		  ( 1 0 0 0 0 0 0 )	%  Input_Dead=interval(0.01,1)  Cover_Dec=0 - 1  Dead_Dec=interval(1,5)
+		  ( 1 0 0 0 0 0 0 ))	%  Input_Dead=interval(0.01,1)  Cover_Dec=0 - 1  Dead_Dec=interval(5,25)
+		 (( 0 0.48 0.52 0 0 0 0 )	%  Input_Dead=interval(0.01,1)  Cover_Dec=1 - 2  Dead_Dec=0 - 1
+		  ( 0.1664 0.6672 0.1664 0 0 0 0 )	%  Input_Dead=interval(0.01,1)  Cover_Dec=1 - 2  Dead_Dec=1 - 2
+		  ( 0.961088 0.038912 0 0 0 0 0 )	%  Input_Dead=interval(0.01,1)  Cover_Dec=1 - 2  Dead_Dec=interval(1,5)
+		  ( 1 0 0 0 0 0 0 ))	%  Input_Dead=interval(0.01,1)  Cover_Dec=1 - 2  Dead_Dec=interval(5,25)
+		 (( 0 0 0.8752 0.1248 0 0 0 )	%  Input_Dead=interval(0.01,1)  Cover_Dec=interval(1,5)  Dead_Dec=0 - 1
+		  ( 0 0.038912 0.922176 0.038912 0 0 0 )	%  Input_Dead=interval(0.01,1)  Cover_Dec=interval(1,5)  Dead_Dec=1 - 2
+		  ( 0.384704 0.230592 0.384704 0 0 0 0 )	%  Input_Dead=interval(0.01,1)  Cover_Dec=interval(1,5)  Dead_Dec=interval(1,5)
+		  ( 0.998208 0.001792 0 0 0 0 0 ))	%  Input_Dead=interval(0.01,1)  Cover_Dec=interval(1,5)  Dead_Dec=interval(5,25)
+		 (( 0 0 0 1 0 0 0 )	%  Input_Dead=interval(0.01,1)  Cover_Dec=interval(5,10)  Dead_Dec=0 - 1
+		  ( 0 0 0.03296 0.96704 0 0 0 )	%  Input_Dead=interval(0.01,1)  Cover_Dec=interval(5,10)  Dead_Dec=1 - 2
+		  ( 0 0.00768 0.48832 0.504 0 0 0 )	%  Input_Dead=interval(0.01,1)  Cover_Dec=interval(5,10)  Dead_Dec=interval(1,5)
+		  ( 0.851072 0.046592 0.1008 0.001536 0 0 0 ))	%  Input_Dead=interval(0.01,1)  Cover_Dec=interval(5,10)  Dead_Dec=interval(5,25)
+		 (( 0 0 0 1 0 0 0 )	%  Input_Dead=interval(0.01,1)  Cover_Dec=interval(10,20)  Dead_Dec=0 - 1
+		  ( 0 0 0 1 0 0 0 )	%  Input_Dead=interval(0.01,1)  Cover_Dec=interval(10,20)  Dead_Dec=1 - 2
+		  ( 0 0 0 1 0 0 0 )	%  Input_Dead=interval(0.01,1)  Cover_Dec=interval(10,20)  Dead_Dec=interval(1,5)
+		  ( 0.47392 0.05216 0.2 0.27392 0 0 0 )))	%  Input_Dead=interval(0.01,1)  Cover_Dec=interval(10,20)  Dead_Dec=interval(5,25)
+		((( 0 0 1 0 0 0 0 )	%  Input_Dead=interval(1,5)  Cover_Dec=0 - 1  Dead_Dec=0 - 1
+		  ( 0 0.1248 0.8752 0 0 0 0 )	%  Input_Dead=interval(1,5)  Cover_Dec=0 - 1  Dead_Dec=1 - 2
+		  ( 0.52 0.2064 0.2736 0 0 0 0 )	%  Input_Dead=interval(1,5)  Cover_Dec=0 - 1  Dead_Dec=interval(1,5)
+		  ( 1 0 0 0 0 0 0 ))	%  Input_Dead=interval(1,5)  Cover_Dec=0 - 1  Dead_Dec=interval(5,25)
+		 (( 0 0 0.8752 0.1248 0 0 0 )	%  Input_Dead=interval(1,5)  Cover_Dec=1 - 2  Dead_Dec=0 - 1
+		  ( 0 0.038912 0.922176 0.038912 0 0 0 )	%  Input_Dead=interval(1,5)  Cover_Dec=1 - 2  Dead_Dec=1 - 2
+		  ( 0.384704 0.230592 0.384704 0 0 0 0 )	%  Input_Dead=interval(1,5)  Cover_Dec=1 - 2  Dead_Dec=interval(1,5)
+		  ( 0.998208 0.001792 0 0 0 0 0 ))	%  Input_Dead=interval(1,5)  Cover_Dec=1 - 2  Dead_Dec=interval(5,25)
+		 (( 0 0 0.2736 0.7264 0 0 0 )	%  Input_Dead=interval(1,5)  Cover_Dec=interval(1,5)  Dead_Dec=0 - 1
+		  ( 0 0 0.384704 0.615296 0 0 0 )	%  Input_Dead=interval(1,5)  Cover_Dec=interval(1,5)  Dead_Dec=1 - 2
+		  ( 0.07296 0.09344 0.6672 0.1664 0 0 0 )	%  Input_Dead=interval(1,5)  Cover_Dec=interval(1,5)  Dead_Dec=interval(1,5)
+		  ( 0.937664 0.029376 0.03296 0 0 0 0 ))	%  Input_Dead=interval(1,5)  Cover_Dec=interval(1,5)  Dead_Dec=interval(5,25)
+		 (( 0 0 0 1 0 0 0 )	%  Input_Dead=interval(1,5)  Cover_Dec=interval(5,10)  Dead_Dec=0 - 1
+		  ( 0 0 0 1 0 0 0 )	%  Input_Dead=interval(1,5)  Cover_Dec=interval(5,10)  Dead_Dec=1 - 2
+		  ( 0 0 0.13344 0.86656 0 0 0 )	%  Input_Dead=interval(1,5)  Cover_Dec=interval(5,10)  Dead_Dec=interval(1,5)
+		  ( 0.72512 0.04992 0.17344 0.05152 0 0 0 ))	%  Input_Dead=interval(1,5)  Cover_Dec=interval(5,10)  Dead_Dec=interval(5,25)
+		 (( 0 0 0 1 0 0 0 )	%  Input_Dead=interval(1,5)  Cover_Dec=interval(10,20)  Dead_Dec=0 - 1
+		  ( 0 0 0 1 0 0 0 )	%  Input_Dead=interval(1,5)  Cover_Dec=interval(10,20)  Dead_Dec=1 - 2
+		  ( 0 0 0 1 0 0 0 )	%  Input_Dead=interval(1,5)  Cover_Dec=interval(10,20)  Dead_Dec=interval(1,5)
+		  ( 0.35008 0.049088 0.199872 0.40096 0 0 0 )))	%  Input_Dead=interval(1,5)  Cover_Dec=interval(10,20)  Dead_Dec=interval(5,25)
+		((( 0 0 0 1 0 0 0 )	%  Input_Dead=interval(5,25)  Cover_Dec=0 - 1  Dead_Dec=0 - 1
+		  ( 0 0 0.024 0.976 0 0 0 )	%  Input_Dead=interval(5,25)  Cover_Dec=0 - 1  Dead_Dec=1 - 2
+		  ( 0 0.0064 0.1456 0.848 0 0 0 )	%  Input_Dead=interval(5,25)  Cover_Dec=0 - 1  Dead_Dec=interval(1,5)
+		  ( 0.52 0.0384 0.168 0.2736 0 0 0 ))	%  Input_Dead=interval(5,25)  Cover_Dec=0 - 1  Dead_Dec=interval(5,25)
+		 (( 0 0 0 0.976 0.024 0 0 )	%  Input_Dead=interval(5,25)  Cover_Dec=1 - 2  Dead_Dec=0 - 1
+		  ( 0 0 0.00672 0.98656 0.00672 0 0 )	%  Input_Dead=interval(5,25)  Cover_Dec=1 - 2  Dead_Dec=1 - 2
+		  ( 0 0.001792 0.123328 0.87488 0 0 0 )	%  Input_Dead=interval(5,25)  Cover_Dec=1 - 2  Dead_Dec=interval(1,5)
+		  ( 0.47232 0.05536 0.1744 0.29792 0 0 0 ))	%  Input_Dead=interval(5,25)  Cover_Dec=1 - 2  Dead_Dec=interval(5,25)
+		 (( 0 0 0 0.848 0.152 0 0 )	%  Input_Dead=interval(5,25)  Cover_Dec=interval(1,5)  Dead_Dec=0 - 1
+		  ( 0 0 0 0.87488 0.12512 0 0 )	%  Input_Dead=interval(5,25)  Cover_Dec=interval(1,5)  Dead_Dec=1 - 2
+		  ( 0 0 0.03296 0.93408 0.03296 0 0 )	%  Input_Dead=interval(5,25)  Cover_Dec=interval(1,5)  Dead_Dec=interval(1,5)
+		  ( 0.36448 0.04192 0.1872 0.4064 0 0 0 ))	%  Input_Dead=interval(5,25)  Cover_Dec=interval(1,5)  Dead_Dec=interval(5,25)
+		 (( 0 0 0 0.6256 0.3744 0 0 )	%  Input_Dead=interval(5,25)  Cover_Dec=interval(5,10)  Dead_Dec=0 - 1
+		  ( 0 0 0 0.651072 0.348928 0 0 )	%  Input_Dead=interval(5,25)  Cover_Dec=interval(5,10)  Dead_Dec=1 - 2
+		  ( 0 0 0 0.77504 0.22496 0 0 )	%  Input_Dead=interval(5,25)  Cover_Dec=interval(5,10)  Dead_Dec=interval(1,5)
+		  ( 0.197696 0.032128 0.15488 0.604992 0.010304 0 0 ))	%  Input_Dead=interval(5,25)  Cover_Dec=interval(5,10)  Dead_Dec=interval(5,25)
+		 (( 0 0 0 0.2496 0.7504 0 0 )	%  Input_Dead=interval(5,25)  Cover_Dec=interval(10,20)  Dead_Dec=0 - 1
+		  ( 0 0 0 0.27392 0.72608 0 0 )	%  Input_Dead=interval(5,25)  Cover_Dec=interval(10,20)  Dead_Dec=1 - 2
+		  ( 0 0 0 0.398208 0.601792 0 0 )	%  Input_Dead=interval(5,25)  Cover_Dec=interval(10,20)  Dead_Dec=interval(1,5)
+		  ( 0.0416 0.01184 0.078912 0.729088 0.13856 0 0 )))	%  Input_Dead=interval(5,25)  Cover_Dec=interval(10,20)  Dead_Dec=interval(5,25)
+		((( 0 0 0 0 1 0 0 )	%  Input_Dead=interval(25,50)  Cover_Dec=0 - 1  Dead_Dec=0 - 1
+		  ( 0 0 0 0.019968 0.980032 0 0 )	%  Input_Dead=interval(25,50)  Cover_Dec=0 - 1  Dead_Dec=1 - 2
+		  ( 0 0 0 0.12 0.88 0 0 )	%  Input_Dead=interval(25,50)  Cover_Dec=0 - 1  Dead_Dec=interval(1,5)
+		  ( 0 0.0016 0.024 0.5744 0.4 0 0 ))	%  Input_Dead=interval(25,50)  Cover_Dec=0 - 1  Dead_Dec=interval(5,25)
+		 (( 0 0 0 0 0.979968 0.020032 0 )	%  Input_Dead=interval(25,50)  Cover_Dec=1 - 2  Dead_Dec=0 - 1
+		  ( 0 0 0 0.004992 0.990016 0.004992 0 )	%  Input_Dead=interval(25,50)  Cover_Dec=1 - 2  Dead_Dec=1 - 2
+		  ( 0 0 0 0.0992 0.9008 0 0 )	%  Input_Dead=interval(25,50)  Cover_Dec=1 - 2  Dead_Dec=interval(1,5)
+		  ( 0 0.000128 0.01984 0.559232 0.4208 0 0 ))	%  Input_Dead=interval(25,50)  Cover_Dec=1 - 2  Dead_Dec=interval(5,25)
+		 (( 0 0 0 0 0.88 0.12 0 )	%  Input_Dead=interval(25,50)  Cover_Dec=interval(1,5)  Dead_Dec=0 - 1
+		  ( 0 0 0 0 0.9008 0.0992 0 )	%  Input_Dead=interval(25,50)  Cover_Dec=interval(1,5)  Dead_Dec=1 - 2
+		  ( 0 0 0 0.025728 0.948544 0.025728 0 )	%  Input_Dead=interval(25,50)  Cover_Dec=interval(1,5)  Dead_Dec=interval(1,5)
+		  ( 0 0 0.00512 0.47488 0.52 0 0 ))	%  Input_Dead=interval(25,50)  Cover_Dec=interval(1,5)  Dead_Dec=interval(5,25)
+		 (( 0 0 0 0 0.704 0.296 0 )	%  Input_Dead=interval(25,50)  Cover_Dec=interval(5,10)  Dead_Dec=0 - 1
+		  ( 0 0 0 0 0.72 0.28 0 )	%  Input_Dead=interval(25,50)  Cover_Dec=interval(5,10)  Dead_Dec=1 - 2
+		  ( 0 0 0 0 0.8192 0.1808 0 )	%  Input_Dead=interval(25,50)  Cover_Dec=interval(5,10)  Dead_Dec=interval(1,5)
+		  ( 0 0 0 0.306496 0.6848 0.008704 0 ))	%  Input_Dead=interval(25,50)  Cover_Dec=interval(5,10)  Dead_Dec=interval(5,25)
+		 (( 0 0 0 0 0.4 0.6 0 )	%  Input_Dead=interval(25,50)  Cover_Dec=interval(10,20)  Dead_Dec=0 - 1
+		  ( 0 0 0 0 0.4208 0.5792 0 )	%  Input_Dead=interval(25,50)  Cover_Dec=interval(10,20)  Dead_Dec=1 - 2
+		  ( 0 0 0 0 0.52 0.48 0 )	%  Input_Dead=interval(25,50)  Cover_Dec=interval(10,20)  Dead_Dec=interval(1,5)
+		  ( 0 0 0 0.108096 0.783808 0.108096 0 )))	%  Input_Dead=interval(25,50)  Cover_Dec=interval(10,20)  Dead_Dec=interval(5,25)
+		((( 0 0 0 0 0 1 0 )	%  Input_Dead=interval(50,75)  Cover_Dec=0 - 1  Dead_Dec=0 - 1
+		  ( 0 0 0 0 0.019968 0.980032 0 )	%  Input_Dead=interval(50,75)  Cover_Dec=0 - 1  Dead_Dec=1 - 2
+		  ( 0 0 0 0 0.12 0.88 0 )	%  Input_Dead=interval(50,75)  Cover_Dec=0 - 1  Dead_Dec=interval(1,5)
+		  ( 0 0 0 0 0.6 0.4 0 ))	%  Input_Dead=interval(50,75)  Cover_Dec=0 - 1  Dead_Dec=interval(5,25)
+		 (( 0 0 0 0 0 0.979968 0.020032 )	%  Input_Dead=interval(50,75)  Cover_Dec=1 - 2  Dead_Dec=0 - 1
+		  ( 0 0 0 0 0.004992 0.990016 0.004992 )	%  Input_Dead=interval(50,75)  Cover_Dec=1 - 2  Dead_Dec=1 - 2
+		  ( 0 0 0 0 0.0992 0.9008 0 )	%  Input_Dead=interval(50,75)  Cover_Dec=1 - 2  Dead_Dec=interval(1,5)
+		  ( 0 0 0 0 0.5792 0.4208 0 ))	%  Input_Dead=interval(50,75)  Cover_Dec=1 - 2  Dead_Dec=interval(5,25)
+		 (( 0 0 0 0 0 0.88 0.12 )	%  Input_Dead=interval(50,75)  Cover_Dec=interval(1,5)  Dead_Dec=0 - 1
+		  ( 0 0 0 0 0 0.9008 0.0992 )	%  Input_Dead=interval(50,75)  Cover_Dec=interval(1,5)  Dead_Dec=1 - 2
+		  ( 0 0 0 0 0.025728 0.948544 0.025728 )	%  Input_Dead=interval(50,75)  Cover_Dec=interval(1,5)  Dead_Dec=interval(1,5)
+		  ( 0 0 0 0 0.48 0.52 0 ))	%  Input_Dead=interval(50,75)  Cover_Dec=interval(1,5)  Dead_Dec=interval(5,25)
+		 (( 0 0 0 0 0 0.704 0.296 )	%  Input_Dead=interval(50,75)  Cover_Dec=interval(5,10)  Dead_Dec=0 - 1
+		  ( 0 0 0 0 0 0.72 0.28 )	%  Input_Dead=interval(50,75)  Cover_Dec=interval(5,10)  Dead_Dec=1 - 2
+		  ( 0 0 0 0 0 0.8192 0.1808 )	%  Input_Dead=interval(50,75)  Cover_Dec=interval(5,10)  Dead_Dec=interval(1,5)
+		  ( 0 0 0 0 0.305664 0.685632 0.008704 ))	%  Input_Dead=interval(50,75)  Cover_Dec=interval(5,10)  Dead_Dec=interval(5,25)
+		 (( 0 0 0 0 0 0.4 0.6 )	%  Input_Dead=interval(50,75)  Cover_Dec=interval(10,20)  Dead_Dec=0 - 1
+		  ( 0 0 0 0 0 0.4208 0.5792 )	%  Input_Dead=interval(50,75)  Cover_Dec=interval(10,20)  Dead_Dec=1 - 2
+		  ( 0 0 0 0 0 0.52 0.48 )	%  Input_Dead=interval(50,75)  Cover_Dec=interval(10,20)  Dead_Dec=interval(1,5)
+		  ( 0 0 0 0 0.108096 0.783808 0.108096 )))	%  Input_Dead=interval(50,75)  Cover_Dec=interval(10,20)  Dead_Dec=interval(5,25)
+		((( 0 0 0 0 0 0 1 )	%  Input_Dead=interval(75,100)  Cover_Dec=0 - 1  Dead_Dec=0 - 1
+		  ( 0 0 0 0 0 0.019968 0.980032 )	%  Input_Dead=interval(75,100)  Cover_Dec=0 - 1  Dead_Dec=1 - 2
+		  ( 0 0 0 0 0 0.12 0.88 )	%  Input_Dead=interval(75,100)  Cover_Dec=0 - 1  Dead_Dec=interval(1,5)
+		  ( 0 0 0 0 0 0.6 0.4 ))	%  Input_Dead=interval(75,100)  Cover_Dec=0 - 1  Dead_Dec=interval(5,25)
+		 (( 0 0 0 0 0 0 1 )	%  Input_Dead=interval(75,100)  Cover_Dec=1 - 2  Dead_Dec=0 - 1
+		  ( 0 0 0 0 0 0.004992 0.995008 )	%  Input_Dead=interval(75,100)  Cover_Dec=1 - 2  Dead_Dec=1 - 2
+		  ( 0 0 0 0 0 0.0992 0.9008 )	%  Input_Dead=interval(75,100)  Cover_Dec=1 - 2  Dead_Dec=interval(1,5)
+		  ( 0 0 0 0 0 0.5792 0.4208 ))	%  Input_Dead=interval(75,100)  Cover_Dec=1 - 2  Dead_Dec=interval(5,25)
+		 (( 0 0 0 0 0 0 1 )	%  Input_Dead=interval(75,100)  Cover_Dec=interval(1,5)  Dead_Dec=0 - 1
+		  ( 0 0 0 0 0 0 1 )	%  Input_Dead=interval(75,100)  Cover_Dec=interval(1,5)  Dead_Dec=1 - 2
+		  ( 0 0 0 0 0 0.025728 0.974272 )	%  Input_Dead=interval(75,100)  Cover_Dec=interval(1,5)  Dead_Dec=interval(1,5)
+		  ( 0 0 0 0 0 0.48 0.52 ))	%  Input_Dead=interval(75,100)  Cover_Dec=interval(1,5)  Dead_Dec=interval(5,25)
+		 (( 0 0 0 0 0 0 1 )	%  Input_Dead=interval(75,100)  Cover_Dec=interval(5,10)  Dead_Dec=0 - 1
+		  ( 0 0 0 0 0 0 1 )	%  Input_Dead=interval(75,100)  Cover_Dec=interval(5,10)  Dead_Dec=1 - 2
+		  ( 0 0 0 0 0 0 1 )	%  Input_Dead=interval(75,100)  Cover_Dec=interval(5,10)  Dead_Dec=interval(1,5)
+		  ( 0 0 0 0 0 0.304704 0.695296 ))	%  Input_Dead=interval(75,100)  Cover_Dec=interval(5,10)  Dead_Dec=interval(5,25)
+		 (( 0 0 0 0 0 0 1 )	%  Input_Dead=interval(75,100)  Cover_Dec=interval(10,20)  Dead_Dec=0 - 1
+		  ( 0 0 0 0 0 0 1 )	%  Input_Dead=interval(75,100)  Cover_Dec=interval(10,20)  Dead_Dec=1 - 2
+		  ( 0 0 0 0 0 0 1 )	%  Input_Dead=interval(75,100)  Cover_Dec=interval(10,20)  Dead_Dec=interval(1,5)
+		  ( 0 0 0 0 0 0.108096 0.891904 ))));	%  Input_Dead=interval(75,100)  Cover_Dec=interval(10,20)  Dead_Dec=interval(5,25)
+    }
+
+    potential (Output_NUI | Dead_Dec Cover_Inc)
+    {
+	model_nodes = ();
+	model_data = ( 1 * (Dead_Dec - Cover_Inc) / 100 );
+	data = ((( 0 0 1 0 0 )	%  Dead_Dec=0 - 1  Cover_Inc=0 - 1
+		 ( 0 0 1 0 0 )	%  Dead_Dec=0 - 1  Cover_Inc=interval(0.01,1)
+		 ( 0 0 1 0 0 )	%  Dead_Dec=0 - 1  Cover_Inc=1 - 2
+		 ( 0 0.76 0.24 0 0 )	%  Dead_Dec=0 - 1  Cover_Inc=interval(5,25)
+		 ( 0 1 0 0 0 )	%  Dead_Dec=0 - 1  Cover_Inc=interval(25,50)
+		 ( 1 0 0 0 0 )	%  Dead_Dec=0 - 1  Cover_Inc=interval(50,75)
+		 ( 1 0 0 0 0 ))	%  Dead_Dec=0 - 1  Cover_Inc=interval(75,100)
+		(( 0 0 1 0 0 )	%  Dead_Dec=1 - 2  Cover_Inc=0 - 1
+		 ( 0 0 1 0 0 )	%  Dead_Dec=1 - 2  Cover_Inc=interval(0.01,1)
+		 ( 0 0 1 0 0 )	%  Dead_Dec=1 - 2  Cover_Inc=1 - 2
+		 ( 0 0.728 0.272 0 0 )	%  Dead_Dec=1 - 2  Cover_Inc=interval(5,25)
+		 ( 0 1 0 0 0 )	%  Dead_Dec=1 - 2  Cover_Inc=interval(25,50)
+		 ( 0.9792 0.0208 0 0 0 )	%  Dead_Dec=1 - 2  Cover_Inc=interval(50,75)
+		 ( 1 0 0 0 0 ))	%  Dead_Dec=1 - 2  Cover_Inc=interval(75,100)
+		(( 0 0 1 0 0 )	%  Dead_Dec=interval(1,5)  Cover_Inc=0 - 1
+		 ( 0 0 1 0 0 )	%  Dead_Dec=interval(1,5)  Cover_Inc=interval(0.01,1)
+		 ( 0 0 1 0 0 )	%  Dead_Dec=interval(1,5)  Cover_Inc=1 - 2
+		 ( 0 0.6 0.4 0 0 )	%  Dead_Dec=interval(1,5)  Cover_Inc=interval(5,25)
+		 ( 0 1 0 0 0 )	%  Dead_Dec=interval(1,5)  Cover_Inc=interval(25,50)
+		 ( 0.88 0.12 0 0 0 )	%  Dead_Dec=interval(1,5)  Cover_Inc=interval(50,75)
+		 ( 1 0 0 0 0 ))	%  Dead_Dec=interval(1,5)  Cover_Inc=interval(75,100)
+		(( 0 0 0.24 0.76 0 )	%  Dead_Dec=interval(5,25)  Cover_Inc=0 - 1
+		 ( 0 0 0.272 0.728 0 )	%  Dead_Dec=interval(5,25)  Cover_Inc=interval(0.01,1)
+		 ( 0 0 0.4 0.6 0 )	%  Dead_Dec=interval(5,25)  Cover_Inc=1 - 2
+		 ( 0 0.1248 0.7504 0.1248 0 )	%  Dead_Dec=interval(5,25)  Cover_Inc=interval(5,25)
+		 ( 0 0.8992 0.1008 0 0 )	%  Dead_Dec=interval(5,25)  Cover_Inc=interval(25,50)
+		 ( 0.4 0.6 0 0 0 )	%  Dead_Dec=interval(5,25)  Cover_Inc=interval(50,75)
+		 ( 1 0 0 0 0 )));	%  Dead_Dec=interval(5,25)  Cover_Inc=interval(75,100)
+    }
+
+    potential (Dead_Dec | BCGD_DDRM Input_Dead)
+    {
+	model_nodes = ();
+	model_data = ( min (20, max (0, Input_Dead * BCGD_DDRM / 100)) );
+	data = ((( 1 0 0 0 )	%  BCGD_DDRM=interval(35,45)  Input_Dead=interval(0,0.01)
+		 ( 0 1 0 0 )	%  BCGD_DDRM=interval(35,45)  Input_Dead=interval(0.01,1)
+		 ( 0 0.3792 0.6208 0 )	%  BCGD_DDRM=interval(35,45)  Input_Dead=interval(1,5)
+		 ( 0 0 0.3792 0.6208 )	%  BCGD_DDRM=interval(35,45)  Input_Dead=interval(5,25)
+		 ( 0 0 0 1 )	%  BCGD_DDRM=interval(35,45)  Input_Dead=interval(25,50)
+		 ( 0 0 0 1 )	%  BCGD_DDRM=interval(35,45)  Input_Dead=interval(50,75)
+		 ( 0 0 0 1 ))	%  BCGD_DDRM=interval(35,45)  Input_Dead=interval(75,100)
+		(( 1 0 0 0 )	%  BCGD_DDRM=interval(45,55)  Input_Dead=interval(0,0.01)
+		 ( 0 1 0 0 )	%  BCGD_DDRM=interval(45,55)  Input_Dead=interval(0.01,1)
+		 ( 0 0.2496 0.7504 0 )	%  BCGD_DDRM=interval(45,55)  Input_Dead=interval(1,5)
+		 ( 0 0 0.2496 0.7504 )	%  BCGD_DDRM=interval(45,55)  Input_Dead=interval(5,25)
+		 ( 0 0 0 1 )	%  BCGD_DDRM=interval(45,55)  Input_Dead=interval(25,50)
+		 ( 0 0 0 1 )	%  BCGD_DDRM=interval(45,55)  Input_Dead=interval(50,75)
+		 ( 0 0 0 1 ))	%  BCGD_DDRM=interval(45,55)  Input_Dead=interval(75,100)
+		(( 1 0 0 0 )	%  BCGD_DDRM=interval(55,65)  Input_Dead=interval(0,0.01)
+		 ( 0 1 0 0 )	%  BCGD_DDRM=interval(55,65)  Input_Dead=interval(0.01,1)
+		 ( 0 0.1696 0.8304 0 )	%  BCGD_DDRM=interval(55,65)  Input_Dead=interval(1,5)
+		 ( 0 0 0.1696 0.8304 )	%  BCGD_DDRM=interval(55,65)  Input_Dead=interval(5,25)
+		 ( 0 0 0 1 )	%  BCGD_DDRM=interval(55,65)  Input_Dead=interval(25,50)
+		 ( 0 0 0 1 )	%  BCGD_DDRM=interval(55,65)  Input_Dead=interval(50,75)
+		 ( 0 0 0 1 )));	%  BCGD_DDRM=interval(55,65)  Input_Dead=interval(75,100)
+    }
+
+    potential (Seed_Dec | Germ_Seeds DP Input_Seeds)
+    {
+	model_nodes = ();
+	model_data = ( min (300, max (0, (Input_Seeds - Germ_Seeds) * DP / 100)) );
+	data = (((( 1 0 0 0 0 )	%  Germ_Seeds=0 - 1  DP=0 - 1  Input_Seeds=interval(0,0.01)
+		  ( 0.0112 0.9888 0 0 0 )	%  Germ_Seeds=0 - 1  DP=0 - 1  Input_Seeds=interval(0.01,30)
+		  ( 0 1 0 0 0 )	%  Germ_Seeds=0 - 1  DP=0 - 1  Input_Seeds=interval(30,70)
+		  ( 0 0.9584 0.0416 0 0 )	%  Germ_Seeds=0 - 1  DP=0 - 1  Input_Seeds=interval(70,400)
+		  ( 0 0.56 0.44 0 0 ))	%  Germ_Seeds=0 - 1  DP=0 - 1  Input_Seeds=interval(400,700)
+		 (( 1 0 0 0 0 )	%  Germ_Seeds=0 - 1  DP=1 - 2  Input_Seeds=interval(0,0.01)
+		  ( 0 1 0 0 0 )	%  Germ_Seeds=0 - 1  DP=1 - 2  Input_Seeds=interval(0.01,30)
+		  ( 0 1 0 0 0 )	%  Germ_Seeds=0 - 1  DP=1 - 2  Input_Seeds=interval(30,70)
+		  ( 0 0.288 0.5264 0.1584 0.0272 )	%  Germ_Seeds=0 - 1  DP=1 - 2  Input_Seeds=interval(70,400)
+		  ( 0 0 0.152 0.28 0.568 ))	%  Germ_Seeds=0 - 1  DP=1 - 2  Input_Seeds=interval(400,700)
+		 (( 1 0 0 0 0 )	%  Germ_Seeds=0 - 1  DP=interval(30,40)  Input_Seeds=interval(0,0.01)
+		  ( 0 1 0 0 0 )	%  Germ_Seeds=0 - 1  DP=interval(30,40)  Input_Seeds=interval(0.01,30)
+		  ( 0 1 0 0 0 )	%  Germ_Seeds=0 - 1  DP=interval(30,40)  Input_Seeds=interval(30,70)
+		  ( 0 0.0512 0.3472 0.2624 0.3392 )	%  Germ_Seeds=0 - 1  DP=interval(30,40)  Input_Seeds=interval(70,400)
+		  ( 0 0 0 0 1 )))	%  Germ_Seeds=0 - 1  DP=interval(30,40)  Input_Seeds=interval(400,700)
+		((( 1 0 0 0 0 )	%  Germ_Seeds=1 - 2  DP=0 - 1  Input_Seeds=interval(0,0.01)
+		  ( 0.014016 0.985984 0 0 0 )	%  Germ_Seeds=1 - 2  DP=0 - 1  Input_Seeds=interval(0.01,30)
+		  ( 0 1 0 0 0 )	%  Germ_Seeds=1 - 2  DP=0 - 1  Input_Seeds=interval(30,70)
+		  ( 0 0.9584 0.0416 0 0 )	%  Germ_Seeds=1 - 2  DP=0 - 1  Input_Seeds=interval(70,400)
+		  ( 0 0.56 0.44 0 0 ))	%  Germ_Seeds=1 - 2  DP=0 - 1  Input_Seeds=interval(400,700)
+		 (( 1 0 0 0 0 )	%  Germ_Seeds=1 - 2  DP=1 - 2  Input_Seeds=interval(0,0.01)
+		  ( 0 1 0 0 0 )	%  Germ_Seeds=1 - 2  DP=1 - 2  Input_Seeds=interval(0.01,30)
+		  ( 0 1 0 0 0 )	%  Germ_Seeds=1 - 2  DP=1 - 2  Input_Seeds=interval(30,70)
+		  ( 0 0.289088 0.525312 0.1584 0.0272 )	%  Germ_Seeds=1 - 2  DP=1 - 2  Input_Seeds=interval(70,400)
+		  ( 0 0 0.152 0.28096 0.56704 ))	%  Germ_Seeds=1 - 2  DP=1 - 2  Input_Seeds=interval(400,700)
+		 (( 1 0 0 0 0 )	%  Germ_Seeds=1 - 2  DP=interval(30,40)  Input_Seeds=interval(0,0.01)
+		  ( 0 1 0 0 0 )	%  Germ_Seeds=1 - 2  DP=interval(30,40)  Input_Seeds=interval(0.01,30)
+		  ( 0 1 0 0 0 )	%  Germ_Seeds=1 - 2  DP=interval(30,40)  Input_Seeds=interval(30,70)
+		  ( 0 0.0512 0.3472 0.2624 0.3392 )	%  Germ_Seeds=1 - 2  DP=interval(30,40)  Input_Seeds=interval(70,400)
+		  ( 0 0 0 0 1 )))	%  Germ_Seeds=1 - 2  DP=interval(30,40)  Input_Seeds=interval(400,700)
+		((( 1 0 0 0 0 )	%  Germ_Seeds=interval(0.25,5)  DP=0 - 1  Input_Seeds=interval(0,0.01)
+		  ( 0.104704 0.895296 0 0 0 )	%  Germ_Seeds=interval(0.25,5)  DP=0 - 1  Input_Seeds=interval(0.01,30)
+		  ( 0 1 0 0 0 )	%  Germ_Seeds=interval(0.25,5)  DP=0 - 1  Input_Seeds=interval(30,70)
+		  ( 0 0.95968 0.04032 0 0 )	%  Germ_Seeds=interval(0.25,5)  DP=0 - 1  Input_Seeds=interval(70,400)
+		  ( 0 0.562688 0.437312 0 0 ))	%  Germ_Seeds=interval(0.25,5)  DP=0 - 1  Input_Seeds=interval(400,700)
+		 (( 1 0 0 0 0 )	%  Germ_Seeds=interval(0.25,5)  DP=1 - 2  Input_Seeds=interval(0,0.01)
+		  ( 0.088704 0.911296 0 0 0 )	%  Germ_Seeds=interval(0.25,5)  DP=1 - 2  Input_Seeds=interval(0.01,30)
+		  ( 0 1 0 0 0 )	%  Germ_Seeds=interval(0.25,5)  DP=1 - 2  Input_Seeds=interval(30,70)
+		  ( 0 0.297024 0.52224 0.156288 0.024448 )	%  Germ_Seeds=interval(0.25,5)  DP=1 - 2  Input_Seeds=interval(70,400)
+		  ( 0 0 0.1552 0.282816 0.561984 ))	%  Germ_Seeds=interval(0.25,5)  DP=1 - 2  Input_Seeds=interval(400,700)
+		 (( 1 0 0 0 0 )	%  Germ_Seeds=interval(0.25,5)  DP=interval(30,40)  Input_Seeds=interval(0,0.01)
+		  ( 0.088 0.912 0 0 0 )	%  Germ_Seeds=interval(0.25,5)  DP=interval(30,40)  Input_Seeds=interval(0.01,30)
+		  ( 0 1 0 0 0 )	%  Germ_Seeds=interval(0.25,5)  DP=interval(30,40)  Input_Seeds=interval(30,70)
+		  ( 0 0.057728 0.347776 0.26176 0.332736 )	%  Germ_Seeds=interval(0.25,5)  DP=interval(30,40)  Input_Seeds=interval(70,400)
+		  ( 0 0 0 0 1 )))	%  Germ_Seeds=interval(0.25,5)  DP=interval(30,40)  Input_Seeds=interval(400,700)
+		((( 1 0 0 0 0 )	%  Germ_Seeds=interval(5,25)  DP=0 - 1  Input_Seeds=interval(0,0.01)
+		  ( 0.518272 0.481728 0 0 0 )	%  Germ_Seeds=interval(5,25)  DP=0 - 1  Input_Seeds=interval(0.01,30)
+		  ( 0 1 0 0 0 )	%  Germ_Seeds=interval(5,25)  DP=0 - 1  Input_Seeds=interval(30,70)
+		  ( 0 0.969344 0.030656 0 0 )	%  Germ_Seeds=interval(5,25)  DP=0 - 1  Input_Seeds=interval(70,400)
+		  ( 0 0.576 0.424 0 0 ))	%  Germ_Seeds=interval(5,25)  DP=0 - 1  Input_Seeds=interval(400,700)
+		 (( 1 0 0 0 0 )	%  Germ_Seeds=interval(5,25)  DP=1 - 2  Input_Seeds=interval(0,0.01)
+		  ( 0.5072 0.4928 0 0 0 )	%  Germ_Seeds=interval(5,25)  DP=1 - 2  Input_Seeds=interval(0.01,30)
+		  ( 0 1 0 0 0 )	%  Germ_Seeds=interval(5,25)  DP=1 - 2  Input_Seeds=interval(30,70)
+		  ( 0 0.331968 0.509888 0.141568 0.016576 )	%  Germ_Seeds=interval(5,25)  DP=1 - 2  Input_Seeds=interval(70,400)
+		  ( 0 0 0.172224 0.288256 0.53952 ))	%  Germ_Seeds=interval(5,25)  DP=1 - 2  Input_Seeds=interval(400,700)
+		 (( 1 0 0 0 0 )	%  Germ_Seeds=interval(5,25)  DP=interval(30,40)  Input_Seeds=interval(0,0.01)
+		  ( 0.5072 0.4928 0 0 0 )	%  Germ_Seeds=interval(5,25)  DP=interval(30,40)  Input_Seeds=interval(0.01,30)
+		  ( 0 1 0 0 0 )	%  Germ_Seeds=interval(5,25)  DP=interval(30,40)  Input_Seeds=interval(30,70)
+		  ( 0 0.094592 0.348992 0.261504 0.294912 )	%  Germ_Seeds=interval(5,25)  DP=interval(30,40)  Input_Seeds=interval(70,400)
+		  ( 0 0 0 0 1 )))	%  Germ_Seeds=interval(5,25)  DP=interval(30,40)  Input_Seeds=interval(400,700)
+		((( 1 0 0 0 0 )	%  Germ_Seeds=interval(25,50)  DP=0 - 1  Input_Seeds=interval(0,0.01)
+		  ( 0.985728 0.014272 0 0 0 )	%  Germ_Seeds=interval(25,50)  DP=0 - 1  Input_Seeds=interval(0.01,30)
+		  ( 0.210944 0.789056 0 0 0 )	%  Germ_Seeds=interval(25,50)  DP=0 - 1  Input_Seeds=interval(30,70)
+		  ( 0 0.9824 0.0176 0 0 )	%  Germ_Seeds=interval(25,50)  DP=0 - 1  Input_Seeds=interval(70,400)
+		  ( 0 0.603456 0.396544 0 0 ))	%  Germ_Seeds=interval(25,50)  DP=0 - 1  Input_Seeds=interval(400,700)
+		 (( 1 0 0 0 0 )	%  Germ_Seeds=interval(25,50)  DP=1 - 2  Input_Seeds=interval(0,0.01)
+		  ( 0.984 0.016 0 0 0 )	%  Germ_Seeds=interval(25,50)  DP=1 - 2  Input_Seeds=interval(0.01,30)
+		  ( 0.2 0.8 0 0 0 )	%  Germ_Seeds=interval(25,50)  DP=1 - 2  Input_Seeds=interval(30,70)
+		  ( 0 0.401088 0.478848 0.114496 0.005568 )	%  Germ_Seeds=interval(25,50)  DP=1 - 2  Input_Seeds=interval(70,400)
+		  ( 0 0 0.203712 0.301376 0.494912 ))	%  Germ_Seeds=interval(25,50)  DP=1 - 2  Input_Seeds=interval(400,700)
+		 (( 1 0 0 0 0 )	%  Germ_Seeds=interval(25,50)  DP=interval(30,40)  Input_Seeds=interval(0,0.01)
+		  ( 0.984 0.016 0 0 0 )	%  Germ_Seeds=interval(25,50)  DP=interval(30,40)  Input_Seeds=interval(0.01,30)
+		  ( 0.2 0.8 0 0 0 )	%  Germ_Seeds=interval(25,50)  DP=interval(30,40)  Input_Seeds=interval(30,70)
+		  ( 0 0.163264 0.348416 0.261504 0.226816 )	%  Germ_Seeds=interval(25,50)  DP=interval(30,40)  Input_Seeds=interval(70,400)
+		  ( 0 0 0 0 1 ))));	%  Germ_Seeds=interval(25,50)  DP=interval(30,40)  Input_Seeds=interval(400,700)
+    }
+
+    potential (Output_Basal | SI New_Adults BCGD_C4PLBCR Input_Basal)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (if (SI, 0.1, 0), Input_Basal * (1 + BCGD_C4PLBCR / 100) + 100 * 0.0002 * New_Adults)) );
+	data = ((((( 1 0 0 0 0 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(0,0.01)
+		   ( 0 1 0 0 0 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(0.01,1)
+		   ( 0 0.1536 0.8464 0 0 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(1,5)
+		   ( 0 0 0.1536 0.8464 0 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.6224 0.3776 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.9424 0.0576 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0.2992 0.7008 0 ))	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(75,100)
+		  (( 1 0 0 0 0 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(0,0.01)
+		   ( 0 1 0 0 0 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(0.01,1)
+		   ( 0 0.0544 0.9456 0 0 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(1,5)
+		   ( 0 0 0.0544 0.9456 0 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.2144 0.7856 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.4288 0.5712 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.6496 0.3504 ))	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(75,100)
+		  (( 1 0 0 0 0 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(0,0.01)
+		   ( 0 1 0 0 0 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(0.01,1)
+		   ( 0 0.0208 0.9792 0 0 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(1,5)
+		   ( 0 0 0.0208 0.9792 0 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.0832 0.9168 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.1616 0.8384 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.2448 0.7552 ))	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(75,100)
+		  (( 0.983488 0.016512 0 0 0 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(0,0.01)
+		   ( 0 0.988736 0.011264 0 0 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.9872 0.0128 0 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.9872 0.0128 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.0128 0.9632 0.024 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.0256 0.9392 0.0352 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.0384 0.9616 ))	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(75,100)
+		  (( 0.862528 0.137472 0 0 0 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(0,0.01)
+		   ( 0 0.8704 0.1296 0 0 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.84 0.16 0 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.84 0.16 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0 0.7408 0.2592 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0 0.6176 0.3824 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0 1 ))	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(75,100)
+		  (( 0.666176 0.333824 0 0 0 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(0,0.01)
+		   ( 0 0.6704 0.3296 0 0 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.592 0.408 0 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.592 0.408 0 0 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0 0.344 0.5808 0.0752 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0 0.096 0.904 )	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0 1 )))	%  SI=false  New_Adults=0 - 1  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(75,100)
+		 ((( 0.134528 0.865472 0 0 0 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(0,0.01)
+		   ( 0 1 0 0 0 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(0.01,1)
+		   ( 0 0.14496 0.85504 0 0 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(1,5)
+		   ( 0 0 0.153472 0.846528 0 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.619712 0.380288 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.9424 0.0576 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0.297984 0.702016 0 ))	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(75,100)
+		  (( 0.114432 0.885568 0 0 0 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(0,0.01)
+		   ( 0 1 0 0 0 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(0.01,1)
+		   ( 0 0.048448 0.951552 0 0 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(1,5)
+		   ( 0 0 0.053888 0.946112 0 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.21344 0.78656 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.4272 0.5728 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.647168 0.352832 ))	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(75,100)
+		  (( 0.103936 0.896064 0 0 0 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(0,0.01)
+		   ( 0 1 0 0 0 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(0.01,1)
+		   ( 0 0.005696 0.994304 0 0 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(1,5)
+		   ( 0 0 0.017024 0.982976 0 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.080384 0.919616 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.160768 0.839232 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.24288 0.75712 ))	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(75,100)
+		  (( 0.096256 0.903744 0 0 0 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(0,0.01)
+		   ( 0 0.971904 0.028096 0 0 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.982528 0.017472 0 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.985792 0.014208 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.01152 0.96448 0.024 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.02464 0.93952 0.03584 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.03776 0.96224 ))	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(75,100)
+		  (( 0.084416 0.915584 0 0 0 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(0,0.01)
+		   ( 0 0.848384 0.151616 0 0 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.834176 0.165824 0 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.837504 0.162496 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0 0.7408 0.2592 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0 0.6176 0.3824 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0 1 ))	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(75,100)
+		  (( 0.064576 0.935424 0 0 0 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(0,0.01)
+		   ( 0 0.65248 0.34752 0 0 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.587456 0.412544 0 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.591552 0.408448 0 0 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0 0.344 0.5808 0.0752 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0 0.09536 0.90464 )	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0 1 )))	%  SI=false  New_Adults=1 - 2  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(75,100)
+		 ((( 0 1 0 0 0 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(0,0.01)
+		   ( 0 1 0 0 0 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(0.01,1)
+		   ( 0 0.125504 0.874496 0 0 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(1,5)
+		   ( 0 0 0.148288 0.851712 0 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.614912 0.385088 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.9424 0.0576 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0.297216 0.702784 0 ))	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(0,0.01)
+		   ( 0 1 0 0 0 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(0.01,1)
+		   ( 0 0.029248 0.970752 0 0 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(1,5)
+		   ( 0 0 0.05184 0.94816 0 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.2128 0.7872 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.426816 0.573184 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.644032 0.355968 ))	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(0,0.01)
+		   ( 0 0.99232 0.00768 0 0 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(0.01,1)
+		   ( 0 0 1 0 0 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(1,5)
+		   ( 0 0 0.0096 0.9904 0 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.077504 0.922496 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.159488 0.840512 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.240128 0.759872 ))	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(0,0.01)
+		   ( 0 0.92544 0.07456 0 0 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.974272 0.025728 0 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.984256 0.015744 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.0112 0.9648 0.024 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.024 0.938176 0.037824 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.0368 0.9632 ))	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(0,0.01)
+		   ( 0 0.80416 0.19584 0 0 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.824128 0.175872 0 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.8352 0.1648 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0 0.7408 0.2592 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0 0.614784 0.385216 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0 1 ))	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(0,0.01)
+		   ( 0 0.61856 0.38144 0 0 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.577984 0.422016 0 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.588864 0.411136 0 0 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0 0.344 0.5808 0.0752 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0 0.0944 0.9056 )	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0 1 )))	%  SI=false  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(75,100)
+		 ((( 0 1 0 0 0 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(0,0.01)
+		   ( 0 0.961792 0.038208 0 0 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(0.01,1)
+		   ( 0 0.042688 0.957312 0 0 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(1,5)
+		   ( 0 0 0.13152 0.86848 0 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.60192 0.39808 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.937472 0.062528 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0.287808 0.712192 0 ))	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(0,0.01)
+		   ( 0 0.837504 0.162496 0 0 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(0.01,1)
+		   ( 0 0.002496 0.997504 0 0 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(1,5)
+		   ( 0 0 0.035584 0.964416 0 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.201536 0.798464 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.416448 0.583552 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.63104 0.36896 ))	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(0,0.01)
+		   ( 0 0.754496 0.245504 0 0 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.993792 0.006208 0 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(1,5)
+		   ( 0 0 0.000256 0.999744 0 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.066496 0.933504 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.15008 0.84992 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.231744 0.768256 ))	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(0,0.01)
+		   ( 0 0.697472 0.302528 0 0 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.925376 0.074624 0 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.976704 0.023296 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.007488 0.96256 0.029952 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.019648 0.938048 0.042304 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.032384 0.967616 ))	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(0,0.01)
+		   ( 0 0.6064 0.3936 0 0 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.774464 0.225536 0 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.827264 0.172736 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0 0.732992 0.267008 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0 0.603904 0.396096 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0 1 ))	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(0,0.01)
+		   ( 0 0.465792 0.534208 0 0 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.540608 0.459392 0 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.580864 0.419136 0 0 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0 0.338816 0.5824 0.078784 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0 0.088768 0.911232 )	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0 1 )))	%  SI=false  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(75,100)
+		 ((( 0 1 0 0 0 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(0,0.01)
+		   ( 0 0.399296 0.600704 0 0 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(0.01,1)
+		   ( 0 0 1 0 0 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(1,5)
+		   ( 0 0 0.09472 0.90528 0 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.573248 0.426752 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.928 0.072 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0.267456 0.73216 0.000384 ))	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(0,0.01)
+		   ( 0 0.297024 0.702976 0 0 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.984512 0.015488 0 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(1,5)
+		   ( 0 0 0.009984 0.990016 0 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.178624 0.821376 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.394688 0.605312 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.610432 0.389568 ))	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(0,0.01)
+		   ( 0 0.26336 0.73664 0 0 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.89888 0.10112 0 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(1,5)
+		   ( 0 0 0 1 0 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.05056 0.94944 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.129856 0.870144 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.211072 0.788928 ))	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(75,100)
+		  (( 0 0.999552 0.000448 0 0 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(0,0.01)
+		   ( 0 0.242816 0.757184 0 0 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.813312 0.186688 0 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.9616 0.0384 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.001152 0.957632 0.041216 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.012608 0.935104 0.052288 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.024896 0.975104 ))	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(75,100)
+		  (( 0 0.99488 0.00512 0 0 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(0,0.01)
+		   ( 0 0.209536 0.790464 0 0 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.676224 0.323776 0 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.806592 0.193408 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0 0.717888 0.282112 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0 0.589184 0.410816 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0 1 ))	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(75,100)
+		  (( 0 0.986944 0.013056 0 0 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(0,0.01)
+		   ( 0 0.159872 0.840128 0 0 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.465088 0.534912 0 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.566208 0.433792 0 0 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0 0.325568 0.5904 0.084032 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0 0.082688 0.917312 )	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0 1 ))))	%  SI=false  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(75,100)
+		(((( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(0,0.01)
+		   ( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(0.01,1)
+		   ( 0 0.1536 0.8464 0 0 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(1,5)
+		   ( 0 0 0.1536 0.8464 0 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.6224 0.3776 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.9424 0.0576 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0.2992 0.7008 0 ))	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(0,0.01)
+		   ( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(0.01,1)
+		   ( 0 0.0544 0.9456 0 0 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(1,5)
+		   ( 0 0 0.0544 0.9456 0 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.2144 0.7856 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.4288 0.5712 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.6496 0.3504 ))	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(0,0.01)
+		   ( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(0.01,1)
+		   ( 0 0.0208 0.9792 0 0 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(1,5)
+		   ( 0 0 0.0208 0.9792 0 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.0832 0.9168 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.1616 0.8384 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.2448 0.7552 ))	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(0,0.01)
+		   ( 0 0.988736 0.011264 0 0 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.9872 0.0128 0 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.9872 0.0128 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.0128 0.9632 0.024 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.0256 0.9392 0.0352 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.0384 0.9616 ))	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(0,0.01)
+		   ( 0 0.8704 0.1296 0 0 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.84 0.16 0 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.84 0.16 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0 0.7408 0.2592 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0 0.6176 0.3824 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0 1 ))	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(0,0.01)
+		   ( 0 0.6704 0.3296 0 0 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.592 0.408 0 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.592 0.408 0 0 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0 0.344 0.5808 0.0752 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0 0.096 0.904 )	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0 1 )))	%  SI=true  New_Adults=0 - 1  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(75,100)
+		 ((( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(0,0.01)
+		   ( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(0.01,1)
+		   ( 0 0.14496 0.85504 0 0 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(1,5)
+		   ( 0 0 0.153472 0.846528 0 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.619712 0.380288 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.9424 0.0576 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0.297984 0.702016 0 ))	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(0,0.01)
+		   ( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(0.01,1)
+		   ( 0 0.048448 0.951552 0 0 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(1,5)
+		   ( 0 0 0.053888 0.946112 0 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.21344 0.78656 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.4272 0.5728 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.647168 0.352832 ))	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(0,0.01)
+		   ( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(0.01,1)
+		   ( 0 0.005696 0.994304 0 0 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(1,5)
+		   ( 0 0 0.017024 0.982976 0 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.080384 0.919616 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.160768 0.839232 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.24288 0.75712 ))	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(0,0.01)
+		   ( 0 0.971904 0.028096 0 0 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.982528 0.017472 0 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.985792 0.014208 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.01152 0.96448 0.024 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.02464 0.93952 0.03584 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.03776 0.96224 ))	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(0,0.01)
+		   ( 0 0.848384 0.151616 0 0 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.834176 0.165824 0 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.837504 0.162496 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0 0.7408 0.2592 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0 0.6176 0.3824 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0 1 ))	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(0,0.01)
+		   ( 0 0.65248 0.34752 0 0 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.587456 0.412544 0 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.591552 0.408448 0 0 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0 0.344 0.5808 0.0752 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0 0.09536 0.90464 )	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0 1 )))	%  SI=true  New_Adults=1 - 2  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(75,100)
+		 ((( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(0,0.01)
+		   ( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(0.01,1)
+		   ( 0 0.125504 0.874496 0 0 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(1,5)
+		   ( 0 0 0.148288 0.851712 0 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.614912 0.385088 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.9424 0.0576 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0.297216 0.702784 0 ))	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(0,0.01)
+		   ( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(0.01,1)
+		   ( 0 0.029248 0.970752 0 0 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(1,5)
+		   ( 0 0 0.05184 0.94816 0 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.2128 0.7872 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.426816 0.573184 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.644032 0.355968 ))	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(0,0.01)
+		   ( 0 0.99232 0.00768 0 0 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(0.01,1)
+		   ( 0 0 1 0 0 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(1,5)
+		   ( 0 0 0.0096 0.9904 0 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.077504 0.922496 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.159488 0.840512 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.240128 0.759872 ))	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(0,0.01)
+		   ( 0 0.92544 0.07456 0 0 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.974272 0.025728 0 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.984256 0.015744 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.0112 0.9648 0.024 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.024 0.938176 0.037824 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.0368 0.9632 ))	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(0,0.01)
+		   ( 0 0.80416 0.19584 0 0 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.824128 0.175872 0 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.8352 0.1648 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0 0.7408 0.2592 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0 0.614784 0.385216 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0 1 ))	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(0,0.01)
+		   ( 0 0.61856 0.38144 0 0 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.577984 0.422016 0 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.588864 0.411136 0 0 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0 0.344 0.5808 0.0752 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0 0.0944 0.9056 )	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0 1 )))	%  SI=true  New_Adults=interval(2.5,5)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(75,100)
+		 ((( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(0,0.01)
+		   ( 0 0.961792 0.038208 0 0 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(0.01,1)
+		   ( 0 0.042688 0.957312 0 0 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(1,5)
+		   ( 0 0 0.13152 0.86848 0 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.60192 0.39808 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.937472 0.062528 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0.287808 0.712192 0 ))	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(0,0.01)
+		   ( 0 0.837504 0.162496 0 0 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(0.01,1)
+		   ( 0 0.002496 0.997504 0 0 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(1,5)
+		   ( 0 0 0.035584 0.964416 0 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.201536 0.798464 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.416448 0.583552 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.63104 0.36896 ))	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(0,0.01)
+		   ( 0 0.754496 0.245504 0 0 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.993792 0.006208 0 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(1,5)
+		   ( 0 0 0.000256 0.999744 0 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.066496 0.933504 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.15008 0.84992 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.231744 0.768256 ))	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(0,0.01)
+		   ( 0 0.697472 0.302528 0 0 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.925376 0.074624 0 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.976704 0.023296 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.007488 0.96256 0.029952 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.019648 0.938048 0.042304 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.032384 0.967616 ))	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(0,0.01)
+		   ( 0 0.6064 0.3936 0 0 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.774464 0.225536 0 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.827264 0.172736 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0 0.732992 0.267008 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0 0.603904 0.396096 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0 1 ))	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(0,0.01)
+		   ( 0 0.465792 0.534208 0 0 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.540608 0.459392 0 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.580864 0.419136 0 0 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0 0.338816 0.5824 0.078784 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0 0.088768 0.911232 )	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0 1 )))	%  SI=true  New_Adults=interval(5,25)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(75,100)
+		 ((( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(0,0.01)
+		   ( 0 0.399296 0.600704 0 0 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(0.01,1)
+		   ( 0 0 1 0 0 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(1,5)
+		   ( 0 0 0.09472 0.90528 0 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.573248 0.426752 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.928 0.072 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0.267456 0.73216 0.000384 ))	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-50,-25)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(0,0.01)
+		   ( 0 0.297024 0.702976 0 0 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.984512 0.015488 0 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(1,5)
+		   ( 0 0 0.009984 0.990016 0 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.178624 0.821376 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.394688 0.605312 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.610432 0.389568 ))	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-25,-10)  Input_Basal=interval(75,100)
+		  (( 0 1 0 0 0 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(0,0.01)
+		   ( 0 0.26336 0.73664 0 0 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.89888 0.10112 0 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(1,5)
+		   ( 0 0 0 1 0 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.05056 0.94944 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.129856 0.870144 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.211072 0.788928 ))	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-10,-5)  Input_Basal=interval(75,100)
+		  (( 0 0.999552 0.000448 0 0 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(0,0.01)
+		   ( 0 0.242816 0.757184 0 0 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.813312 0.186688 0 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.9616 0.0384 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0.001152 0.957632 0.041216 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0.012608 0.935104 0.052288 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0.024896 0.975104 ))	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(-5,5)  Input_Basal=interval(75,100)
+		  (( 0 0.99488 0.00512 0 0 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(0,0.01)
+		   ( 0 0.209536 0.790464 0 0 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.676224 0.323776 0 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.806592 0.193408 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0 0.717888 0.282112 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0 0.589184 0.410816 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0 1 ))	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(5,25)  Input_Basal=interval(75,100)
+		  (( 0 0.986944 0.013056 0 0 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(0,0.01)
+		   ( 0 0.159872 0.840128 0 0 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(0.01,1)
+		   ( 0 0 0.465088 0.534912 0 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(1,5)
+		   ( 0 0 0 0.566208 0.433792 0 0 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(5,25)
+		   ( 0 0 0 0 0.325568 0.5904 0.084032 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(25,50)
+		   ( 0 0 0 0 0 0.082688 0.917312 )	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(50,75)
+		   ( 0 0 0 0 0 0 1 )))));	%  SI=true  New_Adults=interval(25,50)  BCGD_C4PLBCR=interval(25,75)  Input_Basal=interval(75,100)
+    }
+} % class ThemedaNatural

@@ -1,0 +1,7 @@
+Food : Metabolism Reproduction
+Locale : Metabolism Reproduction 
+Metabolism : Meat Milk
+Reproduction : Meat Milk Calves
+Meat : 
+Milk : 
+Calves : 

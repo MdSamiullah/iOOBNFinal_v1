@@ -1,0 +1,93 @@
+class Diag2_own
+{
+	inputs = ( );
+	outputs = ( );
+	node B_G
+	{
+		label= "G";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+
+}
+	node B_X
+	{
+		label= "X";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+
+}
+	node A_D
+	{
+		label= "D";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+
+}
+	node A_X
+	{
+		label= "X";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+
+}
+	node V
+	{
+		label= "V";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node S
+	{
+		label= "S";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node N
+	{
+		label= "N";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	potential ( V )
+	{
+		data=(0.5 0.5 );
+	}
+	potential ( S )
+	{
+		data=(0.5 0.5 );
+	}
+	potential ( N | B_X B_G A_X  )
+	{
+		data=
+		(
+			(
+				(
+					(0.5 0.5 )
+					(0.5 0.5 )
+				)
+				(
+					(0.5 0.5 )
+					(0.5 0.5 )
+				)
+			)
+			(
+				(
+					(0.5 0.5 )
+					(0.5 0.5 )
+				)
+				(
+					(0.5 0.5 )
+					(0.5 0.5 )
+				)
+			)
+		);
+	}
+
+}

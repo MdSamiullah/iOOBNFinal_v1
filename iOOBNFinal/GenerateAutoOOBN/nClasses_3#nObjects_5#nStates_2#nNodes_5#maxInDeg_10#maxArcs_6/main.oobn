@@ -1,0 +1,111 @@
+class main
+{
+	inputs = ( node4 );
+	outputs = ( node1 node2 );
+	node node0 
+	{
+		type = "Discrete";
+		position = ( 44 750 );
+		states = ( "State0" "State1"  );
+	}
+	node node1 
+	{
+		type = "Discrete";
+		position = ( 44 990 );
+		states = ( "State0" "State1"  );
+	}
+	node node2 
+	{
+		type = "Discrete";
+		position = ( 15 870 );
+		states = ( "State0" "State1"  );
+	}
+	node node3 
+	{
+		type = "Discrete";
+		position = ( 164 764 );
+		states = ( "State0" "State1"  );
+	}
+	node node4 
+	{
+		type = "Discrete";
+		position = ( 45 30 );
+		states = ( "State0" "State1"  );
+	}
+	instance Obj0C1 : main1 (node3 = node0;Obj0C1_node0 = node0)
+	{
+		position = ( 15 150 );
+	}
+	instance Obj1C1 : main1 (node3 = node4;Obj1C1_node0 = node0)
+	{
+		position = ( 135 164 );
+	}
+	instance Obj2C1 : main1 (node3 = node0;Obj2C1_node0 = node0)
+	{
+		position = ( 255 150 );
+	}
+	instance Obj3C1 : main1 (node3 = node4;Obj3C1_node0 = node0)
+	{
+		position = ( 375 135 );
+	}
+	instance Obj4C1 : main1 (node3 = node0;Obj4C1_node0 = node0)
+	{
+		position = ( 495 149 );
+	}
+	instance Obj0C2 : main2 (node1 = node4;Obj0C2_node0 = node0, Obj0C2_node2 = node2)
+	{
+		position = ( 615 164 );
+	}
+	instance Obj1C2 : main2 (node1 = node4;Obj1C2_node0 = node0, Obj1C2_node2 = node2)
+	{
+		position = ( 735 150 );
+	}
+	instance Obj2C2 : main2 (node1 = node4;Obj2C2_node0 = node0, Obj2C2_node2 = node2)
+	{
+		position = ( 855 135 );
+	}
+	instance Obj3C2 : main2 (node1 = node4;Obj3C2_node0 = node0, Obj3C2_node2 = node2)
+	{
+		position = ( 975 149 );
+	}
+	instance Obj4C2 : main2 (node1 = node4;Obj4C2_node0 = node0, Obj4C2_node2 = node2)
+	{
+		position = ( 1095 164 );
+	}
+	instance Obj0C3 : main3 (node1 = node3, node2 = node0;Obj0C3_node3 = node3)
+	{
+		position = ( 44 270 );
+	}
+	instance Obj1C3 : main3 (node1 = node3, node2 = node0;Obj1C3_node3 = node3)
+	{
+		position = ( 164 284 );
+	}
+	instance Obj2C3 : main3 (node1 = node3, node2 = node0;Obj2C3_node3 = node3)
+	{
+		position = ( 284 270 );
+	}
+	instance Obj3C3 : main3 (node1 = node3, node2 = node0;Obj3C3_node3 = node3)
+	{
+		position = ( 404 255 );
+	}
+	instance Obj4C3 : main3 (node1 = node3, node2 = node0;Obj4C3_node3 = node3)
+	{
+		position = ( 524 269 );
+	}
+	potential (node0 | node4 Obj0C2_node0 Obj1C2_node0 Obj2C2_node0 Obj3C2_node0 Obj4C2_node0 )
+	{
+	}
+	potential (node1 | node4 node3 Obj1C1_node0 Obj4C1_node0 Obj2C2_node2 Obj0C3_node3 Obj2C3_node3 Obj4C3_node3 )
+	{
+	}
+	potential (node2 | node4 node3 node0 Obj0C2_node2 Obj3C2_node2 Obj1C3_node3 Obj3C3_node3 )
+	{
+	}
+	potential (node3 | node0 Obj0C1_node0 Obj2C1_node0 Obj3C1_node0 Obj1C2_node2 Obj4C2_node2 )
+	{
+	}
+	potential (node4)
+	{
+	}
+}
+

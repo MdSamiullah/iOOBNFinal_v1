@@ -1,0 +1,100 @@
+class Diag3
+{
+	inputs = ( );
+	outputs = ( );
+	node V
+	{
+		label= "V";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node S
+	{
+		label= "S";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node N
+	{
+		label= "N";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	instance A : Asia ( V=V, S=S ; A_X=X)
+	{
+		label="";
+		position=( 100 100);
+	}
+	instance B : Asia2 ( V=V, S=S ; B_X=X, B_G=G)
+	{
+		label="";
+		position=( 100 100);
+	}
+	instance xyz : Asia ( V=V, S=S ; xyz_X=X)
+	{
+		label="";
+		position=( 100 100);
+	}
+	potential ( V )
+	{
+		data=(0.5 0.5 );
+	}
+	potential ( S )
+	{
+		data=(0.5 0.5 );
+	}
+	potential ( N | B_X B_G A_X xyz_X  )
+	{
+		data=
+		(
+			(
+				(
+					(
+						(0.5 0.5 )
+						(0.5 0.5 )
+					)
+					(
+						(0.5 0.5 )
+						(0.5 0.5 )
+					)
+				)
+				(
+					(
+						(0.5 0.5 )
+						(0.5 0.5 )
+					)
+					(
+						(0.5 0.5 )
+						(0.5 0.5 )
+					)
+				)
+			)
+			(
+				(
+					(
+						(0.5 0.5 )
+						(0.5 0.5 )
+					)
+					(
+						(0.5 0.5 )
+						(0.5 0.5 )
+					)
+				)
+				(
+					(
+						(0.5 0.5 )
+						(0.5 0.5 )
+					)
+					(
+						(0.5 0.5 )
+						(0.5 0.5 )
+					)
+				)
+			)
+		);
+	}
+
+}

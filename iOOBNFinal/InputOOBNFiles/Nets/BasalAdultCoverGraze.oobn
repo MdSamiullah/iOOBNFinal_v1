@@ -1,0 +1,327 @@
+class BasalAdultCoverGraze
+{
+    inputs = (DPal LPal Duration);
+    outputs = (CR DR SBR HBR SAR HAR);
+    node_size = (100 55);
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "1";
+    HR_Zoom_ZoomFactor = "100";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_DiscreteFunction = "5";
+    HR_Color_Function = "4";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Mean_Variance = "1";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "5";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "javax.swing.plaf.FontUIResource[family=Tahoma,name=Tahoma,style=plain,size=11]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+
+    node HAR
+    {
+	label = "Hardy Adult \nDensity Reduction";
+	position = (842 279);
+	states = ("0 - 1" "1 - 2" "2 - 3" "3 - 4");
+	subtype = interval;
+	state_values = (0 0.0001 0.015 0.035 1);
+	HR_LinkMode = "[Output_Cover:0][Output_Dead:0][RBio:0][Output_Basal:0]";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_Group = "0";
+    }
+
+    node SAR
+    {
+	label = "Sensitive Adult \nDensity Reduction";
+	position = (724 284);
+	states = ("0 - 1" "1 - 2" "2 - 3" "3 - 4" "4 - 5" "5 - 6" "6 - 7" "7 - 8");
+	subtype = interval;
+	state_values = (0 0.015 0.125 0.225 0.28 0.4 0.55 0.75 1);
+	HR_State_7 = "";
+	HR_State_6 = "";
+	HR_State_5 = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_LinkMode = "[Output_Cover:0][Output_Dead:0][RBio:0][Output_Basal:0]";
+	HR_Group = "0";
+    }
+
+    node HBR
+    {
+	label = "Hardy Basal \nArea Reduction";
+	position = (588 291);
+	states = ("0 - 1" "1 - 2" "2 - 3" "3 - 4");
+	subtype = interval;
+	state_values = (0 0.005 0.03 0.075 1);
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_LinkMode = "[Output_Cover:0][Output_Dead:0][RBio:0][Output_Basal:0]";
+	HR_Group = "0";
+    }
+
+    node Duration
+    {
+	label = "Duration";
+	position = (657 127);
+	states = ("" "" "");
+	subtype = interval;
+	state_values = (0 10 60 90);
+	HR_Desc = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[CR:0][BR:0][SR:0][CR_1:0][DR:0][BR_1:0][SBR_1:0][HBR_1:0][SBR:0][HBR:0][SAR:0][HAR:0]";
+	HR_Group = "0";
+    }
+
+    node DR
+    {
+	label = "Dead Cover\nReduction";
+	position = (218 302);
+	states = ("" "" "" "" "" "" "" "" "");
+	subtype = number;
+	state_values = (0.01 0.1 0.2 0.25 0.45 0.5 0.6 0.75 0.95);
+	HR_LinkMode = "[Output_Cover:0][Output_Seedlings:0][RBio:0][Output_Dead:0]";
+	HR_State_2 = "";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkControlPoints = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_State_5 = "";
+	HR_State_6 = "";
+	HR_State_7 = "";
+	HR_State_8 = "";
+	HR_Group = "0";
+    }
+
+    node CR
+    {
+	label = "Cover/\nSeedling\nReduction";
+	position = (353 297);
+	states = ("0 - 1" "1 - 2" "2 - 3" "3 - 4" "4 - 5" "5 - 6" "6 - 7" "7 - 8" "8 - 9");
+	subtype = interval;
+	state_values = (0 0.02 0.15 0.22 0.3 0.47 0.55 0.65 0.8 1);
+	HR_LinkMode = "[Output_Cover:0][Output_Seedlings:0][RBio:0]";
+	HR_State_5 = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_LinkControlPoints = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_State_2 = "";
+	HR_State_6 = "";
+	HR_State_7 = "";
+	HR_State_8 = "";
+	HR_Group = "0";
+    }
+
+    node SBR
+    {
+	label = "Sensitive Basal \nArea Reduction ";
+	position = (471 297);
+	states = ("0 - 1" "1 - 2" "2 - 3" "3 - 4" "4 - 5");
+	subtype = interval;
+	state_values = (0 0.005 0.035 0.08 0.3 1);
+	HR_LinkMode = "[Output_Cover:0][Output_Dead:0][RBio:0][Output_Basal:0]";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_Group = "0";
+    }
+
+    node LPal
+    {
+	label = "Relative\nPalatability\nLiving";
+	position = (504 130);
+	states = ("Tasty" "Neutral" "Yuck");
+	HR_LinkControlPoints = "";
+	HR_State_2 = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[CR:0][SR:0][BR:0][BR_1:0][SBR_1:0][HBR_1:0][SBR:0][HBR:0][SAR:0][HAR:0]";
+	HR_Group = "0";
+    }
+
+    node DPal
+    {
+	label = "Relative\nPalatability\nDead";
+	position = (338 131);
+	states = ("Tasty" "Neutral" "Yuck");
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_State_2 = "";
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[CR:0][SR:0][CR_1:0][DR:0]";
+	HR_Group = "0";
+    }
+
+    potential (HAR | LPal Duration)
+    {
+	model_nodes = (LPal Duration);
+	model_data  = ( truncate (0, Beta (13, 190, -0.05, 1), 1),
+			truncate (0, Beta (14, 170, 0.05, 1), 1),
+			truncate (0, Beta (15, 130, 0.05, 1), 1),
+			truncate (0, Beta (3, 340, -0.01, 1), 1),
+			truncate (0, Beta (13, 190, -0.05, 1), 1),
+			truncate (0, Beta (13, 160, -0.05, 1), 1),
+			truncate (0, Beta (15, 130, 0.05, 1), 1),
+			truncate (0, Beta (15, 130, 0.05, 1), 1),
+			truncate (0, Beta (13, 190, -0.05, 1), 1) );
+    }
+
+    potential (SAR | Duration LPal)
+    {
+	model_nodes = (LPal Duration);
+	model_data  = ( Beta (35, 100, 0, 1),
+			Beta (80, 55, 0, 1),
+			truncate (0, Beta (60, 4, 0, 1.01), 1),
+			truncate (0, Beta (15, 80, -0.05, 1), 1),
+			truncate (0, Beta (35, 70, -0.05, 1), 1),
+			Beta (60, 60, 0, 1),
+			truncate (0, Beta (13, 190, -0.05, 1), 1),
+			Beta (32, 180, 0, 1),
+			Beta (28, 80, 0, 1) );
+    }
+
+    potential (HBR | Duration LPal)
+    {
+	model_nodes = (LPal Duration);
+	model_data  = ( truncate (0, Beta (12, 160, -0.01, 1), 1),
+			truncate (0, Beta (16, 160, 0, 1), 1),
+			truncate (0, Beta (19, 160, 0, 1), 1),
+			truncate (0, Beta (60, 180, 0, 1), 1),
+			truncate (0, Beta (120, 180, 0, 1), 1),
+			truncate (0, Beta (180, 180, 0, 1), 1),
+			truncate (0, Beta (4, 240, -0.01, 1), 1),
+			truncate (0, Beta (4.5, 240, -0.01, 1), 1),
+			truncate (0, Beta (5, 240, -0.01, 1), 1) );
+    }
+
+    potential (Duration)
+    {
+	data = ( 1 1 1 );
+    }
+
+    potential (DR | Duration DPal)
+    {
+	model_nodes = (DPal Duration);
+	model_data  = ( 0.5,
+			0.75,
+			0.95,
+			0.25,
+			0.45,
+			0.6,
+			0.01,
+			0.1,
+			0.2 );
+	data = ((( 0 0 0 0 0 1 0 0 0 )	%  Duration=interval(0,10)  DPal=Tasty
+		 ( 0 0 0 1 0 0 0 0 0 )	%  Duration=interval(0,10)  DPal=Neutral
+		 ( 1 0 0 0 0 0 0 0 0 ))	%  Duration=interval(0,10)  DPal=Yuck
+		(( 0 0 0 0 0 0 0 1 0 )	%  Duration=interval(10,60)  DPal=Tasty
+		 ( 0 0 0 0 1 0 0 0 0 )	%  Duration=interval(10,60)  DPal=Neutral
+		 ( 0 1 0 0 0 0 0 0 0 ))	%  Duration=interval(10,60)  DPal=Yuck
+		(( 0 0 0 0 0 0 0 0 1 )	%  Duration=interval(60,90)  DPal=Tasty
+		 ( 0 0 0 0 0 0 1 0 0 )	%  Duration=interval(60,90)  DPal=Neutral
+		 ( 0 0 1 0 0 0 0 0 0 )));	%  Duration=interval(60,90)  DPal=Yuck
+    }
+
+    potential (CR | LPal Duration)
+    {
+	model_nodes = (LPal Duration);
+	model_data  = ( Beta (50, 50, 0, 1),
+			Beta (50, 14, 0, 1),
+			truncate (0, Beta (40, 3, 0, 1.01), 1),
+			Beta (24, 55, 0, 1),
+			Beta (55, 55, 0, 1),
+			Beta (55, 38, 0, 1),
+			truncate (0, Beta (11, 80, -0.01, 1), 1),
+			truncate (0, Beta (16, 80, -0.01, 1), 1),
+			Beta (22, 80, 0, 1) );
+	data = ((( 2.15276E-057 1.34558E-016 4.69489E-010 1.55473E-005 0.274557 0.566775 0.157558 0.0010942 1.32862E-011 )	%  LPal=Tasty  Duration=interval(0,10)
+		 ( 9.11138E-073 8.44869E-030 5.89395E-022 8.16318E-016 1.40735E-007 4.82206E-005 0.00976568 0.612742 0.377444 )	%  LPal=Tasty  Duration=interval(10,60)
+		 ( 6.16662E-066 4.7151E-031 1.79974E-024 3.57654E-019 1.3313E-011 5.26472E-009 2.65212E-006 0.00402766 0.99597 ))	%  LPal=Tasty  Duration=interval(60,90)
+		(( 4.66061E-022 0.000325961 0.0450832 0.438139 0.515234 0.00121251 4.62012E-006 1.84133E-010 8.17092E-022 )	%  LPal=Neutral  Duration=interval(0,10)
+		 ( 6.08149E-063 4.43139E-018 6.83399E-011 6.22444E-006 0.264857 0.588061 0.14642 0.000655314 1.36248E-012 )	%  LPal=Neutral  Duration=interval(10,60)
+		 ( 1.23099E-068 9.5363E-023 6.04906E-015 3.19455E-009 0.00932871 0.197957 0.668751 0.123961 2.50414E-006 ))	%  LPal=Neutral  Duration=interval(60,90)
+		(( 7.60127E-005 0.86274 0.133475 0.00369873 1.0605E-005 1.53283E-013 1.41974E-018 1.31395E-026 3.54135E-045 )	%  LPal=Yuck  Duration=interval(0,10)
+		 ( 2.17761E-008 0.437185 0.500338 0.0617991 0.000678008 7.76691E-011 1.51753E-015 3.12927E-023 2.30285E-041 )	%  LPal=Yuck  Duration=interval(10,60)
+		 ( 8.56786E-017 0.0433343 0.516608 0.414937 0.0251207 4.10651E-008 2.07793E-012 1.18173E-019 3.07272E-037 )));	%  LPal=Yuck  Duration=interval(60,90)
+    }
+
+    potential (SBR | LPal Duration)
+    {
+	model_nodes = (LPal Duration);
+	model_data  = ( truncate (0, Beta (19, 160, 0, 1), 1),
+			truncate (0, Beta (34, 160, 0, 1), 1),
+			truncate (0, Beta (40, 140, 0, 1), 1),
+			truncate (0, Beta (12, 160, -0.01, 1), 1),
+			truncate (0, Beta (16, 180, 0, 1), 1),
+			truncate (0, Beta (20, 180, 0, 1), 1),
+			truncate (0, Beta (5, 180, -0.01, 1), 1),
+			if (true, "HR_Syntax_Error:", "truncate (0, Beta (5.5, 180, -0.01,1),1"),
+			truncate (0, Beta (6, 180, -0.01, 1), 1) );
+    }
+
+    potential (LPal)
+    {
+	data = ( 1 1 1 );
+    }
+
+    potential (DPal)
+    {
+	data = ( 1 1 1 );
+    }
+} % class BasalAdultCoverGraze

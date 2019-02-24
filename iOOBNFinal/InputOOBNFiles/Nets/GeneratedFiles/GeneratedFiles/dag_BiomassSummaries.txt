@@ -1,0 +1,308 @@
+VLPalS11001 : 
+WComp1110 : 
+VLPalS11000 : 
+WComp1111 : 
+WComp10001 : 
+WComp10000 : 
+VLPalS00101 : 
+LPalC00 : 
+LPalC01 : 
+VLPalS00100 : 
+HardyNative_Basal : BBio010 
+VSComp : 
+MComp01 : 
+HPalC000 : 
+MComp00 : 
+HPalC001 : 
+WComp1000 : 
+MPalC0 : 
+WComp1001 : 
+VLPalS0100 : 
+MPalC1 : 
+RedLeg_Cover : MPalS000 LBio101 MComp0000 LPalS000 SComp000 LPalC000 MPalC000 
+MPalS0 : 
+TBio : 
+MPalS1 : 
+HardyNative_Dead : VLPalS0111 VLPalC0110 WComp0101 DBio001 
+VLPalS0101 : 
+DBio : 
+Onion_Cover : SComp101 VLPalS11001 LBio001 MComp1001 VLPalC11001 WComp11001 
+WComp0001 : 
+WComp0000 : 
+VLPalS0110 : 
+WComp11 : 
+VLPalS0111 : 
+LPalS000 : 
+LPalS001 : 
+WComp10 : 
+BBio1 : 
+BBio0 : 
+HardyNative_Cover : LPalS11 LPalC11 WComp0110 SComp11 MComp110 LBio11 
+Windmill_Basal : BBio11 
+DBio000 : 
+DBio001 : 
+HPalS001 : 
+HPalS000 : 
+Season : VLPalS11001 VLPalS11000 VLPalC10001 VLPalS1101 VLPalS0011 VLPalC10000 VLPalC0101 MPalS01 VLPalS00101 LPalC01 HPalS100 VLPalC00000 VLPalC00001 VLPalC0111 VLPalS00100 VLPalC0110 HPalS101 VLPalC1001 MPalC100 MPalC11 MPalC101 LPalC101 HPalC000 LPalC100 HPalC001 VLPalS1111 VLPalS1110 VLPalS10100 VLPalS10101 MPalS10 MPalS11 VLPalC1110 VLPalS01000 VLPalS01001 VLPalC1111 VLPalS0101 HPalC01 MPalS000 HPalC10 LPalS11 VLPalS0110 VLPalS0111 VLPalS1001 LPalS10 LPalS000 LPalS001 MPalS001 HPalS01 VLPalC00101 HPalS001 HPalS000 VLPalC00100 VLPalC1101 VLPalS00000 VLPalC0011 VLPalS00001 MPalC001 HPalC11 LPalC001 LPalC000 MPalC000 VLPalS10000 LPalS01 VLPalS0001 VLPalS10001 VLPalC11001 VLPalS1011 VLPalC11000 HPalS11 LPalC11 VLPalC1011 VLPalC1010 VLPalC01001 VLPalC0001 VLPalC01000 MPalC01 
+WComp10100 : 
+WComp10101 : 
+LPalC001 : 
+LPalC000 : 
+Needle_Basal : BBio000 
+WComp0010 : 
+VLPalS10000 : 
+VSComp11 : 
+WComp1101 : 
+ExoticAnnual_Dead : VLPalS0110 WComp01001 VLPalC0101 DBio010 
+WComp1100 : 
+WComp0011 : 
+VLPalS0000 : 
+MComp0000 : 
+WComp00 : 
+RedLeg_Dead : VLPalS10100 VLPalC1001 WComp10100 DBio110 
+VLPalS0001 : 
+VSComp10 : 
+MComp0001 : 
+WComp01 : 
+VLPalS10001 : 
+Needle_Dead : VLPalS10000 WComp0111 VLPalC0111 DBio110 
+DBio010 : 
+DBio011 : 
+Ruderals_Dead : WComp10000 VLPalS10001 VLPalC10000 DBio001 
+BBio11 : 
+BBio10 : 
+ExoticAnnual_Cover : LBio000 VLPalC0001 VLPalS00100 MPalS001 WComp00001 MPalC01 HPalS01 HPalC01 MComp011 
+BroadWeeds_Basal : BBio00 
+VSComp00 : 
+VSComp01 : 
+MPalS00 : 
+WComp00001 : 
+MPalS01 : 
+WComp00000 : 
+DBio101 : 
+VLPalC1 : 
+Blanket_Cover : LBio000 VSComp00 LPalC01 VLPalS00001 MPalC001 SComp01 
+VLPalC0 : 
+DBio100 : 
+HPalS100 : 
+VLPalC1000 : 
+VLPalC00000 : 
+VLPalC00001 : 
+MPalC : 
+HPalS101 : 
+VLPalC1001 : 
+DBio11 : 
+MPalC10 : 
+MPalC100 : 
+MPalC11 : 
+MPalC101 : 
+VSComp0 : 
+VSComp1 : 
+VLPalS1 : 
+VLPalS0 : 
+DBio10 : 
+MComp : 
+Blanket_Dead : VLPalS11000 VLPalC11000 WComp11000 DBio101 
+VLPalS10100 : 
+Onion_Basal : BBio100 
+VLPalS10101 : 
+Ruderals_Cover : LBio011 WComp10001 LPalS001 LPalC001 
+MPalS10 : 
+MPalS11 : 
+DBio110 : 
+WComp1 : 
+WComp0 : 
+SComp : 
+VLPalC1110 : 
+VLPalC1111 : 
+ST_Basal : BBio100 
+RedLeg_Basal : BBio000 
+WComp11000 : 
+WComp11001 : 
+WComp1011 : 
+WComp1010 : 
+LPalS11 : 
+Wallaby_Basal : BBio01 
+LPalS10 : 
+SComp01 : 
+WComp00100 : 
+SComp00 : 
+Themeda_Dead : VLPalS00101 VLPalC00100 DBio11 WComp00100 
+WComp00101 : 
+LBio0 : 
+LBio1 : 
+BBio010 : 
+LPalS00 : 
+Windmill_Cover : LBio100 HPalC10 HPalS100 MPalC100 MPalS01 WComp01000 
+LPalS01 : 
+BroadWeeds_Cover : LBio110 VLPalC00000 MComp0001 VLPalS00000 SComp001 
+SComp10 : 
+Grain_Cover : LBio110 VLPalC1110 VLPalS1110 MPalS11 MPalC11 MComp111 HPalS11 HPalC11 
+SComp11 : 
+WComp : 
+LPalC11 : 
+VLPalC1011 : 
+ST_Dead : VLPalS0001 VLPalC00001 WComp00000 DBio100 
+LPalC10 : 
+VLPalC1010 : 
+VLPalC01001 : 
+VLPalC01000 : 
+DBio00 : 
+DBio01 : 
+MPalC00 : 
+MPalC01 : 
+BBio000 : 
+Windmill_Dead : VLPalC10001 WComp1001 VLPalS1001 DBio100 
+VLPalC10001 : 
+VLPalS111 : 
+VLPalS110 : 
+VLPalC10000 : 
+VLPalC0101 : 
+Onion_Dead : WComp1101 VLPalS1101 VLPalC1101 DBio010 
+MComp111 : 
+MComp110 : 
+SComp000 : 
+WComp001 : 
+SComp001 : 
+WComp000 : 
+Spear_Basal : BBio110 
+VLPalC110 : 
+VLPalC111 : 
+VLPalC0111 : 
+SensitNative_Cover : WComp0001 LBio101 HPalS001 MComp010 HPalC001 
+VLPalC0110 : 
+BBio110 : 
+LPalC : 
+VLPalS101 : 
+VLPalS100 : 
+Wallaby_Cover : LBio100 HPalS000 MComp001 HPalC000 
+Themeda_Cover : WComp1110 LBio001 VSComp11 HPalS101 MPalS10 MPalC101 MComp101 
+WComp01001 : 
+WComp01000 : 
+MComp001 : 
+MComp000 : 
+WComp111 : 
+WComp110 : 
+VLPalC100 : 
+VLPalC101 : 
+VLPalC0100 : 
+BBio100 : 
+LBio : 
+Ruderals_Basal : BBio010 
+MPalS000 : 
+LBio011 : 
+Grain_Dead : VLPalC00101 VLPalS0011 WComp00101 DBio011 
+Themeda_Basal : BBio10 
+HPalC10 : 
+MPalS001 : 
+LBio010 : 
+WComp101 : 
+MComp010 : 
+HPalS01 : 
+MComp011 : 
+HPalS00 : 
+WComp100 : 
+SComp100 : 
+SComp101 : 
+DBio1 : 
+DBio0 : 
+VLPalC00101 : 
+HPalS10 : 
+SensitNative_Dead : WComp1011 VLPalC1011 VLPalS1011 DBio000 
+VLPalC01 : 
+VLPalC0010 : 
+VLPalC00 : 
+VLPalC00100 : 
+VLPalC1101 : 
+VLPalC1100 : 
+VLPalC0011 : 
+MPalC001 : 
+HPalC11 : 
+MPalC000 : 
+LBio000 : 
+LBio001 : 
+VLPalS01 : 
+VLPalS00 : 
+VLPalC11001 : 
+MPalS : 
+VLPalC11000 : 
+LPalS1 : 
+LPalS0 : 
+HPalC : 
+HPalS11 : 
+VLPalC11 : 
+VLPalC10 : 
+VLPalC0001 : 
+VLPalC0000 : 
+LPalC1 : 
+BBio : 
+LPalC0 : 
+LBio110 : 
+WComp0100 : 
+VLPalS1101 : 
+VLPalS0011 : 
+VLPalS11 : 
+VLPalS1100 : 
+VLPalS10 : 
+VLPalS0010 : 
+WComp0101 : 
+BBio01 : 
+BBio00 : 
+HPalS : 
+LPalC101 : 
+LPalC100 : 
+LBio01 : 
+LBio00 : 
+LBio100 : 
+LBio101 : 
+WComp0111 : 
+WComp0110 : 
+VLPalS1111 : 
+VLPalS1110 : 
+SensitNative_Basal : BBio110 
+HPalC1 : 
+Spear_Cover : MComp1000 LPalS01 LBio010 LPalC100 SComp100 
+HPalC0 : 
+ST_Cover : LBio011 VSComp01 VLPalC01001 VLPalS0101 
+VLPalS01000 : 
+VLPalS01001 : 
+LBio10 : 
+HPalC01 : 
+HPalC00 : 
+NL : WComp1110 WComp1011 VSComp00 MComp1000 WComp0001 VSComp01 WComp1111 WComp10001 WComp10000 MComp1001 SComp01 MComp010 WComp00100 WComp00001 WComp00000 MComp111 MComp110 MComp011 WComp0101 WComp00101 SComp000 SComp100 SComp001 SComp101 WComp10100 WComp10101 VSComp11 WComp1101 WComp0111 WComp1001 WComp0110 WComp0011 MComp0000 VSComp10 MComp0001 WComp01001 SComp11 WComp01000 MComp001 MComp101 WComp11000 WComp11001 
+LBio11 : 
+HPalS1 : 
+HPalS0 : 
+MComp1000 : 
+VLPalS011 : 
+MComp1001 : 
+VLPalS1001 : 
+VLPalS010 : 
+VLPalS1000 : 
+VLPalC : 
+LPalS : 
+VLPalC010 : 
+VLPalC011 : 
+VLPalS00000 : 
+VLPalS00001 : 
+BroadWeeds_Dead : WComp0011 VLPalS01000 VLPalC0011 DBio000 
+Needle_Cover : VSComp10 LPalS10 VLPalS01001 VLPalC01000 LBio010 LPalC101 
+VLPalS001 : 
+VLPalS000 : 
+VLPalS1011 : 
+VLPalS1010 : 
+SComp0 : 
+SComp1 : 
+MComp100 : 
+WComp010 : 
+MComp101 : 
+WComp011 : 
+VLPalC000 : 
+VLPalC001 : 
+MComp10 : 
+VLPalS : 
+MComp1 : 
+MComp0 : 
+Spear_Dead : WComp1111 VLPalS1111 VLPalC1111 DBio011 
+Wallaby_Dead : VLPalC1010 VLPalS10101 DBio101 WComp10101 
+MComp11 : 

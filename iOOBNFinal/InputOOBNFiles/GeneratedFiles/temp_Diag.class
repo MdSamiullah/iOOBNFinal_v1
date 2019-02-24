@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iOOBN>
+	<node  id="Asia.class::C_9" name="D" label="D" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="Asia.class::C_7" />
+		<parent id="Asia.class::C_6" />
+		<tuple value="C_E$True$^$False$^$" />
+		<tuple value="C_B$True$False$True$False$" />
+		<tuple value="^$^$^$^$^$" />
+		<tuple value="True$0.5$0.5$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$0.5$0.5$" />
+	</node>
+	<node  id="Asia.class::C_8" name="X" label="X" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="Asia.class::C_7" />
+		<tuple value="C_E$True$False$" />
+		<tuple value="^$^$^$" />
+		<tuple value="True$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$" />
+	</node>
+	<node  id="Asia.class::C_3" name="S" label="S" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="Asia.class::A_5" name="L" label="L" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="Asia.class::A_3" />
+		<tuple value="A_S$True$False$" />
+		<tuple value="^$^$^$" />
+		<tuple value="True$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$" />
+	</node>
+	<node  id="Asia.class::C_2" name="V" label="V" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="Asia.class::A_4" name="T" label="T" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="Asia.class::A_2" />
+		<tuple value="A_V$True$False$" />
+		<tuple value="^$^$^$" />
+		<tuple value="True$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$" />
+	</node>
+	<node  id="Asia.class::A_3" name="S" label="S" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="Asia.class::A_2" name="V" label="V" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="Asia.class::C_7" name="E" label="E" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="Asia.class::C_5" />
+		<parent id="Asia.class::C_4" />
+		<tuple value="C_L$True$^$False$^$" />
+		<tuple value="C_T$True$False$True$False$" />
+		<tuple value="^$^$^$^$^$" />
+		<tuple value="True$0.1$0.2$0.3$0.4$" />
+		<tuple value="False$0.9$0.8$0.7$0.6$" />
+	</node>
+	<node  id="Asia.class::A_9" name="D" label="D" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="Asia.class::A_7" />
+		<parent id="Asia.class::A_6" />
+		<tuple value="A_E$True$^$False$^$" />
+		<tuple value="A_B$True$False$True$False$" />
+		<tuple value="^$^$^$^$^$" />
+		<tuple value="True$0.5$0.5$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$0.5$0.5$" />
+	</node>
+	<node  id="Asia.class::C_6" name="B" label="B" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="Asia.class::C_3" />
+		<tuple value="C_S$True$False$" />
+		<tuple value="^$^$^$" />
+		<tuple value="True$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$" />
+	</node>
+	<node  id="Asia.class::A_8" name="X" label="X" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="Asia.class::A_7" />
+		<tuple value="A_E$True$False$" />
+		<tuple value="^$^$^$" />
+		<tuple value="True$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$" />
+	</node>
+	<node  id="Asia.class::C_5" name="L" label="L" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="Asia.class::C_3" />
+		<tuple value="C_S$True$False$" />
+		<tuple value="^$^$^$" />
+		<tuple value="True$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$" />
+	</node>
+	<node  id="Asia.class::A_7" name="E" label="E" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="Asia.class::A_5" />
+		<parent id="Asia.class::A_4" />
+		<tuple value="A_L$True$^$False$^$" />
+		<tuple value="A_T$True$False$True$False$" />
+		<tuple value="^$^$^$^$^$" />
+		<tuple value="True$0.1$0.2$0.3$0.4$" />
+		<tuple value="False$0.9$0.8$0.7$0.6$" />
+	</node>
+	<node  id="Asia.class::C_4" name="T" label="T" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="Asia.class::C_2" />
+		<tuple value="C_V$True$False$" />
+		<tuple value="^$^$^$" />
+		<tuple value="True$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$" />
+	</node>
+	<node  id="Asia.class::A_6" name="B" label="B" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="Asia.class::A_3" />
+		<tuple value="A_S$True$False$" />
+		<tuple value="^$^$^$" />
+		<tuple value="True$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$" />
+	</node>
+	<node  id="Asia2.class::B_8" name="G" label="G" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="Asia2.class::B_6" />
+		<tuple value="B_R$True$False$" />
+		<tuple value="^$^$^$" />
+		<tuple value="True$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$" />
+	</node>
+	<node  id="Asia2.class::B_7" name="X" label="X" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="Asia2.class::B_6" />
+		<tuple value="B_R$True$False$" />
+		<tuple value="^$^$^$" />
+		<tuple value="True$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$" />
+	</node>
+	<node  id="Asia2.class::B_6" name="R" label="R" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="Asia2.class::B_4" />
+		<parent id="Asia2.class::B_5" />
+		<tuple value="B_C$True$^$False$^$" />
+		<tuple value="B_L$True$False$True$False$" />
+		<tuple value="^$^$^$^$^$" />
+		<tuple value="True$0.5$0.5$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$0.5$0.5$" />
+	</node>
+	<node  id="Asia2.class::B_5" name="L" label="L" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="Asia2.class::B_3" />
+		<tuple value="B_S$True$False$" />
+		<tuple value="^$^$^$" />
+		<tuple value="True$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$" />
+	</node>
+	<node  id="Asia2.class::B_4" name="C" label="C" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="Asia2.class::B_2" />
+		<tuple value="B_V$True$False$" />
+		<tuple value="^$^$^$" />
+		<tuple value="True$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$" />
+	</node>
+	<node  id="Asia2.class::B_3" name="S" label="S" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="Asia2.class::B_2" name="V" label="V" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="2" name="V" label="V" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="3" name="S" label="S" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="4" name="N" label="N" type="discrete node" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="Asia2.class::B_7" />
+		<parent id="Asia2.class::B_8" />
+		<parent id="Asia.class::A_8" />
+		<tuple value="B_X$True$^$^$^$False$^$^$^$" />
+		<tuple value="B_G$True$^$False$^$True$^$False$^$" />
+		<tuple value="A_X$True$False$True$False$True$False$True$False$" />
+		<tuple value="^$^$^$^$^$^$^$^$^$" />
+		<tuple value="True$0.5$0.5$0.5$0.5$0.5$0.5$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$0.5$0.5$0.5$0.5$0.5$0.5$" />
+	</node>
+</iOOBN>

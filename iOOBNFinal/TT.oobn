@@ -1,0 +1,79 @@
+class TT
+{
+	inputs = ( C_0 C_1 );
+	outputs = ( C_3 C_4 );
+	node C_0
+	{
+		label= "C_0";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node C_1
+	{
+		label= "C_1";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node C_2
+	{
+		label= "C_2";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node C_3
+	{
+		label= "C_3";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node C_4
+	{
+		label= "C_4";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	potential ( C_0 )
+	{
+		data=(0.5 0.5 );
+	}
+	potential ( C_1 )
+	{
+		data=(0.5 0.5 );
+	}
+	potential ( C_2 | C_0 C_1  )
+	{
+		data=
+		(
+			(
+				(0.5 0.5 )
+				(0.5 0.5 )
+			)
+			(
+				(0.5 0.5 )
+				(0.5 0.5 )
+			)
+		);
+	}
+	potential ( C_3 | C_2  )
+	{
+		data=
+		(
+			(0.5 0.5 )
+			(0.5 0.5 )
+		);
+	}
+	potential ( C_4 | C_2  )
+	{
+		data=
+		(
+			(0.5 0.5 )
+			(0.5 0.5 )
+		);
+	}
+
+}

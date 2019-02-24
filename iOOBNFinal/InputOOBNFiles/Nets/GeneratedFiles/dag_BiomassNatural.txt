@@ -1,0 +1,27 @@
+HPalCulmS : MPalCulmS PalSumSheep 
+CompSum : 
+VLPalC : VLPalCulmC 
+LPalCulmS : VLPalCulmS PalSumSheep 
+PalSumSheep : 
+LPalS : LPalCulmS 
+VSCompCulm : 
+MPalC : MPalCulmC 
+WCompCulm : 
+HPalS : HPalCulmS 
+LPalCulmC : 
+VSComp : VSCompCulm 
+MPalCulmC : 
+LPalC : LPalCulmC 
+MComp : MCompCulm 
+VLPalCulmC : 
+MPalS : MPalCulmS 
+SCompCulm : 
+HPalC : HPalCulmC 
+WComp : WCompCulm 
+MCompCulm : WCompCulm 
+PalSumCattle : 
+MPalCulmS : LPalCulmS PalSumSheep 
+HPalCulmC : 
+VLPalCulmS : PalSumSheep 
+SComp : SCompCulm 
+VLPalS : VLPalCulmS 

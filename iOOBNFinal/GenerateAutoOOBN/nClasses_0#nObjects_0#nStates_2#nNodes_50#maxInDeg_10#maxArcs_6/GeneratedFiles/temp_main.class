@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iOOBN>
+	<node  id="44" name="node36" label="node36" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="28" />
+		<parent id="38" />
+		<parent id="21" />
+		<parent id="24" />
+		<parent id="39" />
+		<parent id="16" />
+		<parent id="32" />
+		<parent id="12" />
+		<parent id="19" />
+	</node>
+	<node  id="45" name="node37" label="node37" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="9" />
+		<parent id="49" />
+		<parent id="24" />
+		<parent id="26" />
+		<parent id="50" />
+		<parent id="41" />
+		<parent id="14" />
+		<parent id="27" />
+		<parent id="38" />
+		<parent id="44" />
+	</node>
+	<node  id="46" name="node38" label="node38" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="34" />
+		<parent id="33" />
+		<parent id="22" />
+		<parent id="37" />
+		<parent id="25" />
+		<parent id="21" />
+		<parent id="11" />
+	</node>
+	<node  id="47" name="node39" label="node39" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="48" />
+		<parent id="18" />
+		<parent id="32" />
+		<parent id="36" />
+		<parent id="51" />
+		<parent id="11" />
+		<parent id="28" />
+		<parent id="21" />
+		<parent id="14" />
+		<parent id="49" />
+	</node>
+	<node  id="48" name="node40" label="node40" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="29" />
+		<parent id="27" />
+		<parent id="10" />
+		<parent id="8" />
+		<parent id="25" />
+		<parent id="15" />
+		<parent id="19" />
+		<parent id="31" />
+		<parent id="23" />
+		<parent id="12" />
+	</node>
+	<node  id="49" name="node41" label="node41" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="37" />
+		<parent id="30" />
+		<parent id="24" />
+		<parent id="34" />
+		<parent id="41" />
+		<parent id="17" />
+		<parent id="48" />
+		<parent id="25" />
+		<parent id="10" />
+		<parent id="44" />
+	</node>
+	<node  id="50" name="node42" label="node42" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="44" />
+		<parent id="37" />
+		<parent id="36" />
+		<parent id="15" />
+		<parent id="42" />
+		<parent id="38" />
+		<parent id="35" />
+		<parent id="19" />
+		<parent id="17" />
+		<parent id="12" />
+	</node>
+	<node  id="51" name="node43" label="node43" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="38" />
+		<parent id="25" />
+		<parent id="44" />
+		<parent id="42" />
+		<parent id="31" />
+		<parent id="24" />
+		<parent id="50" />
+		<parent id="30" />
+		<parent id="35" />
+		<parent id="34" />
+	</node>
+	<node  id="10" name="node12" label="node12" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="18" />
+		<parent id="22" />
+		<parent id="23" />
+		<parent id="8" />
+		<parent id="28" />
+		<parent id="20" />
+		<parent id="11" />
+	</node>
+	<node  id="11" name="node13" label="node13" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="18" />
+		<parent id="20" />
+		<parent id="22" />
+	</node>
+	<node  id="12" name="node14" label="node14" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="31" />
+		<parent id="33" />
+		<parent id="25" />
+		<parent id="21" />
+		<parent id="29" />
+		<parent id="19" />
+		<parent id="10" />
+	</node>
+	<node  id="13" name="node15" label="node15" type="discrete node" subType="" kind="2">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="39" />
+		<parent id="30" />
+		<parent id="21" />
+		<parent id="5" />
+		<parent id="51" />
+		<parent id="22" />
+		<parent id="28" />
+		<parent id="37" />
+		<parent id="8" />
+		<parent id="31" />
+	</node>
+	<node  id="14" name="node16" label="node16" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="27" />
+		<parent id="18" />
+		<parent id="31" />
+		<parent id="12" />
+		<parent id="32" />
+		<parent id="19" />
+		<parent id="26" />
+		<parent id="29" />
+		<parent id="9" />
+		<parent id="24" />
+	</node>
+	<node  id="15" name="node17" label="node17" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="19" />
+		<parent id="37" />
+		<parent id="12" />
+		<parent id="21" />
+		<parent id="8" />
+		<parent id="22" />
+		<parent id="25" />
+		<parent id="18" />
+		<parent id="14" />
+		<parent id="11" />
+	</node>
+	<node  id="16" name="node18" label="node18" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="8" />
+		<parent id="11" />
+		<parent id="29" />
+		<parent id="12" />
+		<parent id="19" />
+		<parent id="3" />
+		<parent id="37" />
+		<parent id="32" />
+		<parent id="31" />
+		<parent id="18" />
+	</node>
+	<node  id="17" name="node19" label="node19" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="46" />
+		<parent id="24" />
+		<parent id="15" />
+		<parent id="21" />
+		<parent id="30" />
+		<parent id="23" />
+		<parent id="40" />
+		<parent id="39" />
+		<parent id="3" />
+		<parent id="38" />
+	</node>
+	<node  id="18" name="node0" label="node0" type="discrete node" subType="" kind="1">
+		<state name="State0" />
+		<state name="State1" />
+	</node>
+	<node  id="19" name="node1" label="node1" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="18" />
+		<parent id="11" />
+	</node>
+	<node  id="2" name="node44" label="node44" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="10" />
+		<parent id="33" />
+		<parent id="49" />
+		<parent id="3" />
+		<parent id="46" />
+		<parent id="31" />
+		<parent id="9" />
+		<parent id="45" />
+		<parent id="15" />
+	</node>
+	<node  id="3" name="node45" label="node45" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="42" />
+		<parent id="48" />
+		<parent id="28" />
+		<parent id="46" />
+		<parent id="40" />
+		<parent id="11" />
+		<parent id="26" />
+		<parent id="24" />
+	</node>
+	<node  id="4" name="node46" label="node46" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="3" />
+		<parent id="18" />
+		<parent id="32" />
+		<parent id="14" />
+		<parent id="26" />
+		<parent id="27" />
+		<parent id="36" />
+		<parent id="42" />
+		<parent id="28" />
+		<parent id="16" />
+	</node>
+	<node  id="5" name="node47" label="node47" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="14" />
+		<parent id="35" />
+		<parent id="11" />
+		<parent id="9" />
+		<parent id="15" />
+		<parent id="6" />
+		<parent id="48" />
+		<parent id="22" />
+		<parent id="4" />
+		<parent id="39" />
+	</node>
+	<node  id="6" name="node48" label="node48" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="40" />
+		<parent id="25" />
+		<parent id="4" />
+		<parent id="11" />
+		<parent id="18" />
+		<parent id="35" />
+		<parent id="28" />
+		<parent id="9" />
+	</node>
+	<node  id="7" name="node49" label="node49" type="discrete node" subType="" kind="2">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="29" />
+		<parent id="19" />
+		<parent id="51" />
+		<parent id="27" />
+		<parent id="35" />
+		<parent id="28" />
+		<parent id="41" />
+		<parent id="38" />
+	</node>
+	<node  id="8" name="node10" label="node10" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="9" />
+		<parent id="23" />
+		<parent id="22" />
+		<parent id="20" />
+		<parent id="19" />
+		<parent id="11" />
+		<parent id="24" />
+	</node>
+	<node  id="9" name="node11" label="node11" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="20" />
+		<parent id="18" />
+		<parent id="24" />
+		<parent id="19" />
+		<parent id="23" />
+	</node>
+	<node  id="20" name="node2" label="node2" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="22" />
+	</node>
+	<node  id="21" name="node3" label="node3" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="28" />
+		<parent id="18" />
+		<parent id="29" />
+		<parent id="10" />
+		<parent id="19" />
+		<parent id="20" />
+	</node>
+	<node  id="22" name="node4" label="node4" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="18" />
+	</node>
+	<node  id="23" name="node5" label="node5" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="18" />
+		<parent id="22" />
+	</node>
+	<node  id="24" name="node6" label="node6" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="11" />
+		<parent id="19" />
+		<parent id="18" />
+	</node>
+	<node  id="25" name="node7" label="node7" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="28" />
+		<parent id="29" />
+		<parent id="24" />
+		<parent id="9" />
+		<parent id="22" />
+		<parent id="23" />
+		<parent id="19" />
+		<parent id="8" />
+		<parent id="21" />
+	</node>
+	<node  id="26" name="node8" label="node8" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="20" />
+		<parent id="23" />
+		<parent id="10" />
+		<parent id="21" />
+		<parent id="25" />
+		<parent id="19" />
+		<parent id="29" />
+		<parent id="32" />
+		<parent id="33" />
+		<parent id="28" />
+	</node>
+	<node  id="27" name="node9" label="node9" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="28" />
+		<parent id="29" />
+		<parent id="22" />
+		<parent id="33" />
+		<parent id="12" />
+	</node>
+	<node  id="28" name="node20" label="node20" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="24" />
+		<parent id="29" />
+	</node>
+	<node  id="29" name="node21" label="node21" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="22" />
+		<parent id="20" />
+	</node>
+	<node  id="30" name="node22" label="node22" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="26" />
+		<parent id="38" />
+		<parent id="46" />
+		<parent id="42" />
+		<parent id="25" />
+		<parent id="31" />
+		<parent id="20" />
+		<parent id="28" />
+		<parent id="6" />
+		<parent id="5" />
+	</node>
+	<node  id="31" name="node23" label="node23" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="9" />
+		<parent id="25" />
+		<parent id="11" />
+		<parent id="28" />
+	</node>
+	<node  id="32" name="node24" label="node24" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="25" />
+		<parent id="28" />
+		<parent id="37" />
+		<parent id="33" />
+		<parent id="10" />
+		<parent id="27" />
+		<parent id="29" />
+		<parent id="23" />
+		<parent id="18" />
+		<parent id="22" />
+	</node>
+	<node  id="33" name="node25" label="node25" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="21" />
+		<parent id="10" />
+		<parent id="8" />
+		<parent id="20" />
+		<parent id="29" />
+		<parent id="25" />
+		<parent id="9" />
+		<parent id="22" />
+	</node>
+	<node  id="34" name="node26" label="node26" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="27" />
+		<parent id="12" />
+		<parent id="48" />
+		<parent id="26" />
+		<parent id="33" />
+		<parent id="37" />
+		<parent id="22" />
+		<parent id="21" />
+		<parent id="14" />
+		<parent id="10" />
+	</node>
+	<node  id="35" name="node27" label="node27" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="32" />
+		<parent id="20" />
+		<parent id="27" />
+		<parent id="48" />
+		<parent id="16" />
+		<parent id="8" />
+		<parent id="21" />
+		<parent id="38" />
+		<parent id="24" />
+		<parent id="37" />
+	</node>
+	<node  id="36" name="node28" label="node28" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="23" />
+		<parent id="33" />
+		<parent id="15" />
+		<parent id="10" />
+		<parent id="40" />
+		<parent id="28" />
+		<parent id="32" />
+		<parent id="18" />
+		<parent id="46" />
+		<parent id="42" />
+	</node>
+	<node  id="37" name="node29" label="node29" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="28" />
+		<parent id="19" />
+		<parent id="25" />
+		<parent id="18" />
+		<parent id="31" />
+		<parent id="12" />
+		<parent id="8" />
+		<parent id="22" />
+	</node>
+	<node  id="38" name="node30" label="node30" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="34" />
+		<parent id="19" />
+		<parent id="42" />
+		<parent id="32" />
+		<parent id="39" />
+		<parent id="15" />
+		<parent id="23" />
+		<parent id="46" />
+		<parent id="48" />
+		<parent id="14" />
+	</node>
+	<node  id="39" name="node31" label="node31" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="32" />
+		<parent id="10" />
+		<parent id="25" />
+		<parent id="46" />
+		<parent id="29" />
+		<parent id="27" />
+		<parent id="11" />
+		<parent id="8" />
+		<parent id="48" />
+	</node>
+	<node  id="40" name="node32" label="node32" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="38" />
+		<parent id="14" />
+		<parent id="20" />
+		<parent id="26" />
+		<parent id="37" />
+		<parent id="25" />
+		<parent id="12" />
+		<parent id="28" />
+		<parent id="31" />
+		<parent id="9" />
+	</node>
+	<node  id="41" name="node33" label="node33" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="11" />
+		<parent id="46" />
+		<parent id="50" />
+		<parent id="10" />
+		<parent id="17" />
+		<parent id="19" />
+		<parent id="9" />
+		<parent id="20" />
+		<parent id="3" />
+		<parent id="15" />
+	</node>
+	<node  id="42" name="node34" label="node34" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="14" />
+		<parent id="28" />
+		<parent id="9" />
+		<parent id="34" />
+		<parent id="33" />
+		<parent id="21" />
+		<parent id="15" />
+		<parent id="25" />
+		<parent id="46" />
+		<parent id="11" />
+	</node>
+	<node  id="43" name="node35" label="node35" type="discrete node" subType="" kind="2">
+		<state name="State0" />
+		<state name="State1" />
+		<parent id="8" />
+		<parent id="18" />
+		<parent id="44" />
+		<parent id="2" />
+		<parent id="47" />
+		<parent id="3" />
+		<parent id="29" />
+		<parent id="36" />
+		<parent id="41" />
+		<parent id="11" />
+	</node>
+</iOOBN>

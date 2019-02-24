@@ -1,0 +1,1136 @@
+Using model for GR to generate a conditional probability table
+Using model for CCondS to generate a conditional probability table
+Using model for CSumIndex to generate a conditional probability table
+Using model for CCondBAC to generate a conditional probability table
+Sun Nov 04 20:31:55 2018
+
+
+Moral links:
+
+    Marrying SP and SSR
+    Marrying GR and SSR
+    Marrying GR and SP
+    Marrying GR and SR
+    Marrying Cover_Inc and NH
+    Marrying BCGD.C3PCGR and BCGD.C3PHCDR
+    Marrying BCGD.C3PHBDR and BCGD.C3PHBGR
+    Marrying BCGD.C4PSCGR and BCGD.C4PSCDR
+    Marrying BCGD.C4PSBGR and BCGD.C4PSBDR
+    Marrying BCGD.C3PSCGR and BCGD.C3PSCDR
+    Marrying BCGD.C3PSBGR and BCGD.C3PSBDR
+    Marrying BCGD.C4PMCGR and BCGD.C4PMCDR
+    Marrying BCGD.C4PMBDR and BCGD.C4PMBGR
+    Marrying BCGD.C3PMBDR and BCGD.C3PMBGR
+    Marrying BCGD.C3PMCDR and BCGD.C3PMCGR
+    Marrying BCGD.C3PLCCR and CC
+    Marrying BCGD.C3PLBCR and New_Adults
+    Marrying BCGD.C4PLCGR and BCGD.C4PLCDR
+    Marrying BCGD.C4PLBGR and BCGD.C4PLBDR
+    Marrying BCGD.C3PLCGR and BCGD.C3PLCDR
+    Marrying BCGD.C3PLBGR and BCGD.C3PLBDR
+    Marrying Input_Seeds and SSR
+    Marrying Input_Seeds and SP
+    Marrying Input_Seeds and GR
+    Marrying Input_Seeds and SR
+    Marrying Season and CCondBAC
+    Marrying Output_Basal and CC
+    Marrying Output_Basal and BCGD.C3PLCCR
+    Marrying Dead_Dec and NH
+    Marrying Dead_Dec and Cover_Inc
+    Marrying Cover_Dec and Dead_Dec
+    Marrying SI and New_Adults
+    Marrying SI and BCGD.C3PLBCR
+    Marrying Input_Dead and BCGD.DDRM
+    Marrying Input_Dead and Cover_Dec
+    Marrying Input_Cover and BCGD.C3PLCDR
+    Marrying Input_Cover and CC
+    Marrying Input_Cover and BCGD.C3PLCCR
+    Marrying Input_Cover and Output_Basal
+    Marrying Input_Cover and BCGD.C3PLCGR
+    Marrying Input_Basal and SSR
+    Marrying Input_Basal and SP
+    Marrying Input_Basal and GR
+    Marrying Input_Basal and Input_Seeds
+    Marrying Input_Basal and SI
+    Marrying Input_Basal and New_Adults
+    Marrying Input_Basal and BCGD.C3PLBCR
+    Marrying NL and CSumIndex
+
+
+Triangulating prime component with 1 member:
+    BCGD.DDRH
+This component is a clique of cost 3
+
+Triangulating prime component with 1 member:
+    BCGD.DDRL
+This component is a clique of cost 3
+
+Triangulating prime component with 3 members:
+    BCGD.DDRM, Dead_Dec, Input_Dead
+This component is a clique of cost 84
+
+Triangulating prime component with 4 members:
+    NH, Cover_Inc, Output_NUI, Dead_Dec
+This component is a clique of cost 140
+
+Triangulating prime component with 4 members:
+    Output_Dead, Dead_Dec, Cover_Dec, Input_Dead
+This component is a clique of cost 980
+
+Triangulating prime component with 5 members:
+    CC, BCGD.C3PLCCR, Output_Basal, Output_Cover, Input_Cover
+This component is a clique of cost 3087
+
+Triangulating prime component with 6 members:
+    SSR, SP, GR, Input_Seeds, Output_Seeds, Input_Basal
+This component is a clique of cost 2100
+
+Triangulating prime component with 3 members:
+    BCGD.C4PLBCR, BCGD.C4PLBDR, BCGD.C4PLBGR
+This component is a clique of cost 96
+
+Triangulating prime component with 3 members:
+    BCGD.C4PLCCR, BCGD.C4PLCDR, BCGD.C4PLCGR
+This component is a clique of cost 216
+
+Triangulating prime component with 3 members:
+    BCGD.C3PMCGR, BCGD.C3PMCDR, BCGD.C3PMCCR
+This component is a clique of cost 216
+
+Triangulating prime component with 3 members:
+    BCGD.C3PMBGR, BCGD.C3PMBDR, BCGD.C3PMBCR
+This component is a clique of cost 96
+
+Triangulating prime component with 3 members:
+    BCGD.C4PMBCR, BCGD.C4PMBGR, BCGD.C4PMBDR
+This component is a clique of cost 96
+
+Triangulating prime component with 3 members:
+    BCGD.C4PMCCR, BCGD.C4PMCDR, BCGD.C4PMCGR
+This component is a clique of cost 216
+
+Triangulating prime component with 3 members:
+    BCGD.C3PSBDR, BCGD.C3PSBCR, BCGD.C3PSBGR
+This component is a clique of cost 96
+
+Triangulating prime component with 3 members:
+    BCGD.C3PSCCR, BCGD.C3PSCDR, BCGD.C3PSCGR
+This component is a clique of cost 216
+
+Triangulating prime component with 3 members:
+    BCGD.C4PSBCR, BCGD.C4PSBDR, BCGD.C4PSBGR
+This component is a clique of cost 96
+
+Triangulating prime component with 3 members:
+    BCGD.C4PSCCR, BCGD.C4PSCDR, BCGD.C4PSCGR
+This component is a clique of cost 216
+
+Triangulating prime component with 3 members:
+    BCGD.C3PHBCH, BCGD.C3PHBGR, BCGD.C3PHBDR
+This component is a clique of cost 96
+
+Triangulating prime component with 3 members:
+    BCGD.C3PHCCH, BCGD.C3PHCDR, BCGD.C3PCGR
+This component is a clique of cost 216
+
+Triangulating prime component with 6 members:
+    Cover_Inc, BCGD.C3PLCDR, BCGD.C3PLCGR, Dead_Dec, Cover_Dec, Input_Cover
+
+    Using the best greedy heuristic for triangulation
+
+
+Triangulating prime component with 4 members:
+    BCGD.C4PLBDR, BCGD.C4PLBGR, CCondBAC, Season
+This component is a clique of cost 192
+
+Triangulating prime component with 4 members:
+    BCGD.C4PLCDR, BCGD.C4PLCGR, CCondBAC, Season
+This component is a clique of cost 288
+
+Triangulating prime component with 4 members:
+    BCGD.C3PMCGR, BCGD.C3PMCDR, CCondBAC, Season
+This component is a clique of cost 288
+
+Triangulating prime component with 4 members:
+    BCGD.C3PMBGR, BCGD.C3PMBDR, CCondBAC, Season
+This component is a clique of cost 192
+
+Triangulating prime component with 4 members:
+    BCGD.C4PMBGR, BCGD.C4PMBDR, CCondBAC, Season
+This component is a clique of cost 192
+
+Triangulating prime component with 4 members:
+    BCGD.C4PMCDR, BCGD.C4PMCGR, CCondBAC, Season
+This component is a clique of cost 288
+
+Triangulating prime component with 4 members:
+    BCGD.C3PSBDR, BCGD.C3PSBGR, CCondBAC, Season
+This component is a clique of cost 192
+
+Triangulating prime component with 4 members:
+    BCGD.C3PSCDR, BCGD.C3PSCGR, CCondBAC, Season
+This component is a clique of cost 288
+
+Triangulating prime component with 4 members:
+    BCGD.C4PSBDR, BCGD.C4PSBGR, CCondBAC, Season
+This component is a clique of cost 192
+
+Triangulating prime component with 4 members:
+    BCGD.C4PSCDR, BCGD.C4PSCGR, CCondBAC, Season
+This component is a clique of cost 288
+
+Triangulating prime component with 4 members:
+    BCGD.C3PHBGR, BCGD.C3PHBDR, CCondBAC, Season
+This component is a clique of cost 192
+
+Triangulating prime component with 4 members:
+    BCGD.C3PHCDR, BCGD.C3PCGR, CCondBAC, Season
+This component is a clique of cost 288
+
+Triangulating prime component with 2 members:
+    CompSum, CSumIndex
+This component is a clique of cost 25
+
+Triangulating prime component with 20 members:
+    SP, SR, GR, CCondS, New_Adults, CSumIndex, BCGD.C3PLCCR, BCGD.C3PLBCR,
+    BCGD.C3PLCDR, BCGD.C3PLCGR, BCGD.C3PLBDR, BCGD.C3PLBGR, CCondBAC,
+    Input_Seeds, Season, Output_Basal, SI, Input_Cover, Input_Basal, NL
+
+    Using the best greedy heuristic for triangulation
+
+
+
+Total cost of triangulation for all prime components is 72714
+
+
+Elimination sequence:
+
+    BCGD.DDRM
+    Output_Dead
+    Input_Dead
+    BCGD.C4PLCCR
+    BCGD.C4PLCGR
+    BCGD.C4PLCDR
+    BCGD.C3PMCCR
+    BCGD.C3PMCDR
+    BCGD.C3PMCGR
+    BCGD.C4PMCCR
+    BCGD.C4PMCGR
+    BCGD.C4PMCDR
+    BCGD.C3PSCCR
+    BCGD.C3PSCGR
+    BCGD.C3PSCDR
+    BCGD.C4PSCCR
+    BCGD.C4PSCGR
+    BCGD.C4PSCDR
+    BCGD.C3PHCCH
+    BCGD.C3PCGR
+    BCGD.C3PHCDR
+    BCGD.C4PLBCR
+    BCGD.C4PLBGR
+    BCGD.C4PLBDR
+    BCGD.C3PMBCR
+    BCGD.C3PMBDR
+    BCGD.C3PMBGR
+    BCGD.C4PMBCR
+    BCGD.C4PMBDR
+    BCGD.C4PMBGR
+    BCGD.C3PSBCR
+    BCGD.C3PSBGR
+    BCGD.C3PSBDR
+    BCGD.C4PSBCR
+    BCGD.C4PSBGR
+    BCGD.C4PSBDR
+    BCGD.C3PHBCH
+    BCGD.C3PHBDR
+    BCGD.C3PHBGR
+    Output_NUI
+    NH
+    Dead_Dec
+    Output_Cover
+    CC
+    Cover_Dec
+    Cover_Inc
+    BCGD.C3PLCCR
+    Input_Cover
+    BCGD.C3PLCGR
+    BCGD.C3PLCDR
+    BCGD.C3PLBGR
+    BCGD.C3PLBDR
+    SI
+    BCGD.C3PLBCR
+    Output_Basal
+    Output_Seeds
+    SSR
+    SP
+    Input_Basal
+    Season
+    Input_Seeds
+    New_Adults
+    GR
+    SR
+    NL
+    CCondS
+    CCondBAC
+    CompSum
+    CSumIndex
+    BCGD.DDRH
+    BCGD.DDRL
+
+
+Cliques:
+
+Clique 45, 2 members, table size = 25:
+    CSumIndex, CompSum
+
+Clique 44, 4 members, table size = 135:
+    CSumIndex, CCondBAC, CCondS, NL
+
+Clique 43, 3 members, table size = 27:
+    CCondBAC, CCondS, SR
+
+Clique 42, 5 members, table size = 810:
+    CCondBAC, SR, GR, New_Adults, Input_Seeds
+
+Clique 41, 6 members, table size = 7560:
+    CCondBAC, GR, New_Adults, Input_Seeds, Season, Input_Basal
+
+Clique 40, 5 members, table size = 1680:
+    GR, Input_Seeds, Season, Input_Basal, SP
+
+Clique 39, 6 members, table size = 2100:
+    GR, Input_Seeds, Input_Basal, SP, SSR, Output_Seeds
+
+Clique 38, 6 members, table size = 21168:
+    CCondBAC, New_Adults, Season, Input_Basal, Output_Basal, BCGD.C3PLBCR
+
+Clique 37, 6 members, table size = 14112:
+    New_Adults, Season, Input_Basal, Output_Basal, BCGD.C3PLBCR, SI
+
+Clique 36, 5 members, table size = 1152:
+    CCondBAC, Season, BCGD.C3PLBCR, BCGD.C3PLBDR, BCGD.C3PLBGR
+
+Clique 35, 4 members, table size = 192:
+    CCondBAC, Season, BCGD.C3PHBGR, BCGD.C3PHBDR
+
+Clique 34, 3 members, table size = 96:
+    BCGD.C3PHBGR, BCGD.C3PHBDR, BCGD.C3PHBCH
+
+Clique 33, 4 members, table size = 192:
+    CCondBAC, Season, BCGD.C4PSBDR, BCGD.C4PSBGR
+
+Clique 32, 3 members, table size = 96:
+    BCGD.C4PSBDR, BCGD.C4PSBGR, BCGD.C4PSBCR
+
+Clique 31, 4 members, table size = 192:
+    CCondBAC, Season, BCGD.C3PSBDR, BCGD.C3PSBGR
+
+Clique 30, 3 members, table size = 96:
+    BCGD.C3PSBDR, BCGD.C3PSBGR, BCGD.C3PSBCR
+
+Clique 29, 4 members, table size = 192:
+    CCondBAC, Season, BCGD.C4PMBGR, BCGD.C4PMBDR
+
+Clique 28, 3 members, table size = 96:
+    BCGD.C4PMBGR, BCGD.C4PMBDR, BCGD.C4PMBCR
+
+Clique 27, 4 members, table size = 192:
+    CCondBAC, Season, BCGD.C3PMBGR, BCGD.C3PMBDR
+
+Clique 26, 3 members, table size = 96:
+    BCGD.C3PMBGR, BCGD.C3PMBDR, BCGD.C3PMBCR
+
+Clique 25, 4 members, table size = 192:
+    CCondBAC, Season, BCGD.C4PLBDR, BCGD.C4PLBGR
+
+Clique 24, 3 members, table size = 96:
+    BCGD.C4PLBDR, BCGD.C4PLBGR, BCGD.C4PLBCR
+
+Clique 23, 4 members, table size = 288:
+    CCondBAC, Season, BCGD.C3PHCDR, BCGD.C3PCGR
+
+Clique 22, 3 members, table size = 216:
+    BCGD.C3PHCDR, BCGD.C3PCGR, BCGD.C3PHCCH
+
+Clique 21, 4 members, table size = 288:
+    CCondBAC, Season, BCGD.C4PSCDR, BCGD.C4PSCGR
+
+Clique 20, 3 members, table size = 216:
+    BCGD.C4PSCDR, BCGD.C4PSCGR, BCGD.C4PSCCR
+
+Clique 19, 4 members, table size = 288:
+    CCondBAC, Season, BCGD.C3PSCDR, BCGD.C3PSCGR
+
+Clique 18, 3 members, table size = 216:
+    BCGD.C3PSCDR, BCGD.C3PSCGR, BCGD.C3PSCCR
+
+Clique 17, 4 members, table size = 288:
+    CCondBAC, Season, BCGD.C4PMCDR, BCGD.C4PMCGR
+
+Clique 16, 3 members, table size = 216:
+    BCGD.C4PMCDR, BCGD.C4PMCGR, BCGD.C4PMCCR
+
+Clique 15, 4 members, table size = 288:
+    CCondBAC, Season, BCGD.C3PMCGR, BCGD.C3PMCDR
+
+Clique 14, 3 members, table size = 216:
+    BCGD.C3PMCGR, BCGD.C3PMCDR, BCGD.C3PMCCR
+
+Clique 13, 4 members, table size = 288:
+    CCondBAC, Season, BCGD.C4PLCDR, BCGD.C4PLCGR
+
+Clique 12, 3 members, table size = 216:
+    BCGD.C4PLCDR, BCGD.C4PLCGR, BCGD.C4PLCCR
+
+Clique 11, 5 members, table size = 2016:
+    CCondBAC, Season, Output_Basal, BCGD.C3PLCDR, BCGD.C3PLCGR
+
+Clique 10, 5 members, table size = 10584:
+    Output_Basal, BCGD.C3PLCDR, BCGD.C3PLCGR, Input_Cover, BCGD.C3PLCCR
+
+Clique 9, 4 members, table size = 1176:
+    BCGD.C3PLCDR, BCGD.C3PLCGR, Input_Cover, Cover_Inc
+
+Clique 8, 4 members, table size = 980:
+    BCGD.C3PLCDR, Input_Cover, Cover_Inc, Cover_Dec
+
+Clique 7, 3 members, table size = 140:
+    Cover_Inc, Cover_Dec, Dead_Dec
+
+Clique 6, 4 members, table size = 140:
+    Cover_Inc, Dead_Dec, NH, Output_NUI
+
+Clique 5, 4 members, table size = 980:
+    Cover_Dec, Dead_Dec, Input_Dead, Output_Dead
+
+Clique 4, 3 members, table size = 84:
+    Dead_Dec, Input_Dead, BCGD.DDRM
+
+Clique 3, 5 members, table size = 3087:
+    Output_Basal, Input_Cover, BCGD.C3PLCCR, CC, Output_Cover
+
+Clique 2, 1 member, table size = 3:
+    BCGD.DDRL
+
+Clique 1, 1 member, table size = 3:
+    BCGD.DDRH
+
+Total clique table size: 72714
+
+
+The junction forest:
+
+Creating junction tree with clique 45 as root ...
+
+Cliques 44 and 45 linked, separator has 1 member and table size = 5:
+    CSumIndex
+
+Cliques 43 and 44 linked, separator has 2 members and table size = 9:
+    CCondBAC, CCondS
+
+Cliques 42 and 43 linked, separator has 2 members and table size = 9:
+    CCondBAC, SR
+
+Cliques 41 and 42 linked, separator has 4 members and table size = 270:
+    CCondBAC, GR, New_Adults, Input_Seeds
+
+Cliques 40 and 41 linked, separator has 4 members and table size = 420:
+    GR, Input_Seeds, Season, Input_Basal
+
+Cliques 39 and 40 linked, separator has 4 members and table size = 420:
+    GR, Input_Seeds, Input_Basal, SP
+
+Cliques 38 and 41 linked, separator has 4 members and table size = 504:
+    CCondBAC, New_Adults, Season, Input_Basal
+
+Cliques 37 and 38 linked, separator has 5 members and table size = 7056:
+    New_Adults, Season, Input_Basal, Output_Basal, BCGD.C3PLBCR
+
+Cliques 36 and 38 linked, separator has 3 members and table size = 72:
+    CCondBAC, Season, BCGD.C3PLBCR
+
+Cliques 35 and 36 linked, separator has 2 members and table size = 12:
+    CCondBAC, Season
+
+Cliques 34 and 35 linked, separator has 2 members and table size = 16:
+    BCGD.C3PHBGR, BCGD.C3PHBDR
+
+Cliques 33 and 35 linked, separator has 2 members and table size = 12:
+    CCondBAC, Season
+
+Cliques 32 and 33 linked, separator has 2 members and table size = 16:
+    BCGD.C4PSBDR, BCGD.C4PSBGR
+
+Cliques 31 and 35 linked, separator has 2 members and table size = 12:
+    CCondBAC, Season
+
+Cliques 30 and 31 linked, separator has 2 members and table size = 16:
+    BCGD.C3PSBDR, BCGD.C3PSBGR
+
+Cliques 29 and 35 linked, separator has 2 members and table size = 12:
+    CCondBAC, Season
+
+Cliques 28 and 29 linked, separator has 2 members and table size = 16:
+    BCGD.C4PMBGR, BCGD.C4PMBDR
+
+Cliques 27 and 35 linked, separator has 2 members and table size = 12:
+    CCondBAC, Season
+
+Cliques 26 and 27 linked, separator has 2 members and table size = 16:
+    BCGD.C3PMBGR, BCGD.C3PMBDR
+
+Cliques 25 and 35 linked, separator has 2 members and table size = 12:
+    CCondBAC, Season
+
+Cliques 24 and 25 linked, separator has 2 members and table size = 16:
+    BCGD.C4PLBDR, BCGD.C4PLBGR
+
+Cliques 23 and 35 linked, separator has 2 members and table size = 12:
+    CCondBAC, Season
+
+Cliques 22 and 23 linked, separator has 2 members and table size = 24:
+    BCGD.C3PHCDR, BCGD.C3PCGR
+
+Cliques 21 and 35 linked, separator has 2 members and table size = 12:
+    CCondBAC, Season
+
+Cliques 20 and 21 linked, separator has 2 members and table size = 24:
+    BCGD.C4PSCDR, BCGD.C4PSCGR
+
+Cliques 19 and 35 linked, separator has 2 members and table size = 12:
+    CCondBAC, Season
+
+Cliques 18 and 19 linked, separator has 2 members and table size = 24:
+    BCGD.C3PSCDR, BCGD.C3PSCGR
+
+Cliques 17 and 35 linked, separator has 2 members and table size = 12:
+    CCondBAC, Season
+
+Cliques 16 and 17 linked, separator has 2 members and table size = 24:
+    BCGD.C4PMCDR, BCGD.C4PMCGR
+
+Cliques 15 and 35 linked, separator has 2 members and table size = 12:
+    CCondBAC, Season
+
+Cliques 14 and 15 linked, separator has 2 members and table size = 24:
+    BCGD.C3PMCGR, BCGD.C3PMCDR
+
+Cliques 13 and 35 linked, separator has 2 members and table size = 12:
+    CCondBAC, Season
+
+Cliques 12 and 13 linked, separator has 2 members and table size = 24:
+    BCGD.C4PLCDR, BCGD.C4PLCGR
+
+Cliques 11 and 38 linked, separator has 3 members and table size = 84:
+    CCondBAC, Season, Output_Basal
+
+Cliques 10 and 11 linked, separator has 3 members and table size = 168:
+    Output_Basal, BCGD.C3PLCDR, BCGD.C3PLCGR
+
+Cliques 9 and 10 linked, separator has 3 members and table size = 168:
+    BCGD.C3PLCDR, BCGD.C3PLCGR, Input_Cover
+
+Cliques 8 and 9 linked, separator has 3 members and table size = 196:
+    BCGD.C3PLCDR, Input_Cover, Cover_Inc
+
+Cliques 7 and 8 linked, separator has 2 members and table size = 35:
+    Cover_Inc, Cover_Dec
+
+Cliques 6 and 7 linked, separator has 2 members and table size = 28:
+    Cover_Inc, Dead_Dec
+
+Cliques 5 and 7 linked, separator has 2 members and table size = 20:
+    Cover_Dec, Dead_Dec
+
+Cliques 4 and 5 linked, separator has 2 members and table size = 28:
+    Dead_Dec, Input_Dead
+
+Cliques 3 and 10 linked, separator has 3 members and table size = 441:
+    Output_Basal, Input_Cover, BCGD.C3PLCCR
+
+Creating junction tree with clique 2 as root ...
+
+Creating junction tree with clique 1 as root ...
+
+
+Assignment of potentials to cliques:
+
+    Node NH assigned to clique 6
+    Node CC assigned to clique 3
+    Node SSR assigned to clique 39
+    Node SP assigned to clique 40
+    Node SR assigned to clique 43
+    Node GR assigned to clique 40
+    Node CCondS assigned to clique 44
+    Node Cover_Inc assigned to clique 9
+    Node New_Adults assigned to clique 42
+    Node CompSum assigned to clique 45
+    Node CSumIndex assigned to clique 45
+    Node BCGD.C3PHCCH assigned to clique 22
+    Node BCGD.C3PHCDR assigned to clique 23
+    Node BCGD.C3PCGR assigned to clique 23
+    Node BCGD.C3PHBCH assigned to clique 34
+    Node BCGD.C3PHBGR assigned to clique 35
+    Node BCGD.C3PHBDR assigned to clique 35
+    Node BCGD.C4PSCCR assigned to clique 20
+    Node BCGD.C4PSCDR assigned to clique 21
+    Node BCGD.C4PSCGR assigned to clique 21
+    Node BCGD.C4PSBCR assigned to clique 32
+    Node BCGD.C4PSBDR assigned to clique 33
+    Node BCGD.C4PSBGR assigned to clique 33
+    Node BCGD.C3PSCCR assigned to clique 18
+    Node BCGD.C3PSCDR assigned to clique 19
+    Node BCGD.C3PSCGR assigned to clique 19
+    Node BCGD.C3PSBDR assigned to clique 31
+    Node BCGD.C3PSBCR assigned to clique 30
+    Node BCGD.C3PSBGR assigned to clique 31
+    Node BCGD.C4PMBCR assigned to clique 28
+    Node BCGD.C4PMCCR assigned to clique 16
+    Node BCGD.C4PMCDR assigned to clique 17
+    Node BCGD.C4PMBGR assigned to clique 29
+    Node BCGD.C4PMCGR assigned to clique 17
+    Node BCGD.C4PMBDR assigned to clique 29
+    Node BCGD.C3PMBGR assigned to clique 27
+    Node BCGD.C3PMBDR assigned to clique 27
+    Node BCGD.C3PMCGR assigned to clique 15
+    Node BCGD.C3PMCDR assigned to clique 15
+    Node BCGD.C3PMBCR assigned to clique 26
+    Node BCGD.C3PMCCR assigned to clique 14
+    Node BCGD.DDRL assigned to clique 2
+    Node BCGD.DDRM assigned to clique 4
+    Node BCGD.C4PLCCR assigned to clique 12
+    Node BCGD.C4PLBCR assigned to clique 24
+    Node BCGD.DDRH assigned to clique 1
+    Node BCGD.C3PLCCR assigned to clique 10
+    Node BCGD.C3PLBCR assigned to clique 36
+    Node BCGD.C4PLCDR assigned to clique 13
+    Node BCGD.C4PLBDR assigned to clique 25
+    Node BCGD.C4PLCGR assigned to clique 13
+    Node BCGD.C4PLBGR assigned to clique 25
+    Node BCGD.C3PLCDR assigned to clique 11
+    Node BCGD.C3PLCGR assigned to clique 11
+    Node BCGD.C3PLBDR assigned to clique 36
+    Node BCGD.C3PLBGR assigned to clique 36
+    Node CCondBAC assigned to clique 44
+    Node Input_Seeds assigned to clique 42
+    Node Season assigned to clique 35
+    Node Output_Basal assigned to clique 37
+    Node Output_NUI assigned to clique 6
+    Node Output_Dead assigned to clique 5
+    Node Output_Cover assigned to clique 3
+    Node Output_Seeds assigned to clique 39
+    Node Dead_Dec assigned to clique 4
+    Node Cover_Dec assigned to clique 8
+    Node SI assigned to clique 37
+    Node Input_Dead assigned to clique 4
+    Node Input_Cover assigned to clique 8
+    Node Input_Basal assigned to clique 40
+    Node NL assigned to clique 44
+
+
+Checking conditional probability potentials:
+
+Warning: Conditional distributions for SI sum to different values:
+    min = 1
+    max = 100
+
+    No errors found
+
+
+Beliefs for chance nodes:
+
+    NH --> 1
+
+    CC --> 10
+
+    SSR --> 0.9
+
+    SP:
+	state0   0.25
+	state1   0.25
+	state2   0.25
+	state3   0.25
+
+    SR:
+	state0   0.4
+	state1   0.2
+	state2   0.4
+
+    GR:
+	state0   0.25
+	state1   0.5
+	state2   0.25
+
+    CCondS:
+	Favourable 0.4
+	Neutral    0.2
+	Unfavourable 0.4
+
+    Cover_Inc:
+	0 - 1      0.195371
+	state1   0.399874
+	1 - 2      0.243855
+	state3   0.123178
+	state4   0.0212646
+	state5   0.00648042
+	state6   0.0099773
+
+    New_Adults:
+	0 - 1      0.6408
+	1 - 2      0.1308
+	state2   0.0524
+	state3   0.1036
+	state4   0.0404
+	state5   0.032
+
+    CompSum:
+	Very Strong 0.2
+	Strong     0.2
+	Medium     0.2
+	Weak       0.2
+	Very Weak  0.2
+
+    CSumIndex:
+	state0   0.2
+	state1   0.2
+	state2   0.2
+	state3   0.2
+	state4   0.2
+
+    BCGD.C3PHCCH:
+	state0   0
+	state1   0.0388852
+	0 - 1      0.351805
+	1 - 2      0.0544667
+	state4   0.299498
+	state5   0.183148
+	state6   0.051514
+	state7   0.0191045
+	state8   0.00157869
+
+    BCGD.C3PHCDR:
+	0 - 1      0.313031
+	1 - 2      0.617905
+	state2   0.0690637
+	state3   0
+
+    BCGD.C3PCGR:
+	0 - 1      0.197474
+	1 - 2      0.533585
+	state2   0.195009
+	state3   0.052873
+	state4   0.0194798
+	state5   0.00157869
+
+    BCGD.C3PHBCH:
+	state0   0
+	state1   0.00201027
+	state2   0.256899
+	state3   0.586404
+	state4   0.154381
+	state5   0.000305597
+
+    BCGD.C3PHBGR:
+	state0   0.234882
+	state1   0.686778
+	state2   0.0780188
+	state3   0.000321005
+
+    BCGD.C3PHBDR:
+	state0   0.892928
+	state1   0.104749
+	state2   0.00232293
+	state3   0
+
+    BCGD.C4PSCCR:
+	state0   0.161814
+	state1   0.0671377
+	0 - 1      0.328108
+	1 - 2      0.0461668
+	state4   0.111233
+	state5   0.131187
+	state6   0.0930997
+	state7   0.0401402
+	state8   0.0211135
+
+    BCGD.C4PSCDR:
+	0 - 1      0.0889005
+	1 - 2      0.633701
+	state2   0.0608463
+	state3   0.216552
+
+    BCGD.C4PSCGR:
+	0 - 1      0.294683
+	1 - 2      0.364093
+	state2   0.179052
+	state3   0.0990952
+	state4   0.0419627
+	state5   0.0211139
+
+    BCGD.C4PSBCR:
+	state0   0.0515861
+	state1   0.138044
+	state2   0.227158
+	state3   0.355974
+	state4   0.20905
+	state5   0.0181888
+
+    BCGD.C4PSBDR:
+	state0   0.721875
+	state1   0.0544605
+	state2   0.164382
+	state3   0.0592824
+
+    BCGD.C4PSBGR:
+	state0   0.298754
+	state1   0.48897
+	state2   0.193167
+	state3   0.019109
+
+    BCGD.C3PSCCR:
+	state0   0.214912
+	state1   0.147504
+	0 - 1      0.164406
+	1 - 2      0.0190244
+	state4   0.121419
+	state5   0.196142
+	state6   0.0793653
+	state7   0.0361698
+	state8   0.0210581
+
+    BCGD.C3PSCDR:
+	0 - 1      0.0988898
+	1 - 2      0.412777
+	state2   0.202734
+	state3   0.2856
+
+    BCGD.C3PSCGR:
+	0 - 1      0.0964785
+	1 - 2      0.48896
+	state2   0.271336
+	state3   0.0843562
+	state4   0.037811
+	state5   0.0210585
+
+    BCGD.C3PSBDR:
+	state0   0.49955
+	state1   0.172038
+	state2   0.269129
+	state3   0.0592824
+
+    BCGD.C3PSBCR:
+	state0   0.0515861
+	state1   0.229195
+	state2   0.237322
+	state3   0.280123
+	state4   0.183589
+	state5   0.0181858
+
+    BCGD.C3PSBGR:
+	state0   0.111395
+	state1   0.710104
+	state2   0.159396
+	state3   0.0191058
+
+    BCGD.C4PMBCR:
+	state0   0.0522649
+	state1   0.140035
+	state2   0.0535172
+	state3   0.579094
+	state4   0.1569
+	state5   0.0181888
+
+    BCGD.C4PMCCR:
+	state0   0.165067
+	state1   0.0662118
+	0 - 1      0.282477
+	1 - 2      0.095428
+	state4   0.102281
+	state5   0.132816
+	state6   0.0941182
+	state7   0.0404876
+	state8   0.0211135
+
+    BCGD.C4PMCDR:
+	0 - 1      0.199186
+	1 - 2      0.523415
+	state2   0.0608463
+	state3   0.216552
+
+    BCGD.C4PMBGR:
+	state0   0.363918
+	state1   0.423805
+	state2   0.193167
+	state3   0.019109
+
+    BCGD.C4PMCGR:
+	0 - 1      0.353021
+	1 - 2      0.305755
+	state2   0.179052
+	state3   0.0990952
+	state4   0.0419627
+	state5   0.0211139
+
+    BCGD.C4PMBDR:
+	state0   0.721875
+	state1   0.0544605
+	state2   0.164382
+	state3   0.0592824
+
+    BCGD.C3PMBGR:
+	state0   0.234882
+	state1   0.586616
+	state2   0.159396
+	state3   0.0191058
+
+    BCGD.C3PMBDR:
+	state0   0.49955
+	state1   0.172038
+	state2   0.269129
+	state3   0.0592824
+
+    BCGD.C3PMCGR:
+	0 - 1      0.197474
+	1 - 2      0.387964
+	state2   0.271336
+	state3   0.0843562
+	state4   0.037811
+	state5   0.0210585
+
+    BCGD.C3PMCDR:
+	0 - 1      0.194879
+	1 - 2      0.316787
+	state2   0.202733
+	state3   0.2856
+
+    BCGD.C3PMBCR:
+	state0   0.0522649
+	state1   0.234803
+	state2   0.147083
+	state3   0.42031
+	state4   0.127353
+	state5   0.0181858
+
+    BCGD.C3PMCCR:
+	state0   0.219965
+	state1   0.156902
+	0 - 1      0.145715
+	1 - 2      0.0284303
+	state4   0.110362
+	state5   0.200697
+	state6   0.0803867
+	state7   0.0364835
+	state8   0.0210581
+
+    BCGD.DDRL:
+	state0   0.0786403
+	state1   0.842719
+	state2   0.0786403
+
+    BCGD.DDRM:
+	state0   0.0126737
+	state1   0.974653
+	state2   0.0126737
+
+    BCGD.C4PLCCR:
+	state0   0.158634
+	state1   0.0680696
+	0 - 1      0.20729
+	1 - 2      0.166206
+	state4   0.106981
+	state5   0.135801
+	state6   0.094881
+	state7   0.0410242
+	state8   0.0211135
+
+    BCGD.C4PLBCR:
+	state0   0.0510094
+	state1   0.136036
+	state2   0.0538287
+	state3   0.584037
+	state4   0.1569
+	state5   0.0181888
+
+    BCGD.DDRH:
+	state0   0.0206134
+	state1   0.958773
+	state2   0.0206134
+
+    BCGD.C3PLCCR:
+	state0   0.209251
+	state1   0.135483
+	0 - 1      0.138317
+	1 - 2      0.0709825
+	state4   0.101813
+	state5   0.205201
+	state6   0.0809272
+	state7   0.0369672
+	state8   0.0210581
+
+    BCGD.C3PLBCR:
+	state0   0.0510094
+	state1   0.222678
+	state2   0.127901
+	state3   0.452872
+	state4   0.127353
+	state5   0.0181858
+
+    BCGD.C4PLCDR:
+	0 - 1      0.384348
+	1 - 2      0.338253
+	state2   0.0608463
+	state3   0.216552
+
+    BCGD.C4PLBDR:
+	state0   0.721875
+	state1   0.0544605
+	state2   0.164382
+	state3   0.0592824
+
+    BCGD.C4PLCGR:
+	0 - 1      0.250014
+	1 - 2      0.408762
+	state2   0.179052
+	state3   0.0990952
+	state4   0.0419627
+	state5   0.0211139
+
+    BCGD.C4PLBGR:
+	state0   0.250015
+	state1   0.537709
+	state2   0.193167
+	state3   0.019109
+
+    BCGD.C3PLCDR:
+	0 - 1      0.313031
+	1 - 2      0.198636
+	state2   0.202734
+	state3   0.2856
+
+    BCGD.C3PLCGR:
+	0 - 1      3.50509e-005
+	1 - 2      0.585403
+	state2   0.271336
+	state3   0.0843562
+	state4   0.037811
+	state5   0.0210585
+
+    BCGD.C3PLBDR:
+	state0   0.49955
+	state1   0.172038
+	state2   0.269129
+	state3   0.0592825
+
+    BCGD.C3PLBGR:
+	state0   3.73642e-005
+	state1   0.821461
+	state2   0.159396
+	state3   0.0191058
+
+    CCondBAC:
+	Favourable 0.4
+	Neutral    0.2
+	Unfavourable 0.4
+
+    Input_Seeds:
+	state0   0.2
+	state1   0.2
+	state2   0.2
+	state3   0.2
+	state4   0.2
+
+    Season:
+	Spring     0.25
+	Summer     0.25
+	Autumn     0.25
+	Winter     0.25
+
+    Output_Basal:
+	state0   0.0785065
+	state1   0.18927
+	state2   0.1559
+	state3   0.155762
+	state4   0.153725
+	state5   0.146292
+	state6   0.120544
+
+    Output_NUI:
+	state0   0.0142964
+	state1   0.0678772
+	state2   0.567408
+	state3   0.350418
+	state4   0
+
+    Output_Dead:
+	state0   0.168669
+	state1   0.111225
+	state2   0.129128
+	state3   0.230383
+	state4   0.146973
+	state5   0.142846
+	state6   0.0707758
+
+    Output_Cover:
+	state0   0.016197
+	state1   0.125777
+	state2   0.13303
+	state3   0.193332
+	state4   0.175572
+	state5   0.171784
+	state6   0.184309
+
+    Output_Seeds:
+	state0   0.0624871
+	state1   0.238701
+	state2   0.182955
+	state3   0.375306
+	state4   0.140551
+
+    Dead_Dec:
+	0 - 1      0.142857
+	1 - 2      0.321461
+	state2   0.0720463
+	state3   0.463635
+
+    Cover_Dec:
+	0 - 1      0.227959
+	1 - 2      0.438371
+	state2   0.184476
+	state3   0.0856118
+	state4   0.0635827
+
+    SI:
+	false      0.825
+	true       0.175
+
+    Input_Dead:
+	state0   0.142857
+	state1   0.142857
+	state2   0.142857
+	state3   0.142857
+	state4   0.142857
+	state5   0.142857
+	state6   0.142857
+
+    Input_Cover:
+	state0   0.142857
+	state1   0.142857
+	state2   0.142857
+	state3   0.142857
+	state4   0.142857
+	state5   0.142857
+	state6   0.142857
+
+    Input_Basal:
+	state0   0.142857
+	state1   0.142857
+	state2   0.142857
+	state3   0.142857
+	state4   0.142857
+	state5   0.142857
+	state6   0.142857
+
+    NL:
+	Highly Enriched 0.333333
+	Moderately Enriched 0.333333
+	Natural    0.333333

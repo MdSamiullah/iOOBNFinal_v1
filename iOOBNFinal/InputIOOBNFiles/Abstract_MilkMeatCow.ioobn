@@ -1,0 +1,4 @@
+abstract class Abstract_MilkMeatCow extends Abstract_MeatCow implements Interface_MilkMeatCow 
+{
+
+}

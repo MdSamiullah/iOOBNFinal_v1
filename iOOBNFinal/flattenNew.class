@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iOOBN type=".class">
+	<node  id="2" name="V" label="V" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="3" name="S" label="S" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="4" name="T" label="T" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="2" />
+	</node>
+	<node  id="5" name="L1" label="L1" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="3" />
+	</node>
+	<node  id="6" name="B" label="B" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="3" />
+	</node>
+	<node  id="7" name="C" label="C" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="2" />
+	</node>
+	<node  id="8" name="L2" label="L2" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="3" />
+	</node>
+	<node  id="9" name="E" label="E" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="4" />
+		<parent id="5" />
+	</node>
+	<node  id="10" name="CL" label="CL" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="7" />
+		<parent id="8" />
+	</node>
+	<node  id="11" name="X1" label="X1" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="9" />
+	</node>
+	<node  id="12" name="D" label="D" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="9" />
+		<parent id="6" />
+	</node>
+	<node  id="13" name="X2" label="X2" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="10" />
+	</node>
+	<node  id="14" name="G" label="G" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="10" />
+	</node>
+	<node  id="15" name="P" label="P" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="13" />
+		<parent id="14" />
+		<parent id="11" />
+	</node>
+</iOOBN>

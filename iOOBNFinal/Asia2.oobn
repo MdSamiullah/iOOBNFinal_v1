@@ -1,0 +1,109 @@
+class Asia2
+{
+	inputs = ( V S );
+	outputs = ( X G );
+	node V
+	{
+		label= "V";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node S
+	{
+		label= "S";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node C
+	{
+		label= "C";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node L
+	{
+		label= "L";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node R
+	{
+		label= "R";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node X
+	{
+		label= "X";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node G
+	{
+		label= "G";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	potential ( V )
+	{
+		data=(0.5 0.5 );
+	}
+	potential ( S )
+	{
+		data=(0.5 0.5 );
+	}
+	potential ( C | V  )
+	{
+		data=
+		(
+			(0.5 0.5 )
+			(0.5 0.5 )
+		);
+	}
+	potential ( L | S  )
+	{
+		data=
+		(
+			(0.5 0.5 )
+			(0.5 0.5 )
+		);
+	}
+	potential ( R | C L  )
+	{
+		data=
+		(
+			(
+				(0.5 0.5 )
+				(0.5 0.5 )
+			)
+			(
+				(0.5 0.5 )
+				(0.5 0.5 )
+			)
+		);
+	}
+	potential ( X | R  )
+	{
+		data=
+		(
+			(0.5 0.5 )
+			(0.5 0.5 )
+		);
+	}
+	potential ( G | R  )
+	{
+		data=
+		(
+			(0.5 0.5 )
+			(0.5 0.5 )
+		);
+	}
+
+}

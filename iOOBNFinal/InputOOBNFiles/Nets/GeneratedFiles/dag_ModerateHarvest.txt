@@ -1,0 +1,11 @@
+BR : Output_Basal 
+Input_Cover : Output_Cover LOBio 
+Output_Dead : 
+BioRes : 
+Input_Basal : Output_Basal 
+Output_Cover : 
+LOBio : Output_Dead 
+Output_Basal : 
+Input_Dead : Output_Dead LOBio 
+Harvest : BR BioRes CR 
+CR : 

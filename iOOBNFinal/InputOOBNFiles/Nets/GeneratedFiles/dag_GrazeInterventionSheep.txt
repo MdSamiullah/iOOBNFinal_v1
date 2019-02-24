@@ -1,0 +1,5 @@
+Input_Fences : GrazeCost Output_Fences 
+GrazeCost : 
+Output_Fences : 
+Scale : GrazeCost 
+Duration : GrazeCost 

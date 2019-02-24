@@ -1,0 +1,9 @@
+Locale : Reproduction Metabolism 
+Reproduction : Calves Meat Milk 
+Accessory : 
+Sex : Reproduction 
+Calves : 
+Metabolism : Accessory Calves Meat Milk 
+Meat : 
+Food : Reproduction Metabolism 
+Milk : 

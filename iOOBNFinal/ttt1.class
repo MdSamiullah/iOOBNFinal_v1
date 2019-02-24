@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iOOBN type=".class">
+	<node  id="2" name="C_0" label="C_0" type="Discrete" subType="Boolean" kind="0">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="3" name="C_1" label="C_1" type="Discrete" subType="Boolean" kind="0">
+		<state name="True" />
+		<state name="False" />
+		<parent id="2" />
+		<tuple value="C_0$True$False$" />
+		<tuple value="^$^$^$" />
+		<tuple value="True$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$" />
+	</node>
+</iOOBN>

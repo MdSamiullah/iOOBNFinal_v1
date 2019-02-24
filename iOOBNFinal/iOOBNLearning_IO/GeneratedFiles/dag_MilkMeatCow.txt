@@ -1,0 +1,6 @@
+Locale : Metabolism 
+Sex : Milk 
+Metabolism : Meat Milk 
+Food : Metabolism 
+Meat : 
+Milk : 

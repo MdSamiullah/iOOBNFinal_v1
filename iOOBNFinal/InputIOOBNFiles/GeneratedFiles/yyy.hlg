@@ -1,0 +1,379 @@
+Fri Jan 04 17:12:57 2019
+
+
+Moral links:
+
+    Marrying xxx_1.C5 and xxx_1.C6
+
+
+Triangulating prime component with 1 member:
+    C1
+This component is a clique of cost 2
+
+Triangulating prime component with 3 members:
+    C2, xxx_1.C6, xxx_1.C5
+This component is a clique of cost 8
+
+Triangulating prime component with 1 member:
+    xxx_1.C4
+This component is a clique of cost 2
+
+
+Total cost of triangulation for all prime components is 12
+
+
+Elimination sequence:
+
+    xxx_1.C5
+    xxx_1.C6
+    C2
+    C1
+    xxx_1.C4
+
+
+Cliques:
+
+Clique 3, 1 member, table size = 2:
+    xxx_1.C4
+
+Clique 2, 3 members, table size = 8:
+    C2, xxx_1.C6, xxx_1.C5
+
+Clique 1, 1 member, table size = 2:
+    C1
+
+Total clique table size: 12
+
+
+The junction forest:
+
+Creating junction tree with clique 3 as root ...
+
+Creating junction tree with clique 2 as root ...
+
+Creating junction tree with clique 1 as root ...
+
+
+Assignment of potentials to cliques:
+
+    Node C2 assigned to clique 2
+    Node C1 assigned to clique 1
+    Node xxx_1.C6 assigned to clique 2
+    Node xxx_1.C5 assigned to clique 2
+    Node xxx_1.C4 assigned to clique 3
+
+
+Checking conditional probability potentials:
+
+    No errors found
+
+
+Beliefs for chance nodes:
+
+    C2:
+	State 1    0.5
+	State 2    0.5
+
+    C1:
+	State 1    0.5
+	State 2    0.5
+
+    xxx_1.C6:
+	State 1    0.5
+	State 2    0.5
+
+    xxx_1.C5:
+	State 1    0.5
+	State 2    0.5
+
+    xxx_1.C4:
+	State 1    0.5
+	State 2    0.5
+Fri Jan 04 17:15:19 2019
+
+
+Moral links:
+
+    Marrying xxx_1.C5 and xxx_1.C6
+
+
+Triangulating prime component with 1 member:
+    C1
+This component is a clique of cost 2
+
+Triangulating prime component with 3 members:
+    C2, xxx_1.C6, xxx_1.C5
+This component is a clique of cost 8
+
+Triangulating prime component with 1 member:
+    xxx_1.C4
+This component is a clique of cost 2
+
+
+Total cost of triangulation for all prime components is 12
+
+
+Elimination sequence:
+
+    xxx_1.C5
+    xxx_1.C6
+    C2
+    C1
+    xxx_1.C4
+
+
+Cliques:
+
+Clique 3, 1 member, table size = 2:
+    xxx_1.C4
+
+Clique 2, 3 members, table size = 8:
+    C2, xxx_1.C6, xxx_1.C5
+
+Clique 1, 1 member, table size = 2:
+    C1
+
+Total clique table size: 12
+
+
+The junction forest:
+
+Creating junction tree with clique 3 as root ...
+
+Creating junction tree with clique 2 as root ...
+
+Creating junction tree with clique 1 as root ...
+
+
+Assignment of potentials to cliques:
+
+    Node C2 assigned to clique 2
+    Node C1 assigned to clique 1
+    Node xxx_1.C6 assigned to clique 2
+    Node xxx_1.C5 assigned to clique 2
+    Node xxx_1.C4 assigned to clique 3
+
+
+Checking conditional probability potentials:
+
+    No errors found
+
+
+Beliefs for chance nodes:
+
+    C2:
+	State 1    0.5
+	State 2    0.5
+
+    C1:
+	State 1    0.5
+	State 2    0.5
+
+    xxx_1.C6:
+	State 1    0.5
+	State 2    0.5
+
+    xxx_1.C5:
+	State 1    0.5
+	State 2    0.5
+
+    xxx_1.C4:
+	State 1    0.5
+	State 2    0.5
+Fri Jan 04 17:16:10 2019
+
+
+Moral links:
+
+    Marrying xxx_1.C5 and xxx_1.C6
+
+
+Triangulating prime component with 1 member:
+    C1
+This component is a clique of cost 2
+
+Triangulating prime component with 3 members:
+    C2, xxx_1.C6, xxx_1.C5
+This component is a clique of cost 8
+
+Triangulating prime component with 1 member:
+    xxx_1.C4
+This component is a clique of cost 2
+
+
+Total cost of triangulation for all prime components is 12
+
+
+Elimination sequence:
+
+    xxx_1.C5
+    xxx_1.C6
+    C2
+    C1
+    xxx_1.C4
+
+
+Cliques:
+
+Clique 3, 1 member, table size = 2:
+    xxx_1.C4
+
+Clique 2, 3 members, table size = 8:
+    C2, xxx_1.C6, xxx_1.C5
+
+Clique 1, 1 member, table size = 2:
+    C1
+
+Total clique table size: 12
+
+
+The junction forest:
+
+Creating junction tree with clique 3 as root ...
+
+Creating junction tree with clique 2 as root ...
+
+Creating junction tree with clique 1 as root ...
+
+
+Assignment of potentials to cliques:
+
+    Node C2 assigned to clique 2
+    Node C1 assigned to clique 1
+    Node xxx_1.C6 assigned to clique 2
+    Node xxx_1.C5 assigned to clique 2
+    Node xxx_1.C4 assigned to clique 3
+
+
+Checking conditional probability potentials:
+
+    No errors found
+
+
+Beliefs for chance nodes:
+
+    C2:
+	State 1    0.5
+	State 2    0.5
+
+    C1 --> "State 1"
+
+    xxx_1.C6:
+	State 1    0.5
+	State 2    0.5
+
+    xxx_1.C5:
+	State 1    0.5
+	State 2    0.5
+
+    xxx_1.C4:
+	State 1    0.5
+	State 2    0.5
+Fri Jan 04 17:17:23 2019
+
+
+Moral links:
+
+    Marrying xxx_1.C5 and xxx_1.C6
+    Marrying xxx_1.C3 and C1
+    Marrying xxx_1.C2 and xxx_1.C3
+    Marrying xxx_1.C2 and C1
+
+
+Triangulating prime component with 3 members:
+    C2, xxx_1.C6, xxx_1.C5
+This component is a clique of cost 8
+
+Triangulating prime component with 3 members:
+    xxx_1.C6, xxx_1.C5, xxx_1.C4
+This component is a clique of cost 8
+
+Triangulating prime component with 4 members:
+    C1, xxx_1.C4, xxx_1.C3, xxx_1.C2
+This component is a clique of cost 16
+
+
+Total cost of triangulation for all prime components is 32
+
+
+Elimination sequence:
+
+    xxx_1.C2
+    xxx_1.C3
+    C1
+    C2
+    xxx_1.C4
+    xxx_1.C5
+    xxx_1.C6
+
+
+Cliques:
+
+Clique 3, 3 members, table size = 8:
+    xxx_1.C6, xxx_1.C5, xxx_1.C4
+
+Clique 2, 3 members, table size = 8:
+    xxx_1.C6, xxx_1.C5, C2
+
+Clique 1, 4 members, table size = 16:
+    xxx_1.C4, C1, xxx_1.C3, xxx_1.C2
+
+Total clique table size: 32
+
+
+The junction forest:
+
+Creating junction tree with clique 3 as root ...
+
+Cliques 2 and 3 linked, separator has 2 members and table size = 4:
+    xxx_1.C6, xxx_1.C5
+
+Cliques 1 and 3 linked, separator has 1 member and table size = 2:
+    xxx_1.C4
+
+
+Assignment of potentials to cliques:
+
+    Node C2 assigned to clique 2
+    Node C1 assigned to clique 1
+    Node xxx_1.C6 assigned to clique 3
+    Node xxx_1.C5 assigned to clique 3
+    Node xxx_1.C4 assigned to clique 1
+    Node xxx_1.C3 assigned to clique 1
+    Node xxx_1.C2 assigned to clique 1
+
+
+Checking conditional probability potentials:
+
+    No errors found
+
+
+Beliefs for chance nodes:
+
+    C2:
+	State 1    0.5
+	State 2    0.5
+
+    C1:
+	State 1    0.5
+	State 2    0.5
+
+    xxx_1.C6:
+	State 1    0.5
+	State 2    0.5
+
+    xxx_1.C5:
+	State 1    0.5
+	State 2    0.5
+
+    xxx_1.C4:
+	State 1    0.5
+	State 2    0.5
+
+    xxx_1.C3:
+	State 1    0.5
+	State 2    0.5
+
+    xxx_1.C2:
+	State 1    0.5
+	State 2    0.5

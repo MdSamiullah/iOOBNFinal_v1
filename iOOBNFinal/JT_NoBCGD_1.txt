@@ -1,0 +1,15 @@
+1: SR,CCondS : 5 2 
+2: CCondS,CSumIndex,NL : 4 3 1 
+3: CSumIndex,NL,CCondBAC : 2 
+4: CSumIndex,CompSum : 2 
+5: SR,GR,Input_Seeds,New_Adults : 6 1 
+6: GR,Input_Seeds,New_Adults,SI,Input_Basal : 10 7 5 
+7: GR,Input_Seeds,SI,Input_Basal,SP : 9 8 6 
+8: GR,Input_Seeds,Input_Basal,SP,SSR,Output_Seeds : 7 
+9: GR,SI,SP,Season : 7 
+10: New_Adults,SI,Input_Basal,Output_Basal : 11 6 
+11: Output_Basal,Input_Cover,CC,Output_Cover : 12 10 
+12: Input_Cover,Dead_Dec,Cover_Dec : 15 13 11 
+13: Input_Cover,Dead_Dec,Cover_Inc : 14 12 
+14: Dead_Dec,Cover_Inc,NH,Output_NUI : 13 
+15: Dead_Dec,Cover_Dec,Output_Dead,Input_Dead : 12 

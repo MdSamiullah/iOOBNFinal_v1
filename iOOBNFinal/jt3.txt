@@ -1,0 +1,10 @@
+1: A.X,B.X,B.G,N : 2
+2: B.R,A.X,B.X,B.G : 1 3
+3: B.C,A.X,B.R,B.X : 2 4 9 
+4: V,A.T,B.C,A.X : 3 5
+5: S,V,A.T,A.X : 4 6
+6: A.T,S,A.X,A.L,A.E : 5 7
+7: A.L,S,A.B,A.E : 6 8
+8: A.D,A.E,A.B : 7
+9: B.C,B.L,B.R,B.X : 3 10
+10: B.L,B.R,S,B.X : 9

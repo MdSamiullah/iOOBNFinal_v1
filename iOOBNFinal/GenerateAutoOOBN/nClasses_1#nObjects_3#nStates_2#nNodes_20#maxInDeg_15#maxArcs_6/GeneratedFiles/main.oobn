@@ -1,0 +1,197 @@
+class main
+{
+	inputs = (  node2);
+	outputs = (  node10 node19);
+
+	instance Obj0C1 : main1( node0 = node18, node5 = node7; Obj0C1_node16 = node16 )
+	{		position = ( 164 284 );
+	}
+	instance Obj1C1 : main1( node0 = node17, node5 = node18; Obj1C1_node16 = node16 )
+	{		position = ( 284 270 );
+	}
+	instance Obj2C1 : main1( node0 = node17, node5 = node0; Obj2C1_node16 = node16 )
+	{		position = ( 404 255 );
+	}
+
+	discrete node node11
+	{
+		type = "Discrete" ;
+		position = ( 164 1004 );
+		states = ( "State0" "State1" );
+	}
+
+	discrete node node12
+	{
+		type = "Discrete" ;
+		position = ( 164 524 );
+		states = ( "State0" "State1" );
+	}
+
+	discrete node node13
+	{
+		type = "Discrete" ;
+		position = ( 255 390 );
+		states = ( "State0" "State1" );
+	}
+
+	discrete node node14
+	{
+		type = "Discrete" ;
+		position = ( 284 990 );
+		states = ( "State0" "State1" );
+	}
+
+	discrete node node15
+	{
+		type = "Discrete" ;
+		position = ( 44 750 );
+		states = ( "State0" "State1" );
+	}
+
+	discrete node node16
+	{
+		type = "Discrete" ;
+		position = ( 135 164 );
+		states = ( "State0" "State1" );
+	}
+
+	discrete node node17
+	{
+		type = "Discrete" ;
+		position = ( 375 375 );
+		states = ( "State0" "State1" );
+	}
+
+	discrete node node18
+	{
+		type = "Discrete" ;
+		position = ( 495 389 );
+		states = ( "State0" "State1" );
+	}
+
+	discrete node node19
+	{
+		type = "Discrete" ;
+		position = ( 404 975 );
+		states = ( "State0" "State1" );
+	}
+
+	discrete node node0
+	{
+		type = "Discrete" ;
+		position = ( 15 390 );
+		states = ( "State0" "State1" );
+	}
+
+	discrete node node1
+	{
+		type = "Discrete" ;
+		position = ( 44 510 );
+		states = ( "State0" "State1" );
+	}
+
+	discrete node node2
+	{
+		type = "Discrete" ;
+		position = ( 45 30 );
+		states = ( "State0" "State1" );
+	}
+
+	discrete node node3
+	{
+		type = "Discrete" ;
+		position = ( 44 990 );
+		states = ( "State0" "State1" );
+	}
+
+	discrete node node4
+	{
+		type = "Discrete" ;
+		position = ( 15 1110 );
+		states = ( "State0" "State1" );
+	}
+
+	discrete node node5
+	{
+		type = "Discrete" ;
+		position = ( 44 270 );
+		states = ( "State0" "State1" );
+	}
+
+	discrete node node6
+	{
+		type = "Discrete" ;
+		position = ( 135 404 );
+		states = ( "State0" "State1" );
+	}
+
+	discrete node node7
+	{
+		type = "Discrete" ;
+		position = ( 15 870 );
+		states = ( "State0" "State1" );
+	}
+
+	discrete node node8
+	{
+		type = "Discrete" ;
+		position = ( 15 150 );
+		states = ( "State0" "State1" );
+	}
+
+	discrete node node9
+	{
+		type = "Discrete" ;
+		position = ( 44 1230 );
+		states = ( "State0" "State1" );
+	}
+
+	discrete node node10
+	{
+		type = "Discrete" ;
+		position = ( 164 1244 );
+		states = ( "State0" "State1" );
+	}
+
+
+	potential ( node11 |  node1 node2 node3 node14 node12 node5 node8 node6  )
+	{			}
+	potential ( node12 |  node1 node16 node0 node8  )
+	{			}
+	potential ( node13 |  node16 node5 node8  )
+	{			}
+	potential ( node14 |  node1 node17 node3 node18 node15 node4 node6 node5  )
+	{			}
+	potential ( node15 |  node2 node12 node13 node4 node7 node8  )
+	{			}
+	potential ( node16 |  node2  )
+	{			}
+	potential ( node17 |  node16 node5 node2  )
+	{			}
+	potential ( node18 |  node4 node8 node2  )
+	{			}
+	potential ( node19 |  node13 node6 node5 node12 node9 Obj0C1_node16 Obj1C1_node16 Obj2C1_node16  )
+	{			}
+	potential ( node0 |  node6 node13 node2  )
+	{			}
+	potential ( node1 |  node2 node5 node8 node13  )
+	{			}
+	potential ( node2 )
+	{			}
+	potential ( node3 |  node7 node2 node15 node4 node0 node16 node6 node12  )
+	{			}
+	potential ( node4 |  node0 node7 node1 node6 node16 node2 node17 node13 node12  )
+	{			}
+	potential ( node5 |  node2 node8  )
+	{			}
+	potential ( node6 |  node5 node13 node8  )
+	{			}
+	potential ( node7 |  node8 node1 node16 node13 node0 node12 node2  )
+	{			}
+	potential ( node8 |  node2  )
+	{			}
+	potential ( node9 |  node1 node16 node18 node17 node4 node2 node6 node13 node11 node15  )
+	{			}
+	potential ( node10 |  node5 node12 node9 node3 node2 node4 node8 node15 node14 node16  )
+	{			}
+}

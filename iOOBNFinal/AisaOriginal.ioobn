@@ -1,0 +1,128 @@
+class AisaOriginal.ioobn	node V
+	{
+		label= "V";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node T
+	{
+		label= "T";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node X
+	{
+		label= "X";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node L
+	{
+		label= "L";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node S
+	{
+		label= "S";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node B
+	{
+		label= "B";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node D
+	{
+		label= "D";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	node E
+	{
+		label= "E";
+		type="Discrete";
+		subType="Boolean";
+		states=("True" "False" );
+	}
+	potential ( V )
+	{
+		data=(0.5 0.5 )
+;
+	}
+	potential ( T | V  )
+	{
+		data=(
+	(0.5 0.5 )
+	(0.5 0.5 )
+)
+;
+	}
+	potential ( X | E  )
+	{
+		data=(
+	(0.5 0.5 )
+	(0.5 0.5 )
+)
+;
+	}
+	potential ( L | S  )
+	{
+		data=(
+	(0.5 0.5 )
+	(0.5 0.5 )
+)
+;
+	}
+	potential ( S )
+	{
+		data=(0.5 0.5 )
+;
+	}
+	potential ( B | S  )
+	{
+		data=(
+	(0.5 0.5 )
+	(0.5 0.5 )
+)
+;
+	}
+	potential ( D | B E  )
+	{
+		data=(
+	(
+		(0.5 0.5 )
+		(0.5 0.5 )
+	)
+	(
+		(0.5 0.5 )
+		(0.5 0.5 )
+	)
+)
+;
+	}
+	potential ( E | L T  )
+	{
+		data=(
+	(
+		(0.5 0.5 )
+		(0.5 0.5 )
+	)
+	(
+		(0.5 0.5 )
+		(0.5 0.5 )
+	)
+)
+;
+	}
+
+}

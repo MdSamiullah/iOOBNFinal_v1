@@ -1,0 +1,12 @@
+LPalC : 
+LPalS : 
+MComp : 
+SComp : 
+MPalC : 
+MPalS : 
+VLPalC : 
+VLPalS : 
+WComp : 
+HPalC : 
+HPalS : 
+VSComp : 

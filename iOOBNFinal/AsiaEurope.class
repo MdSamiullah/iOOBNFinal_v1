@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iOOBN type=".class">
+	<node  id="2" name="V" label="V" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<tuple value="^$^$" />
+		<tuple value="True$0.5$" />
+		<tuple value="False$0.5$" />
+	</node>
+	<node  id="3" name="S" label="S" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="4" name="T" label="T" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="2" />
+		<tuple value="V$True$False$" />
+		<tuple value="^$^$^$" />
+		<tuple value="True$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$" />
+	</node>
+	<node  id="5" name="L" label="L" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="3" />
+		<tuple value="S$True$False$" />
+		<tuple value="^$^$^$" />
+		<tuple value="True$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$" />
+	</node>
+	<node  id="6" name="B" label="B" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="3" />
+		<tuple value="S$True$False$" />
+		<tuple value="^$^$^$" />
+		<tuple value="True$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$" />
+	</node>
+	<node  id="7" name="C" label="C" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="2" />
+		<tuple value="V$True$False$" />
+		<tuple value="^$^$^$" />
+		<tuple value="True$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$" />
+	</node>
+	<node  id="8" name="L1" label="L1" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="3" />
+		<tuple value="S$True$False$" />
+		<tuple value="^$^$^$" />
+		<tuple value="True$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$" />
+	</node>
+	<node  id="14" name="E" label="E" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="4" />
+		<parent id="5" />
+		<tuple value="T$True$^$False$^$" />
+		<tuple value="L$True$False$True$False$" />
+		<tuple value="^$^$^$^$^$" />
+		<tuple value="True$0.5$0.5$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$0.5$0.5$" />
+	</node>
+	<node  id="15" name="R" label="R" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="7" />
+		<parent id="8" />
+		<tuple value="C$True$^$False$^$" />
+		<tuple value="L1$True$False$True$False$" />
+		<tuple value="^$^$^$^$^$" />
+		<tuple value="True$0.5$0.5$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$0.5$0.5$" />
+	</node>
+	<node  id="16" name="D" label="D" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="6" />
+		<parent id="14" />
+		<tuple value="B$True$^$False$^$" />
+		<tuple value="E$True$False$True$False$" />
+		<tuple value="^$^$^$^$^$" />
+		<tuple value="True$0.5$0.5$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$0.5$0.5$" />
+	</node>
+	<node  id="23" name="X" label="X" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="14" />
+		<parent id="15" />
+		<tuple value="E$True$^$False$^$" />
+		<tuple value="R$True$False$True$False$" />
+		<tuple value="^$^$^$^$^$" />
+		<tuple value="True$0.5$0.5$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$0.5$0.5$" />
+	</node>
+	<node  id="24" name="G" label="G" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="15" />
+		<tuple value="R$True$False$" />
+		<tuple value="^$^$^$" />
+		<tuple value="True$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$" />
+	</node>
+	<node  id="25" name="N" label="N" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+		<parent id="23" />
+		<parent id="24" />
+		<tuple value="X$True$^$False$^$" />
+		<tuple value="G$True$False$True$False$" />
+		<tuple value="^$^$^$^$^$" />
+		<tuple value="True$0.5$0.5$0.5$0.5$" />
+		<tuple value="False$0.5$0.5$0.5$0.5$" />
+	</node>
+</iOOBN>

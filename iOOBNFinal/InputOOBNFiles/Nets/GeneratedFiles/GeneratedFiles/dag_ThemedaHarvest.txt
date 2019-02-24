@@ -1,0 +1,14 @@
+BioRes : LOBio 
+Harvest : BR BioRes CR SR 
+CR : Output_Dead Output_Cover LOBio 
+BR : 
+Input_Seedlings : Output_Seedlings 
+Input_Cover : Output_Cover LOBio 
+Output_Dead : 
+Input_Basal : Output_Basal 
+Output_Cover : 
+LOBio : Output_Dead 
+Output_Basal : Output_Cover 
+Input_Dead : Output_Dead LOBio 
+Output_Seedlings : 
+SR : Output_Seedlings 

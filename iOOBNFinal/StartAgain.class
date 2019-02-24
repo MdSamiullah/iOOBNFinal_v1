@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iOOBN type=".class">
+	<node  id="10" name="C_12" label="C_12" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+	</node>
+	<node  id="11" name="C_13" label="C_13" type="Discrete" subType="Boolean">
+		<state name="True" />
+		<state name="False" />
+	</node>
+</iOOBN>

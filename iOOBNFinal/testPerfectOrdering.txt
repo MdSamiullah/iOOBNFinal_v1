@@ -1,0 +1,14 @@
+V=1:T C
+S=5: L1 B L2
+T=2: L1 E
+L1=4: B E
+B=6: E D
+C=14: L2 CL
+L2=13: CL
+E=3: D X1
+CL=12: X2 G
+X1=8: X2 G P
+D=7: 
+X2=9: G P
+G=11: P
+P=10: 

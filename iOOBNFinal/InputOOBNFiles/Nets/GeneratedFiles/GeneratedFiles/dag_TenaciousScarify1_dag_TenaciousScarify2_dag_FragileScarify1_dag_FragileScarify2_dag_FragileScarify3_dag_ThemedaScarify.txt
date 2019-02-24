@@ -1,0 +1,7 @@
+Input_Cover : Output_Cover Cover_Dec 
+Output_Dead : 
+Output_Cover : 
+Scarify : CR 
+Input_Dead : Output_Dead 
+Cover_Dec : 
+CR : 

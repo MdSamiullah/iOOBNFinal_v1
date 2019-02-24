@@ -1,0 +1,13 @@
+Needle_Cover : C3Target 
+BroadWeeds_Cover : BLTarget 
+Product : HerbicideCost 
+Scale : HerbicideCost 
+C3Target : HerbicideCost 
+Blanket_Cover : BLTarget 
+HerbicideStrategy : Application 
+BLTarget : HerbicideCost 
+Target : HerbicideCost 
+ST_Cover : C3Target 
+DeRocked : Application 
+Application : HerbicideCost 
+HerbicideCost : 

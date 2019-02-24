@@ -1,0 +1,17 @@
+Duration : 
+PalSumSheep : CSumIndex 
+LPal : 
+BACG_HBR : Output_Basal 
+Input_Seedlings : Output_Seedlings 
+Input_Cover : Output_Cover 
+BACG_DR : Output_Dead 
+Output_Dead : 
+BACG_CR : Output_Cover Output_Seedlings 
+Input_Basal : Output_Basal 
+Output_Cover : 
+CSumIndex : DPal LPal 
+DPal : 
+Output_Basal : 
+Input_Dead : Output_Dead 
+Season : LPal 
+Output_Seedlings : 

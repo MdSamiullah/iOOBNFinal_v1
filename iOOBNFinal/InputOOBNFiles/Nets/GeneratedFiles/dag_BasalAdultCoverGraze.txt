@@ -1,0 +1,9 @@
+SBR : 
+SAR : 
+DPal : DR 
+HAR : 
+HBR : 
+Duration : SBR SAR HAR HBR DR CR 
+LPal : SBR SAR HAR HBR CR 
+DR : 
+CR : 

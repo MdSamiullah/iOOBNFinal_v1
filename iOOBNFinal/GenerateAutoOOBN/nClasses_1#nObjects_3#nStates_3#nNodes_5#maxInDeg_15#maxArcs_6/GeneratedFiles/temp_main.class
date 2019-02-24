@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iOOBN>
+	<node  id="main1.class::Obj0C1_6" name="node4" label="node4" type="discrete node" subType="" kind="2">
+		<state name="State0" />
+		<state name="State1" />
+		<state name="State2" />
+		<parent id="main1.class::Obj0C1_5" />
+		<parent id="main1.class::Obj0C1_2" />
+		<parent id="main1.class::Obj0C1_4" />
+	</node>
+	<node  id="main1.class::Obj2C1_3" name="node1" label="node1" type="discrete node" subType="" kind="2">
+		<state name="State0" />
+		<state name="State1" />
+		<state name="State2" />
+		<parent id="main1.class::Obj2C1_2" />
+	</node>
+	<node  id="main1.class::Obj2C1_2" name="node0" label="node0" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<state name="State2" />
+		<parent id="main1.class::Obj2C1_5" />
+	</node>
+	<node  id="main1.class::Obj1C1_6" name="node4" label="node4" type="discrete node" subType="" kind="2">
+		<state name="State0" />
+		<state name="State1" />
+		<state name="State2" />
+		<parent id="main1.class::Obj1C1_5" />
+		<parent id="main1.class::Obj1C1_2" />
+		<parent id="main1.class::Obj1C1_4" />
+	</node>
+	<node  id="main1.class::Obj1C1_5" name="node3" label="node3" type="discrete node" subType="" kind="1">
+		<state name="State0" />
+		<state name="State1" />
+		<state name="State2" />
+	</node>
+	<node  id="main1.class::Obj1C1_4" name="node2" label="node2" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<state name="State2" />
+		<parent id="main1.class::Obj1C1_2" />
+	</node>
+	<node  id="main1.class::Obj1C1_3" name="node1" label="node1" type="discrete node" subType="" kind="2">
+		<state name="State0" />
+		<state name="State1" />
+		<state name="State2" />
+		<parent id="main1.class::Obj1C1_2" />
+	</node>
+	<node  id="main1.class::Obj1C1_2" name="node0" label="node0" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<state name="State2" />
+		<parent id="main1.class::Obj1C1_5" />
+	</node>
+	<node  id="2" name="node0" label="node0" type="discrete node" subType="" kind="2">
+		<state name="State0" />
+		<state name="State1" />
+		<state name="State2" />
+		<parent id="main1.class::Obj2C1_6" />
+		<parent id="3" />
+		<parent id="6" />
+		<parent id="4" />
+		<parent id="main1.class::Obj0C1_6" />
+	</node>
+	<node  id="3" name="node1" label="node1" type="discrete node" subType="" kind="1">
+		<state name="State0" />
+		<state name="State1" />
+		<state name="State2" />
+	</node>
+	<node  id="4" name="node2" label="node2" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<state name="State2" />
+		<parent id="6" />
+		<parent id="main1.class::Obj0C1_3" />
+		<parent id="main1.class::Obj1C1_3" />
+		<parent id="main1.class::Obj2C1_3" />
+	</node>
+	<node  id="5" name="node3" label="node3" type="discrete node" subType="" kind="2">
+		<state name="State0" />
+		<state name="State1" />
+		<state name="State2" />
+		<parent id="6" />
+		<parent id="3" />
+		<parent id="4" />
+		<parent id="main1.class::Obj1C1_6" />
+	</node>
+	<node  id="6" name="node4" label="node4" type="discrete node" subType="" kind="1">
+		<state name="State0" />
+		<state name="State1" />
+		<state name="State2" />
+	</node>
+	<node  id="main1.class::Obj0C1_3" name="node1" label="node1" type="discrete node" subType="" kind="2">
+		<state name="State0" />
+		<state name="State1" />
+		<state name="State2" />
+		<parent id="main1.class::Obj0C1_2" />
+	</node>
+	<node  id="main1.class::Obj2C1_5" name="node3" label="node3" type="discrete node" subType="" kind="1">
+		<state name="State0" />
+		<state name="State1" />
+		<state name="State2" />
+	</node>
+	<node  id="main1.class::Obj0C1_2" name="node0" label="node0" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<state name="State2" />
+		<parent id="main1.class::Obj0C1_5" />
+	</node>
+	<node  id="main1.class::Obj2C1_4" name="node2" label="node2" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<state name="State2" />
+		<parent id="main1.class::Obj2C1_2" />
+	</node>
+	<node  id="main1.class::Obj0C1_5" name="node3" label="node3" type="discrete node" subType="" kind="1">
+		<state name="State0" />
+		<state name="State1" />
+		<state name="State2" />
+	</node>
+	<node  id="main1.class::Obj0C1_4" name="node2" label="node2" type="discrete node" subType="" kind="0">
+		<state name="State0" />
+		<state name="State1" />
+		<state name="State2" />
+		<parent id="main1.class::Obj0C1_2" />
+	</node>
+	<node  id="main1.class::Obj2C1_6" name="node4" label="node4" type="discrete node" subType="" kind="2">
+		<state name="State0" />
+		<state name="State1" />
+		<state name="State2" />
+		<parent id="main1.class::Obj2C1_5" />
+		<parent id="main1.class::Obj2C1_2" />
+		<parent id="main1.class::Obj2C1_4" />
+	</node>
+	<RefLink>
+		<source id="6" name = "node4" kind = "1" />
+		<target id="main1.class::Obj0C1_5" name = "main1::Obj2C1_node3" kind = "1" />
+	</RefLink>
+	<RefLink>
+		<source id="3" name = "node1" kind = "1" />
+		<target id="main1.class::Obj0C1_5" name = "main1::Obj0C1_node3" kind = "1" />
+	</RefLink>
+	<RefLink>
+		<source id="3" name = "node1" kind = "1" />
+		<target id="main1.class::Obj0C1_5" name = "main1::Obj1C1_node3" kind = "1" />
+	</RefLink>
+</iOOBN>

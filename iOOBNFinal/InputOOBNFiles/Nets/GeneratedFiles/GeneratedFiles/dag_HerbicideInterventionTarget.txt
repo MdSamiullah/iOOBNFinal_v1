@@ -1,0 +1,9 @@
+Target_Cover : 
+HerbicideStrategy : Application 
+Target : Target_Cover 
+Needle_Cover : Target_Cover 
+ST_Cover : Target_Cover 
+BroadWeeds_Cover : Target_Cover 
+Application : HerbicideCost 
+HerbicideCost : 
+Blanket_Cover : Target_Cover 

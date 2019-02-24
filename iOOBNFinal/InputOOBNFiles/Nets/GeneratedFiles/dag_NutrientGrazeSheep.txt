@@ -1,0 +1,8 @@
+Output_Phosphorous : NL 
+Input_Nitrogen : Output_Nitrogen 
+Input_Phosphorous : Output_Phosphorous 
+Output_Carbon : NL 
+Duration : Output_Nitrogen 
+Output_Nitrogen : NL 
+Input_Carbon : Output_Carbon 
+NL : 

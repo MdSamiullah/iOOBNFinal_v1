@@ -1,0 +1,9 @@
+Burn : Output_Carbon 
+Input_Nitrogen : Output_Nitrogen 
+Output_Phosphorous : NL 
+NUI : Output_Nitrogen 
+Input_Phosphorous : Output_Phosphorous 
+Output_Carbon : NL 
+Output_Nitrogen : NL 
+Input_Carbon : Output_Carbon 
+NL : 

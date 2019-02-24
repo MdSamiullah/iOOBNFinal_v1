@@ -1,0 +1,151 @@
+class GrazeInterventionSheep
+{
+    inputs = (Input_Fences Duration Scale);
+    outputs = (Output_Fences GrazeCost);
+    node_size = (100 55);
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "1";
+    HR_Zoom_ZoomFactor = "100";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_DiscreteFunction = "5";
+    HR_Color_Function = "4";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Mean_Variance = "1";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "5";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "javax.swing.plaf.FontUIResource[family=Tahoma,name=Tahoma,style=plain,size=11]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+
+    node Scale
+    {
+	label = "Scale\n";
+	position = (296 173);
+	states = ("0 - 1" "1 - 2" "2 - 3");
+	subtype = interval;
+	state_values = (0 5 50 500);
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_State_2 = "";
+	HR_Desc = "";
+	HR_LinkMode = "[U1:0][BurnCost:0][GrazeCost:0]";
+	HR_Group = "0";
+    }
+
+    node Output_Fences
+    {
+	label = "Has \nFences?";
+	position = (733 167);
+	states = ("Yes" "No");
+	HR_LinkMode = "[U1:0][U1_1:0]";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_Group = "0";
+    }
+
+    utility GrazeCost
+    {
+	label = "Graze\nCost";
+	position = (516 294);
+	HR_Desc = "";
+	HR_Group = "0";
+    }
+
+    node Input_Fences
+    {
+	label = "Has \nFences?";
+	position = (569 168);
+	states = ("Yes" "No");
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkMode = "[U1:0][U1_1:0][Output_Fences:0][CGCost:0][GrazeCost:0]";
+	HR_Group = "0";
+    }
+
+    node Duration
+    {
+	label = "Duration";
+	position = (446 171);
+	states = ("" "" "");
+	subtype = interval;
+	state_values = (0 10 60 90);
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_State_2 = "";
+	HR_Desc = "";
+	HR_LinkMode = "[CR:0][BR:0][SR:0][CR_1:0][CGCost:0][GrazeCost:0]";
+	HR_Group = "0";
+    }
+
+    potential (Scale)
+    {
+	data = ( 1 1 1 );
+    }
+
+    potential (Output_Fences | Input_Fences)
+    {
+	data = (( 1 0 )	%  Input_Fences=Yes
+		( 1 0 ));	%  Input_Fences=No
+    }
+
+    potential (GrazeCost | Scale Input_Fences Duration)
+    {
+	data = ((( 300	%  Scale=0 - 1  Input_Fences=Yes  Duration=interval(0,10)
+		   150	%  Scale=0 - 1  Input_Fences=Yes  Duration=interval(10,60)
+		   0 )	%  Scale=0 - 1  Input_Fences=Yes  Duration=interval(60,90)
+		 ( 3300	%  Scale=0 - 1  Input_Fences=No  Duration=interval(0,10)
+		   3150	%  Scale=0 - 1  Input_Fences=No  Duration=interval(10,60)
+		   3000 ))	%  Scale=0 - 1  Input_Fences=No  Duration=interval(60,90)
+		(( 200	%  Scale=1 - 2  Input_Fences=Yes  Duration=interval(0,10)
+		   100	%  Scale=1 - 2  Input_Fences=Yes  Duration=interval(10,60)
+		   0 )	%  Scale=1 - 2  Input_Fences=Yes  Duration=interval(60,90)
+		 ( 1200	%  Scale=1 - 2  Input_Fences=No  Duration=interval(0,10)
+		   1100	%  Scale=1 - 2  Input_Fences=No  Duration=interval(10,60)
+		   1000 ))	%  Scale=1 - 2  Input_Fences=No  Duration=interval(60,90)
+		(( 100	%  Scale=2 - 3  Input_Fences=Yes  Duration=interval(0,10)
+		   50	%  Scale=2 - 3  Input_Fences=Yes  Duration=interval(10,60)
+		   0 )	%  Scale=2 - 3  Input_Fences=Yes  Duration=interval(60,90)
+		 ( 750	%  Scale=2 - 3  Input_Fences=No  Duration=interval(0,10)
+		   700	%  Scale=2 - 3  Input_Fences=No  Duration=interval(10,60)
+		   650 )));	%  Scale=2 - 3  Input_Fences=No  Duration=interval(60,90)
+    }
+
+    potential (Input_Fences)
+    {
+	data = ( 1 1 );
+    }
+
+    potential (Duration)
+    {
+	data = ( 1 1 1 );
+    }
+} % class GrazeInterventionSheep

@@ -1,0 +1,1629 @@
+class ExoticAnnualNatural
+{
+    inputs = (CompSum Input_Seeds NL Season Input_Adults Input_Dead Input_Cover);
+    outputs = (Output_Seeds Output_Adults Output_Cover Output_Dead Output_NUI);
+    node_size = (100 55);
+    HR_ToolBar_CDVT = "0";
+    HR_Html_Desc = "0";
+    HR_HTML_Desc = "";
+    HR_Groups_IDs = "";
+    HR_Node_Label_Style = "0";
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "0";
+    HR_Zoom_ZoomFactor = "75";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_DiscreteFunction = "5";
+    HR_Color_Function = "4";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Mean_Variance = "1";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "5";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "javax.swing.plaf.FontUIResource[family=Tahoma,name=Tahoma,style=plain,size=11]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+
+    node NH
+    {
+	label = "Nitrogen\nHolding";
+	position = (877 159);
+	states = ("");
+	subtype = number;
+	state_values = (1);
+	HR_State_0 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_NodeSize = "(100, 55)";
+	HR_LinkMode = "[Output_NUI:0]";
+	HR_Group = "0";
+    }
+
+    instance BCGD : BasalCoverGrowthDeath (; BCGD_C3PLCDR = C3PLCDR, BCGD_C4PLCDR = C4PLCDR, BCGD_C3PLBCR = C3PLBCR, BCGD_C3PLCCR = C3PLCCR, BCGD_C3PLCGR = C3PLCGR, BCGD_DDRH = DDRH, BCGD_C4PLBCR = C4PLBCR, BCGD_C4PLCCR = C4PLCCR, BCGD_C4PLCGR = C4PLCGR, BCGD_DDRM = DDRM, BCGD_DDRL = DDRL, BCGD_C3PMBCR = C3PMBCR, BCGD_C3PMCCR = C3PMCCR, BCGD_C3PMCGR = C3PMCGR, BCGD_C3PMCDR = C3PMCDR, BCGD_C4PMBCR = C4PMBCR, BCGD_C4PMCGR = C4PMCGR, BCGD_C4PMCDR = C4PMCDR, BCGD_C4PMCCR = C4PMCCR, BCGD_C3PSCDR = C3PSCDR, BCGD_C3PSCGR = C3PSCGR, BCGD_C3PSCCR = C3PSCCR, BCGD_C3PSBCR = C3PSBCR, BCGD_C4PSBCR = C4PSBCR, BCGD_C4PSCDR = C4PSCDR, BCGD_C4PSCGR = C4PSCGR, BCGD_C4PSCCR = C4PSCCR)
+    {
+	label = "";
+	position = (785 159);
+	HR_LinkModeInstance = "";
+	HR_LinkControlPointsInstance = "";
+	HR_NodeSize = "(100, 55)";
+	HR_HTML_Desc = "";
+	HR_isCollapsed = "true";
+	HR_InterfaceNode_placement = "vertical";
+	HR_InterfaceNode_size = "100,55";
+	HR_Desc = "";
+	HR_Group = "0";
+    }
+
+    node Input_Cover
+    {
+	label = "Input \nCover";
+	position = (75 423);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_5 = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkControlPoints = "";
+	HR_State_6 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_LinkMode = "[C2:0][CT:0][Output_Cover:0][C19:0][C20:0]";
+	HR_Group = "0";
+    }
+
+    node Input_Dead
+    {
+	label = "Input Dead \nCover";
+	position = (78 515);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_5 = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkControlPoints = "";
+	HR_NodeSize = "(100, 55)";
+	HR_State_6 = "";
+	HR_LinkMode = "[NCG_1_1:0][Com:0][TC:0][OC:0][Output_Dead:0][C27:0][Dead_Dec:0]";
+	HR_Group = "0";
+    }
+
+    node Output_NUI
+    {
+	label = "Nitrogen\nUptake/Input";
+	position = (1011 573);
+	states = ("" "" "" "" "");
+	subtype = interval;
+	state_values = (-1 -0.5 -0.1 0.1 0.5 1);
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_State_5 = "";
+	HR_State_6 = "";
+	HR_Group = "0";
+    }
+
+    node Dead_Dec
+    {
+	label = "Dead Cover\nDeterioration";
+	position = (888 557);
+	states = ("0 - 1" "1 - 2" "" "");
+	subtype = interval;
+	state_values = (0 0.01 5 10 20);
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[C25:0][Output_Dead:0][Output_NUI_2:0][Output_NUI:0]";
+	HR_Group = "0";
+    }
+
+    node Output_Dead
+    {
+	label = "Output Dead \nCover";
+	position = (1011 515);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_State_6 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[NCG_1_1:0][Com:0][TC:0][OC:0]";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_State_5 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_Group = "0";
+    }
+
+    node Cover_Inc
+    {
+	label = "Cover Growth";
+	position = (750 483);
+	states = ("0 - 1" "1 - 2" "" "");
+	subtype = interval;
+	state_values = (0 0.01 5 10 20);
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkControlPoints = "";
+	HR_HTML_Desc = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_State_5 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_LinkMode = "[Output_Cover:0][C25:0][Output_NUI_1:0][Output_NUI:0]";
+	HR_Group = "0";
+    }
+
+    node Cover_Dec
+    {
+	label = "Cover Death";
+	position = (831 453);
+	states = ("0 - 1" "1 - 2" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 10 20);
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkControlPoints = "";
+	HR_HTML_Desc = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_LinkMode = "[Output_Dead:0][Output_Bio:0]";
+	HR_Group = "0";
+    }
+
+    node ASR
+    {
+	label = "Adult\nSurvival Rate";
+	position = (695 159);
+	states = ("" "" "" "");
+	subtype = number;
+	state_values = (0 0.1 0.5 1);
+	HR_State_3 = "";
+	HR_LinkMode = "[Output_Adult:0][Cover_Dec:0][Output_Adults:0]";
+	HR_NodeSize = "(100, 55)";
+	HR_Group = "0";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node Output_Cover
+    {
+	label = "Output \nCover";
+	position = (1007 423);
+	states = ("" "" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1 5 25 50 75 100);
+	HR_LinkMode = "[C2:0][CT:0]";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_5 = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_State_6 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_Group = "0";
+    }
+
+    node Output_Adults
+    {
+	label = "Output Adult\nDensity";
+	position = (1005 362);
+	states = ("0 - 1" "1 - 2" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 100 250 500 1000 2000);
+	HR_NodeSize = "(100, 55)";
+	HR_State_5 = "";
+	HR_LinkControlPoints = "";
+	HR_HTML_Desc = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_LinkMode = "[Output_Seed:0][Output_Seedling:0][Seed_Dec:0][C10:0][Basal_Inc:0][Output_Basal:0][Output_Cover:0]";
+	HR_Group = "0";
+    }
+
+    node Input_Adults
+    {
+	label = "Input Adult\nDensity";
+	position = (75 365);
+	states = ("0 - 1" "1 - 2" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 100 250 500 1000 2000);
+	HR_LinkMode = "[Output_Seed:0][Output_Seedling:0][Seed_Dec:0][C10:0][Basal_Inc:0][Output_Basal:0][Output_Adult:0][Cover_Dec:0][Cover_Inc:0][Output_Seeds:0][Output_Adults:0]";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_HTML_Desc = "";
+	HR_LinkControlPoints = "";
+	HR_State_5 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_Group = "0";
+    }
+
+    node Season
+    {
+	label = "Season";
+	position = (330 84);
+	states = ("Spring" "Summer" "Autumn" "Winter");
+	HR_LinkControlPoints = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_HTML_Desc = "";
+	HR_LinkMode = "[C13:0][C14:0][C16:0][C17:0][C18:0][Temp:0][Rain:0][C22:0][C24:0][C23:0][C26:0][C28:0][SP:0][SI:0][C15:0][CGR:0][BADR:0][CDR:0][BGR:0][Season:0][GP:0][SPR:0][RP:0][GR:0][ASR:0]";
+	HR_Group = "0";
+    }
+
+    node Output_Seeds
+    {
+	label = "Output Seed\nDensity";
+	position = (1004 279);
+	states = ("" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1000 3000 12000 25000 50000);
+	HR_State_5 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_State_2 = "";
+	HR_Group = "0";
+    }
+
+    node New_Adults
+    {
+	label = "New\nAdults";
+	position = (520 309);
+	states = ("0 - 1" "1 - 2" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 100 250 500 1000 2000);
+	HR_NodeSize = "(100, 55)";
+	HR_State_5 = "";
+	HR_LinkControlPoints = "";
+	HR_HTML_Desc = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_State_2 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_LinkMode = "[Output_Seed:0][Output_Seedling:0][Seed_Dec:0][C10:0][Basal_Inc:0][Output_Basal:0][Output_Adult:0][Output_Adults:0][Cover_Inc:0]";
+	HR_Group = "0";
+    }
+
+    node SP
+    {
+	label = "Seed\nProduction\nRate";
+	position = (321 160);
+	states = ("" "" "");
+	subtype = number;
+	state_values = (0 50 5000);
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[Output_Seeds:0]";
+	HR_Group = "0";
+    }
+
+    node GR
+    {
+	label = "Germ Rate";
+	position = (411 160);
+	states = ("" "" "");
+	subtype = number;
+	state_values = (0 0.4 0.5);
+	HR_LinkControlPoints = "";
+	HR_State_2 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[New_Adults:0][Output_Seeds:0]";
+	HR_Group = "0";
+    }
+
+    node GSR
+    {
+	label = "Germ\nSurvive Rate";
+	position = (519 160);
+	states = ("" "" "");
+	subtype = number;
+	state_values = (0 0.1 0.5);
+	HR_LinkControlPoints = "";
+	HR_State_2 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[New_Adults:0]";
+	HR_Group = "0";
+    }
+
+    node SSR
+    {
+	label = "Seed Survival\nRate";
+	position = (603 160);
+	states = ("");
+	subtype = number;
+	state_values = (0.3);
+	HR_NodeSize = "(100, 55)";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[Output_Seeds:0]";
+	HR_Group = "0";
+    }
+
+    node CCondBAC
+    {
+	label = "Relative\nComp Cond\nCover";
+	position = (696 95);
+	states = ("Favourable" "Neutral" "Unfavourable");
+	subtype = label;
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkControlPoints = "";
+	HR_NodeSize = "(100, 55)";
+	HR_LinkMode = "[GP:0][C15:0][CGR:0][BGR:0][BADR:0][CDR:0][CCond:0][ASR:0]";
+	HR_Group = "0";
+    }
+
+    node CCondS
+    {
+	label = "Relative\nComp Cond\nSeedlings";
+	position = (519 93);
+	states = ("Favourable" "Neutral" "Unfavourable");
+	subtype = label;
+	HR_NodeSize = "(100, 55)";
+	HR_LinkControlPoints = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_State_2 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_LinkMode = "[GP:0][C15:0][CGR:0][BGR:0][BADR:0][CDR:0][CCond:0][SR:0][GSR:0]";
+	HR_Group = "0";
+    }
+
+    node NL
+    {
+	label = "Nutrient\nLoad";
+	position = (519 31);
+	states = ("Highly Enriched" "Moderately Enriched" "Natural");
+	HR_HTML_Desc = "";
+	HR_State_2 = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_LinkControlPoints = "";
+	HR_NodeSize = "(100, 55)";
+	HR_LinkMode = "[C16:0][C1_1:0][CCond:0][CCondBAC_1:0][CCondBAC:0][CCondS:0]";
+	HR_Group = "0";
+    }
+
+    node Input_Seeds
+    {
+	label = "Input Seed\nDensity";
+	position = (70 276);
+	states = ("" "" "" "" "" "");
+	subtype = interval;
+	state_values = (0 0.01 1000 3000 12000 25000 50000);
+	HR_State_5 = "";
+	HR_State_2 = "";
+	HR_HTML_Desc = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkControlPoints = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_NodeSize = "(100, 55)";
+	HR_LinkMode = "[C2:0][C4:0][C5:0][Output_Seed:0][Output_Seeds:0][Death_Seeds:0][Germ_Seeds:0][Seed_Dec:0][New_Adults:0]";
+	HR_Group = "0";
+    }
+
+    node CSumIndex
+    {
+	label = "Comp\nSummary\nIndex";
+	position = (694 31);
+	states = ("" "" "" "" "");
+	subtype = number;
+	state_values = (1 2 3 4 5);
+	HR_NodeSize = "(100, 55)";
+	HR_HTML_Desc = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_State_2 = "";
+	HR_LinkMode = "[CCond:0][CCondBAC_1:0][CCondBAC:0][CCondS:0]";
+	HR_Group = "0";
+    }
+
+    node CompSum
+    {
+	label = "Comp\nSummary";
+	position = (808 32);
+	states = ("Very Strong" "Strong" "Medium" "Weak" "Very Weak");
+	HR_State_2 = "";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_State_3 = "";
+	HR_State_4 = "";
+	HR_HTML_Desc = "";
+	HR_NodeSize = "(100, 55)";
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[CSumIndex:0]";
+	HR_Group = "0";
+    }
+
+    node SI
+    {
+	label = "Seeds\nIntroduced?";
+	position = (216 161);
+	states = ("false" "true");
+	subtype = boolean;
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_HTML_Desc = "";
+	HR_LinkControlPoints = "";
+	HR_NodeSize = "(100, 55)";
+	HR_LinkMode = "[C29:0][Intro_Seeds:0][Seed_Inc:0][Output_Adults:0]";
+	HR_Group = "0";
+    }
+
+    potential (NH)
+    {
+	data = ( 1 );
+    }
+
+    potential (Input_Cover)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Input_Dead)
+    {
+	data = ( 1 1 1 1 1 1 1 );
+    }
+
+    potential (Output_NUI | NH Cover_Inc Dead_Dec)
+    {
+	model_nodes = ();
+	model_data = ( NH * (Dead_Dec - Cover_Inc) / 100 );
+	data = (((( 0 0 1 0 0 )	%  NH=1  Cover_Inc=0 - 1  Dead_Dec=0 - 1
+		  ( 0 0 1 0 0 )	%  NH=1  Cover_Inc=0 - 1  Dead_Dec=1 - 2
+		  ( 0 0 1 0 0 )	%  NH=1  Cover_Inc=0 - 1  Dead_Dec=interval(5,10)
+		  ( 0 0 0 1 0 ))	%  NH=1  Cover_Inc=0 - 1  Dead_Dec=interval(10,20)
+		 (( 0 0 1 0 0 )	%  NH=1  Cover_Inc=1 - 2  Dead_Dec=0 - 1
+		  ( 0 0 1 0 0 )	%  NH=1  Cover_Inc=1 - 2  Dead_Dec=1 - 2
+		  ( 0 0 1 0 0 )	%  NH=1  Cover_Inc=1 - 2  Dead_Dec=interval(5,10)
+		  ( 0 0 0.2496 0.7504 0 ))	%  NH=1  Cover_Inc=1 - 2  Dead_Dec=interval(10,20)
+		 (( 0 0 1 0 0 )	%  NH=1  Cover_Inc=interval(5,10)  Dead_Dec=0 - 1
+		  ( 0 0 1 0 0 )	%  NH=1  Cover_Inc=interval(5,10)  Dead_Dec=1 - 2
+		  ( 0 0 1 0 0 )	%  NH=1  Cover_Inc=interval(5,10)  Dead_Dec=interval(5,10)
+		  ( 0 0 0.7504 0.2496 0 ))	%  NH=1  Cover_Inc=interval(5,10)  Dead_Dec=interval(10,20)
+		 (( 0 1 0 0 0 )	%  NH=1  Cover_Inc=interval(10,20)  Dead_Dec=0 - 1
+		  ( 0 0.7504 0.2496 0 0 )	%  NH=1  Cover_Inc=interval(10,20)  Dead_Dec=1 - 2
+		  ( 0 0.2496 0.7504 0 0 )	%  NH=1  Cover_Inc=interval(10,20)  Dead_Dec=interval(5,10)
+		  ( 0 0 1 0 0 ))));	%  NH=1  Cover_Inc=interval(10,20)  Dead_Dec=interval(10,20)
+    }
+
+    potential (Dead_Dec | BCGD_DDRH Input_Dead)
+    {
+	model_nodes = ();
+	model_data = ( min (20, max (0, Input_Dead * BCGD_DDRH / 100)) );
+	data = ((( 1 0 0 0 )	%  BCGD_DDRH=interval(45,55)  Input_Dead=interval(0,0.01)
+		 ( 0 1 0 0 )	%  BCGD_DDRH=interval(45,55)  Input_Dead=interval(0.01,1)
+		 ( 0 1 0 0 )	%  BCGD_DDRH=interval(45,55)  Input_Dead=interval(1,5)
+		 ( 0 0.2496 0.504 0.2464 )	%  BCGD_DDRH=interval(45,55)  Input_Dead=interval(5,25)
+		 ( 0 0 0 1 )	%  BCGD_DDRH=interval(45,55)  Input_Dead=interval(25,50)
+		 ( 0 0 0 1 )	%  BCGD_DDRH=interval(45,55)  Input_Dead=interval(50,75)
+		 ( 0 0 0 1 ))	%  BCGD_DDRH=interval(45,55)  Input_Dead=interval(75,100)
+		(( 1 0 0 0 )	%  BCGD_DDRH=interval(55,65)  Input_Dead=interval(0,0.01)
+		 ( 0 1 0 0 )	%  BCGD_DDRH=interval(55,65)  Input_Dead=interval(0.01,1)
+		 ( 0 1 0 0 )	%  BCGD_DDRH=interval(55,65)  Input_Dead=interval(1,5)
+		 ( 0 0.1696 0.4144 0.416 )	%  BCGD_DDRH=interval(55,65)  Input_Dead=interval(5,25)
+		 ( 0 0 0 1 )	%  BCGD_DDRH=interval(55,65)  Input_Dead=interval(25,50)
+		 ( 0 0 0 1 )	%  BCGD_DDRH=interval(55,65)  Input_Dead=interval(50,75)
+		 ( 0 0 0 1 ))	%  BCGD_DDRH=interval(55,65)  Input_Dead=interval(75,100)
+		(( 1 0 0 0 )	%  BCGD_DDRH=interval(65,75)  Input_Dead=interval(0,0.01)
+		 ( 0 1 0 0 )	%  BCGD_DDRH=interval(65,75)  Input_Dead=interval(0.01,1)
+		 ( 0 1 0 0 )	%  BCGD_DDRH=interval(65,75)  Input_Dead=interval(1,5)
+		 ( 0 0.1056 0.3616 0.5328 )	%  BCGD_DDRH=interval(65,75)  Input_Dead=interval(5,25)
+		 ( 0 0 0 1 )	%  BCGD_DDRH=interval(65,75)  Input_Dead=interval(25,50)
+		 ( 0 0 0 1 )	%  BCGD_DDRH=interval(65,75)  Input_Dead=interval(50,75)
+		 ( 0 0 0 1 )));	%  BCGD_DDRH=interval(65,75)  Input_Dead=interval(75,100)
+    }
+
+    potential (Output_Dead | Cover_Dec Dead_Dec Input_Dead)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, Input_Dead + Cover_Dec - Dead_Dec)) );
+	data = (((( 0.8336 0.1664 0 0 0 0 0 )	%  Cover_Dec=0 - 1  Dead_Dec=0 - 1  Input_Dead=interval(0,0.01)
+		  ( 0 1 0 0 0 0 0 )	%  Cover_Dec=0 - 1  Dead_Dec=0 - 1  Input_Dead=interval(0.01,1)
+		  ( 0 0 1 0 0 0 0 )	%  Cover_Dec=0 - 1  Dead_Dec=0 - 1  Input_Dead=interval(1,5)
+		  ( 0 0 0 1 0 0 0 )	%  Cover_Dec=0 - 1  Dead_Dec=0 - 1  Input_Dead=interval(5,25)
+		  ( 0 0 0 0 1 0 0 )	%  Cover_Dec=0 - 1  Dead_Dec=0 - 1  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0 1 0 )	%  Cover_Dec=0 - 1  Dead_Dec=0 - 1  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  Cover_Dec=0 - 1  Dead_Dec=0 - 1  Input_Dead=interval(75,100)
+		 (( 1 0 0 0 0 0 0 )	%  Cover_Dec=0 - 1  Dead_Dec=1 - 2  Input_Dead=interval(0,0.01)
+		  ( 0.904 0.096 0 0 0 0 0 )	%  Cover_Dec=0 - 1  Dead_Dec=1 - 2  Input_Dead=interval(0.01,1)
+		  ( 0.4 0.2 0.4 0 0 0 0 )	%  Cover_Dec=0 - 1  Dead_Dec=1 - 2  Input_Dead=interval(1,5)
+		  ( 0 0.0048 0.12 0.8752 0 0 0 )	%  Cover_Dec=0 - 1  Dead_Dec=1 - 2  Input_Dead=interval(5,25)
+		  ( 0 0 0 0.09984 0.90016 0 0 )	%  Cover_Dec=0 - 1  Dead_Dec=1 - 2  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0.09984 0.90016 0 )	%  Cover_Dec=0 - 1  Dead_Dec=1 - 2  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0.09984 0.90016 ))	%  Cover_Dec=0 - 1  Dead_Dec=1 - 2  Input_Dead=interval(75,100)
+		 (( 1 0 0 0 0 0 0 )	%  Cover_Dec=0 - 1  Dead_Dec=interval(5,10)  Input_Dead=interval(0,0.01)
+		  ( 1 0 0 0 0 0 0 )	%  Cover_Dec=0 - 1  Dead_Dec=interval(5,10)  Input_Dead=interval(0.01,1)
+		  ( 1 0 0 0 0 0 0 )	%  Cover_Dec=0 - 1  Dead_Dec=interval(5,10)  Input_Dead=interval(1,5)
+		  ( 0.1248 0.0496 0.2 0.6256 0 0 0 )	%  Cover_Dec=0 - 1  Dead_Dec=interval(5,10)  Input_Dead=interval(5,25)
+		  ( 0 0 0 0.296 0.704 0 0 )	%  Cover_Dec=0 - 1  Dead_Dec=interval(5,10)  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0.296 0.704 0 )	%  Cover_Dec=0 - 1  Dead_Dec=interval(5,10)  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0.296 0.704 ))	%  Cover_Dec=0 - 1  Dead_Dec=interval(5,10)  Input_Dead=interval(75,100)
+		 (( 1 0 0 0 0 0 0 )	%  Cover_Dec=0 - 1  Dead_Dec=interval(10,20)  Input_Dead=interval(0,0.01)
+		  ( 1 0 0 0 0 0 0 )	%  Cover_Dec=0 - 1  Dead_Dec=interval(10,20)  Input_Dead=interval(0.01,1)
+		  ( 1 0 0 0 0 0 0 )	%  Cover_Dec=0 - 1  Dead_Dec=interval(10,20)  Input_Dead=interval(1,5)
+		  ( 0.5104 0.04 0.2 0.2496 0 0 0 )	%  Cover_Dec=0 - 1  Dead_Dec=interval(10,20)  Input_Dead=interval(5,25)
+		  ( 0 0 0 0.6 0.4 0 0 )	%  Cover_Dec=0 - 1  Dead_Dec=interval(10,20)  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0.6 0.4 0 )	%  Cover_Dec=0 - 1  Dead_Dec=interval(10,20)  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0.6 0.4 )))	%  Cover_Dec=0 - 1  Dead_Dec=interval(10,20)  Input_Dead=interval(75,100)
+		((( 0 1 0 0 0 0 0 )	%  Cover_Dec=1 - 2  Dead_Dec=0 - 1  Input_Dead=interval(0,0.01)
+		  ( 0 0.48 0.52 0 0 0 0 )	%  Cover_Dec=1 - 2  Dead_Dec=0 - 1  Input_Dead=interval(0.01,1)
+		  ( 0 0 0.8752 0.1248 0 0 0 )	%  Cover_Dec=1 - 2  Dead_Dec=0 - 1  Input_Dead=interval(1,5)
+		  ( 0 0 0 0.976 0.024 0 0 )	%  Cover_Dec=1 - 2  Dead_Dec=0 - 1  Input_Dead=interval(5,25)
+		  ( 0 0 0 0 0.979968 0.020032 0 )	%  Cover_Dec=1 - 2  Dead_Dec=0 - 1  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0 0.979968 0.020032 )	%  Cover_Dec=1 - 2  Dead_Dec=0 - 1  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  Cover_Dec=1 - 2  Dead_Dec=0 - 1  Input_Dead=interval(75,100)
+		 (( 0.904 0.096 0 0 0 0 0 )	%  Cover_Dec=1 - 2  Dead_Dec=1 - 2  Input_Dead=interval(0,0.01)
+		  ( 0.8 0.16704 0.03296 0 0 0 0 )	%  Cover_Dec=1 - 2  Dead_Dec=1 - 2  Input_Dead=interval(0.01,1)
+		  ( 0.31168 0.187904 0.492736 0.00768 0 0 0 )	%  Cover_Dec=1 - 2  Dead_Dec=1 - 2  Input_Dead=interval(1,5)
+		  ( 0 0.001344 0.09984 0.897472 0.001344 0 0 )	%  Cover_Dec=1 - 2  Dead_Dec=1 - 2  Input_Dead=interval(5,25)
+		  ( 0 0 0 0.08096 0.91808 0.00096 0 )	%  Cover_Dec=1 - 2  Dead_Dec=1 - 2  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0.08096 0.91808 0.00096 )	%  Cover_Dec=1 - 2  Dead_Dec=1 - 2  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0.08096 0.91904 ))	%  Cover_Dec=1 - 2  Dead_Dec=1 - 2  Input_Dead=interval(75,100)
+		 (( 1 0 0 0 0 0 0 )	%  Cover_Dec=1 - 2  Dead_Dec=interval(5,10)  Input_Dead=interval(0,0.01)
+		  ( 1 0 0 0 0 0 0 )	%  Cover_Dec=1 - 2  Dead_Dec=interval(5,10)  Input_Dead=interval(0.01,1)
+		  ( 0.99232 0.00768 0 0 0 0 0 )	%  Cover_Dec=1 - 2  Dead_Dec=interval(5,10)  Input_Dead=interval(1,5)
+		  ( 0.102336 0.046592 0.2 0.651072 0 0 0 )	%  Cover_Dec=1 - 2  Dead_Dec=interval(5,10)  Input_Dead=interval(5,25)
+		  ( 0 0 0 0.28 0.72 0 0 )	%  Cover_Dec=1 - 2  Dead_Dec=interval(5,10)  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0.28 0.72 0 )	%  Cover_Dec=1 - 2  Dead_Dec=interval(5,10)  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0.28 0.72 ))	%  Cover_Dec=1 - 2  Dead_Dec=interval(5,10)  Input_Dead=interval(75,100)
+		 (( 1 0 0 0 0 0 0 )	%  Cover_Dec=1 - 2  Dead_Dec=interval(10,20)  Input_Dead=interval(0,0.01)
+		  ( 1 0 0 0 0 0 0 )	%  Cover_Dec=1 - 2  Dead_Dec=interval(10,20)  Input_Dead=interval(0.01,1)
+		  ( 1 0 0 0 0 0 0 )	%  Cover_Dec=1 - 2  Dead_Dec=interval(10,20)  Input_Dead=interval(1,5)
+		  ( 0.47392 0.05216 0.2 0.27392 0 0 0 )	%  Cover_Dec=1 - 2  Dead_Dec=interval(10,20)  Input_Dead=interval(5,25)
+		  ( 0 0 0 0.5792 0.4208 0 0 )	%  Cover_Dec=1 - 2  Dead_Dec=interval(10,20)  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0.5792 0.4208 0 )	%  Cover_Dec=1 - 2  Dead_Dec=interval(10,20)  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0.5792 0.4208 )))	%  Cover_Dec=1 - 2  Dead_Dec=interval(10,20)  Input_Dead=interval(75,100)
+		((( 0 0 1 0 0 0 0 )	%  Cover_Dec=interval(1,5)  Dead_Dec=0 - 1  Input_Dead=interval(0,0.01)
+		  ( 0 0 0.8752 0.1248 0 0 0 )	%  Cover_Dec=interval(1,5)  Dead_Dec=0 - 1  Input_Dead=interval(0.01,1)
+		  ( 0 0 0.2736 0.7264 0 0 0 )	%  Cover_Dec=interval(1,5)  Dead_Dec=0 - 1  Input_Dead=interval(1,5)
+		  ( 0 0 0 0.848 0.152 0 0 )	%  Cover_Dec=interval(1,5)  Dead_Dec=0 - 1  Input_Dead=interval(5,25)
+		  ( 0 0 0 0 0.88 0.12 0 )	%  Cover_Dec=interval(1,5)  Dead_Dec=0 - 1  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0 0.88 0.12 )	%  Cover_Dec=interval(1,5)  Dead_Dec=0 - 1  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  Cover_Dec=interval(1,5)  Dead_Dec=0 - 1  Input_Dead=interval(75,100)
+		 (( 0.4 0.2 0.4 0 0 0 0 )	%  Cover_Dec=interval(1,5)  Dead_Dec=1 - 2  Input_Dead=interval(0,0.01)
+		  ( 0.31168 0.187904 0.492736 0.00768 0 0 0 )	%  Cover_Dec=interval(1,5)  Dead_Dec=1 - 2  Input_Dead=interval(0.01,1)
+		  ( 0.056192 0.077248 0.610368 0.256192 0 0 0 )	%  Cover_Dec=interval(1,5)  Dead_Dec=1 - 2  Input_Dead=interval(1,5)
+		  ( 0 0 0.02656 0.92192 0.05152 0 0 )	%  Cover_Dec=interval(1,5)  Dead_Dec=1 - 2  Input_Dead=interval(5,25)
+		  ( 0 0 0 0.021248 0.938304 0.040448 0 )	%  Cover_Dec=interval(1,5)  Dead_Dec=1 - 2  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0.021248 0.938304 0.040448 )	%  Cover_Dec=interval(1,5)  Dead_Dec=1 - 2  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0.021248 0.978752 ))	%  Cover_Dec=interval(1,5)  Dead_Dec=1 - 2  Input_Dead=interval(75,100)
+		 (( 1 0 0 0 0 0 0 )	%  Cover_Dec=interval(1,5)  Dead_Dec=interval(5,10)  Input_Dead=interval(0,0.01)
+		  ( 0.99232 0.00768 0 0 0 0 0 )	%  Cover_Dec=interval(1,5)  Dead_Dec=interval(5,10)  Input_Dead=interval(0.01,1)
+		  ( 0.743808 0.122752 0.13344 0 0 0 0 )	%  Cover_Dec=interval(1,5)  Dead_Dec=interval(5,10)  Input_Dead=interval(1,5)
+		  ( 0.02656 0.02496 0.17344 0.77504 0 0 0 )	%  Cover_Dec=interval(1,5)  Dead_Dec=interval(5,10)  Input_Dead=interval(5,25)
+		  ( 0 0 0 0.179392 0.820608 0 0 )	%  Cover_Dec=interval(1,5)  Dead_Dec=interval(5,10)  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0.1792 0.8208 0 )	%  Cover_Dec=interval(1,5)  Dead_Dec=interval(5,10)  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0.1792 0.8208 ))	%  Cover_Dec=interval(1,5)  Dead_Dec=interval(5,10)  Input_Dead=interval(75,100)
+		 (( 1 0 0 0 0 0 0 )	%  Cover_Dec=interval(1,5)  Dead_Dec=interval(10,20)  Input_Dead=interval(0,0.01)
+		  ( 1 0 0 0 0 0 0 )	%  Cover_Dec=interval(1,5)  Dead_Dec=interval(10,20)  Input_Dead=interval(0.01,1)
+		  ( 1 0 0 0 0 0 0 )	%  Cover_Dec=interval(1,5)  Dead_Dec=interval(10,20)  Input_Dead=interval(1,5)
+		  ( 0.35008 0.048512 0.200064 0.401344 0 0 0 )	%  Cover_Dec=interval(1,5)  Dead_Dec=interval(10,20)  Input_Dead=interval(5,25)
+		  ( 0 0 0 0.48 0.52 0 0 )	%  Cover_Dec=interval(1,5)  Dead_Dec=interval(10,20)  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0.48 0.52 0 )	%  Cover_Dec=interval(1,5)  Dead_Dec=interval(10,20)  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0.48 0.52 )))	%  Cover_Dec=interval(1,5)  Dead_Dec=interval(10,20)  Input_Dead=interval(75,100)
+		((( 0 0 0 1 0 0 0 )	%  Cover_Dec=interval(5,10)  Dead_Dec=0 - 1  Input_Dead=interval(0,0.01)
+		  ( 0 0 0 1 0 0 0 )	%  Cover_Dec=interval(5,10)  Dead_Dec=0 - 1  Input_Dead=interval(0.01,1)
+		  ( 0 0 0 1 0 0 0 )	%  Cover_Dec=interval(5,10)  Dead_Dec=0 - 1  Input_Dead=interval(1,5)
+		  ( 0 0 0 0.6256 0.3744 0 0 )	%  Cover_Dec=interval(5,10)  Dead_Dec=0 - 1  Input_Dead=interval(5,25)
+		  ( 0 0 0 0 0.704 0.296 0 )	%  Cover_Dec=interval(5,10)  Dead_Dec=0 - 1  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0 0.704 0.296 )	%  Cover_Dec=interval(5,10)  Dead_Dec=0 - 1  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  Cover_Dec=interval(5,10)  Dead_Dec=0 - 1  Input_Dead=interval(75,100)
+		 (( 0 0.01664 0.482752 0.500608 0 0 0 )	%  Cover_Dec=interval(5,10)  Dead_Dec=1 - 2  Input_Dead=interval(0,0.01)
+		  ( 0 0.0064 0.4 0.5936 0 0 0 )	%  Cover_Dec=interval(5,10)  Dead_Dec=1 - 2  Input_Dead=interval(0.01,1)
+		  ( 0 0 0.10784 0.89216 0 0 0 )	%  Cover_Dec=interval(5,10)  Dead_Dec=1 - 2  Input_Dead=interval(1,5)
+		  ( 0 0 0 0.755008 0.244992 0 0 )	%  Cover_Dec=interval(5,10)  Dead_Dec=1 - 2  Input_Dead=interval(5,25)
+		  ( 0 0 0 0 0.8 0.2 0 )	%  Cover_Dec=interval(5,10)  Dead_Dec=1 - 2  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0 0.8 0.2 )	%  Cover_Dec=interval(5,10)  Dead_Dec=1 - 2  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  Cover_Dec=interval(5,10)  Dead_Dec=1 - 2  Input_Dead=interval(75,100)
+		 (( 0.52 0.144 0.336 0 0 0 0 )	%  Cover_Dec=interval(5,10)  Dead_Dec=interval(5,10)  Input_Dead=interval(0,0.01)
+		  ( 0.4064 0.1872 0.4 0.0064 0 0 0 )	%  Cover_Dec=interval(5,10)  Dead_Dec=interval(5,10)  Input_Dead=interval(0.01,1)
+		  ( 0.10784 0.096704 0.587712 0.207744 0 0 0 )	%  Cover_Dec=interval(5,10)  Dead_Dec=interval(5,10)  Input_Dead=interval(1,5)
+		  ( 0 0.000192 0.039424 0.916864 0.04352 0 0 )	%  Cover_Dec=interval(5,10)  Dead_Dec=interval(5,10)  Input_Dead=interval(5,25)
+		  ( 0 0 0 0.03296 0.93408 0.03296 0 )	%  Cover_Dec=interval(5,10)  Dead_Dec=interval(5,10)  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0.03296 0.93408 0.03296 )	%  Cover_Dec=interval(5,10)  Dead_Dec=interval(5,10)  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0.03296 0.96704 ))	%  Cover_Dec=interval(5,10)  Dead_Dec=interval(5,10)  Input_Dead=interval(75,100)
+		 (( 1 0 0 0 0 0 0 )	%  Cover_Dec=interval(5,10)  Dead_Dec=interval(10,20)  Input_Dead=interval(0,0.01)
+		  ( 0.996992 0.003008 0 0 0 0 0 )	%  Cover_Dec=interval(5,10)  Dead_Dec=interval(10,20)  Input_Dead=interval(0.01,1)
+		  ( 0.89664 0.04992 0.05344 0 0 0 0 )	%  Cover_Dec=interval(5,10)  Dead_Dec=interval(10,20)  Input_Dead=interval(1,5)
+		  ( 0.145792 0.039552 0.18944 0.625216 0 0 0 )	%  Cover_Dec=interval(5,10)  Dead_Dec=interval(10,20)  Input_Dead=interval(5,25)
+		  ( 0 0 0 0.2976 0.7024 0 0 )	%  Cover_Dec=interval(5,10)  Dead_Dec=interval(10,20)  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0.29696 0.70304 0 )	%  Cover_Dec=interval(5,10)  Dead_Dec=interval(10,20)  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0.296 0.704 )))	%  Cover_Dec=interval(5,10)  Dead_Dec=interval(10,20)  Input_Dead=interval(75,100)
+		((( 0 0 0 1 0 0 0 )	%  Cover_Dec=interval(10,20)  Dead_Dec=0 - 1  Input_Dead=interval(0,0.01)
+		  ( 0 0 0 1 0 0 0 )	%  Cover_Dec=interval(10,20)  Dead_Dec=0 - 1  Input_Dead=interval(0.01,1)
+		  ( 0 0 0 1 0 0 0 )	%  Cover_Dec=interval(10,20)  Dead_Dec=0 - 1  Input_Dead=interval(1,5)
+		  ( 0 0 0 0.2496 0.7504 0 0 )	%  Cover_Dec=interval(10,20)  Dead_Dec=0 - 1  Input_Dead=interval(5,25)
+		  ( 0 0 0 0 0.4 0.6 0 )	%  Cover_Dec=interval(10,20)  Dead_Dec=0 - 1  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0 0.4 0.6 )	%  Cover_Dec=interval(10,20)  Dead_Dec=0 - 1  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  Cover_Dec=interval(10,20)  Dead_Dec=0 - 1  Input_Dead=interval(75,100)
+		 (( 0 0 0 1 0 0 0 )	%  Cover_Dec=interval(10,20)  Dead_Dec=1 - 2  Input_Dead=interval(0,0.01)
+		  ( 0 0 0 1 0 0 0 )	%  Cover_Dec=interval(10,20)  Dead_Dec=1 - 2  Input_Dead=interval(0.01,1)
+		  ( 0 0 0 1 0 0 0 )	%  Cover_Dec=interval(10,20)  Dead_Dec=1 - 2  Input_Dead=interval(1,5)
+		  ( 0 0 0 0.374784 0.625216 0 0 )	%  Cover_Dec=interval(10,20)  Dead_Dec=1 - 2  Input_Dead=interval(5,25)
+		  ( 0 0 0 0 0.504 0.496 0 )	%  Cover_Dec=interval(10,20)  Dead_Dec=1 - 2  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0 0.504 0.496 )	%  Cover_Dec=interval(10,20)  Dead_Dec=1 - 2  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  Cover_Dec=interval(10,20)  Dead_Dec=1 - 2  Input_Dead=interval(75,100)
+		 (( 0 0.0096 0.24 0.7504 0 0 0 )	%  Cover_Dec=interval(10,20)  Dead_Dec=interval(5,10)  Input_Dead=interval(0,0.01)
+		  ( 0 0.003008 0.1984 0.798592 0 0 0 )	%  Cover_Dec=interval(10,20)  Dead_Dec=interval(5,10)  Input_Dead=interval(0.01,1)
+		  ( 0 0 0.05344 0.94656 0 0 0 )	%  Cover_Dec=interval(10,20)  Dead_Dec=interval(5,10)  Input_Dead=interval(1,5)
+		  ( 0 0 0 0.625216 0.374784 0 0 )	%  Cover_Dec=interval(10,20)  Dead_Dec=interval(5,10)  Input_Dead=interval(5,25)
+		  ( 0 0 0 0 0.696 0.304 0 )	%  Cover_Dec=interval(10,20)  Dead_Dec=interval(5,10)  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0 0.696 0.304 )	%  Cover_Dec=interval(10,20)  Dead_Dec=interval(5,10)  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0 1 ))	%  Cover_Dec=interval(10,20)  Dead_Dec=interval(5,10)  Input_Dead=interval(75,100)
+		 (( 0.52 0.0752 0.28 0.1248 0 0 0 )	%  Cover_Dec=interval(10,20)  Dead_Dec=interval(10,20)  Input_Dead=interval(0,0.01)
+		  ( 0.4496 0.1008 0.2992 0.1504 0 0 0 )	%  Cover_Dec=interval(10,20)  Dead_Dec=interval(10,20)  Input_Dead=interval(0.01,1)
+		  ( 0.25152 0.073088 0.347136 0.328256 0 0 0 )	%  Cover_Dec=interval(10,20)  Dead_Dec=interval(10,20)  Input_Dead=interval(1,5)
+		  ( 0.010304 0.0064 0.063168 0.833472 0.086656 0 0 )	%  Cover_Dec=interval(10,20)  Dead_Dec=interval(10,20)  Input_Dead=interval(5,25)
+		  ( 0 0 0 0.06624 0.86752 0.06624 0 )	%  Cover_Dec=interval(10,20)  Dead_Dec=interval(10,20)  Input_Dead=interval(25,50)
+		  ( 0 0 0 0 0.06624 0.86752 0.06624 )	%  Cover_Dec=interval(10,20)  Dead_Dec=interval(10,20)  Input_Dead=interval(50,75)
+		  ( 0 0 0 0 0 0.06624 0.93376 ))));	%  Cover_Dec=interval(10,20)  Dead_Dec=interval(10,20)  Input_Dead=interval(75,100)
+    }
+
+    potential (Cover_Inc | New_Adults)
+    {
+	model_nodes = ();
+	model_data = ( min (20, max (0, New_Adults * 100 * 0.0001)) );
+	data = (( 1 0 0 0 )	%  New_Adults=0 - 1
+		( 0 1 0 0 )	%  New_Adults=1 - 2
+		( 0 1 0 0 )	%  New_Adults=interval(100,250)
+		( 0 1 0 0 )	%  New_Adults=interval(250,500)
+		( 0 0 1 0 )	%  New_Adults=interval(500,1000)
+		( 0 0 0 1 ));	%  New_Adults=interval(1000,2000)
+    }
+
+    potential (Cover_Dec | ASR Input_Adults)
+    {
+	model_nodes = ();
+	model_data = ( min (20, max (0, Input_Adults * ASR * 100 * 0.0001)) );
+	data = ((( 1 0 0 0 0 )	%  ASR=0  Input_Adults=0 - 1
+		 ( 1 0 0 0 0 )	%  ASR=0  Input_Adults=1 - 2
+		 ( 1 0 0 0 0 )	%  ASR=0  Input_Adults=interval(100,250)
+		 ( 1 0 0 0 0 )	%  ASR=0  Input_Adults=interval(250,500)
+		 ( 1 0 0 0 0 )	%  ASR=0  Input_Adults=interval(500,1000)
+		 ( 1 0 0 0 0 ))	%  ASR=0  Input_Adults=interval(1000,2000)
+		(( 1 0 0 0 0 )	%  ASR=0.1  Input_Adults=0 - 1
+		 ( 0.08 0.92 0 0 0 )	%  ASR=0.1  Input_Adults=1 - 2
+		 ( 0 1 0 0 0 )	%  ASR=0.1  Input_Adults=interval(100,250)
+		 ( 0 1 0 0 0 )	%  ASR=0.1  Input_Adults=interval(250,500)
+		 ( 0 1 0 0 0 )	%  ASR=0.1  Input_Adults=interval(500,1000)
+		 ( 0 0 1 0 0 ))	%  ASR=0.1  Input_Adults=interval(1000,2000)
+		(( 1 0 0 0 0 )	%  ASR=0.5  Input_Adults=0 - 1
+		 ( 0 1 0 0 0 )	%  ASR=0.5  Input_Adults=1 - 2
+		 ( 0 0.68 0.32 0 0 )	%  ASR=0.5  Input_Adults=interval(100,250)
+		 ( 0 0 1 0 0 )	%  ASR=0.5  Input_Adults=interval(250,500)
+		 ( 0 0 1 0 0 )	%  ASR=0.5  Input_Adults=interval(500,1000)
+		 ( 0 0 0 1 0 ))	%  ASR=0.5  Input_Adults=interval(1000,2000)
+		(( 1 0 0 0 0 )	%  ASR=1  Input_Adults=0 - 1
+		 ( 0 1 0 0 0 )	%  ASR=1  Input_Adults=1 - 2
+		 ( 0 0 1 0 0 )	%  ASR=1  Input_Adults=interval(100,250)
+		 ( 0 0 1 0 0 )	%  ASR=1  Input_Adults=interval(250,500)
+		 ( 0 0 0 1 0 )	%  ASR=1  Input_Adults=interval(500,1000)
+		 ( 0 0 0 0 1 )));	%  ASR=1  Input_Adults=interval(1000,2000)
+    }
+
+    potential (ASR | Season CCondBAC)
+    {
+	model_nodes = (Season CCondBAC);
+	model_data  = ( 1,
+			0.5,
+			0.1,
+			0,
+			0,
+			0,
+			1,
+			0.5,
+			0.1,
+			1,
+			0.5,
+			0.1 );
+    }
+
+    potential (Output_Cover | Output_Adults)
+    {
+	model_nodes = ();
+	model_data = ( min (100, max (0, Output_Adults * 100 * 0.0001)) );
+	data = (( 1 0 0 0 0 0 0 )	%  Output_Adults=0 - 1
+		( 0 1 0 0 0 0 0 )	%  Output_Adults=1 - 2
+		( 0 0 1 0 0 0 0 )	%  Output_Adults=interval(100,250)
+		( 0 0 1 0 0 0 0 )	%  Output_Adults=interval(250,500)
+		( 0 0 0 1 0 0 0 )	%  Output_Adults=interval(500,1000)
+		( 0 0 0 1 0 0 0 ));	%  Output_Adults=interval(1000,2000)
+    }
+
+    potential (Output_Adults | SI ASR New_Adults Input_Adults)
+    {
+	model_nodes = ();
+	model_data = ( min (1000, max (if (SI, 1, 0), Input_Adults * ASR + New_Adults)) );
+	data = ((((( 1 0 0 0 0 0 )	%  SI=false  ASR=0  New_Adults=0 - 1  Input_Adults=0 - 1
+		   ( 1 0 0 0 0 0 )	%  SI=false  ASR=0  New_Adults=0 - 1  Input_Adults=1 - 2
+		   ( 1 0 0 0 0 0 )	%  SI=false  ASR=0  New_Adults=0 - 1  Input_Adults=interval(100,250)
+		   ( 1 0 0 0 0 0 )	%  SI=false  ASR=0  New_Adults=0 - 1  Input_Adults=interval(250,500)
+		   ( 1 0 0 0 0 0 )	%  SI=false  ASR=0  New_Adults=0 - 1  Input_Adults=interval(500,1000)
+		   ( 1 0 0 0 0 0 ))	%  SI=false  ASR=0  New_Adults=0 - 1  Input_Adults=interval(1000,2000)
+		  (( 0 1 0 0 0 0 )	%  SI=false  ASR=0  New_Adults=1 - 2  Input_Adults=0 - 1
+		   ( 0 1 0 0 0 0 )	%  SI=false  ASR=0  New_Adults=1 - 2  Input_Adults=1 - 2
+		   ( 0 1 0 0 0 0 )	%  SI=false  ASR=0  New_Adults=1 - 2  Input_Adults=interval(100,250)
+		   ( 0 1 0 0 0 0 )	%  SI=false  ASR=0  New_Adults=1 - 2  Input_Adults=interval(250,500)
+		   ( 0 1 0 0 0 0 )	%  SI=false  ASR=0  New_Adults=1 - 2  Input_Adults=interval(500,1000)
+		   ( 0 1 0 0 0 0 ))	%  SI=false  ASR=0  New_Adults=1 - 2  Input_Adults=interval(1000,2000)
+		  (( 0 0 1 0 0 0 )	%  SI=false  ASR=0  New_Adults=interval(100,250)  Input_Adults=0 - 1
+		   ( 0 0 1 0 0 0 )	%  SI=false  ASR=0  New_Adults=interval(100,250)  Input_Adults=1 - 2
+		   ( 0 0 1 0 0 0 )	%  SI=false  ASR=0  New_Adults=interval(100,250)  Input_Adults=interval(100,250)
+		   ( 0 0 1 0 0 0 )	%  SI=false  ASR=0  New_Adults=interval(100,250)  Input_Adults=interval(250,500)
+		   ( 0 0 1 0 0 0 )	%  SI=false  ASR=0  New_Adults=interval(100,250)  Input_Adults=interval(500,1000)
+		   ( 0 0 1 0 0 0 ))	%  SI=false  ASR=0  New_Adults=interval(100,250)  Input_Adults=interval(1000,2000)
+		  (( 0 0 0 1 0 0 )	%  SI=false  ASR=0  New_Adults=interval(250,500)  Input_Adults=0 - 1
+		   ( 0 0 0 1 0 0 )	%  SI=false  ASR=0  New_Adults=interval(250,500)  Input_Adults=1 - 2
+		   ( 0 0 0 1 0 0 )	%  SI=false  ASR=0  New_Adults=interval(250,500)  Input_Adults=interval(100,250)
+		   ( 0 0 0 1 0 0 )	%  SI=false  ASR=0  New_Adults=interval(250,500)  Input_Adults=interval(250,500)
+		   ( 0 0 0 1 0 0 )	%  SI=false  ASR=0  New_Adults=interval(250,500)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 1 0 0 ))	%  SI=false  ASR=0  New_Adults=interval(250,500)  Input_Adults=interval(1000,2000)
+		  (( 0 0 0 0 1 0 )	%  SI=false  ASR=0  New_Adults=interval(500,1000)  Input_Adults=0 - 1
+		   ( 0 0 0 0 1 0 )	%  SI=false  ASR=0  New_Adults=interval(500,1000)  Input_Adults=1 - 2
+		   ( 0 0 0 0 1 0 )	%  SI=false  ASR=0  New_Adults=interval(500,1000)  Input_Adults=interval(100,250)
+		   ( 0 0 0 0 1 0 )	%  SI=false  ASR=0  New_Adults=interval(500,1000)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 1 0 )	%  SI=false  ASR=0  New_Adults=interval(500,1000)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 1 0 ))	%  SI=false  ASR=0  New_Adults=interval(500,1000)  Input_Adults=interval(1000,2000)
+		  (( 0 0 0 0 0 1 )	%  SI=false  ASR=0  New_Adults=interval(1000,2000)  Input_Adults=0 - 1
+		   ( 0 0 0 0 0 1 )	%  SI=false  ASR=0  New_Adults=interval(1000,2000)  Input_Adults=1 - 2
+		   ( 0 0 0 0 0 1 )	%  SI=false  ASR=0  New_Adults=interval(1000,2000)  Input_Adults=interval(100,250)
+		   ( 0 0 0 0 0 1 )	%  SI=false  ASR=0  New_Adults=interval(1000,2000)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 0 1 )	%  SI=false  ASR=0  New_Adults=interval(1000,2000)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0 1 )))	%  SI=false  ASR=0  New_Adults=interval(1000,2000)  Input_Adults=interval(1000,2000)
+		 ((( 0.952 0.048 0 0 0 0 )	%  SI=false  ASR=0.1  New_Adults=0 - 1  Input_Adults=0 - 1
+		   ( 0 1 0 0 0 0 )	%  SI=false  ASR=0.1  New_Adults=0 - 1  Input_Adults=1 - 2
+		   ( 0 1 0 0 0 0 )	%  SI=false  ASR=0.1  New_Adults=0 - 1  Input_Adults=interval(100,250)
+		   ( 0 1 0 0 0 0 )	%  SI=false  ASR=0.1  New_Adults=0 - 1  Input_Adults=interval(250,500)
+		   ( 0 1 0 0 0 0 )	%  SI=false  ASR=0.1  New_Adults=0 - 1  Input_Adults=interval(500,1000)
+		   ( 0 0 1 0 0 0 ))	%  SI=false  ASR=0.1  New_Adults=0 - 1  Input_Adults=interval(1000,2000)
+		  (( 0 1 0 0 0 0 )	%  SI=false  ASR=0.1  New_Adults=1 - 2  Input_Adults=0 - 1
+		   ( 0 0.952 0.048 0 0 0 )	%  SI=false  ASR=0.1  New_Adults=1 - 2  Input_Adults=1 - 2
+		   ( 0 0.824 0.176 0 0 0 )	%  SI=false  ASR=0.1  New_Adults=1 - 2  Input_Adults=interval(100,250)
+		   ( 0 0.6256 0.3744 0 0 0 )	%  SI=false  ASR=0.1  New_Adults=1 - 2  Input_Adults=interval(250,500)
+		   ( 0 0.2496 0.7504 0 0 0 )	%  SI=false  ASR=0.1  New_Adults=1 - 2  Input_Adults=interval(500,1000)
+		   ( 0 0 0.8752 0.1248 0 0 ))	%  SI=false  ASR=0.1  New_Adults=1 - 2  Input_Adults=interval(1000,2000)
+		  (( 0 0 1 0 0 0 )	%  SI=false  ASR=0.1  New_Adults=interval(100,250)  Input_Adults=0 - 1
+		   ( 0 0 0.9664 0.0336 0 0 )	%  SI=false  ASR=0.1  New_Adults=interval(100,250)  Input_Adults=1 - 2
+		   ( 0 0 0.8816 0.1184 0 0 )	%  SI=false  ASR=0.1  New_Adults=interval(100,250)  Input_Adults=interval(100,250)
+		   ( 0 0 0.7504 0.2496 0 0 )	%  SI=false  ASR=0.1  New_Adults=interval(100,250)  Input_Adults=interval(250,500)
+		   ( 0 0 0.4928 0.5072 0 0 )	%  SI=false  ASR=0.1  New_Adults=interval(100,250)  Input_Adults=interval(500,1000)
+		   ( 0 0 0.0832 0.9168 0 0 ))	%  SI=false  ASR=0.1  New_Adults=interval(100,250)  Input_Adults=interval(1000,2000)
+		  (( 0 0 0 1 0 0 )	%  SI=false  ASR=0.1  New_Adults=interval(250,500)  Input_Adults=0 - 1
+		   ( 0 0 0 0.9792 0.0208 0 )	%  SI=false  ASR=0.1  New_Adults=interval(250,500)  Input_Adults=1 - 2
+		   ( 0 0 0 0.9328 0.0672 0 )	%  SI=false  ASR=0.1  New_Adults=interval(250,500)  Input_Adults=interval(100,250)
+		   ( 0 0 0 0.848 0.152 0 )	%  SI=false  ASR=0.1  New_Adults=interval(250,500)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0.696 0.304 0 )	%  SI=false  ASR=0.1  New_Adults=interval(250,500)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0.4 0.6 0 ))	%  SI=false  ASR=0.1  New_Adults=interval(250,500)  Input_Adults=interval(1000,2000)
+		  (( 0 0 0 0 1 0 )	%  SI=false  ASR=0.1  New_Adults=interval(500,1000)  Input_Adults=0 - 1
+		   ( 0 0 0 0 1 0 )	%  SI=false  ASR=0.1  New_Adults=interval(500,1000)  Input_Adults=1 - 2
+		   ( 0 0 0 0 0.96 0.04 )	%  SI=false  ASR=0.1  New_Adults=interval(500,1000)  Input_Adults=interval(100,250)
+		   ( 0 0 0 0 0.928 0.072 )	%  SI=false  ASR=0.1  New_Adults=interval(500,1000)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 0.848 0.152 )	%  SI=false  ASR=0.1  New_Adults=interval(500,1000)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0.696 0.304 ))	%  SI=false  ASR=0.1  New_Adults=interval(500,1000)  Input_Adults=interval(1000,2000)
+		  (( 0 0 0 0 0 1 )	%  SI=false  ASR=0.1  New_Adults=interval(1000,2000)  Input_Adults=0 - 1
+		   ( 0 0 0 0 0 1 )	%  SI=false  ASR=0.1  New_Adults=interval(1000,2000)  Input_Adults=1 - 2
+		   ( 0 0 0 0 0 1 )	%  SI=false  ASR=0.1  New_Adults=interval(1000,2000)  Input_Adults=interval(100,250)
+		   ( 0 0 0 0 0 1 )	%  SI=false  ASR=0.1  New_Adults=interval(1000,2000)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 0 1 )	%  SI=false  ASR=0.1  New_Adults=interval(1000,2000)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0 1 )))	%  SI=false  ASR=0.1  New_Adults=interval(1000,2000)  Input_Adults=interval(1000,2000)
+		 ((( 0.7504 0.2496 0 0 0 0 )	%  SI=false  ASR=0.5  New_Adults=0 - 1  Input_Adults=0 - 1
+		   ( 0 1 0 0 0 0 )	%  SI=false  ASR=0.5  New_Adults=0 - 1  Input_Adults=1 - 2
+		   ( 0 0.68 0.32 0 0 0 )	%  SI=false  ASR=0.5  New_Adults=0 - 1  Input_Adults=interval(100,250)
+		   ( 0 0 1 0 0 0 )	%  SI=false  ASR=0.5  New_Adults=0 - 1  Input_Adults=interval(250,500)
+		   ( 0 0 0 1 0 0 )	%  SI=false  ASR=0.5  New_Adults=0 - 1  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 1 0 ))	%  SI=false  ASR=0.5  New_Adults=0 - 1  Input_Adults=interval(1000,2000)
+		  (( 0 1 0 0 0 0 )	%  SI=false  ASR=0.5  New_Adults=1 - 2  Input_Adults=0 - 1
+		   ( 0 0.7504 0.2496 0 0 0 )	%  SI=false  ASR=0.5  New_Adults=1 - 2  Input_Adults=1 - 2
+		   ( 0 0.1664 0.8336 0 0 0 )	%  SI=false  ASR=0.5  New_Adults=1 - 2  Input_Adults=interval(100,250)
+		   ( 0 0 0.6 0.4 0 0 )	%  SI=false  ASR=0.5  New_Adults=1 - 2  Input_Adults=interval(250,500)
+		   ( 0 0 0 0.8 0.2 0 )	%  SI=false  ASR=0.5  New_Adults=1 - 2  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0.896 0.104 ))	%  SI=false  ASR=0.5  New_Adults=1 - 2  Input_Adults=interval(1000,2000)
+		  (( 0 0 1 0 0 0 )	%  SI=false  ASR=0.5  New_Adults=interval(100,250)  Input_Adults=0 - 1
+		   ( 0 0 0.8272 0.1728 0 0 )	%  SI=false  ASR=0.5  New_Adults=interval(100,250)  Input_Adults=1 - 2
+		   ( 0 0 0.4096 0.5904 0 0 )	%  SI=false  ASR=0.5  New_Adults=interval(100,250)  Input_Adults=interval(100,250)
+		   ( 0 0 0.016 0.984 0 0 )	%  SI=false  ASR=0.5  New_Adults=interval(100,250)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0.296 0.704 0 )	%  SI=false  ASR=0.5  New_Adults=interval(100,250)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0.6512 0.3488 ))	%  SI=false  ASR=0.5  New_Adults=interval(100,250)  Input_Adults=interval(1000,2000)
+		  (( 0 0 0 1 0 0 )	%  SI=false  ASR=0.5  New_Adults=interval(250,500)  Input_Adults=0 - 1
+		   ( 0 0 0 0.896 0.104 0 )	%  SI=false  ASR=0.5  New_Adults=interval(250,500)  Input_Adults=1 - 2
+		   ( 0 0 0 0.6512 0.3488 0 )	%  SI=false  ASR=0.5  New_Adults=interval(250,500)  Input_Adults=interval(100,250)
+		   ( 0 0 0 0.2496 0.7504 0 )	%  SI=false  ASR=0.5  New_Adults=interval(250,500)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 1 0 )	%  SI=false  ASR=0.5  New_Adults=interval(250,500)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0.2496 0.7504 ))	%  SI=false  ASR=0.5  New_Adults=interval(250,500)  Input_Adults=interval(1000,2000)
+		  (( 0 0 0 0 1 0 )	%  SI=false  ASR=0.5  New_Adults=interval(500,1000)  Input_Adults=0 - 1
+		   ( 0 0 0 0 0.952 0.048 )	%  SI=false  ASR=0.5  New_Adults=interval(500,1000)  Input_Adults=1 - 2
+		   ( 0 0 0 0 0.824 0.176 )	%  SI=false  ASR=0.5  New_Adults=interval(500,1000)  Input_Adults=interval(100,250)
+		   ( 0 0 0 0 0.6256 0.3744 )	%  SI=false  ASR=0.5  New_Adults=interval(500,1000)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 0.2496 0.7504 )	%  SI=false  ASR=0.5  New_Adults=interval(500,1000)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0 1 ))	%  SI=false  ASR=0.5  New_Adults=interval(500,1000)  Input_Adults=interval(1000,2000)
+		  (( 0 0 0 0 0 1 )	%  SI=false  ASR=0.5  New_Adults=interval(1000,2000)  Input_Adults=0 - 1
+		   ( 0 0 0 0 0 1 )	%  SI=false  ASR=0.5  New_Adults=interval(1000,2000)  Input_Adults=1 - 2
+		   ( 0 0 0 0 0 1 )	%  SI=false  ASR=0.5  New_Adults=interval(1000,2000)  Input_Adults=interval(100,250)
+		   ( 0 0 0 0 0 1 )	%  SI=false  ASR=0.5  New_Adults=interval(1000,2000)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 0 1 )	%  SI=false  ASR=0.5  New_Adults=interval(1000,2000)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0 1 )))	%  SI=false  ASR=0.5  New_Adults=interval(1000,2000)  Input_Adults=interval(1000,2000)
+		 ((( 0.48 0.52 0 0 0 0 )	%  SI=false  ASR=1  New_Adults=0 - 1  Input_Adults=0 - 1
+		   ( 0 1 0 0 0 0 )	%  SI=false  ASR=1  New_Adults=0 - 1  Input_Adults=1 - 2
+		   ( 0 0 1 0 0 0 )	%  SI=false  ASR=1  New_Adults=0 - 1  Input_Adults=interval(100,250)
+		   ( 0 0 0 1 0 0 )	%  SI=false  ASR=1  New_Adults=0 - 1  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 1 0 )	%  SI=false  ASR=1  New_Adults=0 - 1  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0 1 ))	%  SI=false  ASR=1  New_Adults=0 - 1  Input_Adults=interval(1000,2000)
+		  (( 0 1 0 0 0 0 )	%  SI=false  ASR=1  New_Adults=1 - 2  Input_Adults=0 - 1
+		   ( 0 0.48 0.52 0 0 0 )	%  SI=false  ASR=1  New_Adults=1 - 2  Input_Adults=1 - 2
+		   ( 0 0 0.6672 0.3328 0 0 )	%  SI=false  ASR=1  New_Adults=1 - 2  Input_Adults=interval(100,250)
+		   ( 0 0 0 0.8 0.2 0 )	%  SI=false  ASR=1  New_Adults=1 - 2  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 0.896 0.104 )	%  SI=false  ASR=1  New_Adults=1 - 2  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0 1 ))	%  SI=false  ASR=1  New_Adults=1 - 2  Input_Adults=interval(1000,2000)
+		  (( 0 0 1 0 0 0 )	%  SI=false  ASR=1  New_Adults=interval(100,250)  Input_Adults=0 - 1
+		   ( 0 0 0.6672 0.3328 0 0 )	%  SI=false  ASR=1  New_Adults=interval(100,250)  Input_Adults=1 - 2
+		   ( 0 0 0.0576 0.9424 0 0 )	%  SI=false  ASR=1  New_Adults=interval(100,250)  Input_Adults=interval(100,250)
+		   ( 0 0 0 0.296 0.704 0 )	%  SI=false  ASR=1  New_Adults=interval(100,250)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 0.6512 0.3488 )	%  SI=false  ASR=1  New_Adults=interval(100,250)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0 1 ))	%  SI=false  ASR=1  New_Adults=interval(100,250)  Input_Adults=interval(1000,2000)
+		  (( 0 0 0 1 0 0 )	%  SI=false  ASR=1  New_Adults=interval(250,500)  Input_Adults=0 - 1
+		   ( 0 0 0 0.8 0.2 0 )	%  SI=false  ASR=1  New_Adults=interval(250,500)  Input_Adults=1 - 2
+		   ( 0 0 0 0.296 0.704 0 )	%  SI=false  ASR=1  New_Adults=interval(250,500)  Input_Adults=interval(100,250)
+		   ( 0 0 0 0 1 0 )	%  SI=false  ASR=1  New_Adults=interval(250,500)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 0.2496 0.7504 )	%  SI=false  ASR=1  New_Adults=interval(250,500)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0 1 ))	%  SI=false  ASR=1  New_Adults=interval(250,500)  Input_Adults=interval(1000,2000)
+		  (( 0 0 0 0 1 0 )	%  SI=false  ASR=1  New_Adults=interval(500,1000)  Input_Adults=0 - 1
+		   ( 0 0 0 0 0.896 0.104 )	%  SI=false  ASR=1  New_Adults=interval(500,1000)  Input_Adults=1 - 2
+		   ( 0 0 0 0 0.6512 0.3488 )	%  SI=false  ASR=1  New_Adults=interval(500,1000)  Input_Adults=interval(100,250)
+		   ( 0 0 0 0 0.2496 0.7504 )	%  SI=false  ASR=1  New_Adults=interval(500,1000)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 0 1 )	%  SI=false  ASR=1  New_Adults=interval(500,1000)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0 1 ))	%  SI=false  ASR=1  New_Adults=interval(500,1000)  Input_Adults=interval(1000,2000)
+		  (( 0 0 0 0 0 1 )	%  SI=false  ASR=1  New_Adults=interval(1000,2000)  Input_Adults=0 - 1
+		   ( 0 0 0 0 0 1 )	%  SI=false  ASR=1  New_Adults=interval(1000,2000)  Input_Adults=1 - 2
+		   ( 0 0 0 0 0 1 )	%  SI=false  ASR=1  New_Adults=interval(1000,2000)  Input_Adults=interval(100,250)
+		   ( 0 0 0 0 0 1 )	%  SI=false  ASR=1  New_Adults=interval(1000,2000)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 0 1 )	%  SI=false  ASR=1  New_Adults=interval(1000,2000)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0 1 ))))	%  SI=false  ASR=1  New_Adults=interval(1000,2000)  Input_Adults=interval(1000,2000)
+		(((( 0 1 0 0 0 0 )	%  SI=true  ASR=0  New_Adults=0 - 1  Input_Adults=0 - 1
+		   ( 0 1 0 0 0 0 )	%  SI=true  ASR=0  New_Adults=0 - 1  Input_Adults=1 - 2
+		   ( 0 1 0 0 0 0 )	%  SI=true  ASR=0  New_Adults=0 - 1  Input_Adults=interval(100,250)
+		   ( 0 1 0 0 0 0 )	%  SI=true  ASR=0  New_Adults=0 - 1  Input_Adults=interval(250,500)
+		   ( 0 1 0 0 0 0 )	%  SI=true  ASR=0  New_Adults=0 - 1  Input_Adults=interval(500,1000)
+		   ( 0 1 0 0 0 0 ))	%  SI=true  ASR=0  New_Adults=0 - 1  Input_Adults=interval(1000,2000)
+		  (( 0 1 0 0 0 0 )	%  SI=true  ASR=0  New_Adults=1 - 2  Input_Adults=0 - 1
+		   ( 0 1 0 0 0 0 )	%  SI=true  ASR=0  New_Adults=1 - 2  Input_Adults=1 - 2
+		   ( 0 1 0 0 0 0 )	%  SI=true  ASR=0  New_Adults=1 - 2  Input_Adults=interval(100,250)
+		   ( 0 1 0 0 0 0 )	%  SI=true  ASR=0  New_Adults=1 - 2  Input_Adults=interval(250,500)
+		   ( 0 1 0 0 0 0 )	%  SI=true  ASR=0  New_Adults=1 - 2  Input_Adults=interval(500,1000)
+		   ( 0 1 0 0 0 0 ))	%  SI=true  ASR=0  New_Adults=1 - 2  Input_Adults=interval(1000,2000)
+		  (( 0 0 1 0 0 0 )	%  SI=true  ASR=0  New_Adults=interval(100,250)  Input_Adults=0 - 1
+		   ( 0 0 1 0 0 0 )	%  SI=true  ASR=0  New_Adults=interval(100,250)  Input_Adults=1 - 2
+		   ( 0 0 1 0 0 0 )	%  SI=true  ASR=0  New_Adults=interval(100,250)  Input_Adults=interval(100,250)
+		   ( 0 0 1 0 0 0 )	%  SI=true  ASR=0  New_Adults=interval(100,250)  Input_Adults=interval(250,500)
+		   ( 0 0 1 0 0 0 )	%  SI=true  ASR=0  New_Adults=interval(100,250)  Input_Adults=interval(500,1000)
+		   ( 0 0 1 0 0 0 ))	%  SI=true  ASR=0  New_Adults=interval(100,250)  Input_Adults=interval(1000,2000)
+		  (( 0 0 0 1 0 0 )	%  SI=true  ASR=0  New_Adults=interval(250,500)  Input_Adults=0 - 1
+		   ( 0 0 0 1 0 0 )	%  SI=true  ASR=0  New_Adults=interval(250,500)  Input_Adults=1 - 2
+		   ( 0 0 0 1 0 0 )	%  SI=true  ASR=0  New_Adults=interval(250,500)  Input_Adults=interval(100,250)
+		   ( 0 0 0 1 0 0 )	%  SI=true  ASR=0  New_Adults=interval(250,500)  Input_Adults=interval(250,500)
+		   ( 0 0 0 1 0 0 )	%  SI=true  ASR=0  New_Adults=interval(250,500)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 1 0 0 ))	%  SI=true  ASR=0  New_Adults=interval(250,500)  Input_Adults=interval(1000,2000)
+		  (( 0 0 0 0 1 0 )	%  SI=true  ASR=0  New_Adults=interval(500,1000)  Input_Adults=0 - 1
+		   ( 0 0 0 0 1 0 )	%  SI=true  ASR=0  New_Adults=interval(500,1000)  Input_Adults=1 - 2
+		   ( 0 0 0 0 1 0 )	%  SI=true  ASR=0  New_Adults=interval(500,1000)  Input_Adults=interval(100,250)
+		   ( 0 0 0 0 1 0 )	%  SI=true  ASR=0  New_Adults=interval(500,1000)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 1 0 )	%  SI=true  ASR=0  New_Adults=interval(500,1000)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 1 0 ))	%  SI=true  ASR=0  New_Adults=interval(500,1000)  Input_Adults=interval(1000,2000)
+		  (( 0 0 0 0 0 1 )	%  SI=true  ASR=0  New_Adults=interval(1000,2000)  Input_Adults=0 - 1
+		   ( 0 0 0 0 0 1 )	%  SI=true  ASR=0  New_Adults=interval(1000,2000)  Input_Adults=1 - 2
+		   ( 0 0 0 0 0 1 )	%  SI=true  ASR=0  New_Adults=interval(1000,2000)  Input_Adults=interval(100,250)
+		   ( 0 0 0 0 0 1 )	%  SI=true  ASR=0  New_Adults=interval(1000,2000)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 0 1 )	%  SI=true  ASR=0  New_Adults=interval(1000,2000)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0 1 )))	%  SI=true  ASR=0  New_Adults=interval(1000,2000)  Input_Adults=interval(1000,2000)
+		 ((( 0 1 0 0 0 0 )	%  SI=true  ASR=0.1  New_Adults=0 - 1  Input_Adults=0 - 1
+		   ( 0 1 0 0 0 0 )	%  SI=true  ASR=0.1  New_Adults=0 - 1  Input_Adults=1 - 2
+		   ( 0 1 0 0 0 0 )	%  SI=true  ASR=0.1  New_Adults=0 - 1  Input_Adults=interval(100,250)
+		   ( 0 1 0 0 0 0 )	%  SI=true  ASR=0.1  New_Adults=0 - 1  Input_Adults=interval(250,500)
+		   ( 0 1 0 0 0 0 )	%  SI=true  ASR=0.1  New_Adults=0 - 1  Input_Adults=interval(500,1000)
+		   ( 0 0 1 0 0 0 ))	%  SI=true  ASR=0.1  New_Adults=0 - 1  Input_Adults=interval(1000,2000)
+		  (( 0 1 0 0 0 0 )	%  SI=true  ASR=0.1  New_Adults=1 - 2  Input_Adults=0 - 1
+		   ( 0 0.952 0.048 0 0 0 )	%  SI=true  ASR=0.1  New_Adults=1 - 2  Input_Adults=1 - 2
+		   ( 0 0.824 0.176 0 0 0 )	%  SI=true  ASR=0.1  New_Adults=1 - 2  Input_Adults=interval(100,250)
+		   ( 0 0.6256 0.3744 0 0 0 )	%  SI=true  ASR=0.1  New_Adults=1 - 2  Input_Adults=interval(250,500)
+		   ( 0 0.2496 0.7504 0 0 0 )	%  SI=true  ASR=0.1  New_Adults=1 - 2  Input_Adults=interval(500,1000)
+		   ( 0 0 0.8752 0.1248 0 0 ))	%  SI=true  ASR=0.1  New_Adults=1 - 2  Input_Adults=interval(1000,2000)
+		  (( 0 0 1 0 0 0 )	%  SI=true  ASR=0.1  New_Adults=interval(100,250)  Input_Adults=0 - 1
+		   ( 0 0 0.9664 0.0336 0 0 )	%  SI=true  ASR=0.1  New_Adults=interval(100,250)  Input_Adults=1 - 2
+		   ( 0 0 0.8816 0.1184 0 0 )	%  SI=true  ASR=0.1  New_Adults=interval(100,250)  Input_Adults=interval(100,250)
+		   ( 0 0 0.7504 0.2496 0 0 )	%  SI=true  ASR=0.1  New_Adults=interval(100,250)  Input_Adults=interval(250,500)
+		   ( 0 0 0.4928 0.5072 0 0 )	%  SI=true  ASR=0.1  New_Adults=interval(100,250)  Input_Adults=interval(500,1000)
+		   ( 0 0 0.0832 0.9168 0 0 ))	%  SI=true  ASR=0.1  New_Adults=interval(100,250)  Input_Adults=interval(1000,2000)
+		  (( 0 0 0 1 0 0 )	%  SI=true  ASR=0.1  New_Adults=interval(250,500)  Input_Adults=0 - 1
+		   ( 0 0 0 0.9792 0.0208 0 )	%  SI=true  ASR=0.1  New_Adults=interval(250,500)  Input_Adults=1 - 2
+		   ( 0 0 0 0.9328 0.0672 0 )	%  SI=true  ASR=0.1  New_Adults=interval(250,500)  Input_Adults=interval(100,250)
+		   ( 0 0 0 0.848 0.152 0 )	%  SI=true  ASR=0.1  New_Adults=interval(250,500)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0.696 0.304 0 )	%  SI=true  ASR=0.1  New_Adults=interval(250,500)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0.4 0.6 0 ))	%  SI=true  ASR=0.1  New_Adults=interval(250,500)  Input_Adults=interval(1000,2000)
+		  (( 0 0 0 0 1 0 )	%  SI=true  ASR=0.1  New_Adults=interval(500,1000)  Input_Adults=0 - 1
+		   ( 0 0 0 0 1 0 )	%  SI=true  ASR=0.1  New_Adults=interval(500,1000)  Input_Adults=1 - 2
+		   ( 0 0 0 0 0.96 0.04 )	%  SI=true  ASR=0.1  New_Adults=interval(500,1000)  Input_Adults=interval(100,250)
+		   ( 0 0 0 0 0.928 0.072 )	%  SI=true  ASR=0.1  New_Adults=interval(500,1000)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 0.848 0.152 )	%  SI=true  ASR=0.1  New_Adults=interval(500,1000)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0.696 0.304 ))	%  SI=true  ASR=0.1  New_Adults=interval(500,1000)  Input_Adults=interval(1000,2000)
+		  (( 0 0 0 0 0 1 )	%  SI=true  ASR=0.1  New_Adults=interval(1000,2000)  Input_Adults=0 - 1
+		   ( 0 0 0 0 0 1 )	%  SI=true  ASR=0.1  New_Adults=interval(1000,2000)  Input_Adults=1 - 2
+		   ( 0 0 0 0 0 1 )	%  SI=true  ASR=0.1  New_Adults=interval(1000,2000)  Input_Adults=interval(100,250)
+		   ( 0 0 0 0 0 1 )	%  SI=true  ASR=0.1  New_Adults=interval(1000,2000)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 0 1 )	%  SI=true  ASR=0.1  New_Adults=interval(1000,2000)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0 1 )))	%  SI=true  ASR=0.1  New_Adults=interval(1000,2000)  Input_Adults=interval(1000,2000)
+		 ((( 0 1 0 0 0 0 )	%  SI=true  ASR=0.5  New_Adults=0 - 1  Input_Adults=0 - 1
+		   ( 0 1 0 0 0 0 )	%  SI=true  ASR=0.5  New_Adults=0 - 1  Input_Adults=1 - 2
+		   ( 0 0.68 0.32 0 0 0 )	%  SI=true  ASR=0.5  New_Adults=0 - 1  Input_Adults=interval(100,250)
+		   ( 0 0 1 0 0 0 )	%  SI=true  ASR=0.5  New_Adults=0 - 1  Input_Adults=interval(250,500)
+		   ( 0 0 0 1 0 0 )	%  SI=true  ASR=0.5  New_Adults=0 - 1  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 1 0 ))	%  SI=true  ASR=0.5  New_Adults=0 - 1  Input_Adults=interval(1000,2000)
+		  (( 0 1 0 0 0 0 )	%  SI=true  ASR=0.5  New_Adults=1 - 2  Input_Adults=0 - 1
+		   ( 0 0.7504 0.2496 0 0 0 )	%  SI=true  ASR=0.5  New_Adults=1 - 2  Input_Adults=1 - 2
+		   ( 0 0.1664 0.8336 0 0 0 )	%  SI=true  ASR=0.5  New_Adults=1 - 2  Input_Adults=interval(100,250)
+		   ( 0 0 0.6 0.4 0 0 )	%  SI=true  ASR=0.5  New_Adults=1 - 2  Input_Adults=interval(250,500)
+		   ( 0 0 0 0.8 0.2 0 )	%  SI=true  ASR=0.5  New_Adults=1 - 2  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0.896 0.104 ))	%  SI=true  ASR=0.5  New_Adults=1 - 2  Input_Adults=interval(1000,2000)
+		  (( 0 0 1 0 0 0 )	%  SI=true  ASR=0.5  New_Adults=interval(100,250)  Input_Adults=0 - 1
+		   ( 0 0 0.8272 0.1728 0 0 )	%  SI=true  ASR=0.5  New_Adults=interval(100,250)  Input_Adults=1 - 2
+		   ( 0 0 0.4096 0.5904 0 0 )	%  SI=true  ASR=0.5  New_Adults=interval(100,250)  Input_Adults=interval(100,250)
+		   ( 0 0 0.016 0.984 0 0 )	%  SI=true  ASR=0.5  New_Adults=interval(100,250)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0.296 0.704 0 )	%  SI=true  ASR=0.5  New_Adults=interval(100,250)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0.6512 0.3488 ))	%  SI=true  ASR=0.5  New_Adults=interval(100,250)  Input_Adults=interval(1000,2000)
+		  (( 0 0 0 1 0 0 )	%  SI=true  ASR=0.5  New_Adults=interval(250,500)  Input_Adults=0 - 1
+		   ( 0 0 0 0.896 0.104 0 )	%  SI=true  ASR=0.5  New_Adults=interval(250,500)  Input_Adults=1 - 2
+		   ( 0 0 0 0.6512 0.3488 0 )	%  SI=true  ASR=0.5  New_Adults=interval(250,500)  Input_Adults=interval(100,250)
+		   ( 0 0 0 0.2496 0.7504 0 )	%  SI=true  ASR=0.5  New_Adults=interval(250,500)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 1 0 )	%  SI=true  ASR=0.5  New_Adults=interval(250,500)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0.2496 0.7504 ))	%  SI=true  ASR=0.5  New_Adults=interval(250,500)  Input_Adults=interval(1000,2000)
+		  (( 0 0 0 0 1 0 )	%  SI=true  ASR=0.5  New_Adults=interval(500,1000)  Input_Adults=0 - 1
+		   ( 0 0 0 0 0.952 0.048 )	%  SI=true  ASR=0.5  New_Adults=interval(500,1000)  Input_Adults=1 - 2
+		   ( 0 0 0 0 0.824 0.176 )	%  SI=true  ASR=0.5  New_Adults=interval(500,1000)  Input_Adults=interval(100,250)
+		   ( 0 0 0 0 0.6256 0.3744 )	%  SI=true  ASR=0.5  New_Adults=interval(500,1000)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 0.2496 0.7504 )	%  SI=true  ASR=0.5  New_Adults=interval(500,1000)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0 1 ))	%  SI=true  ASR=0.5  New_Adults=interval(500,1000)  Input_Adults=interval(1000,2000)
+		  (( 0 0 0 0 0 1 )	%  SI=true  ASR=0.5  New_Adults=interval(1000,2000)  Input_Adults=0 - 1
+		   ( 0 0 0 0 0 1 )	%  SI=true  ASR=0.5  New_Adults=interval(1000,2000)  Input_Adults=1 - 2
+		   ( 0 0 0 0 0 1 )	%  SI=true  ASR=0.5  New_Adults=interval(1000,2000)  Input_Adults=interval(100,250)
+		   ( 0 0 0 0 0 1 )	%  SI=true  ASR=0.5  New_Adults=interval(1000,2000)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 0 1 )	%  SI=true  ASR=0.5  New_Adults=interval(1000,2000)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0 1 )))	%  SI=true  ASR=0.5  New_Adults=interval(1000,2000)  Input_Adults=interval(1000,2000)
+		 ((( 0 1 0 0 0 0 )	%  SI=true  ASR=1  New_Adults=0 - 1  Input_Adults=0 - 1
+		   ( 0 1 0 0 0 0 )	%  SI=true  ASR=1  New_Adults=0 - 1  Input_Adults=1 - 2
+		   ( 0 0 1 0 0 0 )	%  SI=true  ASR=1  New_Adults=0 - 1  Input_Adults=interval(100,250)
+		   ( 0 0 0 1 0 0 )	%  SI=true  ASR=1  New_Adults=0 - 1  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 1 0 )	%  SI=true  ASR=1  New_Adults=0 - 1  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0 1 ))	%  SI=true  ASR=1  New_Adults=0 - 1  Input_Adults=interval(1000,2000)
+		  (( 0 1 0 0 0 0 )	%  SI=true  ASR=1  New_Adults=1 - 2  Input_Adults=0 - 1
+		   ( 0 0.48 0.52 0 0 0 )	%  SI=true  ASR=1  New_Adults=1 - 2  Input_Adults=1 - 2
+		   ( 0 0 0.6672 0.3328 0 0 )	%  SI=true  ASR=1  New_Adults=1 - 2  Input_Adults=interval(100,250)
+		   ( 0 0 0 0.8 0.2 0 )	%  SI=true  ASR=1  New_Adults=1 - 2  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 0.896 0.104 )	%  SI=true  ASR=1  New_Adults=1 - 2  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0 1 ))	%  SI=true  ASR=1  New_Adults=1 - 2  Input_Adults=interval(1000,2000)
+		  (( 0 0 1 0 0 0 )	%  SI=true  ASR=1  New_Adults=interval(100,250)  Input_Adults=0 - 1
+		   ( 0 0 0.6672 0.3328 0 0 )	%  SI=true  ASR=1  New_Adults=interval(100,250)  Input_Adults=1 - 2
+		   ( 0 0 0.0576 0.9424 0 0 )	%  SI=true  ASR=1  New_Adults=interval(100,250)  Input_Adults=interval(100,250)
+		   ( 0 0 0 0.296 0.704 0 )	%  SI=true  ASR=1  New_Adults=interval(100,250)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 0.6512 0.3488 )	%  SI=true  ASR=1  New_Adults=interval(100,250)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0 1 ))	%  SI=true  ASR=1  New_Adults=interval(100,250)  Input_Adults=interval(1000,2000)
+		  (( 0 0 0 1 0 0 )	%  SI=true  ASR=1  New_Adults=interval(250,500)  Input_Adults=0 - 1
+		   ( 0 0 0 0.8 0.2 0 )	%  SI=true  ASR=1  New_Adults=interval(250,500)  Input_Adults=1 - 2
+		   ( 0 0 0 0.296 0.704 0 )	%  SI=true  ASR=1  New_Adults=interval(250,500)  Input_Adults=interval(100,250)
+		   ( 0 0 0 0 1 0 )	%  SI=true  ASR=1  New_Adults=interval(250,500)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 0.2496 0.7504 )	%  SI=true  ASR=1  New_Adults=interval(250,500)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0 1 ))	%  SI=true  ASR=1  New_Adults=interval(250,500)  Input_Adults=interval(1000,2000)
+		  (( 0 0 0 0 1 0 )	%  SI=true  ASR=1  New_Adults=interval(500,1000)  Input_Adults=0 - 1
+		   ( 0 0 0 0 0.896 0.104 )	%  SI=true  ASR=1  New_Adults=interval(500,1000)  Input_Adults=1 - 2
+		   ( 0 0 0 0 0.6512 0.3488 )	%  SI=true  ASR=1  New_Adults=interval(500,1000)  Input_Adults=interval(100,250)
+		   ( 0 0 0 0 0.2496 0.7504 )	%  SI=true  ASR=1  New_Adults=interval(500,1000)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 0 1 )	%  SI=true  ASR=1  New_Adults=interval(500,1000)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0 1 ))	%  SI=true  ASR=1  New_Adults=interval(500,1000)  Input_Adults=interval(1000,2000)
+		  (( 0 0 0 0 0 1 )	%  SI=true  ASR=1  New_Adults=interval(1000,2000)  Input_Adults=0 - 1
+		   ( 0 0 0 0 0 1 )	%  SI=true  ASR=1  New_Adults=interval(1000,2000)  Input_Adults=1 - 2
+		   ( 0 0 0 0 0 1 )	%  SI=true  ASR=1  New_Adults=interval(1000,2000)  Input_Adults=interval(100,250)
+		   ( 0 0 0 0 0 1 )	%  SI=true  ASR=1  New_Adults=interval(1000,2000)  Input_Adults=interval(250,500)
+		   ( 0 0 0 0 0 1 )	%  SI=true  ASR=1  New_Adults=interval(1000,2000)  Input_Adults=interval(500,1000)
+		   ( 0 0 0 0 0 1 )))));	%  SI=true  ASR=1  New_Adults=interval(1000,2000)  Input_Adults=interval(1000,2000)
+    }
+
+    potential (Input_Adults)
+    {
+	data = ( 1 1 1 1 1 1 );
+    }
+
+    potential (Season)
+    {
+	data = ( 1 1 1 1 );
+    }
+
+    potential (Output_Seeds | Input_Adults Input_Seeds GR SP SSR)
+    {
+	model_nodes = ();
+	model_data = ( min (50000, max (0, Input_Seeds * SSR * (1 - GR) + Input_Adults / 100 * SP)) );
+	data = (((((( 1 0 0 0 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(0,0.01)  GR=0  SP=0  SSR=0.3
+		   (( 1 0 0 0 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(0,0.01)  GR=0  SP=50  SSR=0.3
+		   (( 0 1 0 0 0 0 )))	%  Input_Adults=0 - 1  Input_Seeds=interval(0,0.01)  GR=0  SP=5000  SSR=0.3
+		  ((( 1 0 0 0 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(0,0.01)  GR=0.4  SP=0  SSR=0.3
+		   (( 1 0 0 0 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(0,0.01)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 1 0 0 0 0 )))	%  Input_Adults=0 - 1  Input_Seeds=interval(0,0.01)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 1 0 0 0 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(0,0.01)  GR=0.5  SP=0  SSR=0.3
+		   (( 1 0 0 0 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(0,0.01)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 1 0 0 0 0 ))))	%  Input_Adults=0 - 1  Input_Seeds=interval(0,0.01)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 1 0 0 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(0.01,1000)  GR=0  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(0.01,1000)  GR=0  SP=50  SSR=0.3
+		   (( 0 1 0 0 0 0 )))	%  Input_Adults=0 - 1  Input_Seeds=interval(0.01,1000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 1 0 0 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(0.01,1000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(0.01,1000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 1 0 0 0 0 )))	%  Input_Adults=0 - 1  Input_Seeds=interval(0.01,1000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 1 0 0 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(0.01,1000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(0.01,1000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 1 0 0 0 0 ))))	%  Input_Adults=0 - 1  Input_Seeds=interval(0.01,1000)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 1 0 0 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(1000,3000)  GR=0  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(1000,3000)  GR=0  SP=50  SSR=0.3
+		   (( 0 1 0 0 0 0 )))	%  Input_Adults=0 - 1  Input_Seeds=interval(1000,3000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 1 0 0 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(1000,3000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(1000,3000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 1 0 0 0 0 )))	%  Input_Adults=0 - 1  Input_Seeds=interval(1000,3000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 1 0 0 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(1000,3000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(1000,3000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 1 0 0 0 0 ))))	%  Input_Adults=0 - 1  Input_Seeds=interval(1000,3000)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 0.04 0.72 0.24 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(3000,12000)  GR=0  SP=0  SSR=0.3
+		   (( 0 0.04 0.72 0.24 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(3000,12000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0.04 0.72 0.24 0 0 )))	%  Input_Adults=0 - 1  Input_Seeds=interval(3000,12000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 0.28 0.72 0 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(3000,12000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 0.28 0.72 0 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(3000,12000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0.28 0.72 0 0 0 )))	%  Input_Adults=0 - 1  Input_Seeds=interval(3000,12000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 0.4 0.6 0 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(3000,12000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 0.4 0.6 0 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(3000,12000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0.4 0.6 0 0 0 ))))	%  Input_Adults=0 - 1  Input_Seeds=interval(3000,12000)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 0 0 1 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(12000,25000)  GR=0  SP=0  SSR=0.3
+		   (( 0 0 0 1 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(12000,25000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 1 0 0 )))	%  Input_Adults=0 - 1  Input_Seeds=interval(12000,25000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 0 0.36 0.64 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(12000,25000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 0 0.36 0.64 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(12000,25000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0.36 0.64 0 0 )))	%  Input_Adults=0 - 1  Input_Seeds=interval(12000,25000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 0 0.6 0.4 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(12000,25000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 0 0.6 0.4 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(12000,25000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0.6 0.4 0 0 ))))	%  Input_Adults=0 - 1  Input_Seeds=interval(12000,25000)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 0 0 0.6 0.4 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(25000,50000)  GR=0  SP=0  SSR=0.3
+		   (( 0 0 0 0.6 0.4 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(25000,50000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0.6 0.4 0 )))	%  Input_Adults=0 - 1  Input_Seeds=interval(25000,50000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 0 0 1 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(25000,50000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 0 0 1 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(25000,50000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 1 0 0 )))	%  Input_Adults=0 - 1  Input_Seeds=interval(25000,50000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 0 0 1 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(25000,50000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 0 0 1 0 0 ))	%  Input_Adults=0 - 1  Input_Seeds=interval(25000,50000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 1 0 0 )))))	%  Input_Adults=0 - 1  Input_Seeds=interval(25000,50000)  GR=0.5  SP=5000  SSR=0.3
+		((((( 1 0 0 0 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(0,0.01)  GR=0  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(0,0.01)  GR=0  SP=50  SSR=0.3
+		   (( 0 0.2 0.4 0.4 0 0 )))	%  Input_Adults=1 - 2  Input_Seeds=interval(0,0.01)  GR=0  SP=5000  SSR=0.3
+		  ((( 1 0 0 0 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(0,0.01)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(0,0.01)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0.2 0.4 0.4 0 0 )))	%  Input_Adults=1 - 2  Input_Seeds=interval(0,0.01)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 1 0 0 0 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(0,0.01)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(0,0.01)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0.2 0.4 0.4 0 0 ))))	%  Input_Adults=1 - 2  Input_Seeds=interval(0,0.01)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 1 0 0 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(0.01,1000)  GR=0  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(0.01,1000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0.1728 0.4 0.4272 0 0 )))	%  Input_Adults=1 - 2  Input_Seeds=interval(0.01,1000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 1 0 0 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(0.01,1000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(0.01,1000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0.1824 0.4 0.4176 0 0 )))	%  Input_Adults=1 - 2  Input_Seeds=interval(0.01,1000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 1 0 0 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(0.01,1000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(0.01,1000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0.1872 0.4 0.4128 0 0 ))))	%  Input_Adults=1 - 2  Input_Seeds=interval(0.01,1000)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 1 0 0 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(1000,3000)  GR=0  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(1000,3000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0.08 0.4 0.52 0 0 )))	%  Input_Adults=1 - 2  Input_Seeds=interval(1000,3000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 1 0 0 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(1000,3000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(1000,3000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0.128 0.4 0.472 0 0 )))	%  Input_Adults=1 - 2  Input_Seeds=interval(1000,3000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 1 0 0 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(1000,3000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(1000,3000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0.1392 0.4 0.4608 0 0 ))))	%  Input_Adults=1 - 2  Input_Seeds=interval(1000,3000)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 0.04 0.72 0.24 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(3000,12000)  GR=0  SP=0  SSR=0.3
+		   (( 0 0.0368 0.7232 0.24 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(3000,12000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0.1648 0.8352 0 0 )))	%  Input_Adults=1 - 2  Input_Seeds=interval(3000,12000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 0.28 0.72 0 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(3000,12000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 0.2704 0.7296 0 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(3000,12000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0.0128 0.3184 0.6688 0 0 )))	%  Input_Adults=1 - 2  Input_Seeds=interval(3000,12000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 0.4 0.6 0 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(3000,12000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 0.3888 0.6112 0 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(3000,12000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0.0224 0.352 0.6256 0 0 ))))	%  Input_Adults=1 - 2  Input_Seeds=interval(3000,12000)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 0 0 1 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(12000,25000)  GR=0  SP=0  SSR=0.3
+		   (( 0 0 0 1 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(12000,25000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0.9936 0.0064 0 )))	%  Input_Adults=1 - 2  Input_Seeds=interval(12000,25000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 0 0.36 0.64 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(12000,25000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 0 0.3552 0.6448 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(12000,25000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0.0304 0.9696 0 0 )))	%  Input_Adults=1 - 2  Input_Seeds=interval(12000,25000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 0 0.6 0.4 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(12000,25000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 0 0.6 0.4 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(12000,25000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0.0736 0.9264 0 0 ))))	%  Input_Adults=1 - 2  Input_Seeds=interval(12000,25000)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 0 0 0.6 0.4 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(25000,50000)  GR=0  SP=0  SSR=0.3
+		   (( 0 0 0 0.6 0.4 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(25000,50000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0.2704 0.7296 0 )))	%  Input_Adults=1 - 2  Input_Seeds=interval(25000,50000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 0 0 1 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(25000,50000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 0 0 1 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(25000,50000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 0.9104 0.0896 0 )))	%  Input_Adults=1 - 2  Input_Seeds=interval(25000,50000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 0 0 1 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(25000,50000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 0 0 1 0 0 ))	%  Input_Adults=1 - 2  Input_Seeds=interval(25000,50000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 0.9936 0.0064 0 )))))	%  Input_Adults=1 - 2  Input_Seeds=interval(25000,50000)  GR=0.5  SP=5000  SSR=0.3
+		((((( 1 0 0 0 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(0,0.01)  GR=0  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(0,0.01)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0.92 0.08 0 )))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(0,0.01)  GR=0  SP=5000  SSR=0.3
+		  ((( 1 0 0 0 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(0,0.01)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(0,0.01)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 0.92 0.08 0 )))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(0,0.01)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 1 0 0 0 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(0,0.01)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(0,0.01)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 0.92 0.08 0 ))))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(0,0.01)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 1 0 0 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(0.01,1000)  GR=0  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(0.01,1000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0.9136 0.0864 0 )))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(0.01,1000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 1 0 0 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(0.01,1000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(0.01,1000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 0.92 0.08 0 )))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(0.01,1000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 1 0 0 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(0.01,1000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(0.01,1000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 0.92 0.08 0 ))))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(0.01,1000)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 1 0 0 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(1000,3000)  GR=0  SP=0  SSR=0.3
+		   (( 0 0.9936 0.0064 0 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(1000,3000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0.8528 0.1472 0 )))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(1000,3000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 1 0 0 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(1000,3000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(1000,3000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 0.888 0.112 0 )))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(1000,3000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 1 0 0 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(1000,3000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(1000,3000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 0.8928 0.1072 0 ))))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(1000,3000)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 0.04 0.72 0.24 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(3000,12000)  GR=0  SP=0  SSR=0.3
+		   (( 0 0 0.7472 0.2528 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(3000,12000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0.6336 0.3664 0 )))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(3000,12000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 0.28 0.72 0 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(3000,12000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 0.2288 0.7712 0 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(3000,12000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 0.752 0.248 0 )))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(3000,12000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 0.4 0.6 0 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(3000,12000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 0.3424 0.6576 0 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(3000,12000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 0.784 0.216 0 ))))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(3000,12000)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 0 0 1 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(12000,25000)  GR=0  SP=0  SSR=0.3
+		   (( 0 0 0 1 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(12000,25000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0.1968 0.8032 0 )))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(12000,25000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 0 0.36 0.64 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(12000,25000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 0 0.32 0.68 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(12000,25000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 0.488 0.512 0 )))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(12000,25000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 0 0.6 0.4 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(12000,25000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 0 0.5696 0.4304 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(12000,25000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 0.5632 0.4368 0 ))))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(12000,25000)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 0 0 0.6 0.4 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(25000,50000)  GR=0  SP=0  SSR=0.3
+		   (( 0 0 0 0.6 0.4 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(25000,50000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0 0.9424 0.0576 )))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(25000,50000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 0 0 1 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(25000,50000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 0 0 1 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(25000,50000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 0.0912 0.9088 0 )))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(25000,50000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 0 0 1 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(25000,50000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 0 0 1 0 0 ))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(25000,50000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 0.1936 0.8064 0 )))))	%  Input_Adults=interval(100,250)  Input_Seeds=interval(25000,50000)  GR=0.5  SP=5000  SSR=0.3
+		((((( 1 0 0 0 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(0,0.01)  GR=0  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(0,0.01)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0 1 0 )))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(0,0.01)  GR=0  SP=5000  SSR=0.3
+		  ((( 1 0 0 0 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(0,0.01)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(0,0.01)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 0 1 0 )))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(0,0.01)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 1 0 0 0 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(0,0.01)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(0,0.01)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 0 1 0 ))))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(0,0.01)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 1 0 0 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(0.01,1000)  GR=0  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(0.01,1000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0 0.9936 0.0064 )))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(0.01,1000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 1 0 0 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(0.01,1000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(0.01,1000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 0 1 0 )))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(0.01,1000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 1 0 0 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(0.01,1000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(0.01,1000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 0 1 0 ))))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(0.01,1000)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 1 0 0 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(1000,3000)  GR=0  SP=0  SSR=0.3
+		   (( 0 0.8544 0.1456 0 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(1000,3000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0 0.9504 0.0496 )))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(1000,3000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 1 0 0 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(1000,3000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(1000,3000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 0 0.968 0.032 )))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(1000,3000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 1 0 0 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(1000,3000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(1000,3000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 0 0.9728 0.0272 ))))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(1000,3000)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 0.04 0.72 0.24 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(3000,12000)  GR=0  SP=0  SSR=0.3
+		   (( 0 0 0.7072 0.2928 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(3000,12000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0 0.8192 0.1808 )))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(3000,12000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 0.28 0.72 0 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(3000,12000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 0.1696 0.8304 0 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(3000,12000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 0 0.8928 0.1072 )))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(3000,12000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 0.4 0.6 0 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(3000,12000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 0.2704 0.7296 0 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(3000,12000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 0 0.912 0.088 ))))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(3000,12000)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 0 0 1 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(12000,25000)  GR=0  SP=0  SSR=0.3
+		   (( 0 0 0 1 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(12000,25000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0 0.5552 0.4448 )))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(12000,25000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 0 0.36 0.64 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(12000,25000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 0 0.2784 0.7216 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(12000,25000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 0 0.7328 0.2672 )))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(12000,25000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 0 0.6 0.4 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(12000,25000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 0 0.5184 0.4816 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(12000,25000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 0 0.7792 0.2208 ))))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(12000,25000)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 0 0 0.6 0.4 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(25000,50000)  GR=0  SP=0  SSR=0.3
+		   (( 0 0 0 0.568 0.432 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(25000,50000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0 0.1312 0.8688 )))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(25000,50000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 0 0 1 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(25000,50000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 0 0 1 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(25000,50000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 0 0.4592 0.5408 )))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(25000,50000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 0 0 1 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(25000,50000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 0 0 1 0 0 ))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(25000,50000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 0 0.5488 0.4512 )))))	%  Input_Adults=interval(250,500)  Input_Seeds=interval(25000,50000)  GR=0.5  SP=5000  SSR=0.3
+		((((( 1 0 0 0 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(0,0.01)  GR=0  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(0,0.01)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 )))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(0,0.01)  GR=0  SP=5000  SSR=0.3
+		  ((( 1 0 0 0 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(0,0.01)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(0,0.01)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 )))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(0,0.01)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 1 0 0 0 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(0,0.01)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(0,0.01)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 ))))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(0,0.01)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 1 0 0 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(0.01,1000)  GR=0  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(0.01,1000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 )))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(0.01,1000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 1 0 0 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(0.01,1000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(0.01,1000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 )))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(0.01,1000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 1 0 0 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(0.01,1000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(0.01,1000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 ))))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(0.01,1000)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 1 0 0 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(1000,3000)  GR=0  SP=0  SSR=0.3
+		   (( 0 0.5424 0.4576 0 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(1000,3000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 )))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(1000,3000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 1 0 0 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(1000,3000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 0.992 0.008 0 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(1000,3000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 )))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(1000,3000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 1 0 0 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(1000,3000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(1000,3000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 ))))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(1000,3000)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 0.04 0.72 0.24 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(3000,12000)  GR=0  SP=0  SSR=0.3
+		   (( 0 0 0.64 0.36 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(3000,12000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 )))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(3000,12000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 0.28 0.72 0 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(3000,12000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 0.0544 0.9456 0 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(3000,12000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 )))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(3000,12000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 0.4 0.6 0 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(3000,12000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 0.128 0.872 0 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(3000,12000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 ))))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(3000,12000)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 0 0 1 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(12000,25000)  GR=0  SP=0  SSR=0.3
+		   (( 0 0 0 1 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(12000,25000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 )))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(12000,25000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 0 0.36 0.64 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(12000,25000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 0 0.2 0.8 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(12000,25000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 )))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(12000,25000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 0 0.6 0.4 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(12000,25000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 0 0.4224 0.5776 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(12000,25000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 ))))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(12000,25000)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 0 0 0.6 0.4 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(25000,50000)  GR=0  SP=0  SSR=0.3
+		   (( 0 0 0 0.552 0.448 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(25000,50000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 )))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(25000,50000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 0 0 1 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(25000,50000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 0 0 1 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(25000,50000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 )))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(25000,50000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 0 0 1 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(25000,50000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 0 0 1 0 0 ))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(25000,50000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 )))))	%  Input_Adults=interval(500,1000)  Input_Seeds=interval(25000,50000)  GR=0.5  SP=5000  SSR=0.3
+		((((( 1 0 0 0 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(0,0.01)  GR=0  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(0,0.01)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 )))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(0,0.01)  GR=0  SP=5000  SSR=0.3
+		  ((( 1 0 0 0 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(0,0.01)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(0,0.01)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 )))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(0,0.01)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 1 0 0 0 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(0,0.01)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 1 0 0 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(0,0.01)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 ))))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(0,0.01)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 1 0 0 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(0.01,1000)  GR=0  SP=0  SSR=0.3
+		   (( 0 0.696 0.304 0 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(0.01,1000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 )))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(0.01,1000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 1 0 0 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(0.01,1000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 0.8192 0.1808 0 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(0.01,1000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 )))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(0.01,1000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 1 0 0 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(0.01,1000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 0.8512 0.1488 0 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(0.01,1000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 ))))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(0.01,1000)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 1 0 0 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(1000,3000)  GR=0  SP=0  SSR=0.3
+		   (( 0 0.0656 0.9344 0 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(1000,3000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 )))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(1000,3000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 1 0 0 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(1000,3000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 0.2848 0.7152 0 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(1000,3000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 )))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(1000,3000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 1 0 0 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(1000,3000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 0.4 0.6 0 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(1000,3000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 ))))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(1000,3000)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 0.04 0.72 0.24 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(3000,12000)  GR=0  SP=0  SSR=0.3
+		   (( 0 0 0.4992 0.5008 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(3000,12000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 )))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(3000,12000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 0.28 0.72 0 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(3000,12000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 0 0.9856 0.0144 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(3000,12000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 )))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(3000,12000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 0.4 0.6 0 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(3000,12000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 0.0016 0.9984 0 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(3000,12000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 ))))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(3000,12000)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 0 0 1 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(12000,25000)  GR=0  SP=0  SSR=0.3
+		   (( 0 0 0 1 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(12000,25000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 )))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(12000,25000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 0 0.36 0.64 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(12000,25000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 0 0.0496 0.9504 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(12000,25000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 )))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(12000,25000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 0 0.6 0.4 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(12000,25000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 0 0.232 0.768 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(12000,25000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 ))))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(12000,25000)  GR=0.5  SP=5000  SSR=0.3
+		 (((( 0 0 0 0.6 0.4 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(25000,50000)  GR=0  SP=0  SSR=0.3
+		   (( 0 0 0 0.4992 0.5008 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(25000,50000)  GR=0  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 )))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(25000,50000)  GR=0  SP=5000  SSR=0.3
+		  ((( 0 0 0 1 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(25000,50000)  GR=0.4  SP=0  SSR=0.3
+		   (( 0 0 0 1 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(25000,50000)  GR=0.4  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 )))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(25000,50000)  GR=0.4  SP=5000  SSR=0.3
+		  ((( 0 0 0 1 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(25000,50000)  GR=0.5  SP=0  SSR=0.3
+		   (( 0 0 0 1 0 0 ))	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(25000,50000)  GR=0.5  SP=50  SSR=0.3
+		   (( 0 0 0 0 0 1 ))))));	%  Input_Adults=interval(1000,2000)  Input_Seeds=interval(25000,50000)  GR=0.5  SP=5000  SSR=0.3
+    }
+
+    potential (New_Adults | Input_Seeds GR GSR)
+    {
+	model_nodes = ();
+	model_data = ( min (1000, max (0, Input_Seeds * GR * GSR)) );
+	data = (((( 1 0 0 0 0 0 )	%  Input_Seeds=interval(0,0.01)  GR=0  GSR=0
+		  ( 1 0 0 0 0 0 )	%  Input_Seeds=interval(0,0.01)  GR=0  GSR=0.1
+		  ( 1 0 0 0 0 0 ))	%  Input_Seeds=interval(0,0.01)  GR=0  GSR=0.5
+		 (( 1 0 0 0 0 0 )	%  Input_Seeds=interval(0,0.01)  GR=0.4  GSR=0
+		  ( 1 0 0 0 0 0 )	%  Input_Seeds=interval(0,0.01)  GR=0.4  GSR=0.1
+		  ( 1 0 0 0 0 0 ))	%  Input_Seeds=interval(0,0.01)  GR=0.4  GSR=0.5
+		 (( 1 0 0 0 0 0 )	%  Input_Seeds=interval(0,0.01)  GR=0.5  GSR=0
+		  ( 1 0 0 0 0 0 )	%  Input_Seeds=interval(0,0.01)  GR=0.5  GSR=0.1
+		  ( 1 0 0 0 0 0 )))	%  Input_Seeds=interval(0,0.01)  GR=0.5  GSR=0.5
+		((( 1 0 0 0 0 0 )	%  Input_Seeds=interval(0.01,1000)  GR=0  GSR=0
+		  ( 1 0 0 0 0 0 )	%  Input_Seeds=interval(0.01,1000)  GR=0  GSR=0.1
+		  ( 1 0 0 0 0 0 ))	%  Input_Seeds=interval(0.01,1000)  GR=0  GSR=0.5
+		 (( 1 0 0 0 0 0 )	%  Input_Seeds=interval(0.01,1000)  GR=0.4  GSR=0
+		  ( 0 1 0 0 0 0 )	%  Input_Seeds=interval(0.01,1000)  GR=0.4  GSR=0.1
+		  ( 0 0.48 0.52 0 0 0 ))	%  Input_Seeds=interval(0.01,1000)  GR=0.4  GSR=0.5
+		 (( 1 0 0 0 0 0 )	%  Input_Seeds=interval(0.01,1000)  GR=0.5  GSR=0
+		  ( 0 1 0 0 0 0 )	%  Input_Seeds=interval(0.01,1000)  GR=0.5  GSR=0.1
+		  ( 0 0.4 0.6 0 0 0 )))	%  Input_Seeds=interval(0.01,1000)  GR=0.5  GSR=0.5
+		((( 1 0 0 0 0 0 )	%  Input_Seeds=interval(1000,3000)  GR=0  GSR=0
+		  ( 1 0 0 0 0 0 )	%  Input_Seeds=interval(1000,3000)  GR=0  GSR=0.1
+		  ( 1 0 0 0 0 0 ))	%  Input_Seeds=interval(1000,3000)  GR=0  GSR=0.5
+		 (( 1 0 0 0 0 0 )	%  Input_Seeds=interval(1000,3000)  GR=0.4  GSR=0
+		  ( 0 0.76 0.24 0 0 0 )	%  Input_Seeds=interval(1000,3000)  GR=0.4  GSR=0.1
+		  ( 0 0 0.12 0.64 0.24 0 ))	%  Input_Seeds=interval(1000,3000)  GR=0.4  GSR=0.5
+		 (( 1 0 0 0 0 0 )	%  Input_Seeds=interval(1000,3000)  GR=0.5  GSR=0
+		  ( 0 0.48 0.52 0 0 0 )	%  Input_Seeds=interval(1000,3000)  GR=0.5  GSR=0.1
+		  ( 0 0 0 0.48 0.52 0 )))	%  Input_Seeds=interval(1000,3000)  GR=0.5  GSR=0.5
+		((( 1 0 0 0 0 0 )	%  Input_Seeds=interval(3000,12000)  GR=0  GSR=0
+		  ( 1 0 0 0 0 0 )	%  Input_Seeds=interval(3000,12000)  GR=0  GSR=0.1
+		  ( 1 0 0 0 0 0 ))	%  Input_Seeds=interval(3000,12000)  GR=0  GSR=0.5
+		 (( 1 0 0 0 0 0 )	%  Input_Seeds=interval(3000,12000)  GR=0.4  GSR=0
+		  ( 0 0 0.36 0.64 0 0 )	%  Input_Seeds=interval(3000,12000)  GR=0.4  GSR=0.1
+		  ( 0 0 0 0 0.24 0.76 ))	%  Input_Seeds=interval(3000,12000)  GR=0.4  GSR=0.5
+		 (( 1 0 0 0 0 0 )	%  Input_Seeds=interval(3000,12000)  GR=0.5  GSR=0
+		  ( 0 0 0.24 0.52 0.24 0 )	%  Input_Seeds=interval(3000,12000)  GR=0.5  GSR=0.1
+		  ( 0 0 0 0 0.12 0.88 )))	%  Input_Seeds=interval(3000,12000)  GR=0.5  GSR=0.5
+		((( 1 0 0 0 0 0 )	%  Input_Seeds=interval(12000,25000)  GR=0  GSR=0
+		  ( 1 0 0 0 0 0 )	%  Input_Seeds=interval(12000,25000)  GR=0  GSR=0.1
+		  ( 1 0 0 0 0 0 ))	%  Input_Seeds=interval(12000,25000)  GR=0  GSR=0.5
+		 (( 1 0 0 0 0 0 )	%  Input_Seeds=interval(12000,25000)  GR=0.4  GSR=0
+		  ( 0 0 0 0.04 0.96 0 )	%  Input_Seeds=interval(12000,25000)  GR=0.4  GSR=0.1
+		  ( 0 0 0 0 0 1 ))	%  Input_Seeds=interval(12000,25000)  GR=0.4  GSR=0.5
+		 (( 1 0 0 0 0 0 )	%  Input_Seeds=interval(12000,25000)  GR=0.5  GSR=0
+		  ( 0 0 0 0 0.6 0.4 )	%  Input_Seeds=interval(12000,25000)  GR=0.5  GSR=0.1
+		  ( 0 0 0 0 0 1 )))	%  Input_Seeds=interval(12000,25000)  GR=0.5  GSR=0.5
+		((( 1 0 0 0 0 0 )	%  Input_Seeds=interval(25000,50000)  GR=0  GSR=0
+		  ( 1 0 0 0 0 0 )	%  Input_Seeds=interval(25000,50000)  GR=0  GSR=0.1
+		  ( 1 0 0 0 0 0 ))	%  Input_Seeds=interval(25000,50000)  GR=0  GSR=0.5
+		 (( 1 0 0 0 0 0 )	%  Input_Seeds=interval(25000,50000)  GR=0.4  GSR=0
+		  ( 0 0 0 0 0 1 )	%  Input_Seeds=interval(25000,50000)  GR=0.4  GSR=0.1
+		  ( 0 0 0 0 0 1 ))	%  Input_Seeds=interval(25000,50000)  GR=0.4  GSR=0.5
+		 (( 1 0 0 0 0 0 )	%  Input_Seeds=interval(25000,50000)  GR=0.5  GSR=0
+		  ( 0 0 0 0 0 1 )	%  Input_Seeds=interval(25000,50000)  GR=0.5  GSR=0.1
+		  ( 0 0 0 0 0 1 ))));	%  Input_Seeds=interval(25000,50000)  GR=0.5  GSR=0.5
+    }
+
+    potential (SP | Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( 50,
+			5000,
+			0,
+			0 );
+    }
+
+    potential (GR | Season)
+    {
+	model_nodes = (Season);
+	model_data  = ( 0,
+			0,
+			0.4,
+			0.5 );
+    }
+
+    potential (GSR | CCondS)
+    {
+	model_nodes = (CCondS);
+	model_data  = ( 0.5,
+			0.1,
+			0 );
+    }
+
+    potential (SSR)
+    {
+	data = ( 1 );
+    }
+
+    potential (CCondBAC | NL CSumIndex)
+    {
+	model_nodes = (NL);
+	model_data  = ( if (CSumIndex > 3, "Unfavourable", if (CSumIndex < 3, "Favourable", "Neutral")),
+			if (CSumIndex > 2, "Unfavourable", if (CSumIndex < 2, "Favourable", "Neutral")),
+			if (CSumIndex > 2, "Unfavourable", if (CSumIndex < 2, "Favourable", "Neutral")) );
+	data = ((( 1 0 0 )	%  NL=Highly Enriched  CSumIndex=1
+		 ( 1 0 0 )	%  NL=Highly Enriched  CSumIndex=2
+		 ( 0 1 0 )	%  NL=Highly Enriched  CSumIndex=3
+		 ( 0 0 1 )	%  NL=Highly Enriched  CSumIndex=4
+		 ( 0 0 1 ))	%  NL=Highly Enriched  CSumIndex=5
+		(( 1 0 0 )	%  NL=Moderately Enriched  CSumIndex=1
+		 ( 0 1 0 )	%  NL=Moderately Enriched  CSumIndex=2
+		 ( 0 0 1 )	%  NL=Moderately Enriched  CSumIndex=3
+		 ( 0 0 1 )	%  NL=Moderately Enriched  CSumIndex=4
+		 ( 0 0 1 ))	%  NL=Moderately Enriched  CSumIndex=5
+		(( 1 0 0 )	%  NL=Natural  CSumIndex=1
+		 ( 0 1 0 )	%  NL=Natural  CSumIndex=2
+		 ( 0 0 1 )	%  NL=Natural  CSumIndex=3
+		 ( 0 0 1 )	%  NL=Natural  CSumIndex=4
+		 ( 0 0 1 )));	%  NL=Natural  CSumIndex=5
+    }
+
+    potential (CCondS | NL CSumIndex)
+    {
+	model_nodes = (NL);
+	model_data  = ( if (CSumIndex > 3, "Unfavourable", if (CSumIndex < 3, "Favourable", "Neutral")),
+			if (CSumIndex > 2, "Unfavourable", if (CSumIndex < 2, "Favourable", "Neutral")),
+			if (CSumIndex > 1, "Unfavourable", if (CSumIndex < 1, "Favourable", "Neutral")) );
+    }
+
+    potential (NL)
+    {
+	data = ( 1 1 1 );
+    }
+
+    potential (Input_Seeds)
+    {
+	data = ( 1 1 1 1 1 1 );
+    }
+
+    potential (CSumIndex | CompSum)
+    {
+	model_nodes = (CompSum);
+	model_data  = ( 5,
+			4,
+			3,
+			2,
+			1 );
+    }
+
+    potential (CompSum)
+    {
+	data = ( 1 1 1 1 1 );
+    }
+
+    potential (SI | Season)
+    {
+	data = (( 1 0 )	%  Season=Spring
+		( 5 95 )	%  Season=Summer
+		( 1 0 )	%  Season=Autumn
+		( 1 0 ));	%  Season=Winter
+    }
+} % class ExoticAnnualNatural

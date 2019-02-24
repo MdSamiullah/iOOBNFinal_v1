@@ -1,0 +1,887 @@
+Using model for C3PHCCH to generate a conditional probability table
+(0,1,3): 0.0256 (min=0, max=1)
+(0,1,4): 0.9744 (min=0, max=1)
+(1,0,2): 0.9744 (min=0, max=1)
+(1,0,3): 0.0256 (min=0, max=1)
+(1,1,2): 0.4416 (min=0, max=1)
+(1,1,3): 0.1168 (min=0, max=1)
+(1,1,4): 0.4416 (min=0, max=1)
+(1,2,4): 0.176 (min=0, max=1)
+(1,2,5): 0.824 (min=0, max=1)
+(1,3,5): 0.088 (min=0, max=1)
+(1,3,6): 0.912 (min=0, max=1)
+(1,4,6): 0.0512 (min=0, max=1)
+(1,4,7): 0.9488 (min=0, max=1)
+(2,0,1): 0.976 (min=0, max=1)
+(2,0,2): 0.024 (min=0, max=1)
+(2,1,1): 0.472 (min=0, max=1)
+(2,1,2): 0.5264 (min=0, max=1)
+(2,1,3): 0.0016 (min=0, max=1)
+(2,2,2): 0.1472 (min=0, max=1)
+(2,2,3): 0.04 (min=0, max=1)
+(2,2,4): 0.3104 (min=0, max=1)
+(2,2,5): 0.5024 (min=0, max=1)
+(2,3,5): 0.2496 (min=0, max=1)
+(2,3,6): 0.7504 (min=0, max=1)
+(2,4,6): 0.152 (min=0, max=1)
+(2,4,7): 0.848 (min=0, max=1)
+(2,5,7): 0.016 (min=0, max=1)
+(2,5,8): 0.984 (min=0, max=1)
+(3,1,0): 0.824 (min=0, max=1)
+(3,1,1): 0.176 (min=0, max=1)
+(3,2,0): 0.2176 (min=0, max=1)
+(3,2,1): 0.2656 (min=0, max=1)
+(3,2,2): 0.272 (min=0, max=1)
+(3,2,3): 0.0272 (min=0, max=1)
+(3,2,4): 0.16 (min=0, max=1)
+(3,2,5): 0.0576 (min=0, max=1)
+(3,3,2): 0.0256 (min=0, max=1)
+(3,3,3): 0.0064 (min=0, max=1)
+(3,3,4): 0.0832 (min=0, max=1)
+(3,3,5): 0.4752 (min=0, max=1)
+(3,3,6): 0.4096 (min=0, max=1)
+(3,4,6): 0.3488 (min=0, max=1)
+(3,4,7): 0.6512 (min=0, max=1)
+(3,5,7): 0.0432 (min=0, max=1)
+(3,5,8): 0.9568 (min=0, max=1)
+Using model for C3PHCDR to generate a conditional probability table
+Using model for C3PCGR to generate a conditional probability table
+Using model for C3PHBCH to generate a conditional probability table
+(0,0,2): 0.472 (min=0, max=1)
+(0,0,3): 0.528 (min=0, max=1)
+(1,0,2): 0.1056 (min=0, max=1)
+(1,0,3): 0.7648 (min=0, max=1)
+(1,0,4): 0.1296 (min=0, max=1)
+(1,1,2): 0.8704 (min=0, max=1)
+(1,1,3): 0.1296 (min=0, max=1)
+(1,2,1): 0.824 (min=0, max=1)
+(1,2,2): 0.176 (min=0, max=1)
+(1,3,0): 0.8944 (min=0, max=1)
+(1,3,1): 0.1056 (min=0, max=1)
+(2,0,3): 0.0288 (min=0, max=1)
+(2,0,4): 0.9712 (min=0, max=1)
+(2,1,2): 0.0288 (min=0, max=1)
+(2,1,3): 0.2176 (min=0, max=1)
+(2,1,4): 0.7536 (min=0, max=1)
+(2,2,1): 0.1664 (min=0, max=1)
+(2,2,2): 0.328 (min=0, max=1)
+(2,2,3): 0.2416 (min=0, max=1)
+(2,2,4): 0.264 (min=0, max=1)
+(2,3,0): 0.4 (min=0, max=1)
+(2,3,1): 0.4992 (min=0, max=1)
+(2,3,2): 0.0944 (min=0, max=1)
+(2,3,3): 0.0064 (min=0, max=1)
+(3,0,4): 0.048 (min=0, max=1)
+(3,0,5): 0.952 (min=0, max=1)
+(3,1,4): 0.152 (min=0, max=1)
+(3,1,5): 0.848 (min=0, max=1)
+(3,2,3): 0.0032 (min=0, max=1)
+(3,2,4): 0.3456 (min=0, max=1)
+(3,2,5): 0.6512 (min=0, max=1)
+(3,3,1): 0.0896 (min=0, max=1)
+(3,3,2): 0.104 (min=0, max=1)
+(3,3,3): 0.096 (min=0, max=1)
+(3,3,4): 0.4608 (min=0, max=1)
+(3,3,5): 0.2496 (min=0, max=1)
+Using model for C3PHBGR to generate a conditional probability table
+Using model for C3PHBDR to generate a conditional probability table
+Using model for C4PSCGR to generate a conditional probability table
+Using model for C3PSCDR to generate a conditional probability table
+Using model for C3PSCGR to generate a conditional probability table
+Using model for C3PSBGR to generate a conditional probability table
+Using model for C4PMCGR to generate a conditional probability table
+Using model for C3PMBGR to generate a conditional probability table
+Using model for C3PMCGR to generate a conditional probability table
+Using model for C4PLCGR to generate a conditional probability table
+Using model for C3PLCDR to generate a conditional probability table
+Using model for C3PLCGR to generate a conditional probability table
+Using model for C3PLBDR to generate a conditional probability table
+Sun Nov 04 20:33:49 2018
+
+
+Moral links:
+
+    Marrying C3PCGR and C3PHCDR
+    Marrying C3PHBDR and C3PHBGR
+    Marrying C4PSCGR and C4PSCDR
+    Marrying C4PSBGR and C4PSBDR
+    Marrying C3PSCGR and C3PSCDR
+    Marrying C3PSBGR and C3PSBDR
+    Marrying C4PMCGR and C4PMCDR
+    Marrying C4PMBDR and C4PMBGR
+    Marrying C3PMBDR and C3PMBGR
+    Marrying C3PMCDR and C3PMCGR
+    Marrying C4PLCGR and C4PLCDR
+    Marrying C4PLBGR and C4PLBDR
+    Marrying C3PLCGR and C3PLCDR
+    Marrying C3PLBGR and C3PLBDR
+    Marrying CCond and Season
+
+
+Triangulating prime component with 1 member:
+    DDRL
+This component is a clique of cost 3
+
+Triangulating prime component with 1 member:
+    DDRH
+This component is a clique of cost 3
+
+Triangulating prime component with 1 member:
+    DDRM
+This component is a clique of cost 3
+
+Triangulating prime component with 3 members:
+    C3PLBCR, C3PLBDR, C3PLBGR
+This component is a clique of cost 96
+
+Triangulating prime component with 3 members:
+    C3PLCCR, C3PLCDR, C3PLCGR
+This component is a clique of cost 216
+
+Triangulating prime component with 3 members:
+    C4PLBCR, C4PLBDR, C4PLBGR
+This component is a clique of cost 96
+
+Triangulating prime component with 3 members:
+    C4PLCCR, C4PLCDR, C4PLCGR
+This component is a clique of cost 216
+
+Triangulating prime component with 3 members:
+    C3PMCGR, C3PMCDR, C3PMCCR
+This component is a clique of cost 216
+
+Triangulating prime component with 3 members:
+    C3PMBGR, C3PMBDR, C3PMBCR
+This component is a clique of cost 96
+
+Triangulating prime component with 3 members:
+    C4PMBCR, C4PMBGR, C4PMBDR
+This component is a clique of cost 96
+
+Triangulating prime component with 3 members:
+    C4PMCCR, C4PMCDR, C4PMCGR
+This component is a clique of cost 216
+
+Triangulating prime component with 3 members:
+    C3PSBDR, C3PSBCR, C3PSBGR
+This component is a clique of cost 96
+
+Triangulating prime component with 3 members:
+    C3PSCCR, C3PSCDR, C3PSCGR
+This component is a clique of cost 216
+
+Triangulating prime component with 3 members:
+    C4PSBCR, C4PSBDR, C4PSBGR
+This component is a clique of cost 96
+
+Triangulating prime component with 3 members:
+    C4PSCCR, C4PSCDR, C4PSCGR
+This component is a clique of cost 216
+
+Triangulating prime component with 3 members:
+    C3PHBCH, C3PHBGR, C3PHBDR
+This component is a clique of cost 96
+
+Triangulating prime component with 3 members:
+    C3PHCCH, C3PHCDR, C3PCGR
+This component is a clique of cost 216
+
+Triangulating prime component with 4 members:
+    C3PLBDR, C3PLBGR, Season, CCond
+This component is a clique of cost 192
+
+Triangulating prime component with 4 members:
+    C3PLCDR, C3PLCGR, Season, CCond
+This component is a clique of cost 288
+
+Triangulating prime component with 4 members:
+    C4PLBDR, C4PLBGR, Season, CCond
+This component is a clique of cost 192
+
+Triangulating prime component with 4 members:
+    C4PLCDR, C4PLCGR, Season, CCond
+This component is a clique of cost 288
+
+Triangulating prime component with 4 members:
+    C3PMCGR, C3PMCDR, Season, CCond
+This component is a clique of cost 288
+
+Triangulating prime component with 4 members:
+    C3PMBGR, C3PMBDR, Season, CCond
+This component is a clique of cost 192
+
+Triangulating prime component with 4 members:
+    C4PMBGR, C4PMBDR, Season, CCond
+This component is a clique of cost 192
+
+Triangulating prime component with 4 members:
+    C4PMCDR, C4PMCGR, Season, CCond
+This component is a clique of cost 288
+
+Triangulating prime component with 4 members:
+    C3PSBDR, C3PSBGR, Season, CCond
+This component is a clique of cost 192
+
+Triangulating prime component with 4 members:
+    C3PSCDR, C3PSCGR, Season, CCond
+This component is a clique of cost 288
+
+Triangulating prime component with 4 members:
+    C4PSBDR, C4PSBGR, Season, CCond
+This component is a clique of cost 192
+
+Triangulating prime component with 4 members:
+    C4PSCDR, C4PSCGR, Season, CCond
+This component is a clique of cost 288
+
+Triangulating prime component with 4 members:
+    C3PHBGR, C3PHBDR, Season, CCond
+This component is a clique of cost 192
+
+Triangulating prime component with 4 members:
+    C3PHCDR, C3PCGR, Season, CCond
+This component is a clique of cost 288
+
+
+Total cost of triangulation for all prime components is 5553
+
+
+Elimination sequence:
+
+    C3PLCCR
+    C3PLCGR
+    C3PLCDR
+    C4PLCCR
+    C4PLCGR
+    C4PLCDR
+    C3PMCCR
+    C3PMCDR
+    C3PMCGR
+    C4PMCCR
+    C4PMCGR
+    C4PMCDR
+    C3PSCCR
+    C3PSCGR
+    C3PSCDR
+    C4PSCCR
+    C4PSCGR
+    C4PSCDR
+    C3PHCCH
+    C3PCGR
+    C3PHCDR
+    C3PLBCR
+    C3PLBGR
+    C3PLBDR
+    C4PLBCR
+    C4PLBGR
+    C4PLBDR
+    C3PMBCR
+    C3PMBDR
+    C3PMBGR
+    C4PMBCR
+    C4PMBDR
+    C4PMBGR
+    C3PSBCR
+    C3PSBGR
+    C3PSBDR
+    C4PSBCR
+    C4PSBGR
+    C4PSBDR
+    CCond
+    Season
+    C3PHBCH
+    C3PHBDR
+    C3PHBGR
+    DDRL
+    DDRH
+    DDRM
+
+
+Cliques:
+
+Clique 31, 3 members, table size = 96:
+    C3PHBGR, C3PHBDR, C3PHBCH
+
+Clique 30, 4 members, table size = 192:
+    C3PHBGR, C3PHBDR, Season, CCond
+
+Clique 29, 4 members, table size = 192:
+    Season, CCond, C4PSBDR, C4PSBGR
+
+Clique 28, 3 members, table size = 96:
+    C4PSBDR, C4PSBGR, C4PSBCR
+
+Clique 27, 4 members, table size = 192:
+    Season, CCond, C3PSBDR, C3PSBGR
+
+Clique 26, 3 members, table size = 96:
+    C3PSBDR, C3PSBGR, C3PSBCR
+
+Clique 25, 4 members, table size = 192:
+    Season, CCond, C4PMBGR, C4PMBDR
+
+Clique 24, 3 members, table size = 96:
+    C4PMBGR, C4PMBDR, C4PMBCR
+
+Clique 23, 4 members, table size = 192:
+    Season, CCond, C3PMBGR, C3PMBDR
+
+Clique 22, 3 members, table size = 96:
+    C3PMBGR, C3PMBDR, C3PMBCR
+
+Clique 21, 4 members, table size = 192:
+    Season, CCond, C4PLBDR, C4PLBGR
+
+Clique 20, 3 members, table size = 96:
+    C4PLBDR, C4PLBGR, C4PLBCR
+
+Clique 19, 4 members, table size = 192:
+    Season, CCond, C3PLBDR, C3PLBGR
+
+Clique 18, 3 members, table size = 96:
+    C3PLBDR, C3PLBGR, C3PLBCR
+
+Clique 17, 4 members, table size = 288:
+    Season, CCond, C3PHCDR, C3PCGR
+
+Clique 16, 3 members, table size = 216:
+    C3PHCDR, C3PCGR, C3PHCCH
+
+Clique 15, 4 members, table size = 288:
+    Season, CCond, C4PSCDR, C4PSCGR
+
+Clique 14, 3 members, table size = 216:
+    C4PSCDR, C4PSCGR, C4PSCCR
+
+Clique 13, 4 members, table size = 288:
+    Season, CCond, C3PSCDR, C3PSCGR
+
+Clique 12, 3 members, table size = 216:
+    C3PSCDR, C3PSCGR, C3PSCCR
+
+Clique 11, 4 members, table size = 288:
+    Season, CCond, C4PMCDR, C4PMCGR
+
+Clique 10, 3 members, table size = 216:
+    C4PMCDR, C4PMCGR, C4PMCCR
+
+Clique 9, 4 members, table size = 288:
+    Season, CCond, C3PMCGR, C3PMCDR
+
+Clique 8, 3 members, table size = 216:
+    C3PMCGR, C3PMCDR, C3PMCCR
+
+Clique 7, 4 members, table size = 288:
+    Season, CCond, C4PLCDR, C4PLCGR
+
+Clique 6, 3 members, table size = 216:
+    C4PLCDR, C4PLCGR, C4PLCCR
+
+Clique 5, 4 members, table size = 288:
+    Season, CCond, C3PLCDR, C3PLCGR
+
+Clique 4, 3 members, table size = 216:
+    C3PLCDR, C3PLCGR, C3PLCCR
+
+Clique 3, 1 member, table size = 3:
+    DDRM
+
+Clique 2, 1 member, table size = 3:
+    DDRH
+
+Clique 1, 1 member, table size = 3:
+    DDRL
+
+Total clique table size: 5553
+
+
+The junction forest:
+
+Creating junction tree with clique 31 as root ...
+
+Cliques 30 and 31 linked, separator has 2 members and table size = 16:
+    C3PHBGR, C3PHBDR
+
+Cliques 29 and 30 linked, separator has 2 members and table size = 12:
+    Season, CCond
+
+Cliques 28 and 29 linked, separator has 2 members and table size = 16:
+    C4PSBDR, C4PSBGR
+
+Cliques 27 and 30 linked, separator has 2 members and table size = 12:
+    Season, CCond
+
+Cliques 26 and 27 linked, separator has 2 members and table size = 16:
+    C3PSBDR, C3PSBGR
+
+Cliques 25 and 30 linked, separator has 2 members and table size = 12:
+    Season, CCond
+
+Cliques 24 and 25 linked, separator has 2 members and table size = 16:
+    C4PMBGR, C4PMBDR
+
+Cliques 23 and 30 linked, separator has 2 members and table size = 12:
+    Season, CCond
+
+Cliques 22 and 23 linked, separator has 2 members and table size = 16:
+    C3PMBGR, C3PMBDR
+
+Cliques 21 and 30 linked, separator has 2 members and table size = 12:
+    Season, CCond
+
+Cliques 20 and 21 linked, separator has 2 members and table size = 16:
+    C4PLBDR, C4PLBGR
+
+Cliques 19 and 30 linked, separator has 2 members and table size = 12:
+    Season, CCond
+
+Cliques 18 and 19 linked, separator has 2 members and table size = 16:
+    C3PLBDR, C3PLBGR
+
+Cliques 17 and 30 linked, separator has 2 members and table size = 12:
+    Season, CCond
+
+Cliques 16 and 17 linked, separator has 2 members and table size = 24:
+    C3PHCDR, C3PCGR
+
+Cliques 15 and 30 linked, separator has 2 members and table size = 12:
+    Season, CCond
+
+Cliques 14 and 15 linked, separator has 2 members and table size = 24:
+    C4PSCDR, C4PSCGR
+
+Cliques 13 and 30 linked, separator has 2 members and table size = 12:
+    Season, CCond
+
+Cliques 12 and 13 linked, separator has 2 members and table size = 24:
+    C3PSCDR, C3PSCGR
+
+Cliques 11 and 30 linked, separator has 2 members and table size = 12:
+    Season, CCond
+
+Cliques 10 and 11 linked, separator has 2 members and table size = 24:
+    C4PMCDR, C4PMCGR
+
+Cliques 9 and 30 linked, separator has 2 members and table size = 12:
+    Season, CCond
+
+Cliques 8 and 9 linked, separator has 2 members and table size = 24:
+    C3PMCGR, C3PMCDR
+
+Cliques 7 and 30 linked, separator has 2 members and table size = 12:
+    Season, CCond
+
+Cliques 6 and 7 linked, separator has 2 members and table size = 24:
+    C4PLCDR, C4PLCGR
+
+Cliques 5 and 30 linked, separator has 2 members and table size = 12:
+    Season, CCond
+
+Cliques 4 and 5 linked, separator has 2 members and table size = 24:
+    C3PLCDR, C3PLCGR
+
+Creating junction tree with clique 3 as root ...
+
+Creating junction tree with clique 2 as root ...
+
+Creating junction tree with clique 1 as root ...
+
+
+Assignment of potentials to cliques:
+
+    Node C3PHCCH assigned to clique 16
+    Node C3PHCDR assigned to clique 17
+    Node C3PCGR assigned to clique 17
+    Node C3PHBCH assigned to clique 31
+    Node C3PHBGR assigned to clique 30
+    Node C3PHBDR assigned to clique 30
+    Node C4PSCCR assigned to clique 14
+    Node C4PSCDR assigned to clique 15
+    Node C4PSCGR assigned to clique 15
+    Node C4PSBCR assigned to clique 28
+    Node C4PSBDR assigned to clique 29
+    Node C4PSBGR assigned to clique 29
+    Node C3PSCCR assigned to clique 12
+    Node C3PSCDR assigned to clique 13
+    Node C3PSCGR assigned to clique 13
+    Node C3PSBDR assigned to clique 27
+    Node C3PSBCR assigned to clique 26
+    Node C3PSBGR assigned to clique 27
+    Node C4PMBCR assigned to clique 24
+    Node C4PMCCR assigned to clique 10
+    Node C4PMCDR assigned to clique 11
+    Node C4PMBGR assigned to clique 25
+    Node C4PMCGR assigned to clique 11
+    Node C4PMBDR assigned to clique 25
+    Node C3PMBGR assigned to clique 23
+    Node C3PMBDR assigned to clique 23
+    Node C3PMCGR assigned to clique 9
+    Node C3PMCDR assigned to clique 9
+    Node C3PMBCR assigned to clique 22
+    Node C3PMCCR assigned to clique 8
+    Node DDRL assigned to clique 1
+    Node DDRM assigned to clique 3
+    Node C4PLCCR assigned to clique 6
+    Node C4PLBCR assigned to clique 20
+    Node DDRH assigned to clique 2
+    Node C3PLCCR assigned to clique 4
+    Node C3PLBCR assigned to clique 18
+    Node C4PLCDR assigned to clique 7
+    Node C4PLBDR assigned to clique 21
+    Node C4PLCGR assigned to clique 7
+    Node C4PLBGR assigned to clique 21
+    Node C3PLCDR assigned to clique 5
+    Node C3PLCGR assigned to clique 5
+    Node C3PLBDR assigned to clique 19
+    Node C3PLBGR assigned to clique 19
+    Node Season assigned to clique 30
+    Node CCond assigned to clique 30
+
+
+Checking conditional probability potentials:
+
+    No errors found
+
+
+Beliefs for chance nodes:
+
+    C3PHCCH:
+	state0   0
+	state1   0.0404064
+	0 - 1      0.358748
+	1 - 2      0.059643
+	state4   0.308698
+	state5   0.172338
+	state6   0.0429299
+	state7   0.0159204
+	state8   0.00131558
+
+    C3PHCDR:
+	0 - 1      0.263325
+	1 - 2      0.659938
+	state2   0.0767374
+	state3   0
+
+    C3PCGR:
+	0 - 1      0.169797
+	1 - 2      0.581116
+	state2   0.187476
+	state3   0.0440626
+	state4   0.0162332
+	state5   0.00131558
+
+    C3PHBCH:
+	state0   0
+	state1   0.00220925
+	state2   0.263684
+	state3   0.590338
+	state4   0.143514
+	state5   0.000254664
+
+    C3PHBGR:
+	state0   0.224015
+	state1   0.710004
+	state2   0.0657136
+	state3   0.000267505
+
+    C3PHBDR:
+	state0   0.881031
+	state1   0.116388
+	state2   0.00258103
+	state3   0
+
+    C4PSCCR:
+	state0   0.167647
+	state1   0.07414
+	0 - 1      0.334701
+	1 - 2      0.0444978
+	state4   0.116
+	state5   0.133537
+	state6   0.0784323
+	state7   0.0334501
+	state8   0.0175946
+
+    C4PSCDR:
+	0 - 1      0.0817135
+	1 - 2      0.610182
+	state2   0.0674908
+	state3   0.240614
+
+    C4PSCGR:
+	0 - 1      0.288674
+	1 - 2      0.369566
+	state2   0.205319
+	state3   0.0838759
+	state4   0.034969
+	state5   0.0175949
+
+    C4PSBCR:
+	state0   0.056008
+	state1   0.149479
+	state2   0.234346
+	state3   0.357485
+	state4   0.187524
+	state5   0.0151573
+
+    C4PSBDR:
+	state0   0.691136
+	state1   0.0603472
+	state2   0.182647
+	state3   0.0658694
+
+    C4PSBGR:
+	state0   0.293321
+	state1   0.510622
+	state2   0.180132
+	state3   0.0159241
+
+    C3PSCCR:
+	state0   0.222352
+	state1   0.154453
+	0 - 1      0.173663
+	1 - 2      0.0198055
+	state4   0.12456
+	state5   0.19027
+	state6   0.0672069
+	state7   0.0301416
+	state8   0.0175484
+
+    C3PSCDR:
+	0 - 1      0.0826783
+	1 - 2      0.374787
+	state2   0.225201
+	state3   0.317333
+
+    C3PSCGR:
+	0 - 1      0.0823168
+	1 - 2      0.495674
+	state2   0.300926
+	state3   0.0720256
+	state4   0.0315092
+	state5   0.0175487
+
+    C3PSBDR:
+	state0   0.444027
+	state1   0.191071
+	state2   0.299032
+	state3   0.0658694
+
+    C3PSBCR:
+	state0   0.056008
+	state1   0.249939
+	state2   0.255058
+	state3   0.261436
+	state4   0.162403
+	state5   0.0151549
+
+    C3PSBGR:
+	state0   0.102802
+	state1   0.730647
+	state2   0.150629
+	state3   0.0159215
+
+    C4PMBCR:
+	state0   0.0565777
+	state1   0.151169
+	state2   0.0588471
+	state3   0.581492
+	state4   0.136757
+	state5   0.0151573
+
+    C4PMCCR:
+	state0   0.170343
+	state1   0.0733042
+	0 - 1      0.290693
+	1 - 2      0.09169
+	state4   0.108053
+	state5   0.135296
+	state6   0.0792869
+	state7   0.0337397
+	state8   0.0175946
+
+    C4PMCDR:
+	0 - 1      0.183985
+	1 - 2      0.507911
+	state2   0.0674908
+	state3   0.240614
+
+    C4PMBGR:
+	state0   0.353568
+	state1   0.450375
+	state2   0.180132
+	state3   0.0159241
+
+    C4PMCGR:
+	0 - 1      0.339777
+	1 - 2      0.318464
+	state2   0.205319
+	state3   0.0838759
+	state4   0.034969
+	state5   0.0175949
+
+    C4PMBDR:
+	state0   0.691136
+	state1   0.0603472
+	state2   0.182647
+	state3   0.0658694
+
+    C3PMBGR:
+	state0   0.224015
+	state1   0.609434
+	state2   0.150629
+	state3   0.0159215
+
+    C3PMBDR:
+	state0   0.444027
+	state1   0.191071
+	state2   0.299032
+	state3   0.0658694
+
+    C3PMCGR:
+	0 - 1      0.169797
+	1 - 2      0.408194
+	state2   0.300926
+	state3   0.0720256
+	state4   0.0315092
+	state5   0.0175487
+
+    C3PMCDR:
+	0 - 1      0.163216
+	1 - 2      0.294249
+	state2   0.225201
+	state3   0.317333
+
+    C3PMBCR:
+	state0   0.0565777
+	state1   0.255318
+	state2   0.160068
+	state3   0.401943
+	state4   0.110938
+	state5   0.0151549
+
+    C3PMCCR:
+	state0   0.226542
+	state1   0.16214
+	0 - 1      0.157424
+	1 - 2      0.0304361
+	state4   0.113432
+	state5   0.194017
+	state6   0.0680575
+	state7   0.030403
+	state8   0.0175484
+
+    DDRL:
+	state0   0.0786403
+	state1   0.842719
+	state2   0.0786403
+
+    DDRM:
+	state0   0.0126737
+	state1   0.974653
+	state2   0.0126737
+
+    C4PLCCR:
+	state0   0.16498
+	state1   0.0749465
+	0 - 1      0.218432
+	1 - 2      0.161785
+	state4   0.109796
+	state5   0.138351
+	state6   0.079928
+	state7   0.0341868
+	state8   0.0175946
+
+    C4PLBCR:
+	state0   0.05552
+	state1   0.147799
+	state2   0.0591513
+	state3   0.585615
+	state4   0.136757
+	state5   0.0151573
+
+    DDRH:
+	state0   0.0206134
+	state1   0.958773
+	state2   0.0206134
+
+    C3PLCCR:
+	state0   0.217612
+	state1   0.144376
+	0 - 1      0.147763
+	1 - 2      0.0725386
+	state4   0.103197
+	state5   0.197652
+	state6   0.0685067
+	state7   0.030806
+	state8   0.0175484
+
+    C3PLBCR:
+	state0   0.0555201
+	state1   0.244064
+	state2   0.141502
+	state3   0.432821
+	state4   0.110938
+	state5   0.0151548
+
+    C4PLCDR:
+	0 - 1      0.357755
+	1 - 2      0.334141
+	state2   0.0674908
+	state3   0.240614
+
+    C4PLBDR:
+	state0   0.691136
+	state1   0.0603472
+	state2   0.182647
+	state3   0.0658694
+
+    C4PLCGR:
+	0 - 1      0.250012
+	1 - 2      0.408229
+	state2   0.205319
+	state3   0.0838759
+	state4   0.034969
+	state5   0.0175949
+
+    C4PLBGR:
+	state0   0.250012
+	state1   0.553931
+	state2   0.180132
+	state3   0.0159241
+
+    C3PLCDR:
+	0 - 1      0.263325
+	1 - 2      0.19414
+	state2   0.225201
+	state3   0.317333
+
+    C3PLCGR:
+	0 - 1      2.9712e-005
+	1 - 2      0.577961
+	state2   0.300926
+	state3   0.0720256
+	state4   0.0315092
+	state5   0.0175487
+
+    C3PLBDR:
+	state0   0.444027
+	state1   0.191071
+	state2   0.299032
+	state3   0.0658694
+
+    C3PLBGR:
+	state0   3.15065e-005
+	state1   0.833417
+	state2   0.15063
+	state3   0.0159215
+
+    Season:
+	Spring     0.25
+	Summer     0.25
+	Autumn     0.25
+	Winter     0.25
+
+    CCond:
+	Favourable 0.333333
+	Neutral    0.333333
+	Unfavourable 0.333333

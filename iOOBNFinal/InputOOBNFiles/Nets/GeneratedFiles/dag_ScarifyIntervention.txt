@@ -1,0 +1,4 @@
+DeRocked : Scarify 
+Scale : ScarifyCost 
+Scarify : ScarifyCost 
+ScarifyCost : 

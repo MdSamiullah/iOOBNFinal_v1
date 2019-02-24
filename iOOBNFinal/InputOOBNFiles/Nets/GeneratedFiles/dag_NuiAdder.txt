@@ -1,0 +1,25 @@
+Blanket_NUI : NUI01 
+Wallaby_NUI : NUI1 
+RedLeg_NUI : NUI00 
+Windmill_NUI : NUI2 
+NUI00 : 
+NUI01 : 
+NUI20 : 
+NUI21 : 
+Ruderals_NUI : NUI00 
+HardyNative_NUI : NUI21 
+Grain_NUI : NUI11 
+ExoticAnnual_NUI : NUI10 
+Spear_NUI : NUI20 
+SensitNative_NUI : NUI11 
+NUI : 
+NUI0 : 
+ST_NUI : NUI20 
+NUI1 : 
+NUI11 : 
+NUI10 : 
+NUI2 : 
+Themeda_NUI : NUI01 
+Onion_NUI : NUI10 
+BroadWeeds_NUI : NUI21 
+Needle_NUI : NUI0 
