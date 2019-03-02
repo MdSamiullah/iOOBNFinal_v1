@@ -1,0 +1,676 @@
+############## The file to be compiled : GenerateAutoOOBN\nClasses_0#nObjects_0#nStates_2#nNodes_20#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 127: warning: no potential data specified
+Parse error in line 130: warning: no potential data specified
+Parse error in line 133: warning: no potential data specified
+Parse error in line 136: warning: no potential data specified
+Parse error in line 139: warning: no potential data specified
+Parse error in line 142: warning: no potential data specified
+Parse error in line 145: warning: no potential data specified
+Parse error in line 148: warning: no potential data specified
+Parse error in line 151: warning: no potential data specified
+Parse error in line 154: warning: no potential data specified
+Parse error in line 157: warning: no potential data specified
+Parse error in line 160: warning: no potential data specified
+Parse error in line 163: warning: no potential data specified
+Parse error in line 166: warning: no potential data specified
+Parse error in line 169: warning: no potential data specified
+Parse error in line 172: warning: no potential data specified
+Parse error in line 175: warning: no potential data specified
+Parse error in line 178: warning: no potential data specified
+Parse error in line 181: warning: no potential data specified
+Parse error in line 184: warning: no potential data specified
+************************* Compilation done !!! *************************
+
+
+
+############## The file to be compiled : GenerateAutoOOBN\nClasses_0#nObjects_0#nStates_2#nNodes_20#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 127: warning: no potential data specified
+Parse error in line 130: warning: no potential data specified
+Parse error in line 133: warning: no potential data specified
+Parse error in line 136: warning: no potential data specified
+Parse error in line 139: warning: no potential data specified
+Parse error in line 142: warning: no potential data specified
+Parse error in line 145: warning: no potential data specified
+Parse error in line 148: warning: no potential data specified
+Parse error in line 151: warning: no potential data specified
+Parse error in line 154: warning: no potential data specified
+Parse error in line 157: warning: no potential data specified
+Parse error in line 160: warning: no potential data specified
+Parse error in line 163: warning: no potential data specified
+Parse error in line 166: warning: no potential data specified
+Parse error in line 169: warning: no potential data specified
+Parse error in line 172: warning: no potential data specified
+Parse error in line 175: warning: no potential data specified
+Parse error in line 178: warning: no potential data specified
+Parse error in line 181: warning: no potential data specified
+Parse error in line 184: warning: no potential data specified
+************************* Compilation done !!! *************************
+
+
+
+############## The file to be compiled : GenerateAutoOOBN\nClasses_0#nObjects_0#nStates_2#nNodes_20#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 127: warning: no potential data specified
+Parse error in line 130: warning: no potential data specified
+Parse error in line 133: warning: no potential data specified
+Parse error in line 136: warning: no potential data specified
+Parse error in line 139: warning: no potential data specified
+Parse error in line 142: warning: no potential data specified
+Parse error in line 145: warning: no potential data specified
+Parse error in line 148: warning: no potential data specified
+Parse error in line 151: warning: no potential data specified
+Parse error in line 154: warning: no potential data specified
+Parse error in line 157: warning: no potential data specified
+Parse error in line 160: warning: no potential data specified
+Parse error in line 163: warning: no potential data specified
+Parse error in line 166: warning: no potential data specified
+Parse error in line 169: warning: no potential data specified
+Parse error in line 172: warning: no potential data specified
+Parse error in line 175: warning: no potential data specified
+Parse error in line 178: warning: no potential data specified
+Parse error in line 181: warning: no potential data specified
+Parse error in line 184: warning: no potential data specified
+************************* Compilation done !!! *************************
+
+
+
+############## The file to be compiled : GenerateAutoOOBN\nClasses_0#nObjects_0#nStates_2#nNodes_20#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 127: warning: no potential data specified
+Parse error in line 130: warning: no potential data specified
+Parse error in line 133: warning: no potential data specified
+Parse error in line 136: warning: no potential data specified
+Parse error in line 139: warning: no potential data specified
+Parse error in line 142: warning: no potential data specified
+Parse error in line 145: warning: no potential data specified
+Parse error in line 148: warning: no potential data specified
+Parse error in line 151: warning: no potential data specified
+Parse error in line 154: warning: no potential data specified
+Parse error in line 157: warning: no potential data specified
+Parse error in line 160: warning: no potential data specified
+Parse error in line 163: warning: no potential data specified
+Parse error in line 166: warning: no potential data specified
+Parse error in line 169: warning: no potential data specified
+Parse error in line 172: warning: no potential data specified
+Parse error in line 175: warning: no potential data specified
+Parse error in line 178: warning: no potential data specified
+Parse error in line 181: warning: no potential data specified
+Parse error in line 184: warning: no potential data specified
+************************* Compilation done !!! *************************
+
+
+
+############## The file to be compiled : GenerateAutoOOBN\nClasses_0#nObjects_0#nStates_2#nNodes_20#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 127: warning: no potential data specified
+Parse error in line 130: warning: no potential data specified
+Parse error in line 133: warning: no potential data specified
+Parse error in line 136: warning: no potential data specified
+Parse error in line 139: warning: no potential data specified
+Parse error in line 142: warning: no potential data specified
+Parse error in line 145: warning: no potential data specified
+Parse error in line 148: warning: no potential data specified
+Parse error in line 151: warning: no potential data specified
+Parse error in line 154: warning: no potential data specified
+Parse error in line 157: warning: no potential data specified
+Parse error in line 160: warning: no potential data specified
+Parse error in line 163: warning: no potential data specified
+Parse error in line 166: warning: no potential data specified
+Parse error in line 169: warning: no potential data specified
+Parse error in line 172: warning: no potential data specified
+Parse error in line 175: warning: no potential data specified
+Parse error in line 178: warning: no potential data specified
+Parse error in line 181: warning: no potential data specified
+Parse error in line 184: warning: no potential data specified
+************************* Compilation done !!! *************************
+
+
+
+		-------------------------------------------------------------
+		|                      OOBN Property                        |
+		-------------------------------------------------------------
+		|                    Property                   |    Info   |
+		-------------------------------------------------------------
+		|           Number of Nodes (each class)        |     20    |
+		|           Number of Instanciated Class        |     0     |
+		|           Number of Objects (per class)       |     0     |
+		|           Number of states (per node)         |     2     |
+		|           Average parent (per node)           |     2     |
+		-------------------------------------------------------------
+
+
+		-----------------------------------------------------------
+		|                   Hugin Time Analysis                   |
+		-----------------------------------------------------------
+		|                    Event                   |  Time (ms) |
+		-----------------------------------------------------------
+		|Pre-Processing                              |     unknown|
+		|Compilation                                 |          21|
+		-----------------------------------------------------------
+		|Total Hugin                                 |         21+|
+		-----------------------------------------------------------
+
+
+		-----------------------------------------------------------
+		|                   SIIC Time Analysis                    |
+		-----------------------------------------------------------
+		|                    Event                   |  Time (ms) |
+		-----------------------------------------------------------
+		|Pre-Processing                              |          18|
+		|JF Creation                                 |           3|
+		|JT connection                               |           0|
+		|Connection Sorting                          |           0|
+		|Compilation                                 |           3|
+		|Post Prunning                               |           0|
+		-----------------------------------------------------------
+		|Total SIIC                                  |          25|
+		-----------------------------------------------------------
+
+(){}<>{}()20		2			2		0		0		21		25		18
+
+############## The file to be compiled : GenerateAutoOOBN\nClasses_1#nObjects_1#nStates_2#nNodes_20#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 127: warning: no potential data specified
+Parse error in line 130: warning: no potential data specified
+Parse error in line 133: warning: no potential data specified
+Parse error in line 136: warning: no potential data specified
+Parse error in line 139: warning: no potential data specified
+Parse error in line 142: warning: no potential data specified
+Parse error in line 145: warning: no potential data specified
+Parse error in line 148: warning: no potential data specified
+Parse error in line 151: warning: no potential data specified
+Parse error in line 154: warning: no potential data specified
+Parse error in line 157: warning: no potential data specified
+Parse error in line 160: warning: no potential data specified
+Parse error in line 163: warning: no potential data specified
+Parse error in line 166: warning: no potential data specified
+Parse error in line 169: warning: no potential data specified
+Parse error in line 172: warning: no potential data specified
+Parse error in line 175: warning: no potential data specified
+Parse error in line 178: warning: no potential data specified
+Parse error in line 181: warning: no potential data specified
+Parse error in line 184: warning: no potential data specified
+Parse error in line 131: warning: no potential data specified
+Parse error in line 134: warning: no potential data specified
+Parse error in line 137: warning: no potential data specified
+Parse error in line 140: warning: no potential data specified
+Parse error in line 143: warning: no potential data specified
+Parse error in line 146: warning: no potential data specified
+Parse error in line 149: warning: no potential data specified
+Parse error in line 152: warning: no potential data specified
+Parse error in line 155: warning: no potential data specified
+Parse error in line 158: warning: no potential data specified
+Parse error in line 161: warning: no potential data specified
+Parse error in line 164: warning: no potential data specified
+Parse error in line 167: warning: no potential data specified
+Parse error in line 170: warning: no potential data specified
+Parse error in line 173: warning: no potential data specified
+Parse error in line 176: warning: no potential data specified
+Parse error in line 179: warning: no potential data specified
+Parse error in line 182: warning: no potential data specified
+Parse error in line 185: warning: no potential data specified
+Parse error in line 188: warning: no potential data specified
+Parse error in line 149: warning: no potential data specified
+Parse error in line 151: warning: no potential data specified
+Parse error in line 153: warning: no potential data specified
+Parse error in line 155: warning: no potential data specified
+Parse error in line 157: warning: no potential data specified
+Parse error in line 159: warning: no potential data specified
+Parse error in line 161: warning: no potential data specified
+Parse error in line 163: warning: no potential data specified
+Parse error in line 165: warning: no potential data specified
+Parse error in line 167: warning: no potential data specified
+Parse error in line 169: warning: no potential data specified
+Parse error in line 171: warning: no potential data specified
+Parse error in line 173: warning: no potential data specified
+Parse error in line 175: warning: no potential data specified
+Parse error in line 177: warning: no potential data specified
+Parse error in line 179: warning: no potential data specified
+Parse error in line 181: warning: no potential data specified
+Parse error in line 183: warning: no potential data specified
+Parse error in line 185: warning: no potential data specified
+Parse error in line 187: warning: no potential data specified
+************************* Compilation done !!! *************************
+
+
+
+############## The file to be compiled : GenerateAutoOOBN\nClasses_1#nObjects_1#nStates_2#nNodes_20#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 127: warning: no potential data specified
+Parse error in line 130: warning: no potential data specified
+Parse error in line 133: warning: no potential data specified
+Parse error in line 136: warning: no potential data specified
+Parse error in line 139: warning: no potential data specified
+Parse error in line 142: warning: no potential data specified
+Parse error in line 145: warning: no potential data specified
+Parse error in line 148: warning: no potential data specified
+Parse error in line 151: warning: no potential data specified
+Parse error in line 154: warning: no potential data specified
+Parse error in line 157: warning: no potential data specified
+Parse error in line 160: warning: no potential data specified
+Parse error in line 163: warning: no potential data specified
+Parse error in line 166: warning: no potential data specified
+Parse error in line 169: warning: no potential data specified
+Parse error in line 172: warning: no potential data specified
+Parse error in line 175: warning: no potential data specified
+Parse error in line 178: warning: no potential data specified
+Parse error in line 181: warning: no potential data specified
+Parse error in line 184: warning: no potential data specified
+Parse error in line 131: warning: no potential data specified
+Parse error in line 134: warning: no potential data specified
+Parse error in line 137: warning: no potential data specified
+Parse error in line 140: warning: no potential data specified
+Parse error in line 143: warning: no potential data specified
+Parse error in line 146: warning: no potential data specified
+Parse error in line 149: warning: no potential data specified
+Parse error in line 152: warning: no potential data specified
+Parse error in line 155: warning: no potential data specified
+Parse error in line 158: warning: no potential data specified
+Parse error in line 161: warning: no potential data specified
+Parse error in line 164: warning: no potential data specified
+Parse error in line 167: warning: no potential data specified
+Parse error in line 170: warning: no potential data specified
+Parse error in line 173: warning: no potential data specified
+Parse error in line 176: warning: no potential data specified
+Parse error in line 179: warning: no potential data specified
+Parse error in line 182: warning: no potential data specified
+Parse error in line 185: warning: no potential data specified
+Parse error in line 188: warning: no potential data specified
+************************* Compilation done !!! *************************
+
+
+
+############## The file to be compiled : GenerateAutoOOBN\nClasses_1#nObjects_1#nStates_2#nNodes_20#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 127: warning: no potential data specified
+Parse error in line 130: warning: no potential data specified
+Parse error in line 133: warning: no potential data specified
+Parse error in line 136: warning: no potential data specified
+Parse error in line 139: warning: no potential data specified
+Parse error in line 142: warning: no potential data specified
+Parse error in line 145: warning: no potential data specified
+Parse error in line 148: warning: no potential data specified
+Parse error in line 151: warning: no potential data specified
+Parse error in line 154: warning: no potential data specified
+Parse error in line 157: warning: no potential data specified
+Parse error in line 160: warning: no potential data specified
+Parse error in line 163: warning: no potential data specified
+Parse error in line 166: warning: no potential data specified
+Parse error in line 169: warning: no potential data specified
+Parse error in line 172: warning: no potential data specified
+Parse error in line 175: warning: no potential data specified
+Parse error in line 178: warning: no potential data specified
+Parse error in line 181: warning: no potential data specified
+Parse error in line 184: warning: no potential data specified
+Parse error in line 131: warning: no potential data specified
+Parse error in line 134: warning: no potential data specified
+Parse error in line 137: warning: no potential data specified
+Parse error in line 140: warning: no potential data specified
+Parse error in line 143: warning: no potential data specified
+Parse error in line 146: warning: no potential data specified
+Parse error in line 149: warning: no potential data specified
+Parse error in line 152: warning: no potential data specified
+Parse error in line 155: warning: no potential data specified
+Parse error in line 158: warning: no potential data specified
+Parse error in line 161: warning: no potential data specified
+Parse error in line 164: warning: no potential data specified
+Parse error in line 167: warning: no potential data specified
+Parse error in line 170: warning: no potential data specified
+Parse error in line 173: warning: no potential data specified
+Parse error in line 176: warning: no potential data specified
+Parse error in line 179: warning: no potential data specified
+Parse error in line 182: warning: no potential data specified
+Parse error in line 185: warning: no potential data specified
+Parse error in line 188: warning: no potential data specified
+************************* Compilation done !!! *************************
+
+
+
+############## The file to be compiled : GenerateAutoOOBN\nClasses_1#nObjects_1#nStates_2#nNodes_20#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 127: warning: no potential data specified
+Parse error in line 130: warning: no potential data specified
+Parse error in line 133: warning: no potential data specified
+Parse error in line 136: warning: no potential data specified
+Parse error in line 139: warning: no potential data specified
+Parse error in line 142: warning: no potential data specified
+Parse error in line 145: warning: no potential data specified
+Parse error in line 148: warning: no potential data specified
+Parse error in line 151: warning: no potential data specified
+Parse error in line 154: warning: no potential data specified
+Parse error in line 157: warning: no potential data specified
+Parse error in line 160: warning: no potential data specified
+Parse error in line 163: warning: no potential data specified
+Parse error in line 166: warning: no potential data specified
+Parse error in line 169: warning: no potential data specified
+Parse error in line 172: warning: no potential data specified
+Parse error in line 175: warning: no potential data specified
+Parse error in line 178: warning: no potential data specified
+Parse error in line 181: warning: no potential data specified
+Parse error in line 184: warning: no potential data specified
+Parse error in line 131: warning: no potential data specified
+Parse error in line 134: warning: no potential data specified
+Parse error in line 137: warning: no potential data specified
+Parse error in line 140: warning: no potential data specified
+Parse error in line 143: warning: no potential data specified
+Parse error in line 146: warning: no potential data specified
+Parse error in line 149: warning: no potential data specified
+Parse error in line 152: warning: no potential data specified
+Parse error in line 155: warning: no potential data specified
+Parse error in line 158: warning: no potential data specified
+Parse error in line 161: warning: no potential data specified
+Parse error in line 164: warning: no potential data specified
+Parse error in line 167: warning: no potential data specified
+Parse error in line 170: warning: no potential data specified
+Parse error in line 173: warning: no potential data specified
+Parse error in line 176: warning: no potential data specified
+Parse error in line 179: warning: no potential data specified
+Parse error in line 182: warning: no potential data specified
+Parse error in line 185: warning: no potential data specified
+Parse error in line 188: warning: no potential data specified
+************************* Compilation done !!! *************************
+
+
+
+############## The file to be compiled : GenerateAutoOOBN\nClasses_1#nObjects_1#nStates_2#nNodes_20#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 127: warning: no potential data specified
+Parse error in line 130: warning: no potential data specified
+Parse error in line 133: warning: no potential data specified
+Parse error in line 136: warning: no potential data specified
+Parse error in line 139: warning: no potential data specified
+Parse error in line 142: warning: no potential data specified
+Parse error in line 145: warning: no potential data specified
+Parse error in line 148: warning: no potential data specified
+Parse error in line 151: warning: no potential data specified
+Parse error in line 154: warning: no potential data specified
+Parse error in line 157: warning: no potential data specified
+Parse error in line 160: warning: no potential data specified
+Parse error in line 163: warning: no potential data specified
+Parse error in line 166: warning: no potential data specified
+Parse error in line 169: warning: no potential data specified
+Parse error in line 172: warning: no potential data specified
+Parse error in line 175: warning: no potential data specified
+Parse error in line 178: warning: no potential data specified
+Parse error in line 181: warning: no potential data specified
+Parse error in line 184: warning: no potential data specified
+Parse error in line 131: warning: no potential data specified
+Parse error in line 134: warning: no potential data specified
+Parse error in line 137: warning: no potential data specified
+Parse error in line 140: warning: no potential data specified
+Parse error in line 143: warning: no potential data specified
+Parse error in line 146: warning: no potential data specified
+Parse error in line 149: warning: no potential data specified
+Parse error in line 152: warning: no potential data specified
+Parse error in line 155: warning: no potential data specified
+Parse error in line 158: warning: no potential data specified
+Parse error in line 161: warning: no potential data specified
+Parse error in line 164: warning: no potential data specified
+Parse error in line 167: warning: no potential data specified
+Parse error in line 170: warning: no potential data specified
+Parse error in line 173: warning: no potential data specified
+Parse error in line 176: warning: no potential data specified
+Parse error in line 179: warning: no potential data specified
+Parse error in line 182: warning: no potential data specified
+Parse error in line 185: warning: no potential data specified
+Parse error in line 188: warning: no potential data specified
+************************* Compilation done !!! *************************
+
+
+
+		-------------------------------------------------------------
+		|                      OOBN Property                        |
+		-------------------------------------------------------------
+		|                    Property                   |    Info   |
+		-------------------------------------------------------------
+		|           Number of Nodes (each class)        |     20    |
+		|           Number of Instanciated Class        |     1     |
+		|           Number of Objects (per class)       |     1     |
+		|           Number of states (per node)         |     2     |
+		|           Average parent (per node)           |     2     |
+		-------------------------------------------------------------
+
+
+		-----------------------------------------------------------
+		|                   Hugin Time Analysis                   |
+		-----------------------------------------------------------
+		|                    Event                   |  Time (ms) |
+		-----------------------------------------------------------
+		|Pre-Processing                              |     unknown|
+		|Compilation                                 |           6|
+		-----------------------------------------------------------
+		|Total Hugin                                 |          6+|
+		-----------------------------------------------------------
+
+
+		-----------------------------------------------------------
+		|                   SIIC Time Analysis                    |
+		-----------------------------------------------------------
+		|                    Event                   |  Time (ms) |
+		-----------------------------------------------------------
+		|Pre-Processing                              |          12|
+		|JF Creation                                 |           3|
+		|JT connection                               |           0|
+		|Connection Sorting                          |           0|
+		|Compilation                                 |           9|
+		|Post Prunning                               |           0|
+		-----------------------------------------------------------
+		|Total SIIC                                  |          25|
+		-----------------------------------------------------------
+
+(){}<>{}()20		2			2		1		1		6		25		12
+
+############## The file to be compiled : GenerateAutoOOBN\nClasses_1#nObjects_2#nStates_2#nNodes_20#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 127: warning: no potential data specified
+Parse error in line 130: warning: no potential data specified
+Parse error in line 133: warning: no potential data specified
+Parse error in line 136: warning: no potential data specified
+Parse error in line 139: warning: no potential data specified
+Parse error in line 142: warning: no potential data specified
+Parse error in line 145: warning: no potential data specified
+Parse error in line 148: warning: no potential data specified
+Parse error in line 151: warning: no potential data specified
+Parse error in line 154: warning: no potential data specified
+Parse error in line 157: warning: no potential data specified
+Parse error in line 160: warning: no potential data specified
+Parse error in line 163: warning: no potential data specified
+Parse error in line 166: warning: no potential data specified
+Parse error in line 169: warning: no potential data specified
+Parse error in line 172: warning: no potential data specified
+Parse error in line 175: warning: no potential data specified
+Parse error in line 178: warning: no potential data specified
+Parse error in line 181: warning: no potential data specified
+Parse error in line 184: warning: no potential data specified
+Parse error in line 135: warning: no potential data specified
+Parse error in line 138: warning: no potential data specified
+Parse error in line 141: warning: no potential data specified
+Parse error in line 144: warning: no potential data specified
+Parse error in line 147: warning: no potential data specified
+Parse error in line 150: warning: no potential data specified
+Parse error in line 153: warning: no potential data specified
+Parse error in line 156: warning: no potential data specified
+Parse error in line 159: warning: no potential data specified
+Parse error in line 162: warning: no potential data specified
+Parse error in line 165: warning: no potential data specified
+Parse error in line 168: warning: no potential data specified
+Parse error in line 171: warning: no potential data specified
+Parse error in line 174: warning: no potential data specified
+Parse error in line 177: warning: no potential data specified
+Parse error in line 180: warning: no potential data specified
+Parse error in line 183: warning: no potential data specified
+Parse error in line 186: warning: no potential data specified
+Parse error in line 189: warning: no potential data specified
+Parse error in line 192: warning: no potential data specified
+############## The file to be compiled : GenerateAutoOOBN\nClasses_1#nObjects_2#nStates_2#nNodes_20#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 127: warning: no potential data specified
+Parse error in line 130: warning: no potential data specified
+Parse error in line 133: warning: no potential data specified
+Parse error in line 136: warning: no potential data specified
+Parse error in line 139: warning: no potential data specified
+Parse error in line 142: warning: no potential data specified
+Parse error in line 145: warning: no potential data specified
+Parse error in line 148: warning: no potential data specified
+Parse error in line 151: warning: no potential data specified
+Parse error in line 154: warning: no potential data specified
+Parse error in line 157: warning: no potential data specified
+Parse error in line 160: warning: no potential data specified
+Parse error in line 163: warning: no potential data specified
+Parse error in line 166: warning: no potential data specified
+Parse error in line 169: warning: no potential data specified
+Parse error in line 172: warning: no potential data specified
+Parse error in line 175: warning: no potential data specified
+Parse error in line 178: warning: no potential data specified
+Parse error in line 181: warning: no potential data specified
+Parse error in line 184: warning: no potential data specified
+Parse error in line 135: warning: no potential data specified
+Parse error in line 138: warning: no potential data specified
+Parse error in line 141: warning: no potential data specified
+Parse error in line 144: warning: no potential data specified
+Parse error in line 147: warning: no potential data specified
+Parse error in line 150: warning: no potential data specified
+Parse error in line 153: warning: no potential data specified
+Parse error in line 156: warning: no potential data specified
+Parse error in line 159: warning: no potential data specified
+Parse error in line 162: warning: no potential data specified
+Parse error in line 165: warning: no potential data specified
+Parse error in line 168: warning: no potential data specified
+Parse error in line 171: warning: no potential data specified
+Parse error in line 174: warning: no potential data specified
+Parse error in line 177: warning: no potential data specified
+Parse error in line 180: warning: no potential data specified
+Parse error in line 183: warning: no potential data specified
+Parse error in line 186: warning: no potential data specified
+Parse error in line 189: warning: no potential data specified
+Parse error in line 192: warning: no potential data specified
+############## The file to be compiled : GenerateAutoOOBN\nClasses_1#nObjects_2#nStates_2#nNodes_20#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 127: warning: no potential data specified
+Parse error in line 130: warning: no potential data specified
+Parse error in line 133: warning: no potential data specified
+Parse error in line 136: warning: no potential data specified
+Parse error in line 139: warning: no potential data specified
+Parse error in line 142: warning: no potential data specified
+Parse error in line 145: warning: no potential data specified
+Parse error in line 148: warning: no potential data specified
+Parse error in line 151: warning: no potential data specified
+Parse error in line 154: warning: no potential data specified
+Parse error in line 157: warning: no potential data specified
+Parse error in line 160: warning: no potential data specified
+Parse error in line 163: warning: no potential data specified
+Parse error in line 166: warning: no potential data specified
+Parse error in line 169: warning: no potential data specified
+Parse error in line 172: warning: no potential data specified
+Parse error in line 175: warning: no potential data specified
+Parse error in line 178: warning: no potential data specified
+Parse error in line 181: warning: no potential data specified
+Parse error in line 184: warning: no potential data specified
+Parse error in line 135: warning: no potential data specified
+Parse error in line 138: warning: no potential data specified
+Parse error in line 141: warning: no potential data specified
+Parse error in line 144: warning: no potential data specified
+Parse error in line 147: warning: no potential data specified
+Parse error in line 150: warning: no potential data specified
+Parse error in line 153: warning: no potential data specified
+Parse error in line 156: warning: no potential data specified
+Parse error in line 159: warning: no potential data specified
+Parse error in line 162: warning: no potential data specified
+Parse error in line 165: warning: no potential data specified
+Parse error in line 168: warning: no potential data specified
+Parse error in line 171: warning: no potential data specified
+Parse error in line 174: warning: no potential data specified
+Parse error in line 177: warning: no potential data specified
+Parse error in line 180: warning: no potential data specified
+Parse error in line 183: warning: no potential data specified
+Parse error in line 186: warning: no potential data specified
+Parse error in line 189: warning: no potential data specified
+Parse error in line 192: warning: no potential data specified
+############## The file to be compiled : GenerateAutoOOBN\nClasses_1#nObjects_2#nStates_2#nNodes_20#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 127: warning: no potential data specified
+Parse error in line 130: warning: no potential data specified
+Parse error in line 133: warning: no potential data specified
+Parse error in line 136: warning: no potential data specified
+Parse error in line 139: warning: no potential data specified
+Parse error in line 142: warning: no potential data specified
+Parse error in line 145: warning: no potential data specified
+Parse error in line 148: warning: no potential data specified
+Parse error in line 151: warning: no potential data specified
+Parse error in line 154: warning: no potential data specified
+Parse error in line 157: warning: no potential data specified
+Parse error in line 160: warning: no potential data specified
+Parse error in line 163: warning: no potential data specified
+Parse error in line 166: warning: no potential data specified
+Parse error in line 169: warning: no potential data specified
+Parse error in line 172: warning: no potential data specified
+Parse error in line 175: warning: no potential data specified
+Parse error in line 178: warning: no potential data specified
+Parse error in line 181: warning: no potential data specified
+Parse error in line 184: warning: no potential data specified
+Parse error in line 135: warning: no potential data specified
+Parse error in line 138: warning: no potential data specified
+Parse error in line 141: warning: no potential data specified
+Parse error in line 144: warning: no potential data specified
+Parse error in line 147: warning: no potential data specified
+Parse error in line 150: warning: no potential data specified
+Parse error in line 153: warning: no potential data specified
+Parse error in line 156: warning: no potential data specified
+Parse error in line 159: warning: no potential data specified
+Parse error in line 162: warning: no potential data specified
+Parse error in line 165: warning: no potential data specified
+Parse error in line 168: warning: no potential data specified
+Parse error in line 171: warning: no potential data specified
+Parse error in line 174: warning: no potential data specified
+Parse error in line 177: warning: no potential data specified
+Parse error in line 180: warning: no potential data specified
+Parse error in line 183: warning: no potential data specified
+Parse error in line 186: warning: no potential data specified
+Parse error in line 189: warning: no potential data specified
+Parse error in line 192: warning: no potential data specified
+############## The file to be compiled : GenerateAutoOOBN\nClasses_1#nObjects_2#nStates_2#nNodes_20#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 127: warning: no potential data specified
+Parse error in line 130: warning: no potential data specified
+Parse error in line 133: warning: no potential data specified
+Parse error in line 136: warning: no potential data specified
+Parse error in line 139: warning: no potential data specified
+Parse error in line 142: warning: no potential data specified
+Parse error in line 145: warning: no potential data specified
+Parse error in line 148: warning: no potential data specified
+Parse error in line 151: warning: no potential data specified
+Parse error in line 154: warning: no potential data specified
+Parse error in line 157: warning: no potential data specified
+Parse error in line 160: warning: no potential data specified
+Parse error in line 163: warning: no potential data specified
+Parse error in line 166: warning: no potential data specified
+Parse error in line 169: warning: no potential data specified
+Parse error in line 172: warning: no potential data specified
+Parse error in line 175: warning: no potential data specified
+Parse error in line 178: warning: no potential data specified
+Parse error in line 181: warning: no potential data specified
+Parse error in line 184: warning: no potential data specified
+Parse error in line 135: warning: no potential data specified
+Parse error in line 138: warning: no potential data specified
+Parse error in line 141: warning: no potential data specified
+Parse error in line 144: warning: no potential data specified
+Parse error in line 147: warning: no potential data specified
+Parse error in line 150: warning: no potential data specified
+Parse error in line 153: warning: no potential data specified
+Parse error in line 156: warning: no potential data specified
+Parse error in line 159: warning: no potential data specified
+Parse error in line 162: warning: no potential data specified
+Parse error in line 165: warning: no potential data specified
+Parse error in line 168: warning: no potential data specified
+Parse error in line 171: warning: no potential data specified
+Parse error in line 174: warning: no potential data specified
+Parse error in line 177: warning: no potential data specified
+Parse error in line 180: warning: no potential data specified
+Parse error in line 183: warning: no potential data specified
+Parse error in line 186: warning: no potential data specified
+Parse error in line 189: warning: no potential data specified
+Parse error in line 192: warning: no potential data specified
+Some exception arose!!!
+All 15 cases are tried!!! Among them 5 cases were incomplete; 10 cases were complete!!!

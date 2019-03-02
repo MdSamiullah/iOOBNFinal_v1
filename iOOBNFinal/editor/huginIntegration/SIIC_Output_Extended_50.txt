@@ -1,0 +1,2066 @@
+############## The file to be compiled : GenerateAutoOOBN\nClasses_0#nObjects_0#nStates_2#nNodes_50#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 307: warning: no potential data specified
+Parse error in line 310: warning: no potential data specified
+Parse error in line 313: warning: no potential data specified
+Parse error in line 316: warning: no potential data specified
+Parse error in line 319: warning: no potential data specified
+Parse error in line 322: warning: no potential data specified
+Parse error in line 325: warning: no potential data specified
+Parse error in line 328: warning: no potential data specified
+Parse error in line 331: warning: no potential data specified
+Parse error in line 334: warning: no potential data specified
+Parse error in line 337: warning: no potential data specified
+Parse error in line 340: warning: no potential data specified
+Parse error in line 343: warning: no potential data specified
+Parse error in line 346: warning: no potential data specified
+Parse error in line 349: warning: no potential data specified
+Parse error in line 352: warning: no potential data specified
+Parse error in line 355: warning: no potential data specified
+Parse error in line 358: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 364: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 370: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 376: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 382: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 388: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 394: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 400: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 406: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 412: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 418: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 424: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 430: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 436: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 442: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 448: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 454: warning: no potential data specified
+************************* Compilation done !!! *************************
+
+
+
+############## The file to be compiled : GenerateAutoOOBN\nClasses_0#nObjects_0#nStates_2#nNodes_50#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 307: warning: no potential data specified
+Parse error in line 310: warning: no potential data specified
+Parse error in line 313: warning: no potential data specified
+Parse error in line 316: warning: no potential data specified
+Parse error in line 319: warning: no potential data specified
+Parse error in line 322: warning: no potential data specified
+Parse error in line 325: warning: no potential data specified
+Parse error in line 328: warning: no potential data specified
+Parse error in line 331: warning: no potential data specified
+Parse error in line 334: warning: no potential data specified
+Parse error in line 337: warning: no potential data specified
+Parse error in line 340: warning: no potential data specified
+Parse error in line 343: warning: no potential data specified
+Parse error in line 346: warning: no potential data specified
+Parse error in line 349: warning: no potential data specified
+Parse error in line 352: warning: no potential data specified
+Parse error in line 355: warning: no potential data specified
+Parse error in line 358: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 364: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 370: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 376: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 382: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 388: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 394: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 400: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 406: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 412: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 418: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 424: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 430: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 436: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 442: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 448: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 454: warning: no potential data specified
+************************* Compilation done !!! *************************
+
+
+
+############## The file to be compiled : GenerateAutoOOBN\nClasses_0#nObjects_0#nStates_2#nNodes_50#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 307: warning: no potential data specified
+Parse error in line 310: warning: no potential data specified
+Parse error in line 313: warning: no potential data specified
+Parse error in line 316: warning: no potential data specified
+Parse error in line 319: warning: no potential data specified
+Parse error in line 322: warning: no potential data specified
+Parse error in line 325: warning: no potential data specified
+Parse error in line 328: warning: no potential data specified
+Parse error in line 331: warning: no potential data specified
+Parse error in line 334: warning: no potential data specified
+Parse error in line 337: warning: no potential data specified
+Parse error in line 340: warning: no potential data specified
+Parse error in line 343: warning: no potential data specified
+Parse error in line 346: warning: no potential data specified
+Parse error in line 349: warning: no potential data specified
+Parse error in line 352: warning: no potential data specified
+Parse error in line 355: warning: no potential data specified
+Parse error in line 358: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 364: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 370: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 376: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 382: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 388: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 394: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 400: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 406: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 412: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 418: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 424: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 430: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 436: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 442: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 448: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 454: warning: no potential data specified
+************************* Compilation done !!! *************************
+
+
+
+############## The file to be compiled : GenerateAutoOOBN\nClasses_0#nObjects_0#nStates_2#nNodes_50#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 307: warning: no potential data specified
+Parse error in line 310: warning: no potential data specified
+Parse error in line 313: warning: no potential data specified
+Parse error in line 316: warning: no potential data specified
+Parse error in line 319: warning: no potential data specified
+Parse error in line 322: warning: no potential data specified
+Parse error in line 325: warning: no potential data specified
+Parse error in line 328: warning: no potential data specified
+Parse error in line 331: warning: no potential data specified
+Parse error in line 334: warning: no potential data specified
+Parse error in line 337: warning: no potential data specified
+Parse error in line 340: warning: no potential data specified
+Parse error in line 343: warning: no potential data specified
+Parse error in line 346: warning: no potential data specified
+Parse error in line 349: warning: no potential data specified
+Parse error in line 352: warning: no potential data specified
+Parse error in line 355: warning: no potential data specified
+Parse error in line 358: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 364: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 370: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 376: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 382: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 388: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 394: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 400: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 406: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 412: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 418: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 424: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 430: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 436: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 442: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 448: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 454: warning: no potential data specified
+************************* Compilation done !!! *************************
+
+
+
+############## The file to be compiled : GenerateAutoOOBN\nClasses_0#nObjects_0#nStates_2#nNodes_50#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 307: warning: no potential data specified
+Parse error in line 310: warning: no potential data specified
+Parse error in line 313: warning: no potential data specified
+Parse error in line 316: warning: no potential data specified
+Parse error in line 319: warning: no potential data specified
+Parse error in line 322: warning: no potential data specified
+Parse error in line 325: warning: no potential data specified
+Parse error in line 328: warning: no potential data specified
+Parse error in line 331: warning: no potential data specified
+Parse error in line 334: warning: no potential data specified
+Parse error in line 337: warning: no potential data specified
+Parse error in line 340: warning: no potential data specified
+Parse error in line 343: warning: no potential data specified
+Parse error in line 346: warning: no potential data specified
+Parse error in line 349: warning: no potential data specified
+Parse error in line 352: warning: no potential data specified
+Parse error in line 355: warning: no potential data specified
+Parse error in line 358: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 364: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 370: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 376: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 382: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 388: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 394: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 400: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 406: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 412: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 418: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 424: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 430: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 436: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 442: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 448: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 454: warning: no potential data specified
+************************* Compilation done !!! *************************
+
+
+
+		-------------------------------------------------------------
+		|                      OOBN Property                        |
+		-------------------------------------------------------------
+		|                    Property                   |    Info   |
+		-------------------------------------------------------------
+		|           Number of Nodes (each class)        |     50    |
+		|           Number of Instanciated Class        |     0     |
+		|           Number of Objects (per class)       |     0     |
+		|           Number of states (per node)         |     2     |
+		|           Average parent (per node)           |     2     |
+		-------------------------------------------------------------
+
+
+		-----------------------------------------------------------
+		|                   Hugin Time Analysis                   |
+		-----------------------------------------------------------
+		|                    Event                   |  Time (ms) |
+		-----------------------------------------------------------
+		|Pre-Processing                              |     unknown|
+		|Compilation                                 |          18|
+		-----------------------------------------------------------
+		|Total Hugin                                 |         18+|
+		-----------------------------------------------------------
+
+
+		-----------------------------------------------------------
+		|                   SIIC Time Analysis                    |
+		-----------------------------------------------------------
+		|                    Event                   |  Time (ms) |
+		-----------------------------------------------------------
+		|Pre-Processing                              |          28|
+		|JF Creation                                 |           9|
+		|JT connection                               |           0|
+		|Connection Sorting                          |           0|
+		|Compilation                                 |           9|
+		|Post Prunning                               |           0|
+		-----------------------------------------------------------
+		|Total SIIC                                  |          46|
+		-----------------------------------------------------------
+
+(){}<>{}()50		2			2		0		0		18		46		28
+
+############## The file to be compiled : GenerateAutoOOBN\nClasses_1#nObjects_1#nStates_2#nNodes_50#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 307: warning: no potential data specified
+Parse error in line 310: warning: no potential data specified
+Parse error in line 313: warning: no potential data specified
+Parse error in line 316: warning: no potential data specified
+Parse error in line 319: warning: no potential data specified
+Parse error in line 322: warning: no potential data specified
+Parse error in line 325: warning: no potential data specified
+Parse error in line 328: warning: no potential data specified
+Parse error in line 331: warning: no potential data specified
+Parse error in line 334: warning: no potential data specified
+Parse error in line 337: warning: no potential data specified
+Parse error in line 340: warning: no potential data specified
+Parse error in line 343: warning: no potential data specified
+Parse error in line 346: warning: no potential data specified
+Parse error in line 349: warning: no potential data specified
+Parse error in line 352: warning: no potential data specified
+Parse error in line 355: warning: no potential data specified
+Parse error in line 358: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 364: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 370: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 376: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 382: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 388: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 394: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 400: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 406: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 412: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 418: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 424: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 430: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 436: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 442: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 448: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 454: warning: no potential data specified
+Parse error in line 311: warning: no potential data specified
+Parse error in line 314: warning: no potential data specified
+Parse error in line 317: warning: no potential data specified
+Parse error in line 320: warning: no potential data specified
+Parse error in line 323: warning: no potential data specified
+Parse error in line 326: warning: no potential data specified
+Parse error in line 329: warning: no potential data specified
+Parse error in line 332: warning: no potential data specified
+Parse error in line 335: warning: no potential data specified
+Parse error in line 338: warning: no potential data specified
+Parse error in line 341: warning: no potential data specified
+Parse error in line 344: warning: no potential data specified
+Parse error in line 347: warning: no potential data specified
+Parse error in line 350: warning: no potential data specified
+Parse error in line 353: warning: no potential data specified
+Parse error in line 356: warning: no potential data specified
+Parse error in line 359: warning: no potential data specified
+Parse error in line 362: warning: no potential data specified
+Parse error in line 365: warning: no potential data specified
+Parse error in line 368: warning: no potential data specified
+Parse error in line 371: warning: no potential data specified
+Parse error in line 374: warning: no potential data specified
+Parse error in line 377: warning: no potential data specified
+Parse error in line 380: warning: no potential data specified
+Parse error in line 383: warning: no potential data specified
+Parse error in line 386: warning: no potential data specified
+Parse error in line 389: warning: no potential data specified
+Parse error in line 392: warning: no potential data specified
+Parse error in line 395: warning: no potential data specified
+Parse error in line 398: warning: no potential data specified
+Parse error in line 401: warning: no potential data specified
+Parse error in line 404: warning: no potential data specified
+Parse error in line 407: warning: no potential data specified
+Parse error in line 410: warning: no potential data specified
+Parse error in line 413: warning: no potential data specified
+Parse error in line 416: warning: no potential data specified
+Parse error in line 419: warning: no potential data specified
+Parse error in line 422: warning: no potential data specified
+Parse error in line 425: warning: no potential data specified
+Parse error in line 428: warning: no potential data specified
+Parse error in line 431: warning: no potential data specified
+Parse error in line 434: warning: no potential data specified
+Parse error in line 437: warning: no potential data specified
+Parse error in line 440: warning: no potential data specified
+Parse error in line 443: warning: no potential data specified
+Parse error in line 446: warning: no potential data specified
+Parse error in line 449: warning: no potential data specified
+Parse error in line 452: warning: no potential data specified
+Parse error in line 455: warning: no potential data specified
+Parse error in line 458: warning: no potential data specified
+Parse error in line 359: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 363: warning: no potential data specified
+Parse error in line 365: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 369: warning: no potential data specified
+Parse error in line 371: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 375: warning: no potential data specified
+Parse error in line 377: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 381: warning: no potential data specified
+Parse error in line 383: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 387: warning: no potential data specified
+Parse error in line 389: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 393: warning: no potential data specified
+Parse error in line 395: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 399: warning: no potential data specified
+Parse error in line 401: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 405: warning: no potential data specified
+Parse error in line 407: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 411: warning: no potential data specified
+Parse error in line 413: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 417: warning: no potential data specified
+Parse error in line 419: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 423: warning: no potential data specified
+Parse error in line 425: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 429: warning: no potential data specified
+Parse error in line 431: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 435: warning: no potential data specified
+Parse error in line 437: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 441: warning: no potential data specified
+Parse error in line 443: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 447: warning: no potential data specified
+Parse error in line 449: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 453: warning: no potential data specified
+Parse error in line 455: warning: no potential data specified
+Parse error in line 457: warning: no potential data specified
+************************* Compilation done !!! *************************
+
+
+
+############## The file to be compiled : GenerateAutoOOBN\nClasses_1#nObjects_1#nStates_2#nNodes_50#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 307: warning: no potential data specified
+Parse error in line 310: warning: no potential data specified
+Parse error in line 313: warning: no potential data specified
+Parse error in line 316: warning: no potential data specified
+Parse error in line 319: warning: no potential data specified
+Parse error in line 322: warning: no potential data specified
+Parse error in line 325: warning: no potential data specified
+Parse error in line 328: warning: no potential data specified
+Parse error in line 331: warning: no potential data specified
+Parse error in line 334: warning: no potential data specified
+Parse error in line 337: warning: no potential data specified
+Parse error in line 340: warning: no potential data specified
+Parse error in line 343: warning: no potential data specified
+Parse error in line 346: warning: no potential data specified
+Parse error in line 349: warning: no potential data specified
+Parse error in line 352: warning: no potential data specified
+Parse error in line 355: warning: no potential data specified
+Parse error in line 358: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 364: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 370: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 376: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 382: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 388: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 394: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 400: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 406: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 412: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 418: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 424: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 430: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 436: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 442: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 448: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 454: warning: no potential data specified
+Parse error in line 311: warning: no potential data specified
+Parse error in line 314: warning: no potential data specified
+Parse error in line 317: warning: no potential data specified
+Parse error in line 320: warning: no potential data specified
+Parse error in line 323: warning: no potential data specified
+Parse error in line 326: warning: no potential data specified
+Parse error in line 329: warning: no potential data specified
+Parse error in line 332: warning: no potential data specified
+Parse error in line 335: warning: no potential data specified
+Parse error in line 338: warning: no potential data specified
+Parse error in line 341: warning: no potential data specified
+Parse error in line 344: warning: no potential data specified
+Parse error in line 347: warning: no potential data specified
+Parse error in line 350: warning: no potential data specified
+Parse error in line 353: warning: no potential data specified
+Parse error in line 356: warning: no potential data specified
+Parse error in line 359: warning: no potential data specified
+Parse error in line 362: warning: no potential data specified
+Parse error in line 365: warning: no potential data specified
+Parse error in line 368: warning: no potential data specified
+Parse error in line 371: warning: no potential data specified
+Parse error in line 374: warning: no potential data specified
+Parse error in line 377: warning: no potential data specified
+Parse error in line 380: warning: no potential data specified
+Parse error in line 383: warning: no potential data specified
+Parse error in line 386: warning: no potential data specified
+Parse error in line 389: warning: no potential data specified
+Parse error in line 392: warning: no potential data specified
+Parse error in line 395: warning: no potential data specified
+Parse error in line 398: warning: no potential data specified
+Parse error in line 401: warning: no potential data specified
+Parse error in line 404: warning: no potential data specified
+Parse error in line 407: warning: no potential data specified
+Parse error in line 410: warning: no potential data specified
+Parse error in line 413: warning: no potential data specified
+Parse error in line 416: warning: no potential data specified
+Parse error in line 419: warning: no potential data specified
+Parse error in line 422: warning: no potential data specified
+Parse error in line 425: warning: no potential data specified
+Parse error in line 428: warning: no potential data specified
+Parse error in line 431: warning: no potential data specified
+Parse error in line 434: warning: no potential data specified
+Parse error in line 437: warning: no potential data specified
+Parse error in line 440: warning: no potential data specified
+Parse error in line 443: warning: no potential data specified
+Parse error in line 446: warning: no potential data specified
+Parse error in line 449: warning: no potential data specified
+Parse error in line 452: warning: no potential data specified
+Parse error in line 455: warning: no potential data specified
+Parse error in line 458: warning: no potential data specified
+************************* Compilation done !!! *************************
+
+
+
+############## The file to be compiled : GenerateAutoOOBN\nClasses_1#nObjects_1#nStates_2#nNodes_50#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 307: warning: no potential data specified
+Parse error in line 310: warning: no potential data specified
+Parse error in line 313: warning: no potential data specified
+Parse error in line 316: warning: no potential data specified
+Parse error in line 319: warning: no potential data specified
+Parse error in line 322: warning: no potential data specified
+Parse error in line 325: warning: no potential data specified
+Parse error in line 328: warning: no potential data specified
+Parse error in line 331: warning: no potential data specified
+Parse error in line 334: warning: no potential data specified
+Parse error in line 337: warning: no potential data specified
+Parse error in line 340: warning: no potential data specified
+Parse error in line 343: warning: no potential data specified
+Parse error in line 346: warning: no potential data specified
+Parse error in line 349: warning: no potential data specified
+Parse error in line 352: warning: no potential data specified
+Parse error in line 355: warning: no potential data specified
+Parse error in line 358: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 364: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 370: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 376: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 382: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 388: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 394: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 400: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 406: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 412: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 418: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 424: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 430: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 436: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 442: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 448: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 454: warning: no potential data specified
+Parse error in line 311: warning: no potential data specified
+Parse error in line 314: warning: no potential data specified
+Parse error in line 317: warning: no potential data specified
+Parse error in line 320: warning: no potential data specified
+Parse error in line 323: warning: no potential data specified
+Parse error in line 326: warning: no potential data specified
+Parse error in line 329: warning: no potential data specified
+Parse error in line 332: warning: no potential data specified
+Parse error in line 335: warning: no potential data specified
+Parse error in line 338: warning: no potential data specified
+Parse error in line 341: warning: no potential data specified
+Parse error in line 344: warning: no potential data specified
+Parse error in line 347: warning: no potential data specified
+Parse error in line 350: warning: no potential data specified
+Parse error in line 353: warning: no potential data specified
+Parse error in line 356: warning: no potential data specified
+Parse error in line 359: warning: no potential data specified
+Parse error in line 362: warning: no potential data specified
+Parse error in line 365: warning: no potential data specified
+Parse error in line 368: warning: no potential data specified
+Parse error in line 371: warning: no potential data specified
+Parse error in line 374: warning: no potential data specified
+Parse error in line 377: warning: no potential data specified
+Parse error in line 380: warning: no potential data specified
+Parse error in line 383: warning: no potential data specified
+Parse error in line 386: warning: no potential data specified
+Parse error in line 389: warning: no potential data specified
+Parse error in line 392: warning: no potential data specified
+Parse error in line 395: warning: no potential data specified
+Parse error in line 398: warning: no potential data specified
+Parse error in line 401: warning: no potential data specified
+Parse error in line 404: warning: no potential data specified
+Parse error in line 407: warning: no potential data specified
+Parse error in line 410: warning: no potential data specified
+Parse error in line 413: warning: no potential data specified
+Parse error in line 416: warning: no potential data specified
+Parse error in line 419: warning: no potential data specified
+Parse error in line 422: warning: no potential data specified
+Parse error in line 425: warning: no potential data specified
+Parse error in line 428: warning: no potential data specified
+Parse error in line 431: warning: no potential data specified
+Parse error in line 434: warning: no potential data specified
+Parse error in line 437: warning: no potential data specified
+Parse error in line 440: warning: no potential data specified
+Parse error in line 443: warning: no potential data specified
+Parse error in line 446: warning: no potential data specified
+Parse error in line 449: warning: no potential data specified
+Parse error in line 452: warning: no potential data specified
+Parse error in line 455: warning: no potential data specified
+Parse error in line 458: warning: no potential data specified
+************************* Compilation done !!! *************************
+
+
+
+############## The file to be compiled : GenerateAutoOOBN\nClasses_1#nObjects_1#nStates_2#nNodes_50#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 307: warning: no potential data specified
+Parse error in line 310: warning: no potential data specified
+Parse error in line 313: warning: no potential data specified
+Parse error in line 316: warning: no potential data specified
+Parse error in line 319: warning: no potential data specified
+Parse error in line 322: warning: no potential data specified
+Parse error in line 325: warning: no potential data specified
+Parse error in line 328: warning: no potential data specified
+Parse error in line 331: warning: no potential data specified
+Parse error in line 334: warning: no potential data specified
+Parse error in line 337: warning: no potential data specified
+Parse error in line 340: warning: no potential data specified
+Parse error in line 343: warning: no potential data specified
+Parse error in line 346: warning: no potential data specified
+Parse error in line 349: warning: no potential data specified
+Parse error in line 352: warning: no potential data specified
+Parse error in line 355: warning: no potential data specified
+Parse error in line 358: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 364: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 370: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 376: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 382: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 388: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 394: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 400: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 406: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 412: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 418: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 424: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 430: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 436: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 442: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 448: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 454: warning: no potential data specified
+Parse error in line 311: warning: no potential data specified
+Parse error in line 314: warning: no potential data specified
+Parse error in line 317: warning: no potential data specified
+Parse error in line 320: warning: no potential data specified
+Parse error in line 323: warning: no potential data specified
+Parse error in line 326: warning: no potential data specified
+Parse error in line 329: warning: no potential data specified
+Parse error in line 332: warning: no potential data specified
+Parse error in line 335: warning: no potential data specified
+Parse error in line 338: warning: no potential data specified
+Parse error in line 341: warning: no potential data specified
+Parse error in line 344: warning: no potential data specified
+Parse error in line 347: warning: no potential data specified
+Parse error in line 350: warning: no potential data specified
+Parse error in line 353: warning: no potential data specified
+Parse error in line 356: warning: no potential data specified
+Parse error in line 359: warning: no potential data specified
+Parse error in line 362: warning: no potential data specified
+Parse error in line 365: warning: no potential data specified
+Parse error in line 368: warning: no potential data specified
+Parse error in line 371: warning: no potential data specified
+Parse error in line 374: warning: no potential data specified
+Parse error in line 377: warning: no potential data specified
+Parse error in line 380: warning: no potential data specified
+Parse error in line 383: warning: no potential data specified
+Parse error in line 386: warning: no potential data specified
+Parse error in line 389: warning: no potential data specified
+Parse error in line 392: warning: no potential data specified
+Parse error in line 395: warning: no potential data specified
+Parse error in line 398: warning: no potential data specified
+Parse error in line 401: warning: no potential data specified
+Parse error in line 404: warning: no potential data specified
+Parse error in line 407: warning: no potential data specified
+Parse error in line 410: warning: no potential data specified
+Parse error in line 413: warning: no potential data specified
+Parse error in line 416: warning: no potential data specified
+Parse error in line 419: warning: no potential data specified
+Parse error in line 422: warning: no potential data specified
+Parse error in line 425: warning: no potential data specified
+Parse error in line 428: warning: no potential data specified
+Parse error in line 431: warning: no potential data specified
+Parse error in line 434: warning: no potential data specified
+Parse error in line 437: warning: no potential data specified
+Parse error in line 440: warning: no potential data specified
+Parse error in line 443: warning: no potential data specified
+Parse error in line 446: warning: no potential data specified
+Parse error in line 449: warning: no potential data specified
+Parse error in line 452: warning: no potential data specified
+Parse error in line 455: warning: no potential data specified
+Parse error in line 458: warning: no potential data specified
+************************* Compilation done !!! *************************
+
+
+
+############## The file to be compiled : GenerateAutoOOBN\nClasses_1#nObjects_1#nStates_2#nNodes_50#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 307: warning: no potential data specified
+Parse error in line 310: warning: no potential data specified
+Parse error in line 313: warning: no potential data specified
+Parse error in line 316: warning: no potential data specified
+Parse error in line 319: warning: no potential data specified
+Parse error in line 322: warning: no potential data specified
+Parse error in line 325: warning: no potential data specified
+Parse error in line 328: warning: no potential data specified
+Parse error in line 331: warning: no potential data specified
+Parse error in line 334: warning: no potential data specified
+Parse error in line 337: warning: no potential data specified
+Parse error in line 340: warning: no potential data specified
+Parse error in line 343: warning: no potential data specified
+Parse error in line 346: warning: no potential data specified
+Parse error in line 349: warning: no potential data specified
+Parse error in line 352: warning: no potential data specified
+Parse error in line 355: warning: no potential data specified
+Parse error in line 358: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 364: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 370: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 376: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 382: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 388: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 394: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 400: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 406: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 412: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 418: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 424: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 430: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 436: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 442: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 448: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 454: warning: no potential data specified
+Parse error in line 311: warning: no potential data specified
+Parse error in line 314: warning: no potential data specified
+Parse error in line 317: warning: no potential data specified
+Parse error in line 320: warning: no potential data specified
+Parse error in line 323: warning: no potential data specified
+Parse error in line 326: warning: no potential data specified
+Parse error in line 329: warning: no potential data specified
+Parse error in line 332: warning: no potential data specified
+Parse error in line 335: warning: no potential data specified
+Parse error in line 338: warning: no potential data specified
+Parse error in line 341: warning: no potential data specified
+Parse error in line 344: warning: no potential data specified
+Parse error in line 347: warning: no potential data specified
+Parse error in line 350: warning: no potential data specified
+Parse error in line 353: warning: no potential data specified
+Parse error in line 356: warning: no potential data specified
+Parse error in line 359: warning: no potential data specified
+Parse error in line 362: warning: no potential data specified
+Parse error in line 365: warning: no potential data specified
+Parse error in line 368: warning: no potential data specified
+Parse error in line 371: warning: no potential data specified
+Parse error in line 374: warning: no potential data specified
+Parse error in line 377: warning: no potential data specified
+Parse error in line 380: warning: no potential data specified
+Parse error in line 383: warning: no potential data specified
+Parse error in line 386: warning: no potential data specified
+Parse error in line 389: warning: no potential data specified
+Parse error in line 392: warning: no potential data specified
+Parse error in line 395: warning: no potential data specified
+Parse error in line 398: warning: no potential data specified
+Parse error in line 401: warning: no potential data specified
+Parse error in line 404: warning: no potential data specified
+Parse error in line 407: warning: no potential data specified
+Parse error in line 410: warning: no potential data specified
+Parse error in line 413: warning: no potential data specified
+Parse error in line 416: warning: no potential data specified
+Parse error in line 419: warning: no potential data specified
+Parse error in line 422: warning: no potential data specified
+Parse error in line 425: warning: no potential data specified
+Parse error in line 428: warning: no potential data specified
+Parse error in line 431: warning: no potential data specified
+Parse error in line 434: warning: no potential data specified
+Parse error in line 437: warning: no potential data specified
+Parse error in line 440: warning: no potential data specified
+Parse error in line 443: warning: no potential data specified
+Parse error in line 446: warning: no potential data specified
+Parse error in line 449: warning: no potential data specified
+Parse error in line 452: warning: no potential data specified
+Parse error in line 455: warning: no potential data specified
+Parse error in line 458: warning: no potential data specified
+************************* Compilation done !!! *************************
+
+
+
+		-------------------------------------------------------------
+		|                      OOBN Property                        |
+		-------------------------------------------------------------
+		|                    Property                   |    Info   |
+		-------------------------------------------------------------
+		|           Number of Nodes (each class)        |     50    |
+		|           Number of Instanciated Class        |     1     |
+		|           Number of Objects (per class)       |     1     |
+		|           Number of states (per node)         |     2     |
+		|           Average parent (per node)           |     2     |
+		-------------------------------------------------------------
+
+
+		-----------------------------------------------------------
+		|                   Hugin Time Analysis                   |
+		-----------------------------------------------------------
+		|                    Event                   |  Time (ms) |
+		-----------------------------------------------------------
+		|Pre-Processing                              |     unknown|
+		|Compilation                                 |         170|
+		-----------------------------------------------------------
+		|Total Hugin                                 |        170+|
+		-----------------------------------------------------------
+
+
+		-----------------------------------------------------------
+		|                   SIIC Time Analysis                    |
+		-----------------------------------------------------------
+		|                    Event                   |  Time (ms) |
+		-----------------------------------------------------------
+		|Pre-Processing                              |          15|
+		|JF Creation                                 |           9|
+		|JT connection                               |           3|
+		|Connection Sorting                          |           0|
+		|Compilation                                 |          40|
+		|Post Prunning                               |           0|
+		-----------------------------------------------------------
+		|Total SIIC                                  |          68|
+		-----------------------------------------------------------
+
+(){}<>{}()50		2			2		1		1		170		68		15
+
+############## The file to be compiled : GenerateAutoOOBN\nClasses_1#nObjects_2#nStates_2#nNodes_50#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 307: warning: no potential data specified
+Parse error in line 310: warning: no potential data specified
+Parse error in line 313: warning: no potential data specified
+Parse error in line 316: warning: no potential data specified
+Parse error in line 319: warning: no potential data specified
+Parse error in line 322: warning: no potential data specified
+Parse error in line 325: warning: no potential data specified
+Parse error in line 328: warning: no potential data specified
+Parse error in line 331: warning: no potential data specified
+Parse error in line 334: warning: no potential data specified
+Parse error in line 337: warning: no potential data specified
+Parse error in line 340: warning: no potential data specified
+Parse error in line 343: warning: no potential data specified
+Parse error in line 346: warning: no potential data specified
+Parse error in line 349: warning: no potential data specified
+Parse error in line 352: warning: no potential data specified
+Parse error in line 355: warning: no potential data specified
+Parse error in line 358: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 364: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 370: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 376: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 382: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 388: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 394: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 400: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 406: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 412: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 418: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 424: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 430: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 436: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 442: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 448: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 454: warning: no potential data specified
+Parse error in line 315: warning: no potential data specified
+Parse error in line 318: warning: no potential data specified
+Parse error in line 321: warning: no potential data specified
+Parse error in line 324: warning: no potential data specified
+Parse error in line 327: warning: no potential data specified
+Parse error in line 330: warning: no potential data specified
+Parse error in line 333: warning: no potential data specified
+Parse error in line 336: warning: no potential data specified
+Parse error in line 339: warning: no potential data specified
+Parse error in line 342: warning: no potential data specified
+Parse error in line 345: warning: no potential data specified
+Parse error in line 348: warning: no potential data specified
+Parse error in line 351: warning: no potential data specified
+Parse error in line 354: warning: no potential data specified
+Parse error in line 357: warning: no potential data specified
+Parse error in line 360: warning: no potential data specified
+Parse error in line 363: warning: no potential data specified
+Parse error in line 366: warning: no potential data specified
+Parse error in line 369: warning: no potential data specified
+Parse error in line 372: warning: no potential data specified
+Parse error in line 375: warning: no potential data specified
+Parse error in line 378: warning: no potential data specified
+Parse error in line 381: warning: no potential data specified
+Parse error in line 384: warning: no potential data specified
+Parse error in line 387: warning: no potential data specified
+Parse error in line 390: warning: no potential data specified
+Parse error in line 393: warning: no potential data specified
+Parse error in line 396: warning: no potential data specified
+Parse error in line 399: warning: no potential data specified
+Parse error in line 402: warning: no potential data specified
+Parse error in line 405: warning: no potential data specified
+Parse error in line 408: warning: no potential data specified
+Parse error in line 411: warning: no potential data specified
+Parse error in line 414: warning: no potential data specified
+Parse error in line 417: warning: no potential data specified
+Parse error in line 420: warning: no potential data specified
+Parse error in line 423: warning: no potential data specified
+Parse error in line 426: warning: no potential data specified
+Parse error in line 429: warning: no potential data specified
+Parse error in line 432: warning: no potential data specified
+Parse error in line 435: warning: no potential data specified
+Parse error in line 438: warning: no potential data specified
+Parse error in line 441: warning: no potential data specified
+Parse error in line 444: warning: no potential data specified
+Parse error in line 447: warning: no potential data specified
+Parse error in line 450: warning: no potential data specified
+Parse error in line 453: warning: no potential data specified
+Parse error in line 456: warning: no potential data specified
+Parse error in line 459: warning: no potential data specified
+Parse error in line 462: warning: no potential data specified
+Parse error in line 359: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 363: warning: no potential data specified
+Parse error in line 365: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 369: warning: no potential data specified
+Parse error in line 371: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 375: warning: no potential data specified
+Parse error in line 377: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 381: warning: no potential data specified
+Parse error in line 383: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 387: warning: no potential data specified
+Parse error in line 389: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 393: warning: no potential data specified
+Parse error in line 395: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 399: warning: no potential data specified
+Parse error in line 401: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 405: warning: no potential data specified
+Parse error in line 407: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 411: warning: no potential data specified
+Parse error in line 413: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 417: warning: no potential data specified
+Parse error in line 419: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 423: warning: no potential data specified
+Parse error in line 425: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 429: warning: no potential data specified
+Parse error in line 431: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 435: warning: no potential data specified
+Parse error in line 437: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 441: warning: no potential data specified
+Parse error in line 443: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 447: warning: no potential data specified
+Parse error in line 449: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 453: warning: no potential data specified
+Parse error in line 455: warning: no potential data specified
+Parse error in line 457: warning: no potential data specified
+************************* Compilation done !!! *************************
+
+
+
+############## The file to be compiled : GenerateAutoOOBN\nClasses_1#nObjects_2#nStates_2#nNodes_50#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 307: warning: no potential data specified
+Parse error in line 310: warning: no potential data specified
+Parse error in line 313: warning: no potential data specified
+Parse error in line 316: warning: no potential data specified
+Parse error in line 319: warning: no potential data specified
+Parse error in line 322: warning: no potential data specified
+Parse error in line 325: warning: no potential data specified
+Parse error in line 328: warning: no potential data specified
+Parse error in line 331: warning: no potential data specified
+Parse error in line 334: warning: no potential data specified
+Parse error in line 337: warning: no potential data specified
+Parse error in line 340: warning: no potential data specified
+Parse error in line 343: warning: no potential data specified
+Parse error in line 346: warning: no potential data specified
+Parse error in line 349: warning: no potential data specified
+Parse error in line 352: warning: no potential data specified
+Parse error in line 355: warning: no potential data specified
+Parse error in line 358: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 364: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 370: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 376: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 382: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 388: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 394: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 400: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 406: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 412: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 418: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 424: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 430: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 436: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 442: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 448: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 454: warning: no potential data specified
+Parse error in line 315: warning: no potential data specified
+Parse error in line 318: warning: no potential data specified
+Parse error in line 321: warning: no potential data specified
+Parse error in line 324: warning: no potential data specified
+Parse error in line 327: warning: no potential data specified
+Parse error in line 330: warning: no potential data specified
+Parse error in line 333: warning: no potential data specified
+Parse error in line 336: warning: no potential data specified
+Parse error in line 339: warning: no potential data specified
+Parse error in line 342: warning: no potential data specified
+Parse error in line 345: warning: no potential data specified
+Parse error in line 348: warning: no potential data specified
+Parse error in line 351: warning: no potential data specified
+Parse error in line 354: warning: no potential data specified
+Parse error in line 357: warning: no potential data specified
+Parse error in line 360: warning: no potential data specified
+Parse error in line 363: warning: no potential data specified
+Parse error in line 366: warning: no potential data specified
+Parse error in line 369: warning: no potential data specified
+Parse error in line 372: warning: no potential data specified
+Parse error in line 375: warning: no potential data specified
+Parse error in line 378: warning: no potential data specified
+Parse error in line 381: warning: no potential data specified
+Parse error in line 384: warning: no potential data specified
+Parse error in line 387: warning: no potential data specified
+Parse error in line 390: warning: no potential data specified
+Parse error in line 393: warning: no potential data specified
+Parse error in line 396: warning: no potential data specified
+Parse error in line 399: warning: no potential data specified
+Parse error in line 402: warning: no potential data specified
+Parse error in line 405: warning: no potential data specified
+Parse error in line 408: warning: no potential data specified
+Parse error in line 411: warning: no potential data specified
+Parse error in line 414: warning: no potential data specified
+Parse error in line 417: warning: no potential data specified
+Parse error in line 420: warning: no potential data specified
+Parse error in line 423: warning: no potential data specified
+Parse error in line 426: warning: no potential data specified
+Parse error in line 429: warning: no potential data specified
+Parse error in line 432: warning: no potential data specified
+Parse error in line 435: warning: no potential data specified
+Parse error in line 438: warning: no potential data specified
+Parse error in line 441: warning: no potential data specified
+Parse error in line 444: warning: no potential data specified
+Parse error in line 447: warning: no potential data specified
+Parse error in line 450: warning: no potential data specified
+Parse error in line 453: warning: no potential data specified
+Parse error in line 456: warning: no potential data specified
+Parse error in line 459: warning: no potential data specified
+Parse error in line 462: warning: no potential data specified
+************************* Compilation done !!! *************************
+
+
+
+############## The file to be compiled : GenerateAutoOOBN\nClasses_1#nObjects_2#nStates_2#nNodes_50#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 307: warning: no potential data specified
+Parse error in line 310: warning: no potential data specified
+Parse error in line 313: warning: no potential data specified
+Parse error in line 316: warning: no potential data specified
+Parse error in line 319: warning: no potential data specified
+Parse error in line 322: warning: no potential data specified
+Parse error in line 325: warning: no potential data specified
+Parse error in line 328: warning: no potential data specified
+Parse error in line 331: warning: no potential data specified
+Parse error in line 334: warning: no potential data specified
+Parse error in line 337: warning: no potential data specified
+Parse error in line 340: warning: no potential data specified
+Parse error in line 343: warning: no potential data specified
+Parse error in line 346: warning: no potential data specified
+Parse error in line 349: warning: no potential data specified
+Parse error in line 352: warning: no potential data specified
+Parse error in line 355: warning: no potential data specified
+Parse error in line 358: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 364: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 370: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 376: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 382: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 388: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 394: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 400: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 406: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 412: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 418: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 424: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 430: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 436: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 442: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 448: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 454: warning: no potential data specified
+Parse error in line 315: warning: no potential data specified
+Parse error in line 318: warning: no potential data specified
+Parse error in line 321: warning: no potential data specified
+Parse error in line 324: warning: no potential data specified
+Parse error in line 327: warning: no potential data specified
+Parse error in line 330: warning: no potential data specified
+Parse error in line 333: warning: no potential data specified
+Parse error in line 336: warning: no potential data specified
+Parse error in line 339: warning: no potential data specified
+Parse error in line 342: warning: no potential data specified
+Parse error in line 345: warning: no potential data specified
+Parse error in line 348: warning: no potential data specified
+Parse error in line 351: warning: no potential data specified
+Parse error in line 354: warning: no potential data specified
+Parse error in line 357: warning: no potential data specified
+Parse error in line 360: warning: no potential data specified
+Parse error in line 363: warning: no potential data specified
+Parse error in line 366: warning: no potential data specified
+Parse error in line 369: warning: no potential data specified
+Parse error in line 372: warning: no potential data specified
+Parse error in line 375: warning: no potential data specified
+Parse error in line 378: warning: no potential data specified
+Parse error in line 381: warning: no potential data specified
+Parse error in line 384: warning: no potential data specified
+Parse error in line 387: warning: no potential data specified
+Parse error in line 390: warning: no potential data specified
+Parse error in line 393: warning: no potential data specified
+Parse error in line 396: warning: no potential data specified
+Parse error in line 399: warning: no potential data specified
+Parse error in line 402: warning: no potential data specified
+Parse error in line 405: warning: no potential data specified
+Parse error in line 408: warning: no potential data specified
+Parse error in line 411: warning: no potential data specified
+Parse error in line 414: warning: no potential data specified
+Parse error in line 417: warning: no potential data specified
+Parse error in line 420: warning: no potential data specified
+Parse error in line 423: warning: no potential data specified
+Parse error in line 426: warning: no potential data specified
+Parse error in line 429: warning: no potential data specified
+Parse error in line 432: warning: no potential data specified
+Parse error in line 435: warning: no potential data specified
+Parse error in line 438: warning: no potential data specified
+Parse error in line 441: warning: no potential data specified
+Parse error in line 444: warning: no potential data specified
+Parse error in line 447: warning: no potential data specified
+Parse error in line 450: warning: no potential data specified
+Parse error in line 453: warning: no potential data specified
+Parse error in line 456: warning: no potential data specified
+Parse error in line 459: warning: no potential data specified
+Parse error in line 462: warning: no potential data specified
+############## The file to be compiled : GenerateAutoOOBN\nClasses_1#nObjects_2#nStates_2#nNodes_50#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 307: warning: no potential data specified
+Parse error in line 310: warning: no potential data specified
+Parse error in line 313: warning: no potential data specified
+Parse error in line 316: warning: no potential data specified
+Parse error in line 319: warning: no potential data specified
+Parse error in line 322: warning: no potential data specified
+Parse error in line 325: warning: no potential data specified
+Parse error in line 328: warning: no potential data specified
+Parse error in line 331: warning: no potential data specified
+Parse error in line 334: warning: no potential data specified
+Parse error in line 337: warning: no potential data specified
+Parse error in line 340: warning: no potential data specified
+Parse error in line 343: warning: no potential data specified
+Parse error in line 346: warning: no potential data specified
+Parse error in line 349: warning: no potential data specified
+Parse error in line 352: warning: no potential data specified
+Parse error in line 355: warning: no potential data specified
+Parse error in line 358: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 364: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 370: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 376: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 382: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 388: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 394: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 400: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 406: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 412: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 418: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 424: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 430: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 436: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 442: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 448: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 454: warning: no potential data specified
+Parse error in line 315: warning: no potential data specified
+Parse error in line 318: warning: no potential data specified
+Parse error in line 321: warning: no potential data specified
+Parse error in line 324: warning: no potential data specified
+Parse error in line 327: warning: no potential data specified
+Parse error in line 330: warning: no potential data specified
+Parse error in line 333: warning: no potential data specified
+Parse error in line 336: warning: no potential data specified
+Parse error in line 339: warning: no potential data specified
+Parse error in line 342: warning: no potential data specified
+Parse error in line 345: warning: no potential data specified
+Parse error in line 348: warning: no potential data specified
+Parse error in line 351: warning: no potential data specified
+Parse error in line 354: warning: no potential data specified
+Parse error in line 357: warning: no potential data specified
+Parse error in line 360: warning: no potential data specified
+Parse error in line 363: warning: no potential data specified
+Parse error in line 366: warning: no potential data specified
+Parse error in line 369: warning: no potential data specified
+Parse error in line 372: warning: no potential data specified
+Parse error in line 375: warning: no potential data specified
+Parse error in line 378: warning: no potential data specified
+Parse error in line 381: warning: no potential data specified
+Parse error in line 384: warning: no potential data specified
+Parse error in line 387: warning: no potential data specified
+Parse error in line 390: warning: no potential data specified
+Parse error in line 393: warning: no potential data specified
+Parse error in line 396: warning: no potential data specified
+Parse error in line 399: warning: no potential data specified
+Parse error in line 402: warning: no potential data specified
+Parse error in line 405: warning: no potential data specified
+Parse error in line 408: warning: no potential data specified
+Parse error in line 411: warning: no potential data specified
+Parse error in line 414: warning: no potential data specified
+Parse error in line 417: warning: no potential data specified
+Parse error in line 420: warning: no potential data specified
+Parse error in line 423: warning: no potential data specified
+Parse error in line 426: warning: no potential data specified
+Parse error in line 429: warning: no potential data specified
+Parse error in line 432: warning: no potential data specified
+Parse error in line 435: warning: no potential data specified
+Parse error in line 438: warning: no potential data specified
+Parse error in line 441: warning: no potential data specified
+Parse error in line 444: warning: no potential data specified
+Parse error in line 447: warning: no potential data specified
+Parse error in line 450: warning: no potential data specified
+Parse error in line 453: warning: no potential data specified
+Parse error in line 456: warning: no potential data specified
+Parse error in line 459: warning: no potential data specified
+Parse error in line 462: warning: no potential data specified
+############## The file to be compiled : GenerateAutoOOBN\nClasses_1#nObjects_2#nStates_2#nNodes_50#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 307: warning: no potential data specified
+Parse error in line 310: warning: no potential data specified
+Parse error in line 313: warning: no potential data specified
+Parse error in line 316: warning: no potential data specified
+Parse error in line 319: warning: no potential data specified
+Parse error in line 322: warning: no potential data specified
+Parse error in line 325: warning: no potential data specified
+Parse error in line 328: warning: no potential data specified
+Parse error in line 331: warning: no potential data specified
+Parse error in line 334: warning: no potential data specified
+Parse error in line 337: warning: no potential data specified
+Parse error in line 340: warning: no potential data specified
+Parse error in line 343: warning: no potential data specified
+Parse error in line 346: warning: no potential data specified
+Parse error in line 349: warning: no potential data specified
+Parse error in line 352: warning: no potential data specified
+Parse error in line 355: warning: no potential data specified
+Parse error in line 358: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 364: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 370: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 376: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 382: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 388: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 394: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 400: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 406: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 412: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 418: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 424: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 430: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 436: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 442: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 448: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 454: warning: no potential data specified
+Parse error in line 315: warning: no potential data specified
+Parse error in line 318: warning: no potential data specified
+Parse error in line 321: warning: no potential data specified
+Parse error in line 324: warning: no potential data specified
+Parse error in line 327: warning: no potential data specified
+Parse error in line 330: warning: no potential data specified
+Parse error in line 333: warning: no potential data specified
+Parse error in line 336: warning: no potential data specified
+Parse error in line 339: warning: no potential data specified
+Parse error in line 342: warning: no potential data specified
+Parse error in line 345: warning: no potential data specified
+Parse error in line 348: warning: no potential data specified
+Parse error in line 351: warning: no potential data specified
+Parse error in line 354: warning: no potential data specified
+Parse error in line 357: warning: no potential data specified
+Parse error in line 360: warning: no potential data specified
+Parse error in line 363: warning: no potential data specified
+Parse error in line 366: warning: no potential data specified
+Parse error in line 369: warning: no potential data specified
+Parse error in line 372: warning: no potential data specified
+Parse error in line 375: warning: no potential data specified
+Parse error in line 378: warning: no potential data specified
+Parse error in line 381: warning: no potential data specified
+Parse error in line 384: warning: no potential data specified
+Parse error in line 387: warning: no potential data specified
+Parse error in line 390: warning: no potential data specified
+Parse error in line 393: warning: no potential data specified
+Parse error in line 396: warning: no potential data specified
+Parse error in line 399: warning: no potential data specified
+Parse error in line 402: warning: no potential data specified
+Parse error in line 405: warning: no potential data specified
+Parse error in line 408: warning: no potential data specified
+Parse error in line 411: warning: no potential data specified
+Parse error in line 414: warning: no potential data specified
+Parse error in line 417: warning: no potential data specified
+Parse error in line 420: warning: no potential data specified
+Parse error in line 423: warning: no potential data specified
+Parse error in line 426: warning: no potential data specified
+Parse error in line 429: warning: no potential data specified
+Parse error in line 432: warning: no potential data specified
+Parse error in line 435: warning: no potential data specified
+Parse error in line 438: warning: no potential data specified
+Parse error in line 441: warning: no potential data specified
+Parse error in line 444: warning: no potential data specified
+Parse error in line 447: warning: no potential data specified
+Parse error in line 450: warning: no potential data specified
+Parse error in line 453: warning: no potential data specified
+Parse error in line 456: warning: no potential data specified
+Parse error in line 459: warning: no potential data specified
+Parse error in line 462: warning: no potential data specified
+		-------------------------------------------------------------
+		|                      OOBN Property                        |
+		-------------------------------------------------------------
+		|                    Property                   |    Info   |
+		-------------------------------------------------------------
+		|           Number of Nodes (each class)        |     50    |
+		|           Number of Instanciated Class        |     1     |
+		|           Number of Objects (per class)       |     2     |
+		|           Number of states (per node)         |     2     |
+		|           Average parent (per node)           |     2     |
+		-------------------------------------------------------------
+
+
+		-----------------------------------------------------------
+		|                   Hugin Time Analysis                   |
+		-----------------------------------------------------------
+		|                    Event                   |  Time (ms) |
+		-----------------------------------------------------------
+		|Pre-Processing                              |     unknown|
+		|Compilation                                 |        6576|
+		-----------------------------------------------------------
+		|Total Hugin                                 |       6576+|
+		-----------------------------------------------------------
+
+
+		-----------------------------------------------------------
+		|                   SIIC Time Analysis                    |
+		-----------------------------------------------------------
+		|                    Event                   |  Time (ms) |
+		-----------------------------------------------------------
+		|Pre-Processing                              |          23|
+		|JF Creation                                 |          12|
+		|JT connection                               |           0|
+		|Connection Sorting                          |           0|
+		|Compilation                                 |         141|
+		|Post Prunning                               |           0|
+		-----------------------------------------------------------
+		|Total SIIC                                  |         177|
+		-----------------------------------------------------------
+
+(){}<>{}()50		2			2		1		2		6576		177		23
+
+############## The file to be compiled : GenerateAutoOOBN\nClasses_1#nObjects_3#nStates_2#nNodes_50#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 307: warning: no potential data specified
+Parse error in line 310: warning: no potential data specified
+Parse error in line 313: warning: no potential data specified
+Parse error in line 316: warning: no potential data specified
+Parse error in line 319: warning: no potential data specified
+Parse error in line 322: warning: no potential data specified
+Parse error in line 325: warning: no potential data specified
+Parse error in line 328: warning: no potential data specified
+Parse error in line 331: warning: no potential data specified
+Parse error in line 334: warning: no potential data specified
+Parse error in line 337: warning: no potential data specified
+Parse error in line 340: warning: no potential data specified
+Parse error in line 343: warning: no potential data specified
+Parse error in line 346: warning: no potential data specified
+Parse error in line 349: warning: no potential data specified
+Parse error in line 352: warning: no potential data specified
+Parse error in line 355: warning: no potential data specified
+Parse error in line 358: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 364: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 370: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 376: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 382: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 388: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 394: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 400: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 406: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 412: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 418: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 424: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 430: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 436: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 442: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 448: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 454: warning: no potential data specified
+Parse error in line 319: warning: no potential data specified
+Parse error in line 322: warning: no potential data specified
+Parse error in line 325: warning: no potential data specified
+Parse error in line 328: warning: no potential data specified
+Parse error in line 331: warning: no potential data specified
+Parse error in line 334: warning: no potential data specified
+Parse error in line 337: warning: no potential data specified
+Parse error in line 340: warning: no potential data specified
+Parse error in line 343: warning: no potential data specified
+Parse error in line 346: warning: no potential data specified
+Parse error in line 349: warning: no potential data specified
+Parse error in line 352: warning: no potential data specified
+Parse error in line 355: warning: no potential data specified
+Parse error in line 358: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 364: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 370: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 376: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 382: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 388: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 394: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 400: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 406: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 412: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 418: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 424: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 430: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 436: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 442: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 448: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 454: warning: no potential data specified
+Parse error in line 457: warning: no potential data specified
+Parse error in line 460: warning: no potential data specified
+Parse error in line 463: warning: no potential data specified
+Parse error in line 466: warning: no potential data specified
+############## The file to be compiled : GenerateAutoOOBN\nClasses_1#nObjects_3#nStates_2#nNodes_50#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 307: warning: no potential data specified
+Parse error in line 310: warning: no potential data specified
+Parse error in line 313: warning: no potential data specified
+Parse error in line 316: warning: no potential data specified
+Parse error in line 319: warning: no potential data specified
+Parse error in line 322: warning: no potential data specified
+Parse error in line 325: warning: no potential data specified
+Parse error in line 328: warning: no potential data specified
+Parse error in line 331: warning: no potential data specified
+Parse error in line 334: warning: no potential data specified
+Parse error in line 337: warning: no potential data specified
+Parse error in line 340: warning: no potential data specified
+Parse error in line 343: warning: no potential data specified
+Parse error in line 346: warning: no potential data specified
+Parse error in line 349: warning: no potential data specified
+Parse error in line 352: warning: no potential data specified
+Parse error in line 355: warning: no potential data specified
+Parse error in line 358: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 364: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 370: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 376: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 382: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 388: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 394: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 400: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 406: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 412: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 418: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 424: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 430: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 436: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 442: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 448: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 454: warning: no potential data specified
+Parse error in line 319: warning: no potential data specified
+Parse error in line 322: warning: no potential data specified
+Parse error in line 325: warning: no potential data specified
+Parse error in line 328: warning: no potential data specified
+Parse error in line 331: warning: no potential data specified
+Parse error in line 334: warning: no potential data specified
+Parse error in line 337: warning: no potential data specified
+Parse error in line 340: warning: no potential data specified
+Parse error in line 343: warning: no potential data specified
+Parse error in line 346: warning: no potential data specified
+Parse error in line 349: warning: no potential data specified
+Parse error in line 352: warning: no potential data specified
+Parse error in line 355: warning: no potential data specified
+Parse error in line 358: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 364: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 370: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 376: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 382: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 388: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 394: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 400: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 406: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 412: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 418: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 424: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 430: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 436: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 442: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 448: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 454: warning: no potential data specified
+Parse error in line 457: warning: no potential data specified
+Parse error in line 460: warning: no potential data specified
+Parse error in line 463: warning: no potential data specified
+Parse error in line 466: warning: no potential data specified
+############## The file to be compiled : GenerateAutoOOBN\nClasses_1#nObjects_3#nStates_2#nNodes_50#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 307: warning: no potential data specified
+Parse error in line 310: warning: no potential data specified
+Parse error in line 313: warning: no potential data specified
+Parse error in line 316: warning: no potential data specified
+Parse error in line 319: warning: no potential data specified
+Parse error in line 322: warning: no potential data specified
+Parse error in line 325: warning: no potential data specified
+Parse error in line 328: warning: no potential data specified
+Parse error in line 331: warning: no potential data specified
+Parse error in line 334: warning: no potential data specified
+Parse error in line 337: warning: no potential data specified
+Parse error in line 340: warning: no potential data specified
+Parse error in line 343: warning: no potential data specified
+Parse error in line 346: warning: no potential data specified
+Parse error in line 349: warning: no potential data specified
+Parse error in line 352: warning: no potential data specified
+Parse error in line 355: warning: no potential data specified
+Parse error in line 358: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 364: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 370: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 376: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 382: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 388: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 394: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 400: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 406: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 412: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 418: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 424: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 430: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 436: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 442: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 448: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 454: warning: no potential data specified
+Parse error in line 319: warning: no potential data specified
+Parse error in line 322: warning: no potential data specified
+Parse error in line 325: warning: no potential data specified
+Parse error in line 328: warning: no potential data specified
+Parse error in line 331: warning: no potential data specified
+Parse error in line 334: warning: no potential data specified
+Parse error in line 337: warning: no potential data specified
+Parse error in line 340: warning: no potential data specified
+Parse error in line 343: warning: no potential data specified
+Parse error in line 346: warning: no potential data specified
+Parse error in line 349: warning: no potential data specified
+Parse error in line 352: warning: no potential data specified
+Parse error in line 355: warning: no potential data specified
+Parse error in line 358: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 364: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 370: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 376: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 382: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 388: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 394: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 400: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 406: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 412: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 418: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 424: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 430: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 436: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 442: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 448: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 454: warning: no potential data specified
+Parse error in line 457: warning: no potential data specified
+Parse error in line 460: warning: no potential data specified
+Parse error in line 463: warning: no potential data specified
+Parse error in line 466: warning: no potential data specified
+############## The file to be compiled : GenerateAutoOOBN\nClasses_1#nObjects_3#nStates_2#nNodes_50#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 307: warning: no potential data specified
+Parse error in line 310: warning: no potential data specified
+Parse error in line 313: warning: no potential data specified
+Parse error in line 316: warning: no potential data specified
+Parse error in line 319: warning: no potential data specified
+Parse error in line 322: warning: no potential data specified
+Parse error in line 325: warning: no potential data specified
+Parse error in line 328: warning: no potential data specified
+Parse error in line 331: warning: no potential data specified
+Parse error in line 334: warning: no potential data specified
+Parse error in line 337: warning: no potential data specified
+Parse error in line 340: warning: no potential data specified
+Parse error in line 343: warning: no potential data specified
+Parse error in line 346: warning: no potential data specified
+Parse error in line 349: warning: no potential data specified
+Parse error in line 352: warning: no potential data specified
+Parse error in line 355: warning: no potential data specified
+Parse error in line 358: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 364: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 370: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 376: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 382: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 388: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 394: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 400: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 406: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 412: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 418: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 424: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 430: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 436: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 442: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 448: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 454: warning: no potential data specified
+Parse error in line 319: warning: no potential data specified
+Parse error in line 322: warning: no potential data specified
+Parse error in line 325: warning: no potential data specified
+Parse error in line 328: warning: no potential data specified
+Parse error in line 331: warning: no potential data specified
+Parse error in line 334: warning: no potential data specified
+Parse error in line 337: warning: no potential data specified
+Parse error in line 340: warning: no potential data specified
+Parse error in line 343: warning: no potential data specified
+Parse error in line 346: warning: no potential data specified
+Parse error in line 349: warning: no potential data specified
+Parse error in line 352: warning: no potential data specified
+Parse error in line 355: warning: no potential data specified
+Parse error in line 358: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 364: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 370: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 376: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 382: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 388: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 394: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 400: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 406: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 412: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 418: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 424: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 430: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 436: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 442: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 448: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 454: warning: no potential data specified
+Parse error in line 457: warning: no potential data specified
+Parse error in line 460: warning: no potential data specified
+Parse error in line 463: warning: no potential data specified
+Parse error in line 466: warning: no potential data specified
+############## The file to be compiled : GenerateAutoOOBN\nClasses_1#nObjects_3#nStates_2#nNodes_50#maxInDeg_2#maxArcs_6\GeneratedFiles\temp_main.class ########################
+
+Parse error in line 307: warning: no potential data specified
+Parse error in line 310: warning: no potential data specified
+Parse error in line 313: warning: no potential data specified
+Parse error in line 316: warning: no potential data specified
+Parse error in line 319: warning: no potential data specified
+Parse error in line 322: warning: no potential data specified
+Parse error in line 325: warning: no potential data specified
+Parse error in line 328: warning: no potential data specified
+Parse error in line 331: warning: no potential data specified
+Parse error in line 334: warning: no potential data specified
+Parse error in line 337: warning: no potential data specified
+Parse error in line 340: warning: no potential data specified
+Parse error in line 343: warning: no potential data specified
+Parse error in line 346: warning: no potential data specified
+Parse error in line 349: warning: no potential data specified
+Parse error in line 352: warning: no potential data specified
+Parse error in line 355: warning: no potential data specified
+Parse error in line 358: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 364: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 370: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 376: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 382: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 388: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 394: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 400: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 406: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 412: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 418: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 424: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 430: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 436: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 442: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 448: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 454: warning: no potential data specified
+Parse error in line 319: warning: no potential data specified
+Parse error in line 322: warning: no potential data specified
+Parse error in line 325: warning: no potential data specified
+Parse error in line 328: warning: no potential data specified
+Parse error in line 331: warning: no potential data specified
+Parse error in line 334: warning: no potential data specified
+Parse error in line 337: warning: no potential data specified
+Parse error in line 340: warning: no potential data specified
+Parse error in line 343: warning: no potential data specified
+Parse error in line 346: warning: no potential data specified
+Parse error in line 349: warning: no potential data specified
+Parse error in line 352: warning: no potential data specified
+Parse error in line 355: warning: no potential data specified
+Parse error in line 358: warning: no potential data specified
+Parse error in line 361: warning: no potential data specified
+Parse error in line 364: warning: no potential data specified
+Parse error in line 367: warning: no potential data specified
+Parse error in line 370: warning: no potential data specified
+Parse error in line 373: warning: no potential data specified
+Parse error in line 376: warning: no potential data specified
+Parse error in line 379: warning: no potential data specified
+Parse error in line 382: warning: no potential data specified
+Parse error in line 385: warning: no potential data specified
+Parse error in line 388: warning: no potential data specified
+Parse error in line 391: warning: no potential data specified
+Parse error in line 394: warning: no potential data specified
+Parse error in line 397: warning: no potential data specified
+Parse error in line 400: warning: no potential data specified
+Parse error in line 403: warning: no potential data specified
+Parse error in line 406: warning: no potential data specified
+Parse error in line 409: warning: no potential data specified
+Parse error in line 412: warning: no potential data specified
+Parse error in line 415: warning: no potential data specified
+Parse error in line 418: warning: no potential data specified
+Parse error in line 421: warning: no potential data specified
+Parse error in line 424: warning: no potential data specified
+Parse error in line 427: warning: no potential data specified
+Parse error in line 430: warning: no potential data specified
+Parse error in line 433: warning: no potential data specified
+Parse error in line 436: warning: no potential data specified
+Parse error in line 439: warning: no potential data specified
+Parse error in line 442: warning: no potential data specified
+Parse error in line 445: warning: no potential data specified
+Parse error in line 448: warning: no potential data specified
+Parse error in line 451: warning: no potential data specified
+Parse error in line 454: warning: no potential data specified
+Parse error in line 457: warning: no potential data specified
+Parse error in line 460: warning: no potential data specified
+Parse error in line 463: warning: no potential data specified
+Parse error in line 466: warning: no potential data specified
+Some exception arose!!!
+All 20 cases are tried!!! Among them 8 cases were incomplete; 12 cases were complete!!!

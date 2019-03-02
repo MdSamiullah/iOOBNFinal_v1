@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.io.PrintWriter;
 import java.io.RandomAccessFile;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.InvocationTargetException;
@@ -2414,7 +2415,7 @@ public class SIICompilation {
 		int []additionalClass = {0, 1, 2, 3};
 		int []numObjPerAdditionalClass = {1, 2, 3};
 		int []arity = {2, 3, 4};
-		int []bnSize = {5, 20, 50};
+		int []bnSize = {5};
 		int []maxParent = {2, 3, 5};
 		
 //		int []additionalClass = {1};
@@ -2453,62 +2454,82 @@ public class SIICompilation {
 		return dirs;
 	}
 	
+	
 	@SuppressWarnings("finally")
 	public static void main(String args[]) throws Exception 
 	{	
+		String complexityOutputFileName = "C:\\Users\\msam34\\git\\iOOBNFinal_v1\\iOOBNFinal\\editor\\huginIntegration\\SIIC_Output_tabular.txt";
+		PrintWriter pw = null;
+		pw =  new PrintWriter(new FileWriter(complexityOutputFileName));
+        String line;
+		
 		ArrayList<String> dirList = generateDirectoriesNameList();
 		if(!onlyDisplatTime) System.out.println("The list of dir file names generated " + dirList);
 		int count = 0;
 		int completedoneCount = 0;
 		boolean exception = false;
+		String str = "NumOfClass \t int NumOfObject \t NumOfNodes \t NumOfAvgPar \t NumOfStates \t Hugin \t SIIC\n";
+		pw.println(str);
+//		pw.close();// we are closing this again and again just to atleat save the part that worked well and to avoid loss of data due to abrupt closure of the function
 //		String dir = "GenerateAutoOOBN\\nClasses_1#nObjects_1#nStates_3#nNodes_5#maxInDeg_15#maxArcs_6\\";
-		for(String dir : dirList) {
-			timingInfo foldedTime = new timingInfo(); 
-			for(int j = 0; j < folds; j++) 
-			{
-				exception = false;
-				String additionalDir = "GeneratedFiles\\";
-				String fileName = "temp_main.class";
-				SIICompilation SIIC = new SIICompilation();
-				System.out.println("############## The file to be compiled : "+ dir + additionalDir + fileName + " ########################\n");
-				count++;
-				SIIC.tInfo = new timingInfo();
-				try {
-				
-				/*
-				 * Hugin compilation
-				 * 
-				 * */
-				
-				SIIC.performHuginCompilation(dir, "main.oobn");
-				
-				/*
-				 * SII compilation
-				 * 
-				 * */
-				SIIC.performCompilation(dir, additionalDir, fileName);
-				System.out.println("************************* Compilation done !!! *************************\n\n\n");
-				SIIC.tInfo.datasetProp = dir.replace("GenerateAutoOOBN\\", "");
-//				System.out.println(SIIC.tInfo);
-				foldedTime.addTimingInfo(SIIC.tInfo);
-				completedoneCount++;
-				}
-				catch(RuntimeException re){
-					exception = true;
-					System.out.println("Some exception arose!!!");
-				}
-				finally {
+//		try {
+			for(String dir : dirList) {
+				timingInfo foldedTime = new timingInfo();
+	//			pw =  new PrintWriter(new FileWriter(complexityOutputFileName)); // we are opening-appending-closing this again and again just to atleat save the part that worked well and to avoid loss of data due to abrupt closure of the function
+				for(int j = 0; j < folds; j++) 
+				{
+					exception = false;
+					String additionalDir = "GeneratedFiles\\";
+					String fileName = "temp_main.class";
+					SIICompilation SIIC = new SIICompilation();
+					System.out.println("############## The file to be compiled : "+ dir + additionalDir + fileName + " ########################\n");
+					count++;
+					SIIC.tInfo = new timingInfo();
+					try {
 					
-					if(exception) {
-						System.out.println(dir + additionalDir + fileName+"\n************************* Compilation incomplete !!! *************************\n\n\n");
+					/*
+					 * Hugin compilation
+					 * 
+					 * */
+					
+					SIIC.performHuginCompilation(dir, "main.oobn");
+					
+					/*
+					 * SII compilation
+					 * 
+					 * */
+					SIIC.performCompilation(dir, additionalDir, fileName);
+					System.out.println("************************* Compilation done !!! *************************\n\n\n");
+					SIIC.tInfo.datasetProp = dir.replace("GenerateAutoOOBN\\", "");
+	//				System.out.println(SIIC.tInfo);
+					foldedTime.addTimingInfo(SIIC.tInfo);
+					completedoneCount++;
 					}
-					continue;
+					catch(RuntimeException re){
+						exception = true;
+						System.out.println("Some exception arose!!!");
+					}
+					finally {
+						
+						if(exception) {
+							System.out.println(dir + additionalDir + fileName+"\n************************* Compilation incomplete !!! *************************\n\n\n");
+						}
+						continue;
+					}
 				}
+				foldedTime.averageTimingInfo();
+				System.out.println(foldedTime);
+				foldedTime.printTableInFile(pw);
 			}
-//			foldedTime.averageTimingInfo();
-			System.out.println(foldedTime);
-		}
+//		}
+//		catch(RuntimeException re) {
+//			System.out.println("Some exception arose!!!");
+//		}
+//		finally {
+//			pw.close();
+//		}
 		System.out.println("All " + count + " cases are tried!!! Among them " + (count-completedoneCount) + " cases were incomplete; " + completedoneCount + " cases were complete!!!");
+		pw.close();
 	}
 
 	public void performHuginCompilation(String dir, String fileName) throws Exception {
@@ -2609,6 +2630,19 @@ class timingInfo{
 		this.totalSIICTime = "";
 	}
 	
+	public void printTableInFile(PrintWriter pw) {
+		int hugSize = 0;
+		if(this.huginTimingBreakDown != null && this.huginTimingBreakDown.size()!=2)
+		{
+			hugSize = this.huginTimingBreakDown.size()-1;
+			System.out.println("hugSize = " + hugSize+" "+this.huginTimingBreakDown);
+			pw.print("(){}<>{}() " + this.nNodes + "\t\t" + this.avgPar + "\t\t\t" + this.nStates + "\t\t" + this.nClasses + "\t\t" + this.nObjects + "\t\t" + this.huginTimingBreakDown.get(hugSize) + "\t\t" + this.totalSIICTime+"\t\t"+this.sIICTimingBreakDown.get(1)+ "\n");
+			System.out.println("(){}<>{}()" + this.nNodes + "\t\t" + this.avgPar + "\t\t\t" + this.nStates + "\t\t" + this.nClasses + "\t\t" + this.nObjects + "\t\t" + this.huginTimingBreakDown.get(this.huginTimingBreakDown.size()-1) + "\t\t" + this.totalSIICTime+"\t\t"+this.sIICTimingBreakDown.get(1)+ "\n");
+		}
+		
+//		pw.close();
+	}
+
 	public void addTimingInfo(timingInfo ti2) {
 		if(this.huginTimingBreakDown.size() > 2) {// for hugin time, there is always 2 entries added  by default
 			for(int i = 2; i < this.huginTimingBreakDown.size();  i+=2) {// we don't need to add the 1st two info
@@ -2656,6 +2690,7 @@ class timingInfo{
 			this.sIICTimingBreakDown.set(i+1, Long.toString(avg));
 		}
 		
+		if(this.totalSIICTime.equalsIgnoreCase("")) this.totalSIICTime = "0";
 		this.totalSIICTime = Integer.toString(Integer.parseInt(this.totalSIICTime) / this.countFold);
 	}
 	
