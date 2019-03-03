@@ -3131,8 +3131,9 @@ public class EditorActions
 				cases.add(null);
 				
 				System.out.println("fileNames " + fileNames + " classNames " + classNames);
+				// the "2" as last parameter in LAP func, is a default number  for number of states to be used in calculating JT cost Kanazawa
 				
-				this.outcome = lpOOBN.LAP (fileNames, classNames, cases, "");// dir = "";
+				this.outcome = lpOOBN.LAP (fileNames, classNames, cases, "", 2);// dir = "";
 				
 				inferenceOutcomeDisplay();
 			} catch (ParserConfigurationException | SAXException e1) {

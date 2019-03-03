@@ -40,7 +40,7 @@ public class LoadAndPropagateOOBN {
 	 */
 	
 	public ArrayList<ArrayList<String>> outcome;
-	public ArrayList<ArrayList<String>> LAP(ArrayList<String> classFileNames, ArrayList<String> classNames, ArrayList<String> caseName, String dir) throws ExceptionHugin, IOException, NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+	public ArrayList<ArrayList<String>> LAP(ArrayList<String> classFileNames, ArrayList<String> classNames, ArrayList<String> caseName, String dir, int numOfStates) throws ExceptionHugin, IOException, NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		long startTime = System.currentTimeMillis();
 		
 		outcome = new ArrayList<ArrayList<String>>();
@@ -99,11 +99,11 @@ public class LoadAndPropagateOOBN {
 //			dom.get(I).triangulate(nl);
 			
 			JunctionTreeList jT = dom.get(I).getJunctionTrees();
-			
+			String JTFileName = "";
 			if(!SIICompilation.onlyDisplatTime)
 				printJunctionTree(jT);
 			printJunctionTreeFile(jT, classNames.get(I), dir);
-			
+			JTFileName = dir + "JT_" + classNames.get(I).replace(".oobn", "")+ ".txt";
 //			constructJTOwn(dom.get(I));
 			
 			boolean isJTHold = false;
@@ -197,7 +197,8 @@ public class LoadAndPropagateOOBN {
 ////			System.out.println();
 			
 			dom.get(I).compile();
-			
+			int jtcost = calculateOwnJTCostKanazawaWRTNumOfStates(dom.get(I), JTFileName, numOfStates);
+			System.out.println("JTCost Hugin " + jtcost);
 //			printBeliefsAndUtilities(dom.get(I));
 		}
 		long endTime = System.currentTimeMillis();
@@ -424,9 +425,10 @@ public class LoadAndPropagateOOBN {
 			for(Integer n: myJTClqNeighbors.keySet()){
 				int numOfNeighbor = myJTClqNeighbors.get(n).size();
 				int omega = numOfNeighbor;
+				int stateSpaceSize = 2;
 				for(String key: myJTCliques.get(n)){
 					if (dom.getNodeByName(key) != null)
-						omega *= 2;
+						omega *= stateSpaceSize;
 					else omega *= 1;
 				}
 				cost += omega;
@@ -435,6 +437,30 @@ public class LoadAndPropagateOOBN {
 			return cost;
 		}
 		
+		/*
+		 * this function can be used to calculate JT cost of Kanazawa where JT is in string form and extracted from file
+		 * 
+		 * */
+		public int calculateOwnJTCostKanazawaWRTNumOfStates(Domain dom, String fileJT, int numOfStates) throws IOException, ExceptionHugin, NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{
+			getJTInfoFileString(fileJT, "[: ]+");
+			// we don't need to extract nodes from JTs, since we have domain.getNodes() and domain.getNodesbyName()
+			
+			// myStrClq: myJTCliques
+			int cost = 0;
+			for(Integer n: myJTClqNeighbors.keySet()){
+				int numOfNeighbor = myJTClqNeighbors.get(n).size();
+				int omega = numOfNeighbor;
+				int stateSpaceSize = numOfStates;
+				for(String key: myJTCliques.get(n)){
+					if (dom.getNodeByName(key) != null)
+						omega *= stateSpaceSize;
+					else omega *= 1;
+				}
+				cost += omega;
+			}
+			
+			return cost;
+		}
 		public void displayGraph(HashMap<String, HashSet<String>> graph){
 			System.out.println("Current graph: ");
 			for(String key: graph.keySet()){
@@ -770,7 +796,7 @@ public class LoadAndPropagateOOBN {
 		classNames.add("NoBCGD");
 //		fileNames.add("C:\\Users\\msamiull\\workspace\\jgraphx-master\\Diag.oobn");
 //		classNames.add("Diag");
-		lap.LAP (fileNames, classNames, null, "");// dir = "";
+		lap.LAP (fileNames, classNames, null, "", 2);// dir = "";
 	}
 	
 }
