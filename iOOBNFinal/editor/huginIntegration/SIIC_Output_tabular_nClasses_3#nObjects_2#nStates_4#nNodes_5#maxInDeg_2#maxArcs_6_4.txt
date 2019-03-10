@@ -1,0 +1,3 @@
+Fold   	 NumOfNodes     NumOfAvgPar 	 NumOfStates 	 NumOfClass 	   NumOfObj 	     Hugin 	       SIIC   	   RComplexity    	     Hugin-JTCost 	       SIIC-JTCost
+
+(){}<>{}() 4	   5		2			4		3		2		40192		469968896		1965		63		281		250

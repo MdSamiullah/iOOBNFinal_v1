@@ -53,8 +53,9 @@ public class CleaningOutcome {
 	    try {
 	         br = new BufferedReader(new FileReader(sourceFileName));
 	         pw =  new PrintWriter(new FileWriter(destinationFileName));
+	         // RComplexity = real complexity
 //	         String str = "NumOfNodes     NumOfAvgPar \t NumOfStates \t NumOfClass \t   NumOfObj \t     Hugin \t       SIIC  \t     Preproc\n";
-	         String str = "NumOfNodes     NumOfAvgPar \t NumOfStates \t NumOfClass \t   NumOfObj \t     Hugin \t       SIIC\n";
+	         String str = "Fold   \t NumOfNodes     NumOfAvgPar \t NumOfStates \t NumOfClass \t   NumOfObj \t     RComplexity\t    Hugin-JTCost \t       SIIC-JTCost   \t  Hugin   \t     SIIC\n";
 	         pw.print(str);
 	         String line;
 	         boolean doubleStarLine = false;

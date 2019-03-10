@@ -59,7 +59,7 @@ import javax.swing.table.DefaultTableModel;
 public class NPPCompiler {
 
 	public int noOfErrors = 0;
-	
+	public static int folds = 5;
 	public NPPCompiler(){
 		noOfErrors = 0;
 		
@@ -909,27 +909,13 @@ public class NPPCompiler {
 						argv[5] = Integer.toString(maxParent[c]);
 						for(int d = 0; d < additionalClass.length; d++){
 							argv[7] = Integer.toString(additionalClass[d]);
-							if(additionalClass[d] == 0) {
-								argv[9] = "0";
-								String namePrefix = "";
-								namePrefix += "nClasses_"+argv[7]+"#" + "nObjects_" + argv[9] + "#" + "nStates_" + argv[3] + "#" + "nNodes_" + argv[1] + "#" + "maxInDeg_" + argv[5] + "#" + "maxArcs_" + "6";
-						        String directory = directoryMain + namePrefix + "\\";
-						        
-						        File f = new File(directory);
-						        
-						        if (f.exists() && f.isDirectory()) {
-						        	
-						        	String classToCompile = "main";
-						        	performCompilation(f, directory, extension, choice, classToCompile);
-						        }
-							}
-							else{
-								for(int e = 0; e < numObjPerAdditionalClass.length; e++){
-									argv[9] = Integer.toString(numObjPerAdditionalClass[e]);
+							for(int iter = 0; iter < folds; iter++)
+							{
+								if(additionalClass[d] == 0) {
+									argv[9] = "0";
 									String namePrefix = "";
 									namePrefix += "nClasses_"+argv[7]+"#" + "nObjects_" + argv[9] + "#" + "nStates_" + argv[3] + "#" + "nNodes_" + argv[1] + "#" + "maxInDeg_" + argv[5] + "#" + "maxArcs_" + "6";
-							        
-							        String directory = directoryMain + namePrefix + "\\";
+							        String directory = directoryMain + namePrefix + "\\"+"_"+(iter+1)+"\\";
 							        
 							        File f = new File(directory);
 							        
@@ -939,11 +925,29 @@ public class NPPCompiler {
 							        	performCompilation(f, directory, extension, choice, classToCompile);
 							        }
 								}
+								else{
+									for(int e = 0; e < numObjPerAdditionalClass.length; e++){
+										argv[9] = Integer.toString(numObjPerAdditionalClass[e]);
+										String namePrefix = "";
+										namePrefix += "nClasses_"+argv[7]+"#" + "nObjects_" + argv[9] + "#" + "nStates_" + argv[3] + "#" + "nNodes_" + argv[1] + "#" + "maxInDeg_" + argv[5] + "#" + "maxArcs_" + "6";
+								        
+								        String directory = directoryMain + namePrefix + "\\_" + (iter+1) + "\\";
+								        
+								        File f = new File(directory);
+								        
+								        if (f.exists() && f.isDirectory()) {
+								        	
+								        	String classToCompile = "main";
+								        	performCompilation(f, directory, extension, choice, classToCompile);
+								        }
+									}
+								}
 							}
 						}
 					}
 				}
 			}
+			System.out.println("I have compiled all files");
     	}
     	else if(choice.equalsIgnoreCase("X")){
     		System.out.println("Please provide the class name");

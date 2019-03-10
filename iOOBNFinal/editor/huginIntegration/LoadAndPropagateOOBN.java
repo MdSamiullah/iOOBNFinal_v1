@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -197,8 +198,14 @@ public class LoadAndPropagateOOBN {
 ////			System.out.println();
 			
 			dom.get(I).compile();
-			int jtcost = calculateOwnJTCostKanazawaWRTNumOfStates(dom.get(I), JTFileName, numOfStates);
-			System.out.println("JTCost Hugin " + jtcost);
+//			System.out.println(classFileNames.get(I));
+			if(classFileNames.get(I).endsWith("main.oobn")) {
+//				long jtcost = calculateOwnJTCostKanazawaWRTNumOfStates(dom.get(I), JTFileName, numOfStates);
+				BigInteger jtcost = calculateOwnJTCostKanazawaWRTNumOfStates(dom.get(I), JTFileName, numOfStates);
+				System.out.println("JTCost Hugin " + jtcost);
+				SIICompilation.JTCostHugin = jtcost;
+				SIICompilation.BNComplexity = calculateComplexityBN(dom.get(I), numOfStates);
+			}
 //			printBeliefsAndUtilities(dom.get(I));
 		}
 		long endTime = System.currentTimeMillis();
@@ -411,7 +418,35 @@ public class LoadAndPropagateOOBN {
 			
 			return cost;
 		}
+		
+		/*
+		 * this function can be used to complexity of a BN proposed by Julia flores where 
+		 * we assumed Num of States is fixed per node 
+		 * */
+		public long calculateComplexityBN(Domain dom, int NumOfStatePerNode) throws IOException, ExceptionHugin, NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{
+			// we don't need to extract nodes from JTs, since we have domain.getNodes() and domain.getNodesbyName()
+			
+			long complexity = 0;
+//				    for n in range(NON):
+//				        nodeComplexity = NOS - 1
+//				        for p in range(NOP):
+//				            nodeComplexity *= NOS
+//				        complexity += nodeComplexity
+//
+			for(Node n : dom.getNodes()) {
+//				System.out.println("Node name " + n.getName());
+				complexity += NumOfStatePerNode;
+				long parProd = 1;
+				for (Node p: n.getParents()) {
+					parProd *= NumOfStatePerNode;
+				}
+				complexity += parProd;
+			}
+			
+			return complexity;
+		}
 
+		
 		/*
 		 * this function can be used to calculate JT cost of Kanazawa where JT is in string form and extracted from file
 		 * 
@@ -441,22 +476,25 @@ public class LoadAndPropagateOOBN {
 		 * this function can be used to calculate JT cost of Kanazawa where JT is in string form and extracted from file
 		 * 
 		 * */
-		public int calculateOwnJTCostKanazawaWRTNumOfStates(Domain dom, String fileJT, int numOfStates) throws IOException, ExceptionHugin, NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{
+		public BigInteger calculateOwnJTCostKanazawaWRTNumOfStates(Domain dom, String fileJT, int numOfStates) throws IOException, ExceptionHugin, NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{
 			getJTInfoFileString(fileJT, "[: ]+");
 			// we don't need to extract nodes from JTs, since we have domain.getNodes() and domain.getNodesbyName()
 			
 			// myStrClq: myJTCliques
-			int cost = 0;
+//			long cost = 0;
+			BigInteger cost = new BigInteger("0"); 
 			for(Integer n: myJTClqNeighbors.keySet()){
 				int numOfNeighbor = myJTClqNeighbors.get(n).size();
-				int omega = numOfNeighbor;
+//				int omega = numOfNeighbor;
+				BigInteger omega = new BigInteger(Integer.toString(numOfNeighbor));
 				int stateSpaceSize = numOfStates;
 				for(String key: myJTCliques.get(n)){
 					if (dom.getNodeByName(key) != null)
-						omega *= stateSpaceSize;
-					else omega *= 1;
+//						omega *= stateSpaceSize;
+						omega = omega.multiply(new BigInteger(Integer.toString(stateSpaceSize)));
 				}
-				cost += omega;
+//				cost += omega;
+				cost = cost.add(omega);
 			}
 			
 			return cost;

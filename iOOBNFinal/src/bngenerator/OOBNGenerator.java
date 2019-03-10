@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class OOBNGenerator {
+	public static int folds = 5;
     int nClasses=0;
     int nObjects=1;// initially this is 0 but if nClasses != 0 then default will be 1
     boolean nClassesWasSet = false;// this will help define nObjs's default value, if true then nObjs = 1
@@ -243,7 +244,7 @@ public class OOBNGenerator {
 	        		argv = params.split(" ");
 	        		
 	        		OOBNGenerator oobn = new OOBNGenerator();
-	                oobn.generateOOBNHugin(argv);
+	                oobn.generateOOBNHugin(argv, folds);
         		}
         		
         		
@@ -276,18 +277,20 @@ public class OOBNGenerator {
 					argv[5] = Integer.toString(maxParent[c]);
 					for(int d = 0; d < additionalClass.length; d++){
 						argv[7] = Integer.toString(additionalClass[d]);
-						if(additionalClass[d] == 0) {
-							argv[9] = "0";
-							OOBNGenerator oobn = new OOBNGenerator();
-							System.out.println("Now generating: " + argv [0] + " " + argv [1] + " "+ argv [2] + " "+ argv [3] + " "+ argv [4] + " "+ argv [5] + " "+ argv [6] + " "+ argv [7] + " "+ argv [8] + " "+ argv [9] + " "+ argv [10]);
-					        oobn.generateOOBNHugin(argv);
-						}
-						else{
-							for(int e = 0; e < numObjPerAdditionalClass.length; e++){
-								argv[9] = Integer.toString(numObjPerAdditionalClass[e]);
+						for(int iter = 0; iter < folds; iter++) {
+							if(additionalClass[d] == 0) {
+								argv[9] = "0";
 								OOBNGenerator oobn = new OOBNGenerator();
 								System.out.println("Now generating: " + argv [0] + " " + argv [1] + " "+ argv [2] + " "+ argv [3] + " "+ argv [4] + " "+ argv [5] + " "+ argv [6] + " "+ argv [7] + " "+ argv [8] + " "+ argv [9] + " "+ argv [10]);
-						        oobn.generateOOBNHugin(argv);
+						        oobn.generateOOBNHugin(argv, iter+1);
+							}
+							else{
+								for(int e = 0; e < numObjPerAdditionalClass.length; e++){
+									argv[9] = Integer.toString(numObjPerAdditionalClass[e]);
+									OOBNGenerator oobn = new OOBNGenerator();
+									System.out.println("Now generating: " + argv [0] + " " + argv [1] + " "+ argv [2] + " "+ argv [3] + " "+ argv [4] + " "+ argv [5] + " "+ argv [6] + " "+ argv [7] + " "+ argv [8] + " "+ argv [9] + " "+ argv [10]);
+							        oobn.generateOOBNHugin(argv, iter+1);
+								}
 							}
 						}
 					}
@@ -297,7 +300,7 @@ public class OOBNGenerator {
 		
 	}
 
-	public void generateOOBNHugin(String[] argv) throws Exception {
+	public void generateOOBNHugin(String[] argv, int iter) throws Exception {
 		dataAquisition(argv);
         String []argv2 = new String[]{"-nNodes", Integer.toString(numberNodes), "-format", "oobn", "-maxVal", Integer.toString(maxValues), "-fixed_maxVal", "-maxInDegree", Integer.toString(numberMaxInDegree)};
         ArrayList<BNGeneratorOwn> bns = new ArrayList<BNGeneratorOwn>();
@@ -330,47 +333,7 @@ public class OOBNGenerator {
         		bns.get(0).oobn.instances.add(tempBinding);
         	}
         }
-        
-        // if any object is added, there is a possibility of adding parents to some nodes, so we need to revisit all nodes of the main class for potential info updating
-        
-//        for (int i=0;i<bns.get(0).oobn.nodes.size();i++ ) {
-//        	Node tempNode = bns.get(0).oobn.nodes.get(Integer.toString(i));
-//        	boolean parentHasRefLink = false;
-//        	if(tempNode.parents.size()>0){
-//        		for(String par: tempNode.parents){
-//        			if(par.contains("_"))	{	parentHasRefLink = true; break;}
-//        		}
-//        	}
-//        	if(parentHasRefLink == true)
-//        		tempNode.data = "";
-//        }
-//        	
-//        	
-//        	// code segment to update potential info
-//        	int nParents=1;
-//            Node tempNode = bns.get(0).oobn.nodes.get(Integer.toString(i));
-//          
-//            for (int j=0;j<tempNode.parents.size();j++) {
-//            	Node par = null;
-//            	String parentName = tempNode.parents.get(j); 
-//            	if(parentName.contains("_")){
-//            		String objClassName = parentName.split("_")[0];// assuming only one "_" will be there in the name
-//            		String parNodeNameInOtherClass = parentName.split("_")[1].replace("node", "");
-//            		String className = objClassName.split("C")[1];// this will get a number of the class
-//            		par = bns.get(Integer.parseInt(className)).oobn.nodes.get(parNodeNameInOtherClass);
-////            		System.out.println("The parent is: " + par + " " + parNodeNameInOtherClass);
-//            	}
-//            	else{
-////            		System.out.println(bns.get(0).oobn.nodes.get(j));
-//            		par = bns.get(0).oobn.nodes.get(tempNode.parents.get(j));
-////            		System.out.println("The parent is in 2 : " + par);
-//            	}
-//            	nParents=nParents*par.numOfStates;
-//            }
-//            tempNode.data = bns.get(0).inputTableOOBN(tempNode.numOfStates,nParents);
-//
-//        }//end of for
-        
+                
      // some values required to compute object and other node info in main class
         double x,y;
 //        int nDegree=tempBN.numberMaxDegree+1;
@@ -414,7 +377,7 @@ public class OOBNGenerator {
        
         for(int I = 0; I < nClasses+1; I++){
         	
-        	generateHuginOOBNCode(bns.get(I), directory);
+        	generateHuginOOBNCode(bns.get(I), directory, iter);
         }		
 	}
 
@@ -425,13 +388,13 @@ public class OOBNGenerator {
 	    return new File(directory + "\\" + filename);
 	}
 	
-	public void generateHuginOOBNCode(BNGeneratorOwn bn, String directory) throws IOException {
+	public void generateHuginOOBNCode(BNGeneratorOwn bn, String directory, int iter) throws IOException {
 		
 //		String tempInputFile = directory + bn.oobn.className+".oobn";
 		String tempInputFile = bn.oobn.className+".oobn";
 		
         //create the directory if doesn't exist
-		File file = fileWithDirectoryAssurance(directory, tempInputFile);
+		File file = fileWithDirectoryAssurance(directory+"_"+iter, tempInputFile);
 		
 		FileWriter write = new FileWriter(file);
 		PrintWriter print_line = new PrintWriter(write);

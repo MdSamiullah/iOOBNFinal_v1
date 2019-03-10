@@ -205,31 +205,32 @@ public class CodeGenerator {
 			}
 			
 			for(String key: InstanceTable.keySet()){ 
-				ArrayList<String> temp2List = InstanceTable.get(key);
-				String tempInputMapping = "";
-				String tempOutputMapping = " ; ";
-				
-				for(String str: temp2List){
-					if(str.charAt(0) == 'I'){
-						if(tempInputMapping != "") tempInputMapping += ", ";{
-							String arr1 [] = str.split("::>");
-							tempInputMapping += arr1[arr1.length-1];
+				if(!key.equalsIgnoreCase("")) {// just to avoid creating an instance with no name
+					ArrayList<String> temp2List = InstanceTable.get(key);
+					String tempInputMapping = "";
+					String tempOutputMapping = " ; ";
+					
+					for(String str: temp2List){
+						if(str.charAt(0) == 'I'){
+							if(tempInputMapping != "") tempInputMapping += ", ";{
+								String arr1 [] = str.split("::>");
+								tempInputMapping += arr1[arr1.length-1];
+							}
+						}
+						else{
+							if(tempOutputMapping != " ; ") tempOutputMapping += ", ";{
+								String arr1 [] = str.split("::>");
+								tempOutputMapping += arr1[arr1.length-1];
+							}
 						}
 					}
-					else{
-						if(tempOutputMapping != " ; ") tempOutputMapping += ", ";{
-							String arr1 [] = str.split("::>");
-							tempOutputMapping += arr1[arr1.length-1];
-						}
-					}
+					// if there is no output mapping then no ';' required
+					if(tempOutputMapping == " ; ")	tempOutputMapping = "";
+					
+					generatedCode += ("\tinstance " + key + " : " + InstanceClassMap.get(key) + " ( " + tempInputMapping + tempOutputMapping + ")");
+					generatedCode += "\n\t{\n\t\tlabel=\"\";";
+					generatedCode += "\n\t\tposition=( 100 100);\n\t}\n"; // default value of instance position
 				}
-				// if there is no output mapping then no ';' required
-				if(tempOutputMapping == " ; ")	tempOutputMapping = "";
-				
-				generatedCode += ("\tinstance " + key + " : " + InstanceClassMap.get(key) + " ( " + tempInputMapping + tempOutputMapping + ")");
-				generatedCode += "\n\t{\n\t\tlabel=\"\";";
-				generatedCode += "\n\t\tposition=( 100 100);\n\t}\n"; // default value of instance position
-				
 			}
 		}
 		else System.out.println("Ref edges size is 0 ");
