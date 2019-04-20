@@ -64,6 +64,7 @@ public class LoadAndPropagateOOBN {
 		for (int I = 0; I < classFileNames.size(); I++) {
 			ClassCollection ccTemp = new ClassCollection();
 			if(!SIICompilation.onlyDisplatTime)  System.out.println("Class file name: " + classFileNames.get(I));
+			System.out.println(classFileNames.get(I) + " is the file we are going to compile now ");
 			ccTemp.parseClasses(classFileNames.get(I), mpl);
 			
 			cc.add(ccTemp);
@@ -205,7 +206,20 @@ public class LoadAndPropagateOOBN {
 				System.out.println("JTCost Hugin " + jtcost);
 				SIICompilation.JTCostHugin = jtcost;
 				SIICompilation.BNComplexity = calculateComplexityBN(dom.get(I), numOfStates);
+				SIICompilation.BNAvgParent = calculateAvgParentsBN(dom.get(I));
+				SIICompilation.BNTotalParent += calculateTotalParentsBN(dom.get(I));
 			}
+			else {
+				SIICompilation.BNComplexity = calculateComplexityBN(dom.get(I), numOfStates);
+				SIICompilation.BNAvgParent = calculateAvgParentsBN(dom.get(I));
+				SIICompilation.BNTotalParent += calculateTotalParentsBN(dom.get(I));
+//				System.out.println("The complexity of " + classFileNames.get(I) + " : " + SIICompilation.BNComplexity);
+			}
+			
+			if(SIICompilation.algoName.equalsIgnoreCase("SIIC")) {
+				SIICompilation.SIICBNComplexity += SIICompilation.BNComplexity;
+			}
+			
 //			printBeliefsAndUtilities(dom.get(I));
 		}
 		long endTime = System.currentTimeMillis();
@@ -418,6 +432,39 @@ public class LoadAndPropagateOOBN {
 			
 			return cost;
 		}
+		
+		/*
+		 * this function can be used to count avg number of parents per node of a BN 
+		 * */
+		public double calculateAvgParentsBN(Domain dom) throws IOException, ExceptionHugin, NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{
+			// we don't need to extract nodes from JTs, since we have domain.getNodes() and domain.getNodesbyName()
+			
+			double avgParent = 0.0;
+			long sumParents = 0;
+			long numOfNodes = dom.getNodes().size();
+			
+			for(Node n : dom.getNodes()) {
+				sumParents += n.getParents().size();
+			}
+			
+			avgParent = (double) sumParents / (double) numOfNodes;
+			
+			return avgParent;
+		}
+		
+		public long calculateTotalParentsBN(Domain dom) throws IOException, ExceptionHugin, NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{
+			// we don't need to extract nodes from JTs, since we have domain.getNodes() and domain.getNodesbyName()
+			
+			long sumParents = 0;
+			long numOfNodes = dom.getNodes().size();
+			
+			for(Node n : dom.getNodes()) {
+				sumParents += n.getParents().size();
+			}
+			
+			return sumParents;
+		}
+
 		
 		/*
 		 * this function can be used to complexity of a BN proposed by Julia flores where 

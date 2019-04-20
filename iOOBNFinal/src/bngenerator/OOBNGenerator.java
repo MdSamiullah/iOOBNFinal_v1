@@ -1,14 +1,23 @@
 package bngenerator;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.PrintWriter;
+import java.time.Duration;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Scanner;
+
+import ANTLR_NPP.NPPCompiler;
+import huginIntegration.LoadAndPropagateOOBN;
 
 public class OOBNGenerator {
 	public static int folds = 5;
@@ -257,11 +266,17 @@ public class OOBNGenerator {
 	public static void generateAllPossibleParameters() throws Exception {
 		String []argv = {"-nNodes", "5", "-maxVal", "2", "-maxInDegree", "5", "-nOOBNs","3", "-nObj", "5", "-fixed_maxVal"};
 		
-		int []bnSize = {5, 20, 50};
-		int []arity = {2, 3, 4};
-		int []maxParent = {2, 3, 5};
+//		int []bnSize = {5, 20, 50};
+//		int []arity = {2, 3, 4};
+//		int []maxParent = {2, 3, 5};
+//		int []additionalClass = {0, 1, 2, 3};
+//		int []numObjPerAdditionalClass = {1, 2, 3};
+		
+		int []bnSize = {5, 10, 15, 20, 25, 30, 50};
+		int []arity = {2, 3, 4, 5};
+		int []maxParent = {2, 3, 4, 5};
 		int []additionalClass = {0, 1, 2, 3};
-		int []numObjPerAdditionalClass = {1, 2, 3};
+		int []numObjPerAdditionalClass = {1, 2, 3, 4};
 
 //		int []bnSize = {5};
 //		int []arity = {2};
@@ -303,82 +318,111 @@ public class OOBNGenerator {
 	public void generateOOBNHugin(String[] argv, int iter) throws Exception {
 		dataAquisition(argv);
         String []argv2 = new String[]{"-nNodes", Integer.toString(numberNodes), "-format", "oobn", "-maxVal", Integer.toString(maxValues), "-fixed_maxVal", "-maxInDegree", Integer.toString(numberMaxInDegree)};
-        ArrayList<BNGeneratorOwn> bns = new ArrayList<BNGeneratorOwn>();
-        // +1 in the next loop because 1 OOBN class for the main class that contains n objects from n classes
-        // this is the 1st class that is going to be the base class
-        BNGeneratorOwn tempBN = new BNGeneratorOwn();
-    	tempBN.generateBN(argv2);
-
-    	tempBN.oobn.className = "main";// this should always be placed after generateBN() call
-    	bns.add(tempBN);
-        
-        for(int I = 1; I < nClasses+1; I++){
-        	tempBN = new BNGeneratorOwn();
-        	tempBN.generateBN(argv2);
-
-        	tempBN.oobn.className = "main"+I;// this should always be placed after generateBN() call
-        	bns.add(tempBN);
+        boolean exception = true;
+        while (exception == true) {
+	        ArrayList<BNGeneratorOwn> bns = new ArrayList<BNGeneratorOwn>();
+	        // +1 in the next loop because 1 OOBN class for the main class that contains n objects from n classes
+	        // this is the 1st class that is going to be the base class
+	        BNGeneratorOwn tempBN = new BNGeneratorOwn();
+	    	tempBN.generateBN(argv2);
+	
+	    	tempBN.oobn.className = "main";// this should always be placed after generateBN() call
+	    	bns.add(tempBN);
+	        
+	        for(int I = 1; I < nClasses+1; I++){
+	        	tempBN = new BNGeneratorOwn();
+	        	tempBN.generateBN(argv2);
+	
+	        	tempBN.oobn.className = "main"+I;// this should always be placed after generateBN() call
+	        	bns.add(tempBN);
+	        }
+	        
+	        for(int I = 1; I < nClasses+1; I++){
+	        	for(int J = 0; J < nObjects; J++){
+	//        		String className = oobn.namePrefix + "#" + I;
+	        		String className = "main"+I;
+	        		String objName = "Obj" + J + "C" + I;
+	        		Binding tempBinding = new Binding();
+	        		tempBinding.className = className;
+	        		tempBinding.objName = objName;
+	//        		
+	        		AddObject(bns.get(0), bns.get(I), className, objName, tempBinding);
+	        		bns.get(0).oobn.instances.add(tempBinding);
+	        	}
+	        }
+	                
+	     // some values required to compute object and other node info in main class
+	        double x,y;
+	//        int nDegree=tempBN.numberMaxDegree+1;
+	        int nDegree=tempBN.numberMaxDegree+ 1 + nClasses * nObjects;
+	        int contaEmX[]= new int[nDegree];
+	        
+	        for (int i=0;i<bns.get(0).oobn.nodes.size() + bns.get(0).oobn.instances.size();i++ ) {
+	            // code segment to update node position info
+	        	Binding bnd = null;
+	        	Node tempNode = bns.get(0).oobn.nodes.get(Integer.toString(i));
+	        	int nP  = 0;
+	        	if(tempNode != null){
+	        		nP=tempNode.parents.size();
+	                y=30+120*nP+15*Math.sin(3.1415/2*contaEmX[nP]);
+	                x=30+120*contaEmX[nP]+15*Math.cos(3.1415*nP);
+	                int xx=(int)x;
+	                int yy=(int)y;
+	
+	                tempNode.posX = xx;
+	                tempNode.posY = yy;
+	        	}
+	        	else{// assuming i > bns.get(0).oobn.nodes.size()
+	        		bnd = bns.get(0).oobn.instances.get(i-bns.get(0).oobn.nodes.size());
+	        		nP = bnd.inputBinding.size();
+	        		
+	                y=30+120*nP+15*Math.sin(3.1415/2*contaEmX[nP]);
+	                x=30+120*contaEmX[nP]+15*Math.cos(3.1415*nP);
+	                int xx=(int)x;
+	                int yy=(int)y;
+	
+	                bnd.posX = xx;
+	                bnd.posY = yy;
+	        	}
+	
+	            contaEmX[nP]++;
+	        }
+	        
+	//        System.out.println(bns.get(0).oobn);
+	        // now generate codes for each of the oobns generated so far
+	        String directory = "GenerateAutoOOBN\\" + namePrefix + "\\";
+	       
+	        for(int I = 0; I < nClasses+1; I++){
+	        	
+	        	generateHuginOOBNCode(bns.get(I), directory, iter);
+	        }
+	        
+	        // now we can try compiling the OOBN to check for validity
+	        // if it compiles then okay, else try generating a new one
+	        
+	        try {
+				directory += "_"+iter+"\\";
+				System.out.println("Now compiling " + directory);
+				/*
+				 * Hugin compilation
+				 */
+	        		String huginFileName = "main.oobn";
+//	        		Scanner sc = new Scanner(System.in);
+//	        		String xx = sc.next();
+					performHuginCompilation(directory, huginFileName);
+					System.out.println("No exceptions, successfully generated OOBN!!!");
+					exception = false;
+				}
+				catch(Exception e){
+//					exception = true;
+					System.out.println("Some exceptions arose!!!" + e);
+				}
+//				finally {
+	        	System.out.println(exception);
+				if (exception == true) continue;
+				else break;
+//				}
         }
-        
-        for(int I = 1; I < nClasses+1; I++){
-        	for(int J = 0; J < nObjects; J++){
-//        		String className = oobn.namePrefix + "#" + I;
-        		String className = "main"+I;
-        		String objName = "Obj" + J + "C" + I;
-        		Binding tempBinding = new Binding();
-        		tempBinding.className = className;
-        		tempBinding.objName = objName;
-//        		
-        		AddObject(bns.get(0), bns.get(I), className, objName, tempBinding);
-        		bns.get(0).oobn.instances.add(tempBinding);
-        	}
-        }
-                
-     // some values required to compute object and other node info in main class
-        double x,y;
-//        int nDegree=tempBN.numberMaxDegree+1;
-        int nDegree=tempBN.numberMaxDegree+ 1 + nClasses * nObjects;
-        int contaEmX[]= new int[nDegree];
-        
-        for (int i=0;i<bns.get(0).oobn.nodes.size() + bns.get(0).oobn.instances.size();i++ ) {
-            // code segment to update node position info
-        	Binding bnd = null;
-        	Node tempNode = bns.get(0).oobn.nodes.get(Integer.toString(i));
-        	int nP  = 0;
-        	if(tempNode != null){
-        		nP=tempNode.parents.size();
-                y=30+120*nP+15*Math.sin(3.1415/2*contaEmX[nP]);
-                x=30+120*contaEmX[nP]+15*Math.cos(3.1415*nP);
-                int xx=(int)x;
-                int yy=(int)y;
-
-                tempNode.posX = xx;
-                tempNode.posY = yy;
-        	}
-        	else{// assuming i > bns.get(0).oobn.nodes.size()
-        		bnd = bns.get(0).oobn.instances.get(i-bns.get(0).oobn.nodes.size());
-        		nP = bnd.inputBinding.size();
-        		
-                y=30+120*nP+15*Math.sin(3.1415/2*contaEmX[nP]);
-                x=30+120*contaEmX[nP]+15*Math.cos(3.1415*nP);
-                int xx=(int)x;
-                int yy=(int)y;
-
-                bnd.posX = xx;
-                bnd.posY = yy;
-        	}
-
-            contaEmX[nP]++;
-        }
-        
-//        System.out.println(bns.get(0).oobn);
-        // now generate codes for each of the oobns generated so far
-        String directory = "GenerateAutoOOBN\\" + namePrefix + "\\";
-       
-        for(int I = 0; I < nClasses+1; I++){
-        	
-        	generateHuginOOBNCode(bns.get(I), directory, iter);
-        }		
 	}
 
 	/** Creates parent directories if necessary. Then returns file */
@@ -557,5 +601,47 @@ public class OOBNGenerator {
 		
 		return smallestDegreeNodes;
 	}
+	
+	public static void copyAllDependantFile(String dir) throws IOException {
+		NPPCompiler dr = new NPPCompiler();
+		ArrayList<String> fileNameList = dr.fileListFromDir(dir);
+		for(String fN : fileNameList) {
+			String []fileNamePart = fN.split("\\\\");
+			String dest = fileNamePart[fileNamePart.length-1];
+//			System.out.println("Now copying " + (dir+fN+".oobn") + " to " + (dest+".oobn"));
+			File fsrc = new File(dir+fN+".oobn");
+			File fdst = new File(dest+".oobn");
+			copyFileUsingStream(fsrc, fdst);
+		}
+	}
+	
+	private static void copyFileUsingStream(File source, File dest) throws IOException {
+	    InputStream is = null;
+	    OutputStream os = null;
+	    try {
+	        is = new FileInputStream(source);
+	        os = new FileOutputStream(dest);
+	        byte[] buffer = new byte[1024];
+	        int length;
+	        while ((length = is.read(buffer)) > 0) {
+	            os.write(buffer, 0, length);
+	        }
+	    } finally {
+	        is.close();
+	        os.close();
+	    }
+	}
+	
+	public void performHuginCompilation(String dir, String fileName) throws Exception {
+    	
+		LoadAndPropagateOOBN lap = new LoadAndPropagateOOBN();
+		ArrayList<String> fileNames = new ArrayList<String>();
+		ArrayList<String> classNames = new ArrayList<String>();
+		System.out.println("Now compiling " + dir+"main.oobn");
+		fileNames.add(dir+"main.oobn");
+		copyAllDependantFile(dir);
+		classNames.add("main");
+			lap.LAP(fileNames, classNames, null, "", 2);// for NOS, I have given 2 cause here i don't care about the NOS or complexity
+		}
 
 }

@@ -888,11 +888,17 @@ public class NPPCompiler {
 //			int []additionalClass = {0, 1, 2, 3};
 //			int []numObjPerAdditionalClass = {1, 3, 5};
 	    	
-			int []bnSize = {5, 20, 50};
-			int []arity = {2, 3, 4};
-			int []maxParent = {2, 3, 5};
+//			int []bnSize = {5, 20, 50};
+//			int []arity = {2, 3, 4};
+//			int []maxParent = {2, 3, 5};
+//			int []additionalClass = {0, 1, 2, 3};
+//			int []numObjPerAdditionalClass = {1, 2, 3};
+	    	
+	    	int []bnSize = {5, 10, 15, 20, 25, 30, 50};
+			int []arity = {2, 3, 4, 5};
+			int []maxParent = {2, 3, 4, 5};
 			int []additionalClass = {0, 1, 2, 3};
-			int []numObjPerAdditionalClass = {1, 2, 3};
+			int []numObjPerAdditionalClass = {1, 2, 3, 4};
 	    	
 			
 //	    	int []bnSize = {5};
