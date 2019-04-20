@@ -79,15 +79,22 @@ public class SIICompilation {
 	public static int NOPParam = -1;
 	public static int NOSParam = -1;
 	public static int NOIterParam = -1;
-	public static String algoName = "both";// by default both SIIC and Hugin have to run
+	public static int NORepeatRunParam = -11;
+	public static String algoName = "both";// by default both SIIC and Hugin have to run, SIIC# will look for existing JT
 	public static String folderNameParam = "";// where the file to compile resides
 	public static String fileNameParam = "";// the file to compile
-	
+	public static boolean SpecialSIIC = false;// false means SIIC will create always a fresh JT for each
+	public static long SIICBNComplexity = 0;
+	public static double SIICAvgParent = 0;
 	
 	timingInfo tInfo;
 	public static BigInteger JTCostSIIC = new BigInteger("0");
 	public static BigInteger JTCostHugin = new BigInteger("0");
 	public static long BNComplexity = 0;
+	public static double BNAvgParent = 0.0;
+	public static double BNAvgParentSIIC = 0.0;
+	public static long BNTotalParent = 0;
+	
 	
 	public static long huginCompilation;
 
@@ -435,8 +442,12 @@ public class SIICompilation {
 		// if the class is not the compiling class itself and the JT for instance class doesn't exist
 		// or if the file exist and was last modified before the modification of the srcFile
 		// this is to check if srcFile has been changed after last JT creation
-		if(file.exists() == false || file.lastModified() < srcFile.lastModified())
+		// however, this is not good enough. Donno why, the srcFile last modified time was showing always larger than file modified time
+//		if(file.exists() == false ||( file.lastModified() < srcFile.lastModified()) || SIICompilation.SpecialSIIC == false)
+//		System.out.println(SIICompilation.SpecialSIIC);
+		if(file.exists() == false || SIICompilation.SpecialSIIC == false)
 		{// && !instanceName.equalsIgnoreCase("OWN")){
+			System.out.println("I am producing fresh JTs for each Class because file.exist()==false returned " + (file.exists()==false) + " modified after last run returned  " + (file.lastModified() < srcFile.lastModified()) + " special SIIC returned " + (SIICompilation.SpecialSIIC == false) + " JT last creatted " + file.lastModified() + " src last modified " + srcFile.lastModified() );
 			LoadAndPropagateOOBN lap = new LoadAndPropagateOOBN();
 			ArrayList<String> fileNames = new ArrayList<String>();
 			String className = filename.replace("JT_", "").replace(".txt", "");
@@ -2462,11 +2473,11 @@ public class SIICompilation {
 //		int []additionalClass = {0, 1, 2, 3};
 //		int []numObjPerAdditionalClass = {1, 2, 3};
 		
-		int []additionalClass = {1};
-		int []numObjPerAdditionalClass = {2};
-		int []arity = {2};
-		int []bnSize = {50};
-		int []maxParent = {2};
+		int []bnSize = {5, 10, 15, 20, 25, 30, 50};
+		int []arity = {2, 3, 4, 5};
+		int []maxParent = {2, 3, 4, 5};
+		int []additionalClass = {0, 1, 2, 3};
+		int []numObjPerAdditionalClass = {1, 2, 3, 4};
 		
 //		int []additionalClass = {1};
 //		int []numObjPerAdditionalClass = {1};
@@ -2522,31 +2533,41 @@ public class SIICompilation {
                 if (param.compareTo("-numOfNode") == 0){
                     i++;
                     NONParam = Integer.parseInt(argv[i]);
+                    countParam++;
                 }
                 
                 if (param.compareTo("-maxNumOfPar") == 0){
                     i++;
+                    countParam++;
                     NOPParam = Integer.parseInt(argv[i]);
                 }
                 
                 if (param.compareTo("-numOfState") == 0){
                     i++;
+                    countParam++;
                     NOSParam = Integer.parseInt(argv[i]);
                 }
                 
                 if (param.compareTo("-numOfClass") == 0){
                     i++;
+                    countParam++;
                     NOCParam = Integer.parseInt(argv[i]);
                 }
                 
                 if (param.compareTo("-numOfObj") == 0){
                     i++;
+                    countParam++;
                     NOOParam = Integer.parseInt(argv[i]);
                 }
                 
                 if (param.compareTo("-iterNum") == 0){
                     i++;
                     NOIterParam = Integer.parseInt(argv[i]);
+                }
+                
+                if (param.compareTo("-run") == 0){
+                    i++;
+                    NORepeatRunParam = Integer.parseInt(argv[i]);
                 }
                 
                 if (param.compareTo("-algo") == 0){
@@ -2556,12 +2577,14 @@ public class SIICompilation {
                 
                 if (param.compareTo("-dir") == 0){
                     i++;
+                    countAlterNameParam++;
                     folderNameParam = argv[i];
                 }
                 
                 if (param.compareTo("-fileName") == 0){
                     i++;
                     fileNameParam = argv[i];
+                    countAlterNameParam++;
                 }
                 
                 if (param.compareTo("-help") == 0){
@@ -2572,7 +2595,12 @@ public class SIICompilation {
             System.out.println();
         } // end of if(argv.length>0)
         //.. end of data acquisition
-        
+        else {
+        	if(countAlterNameParam < 2 && countParam < 5)
+        		System.err.println("The parameters provided are not sufficient");
+        	else System.err.println("No parameters are provided");
+        	printHelp();
+        }
     }
 
 	public static void printHelp(){
@@ -2588,7 +2616,8 @@ public class SIICompilation {
         System.out.println("\tNumber of addional classes : [-numOfClass c]");
         System.out.println("\tNumber of objects per additional class : [-numOfObj o]");
         System.out.println("\tIteration number : [-iterNum i]");
-        System.out.println("\tAlgorithm to be run: [-algo SIIC] or [-algo Hugin] or [-algo both]");
+        System.out.println("\tRun Repeat number : [-run r]");
+        System.out.println("\tAlgorithm to be run SIIC# will look for existing JTs: [-algo SIIC] or [-algo SIIC#] or [-algo Hugin] or [-algo both]");
         System.out.println("\tDirectory name where the file to be compiled: [-dir dirName]");
         System.out.println("\tA particular file name (residing in dirName folder) to be compiled : [-fileName fileName]");
     }
@@ -2598,6 +2627,7 @@ public class SIICompilation {
 	{	System.out.println("Command line argument format programName.java #NOC #NON #NOO #NOP #NOS #iter");
 		// this is for compiling and running oobn files in a directory or
 		// this is for compiling and running oobn files in directories where parameters are given from command line
+		int runNum = 1;
 		if (args.length >= 1) {	// actually 8, 1 for prog name, 5 for 5 param, 1 for iter, 1 optional for algo name, [if len == 2, then both SIIC and hugin will run] 
 			String namePrefix = "";
 	        String line;
@@ -2615,29 +2645,35 @@ public class SIICompilation {
 			String dirHuginSIIC = "";
 			
 			int iter = 0;// default value if not given then iter = 0
-			int NOS = 2;//  default value if not given then NOS = 2
 			
+			int NOS = 2;//  default value if not given then NOS = 2
+			String str = "";
 			
 			dataAquisitionSIIC(args);
+			System.out.println("The algo name is " + SIICompilation.algoName);
+			if(SIICompilation.algoName.equalsIgnoreCase("SIIC#"))	SIICompilation.SpecialSIIC = true;
 //			System.out.println(!(SIICompilation.folderNameParam.equalsIgnoreCase("") && SIICompilation.fileNameParam.equalsIgnoreCase("")));
 			if(SIICompilation.folderNameParam.equalsIgnoreCase("") && SIICompilation.fileNameParam.equalsIgnoreCase(""))
 			{
+				System.out.println("The program is running from command line argument containing param values");
 				int NOC = SIICompilation.NOCParam;
 				int NON = SIICompilation.NONParam;
 				int NOO = SIICompilation.NOOParam;
 				int NOP = SIICompilation.NOPParam;
 				NOS = SIICompilation.NOSParam;
 				iter = SIICompilation.NOIterParam-1;
+				runNum = SIICompilation.NORepeatRunParam;
 				
 		        namePrefix = "nClasses_"+NOC+"#" + "nObjects_" + NOO + "#" + "nStates_" + NOS + "#" + "nNodes_" + NON + "#" + "maxInDeg_" + NOP + "#" + "maxArcs_" + "6";
-		        complexityOutputFileName = "C:\\Users\\msam34\\git\\iOOBNFinal_v1\\iOOBNFinal\\editor\\huginIntegration\\SIIC_Output_tabular_" + namePrefix +"_" + iter + ".txt";
+		        complexityOutputFileName = "C:\\Users\\msam34\\git\\iOOBNFinal_v1\\iOOBNFinal\\editor\\huginIntegration\\SIIC_Output_tabular_" + namePrefix +"_#Iter_" + iter +"_#Run_" + runNum + "_algo_" + SIICompilation.algoName + ".txt";
 				
 		        pw =  new PrintWriter(new FileWriter(complexityOutputFileName));
 				
 		        namePrefix = "GenerateAutoOOBN\\" + namePrefix + "\\";
 				
 				exception = false;
-				String str = "Fold   \t NumOfNodes     NumOfAvgPar \t NumOfStates \t NumOfClass \t   NumOfObj \t     Hugin \t       SIIC   \t   RComplexity    \t     Hugin-JTCost \t       SIIC-JTCost\n";
+//				str = "Fold   \t  #Run  \t    algo     \t NumOfNodes     MaxNumOfAvgPar \t AvgNumPar \t NumOfStates \t NumOfClass \t   NumOfObj \t     Hugin \t       SIIC   \t   RComplexity    \t     Hugin-JTCost \t       SIIC-JTCost\n";
+				str = "Fold   \t  #Run  \t    algo     \t NumOfNodes     MaxNumOfAvgPar \t AvgNumPar \t NumOfStates \t NumOfClass \t       NumOfObj \t     Hugin-JTCost \t       SIIC-JTCost   \t  \t   RComplexity  \t   Hugin \t       SIIC    \n";
 				pw.println(str);
 				additionalDir = "GeneratedFiles\\";// this is required for SIIC compilation where additional generated files have to be present like .ioobn and .clss files
 				SIICfileName = "temp_main.class";
@@ -2647,11 +2683,13 @@ public class SIICompilation {
 				System.out.println("Dir " + dirHuginSIIC + " " + huginFileName);
 			}
 			else {
-				
+				System.out.println("The program is running from command line argument containing file and folder names");
 		        namePrefix = "\\";// assuming folderNameParam doesn't end with "\\" if you want to add any prefix folder then add the name after "\\"
-		        complexityOutputFileName = folderNameParam + namePrefix +"_" + iter + ".txt";
+		        
+		        complexityOutputFileName = folderNameParam + namePrefix +"_#Iter_" + iter +"_#Run_" + runNum + "_algo_" + SIICompilation.algoName + ".txt";
 				pw =  new PrintWriter(new FileWriter(complexityOutputFileName));
-				String str = "Fold   \t NumOfNodes     NumOfAvgPar \t NumOfStates \t NumOfClass \t   NumOfObj \t     Hugin \t       SIIC   \t   RComplexity    \t     Hugin-JTCost \t       SIIC-JTCost\n";
+				str = "Fold   \t  #Run  \t    algo     \t NumOfNodes     MaxNumOfAvgPar \t AvgNumPar \t NumOfStates \t NumOfClass \t       NumOfObj \t     Hugin-JTCost \t       SIIC-JTCost   \t  \t   RComplexity  \t   Hugin \t       SIIC    \n";
+				//str = "Fold   \t   #Run  \t     algo    \t NumOfNodes     MaxNumOfAvgPar \t AvgNumPar \t NumOfStates \t NumOfClass \t   NumOfObj \t     Hugin \t       SIIC   \t   RComplexity    \t     Hugin-JTCost \t       SIIC-JTCost\n";
 				pw.println(str);
 				exception = false;
 				
@@ -2671,7 +2709,7 @@ public class SIICompilation {
 //				System.out.println("############## The file to be compiled : "+ namePrefix +"_"+(iter+1)+"\\"+ additionalDir + fileName + " ########################\n");
 				count++;
 				SIIC.tInfo = new timingInfo();
-				if(!algoName.equalsIgnoreCase("SIIC")) {// if algo is hugin or both, then run it
+				if(!algoName.contains("SIIC")) {// if algo is hugin or both, then run it
 					try {
 					
 					/*
@@ -2702,28 +2740,34 @@ public class SIICompilation {
 						SIIC.tInfo.datasetProp = namePrefix.replace("GenerateAutoOOBN\\", "");
 						foldedTime.addTimingInfo(SIIC.tInfo);
 						completedoneCount++;
+						long TotalNodes = NONParam;
+						if(NOCParam != 0)
+							TotalNodes = NOCParam * NOOParam * NONParam + NONParam;
+						
+						SIICompilation.BNAvgParentSIIC = (double) SIICompilation.BNTotalParent / (double) TotalNodes;
+						System.out.println("SIIC founds avg parents " + SIICompilation.BNAvgParentSIIC);
+						System.out.println("SIIC founds BN complexity " + SIICompilation.SIICBNComplexity);
 					}
 					catch(RuntimeException re){
 						exception = true;
-						System.out.println("Some exception arose!!!");
+						System.out.println("Some exception arose in Hugin!!!");
 					}
 					finally {
 						
 						if(exception) {
 							System.out.println(dirHuginSIIC+ additionalDir + SIICfileName+"\n************************* Compilation incomplete !!! *************************\n\n\n");
 						}
-						continue;
+//						continue;
 					}
 				}
 				else {// in case we don't want to run SIIC, we need to get dataset prop info
 //					SIIC.tInfo.datasetProp = namePrefix.replace("GenerateAutoOOBN\\", "");
 					foldedTime.datasetProp = namePrefix.replace("GenerateAutoOOBN\\", "");
 				}
-				
 			}
 			foldedTime.averageTimingInfo();
 			System.out.println(foldedTime);
-			foldedTime.printTableInFile(pw, iter);
+			foldedTime.printTableInFile(pw, iter, runNum, str, SIICompilation.algoName);
 		
 			System.out.println("All " + count + " cases are tried!!! Among them " + (count-completedoneCount) + " cases were incomplete; " + completedoneCount + " cases were complete!!!");
 			pw.close();
@@ -2740,7 +2784,8 @@ public class SIICompilation {
 			int completedoneCount = 0;
 			boolean exception = false;
 	//		String str = "NumOfClass \t   NumOfObject \t NumOfNodes \t NumOfAvgPar \t NumOfStates \t Hugin \t SIIC\n";
-			String str = "Fold   \t NumOfNodes     NumOfAvgPar \t NumOfStates \t NumOfClass \t   NumOfObj \t     Hugin \t       SIIC\n    \t     Hugin-JTCost \t       SIIC-JTCost\n";
+//			String str = "Fold   \t   #Run   \t NumOfNodes     MaxNumOfAvgPar \t AvgNumPar \t NumOfStates \t NumOfClass \t   NumOfObj \t     Hugin \t       SIIC\n    \t     Hugin-JTCost \t       SIIC-JTCost\n";
+			String str = "Fold   \t  #Run  \t    algo     \t NumOfNodes     MaxNumOfAvgPar \t AvgNumPar \t NumOfStates \t NumOfClass \t       NumOfObj \t     Hugin-JTCost \t       SIIC-JTCost   \t  \t   RComplexity  \t   Hugin \t       SIIC    \n";
 			pw.println(str);
 	//		pw.close();// we are closing this again and again just to atleat save the part that worked well and to avoid loss of data due to abrupt closure of the function
 	//		String dir = "GenerateAutoOOBN\\nClasses_1#nObjects_1#nStates_3#nNodes_5#maxInDeg_15#maxArcs_6\\";
@@ -2798,8 +2843,8 @@ public class SIICompilation {
 							}
 						}
 						foldedTime.averageTimingInfo();
-						System.out.println(foldedTime);
-						foldedTime.printTableInFile(pw, iter);
+						
+						foldedTime.printTableInFile(pw, iter, runNum, str, SIICompilation.algoName);
 					}
 				}
 			System.out.println("All " + count + " cases are tried!!! Among them " + (count-completedoneCount) + " cases were incomplete; " + completedoneCount + " cases were complete!!!");
@@ -2916,8 +2961,8 @@ class timingInfo{
 		this.totalSIICTime = "";
 	}
 	
-	public void printTableInFile(PrintWriter pw, int iter) {
-		int hugSize = 0;
+	public void printTableInFile(PrintWriter pw, int iter, int runNum, String str, String algoName) {
+		int hugSize = 0;// this contains the size of the hugin timing breakdown table
 		hugSize = this.huginTimingBreakDown.size()-1;
 //			System.out.println("hugSize = " + hugSize+" "+this.huginTimingBreakDown);
 
@@ -2927,6 +2972,7 @@ class timingInfo{
 		String huginJTCost = "-1";
 		String SIICJTCost = "-1";
 		String bnComplexity = Long.toString(SIICompilation.BNComplexity);
+		String AvgParents = Double.toString(SIICompilation.BNAvgParent);
 
 		if(SIICompilation.algoName.equalsIgnoreCase("both")) {
 			huginTime = this.huginTimingBreakDown.get(hugSize);
@@ -2935,7 +2981,9 @@ class timingInfo{
 			huginJTCost = SIICompilation.JTCostHugin.toString();
 			SIICJTCost = SIICompilation.JTCostSIIC.toString();
 		}
-		else if(SIICompilation.algoName.equalsIgnoreCase("SIIC")) {
+//		else if(SIICompilation.algoName.equalsIgnoreCase("SIIC")) 
+		else if(SIICompilation.algoName.startsWith("SIIC")) 
+		{
 
 			SIICTimeTotal = this.totalSIICTime;
 			SIICPreprocessing = this.sIICTimingBreakDown.get(1);
@@ -2949,9 +2997,11 @@ class timingInfo{
 //			pw.print("(){}<>{}() " + iter + "\t   "+ this.nNodes + "\t\t" + this.avgPar + "\t\t\t" + this.nStates + "\t\t" + this.nClasses + "\t\t" + this.nObjects+ "\t\t" + SIICompilation.JTCostHugin+ "\t\t" + SIICompilation.JTCostSIIC + "\t\t" + SIICompilation.BNComplexity + "\t\t" + this.huginTimingBreakDown.get(hugSize) + "\t\t" + this.totalSIICTime+"\t\t"+this.sIICTimingBreakDown.get(1)+ "\n");
 //			System.out.println("(){}<>{}()"+ iter + "\t   " + this.nNodes + "\t\t" + this.avgPar + "\t\t\t" + this.nStates + "\t\t" + this.nClasses + "\t\t" + this.nObjects + "\t\t" + SIICompilation.JTCostHugin+ "\t\t" + SIICompilation.JTCostSIIC + "\t\t" + SIICompilation.BNComplexity + "\t\t" + this.huginTimingBreakDown.get(this.huginTimingBreakDown.size()-1) + "\t\t" + this.totalSIICTime+"\t\t"+this.sIICTimingBreakDown.get(1)+ "\n");
 		// the following order is very important, especially the last two should always be last two. Otherwise CleaningOutcome.java will produce wrong output (written on xxxtabular.txt) for plotting
-		pw.print("(){}<>{}() " + iter + "\t   "+ this.nNodes + "\t\t" + this.avgPar + "\t\t\t" + this.nStates + "\t\t" + this.nClasses + "\t\t" + this.nObjects+ "\t\t" + huginJTCost + "\t\t" + SIICJTCost + "\t\t" + bnComplexity + "\t\t" + huginTime + "\t\t" + SIICTimeTotal +"\t\t"+ SIICPreprocessing + "\n");
-		System.out.println("(){}<>{}() " + iter + "\t   "+ this.nNodes + "\t\t" + this.avgPar + "\t\t\t" + this.nStates + "\t\t" + this.nClasses + "\t\t" + this.nObjects+ "\t\t" + huginJTCost + "\t\t" + SIICJTCost + "\t\t" + bnComplexity + "\t\t" + huginTime + "\t\t" + SIICTimeTotal +"\t\t"+ SIICPreprocessing + "\n");
-
+		
+		pw.print("(){}<>{}() " + iter + "\t  " + runNum  + "\t     " + algoName +  "\t   "+ this.nNodes + "\t\t" + this.avgPar + "\t\t\t" + SIICompilation.BNAvgParentSIIC + "\t\t\t" + this.nStates + "\t\t" + this.nClasses + "\t\t" + this.nObjects+ "\t\t" + huginJTCost + "\t\t" + SIICJTCost + "\t\t" + SIICompilation.SIICBNComplexity + "\t\t" + huginTime + "\t\t" + SIICTimeTotal +"\t\t"+ SIICPreprocessing + "\n");
+		System.out.println(str);
+		
+		System.out.println("(){}<>{}() " + iter + "\t  " + runNum  + "\t     " + algoName + "\t   "+ this.nNodes + "\t\t" + this.avgPar + "\t\t\t" + SIICompilation.BNAvgParentSIIC + "\t\t\t" + this.nStates + "\t\t" + this.nClasses + "\t\t" + this.nObjects+ "\t\t" + huginJTCost + "\t\t" + SIICJTCost + "\t\t" + SIICompilation.SIICBNComplexity + "\t\t" + huginTime + "\t\t" + SIICTimeTotal +"\t\t"+ SIICPreprocessing + "\n");
 	}
 
 	public void addTimingInfo(timingInfo ti2) {
