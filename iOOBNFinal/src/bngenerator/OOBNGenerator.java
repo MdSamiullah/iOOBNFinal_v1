@@ -266,6 +266,7 @@ public class OOBNGenerator {
 	public static void generateAllPossibleParameters() throws Exception {
 		String []argv = {"-nNodes", "5", "-maxVal", "2", "-maxInDegree", "5", "-nOOBNs","3", "-nObj", "5", "-fixed_maxVal"};
 		
+		
 //		int []bnSize = {5, 20, 50};
 //		int []arity = {2, 3, 4};
 //		int []maxParent = {2, 3, 5};
