@@ -272,6 +272,11 @@ public class LearningiOOBN {
     		System.out.println("\n\n\n Compilation done Successfully!!! \n\n\n");
     	}
     	
+    	/*
+    	 * The main part of the Learning starts here
+    	 * the previous parts make a set of DAG files for a set of OOBNs
+    	 * This part will make the hierarchy from the set of DAGs
+    	 * */
     	DAGraph2 dagLearner = new DAGraph2();
     	dagLearner.makeHierarchy(directory1, targetDir, choiceClass);
     	
